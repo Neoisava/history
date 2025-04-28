@@ -265,13 +265,13 @@
         "streaming_fps": 30,
         "smooth_streaming": true,
         "smooth_streaming_speed": 100,
-        "fast_ui_mode": true,
+        "fast_ui_mode": false,
         "avatar_style": 2,
         "chat_display": 1,
         "chat_width": 50,
         "never_resize_avatars": true,
         "show_card_avatar_urls": false,
-        "play_message_sound": true,
+        "play_message_sound": false,
         "play_sound_unfocused": false,
         "auto_save_msg_edits": true,
         "confirm_message_delete": true,
@@ -296,7 +296,7 @@
         "movingUI": false,
         "movingUIState": {},
         "movingUIPreset": "1",
-        "noShadows": true,
+        "noShadows": false,
         "theme": "深色简约卡片",
         "gestures": true,
         "auto_swipe": false,
@@ -324,7 +324,7 @@
         "enableLabMode": false,
         "prefer_character_prompt": true,
         "prefer_character_jailbreak": true,
-        "quick_continue": true,
+        "quick_continue": false,
         "quick_impersonate": false,
         "continue_on_send": false,
         "trim_spaces": true,
@@ -443,7 +443,7 @@
             }
         },
         "restore_user_input": true,
-        "reduced_motion": true,
+        "reduced_motion": false,
         "compact_input_area": true,
         "show_swipe_num_all_messages": false,
         "auto_connect": true,
@@ -1445,7 +1445,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 3,
+                "lastProcessedLength": 1,
                 "userConfigured": true
             }
         }
@@ -2733,8 +2733,8 @@
         "n": 1
     },
     "background": {
-        "name": "landscape beach night.jpg",
-        "url": "url(\"backgrounds/landscape beach night.jpg\")",
+        "name": "_black.jpg",
+        "url": "url(\"backgrounds/_black.jpg\")",
         "fitting": "classic"
     },
     "proxies": [
