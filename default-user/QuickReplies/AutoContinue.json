@@ -1,0 +1,63 @@
+{
+    "version": 2,
+    "name": "AutoContinue",
+    "disableSend": false,
+    "placeBeforeInput": true,
+    "injectInput": false,
+    "color": "rgba(0, 0, 0, 0)",
+    "onlyBorderColor": false,
+    "qrList": [
+        {
+            "id": 6,
+            "showLabel": false,
+            "label": "停止",
+            "title": "",
+            "message": "/# 禁用“循环发送”QR的自动运行 |\n/qr-update set=AutoContinue label=循环发送 bot=false|| <--- 建议这里也用 ||\n/# 显示提示信息 |\n/echo 已手动停止自动发送 \"{{getglobalvar::content}}\"。",
+            "contextList": [],
+            "preventAutoExecute": true,
+            "isHidden": false,
+            "executeOnStartup": false,
+            "executeOnUser": false,
+            "executeOnAi": false,
+            "executeOnChatChange": false,
+            "executeOnGroupMemberDraft": false,
+            "executeOnNewChat": false,
+            "automationId": ""
+        },
+        {
+            "id": 10,
+            "showLabel": false,
+            "label": "循环发送",
+            "title": "",
+            "message": "/# 增加计数器 |\n/incvar autoContinueCount |\n/# 检查是否达到次数限制 |\n/if left={{getvar::autoContinueCount}} rule=gte right={{getvar::autoContinueLimit}} else={:\n    /# --- 未达到限制，继续循环 --- |\n    /# 可选：添加一个小的随机延迟 |\n    /rand from=1000 to=3000|\n    /delay {{pipe}}||  <--- 建议这里也用 ||\n    /# 发送核心内容 |\n    /send {{getglobalvar::content}} ||  <--- 使用全局变量，并改为 ||\n    /# 触发 AI 对刚刚发送的消息进行回复 |\n    /trigger\n:} {:\n    /# --- 达到限制，停止循环 --- |\n    /# 禁用“循环发送”QR的自动运行 |\n    /qr-update set=AutoContinue label=循环发送 bot=false|| <--- 建议这里也用 ||\n    /# 显示提示信息 |\n    /echo 自动发送已达到次数限制 ({{getvar::autoContinueLimit}} 次)，已停止。\n:}",
+            "contextList": [],
+            "preventAutoExecute": false,
+            "isHidden": true,
+            "executeOnStartup": false,
+            "executeOnUser": false,
+            "executeOnAi": false,
+            "executeOnChatChange": false,
+            "executeOnGroupMemberDraft": false,
+            "executeOnNewChat": false,
+            "automationId": ""
+        },
+        {
+            "id": 14,
+            "showLabel": true,
+            "label": "启动按钮",
+            "title": "",
+            "message": "/buttons labels=[\"是\",\"否\"] 确定要开始自动发送吗？|\n/if left={{pipe}} right=\"是\" rule=eq else={:/echo 已取消自动发送:} {:\n/setglobalvar key=content \\{继续剧情\\} || <--- 修改这里为具体输出内容\n    /# 设置循环次数限制 |\n    /setvar key=autoContinueLimit 1 ||  <--- 修改这里改成最大多少次回复\n    /# 初始化计数器 |\n    /setvar key=autoContinueCount 0 || \n    /# 激活“循环发送”QR，让它在每次AI回复后自动运行 |\n    /qr-update set=AutoContinue label=循环发送 bot=true || <--- 改为双管道符 (除非后续命令需要qr-update的输出)\n    /# 显示提示信息 |\n    /echo 开始自动发送 \"{{getglobalvar::content}}\" (最多 {{getvar::autoContinueLimit}} 次)，点击“停止”按钮可提前结束。||\n    /# 发送第一次的消息，用来启动循环 |\n    /send {{getglobalvar::content}} || <--- 改为双管道符 (send的输出通常不需要传递)\n    /# 触发 AI 对刚才发送的消息进行回复 |\n    /trigger  <--- 最后一条命令不需要管道符\n:}",
+            "contextList": [],
+            "preventAutoExecute": false,
+            "isHidden": false,
+            "executeOnStartup": false,
+            "executeOnUser": false,
+            "executeOnAi": false,
+            "executeOnChatChange": false,
+            "executeOnGroupMemberDraft": false,
+            "executeOnNewChat": false,
+            "automationId": ""
+        }
+    ],
+    "idIndex": 14
+}
