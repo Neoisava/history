@@ -1446,13 +1446,19 @@
         },
         "hide_4": {
             "enabled": true,
-            "settings_by_entity": {},
+            "settings_by_entity": {
+                "character-林若秋.png": {
+                    "hideLastN": 50,
+                    "lastProcessedLength": 288,
+                    "userConfigured": true
+                }
+            },
             "migration_v1_complete": true,
-            "useGlobalSettings": false,
+            "useGlobalSettings": true,
             "globalHideSettings": {
-                "hideLastN": 0,
-                "lastProcessedLength": 0,
-                "userConfigured": false
+                "hideLastN": 50,
+                "lastProcessedLength": 288,
+                "userConfigured": true
             }
         }
     },
