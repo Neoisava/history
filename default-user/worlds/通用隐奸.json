@@ -32,7 +32,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 4
+            "displayIndex": 3
         },
         "1": {
             "uid": 1,
@@ -66,7 +66,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 3
+            "displayIndex": 2
         },
         "2": {
             "uid": 2,
@@ -102,7 +102,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 5
+            "displayIndex": 4
         },
         "3": {
             "uid": 3,
@@ -138,7 +138,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 6
+            "displayIndex": 5
         },
         "4": {
             "uid": 4,
@@ -153,7 +153,7 @@
             "addMemo": true,
             "order": 100,
             "position": 4,
-            "disable": false,
+            "disable": true,
             "excludeRecursion": false,
             "preventRecursion": false,
             "delayUntilRecursion": false,
@@ -172,7 +172,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 2
+            "displayIndex": 6
         },
         "5": {
             "uid": 5,
