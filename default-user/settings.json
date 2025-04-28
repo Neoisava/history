@@ -465,7 +465,10 @@
         "apiKey": "",
         "autoConnect": false,
         "notifyUpdates": false,
-        "disabledExtensions": [],
+        "disabledExtensions": [
+            "third-party/JS-Slash-Runner",
+            "third-party/JS-Slash-Runner"
+        ],
         "expressionOverrides": [],
         "memory": {
             "minLongMemory": 16,
