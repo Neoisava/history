@@ -32,7 +32,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 6
+            "displayIndex": 7
         },
         "1": {
             "uid": 1,
@@ -66,7 +66,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 7
+            "displayIndex": 8
         },
         "2": {
             "uid": 2,
@@ -100,7 +100,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 8
+            "displayIndex": 9
         },
         "3": {
             "uid": 3,
@@ -134,7 +134,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 1
+            "displayIndex": 2
         },
         "4": {
             "uid": 4,
@@ -168,7 +168,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 2
+            "displayIndex": 3
         },
         "5": {
             "uid": 5,
@@ -202,7 +202,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 3
+            "displayIndex": 4
         },
         "6": {
             "uid": 6,
@@ -236,7 +236,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 9
+            "displayIndex": 10
         },
         "7": {
             "uid": 7,
@@ -270,7 +270,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 10
+            "displayIndex": 11
         },
         "8": {
             "uid": 8,
@@ -338,7 +338,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 4
+            "displayIndex": 5
         },
         "10": {
             "uid": 10,
@@ -372,7 +372,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 11
+            "displayIndex": 12
         },
         "11": {
             "uid": 11,
@@ -387,7 +387,7 @@
             "addMemo": true,
             "order": -100,
             "position": 4,
-            "disable": true,
+            "disable": false,
             "excludeRecursion": false,
             "preventRecursion": false,
             "delayUntilRecursion": false,
@@ -406,7 +406,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 12
+            "displayIndex": 1
         },
         "12": {
             "uid": 12,
@@ -474,7 +474,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 5
+            "displayIndex": 6
         },
         "14": {
             "uid": 14,
@@ -489,7 +489,7 @@
             "addMemo": true,
             "order": -100,
             "position": 4,
-            "disable": true,
+            "disable": false,
             "excludeRecursion": false,
             "preventRecursion": false,
             "delayUntilRecursion": false,
