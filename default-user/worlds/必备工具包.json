@@ -13,7 +13,7 @@
             "addMemo": true,
             "order": -100,
             "position": 4,
-            "disable": false,
+            "disable": true,
             "excludeRecursion": false,
             "preventRecursion": false,
             "delayUntilRecursion": false,
@@ -32,7 +32,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 8
+            "displayIndex": 1
         },
         "1": {
             "uid": 1,
@@ -66,7 +66,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 12
+            "displayIndex": 2
         },
         "2": {
             "uid": 2,
@@ -100,7 +100,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 14
+            "displayIndex": 3
         },
         "3": {
             "uid": 3,
@@ -134,7 +134,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 17
+            "displayIndex": 4
         },
         "4": {
             "uid": 4,
@@ -168,7 +168,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 11
+            "displayIndex": 5
         },
         "5": {
             "uid": 5,
@@ -202,7 +202,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 5
+            "displayIndex": 0
         },
         "6": {
             "uid": 6,
@@ -236,7 +236,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 13
+            "displayIndex": 6
         },
         "7": {
             "uid": 7,
@@ -270,7 +270,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 15
+            "displayIndex": 7
         },
         "8": {
             "uid": 8,
@@ -304,7 +304,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 16
+            "displayIndex": 8
         },
         "9": {
             "uid": 9,
@@ -338,7 +338,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 6
+            "displayIndex": 9
         },
         "10": {
             "uid": 10,
@@ -406,7 +406,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 9
+            "displayIndex": 11
         },
         "13": {
             "uid": 13,
@@ -440,7 +440,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 7
+            "displayIndex": 12
         }
     }
 }
