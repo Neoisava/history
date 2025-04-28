@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "true",
-        "NavOpened": "true",
+        "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -1127,6 +1127,10 @@
                 "setList": [
                     {
                         "set": "角色扮演輔助導演版(1.1)",
+                        "isVisible": true
+                    },
+                    {
+                        "set": "性爱选项整合_68_emoji_set_整合版",
                         "isVisible": true
                     }
                 ]
