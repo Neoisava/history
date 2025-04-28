@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
+        "LNavOpened": "true",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -52,7 +52,7 @@
                 "性经验调整世界书",
                 "我们的甜蜜情话",
                 "油猴世界书末尾添加",
-                "计量状态栏",
+                "自用状态栏数据版",
                 "通用隐奸",
                 "部位特写",
                 "针对2.5pro的瑟瑟场景"
@@ -598,7 +598,7 @@
             {
                 "id": "6251ab3d-44f4-4105-9bd2-8121171b44d9",
                 "scriptName": "移除思维链和多余标签v2",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/(.*\\</thinking>\\n|.*\\<content[\\s\\S]*?>\\n|</content>|<(/)content_format>)/gs",
                 "replaceString": "",
@@ -1586,7 +1586,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 4,
+                "lastProcessedLength": 1,
                 "userConfigured": true
             }
         }
@@ -2720,15 +2720,15 @@
                     },
                     {
                         "identifier": "3c7de215-03ac-4059-ab54-6b7cb3881ba5",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "7e5b4340-9821-45da-9639-602727ed7a94",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "07a98d3b-d492-41b3-b5b4-883041dc68cb",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "9e84f2e2-ebc5-4bbd-963c-aac25d452d0f",
