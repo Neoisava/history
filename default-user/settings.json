@@ -1443,6 +1443,17 @@
                 "char"
             ],
             "customSymbols": []
+        },
+        "hide_4": {
+            "enabled": true,
+            "settings_by_entity": {},
+            "migration_v1_complete": true,
+            "useGlobalSettings": false,
+            "globalHideSettings": {
+                "hideLastN": 0,
+                "lastProcessedLength": 0,
+                "userConfigured": false
+            }
         }
     },
     "tags": [
