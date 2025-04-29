@@ -941,7 +941,7 @@
             "height": 512,
             "prompt_prefix": "best quality, absurdres, masterpiece,",
             "negative_prompt": "lowres, bad anatomy, bad hands, text, error, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
-            "sampler": "k_euler_ancestral",
+            "sampler": "k_euler",
             "model": "nai-diffusion-4-full",
             "restore_faces": false,
             "enable_hr": false,
