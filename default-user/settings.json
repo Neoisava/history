@@ -1580,7 +1580,7 @@
                 "name": "Nsfw Prompt",
                 "system_prompt": true,
                 "role": "system",
-                "content": "",
+                "content": "  - 考虑如果场景涉及到 NSFW 元素，请使用{{getvar::NSFWcot}}进行思考。",
                 "identifier": "nsfw",
                 "injection_position": 0,
                 "injection_depth": 4,
