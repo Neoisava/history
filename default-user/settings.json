@@ -973,7 +973,7 @@
             "horde_sanitize": true,
             "interactive_mode": false,
             "multimodal_captioning": false,
-            "snap": false,
+            "snap": true,
             "free_extend": false,
             "function_tool": false,
             "auto_url": "http://localhost:7860",
@@ -1150,6 +1150,10 @@
                     },
                     {
                         "set": "性爱选项整合_68_emoji_set_整合版",
+                        "isVisible": true
+                    },
+                    {
+                        "set": "AutoContinue",
                         "isVisible": true
                     }
                 ]
@@ -1468,7 +1472,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 56,
+                "lastProcessedLength": 57,
                 "userConfigured": true
             }
         }
