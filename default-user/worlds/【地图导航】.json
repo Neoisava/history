@@ -32,7 +32,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 0,
-            "displayIndex": 0,
+            "displayIndex": 2,
             "extensions": {
                 "position": 4,
                 "exclude_recursion": false,
@@ -90,7 +90,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 1,
-            "displayIndex": 1,
+            "displayIndex": 3,
             "extensions": {
                 "position": 0,
                 "exclude_recursion": false,
@@ -128,7 +128,7 @@
             "addMemo": true,
             "order": 100,
             "position": 0,
-            "disable": false,
+            "disable": true,
             "excludeRecursion": false,
             "preventRecursion": false,
             "delayUntilRecursion": false,
@@ -148,7 +148,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 2,
-            "displayIndex": 5,
+            "displayIndex": 4,
             "extensions": {
                 "position": 0,
                 "exclude_recursion": false,
@@ -206,7 +206,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 3,
-            "displayIndex": 6,
+            "displayIndex": 0,
             "extensions": {
                 "position": 0,
                 "exclude_recursion": false,
@@ -264,7 +264,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 5,
-            "displayIndex": 4,
+            "displayIndex": 5,
             "extensions": {
                 "position": 0,
                 "exclude_recursion": false,
@@ -322,7 +322,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 6,
-            "displayIndex": 2,
+            "displayIndex": 6,
             "extensions": {
                 "position": 0,
                 "exclude_recursion": false,
@@ -380,7 +380,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 7,
-            "displayIndex": 3,
+            "displayIndex": 1,
             "extensions": {
                 "position": 0,
                 "exclude_recursion": false,
