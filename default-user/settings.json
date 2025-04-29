@@ -939,7 +939,7 @@
             "dimension_max": 2048,
             "dimension_step": 64,
             "width": 512,
-            "height": 768,
+            "height": 512,
             "prompt_prefix": "NFWS,best quality, absurdres, masterpiece,",
             "negative_prompt": "lowres, bad anatomy, bad hands, text, error, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
             "sampler": "k_euler",
@@ -1610,7 +1610,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 66,
+                "lastProcessedLength": 67,
                 "userConfigured": true
             }
         }
