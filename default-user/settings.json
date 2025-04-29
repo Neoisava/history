@@ -1563,12 +1563,12 @@
         "st-input-helper": {
             "enabled": true,
             "buttons": {
-                "asterisk": true,
+                "asterisk": false,
                 "quotes": true,
                 "parentheses": true,
-                "bookQuotes1": true,
-                "bookQuotes2": true,
-                "bookQuotes3": true,
+                "bookQuotes1": false,
+                "bookQuotes2": false,
+                "bookQuotes3": false,
                 "newline": true,
                 "user": true,
                 "char": true
@@ -1585,10 +1585,10 @@
                 "char": "Alt+2"
             },
             "buttonOrder": [
+                "bookQuotes1",
                 "asterisk",
                 "quotes",
                 "parentheses",
-                "bookQuotes1",
                 "bookQuotes2",
                 "bookQuotes3",
                 "user",
