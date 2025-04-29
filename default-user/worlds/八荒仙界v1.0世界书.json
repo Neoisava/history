@@ -921,7 +921,6 @@
             "displayIndex": 1
         },
         {
-            "uid": 23,
             "key": [],
             "keysecondary": [],
             "comment": "",
@@ -936,6 +935,12 @@
             "disable": false,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -952,10 +957,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 23
+            "uid": 23,
+            "displayIndex": 2
         },
         {
-            "uid": 24,
             "key": [],
             "keysecondary": [],
             "comment": "",
@@ -970,6 +975,12 @@
             "disable": false,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -986,7 +997,8 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 24
+            "uid": 24,
+            "displayIndex": 3
         }
     ]
 }
