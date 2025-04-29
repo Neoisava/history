@@ -1,6 +1,7 @@
 {
-    "entries": [
-        {
+    "entries": {
+        "0": {
+            "uid": 0,
             "key": [],
             "keysecondary": [],
             "comment": "2.精简版（不要和1同时开）",
@@ -15,16 +16,10 @@
             "disable": true,
             "excludeRecursion": true,
             "preventRecursion": false,
-            "matchPersonaDescription": false,
-            "matchCharacterDescription": false,
-            "matchCharacterPersonality": false,
-            "matchCharacterDepthPrompt": false,
-            "matchScenario": false,
-            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
-            "depth": 4,
+            "depth": 0,
             "group": "",
             "groupOverride": false,
             "groupWeight": 100,
@@ -37,10 +32,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "uid": 0,
-            "displayIndex": 2
+            "displayIndex": 0
         },
-        {
+        "1": {
+            "uid": 1,
             "key": [],
             "keysecondary": [],
             "comment": "2.固定文末生成状态栏",
@@ -52,15 +47,9 @@
             "addMemo": true,
             "order": 99,
             "position": 4,
-            "disable": false,
+            "disable": true,
             "excludeRecursion": true,
             "preventRecursion": false,
-            "matchPersonaDescription": false,
-            "matchCharacterDescription": false,
-            "matchCharacterPersonality": false,
-            "matchCharacterDepthPrompt": false,
-            "matchScenario": false,
-            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -77,10 +66,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "uid": 1,
             "displayIndex": 1
         },
-        {
+        "2": {
+            "uid": 2,
             "key": [],
             "keysecondary": [],
             "comment": "1.核心逻辑（一般只要开这个，2和3选一个开）",
@@ -95,16 +84,10 @@
             "disable": false,
             "excludeRecursion": false,
             "preventRecursion": false,
-            "matchPersonaDescription": false,
-            "matchCharacterDescription": false,
-            "matchCharacterPersonality": false,
-            "matchCharacterDepthPrompt": false,
-            "matchScenario": false,
-            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
-            "depth": 4,
+            "depth": 0,
             "group": "",
             "groupOverride": false,
             "groupWeight": 100,
@@ -117,10 +100,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "uid": 2,
-            "displayIndex": 0
+            "displayIndex": 2
         },
-        {
+        "3": {
+            "uid": 3,
             "key": [],
             "keysecondary": [],
             "comment": "3.无指令不生成状态栏",
@@ -132,15 +115,9 @@
             "addMemo": true,
             "order": 99,
             "position": 4,
-            "disable": true,
+            "disable": false,
             "excludeRecursion": false,
             "preventRecursion": true,
-            "matchPersonaDescription": false,
-            "matchCharacterDescription": false,
-            "matchCharacterPersonality": false,
-            "matchCharacterDepthPrompt": false,
-            "matchScenario": false,
-            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -157,8 +134,7 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "uid": 3,
             "displayIndex": 3
         }
-    ]
+    }
 }
