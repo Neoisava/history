@@ -1419,14 +1419,14 @@
             }
         },
         "st-input-helper": {
-            "enabled": false,
+            "enabled": true,
             "buttons": {
-                "asterisk": false,
+                "asterisk": true,
                 "quotes": true,
                 "parentheses": true,
-                "bookQuotes1": false,
-                "bookQuotes2": false,
-                "bookQuotes3": false,
+                "bookQuotes1": true,
+                "bookQuotes2": true,
+                "bookQuotes3": true,
                 "newline": true,
                 "user": true,
                 "char": true
