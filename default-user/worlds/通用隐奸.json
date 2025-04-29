@@ -1,7 +1,6 @@
 {
-    "entries": {
-        "0": {
-            "uid": 0,
+    "entries": [
+        {
             "key": [],
             "keysecondary": [],
             "comment": "主要规则",
@@ -16,6 +15,12 @@
             "disable": false,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -32,10 +37,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 3
+            "uid": 0,
+            "displayIndex": 2
         },
-        "1": {
-            "uid": 1,
+        {
             "key": [],
             "keysecondary": [],
             "comment": "状态栏（可随意更改）",
@@ -47,9 +52,15 @@
             "addMemo": true,
             "order": 100,
             "position": 4,
-            "disable": false,
+            "disable": true,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -66,10 +77,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 2
+            "uid": 1,
+            "displayIndex": 6
         },
-        "2": {
-            "uid": 2,
+        {
             "key": [
                 "雷蒙达"
             ],
@@ -86,6 +97,12 @@
             "disable": true,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -102,10 +119,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 4
+            "uid": 2,
+            "displayIndex": 3
         },
-        "3": {
-            "uid": 3,
+        {
             "key": [
                 "阿昆"
             ],
@@ -122,6 +139,12 @@
             "disable": true,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -138,10 +161,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 5
+            "uid": 3,
+            "displayIndex": 4
         },
-        "4": {
-            "uid": 4,
+        {
             "key": [],
             "keysecondary": [],
             "comment": "行动选项（可关）",
@@ -156,6 +179,12 @@
             "disable": true,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -172,10 +201,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 6
+            "uid": 4,
+            "displayIndex": 5
         },
-        "5": {
-            "uid": 5,
+        {
             "key": [],
             "keysecondary": [],
             "comment": "隐奸规则",
@@ -190,10 +219,16 @@
             "disable": false,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
-            "depth": 3,
+            "depth": 4,
             "group": "",
             "groupOverride": false,
             "groupWeight": 100,
@@ -206,10 +241,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
+            "uid": 5,
             "displayIndex": 0
         },
-        "6": {
-            "uid": 6,
+        {
             "key": [],
             "keysecondary": [],
             "comment": "状态栏规则（同上）",
@@ -224,10 +259,16 @@
             "disable": false,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
-            "depth": 1,
+            "depth": 4,
             "group": "",
             "groupOverride": false,
             "groupWeight": 100,
@@ -240,7 +281,8 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
+            "uid": 6,
             "displayIndex": 1
         }
-    }
+    ]
 }
