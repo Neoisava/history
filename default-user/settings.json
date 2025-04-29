@@ -363,7 +363,8 @@
             "first_input_sequence": "",
             "last_input_sequence": "",
             "names_force_groups": true,
-            "derived": true
+            "derived": true,
+            "bind_to_context": true
         },
         "context": {
             "preset": "Default",
