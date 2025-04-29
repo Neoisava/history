@@ -649,7 +649,7 @@
             {
                 "id": "c711d11f-7d08-4fb3-84a3-496ab7dbed0c",
                 "scriptName": "（斯拉）删除think",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<think>[\\s\\S]*</think>/gm",
                 "replaceString": "",
@@ -1466,7 +1466,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 12,
+                "lastProcessedLength": 13,
                 "userConfigured": true
             }
         }
