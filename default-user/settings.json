@@ -1157,8 +1157,8 @@
         },
         "muyoo_dataTable": {
             "injection_mode": "deep_system",
-            "deep": 2,
-            "isExtensionAble": false,
+            "deep": 1,
+            "isExtensionAble": true,
             "isAiReadTable": true,
             "isAiWriteTable": true,
             "isTableToChat": false,
@@ -1169,7 +1169,7 @@
             "custom_top_p": 1,
             "tableBackups": {},
             "bool_ignore_del": false,
-            "clear_up_stairs": 3,
+            "clear_up_stairs": 5,
             "tableStructure": [
                 {
                     "tableName": "时空表格",
