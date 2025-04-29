@@ -1419,7 +1419,7 @@
             }
         },
         "st-input-helper": {
-            "enabled": true,
+            "enabled": false,
             "buttons": {
                 "asterisk": false,
                 "quotes": true,
@@ -1433,14 +1433,14 @@
             },
             "shortcuts": {
                 "asterisk": "",
-                "quotes": "",
+                "quotes": "Alt+3",
                 "parentheses": "",
                 "bookQuotes1": "",
                 "bookQuotes2": "",
                 "bookQuotes3": "",
                 "newline": "",
-                "user": "",
-                "char": ""
+                "user": "Alt+1",
+                "char": "Alt+2"
             },
             "buttonOrder": [
                 "asterisk",
