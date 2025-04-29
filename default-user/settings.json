@@ -601,7 +601,7 @@
             {
                 "id": "5b1a5c51-910a-4b5a-956a-390d4f9caca6",
                 "scriptName": "部位特写",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<font[^>]*>(.|\\n)*<\\/font>/gm",
                 "replaceString": "",
