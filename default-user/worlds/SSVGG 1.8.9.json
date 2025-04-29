@@ -1,7 +1,6 @@
 {
-    "entries": {
-        "0": {
-            "uid": 0,
+    "entries": [
+        {
             "key": [],
             "keysecondary": [],
             "comment": "狠招大全（核心）-主要",
@@ -16,6 +15,12 @@
             "disable": false,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -32,10 +37,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 0
+            "uid": 0,
+            "displayIndex": 20
         },
-        "1": {
-            "uid": 1,
+        {
             "key": [],
             "keysecondary": [],
             "comment": "狠招补充-内容-身体感官",
@@ -50,6 +55,12 @@
             "disable": true,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -66,10 +77,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 1
+            "uid": 1,
+            "displayIndex": 27
         },
-        "2": {
-            "uid": 2,
+        {
             "key": [],
             "keysecondary": [],
             "comment": "姿势大全（基础版本）",
@@ -84,6 +95,12 @@
             "disable": false,
             "excludeRecursion": false,
             "preventRecursion": true,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -100,10 +117,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 2
+            "uid": 2,
+            "displayIndex": 5
         },
-        "3": {
-            "uid": 3,
+        {
             "key": [
                 "插入",
                 "缠",
@@ -135,6 +152,12 @@
             "disable": false,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -151,10 +174,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 3
+            "uid": 3,
+            "displayIndex": 8
         },
-        "4": {
-            "uid": 4,
+        {
             "key": [
                 "射精",
                 "射",
@@ -173,6 +196,12 @@
             "disable": false,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -189,10 +218,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 4
+            "uid": 4,
+            "displayIndex": 1
         },
-        "5": {
-            "uid": 5,
+        {
             "key": [
                 "服装",
                 "情趣服装",
@@ -211,6 +240,12 @@
             "disable": false,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -227,10 +262,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 5
+            "uid": 5,
+            "displayIndex": 6
         },
-        "6": {
-            "uid": 6,
+        {
             "key": [],
             "keysecondary": [],
             "comment": "身材曼妙（可选）",
@@ -245,6 +280,12 @@
             "disable": false,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -261,10 +302,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 6
+            "uid": 6,
+            "displayIndex": 0
         },
-        "7": {
-            "uid": 7,
+        {
             "key": [],
             "keysecondary": [],
             "comment": "延迟-男性",
@@ -279,6 +320,12 @@
             "disable": true,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -295,10 +342,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 7
+            "uid": 7,
+            "displayIndex": 23
         },
-        "8": {
-            "uid": 8,
+        {
             "key": [],
             "keysecondary": [],
             "comment": "COT",
@@ -313,6 +360,12 @@
             "disable": false,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -329,10 +382,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 8
+            "uid": 8,
+            "displayIndex": 21
         },
-        "9": {
-            "uid": 9,
+        {
             "key": [],
             "keysecondary": [],
             "comment": "延迟-女性",
@@ -347,6 +400,12 @@
             "disable": true,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -363,10 +422,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 9
+            "uid": 9,
+            "displayIndex": 22
         },
-        "10": {
-            "uid": 10,
+        {
             "key": [],
             "keysecondary": [],
             "comment": "淫语表（瑟瑟必开）",
@@ -381,6 +440,12 @@
             "disable": false,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -397,10 +462,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 10
+            "uid": 10,
+            "displayIndex": 2
         },
-        "11": {
-            "uid": 11,
+        {
             "key": [],
             "keysecondary": [],
             "comment": "狠招补充-形式（选开，卡有标注 XP或玩法就不用开）",
@@ -415,6 +480,12 @@
             "disable": false,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -431,10 +502,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 11
+            "uid": 11,
+            "displayIndex": 19
         },
-        "12": {
-            "uid": 12,
+        {
             "key": [
                 "中难度",
                 "中难度姿势",
@@ -454,6 +525,12 @@
             "disable": false,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -470,10 +547,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 12
+            "uid": 12,
+            "displayIndex": 7
         },
-        "13": {
-            "uid": 13,
+        {
             "key": [
                 "服装",
                 "情趣服装",
@@ -492,6 +569,12 @@
             "disable": false,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -508,10 +591,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 13
+            "uid": 13,
+            "displayIndex": 18
         },
-        "14": {
-            "uid": 14,
+        {
             "key": [
                 "心理，控制"
             ],
@@ -528,6 +611,12 @@
             "disable": true,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -544,10 +633,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 14
+            "uid": 14,
+            "displayIndex": 24
         },
-        "15": {
-            "uid": 15,
+        {
             "key": [],
             "keysecondary": [],
             "comment": "狠招补充-内容-伦理禁忌",
@@ -562,6 +651,12 @@
             "disable": true,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -578,10 +673,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 15
+            "uid": 15,
+            "displayIndex": 26
         },
-        "16": {
-            "uid": 16,
+        {
             "key": [],
             "keysecondary": [],
             "comment": "狠招补充-内容-权利关系和特殊癖好",
@@ -596,6 +691,12 @@
             "disable": true,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -612,10 +713,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 16
+            "uid": 16,
+            "displayIndex": 25
         },
-        "17": {
-            "uid": 17,
+        {
             "key": [
                 "男上姿势",
                 "男上",
@@ -635,6 +736,12 @@
             "disable": false,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -651,10 +758,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 17
+            "uid": 17,
+            "displayIndex": 4
         },
-        "18": {
-            "uid": 18,
+        {
             "key": [
                 "侧身",
                 "侧身姿势"
@@ -672,6 +779,12 @@
             "disable": false,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -688,10 +801,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 18
+            "uid": 18,
+            "displayIndex": 17
         },
-        "19": {
-            "uid": 19,
+        {
             "key": [],
             "keysecondary": [],
             "comment": "狠招大全 (核心）-辅助",
@@ -706,6 +819,12 @@
             "disable": false,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -722,10 +841,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 19
+            "uid": 19,
+            "displayIndex": 9
         },
-        "20": {
-            "uid": 20,
+        {
             "key": [
                 "后入",
                 "从后面",
@@ -746,6 +865,12 @@
             "disable": false,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -762,10 +887,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 20
+            "uid": 20,
+            "displayIndex": 16
         },
-        "21": {
-            "uid": 21,
+        {
             "key": [
                 "口交",
                 "含"
@@ -783,6 +908,12 @@
             "disable": false,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -799,10 +930,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 21
+            "uid": 21,
+            "displayIndex": 3
         },
-        "22": {
-            "uid": 22,
+        {
             "key": [
                 "站立姿势",
                 "站立",
@@ -822,6 +953,12 @@
             "disable": false,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -838,10 +975,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 22
+            "uid": 22,
+            "displayIndex": 14
         },
-        "23": {
-            "uid": 23,
+        {
             "key": [
                 "女上",
                 "乘骑",
@@ -861,6 +998,12 @@
             "disable": false,
             "excludeRecursion": false,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -877,10 +1020,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 23
+            "uid": 23,
+            "displayIndex": 15
         },
-        "24": {
-            "uid": 24,
+        {
             "key": [],
             "keysecondary": [],
             "comment": "尖叫替换-2.5pro适用",
@@ -895,6 +1038,12 @@
             "disable": false,
             "excludeRecursion": true,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -911,10 +1060,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 24
+            "uid": 24,
+            "displayIndex": 10
         },
-        "25": {
-            "uid": 25,
+        {
             "key": [],
             "keysecondary": [],
             "comment": "哭腔替换-2.5pro适用",
@@ -929,6 +1078,12 @@
             "disable": false,
             "excludeRecursion": true,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -945,10 +1100,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 25
+            "uid": 25,
+            "displayIndex": 11
         },
-        "26": {
-            "uid": 26,
+        {
             "key": [],
             "keysecondary": [],
             "comment": "恐惧替换-2.5pro适用",
@@ -963,6 +1118,12 @@
             "disable": false,
             "excludeRecursion": true,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -979,10 +1140,10 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 26
+            "uid": 26,
+            "displayIndex": 12
         },
-        "27": {
-            "uid": 27,
+        {
             "key": [],
             "keysecondary": [],
             "comment": "男性高潮替换-2.5pro适用",
@@ -997,6 +1158,12 @@
             "disable": false,
             "excludeRecursion": true,
             "preventRecursion": false,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false,
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
@@ -1013,7 +1180,8 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 27
+            "uid": 27,
+            "displayIndex": 13
         }
-    }
+    ]
 }
