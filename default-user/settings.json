@@ -578,6 +578,23 @@
         "dice": {},
         "regex": [
             {
+                "id": "3102182e-0997-4f97-bafc-ecdc18e2e41a",
+                "scriptName": "隐藏表格思维链",
+                "findRegex": "/<tableThink_cot\\b[^>]*>[\\s\\S]*?<\\/tableThink_cot>/s",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
                 "id": "5b1a5c51-910a-4b5a-956a-390d4f9caca6",
                 "scriptName": "部位特写",
                 "disabled": false,
@@ -1590,7 +1607,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 4,
+                "lastProcessedLength": 5,
                 "userConfigured": true
             }
         }
