@@ -939,7 +939,7 @@
             "dimension_max": 2048,
             "dimension_step": 64,
             "width": 512,
-            "height": 512,
+            "height": 768,
             "prompt_prefix": "best quality, absurdres, masterpiece,",
             "negative_prompt": "lowres, bad anatomy, bad hands, text, error, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
             "sampler": "k_euler",
