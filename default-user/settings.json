@@ -1166,7 +1166,7 @@
             "custom_max_tokens": 2048,
             "custom_top_p": 1,
             "tableBackups": {},
-            "bool_ignore_del": true,
+            "bool_ignore_del": false,
             "clear_up_stairs": 3,
             "tableStructure": [
                 {
