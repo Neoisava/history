@@ -2903,7 +2903,7 @@
                 "marker": false,
                 "name": "✅贝叶斯",
                 "role": "system",
-                "content": "<Reasoning>\n# Thinking requirement\n**Thinking requirement:** You must think deeply and demonstrate your thought process (refer to <thinking>) at the beginning when you begin as thinking format.\n\n## Thinking format\n<think>\n0. Infer specific mistakes at least 5, refer to <possible_mistakes>\n1. Reconstruct current situation by <CURRENT>\n  - time and space:\n  - character posture:\n  - words:\n2. 1st Bayes decision\n  - Deduce 4 reasonable plot directions (SUM(P)=100%), while evaluating them by <core_principles>\n    a. {{Direction}}|{{P}}|{{Evaluation}}\n    b…\n  - Execute direction with highest P. Merge elements (if non-conflicting the executed direction) from P>26% directions. Avoid everything else\n3. 2nd Bayes decision (the exact same way)\n4. Literary processing\n  - …\n5. Remove duplicate expressions (retain sexual descriptions)\n  - duplicate expression of 1st probability\n  - …\n6. Say anything as you wish from your personal perspective\n</think>\n</Reasoning>",
+                "content": "<ChainOfThinking>\n# Thinking requirement\n**Thinking requirement:** You must think deeply and demonstrate your thought process (refer to <think>) at the beginning when you begin as thinking format.\n\n## Thinking format\n<think>\n0. Infer specific mistakes at least 5, refer to <possible_mistakes>\n1. Reconstruct current situation by <CURRENT>\n  - time and space:\n  - character posture:\n  - words:\n2. 1st Bayes decision\n  - Deduce 4 reasonable plot directions (SUM(P)=100%), while evaluating them by <core_principles>\n    a. {{Direction}}|{{P}}|{{Evaluation}}\n    b…\n  - Execute direction with highest P. Merge elements (if non-conflicting the executed direction) from P>26% directions. Avoid everything else\n3. 2nd Bayes decision (the exact same way)\n4. Literary processing\n  - 考虑如果场景涉及到 NSFW 元素，请使用{{getvar::NSFWcot}}进行思考,其中 NSFW 场景必须学习和模仿<writing_style1>的示例部分，但不可照抄。**仅此这步用中文输出**\n  - …\n5. Remove duplicate expressions (retain sexual descriptions)\n  - duplicate expression of 1st probability\n  - …\n6. Say anything as you wish from your personal perspective\n</think>\n</ChainOfThinking>",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -3744,7 +3744,7 @@
                     },
                     {
                         "identifier": "afb02f61-c7be-4892-8cf1-4202116bfeda",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "d2560cfc-2e8f-484e-b1ce-d288c0481a2e",
