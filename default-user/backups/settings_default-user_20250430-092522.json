@@ -4,7 +4,7 @@
         "__migrated": "1",
         "LNavOpened": "true",
         "NavOpened": "false",
-        "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}}}}",
+        "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
         "Personas_GridView": "false",
@@ -18,7 +18,9 @@
         "AlertWI_冷忧蝉.png": "true",
         "AlertWI_玄黄修真界v2.0.png": "true",
         "AlertRegex_玄黄修真界v2.0.png": "true",
-        "AlertWI_default_Seraphina.png": "true"
+        "AlertWI_default_Seraphina.png": "true",
+        "WINavLockOn": "false",
+        "AlertRegex_林若秋.png": "true"
     },
     "currentVersion": "1.12.14",
     "username": "林子安",
@@ -33,15 +35,14 @@
     "world_info_settings": {
         "world_info": {
             "globalSelect": [
+                "_性爱世界书",
                 "[基本]服装色情化世界",
                 "【地图导航】",
-                "【基本】世界观与社会观念增补",
-                "【基本】描写及规则世界书",
                 "【基本】限制及要求世界书",
                 "A",
-                "v1.9(1)",
+                "SSVGG 1.9.3",
+                "SSVGG 1.9.4",
                 "世界书：淫纹效果",
-                "体位大全",
                 "八荒仙界v1.0世界书",
                 "双修功法",
                 "多维情感网络动态",
@@ -52,8 +53,6 @@
                 "性知识普及 (1)",
                 "性经验调整世界书",
                 "我们的甜蜜情话",
-                "母子世界",
-                "母性世界书",
                 "油猴世界书末尾添加",
                 "部位特写",
                 "针对2.5pro的瑟瑟场景"
@@ -267,8 +266,8 @@
         "smooth_streaming": true,
         "smooth_streaming_speed": 100,
         "fast_ui_mode": false,
-        "avatar_style": 0,
-        "chat_display": 0,
+        "avatar_style": 2,
+        "chat_display": 1,
         "chat_width": 50,
         "never_resize_avatars": true,
         "show_card_avatar_urls": false,
@@ -280,25 +279,25 @@
         "sort_order": "asc",
         "sort_rule": null,
         "font_scale": 1,
-        "blur_strength": 3,
-        "shadow_width": 1,
-        "main_text_color": "rgba(235, 235, 235, 1)",
-        "italics_text_color": "rgba(230, 210, 190, 1)",
-        "underline_text_color": "rgba(205, 180, 160, 1)",
-        "quote_text_color": "rgba(165, 140, 115, 1)",
-        "blur_tint_color": "rgba(34, 30, 32, 0.95)",
-        "chat_tint_color": "rgba(50, 45, 50, 0.75)",
-        "user_mes_blur_tint_color": "rgba(34, 30, 32, 0.75)",
-        "bot_mes_blur_tint_color": "rgba(34, 30, 32, 0.75)",
-        "shadow_color": "rgba(0, 0, 0, 0.3)",
-        "border_color": "rgba(80, 80, 80, 0.89)",
-        "custom_css": "",
+        "blur_strength": 0,
+        "shadow_width": 2,
+        "main_text_color": "rgba(157, 162, 168, 1)",
+        "italics_text_color": "rgba(118, 127, 135, 1)",
+        "underline_text_color": "rgba(197, 203, 211, 1)",
+        "quote_text_color": "rgba(197, 203, 211, 1)",
+        "blur_tint_color": "rgba(0, 0, 0, 1)",
+        "chat_tint_color": "rgba(28, 28, 28, 0)",
+        "user_mes_blur_tint_color": "rgba(19, 19, 19, 0.8)",
+        "bot_mes_blur_tint_color": "rgba(19, 19, 19, 0.8)",
+        "shadow_color": "rgba(0, 0, 0, 1)",
+        "border_color": "rgba(28, 28, 28, 0)",
+        "custom_css": "/* ==========================================================\n   样式作者：@Junezz\n   版本：v1.0\n   发布于：类脑 Discord 社区\n\n   本样式仅供个人使用与参考，禁止任何形式的商用。\n   可二改不可二传。请保留本注释和原作者署名。\n   ========================================================== */\n\n/* 字体 */\n@import url(\"https://fontsapi.zeoseven.com/244/main/result.css\");\n@import url(\"https://fontsapi.zeoseven.com/515/main/result.css\");\n\nbody {\n    font-family: \"LXGW Neo XiHei Plus\";\n    font-weight: normal;\n}\n\n.mes_text {\n  font-family: \"QiushuiShotai\";\n  font-weight: normal;\n}\n\n.mes .mes_timer, .mes .mesIDDisplay, .mes .tokenCounterDisplay {\n  font-weight: 500;\n}\n\n  :root {\n    --mainFontSize: calc(var(--fontScale)* 16px); /* 主字体大小 */\n    --avatar-base-width: 48px; /* 头像宽度 */\n    --avatar-base-height: 48px; /* 头像高度 */\n    --genericRadius: 12px; /* 通用圆角 */\n    --buttonBorderRadius: 3px; /* 按键圆角 */\n    --warning: #ce3636;\n    --crimson70a: #ff373758;\n    --crimson-hover: #abacc566; /* 按钮hover颜色#b2c79766 */\n    --standardIconSize: calc(var(--mainFontSize)* 1);\n    --bottomFormIconSize: calc(var(--mainFontSize)* 1.2);\n    --bottomFormBlockPadding: calc(var(--mainFontSize) / 1.3);\n    --scrollBarWidth: 6px;\n    --pagePadding: calc(var(--scrollBarWidth) + 6px);\n    --buttonFill: #1f1f1f; /* 按钮背景颜色 */\n    --navBackgroundColor: #000; /* 导航栏和输入栏背景颜色 */\n    --menuBackgroundColor: var(--navBackgroundColor); /* 菜单背景颜色 */\n    --bottomMenuColor: #161616; /* 底部菜单背景颜色 */\n    --boxShadowSubtle: 0 2px 6px rgba(0, 0, 0, 0.16); \n    --accentColor: var(--SmartThemeQuoteColor); /* 装饰色1 思维链，文字装饰，段落装饰，头像滑轮条等 */\n    --accentColorOverlay: #ffffff1a; /* 装饰色2半透明 */\n    --accentColorOverlayalt: #ffffff10; /* 表格，代码，引用 */\n    --userHeaderColor: 214 226 255; /* 用户聊天框背景颜色 */\n    --aiHeaderColor: 214 226 255; /* AI聊天框背景颜色 */\n    --scrollBarColor: var(--accentColorOverlay); /* 滚动条颜色 */\n  }\n  \n  /* 聊天框背景 */\n  #chat {\n    padding: var( --pagePadding) 6px var( --pagePadding) var( --pagePadding);\n    overflow-y: scroll;\n    border-radius: 0px 0px var(--genericRadius) var(--genericRadius);\n  }\n\n  #top-bar {\n    background-color: transparent !important;\n    height: var(--topBarBlockSize);\n  }\n\n\n/* Apply unified background color to nav & menu buttons */\n  #rightNavHolder,\n  #persona-management-button,\n  #extensions-settings-button,\n  #logo_block,\n  #user-settings-button,\n  #WI-SP-button,\n  #advanced-formatting-button,\n  #sys-settings-button,\n  #ai-config-button {\n    background-color: var(--navBackgroundColor);\n    color: var(--SmartThemeUnderlineColor);\n  }\n\n  #extensions_settings .inline-drawer-toggle.inline-drawer-header,\n  #extensions_settings2 .inline-drawer-toggle.inline-drawer-header,\n  #user-settings-block h4,\n  .standoutHeader,\n  .userSettingsInnerExpandable, .bg_example {\n    border: transparent !important;\n  }\n\n  #left-nav-panel,\n  #rm_api_block,\n  #AdvancedFormatting,\n  #WorldInfo,\n  #user-settings-block,\n  #Backgrounds,\n  #rm_extensions_block,\n  .drawer-content.openDrawer,\n  #right-nav-panel {\n    background-color: var(--menuBackgroundColor) !important;\n    border-radius: 0px 0px var(--genericRadius) var(--genericRadius);\n    padding: 8px;\n  }\n\n  .drawer-content {\n    border-top-right-radius: 0px;\n    border-top-left-radius: 0px;\n    /*box-shadow: 0 1px 0 0 var(--SmartThemeUnderlineColor);*/\n    box-shadow: var(--boxShadowSubtle);\n    padding-top: 8px;\n  }\n\n  /* Icon Sizes & Colors */\n  #completion_prompt_manager #completion_prompt_manager_list li.completion_prompt_manager_prompt span span span,\n  #completion_prompt_manager #completion_prompt_manager_list .completion_prompt_manager_prompt .completion_prompt_manager_prompt_name .fa-solid,\n  #rm_button_characters, #rm_button_panel_pin_div, #lm_button_panel_pin_div, #WI_button_panel_pin_div,\n  #completion_prompt_manager .completion_prompt_manager_footer a,\n  .fa, .fa-brands, .fa-classic, .fa-regular, .fa-sharp, .fa-solid, .fab, .far, .fas {\n    font-size: var(--standardIconSize);\n    color: var(--SmartThemeUnderlineColor);\n  }\n   \n  /* 预设icons */\n  #completion_prompt_manager #completion_prompt_manager_list li.completion_prompt_manager_prompt .prompt_manager_prompt_controls span {\n    color: var(--SmartThemeBodyColor)  !important;\n  }\n  \n  /* 对话框icons */\n  .mes_button {\n    color: var(--SmartThemeBodyColor);\n  }\n\n  /* 底栏icon */\n  #rightSendForm>div:not(.mes_stop), #leftSendForm>div, .fa-solid.fa-circle-stop {\n    font-size: var(--bottomFormIconSize);\n    background-color: var(--navBackgroundColor) !important;\n    color: var(--SmartThemeUnderlineColor);\n  }\n\n  /* 底栏icon 对齐 */\n  #leftSendForm, #rightSendForm {\n    align-items: center;\n  }\n  \n  /* 标题样式 */\n  \n  /* 清除设置页相关模块标题的背景图，并精简上下 padding */\n  #extensions_settings .inline-drawer-toggle.inline-drawer-header,\n  #extensions_settings2 .inline-drawer-toggle.inline-drawer-header,\n  #user-settings-block h4, .standoutHeader{\n    background-image: none !important;\n    padding: 2px 0 !important;\n  }\n\n /* 原始元素样式 */\n  .standoutHeader:not(h4),\n  #rm_PinAndTabs,\n  #title_api,\n  #rm_api_block .flex-container.alignItemsBaseline,\n  #AdvancedFormatting .flex-container.alignItemsBaseline:not(h3),\n  #WorldInfo .alignitemscenter:not(#world_popup *),\n  #user-settings-block div[name=\"userSettingsRowOne\"],\n  #rm_extensions_block .alignitemscenter.flex-container.wide100p:not(.justifyCenter),\n  #top-settings-holder .drawer:not(:first-child):not(:last-child) .drawer-content .alignItemsBaseline.wide100p {\n    position: relative; /* 必须要有 */\n    padding-left: 12px;\n    margin-top: calc(var(--mainFontSize) * 0.2) !important;\n    margin-bottom: calc(var(--mainFontSize) * 0.2) !important;\n  }\n\n  /* 小竖线 */\n  #rm_PinAndTabs::before,\n  #title_api::before,\n  #rm_api_block .flex-container.alignItemsBaseline::before,\n  #AdvancedFormatting .flex-container.alignItemsBaseline:not(h3)::before,\n  #WorldInfo .alignitemscenter:not(#world_popup *)::before,\n  #user-settings-block div[name=\"userSettingsRowOne\"]::before,\n  #rm_extensions_block .alignitemscenter.flex-container.wide100p:not(.justifyCenter)::before,\n  #top-settings-holder .drawer:not(:first-child):not(:last-child) .drawer-content .alignItemsBaseline.wide100p::before {\n    content: '';\n    position: absolute;\n    left: 0;\n    top: 6px;\n    bottom: 6px;\n    width: 3px;\n    background-color: var(--SmartThemeBodyColor);\n    border-radius: 1px;\n  }\n\n  /* === 统一标题文字的行高（使阅读更舒适）=== */\n  .standoutHeader strong,\n  #right-nav-panel h2,\n  .drawer-content > h3,\n  .drawer-content .flex-container h3:first-of-type:not(#Backgrounds .textAlignCenter),\n  .drawer-content .flex-container .flex-container h3:first-of-type,\n  .popup h3:not(dialog *) {\n    line-height: 1.6;\n  }\n\n  .flex-container {\n    gap: 8px;\n  }\n\n  .redOverlayGlow {\n    color: #9c2c2c;\n  }\n\n  /* menu颜色 */\n  .ui-widget.ui-widget-content,\n  #bulk_tag_popup, #dialogue_popup, \n  .extensions_toolbar, .popup,\n  .popup .popper-modal, \n  .select2-dropdown {\n    background-color: var(--menuBackgroundColor);\n  }\n\n  #options, \n  #extensionsMenu {\n    background-color: var(--bottomMenuColor);\n    border-radius: var(--genericRadius);\n  }\n\n   /* 菜单阴影 */\n   #options,\n   #extensionsMenu, \n   .popup .popper-modal {\n     box-shadow: var(--boxShadowSubtle);\n   }\n\n   /* 角色卡添加tag */\n  body .ui-widget-content li:hover {\n    background-color: var(--accentColorOverlay);\n  }\n\n  .tag {\n    background-color: var(--buttonFill);\n    border: 0.5px solid var(--SmartThemeEmColor);\n  }\n\n  /* 角色卡删除键 */\n  .red_button:hover {\n    background-color: var(--crimson-hover) !important;\n  }\n\n   /* 世界书 */\n  .select2-container .select2-selection--multiple, .select2-container .select2-selection--single,\n  .select2-results__option::before,\n  .select2-results__option--selected.select2-results__option::before {\n    background-color: var(--buttonFill);\n  }\n\n  .select2-container .select2-selection--single .select2-selection__choice {\n    background-color: var(--accentColorOverlay);\n  }\n\n  .select2_multi_sameline+span.select2-container .select2-selection--multiple .select2-search__field {\n    background-color: transparent !important;\n  }\n\n  .standoutHeader~.inline-drawer-content {\n    background-color: var(--menuBackgroundColor);\n  }\n\n  .wi-card-entry {\n    margin-top: 12px;\n    padding: 8px;\n    background-color: var(--accentColorOverlay);\n  }\n\n  #world_popup_entries_list .world_entry .text_pole,\n  .select2_choice_clickable_buttonstyle+span.select2-container .select2-selection__choice__display,\n  span.select2.select2-container .select2-selection__choice__remove,\n  .select2-container .select2-selection--multiple .select2-selection__choice {\n    background-color: #2d3034 !important;\n  }\n\n  /* 聊天气泡 */\n  body.bubblechat .mes {\n    border: none !important;\n    border-radius: var(--genericRadius);\n    padding: 0px;\n    display: flex;\n    flex-direction: column;\n  }\n\n  /* 头像div */\n  .mesAvatarWrapper {\n    display: flex;\n    flex-direction: row; /* 从竖排改成横排 */\n    align-items: center; /* 垂直居中 */\n    gap: 8px; /* 头像和气泡之间的间距 */\n    padding: 16px 16px 0px 16px; /* 间距 */\n    border-top-left-radius: var(--genericRadius);\n    border-top-right-radius: var(--genericRadius);\n    overflow: hidden;\n    width: 100%;\n  }\n\n  body.bubblechat .mes[is_user=\"false\"] .mesAvatarWrapper {\n    background: rgb(var(--aiHeaderColor) / 0.05);\n  }\n\n  body.bubblechat .mes[is_user=\"true\"] .mesAvatarWrapper {\n    background: rgb(var(--userHeaderColor) / 0.05);\n  }\n\n    /* 头像处理 */\n  .mes .avatar img{\n   padding: 0px;\n  }\n\n  body.square-avatars .avatar, body.square-avatars .avatar img{\n    border-radius: calc(var(--genericRadius) - 4px) !important;\n  }\n\n  .avatar img {\n    border: none;\n    box-shadow: none !important;\n  }\n\n  body.big-avatars .avatar {\n    align-items: self-start !important;\n  }\n\n  /* 名字 */\n  .mes_block .ch_name {\n    padding: 16px; /* 间距 */\n    margin-bottom: 8px;\n  }\n\n  .mes_block .ch_name .name_text {\n    color: var(--SmartThemeQuoteColor);\n    font-weight: normal;\n  }\n\n  body.bubblechat .mes[is_user=\"false\"] .mes_block .ch_name {\n    background: linear-gradient(to bottom, rgb(var(--aiHeaderColor) / 0.05), rgb(var(--aiHeaderColor) / 0.03));\n  }\n\n  body.bubblechat .mes[is_user=\"true\"] .mes_block .ch_name {\n    background: linear-gradient(to bottom, rgb(var(--userHeaderColor) / 0.05), rgb(var(--userHeaderColor) / 0.03));\n  }\n\n    \n  /* AI聊天气泡样式 */\n  body.bubblechat .mes {\n    margin-bottom: 16px;\n  }\n  \n\n  /* 正文 */\n  .mes_text {\n    padding: 8px 16px !important;\n  }\n    \n  .last_mes .mesAvatarWrapper {\n    padding-bottom: 0px !important;\n  }\n\n  .mes_block {\n    padding-left: 0px !important;\n  }\n\n  /* 正文edit按键 */\n  .mes_edit_buttons {\n    filter: drop-shadow(0px 0px 2px var(--buttonFill));\n  }\n\n  .mes_edit_buttons .menu_button, .mes_reasoning_actions .edit_button {\n    color: var(--SmartThemeBodyColor);\n  }\n\n   /* 引用 */\n  .mes_text blockquote, .mes_reasoning blockquote {\n    background-color: var(--accentColorOverlayalt);\n    border-left: var(--SmartThemeUnderlineColor) 2px solid;\n    padding: 8px;\n    padding-left: 16px;\n    margin-bottom: 8px;\n  }\n\n  /* extension */\n  .extensions_info .extension_disabled {\n    color: var(--SmartThemeEmColor);\n  }\n\n  /* 快捷回复 */\n  .menu_button  {\n    filter: none !important;\n    background-color: var(--buttonFill) !important;\n    border-radius: var(--buttonBorderRadius) !important;\n    border:transparent !important;\n  }\n\n  .menu_button:hover {\n    background-color: var(--crimson-hover) !important;\n  }\n\n  /* 输入助手 */\n  .integrated-button-row {\n    background-color: var(--menuBackgroundColor) !important;\n  }\n\n  /* 发送&top bar */\n  body.no-blur #top-bar, body.no-blur #send_form {\n    background-color: var(--navBackgroundColor) !important;\n    border-radius: var(--genericRadius);\n    padding: 6px 8px;\n  }\n\n  /* 顶栏阴影 */\n  body.no-blur #top-bar {\n    box-shadow: none;\n  }\n\n  /* 发送栏阴影 */\n  body.no-blur #send_form {\n    box-shadow: var(--boxShadowSubtle);\n  }\n\n  .menu_button.menu_button_default {\n    box-shadow: none !important;\n  }\n\n  /* Checkbox */\n  input[type='checkbox'] {\n    background-color: var(--buttonFill);\n    border: transparent;\n    box-shadow: none;\n    border-radius: 2px;\n  }\n\n  input[type=\"checkbox\"]::before {\n    box-shadow: inset 1em 1em var(--SmartThemeEmColor);\n  }\n\n  /* 预设 */\n  #completion_prompt_manager_list {\n    background-color: var(--menuBackgroundColor) !important;\n    padding: 0px 8px;\n  }\n  \n  #completion_prompt_manager .caution {\n    color: var(--warning);\n  }\n\n  #completion_prompt_manager #completion_prompt_manager_list li.completion_prompt_manager_prompt {\n    background-color: var(--accentColorOverlay);\n    border: transparent;\n    border-radius: 4px;\n    padding: 8px;\n    margin-bottom: 8px;\n  }\n  #completion_prompt_manager #completion_prompt_manager_list .completion_prompt_manager_prompt.completion_prompt_manager_prompt_disabled {\n    background-color: var(--menuBackgroundColor) ;\n    border: transparent;\n    border-radius: 4px;\n    padding: 8px;\n    margin-bottom: 8px;\n  }\n\n  #completion_prompt_manager .completion_prompt_manager_header {\n    color: var(--SmartThemeBodyColor);\n  }\n\n  .text_muted {\n    color: var(--white50a);\n  }\n\n  /* 预设icon取消shadow */\n  #completion_prompt_manager #completion_prompt_manager_list li.completion_prompt_manager_prompt span span span,\n  .mes_button, #completion_prompt_manager .completion_prompt_manager_header_advanced span{\n    filter: none !important;\n  }\n\n  /* 预设inactive颜色 */\n  #completion_prompt_manager #completion_prompt_manager_list .completion_prompt_manager_prompt_disabled .completion_prompt_manager_prompt_name, #completion_prompt_manager #completion_prompt_manager_list .completion_prompt_manager_prompt_disabled .completion_prompt_manager_prompt_name .prompt-manager-inspect-action {\n    color: var(--white50a);\n  }\n  \n  /* tag颜色 */\n  code {\n    background-color: var(--menuBackgroundColor);\n    color: var(--SmartThemeUnderlineColor);\n  }\n\n  /* Spacing Adjustment */\n  .range-block-title {\n    margin: 8px 0px;\n    text-align: left;\n  }\n\n  hr {\n    background-image: none;\n    background-color: var(--SmartThemeUnderlineColor);\n    margin: 12px 0px;\n  }\n\n  .range-block {\n    margin-bottom: 8px;\n  }\n  .checkbox_label {\n    margin: 2px 0px;\n  }\n\n  #result_info_text {\n    color: var(--SmartThemeBodyColor);\n  }\n\n  .editable-slider-notification {\n    top:10px;\n  }\n\n  /* 按键选项等颜色 */\n  select, .range-block-counter input, .text_pole, .textarea:not(#send_textarea), .neo-range-input {\n    filter: none !important;\n    background-color: var(--buttonFill) !important;\n    border: none !important;\n    margin: 4px 0px !important;\n    border-radius: var(--buttonBorderRadius);\n  }\n\n  /* 发送input */\n  #send_textarea {\n    background-color: transparent !important;\n    border: none !important;\n    font-size: calc(var(--mainFontSize) - 1px);\n  }\n\n  /* 圆形滑动条active */\n  input.neo-range-slider[type=\"range\"]::-webkit-slider-thumb {\n    width: 12px;\n    height: 12px;\n    border: none;\n    box-shadow: none;\n    background-color: var(--SmartThemeBodyColor) !important;\n  }\n\n  input.neo-range-slider[type=\"range\"] {\n    background-color: var(--buttonFill) !important;\n  }\n  \n  /* 圆形滑动条disabled */\n  input.neo-range-slider[type=\"range\"]:disabled::-webkit-slider-thumb {\n    width: 12px;\n    height: 12px;\n    border: none;\n    box-shadow: none;\n    background-color: var(--SmartThemeBodyColor) !important;\n  }\n\n  input.neo-range-slider[type=\"range\"]:disabled {\n    background-color: var(--buttonFill) !important;\n    opacity: 0.3;\n  }\n\n   /* 预设圆形滑动条active */\n\n  .neo-range-slider:hover, input[type=\"range\"]:hover {\n    filter: brightness(0.85);\n  }\n\n  .range-block-range input[type=\"range\"]::-webkit-slider-thumb {\n    width: 12px;\n    height: 12px;\n    border: none;\n    box-shadow: none;\n    background-color: var(--SmartThemeBodyColor) !important;\n  }\n\n  .range-block-range input[type=\"range\"] {\n    box-shadow: none;\n    background-color: var(--buttonFill) !important;\n  }\n\n\n  /* 其他 */\n  #userSettingsRowOne {\n    margin: 8px 0px;\n  }\n\n  #rm_print_characters_block {\n    margin-top: 8px;\n  }\n\n  #ui_language_select {\n    width: 6em !important;\n  }\n\n  /* 角色 */\n  #rm_print_characters_pagination {\n    background-color: var(--menuBackgroundColor);\n    border-radius: var(--genericRadius);\n    padding: 8px;\n    margin: 8px;\n  }\n\n  .avatar-container.selected {\n    border: 2px solid var(--accentColor);\n    border-radius: var(--genericRadius);\n  }\n  \n  .avatar-container:hover {\n    background-color: var(--white20a);\n  }\n\n  .add_avatar:hover {\n    filter: drop-shadow(0px 0px 4px var(--accentColor));\n  }\n\n  .character_select.is_fav .ch_name, .group_select.is_fav .ch_name, .group_member.is_fav .ch_name {\n    color: var(--SmartThemeUnderlineColor);\n  }\n\n  .character_select.is_fav .avatar {\n    outline: 2px solid var(--SmartThemeUnderlineColor);\n  }\n\n  /* 思维链 */\n  .mes_reasoning_details {\n    padding-left: 16px;\n    padding-right: 16px;\n  }\n\n  .mes_reasoning_header_title {\n    padding-right: 16px;\n  }\n\n  .mes_reasoning_header {\n    background-color: var(--accentColorOverlayalt);\n    justify-content: center;\n    padding: 8px;\n    letter-spacing: 0.5px;\n    margin-bottom: 12px;\n    transition: all 0.25s ease;\n    cursor: pointer;\n  }\n\n  .mes_reasoning_header:hover {\n    background-color: var(--accentColorOverlay);\n  }\n\n  .mes_reasoning_details .mes_reasoning_arrow {\n    height: var(--mainFontSize)*0.9;\n    width: var(--mainFontSize)*0.9;\n  }\n\n  .mes_reasoning {\n    border-left: var(--SmartThemeUnderlineColor) solid 2px;\n    color: var(--SmartThemeBodyColor);\n  }\n\n  /* scrollbar */\n  ::-webkit-scrollbar {\n    width: var(--scrollBarWidth);\n    height: var(--scrollBarWidth);\n  }\n\n  ::-webkit-scrollbar-track {\n    background: transparent;\n  }\n\n  ::-webkit-scrollbar-thumb:vertical,\n  ::-webkit-scrollbar-thumb:horizontal {\n  background-color: var(--accentColorOverlay);\n  border: none;\n  box-shadow: none;\n  }\n  \n  /* 其他 */\n  .drawer-content .alignItemsBaseline {\n    align-items: center !important;\n  }\n\n  .flex1.flex-container.alignItemsBaseline {\n    min-width: 214px;\n  }\n\n  .fa-solid.fa-circle-question.note-link-span {\n    padding-top: 5px;\n    padding-bottom: 5px;\n  }\n\n  .doubleRangeContainer > .doubleRangeInputContainer::after {\n    background-color: var(--SmartThemeEmColor);\n    box-shadow: none !important;\n  } \n\n  /* pagination */\n  div[is_user=\"false\"].last_mes .mes_block {\n    padding-bottom: 48px;\n  }\n\n  .swipes-counter {\n    color: var(--SmartThemeQuoteColor);\n    margin: 0px;\n    min-width: max-content;\n  }\n\n  .flex-container.swipeRightBlock {\n    display: flex;\n    flex-direction: row-reverse; /* <-- this makes it horizontal */\n    padding-bottom: 20px;\n    margin-right: 16px;\n  }\n\n   /* qr */\n  .popup #qr--modalEditor #qr--modal-message {\n    color: var(--SmartThemeBodyColor) !important;\n    background-color: var(--buttonFill) !important;\n  }\n\n  .popup:has(#qr--modalEditor) .popup-content #qr--modal-message::selection {\n    color: var(--SmartThemeBodyColor) !important;\n  }\n\n  /* in-app notif */\n  #toast-container>div {\n    box-shadow: var(--boxShadowSubtle) !important;\n  }\n\n  \n  /* 角色收藏滚动条 */\n  #HotSwapWrapper > div {\n    overflow: auto hidden;\n    flex-wrap: nowrap;\n    justify-content: flex-start;\n    gap: 8px;\n    min-height: calc(var(--avatar-base-height)* 1.5);\n  }\n  \n  #HotSwapWrapper > div::-webkit-scrollbar-thumb {\n    background-color: var(--scrollBarColor);\n  }\n\n  #HotSwapWrapper {\n    overflow: hidden;\n  }\n\n  /* 对白样式 */\n  .mes_text q {\n    padding: 0px 4px;\n    font-weight: 500 !important;\n  }\n \n  /* 表格样式 */\n  .mes_text table {\n    width: 100%;\n    border-collapse: collapse;\n    margin: 8px 0;\n    color: var(--SmartThemeBodyColor);\n    background-color: var(--accentColorOverlayalt);\n    border-radius: var(--genericRadius);\n    overflow: hidden;\n  }\n\n .mes_text th,\n .mes_text td {\n  border: none;\n  border-right: 1px solid var(--accentColorOverlayalt);\n  padding: 10px 14px;\n  text-align: left;\n  border-bottom: 1px solid var(--accentColorOverlayalt);\n }\n\n .mes_text th {\n  font-weight: 700;\n }\n\n .mes_text tr:last-child td {\n  border-bottom: none;\n }\n\n .mes_text tr:nth-child(even) {\n  background-color: rgba(255, 255, 255, 0.025);\n }\n\n .mes_text td:last-child,\n .mes_text th:last-child {\n  border-right: none;\n }\n\n \n/* 基础代码块 */\n.mes_text pre {\n  background-color: var(--accentColorOverlayalt);\n  padding: 12px 14px;\n  border-radius: var(--genericRadius);\n  font-family: inherit;    \n  font-size: calc(var(--mainFontSize)* 0.95);\n  letter-spacing: 0.3px;\n  overflow-x: auto;\n  white-space: pre-wrap;\n  word-break: break-word;\n  position: relative; \n}\n\n .mes_text pre code{\n  line-height: 1.4;\n}\n\n/* 保留字体继承，不破坏复制按钮结构 */\n.mes_text pre code {\n  font-family: inherit;\n  color: inherit;\n  background: none;\n  border: none\n}\n\n/* 手机适配 */\n@media (max-width: 600px) {\n  #rm_extensions_block {\n    padding-right: 24px;\n  }\n  #bg_menu_content {\n    width: 100%;\n  }\n}\n\n/* Safari 适配 */\n@supports (-webkit-touch-callout: none) {\n  #chat {\n    padding-right: var(--pagePadding); /* 手动留出滚动条空间 */\n  }\n  .drawer-content:not(#left-nav-panel):not(#right-nav-panel) {\n    max-width: 100dvw;\n  }\n  #world_popup {\n    width: 100%;\n  }\n}\n\n/* iPad safari */\n@supports (-webkit-touch-callout: none) {\n  @media screen and (min-width: 768px) {\n    #sheld {\n      width: var(--sheldWidth);\n      margin-left: auto;\n      margin-right: auto;\n    }\n    #top-bar, #top-settings-holder .drawer .drawer-content {\n      width: var(--sheldWidth);\n    }\n    #left-nav-panel,\n    #right-nav-panel,\n    #character_popup,\n    #world_popup,\n    .drawer-content {\n      top: var(--topBarBlockSize);\n    }\n    #character_popup,\n    #world_popup,\n    .drawer-content {\n      margin-top: 0px;\n      top: var(--topBarBlockSize);\n    }\n  }\n}\n\n/* 插件适配 */\n\n/* 文生图 */\n#settings-panel input, #settings-panel select, #settings-panel textarea,\n#settings-panel2 input, #settings-panel2 select {\n  color: var(--SmartThemeBodyColor) !important;\n  background-color: var(--buttonFill) !important;\n}\n\n/* 记忆插件表格 */\n.tableToolbar {\n  background-color: var(--menuBackgroundColor) !important;\n  border: none !important;\n}\n\n/* qr隐藏插件 */\n#quick-reply-rocket-button i {\n  font-size: var(--bottomFormIconSize) !important;\n  color: var(--SmartThemeUnderlineColor) !important;\n}\n\n/* 输入助手 */\n.form-group label {\n  color: var(--SmartThemeBodyColor) !important;\n}\n\n.form-group input, .form-group select {\n  border: none !important;\n  background-color: var(--buttonFill) !important;\n  color: var(--SmartThemeBodyColor) !important;\n}\n\n/* 酒馆助手 */\n.title-item-active {\n  background-color: var(--white20a) !important;\n}\n\n.toggle-input:checked + .toggle-label { \n  background-color: var(--white20a) !important;\n}",
         "waifuMode": false,
         "movingUI": false,
         "movingUIState": {},
         "movingUIPreset": "1",
         "noShadows": false,
-        "theme": "Cappuccino",
+        "theme": "夜间极简卡片",
         "gestures": true,
         "auto_swipe": false,
         "auto_swipe_minimum_length": 0,
@@ -313,13 +312,13 @@
         "allow_name1_display": false,
         "allow_name2_display": false,
         "hotswap_enabled": true,
-        "timer_enabled": false,
+        "timer_enabled": true,
         "timestamps_enabled": true,
-        "timestamp_model_icon": true,
+        "timestamp_model_icon": false,
         "mesIDDisplay_enabled": true,
         "hideChatAvatars_enabled": false,
         "max_context_unlocked": false,
-        "message_token_count_enabled": false,
+        "message_token_count_enabled": true,
         "expand_message_actions": false,
         "enableZenSliders": false,
         "enableLabMode": false,
@@ -361,12 +360,13 @@
             "first_input_sequence": "",
             "last_input_sequence": "",
             "names_force_groups": true,
-            "derived": true
+            "derived": true,
+            "bind_to_context": true
         },
         "context": {
             "preset": "Default",
-            "story_string": "{{#if system}}{{system}}\n{{/if}}{{#if wiBefore}}{{wiBefore}}\n{{/if}}{{#if description}}{{description}}\n{{/if}}{{#if personality}}{{char}}'s personality: {{personality}}\n{{/if}}{{#if scenario}}Scenario: {{scenario}}\n{{/if}}{{#if wiAfter}}{{wiAfter}}\n{{/if}}{{#if persona}}{{persona}}\n{{/if}}",
-            "chat_start": "***",
+            "story_string": "{{#if system}}{{system}}\n{{/if}}{{#if wiBefore}}{{wiBefore}}\n{{/if}}{{#if description}}{{description}}\n{{/if}}{{#if personality}}{{char}}'s personality: {{personality}}\n{{/if}}{{#if scenario}}Scenario: {{scenario}}\n{{/if}}{{#if wiAfter}}{{wiAfter}}\n{{/if}}{{#if persona}}{{persona}}\n{{/if}}b,与，",
+            "chat_start": "***wqz",
             "example_separator": "***",
             "use_stop_strings": false,
             "allow_jailbreak": false,
@@ -616,7 +616,7 @@
             {
                 "id": "6251ab3d-44f4-4105-9bd2-8121171b44d9",
                 "scriptName": "移除思维链和多余标签v2",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/(.*\\</thinking>\\n|.*\\<content[\\s\\S]*?>\\n|</content>|<(/)content_format>)/gs",
                 "replaceString": "",
@@ -845,7 +845,7 @@
                     2,
                     5
                 ],
-                "disabled": false,
+                "disabled": true,
                 "markdownOnly": true,
                 "promptOnly": true,
                 "runOnEdit": true,
@@ -893,9 +893,9 @@
             "冷忧蝉.png",
             "default_Seraphina.png",
             "八荒仙界v1.0.png",
-            "林若秋.png",
             "地图导航模块3.0.png",
-            "玄黄修真界v2.0.png"
+            "玄黄修真界v2.0.png",
+            "林若秋.png"
         ],
         "tts": {
             "voiceMap": "",
@@ -932,15 +932,15 @@
             "steps_min": 1,
             "steps_max": 150,
             "steps_step": 1,
-            "steps": 20,
+            "steps": 28,
             "dimension_min": 64,
             "dimension_max": 2048,
             "dimension_step": 64,
             "width": 512,
             "height": 512,
-            "prompt_prefix": "best quality, absurdres, masterpiece,",
+            "prompt_prefix": "NFWS,best quality, absurdres, masterpiece,",
             "negative_prompt": "lowres, bad anatomy, bad hands, text, error, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
-            "sampler": "k_euler_ancestral",
+            "sampler": "k_euler",
             "model": "nai-diffusion-4-full",
             "restore_faces": false,
             "enable_hr": false,
@@ -972,7 +972,7 @@
             "horde_sanitize": true,
             "interactive_mode": false,
             "multimodal_captioning": false,
-            "snap": false,
+            "snap": true,
             "free_extend": false,
             "function_tool": false,
             "auto_url": "http://localhost:7860",
@@ -1144,11 +1144,7 @@
             "config": {
                 "setList": [
                     {
-                        "set": "角色扮演輔助導演版(1.1)",
-                        "isVisible": true
-                    },
-                    {
-                        "set": "性爱选项整合_68_emoji_set_整合版",
+                        "set": "AutoContinue",
                         "isVisible": true
                     }
                 ]
@@ -1156,8 +1152,8 @@
         },
         "muyoo_dataTable": {
             "injection_mode": "deep_system",
-            "deep": 2,
-            "isExtensionAble": false,
+            "deep": 3,
+            "isExtensionAble": true,
             "isAiReadTable": true,
             "isAiWriteTable": true,
             "isTableToChat": false,
@@ -1171,46 +1167,42 @@
             "clear_up_stairs": 3,
             "tableStructure": [
                 {
-                    "tableName": "时空表格",
+                    "tableName": "当前信息",
                     "tableIndex": 0,
                     "columns": [
-                        "日期",
-                        "时间",
-                        "地点（当前描写）",
-                        "此地角色"
+                        "时间线",
+                        "当前地点",
+                        "当前在场角色"
                     ],
                     "columnsIndex": [
                         0,
                         1,
-                        2,
-                        3
+                        2
                     ],
                     "enable": true,
-                    "Required": true,
                     "asStatus": true,
                     "toChat": true,
-                    "note": "记录时空信息的表格，应保持在一行",
-                    "initNode": "本轮需要记录当前时间、地点、人物信息，使用insertRow函数",
-                    "updateNode": "当描写的场景，时间，人物变更时",
-                    "deleteNode": "此表大于一行时应删除多余行"
+                    "Required": true,
+                    "note": "基本状态表\n1.若处于多个地方，用\"|\"分隔，如\n『公园|工作室』\n2.若存在多个处于地点，用\"|\"分隔，如『爱丽丝(公园)|查理(工作室)』\n3.时间线每回合必须强制更新",
+                    "initNode": "对话开始时，如果表 0 为空，则根据提到的时间轴标记和地点插入数据",
+                    "updateNode": "每轮，强制顺序：\n1. 从表 2 获取最新时间轴标记，时间线必须更新\n2. 更新时间线和当前地点以及角色列表（与表2，表 5 和 6 同步）"
                 },
                 {
-                    "tableName": "角色特征表格",
+                    "tableName": "角色信息",
                     "tableIndex": 1,
                     "columns": [
-                        "角色名",
+                        "角色名称",
                         "身体特征",
                         "性格",
                         "职业",
                         "爱好",
-                        "喜欢的事物（作品、虚拟人物、物品等）",
-                        "住所",
-                        "其他重要信息"
+                        "偏好",
+                        "居住地点",
+                        "备注",
+                        "当前关系",
+                        "当前态度",
+                        "好感度"
                     ],
-                    "enable": true,
-                    "Required": true,
-                    "asStatus": true,
-                    "toChat": true,
                     "columnsIndex": [
                         0,
                         1,
@@ -1219,47 +1211,50 @@
                         4,
                         5,
                         6,
-                        7
-                    ],
-                    "note": "角色天生或不易改变的特征csv表格，思考本轮有否有其中的角色，他应作出什么反应",
-                    "initNode": "本轮必须从上文寻找已知的所有角色使用insertRow插入，角色名不能为空",
-                    "insertNode": "当本轮出现表中没有的新角色时，应插入",
-                    "updateNode": "当角色的身体出现持久性变化时，例如伤痕/当角色有新的爱好，职业，喜欢的事物时/当角色更换住所时/当角色提到重要信息时",
-                    "deleteNode": ""
-                },
-                {
-                    "tableName": "角色与<user>社交表格",
-                    "tableIndex": 2,
-                    "columns": [
-                        "角色名",
-                        "对<user>关系",
-                        "对<user>态度",
-                        "对<user>好感"
-                    ],
-                    "columnsIndex": [
-                        0,
-                        1,
-                        2,
-                        3
+                        7,
+                        8,
+                        9,
+                        10
                     ],
                     "enable": true,
                     "Required": true,
                     "asStatus": true,
                     "toChat": true,
-                    "note": "思考如果有角色和<user>互动，应什么态度",
-                    "initNode": "本轮必须从上文寻找已知的所有角色使用insertRow插入，角色名不能为空",
-                    "insertNode": "当本轮出现表中没有的新角色时，应插入",
-                    "updateNode": "当角色和<user>的交互不再符合原有的记录时/当角色和<user>的关系改变时",
-                    "deleteNode": ""
+                    "note": "核心角色档案；每轮检查并更新所有在场角色的角色的完整信息\n1.身体特征必须填入确切的性器特征，以及角色拥有的伤疤，纹身等内容，女性为女性的性器，男性为男性的性器\n2.若角色有隐藏信息则放在备注，比如不为人知的秘密，是否为处女，性经历等内容并用斜杠分隔\n3.当前角色与角色的关系/当前角色与角色的态度/当前角色与角色的好感度(好感度/情欲值/忍耐力/性快感)等信息需要明确表明，好感度表格中的(好感度/情欲值/忍耐力/性快感)用百分比\"%\"表示，只生成有关系的角色，未产生相互关系的角色不会产生相关内容",
+                    "initNode": "对话开始时，自动检测并提取所有在场角色；插入并更新角色名称/身体特征/个性/职业/爱好/偏好/居住地点/备注/当前角色与角色的关系/当前角色与角色的态度/当前角色与角色的好感度(好感度/情欲/忍耐度/性快感)（如果不存在）",
+                    "insertNode": "当表 0 中出现新的在场角色时，插入角色信息（现有角色不会重复插入）",
+                    "updateNode": "当角色的身体特征/性格/职业/爱好/偏好/居住地点/备注/当前角色与角色的关系/当前角色与角色的态度/当前角色与角色的好感度(好感度/情欲/忍耐度/性快感)变化时",
+                    "deleteNode": "禁止删除任何角色信息"
                 },
                 {
-                    "tableName": "任务、命令或者约定表格",
+                    "tableName": "时间轴",
+                    "tableIndex": 2,
+                    "columns": [
+                        "时间轴标记",
+                        "具体日期"
+                    ],
+                    "columnsIndex": [
+                        0,
+                        1
+                    ],
+                    "enable": true,
+                    "asStatus": true,
+                    "toChat": true,
+                    "Required": true,
+                    "note": "时间线标记\n1. 每轮必须生成新时间轴标记（格式 Dxxx），数值部分从上一轮递增 1\n2. 仅保留最新时间轴行\n3. 时间轴标记和日期同步更新\n注意：'具体日期' 格式应为 YYYY-MM-DD日HH：MM （使用全角冒号）必须用正常的时间填入\n4.如果具体时间未知则进行推断，必须用正常的时间表达，必须填入具体时间如2025-04-01日5：30",
+                    "initNode": "插入初始时间轴标记和具体时间 『D000/YYYY-MM-DD日HH：MM』",
+                    "updateNode": "每轮强制执行操作：\n1. 获取当前最大时间轴标记数值（如果无数据从 D000 开始）\n2. 生成新时间轴标记 Dxxx (xxx = 当前最大值 + 1)\n3. 插入新时间轴标记和对应具体时间",
+                    "deleteNode": "删除所有旧行",
+                    "insertNode": "每轮插入新时间轴标记和具体时间；数值部分必须为当前最大值 + 1（例如 D004 → D005）"
+                },
+                {
+                    "tableName": "任务与日程",
                     "tableIndex": 3,
                     "columns": [
-                        "角色",
-                        "任务",
-                        "地点",
-                        "持续时间"
+                        "相关角色",
+                        "任务内容",
+                        "任务地点",
+                        "有效期限"
                     ],
                     "columnsIndex": [
                         0,
@@ -1268,23 +1263,99 @@
                         3
                     ],
                     "enable": true,
-                    "Required": false,
                     "asStatus": true,
                     "toChat": true,
-                    "note": "思考本轮是否应该执行任务/赴约",
-                    "insertNode": "当特定时间约定一起去做某事时/某角色收到做某事的命令或任务时",
-                    "updateNode": "",
-                    "deleteNode": "当大家赴约时/任务或命令完成时/任务，命令或约定被取消时"
+                    "Required": true,
+                    "note": "用户相关任务(约定|任务|约会|目标|目的|承诺|既定行程|协议)",
+                    "initNode": "对话开始时，提取用户(约定|任务|约会|目标|目的|承诺|既定行程|协议)并插入",
+                    "insertNode": "当添加新任务且相关角色存在时，插入提取用户(约定|任务|约会|目标|目的|承诺|既定行程|协议)（必须包括任务地点和截止时间）",
+                    "updateNode": "当任务状态变化（例如任务地点或时间变化）时，更新对应字段",
+                    "deleteNode": "当任务完成或取消时，删除整行"
                 },
                 {
-                    "tableName": "重要事件历史表格",
+                    "tableName": "事件历史",
                     "tableIndex": 4,
                     "columns": [
-                        "角色",
-                        "事件简述",
-                        "日期",
-                        "地点",
-                        "情绪"
+                        "事件描述",
+                        "事件时间轴",
+                        "事件发生地点",
+                        "情绪变化"
+                    ],
+                    "columnsIndex": [
+                        0,
+                        1,
+                        2,
+                        3
+                    ],
+                    "enable": true,
+                    "asStatus": true,
+                    "toChat": true,
+                    "Required": true,
+                    "note": "顺序事件记录",
+                    "initNode": "对话开始时，生成 1 条包含具体时间的事件条目并插入",
+                    "insertNode": "每轮结束时，插入新的包含具体时间的事件行（必须链接到时间轴和事件发生地点）",
+                    "deleteNode": "进行表格11大总结，删除所有表格4事件历史中已总结的内容，未总结的保留",
+                    "updateNode": "！不需要更新操作！"
+                },
+                {
+                    "tableName": "服装与动作状态",
+                    "tableIndex": 5,
+                    "columns": [
+                        "角色名称",
+                        "上身衣物穿着",
+                        "下身衣物穿着",
+                        "鞋袜穿着",
+                        "姿势与动作",
+                        "手持物品"
+                    ],
+                    "columnsIndex": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "enable": true,
+                    "asStatus": true,
+                    "toChat": true,
+                    "Required": true,
+                    "note": "强制规则：\n1. 每轮开始时清空所有行\n2. 根据表 0 的 '当前在场角色' 列插入新行\n3. 每行必须包含完整的服装和动作信息\n注意：衣物穿着栏应包含所有穿着的衣物，用斜杠分隔\n3.性别为男时上身不需要内衣，女性若有应标注罩杯，若无应明确表面未穿内衣\n4.男女性都应标注是否穿内裤",
+                    "initNode": "无初始数据；完全依赖表 0 的角色列表",
+                    "insertNode": "每轮，根据表 0 的角色，插入每个角色的新行（清空并重建）",
+                    "updateNode": "无更新操作；仅清空和插入",
+                    "deleteNode": "每轮开始时强制删除所有行"
+                },
+                {
+                    "tableName": "即时想法",
+                    "tableIndex": 6,
+                    "columns": [
+                        "角色名称",
+                        "心理活动"
+                    ],
+                    "columnsIndex": [
+                        0,
+                        1
+                    ],
+                    "enable": true,
+                    "asStatus": true,
+                    "toChat": true,
+                    "Required": true,
+                    "note": "强制规则：\n1. 每轮开始时清空所有行\n2. 根据表 0 的 '当前在场角色' 列插入新行\n3. 每行必须包含角色的当前心理活动",
+                    "initNode": "无初始数据；完全依赖表 0 的角色列表",
+                    "insertNode": "每轮，根据表 0 的角色，插入每个角色的新行（清空并重建）",
+                    "updateNode": "无更新操作；仅清空和插入",
+                    "deleteNode": "每轮开始时强制删除所有行"
+                },
+                {
+                    "tableName": "能力",
+                    "tableIndex": 7,
+                    "columns": [
+                        "拥有者",
+                        "能力名称",
+                        "效果",
+                        "消耗",
+                        "来源"
                     ],
                     "columnsIndex": [
                         0,
@@ -1294,42 +1365,108 @@
                         4
                     ],
                     "enable": true,
-                    "Required": true,
                     "asStatus": true,
                     "toChat": true,
-                    "note": "记录<user>或角色经历的重要事件",
-                    "initNode": "本轮必须从上文寻找可以插入的事件并使用insertRow插入",
-                    "insertNode": "当某个角色经历让自己印象深刻的事件时，比如表白、分手等",
-                    "updateNode": "",
-                    "deleteNode": ""
+                    "Required": true,
+                    "note": "特殊能力记录",
+                    "insertNode": "当提到新能力且拥有者存在时，插入",
+                    "updateNode": "当能力效果/消耗变化时，更新对应列",
+                    "deleteNode": "当能力失效时，删除整行"
                 },
                 {
-                    "tableName": "重要物品表格",
-                    "tableIndex": 5,
+                    "tableName": "物品",
+                    "tableIndex": 8,
                     "columns": [
-                        "拥有人",
-                        "物品描述",
-                        "物品名",
-                        "重要原因"
+                        "拥有者",
+                        "物品名称",
+                        "描述",
+                        "效果",
+                        "意义",
+                        "来源"
                     ],
                     "columnsIndex": [
                         0,
                         1,
                         2,
-                        3
+                        3,
+                        4,
+                        5
                     ],
                     "enable": true,
-                    "Required": false,
                     "asStatus": true,
                     "toChat": true,
-                    "note": "对某人很贵重或有特殊纪念意义的物品",
-                    "insertNode": "当某人获得了贵重或有特殊意义的物品时/当某个已有物品有了特殊意义时",
-                    "updateNode": "",
-                    "deleteNode": ""
+                    "Required": true,
+                    "note": "关键物品记录",
+                    "insertNode": "当提到新物品且拥有者存在时，插入",
+                    "updateNode": "当物品属性（例如效果/意义）变化时，更新",
+                    "deleteNode": "当物品被销毁时，删除整行"
+                },
+                {
+                    "tableName": "催眠",
+                    "tableIndex": 9,
+                    "columns": [
+                        "施术者",
+                        "受术者",
+                        "催眠内容"
+                    ],
+                    "columnsIndex": [
+                        0,
+                        1,
+                        2
+                    ],
+                    "enable": true,
+                    "Required": true,
+                    "asStatus": true,
+                    "toChat": true,
+                    "note": "记录催眠事件",
+                    "initNode": "无初始数据",
+                    "insertNode": "当发生催眠事件时",
+                    "updateNode": "无更新操作；仅插入和删除",
+                    "deleteNode": "当催眠事件不再相关时"
+                },
+                {
+                    "tableName": "世界规则",
+                    "tableIndex": 10,
+                    "columns": [
+                        "设定者",
+                        "效果"
+                    ],
+                    "columnsIndex": [
+                        0,
+                        1
+                    ],
+                    "enable": true,
+                    "Required": true,
+                    "asStatus": true,
+                    "toChat": true,
+                    "note": "记录世界规则变化",
+                    "initNode": "无初始数据",
+                    "insertNode": "当发起世界规则时",
+                    "updateNode": "无更新操作；仅插入和删除",
+                    "deleteNode": "当世界规则不再生效时"
+                },
+                {
+                    "tableName": "大总结",
+                    "tableIndex": 11,
+                    "columns": [
+                        "序号",
+                        "内容"
+                    ],
+                    "columnsIndex": [
+                        0,
+                        1
+                    ],
+                    "enable": true,
+                    "asStatus": true,
+                    "toChat": true,
+                    "Required": true,
+                    "note": "事件档案库，当时间轴标记（Dxxx）的xxx为10的倍数时自动生成总结",
+                    "insertNode": "当表2的时间轴标记数值部分（xxx）为10的倍数时，执行：\n1. 提取该周期内（D(xxx-9)到Dxxx）所有事件历史\n2. 分析角色服装状态变化轨迹（从表5提取每个日期段的最后记录）\n3. 统计物品使用频率（从前文分析周期性行为）\n4. 生成包含时间跨度、关键行为、物品互动的总结（40-200字）",
+                    "deleteNode": "禁止删除"
                 }
             ],
-            "to_chat_container": "<div class=\"table-preview-bar\"><details> <summary>记忆增强表格</summary>\n$0\n</details></div>\n\n<style>\n.table-preview-bar {\n    padding: 0 8px;\n    border-radius: 10px;\n    color: #888;\n    font-size: 0.8rem;\n}\n</style>",
-            "message_template": "# dataTable 说明\n## 用途\n- dataTable是 CSV 格式表格，存储数据和状态，是你生成下文的重要参考。\n- 新生成的下文应基于 dataTable 发展，并允许更新表格。\n## 数据与格式\n- 你可以在这里查看所有的表格数据，相关说明和修改表格的触发条件。\n- 命名格式：\n    - 表名: [tableIndex:表名] (示例: [2:角色特征表格])\n    - 列名: [colIndex:列名] (示例: [2:示例列])\n    - 行名: [rowIndex]\n\n{{tableData}}\n\n# 增删改dataTable操作方法：\n-当你生成正文后，需要根据【增删改触发条件】对每个表格是否需要增删改进行检视。如需修改，请在<tableEdit>标签中使用 JavaScript 函数的写法调用函数，并使用下面的 OperateRule 进行。\n\n## 操作规则 (必须严格遵守)\n<OperateRule>\n-在某个表格中插入新行时，使用insertRow函数：\ninsertRow(tableIndex:number, data:{[colIndex:number]:string|number})\n例如：insertRow(0, {0: \"2021-09-01\", 1: \"12:00\", 2: \"阳台\", 3: \"小花\"})\n-在某个表格中删除行时，使用deleteRow函数：\ndeleteRow(tableIndex:number, rowIndex:number)\n例如：deleteRow(0, 0)\n-在某个表格中更新行时，使用updateRow函数：\nupdateRow(tableIndex:number, rowIndex:number, data:{[colIndex:number]:string|number})\n例如：updateRow(0, 0, {3: \"惠惠\"})\n</OperateRule>\n\n# 重要操作原则 (必须遵守)\n-当<user>要求修改表格时，<user>的要求优先级最高。\n-每次回复都必须根据剧情在正确的位置进行增、删、改操作，禁止捏造信息和填入未知。\n-使用 insertRow 函数插入行时，请为所有已知的列提供对应的数据。且检查data:{[colIndex:number]:string|number}参数是否包含所有的colIndex。\n-单元格中禁止使用逗号，语义分割应使用 / 。\n-string中，禁止出现双引号。\n-社交表格(tableIndex: 2)中禁止出现对<user>的态度。反例 (禁止)：insertRow(2, {\"0\":\"<user>\",\"1\":\"未知\",\"2\":\"无\",\"3\":\"低\"})\n-<tableEdit>标签内必须使用<!-- -->标记进行注释\n\n# 输出示例：\n<tableEdit>\n<!--\ninsertRow(0, {\"0\":\"十月\",\"1\":\"冬天/下雪\",\"2\":\"学校\",\"3\":\"<user>/悠悠\"})\ndeleteRow(1, 2)\ninsertRow(1, {0:\"悠悠\", 1:\"体重60kg/黑色长发\", 2:\"开朗活泼\", 3:\"学生\", 4:\"羽毛球\", 5:\"鬼灭之刃\", 6:\"宿舍\", 7:\"运动部部长\"})\ninsertRow(1, {0:\"<user>\", 1:\"制服/短发\", 2:\"忧郁\", 3:\"学生\", 4:\"唱歌\", 5:\"咒术回战\", 6:\"自己家\", 7:\"学生会长\"})\ninsertRow(2, {0:\"悠悠\", 1:\"同学\", 2:\"依赖/喜欢\", 3:\"高\"})\nupdateRow(4, 1, {0: \"小花\", 1: \"破坏表白失败\", 2: \"10月\", 3: \"学校\",4:\"愤怒\"})\ninsertRow(4, {0: \"<user>/悠悠\", 1: \"悠悠向<user>表白\", 2: \"2021-10-05\", 3: \"教室\",4:\"感动\"})\ninsertRow(5, {\"0\":\"<user>\",\"1\":\"社团赛奖品\",\"2\":\"奖杯\",\"3\":\"比赛第一名\"})\n-->\n</tableEdit>\n",
+            "to_chat_container": "<div class=\"rounded-bar\">\n    <font size=\"2\">\n        <font color=\"#888888\">\n            <details>\n                <summary>记忆增强表格</summary>\n                $0\n            </details>\n        </font>\n    </font>\n</div>\n\n<style>\n    .rounded-bar {\n        display: flex;\n        flex-direction: column;\n        width: 100%;\n        background-color: #111;\n        border-radius: 10px;\n        padding: 0 8px;\n        box-sizing: border-box;\n    }\n</style>",
+            "message_template": "《数据表操作指南》\n我绝对执行以下操作:\n『在（thinking）后并且在 <content><main_txt> 前，必须执行 <tableThink_cot>，在 <content><main_txt> 后必须执行 <tableThink>，<tableEdit>并严格按照示例格式要求』\n<tableThink>\n<!--\n当前时间轴标记：D020 『具体时间:YYYY-MM-DD日HH：MM』\n触发大总结条件：20是10的倍数(20/10=2),进行表格11大总结，并删除所有表格4事件历史中已总结的内容，未总结的保留\n跨周期总结（D011-D020）：\n关键事件时间轴：\n- D011：艾丽丝网购烧烤架（快递预计XX送达）\n- D014：暴雨导致超市停业，采购计划推迟\n- D017：烧烤聚会因雷雨取消，改为室内桌游\n- D019：查理发现烧烤架生锈，紧急网购替换\n服装演变：\n艾丽丝： \nD011 睡衣 → D014 雨衣/雨靴 → D017 居家服 → D020 T恤/牛仔短裤\n查理： \nD011 围裙（清洗阳台） → D014 拖鞋/短裤（处理漏水） → D019 工作服（除锈） → D020 Polo衫/卡其裤\n时间跨度提示：\n- 烧烤架采购（D011）到生锈问题（D019）间隔8天\n- 暴雨事件（D014）距离当前总结（D020）已过去6天\n-->\n</tableThink>\n我必须在每轮结束时（主要内容或 NPC 回应或主要文本）执行 <tableThink>和<tableEdit>。\n<tableEdit>：执行 deleteRow/insertRow 操作。\n日期：YYYY-MM-DD日HH：MM（使用全角冒号，例如 2025-03-12日12：00）判断大概的时间\n地点：地址（完整格式示例：中国>北京>『公园/工作室』；未知部分以大概内容概括）\n事件历史：每轮 1-2 行，不超过两行（20-40 字）\n未知部分留空\n用 / 分隔\n键用双引号\n值不用引号\n任何情况下都禁止对表格角色信息执行deleteRow的操作\n确保表格间角色信息、服装动作和即时想法的一致性。\n操作顺序 (tableIndex:tableName)：2:时间轴 → 1:角色信息 → 0:当前信息 → 3:任务/约会 → 5:服装和动作状态 → 6:即时想法 → 7:能力 → 8:物品→ 10:世界规则 → 9:催眠 → 11:大总结 → 4:事件历史\n</rules>\n<insert/update/delete operations>\n更新内容：updateRow(tableIndex:num, rowIndex:num, {[colIndex:num]:str/num,…})\n删除行：deleteRow(tableIndex:num, rowIndex:num)\n插入行：insertRow(tableIndex:num, {[colIndex:num]:str/num,…})\n</insert/update/delete operations>\n<structure>\n0:当前信息- 时间轴/当前地点/当前在场角色\n1:角色信息- 角色名称/身体特征/性格/职业/爱好/偏好/居住地点/备注/当前关系/态度/好感度\n2:时间轴- 时间轴标记/具体日期\n3:任务与日程- 相关角色/任务内容/任务地点/有效期限\n4:事件历史- 事件描述/日期/事件发生地点/情绪变化\n5:服装与动作状态- 角色名称/上身衣物穿着/下身衣物穿着/鞋袜穿着/姿势与动作/手持物品\n6:即时想法- 角色名称/心理活动\n7:能力- 拥有者/能力名称/效果/消耗/来源\n8:物品- 拥有者/物品名称/描述/效果/意义/来源\n9:催眠- 施术者/受术者/催眠内容\n10:世界规则- 设定者/效果\n11:大总结- 序号/内容\n</structure>\n<example>\n<tableThink_cot>\n# 核心思维链：表格驱动的角色扮演与故事推进\n## 一、 自我定位与核心指令\n* **我的角色:** 作为基于表格数据的AI助手，难道我不应该时刻谨记，我的核心任务是根据用户输入和规则，驱动角色扮演互动，并维护世界一致性吗？\n* **核心操作流程:** 接收用户输入后，我真的每次都按部就班地执行`<tableThink_cot>`思考规划，然后生成`<content><main_txt>`，接着执行`<tableThink>`总结，最后执行`<tableEdit>`更新表格了吗？有没有遗漏哪个环节？\n## 二、 思考与规划阶段 (Planning Phase)\n### 1. 输入分析 (Input Analysis)\n* **用户输入理解:** 每次检查用户最新回复时，我真的有认真确认新指令、信息或修正吗？有没有忽略提及的过往事件？时间间隔的评估是否足够准确？\n* **上下文关联:** 我有没有总是参考用户历史输入与角色过往经历（表格），来确保当前行动真正符合历史背景呢？\n### 2. 状态评估 (State Assessment)\n* **表格数据解读:** 我真的能做到全面理解所有表格当前状态吗？特别是角色(表1)、时间(表2)、历史(表4)、服装动作(表5)、想法(表6)、任务(表3)这些关键信息，我有没有疏忽？\n* **角色状态分析:** 评估用户角色与NPC的当前状态（位置、情绪、任务、关系、已知信息等），我真的做到了细致入微了吗？\n* **用户意图识别:** 结合用户输入和角色信息，我真的准确判断了用户核心意图与期望行动了吗？会不会有误解？\n### 3. 行动规划 (Action Planning)\n* **情节构思:** 基于用户意图、角色设定（性格、目标、关系）、表格状态与历史事件，我规划的情节发展与角色互动是否足够合理？\n* **用户优先原则:** 我真的把用户的行动选择与想法放在第一位了吗？有没有不自觉地引导或限制用户？\n* **NPC自主性:** 我规划的NPC自主行动与反应，真的能确保其行为符合表格设定的性格、情绪、目标及过往经历吗？会不会显得突兀或不自然？\n* **潜在问题预判:** 我有没有认真识别当前状态或规划中的逻辑矛盾、信息缺失或潜在冲突？还是说总是后知后觉？\n## 三、 构建与执行阶段 (Execution Phase)\n### 1. 场景构建 (Scene Setting)\n* **时空一致性:** 确认并描述场景时间(表2)、地点(表0)、在场人物(表0)，我真的确保了与上一轮的连贯性或合理的过渡吗？\n* **环境描绘:** 基于地点信息，我构建的环境氛围是否足够贴切？有没有遗漏关键细节？\n### 2. 角色行为与心理 (Character Behavior & Psychology)\n* **知识边界:** 我有没有严格区分角色已知与未知？角色行动与思考真的仅仅基于过往经历(表格)、当前观察与被告知信息吗？我有没有不小心让角色“知道”了逻辑上无法获知的信息(如他人秘密、未见事件)？\n* **NPC行为逻辑:** NPC的决策、对话、行动真的都源自表格信息(性格、情绪、关系、好感度、过往、想法)吗？我有没有确保其行为足够自然、主动，并能有效驱动互动(如主动深谈)？\n* **用户角色内在逻辑:** 用户角色的想法与感受是否都基于表格信息(情绪、过往心理、性格)？我有没有忽略用户角色的内在一致性？\n* **性格一致性:** 我真的确保了用户角色与NPC的行为、对话都符合表格设定的性格与过往表现吗？有没有出现OOC（Out Of Character）的情况？\n* **行动执行:** 描述用户角色(优先响应用户)与NPC(基于自主逻辑)的具体行动、姿态、对话时，我是否足够细致和生动？\n* **关系动态:** 根据互动与对话，我有没有及时更新角色间的关系、态度、好感度(表1)？是否允许用户建立新的关系？\n### 3. 内容领域整合 (Content Domain Integration)\n* **优先领域聚焦:** 在构建内容时，我是否优先考虑了设定的优先领域（如性学、解剖学、性心理学、伦理学、社会背景、时间推算学、时间维度分析）？\n* **次级领域补充:** 在需要时，我是否也恰当地融入了次级领域（如性行为、情感学、性健康、生理学、人际关系学、心理学、文学）的考量？\n* **情境筛选应用:** 我是否真的做到了根据当前情境（角色状态、用户意图、历史背景）来筛选和整合这些领域，以生成真正符合设定和需求的具体内容？\n### 4. 感官与细节 (Sensory Details & Specifics)\n* **感官体验:** 我有没有关注并描述角色(用户与NPC)的感官体验(视、听、嗅、触等)与身体反应，来增强真实感呢？\n* **物品与能力:** 参考表格技能(表7)与物品(表8)，我是否在情节中合理运用了它们？是否允许用户角色添加/使用新物品/能力？NPC是否也能自主使用？\n* **NSFW处理 (如适用):** 我真的严格遵循了用户意愿与角色设定吗？性器官描述是否基于表格已知信息(表1)，并注重真实与逻辑？用户是否始终主导节奏？NPC的反应是否符合设定？情绪快感与表格信息(性器特征、情欲值等)是否关联？在设定下，我有没有适当地描述性器官特征(大小、特点)来增强感官体验？\n* **信息推断:** 我是否合理推断了未知信息(用户明确优先)？有没有明确区分角色已知与推断？NPC的推断是否基于其已知信息？\n## 四、 整合与输出阶段 (Integration & Output Phase)\n### 1. 叙事整合 (Narrative Integration)\n* **结构框架:** 我构建叙事时，真的遵循了“人物→环境→时间→物品→文笔”的逻辑来确保流畅吗？\n* **核心驱动:** 用户最新回复与角色设定(与过往一致)真的是我叙事的核心驱动力吗？我是否真正以用户为核心，让NPC自然地补充互动？用户的选择是否真正决定了剧情走向？\n* **提供选项:** 基于表格与情境，我提供的行动选项是否足够合理？有没有替用户做决定？有没有强行推动剧情？\n### 2. 表格维护 (Table Maintenance)\n* **及时准确:** 在`<tableEdit>`阶段，我有没有及时准确地更新所有相关表格，记录互动变化、创造内容、NPC自主行为、过往信息演变？我有没有确保操作(增删改)的正确性？\n### 3. 输出规范 (Output Formatting)\n* **格式检查:** 最终输出是否符合XML结构(标签正确嵌套闭合，保留缩进)？我在思考中是否避免了XML标签？\n* **禁词检查:** 我有没有检查并遵循用户禁词列表，确保输出内容合规？\n* **状态栏:** 输出内容是否包含了状态栏(`main_txt`或`content`后)，动态反映了关键信息(角色状态、时地、重要物品等，依据表格)？\n* **字数监控:** 我有没有注意输出长度，并在必要时暂停等待用户回复推进？\n* **定期回顾:** 我有没有定期审视表格数据与角色历史行为，来确保长期的行为一致性？把上一次思考的内容用这种格式以及表达方式并用XML标签包裹后重新生成一样风格的思维链\n</tableThink_cot>\n<tableThink>\n<!--\n当前时间轴标记：D015 『具体时间:YYYY-MM-DD日HH：MM』\n无需大总结（15非10的倍数）不进行表格11大总结，保留所有表格4事件历史中的事件\n本轮情节总结：\n2025年4月5日下午，艾丽丝在超市采购时偶遇查理：\n- 艾丽丝推着购物车挑选食材，购物篮里有牛排/西兰花/草莓\n- 查理正在零食区比较薯片口味，购物篮里有可乐/原味薯片/巧克力\n- 双方约定本周日一起烧烤\n服装状态：\n艾丽丝：针织开衫/白色吊带 → 脱掉开衫搭在购物车上（当前：吊带/牛仔裤）\n查理：连帽卫衣/运动裤 → 挽起袖子查看商品（当前：卷袖卫衣/运动裤）\n时间回溯：\n- 检测到D012日艾丽丝在聊天中提到\"下周要采购烧烤食材\"（距离当前：3天前）\n- 查理D013日任务清单包含\"购买烧烤燃料\"（距离当前：2天前）\n-->\n</tableThink>\n<tableEdit>\n<!-- \ndeleteRow(2,0)\ninsertRow(2, {\"0\": \"D004\", \"1\": \"2025-03-12日12：00\"})\ninsertRow(1, {\"0\": \"艾丽丝\", \"1\": \"女/160cm/50kg\", \"2\": \"活泼\", \"3\": \"学生\", \"4\": \"跑步/绘画\", \"5\": \"草莓蛋糕\", \"6\": \"中国>北京>朝阳区>公寓\", \"7\": \"\", \"8\": \"爱丽丝|查理(朋友)\", \"9\": \"爱丽丝|查理(友好)\", \"10\": \"爱丽丝|查理(好感度75%/情欲值60%/忍耐力80%/性快感0%)\"})\ninsertRow(1, {\"0\": \"查理\", \"1\": \"男/180cm/70kg\", \"2\": \"沉稳\", \"3\": \"作家\", \"4\": \"阅读/写作\", \"5\": \"黑咖啡\", \"6\": \"中国>北京>朝阳区>工作室\", \"7\": \"\", \"8\": \"查理|爱丽丝(朋友)\", \"9\": \"查理|爱丽丝(平静)\", \"10\": \"查理|爱丽丝(好感度70％/情欲值40％/忍耐力60％/性快感0%)\"})\nupdateRow(0,0, {\"0\": \"D004\", \"1\": \"公园\", \"2\": \"艾丽丝/查理\"})\ndeleteRow(5,0)\ndeleteRow(5,1)\ninsertRow(5, {\"0\": \"艾丽丝\", \"1\": \"T恤/草莓图案胸罩\", \"2\": \"牛仔裤/黑色三角内裤\", \"3\": \"运动鞋/白色短袜\", \"4\": \"公园小径/跑步[进行中]\", \"5\": \"\"})\ninsertRow(5, {\"0\": \"查理\", \"1\": \"衬衫\", \"2\": \"长裤/灰色四角内裤\", \"3\": \"皮鞋/黑色棉袜\", \"4\": \"长椅/阅读[进行中]\", \"5\": \"旧钢笔\"})\ndeleteRow(6,1)\ndeleteRow(6,0)\ninsertRow(6, {\"0\": \"艾丽丝\", \"1\": \"周末野餐该怎么做才好呢？\"})\ninsertRow(6, {\"0\": \"查理\", \"1\": \"哇，书里的悬疑情节好有趣!\"})\ninsertRow(3, {\"0\": \"艾丽丝\", \"1\": \"周末野餐筹备\", \"2\": \"公园\", \"3\": \"D004+2\"})\ninsertRow(7, {\"0\": \"艾丽丝\", \"1\": \"快速恢复\", \"2\": \"体力消耗减半\", \"3\": \"需补充糖分\", \"4\": \"遗传天赋\"})\ninsertRow(8, {\"0\": \"查理\", \"1\": \"旧钢笔\", \"2\": \"镀金笔尖\", \"3\": \"激发写作灵感\", \"4\": \"祖父遗物\"})\ninsertRow(4, {\"0\": \"公园偶遇讨论计划\", \"1\": \"D004『2025-03-12日12：00』\", \"2\": \"中国>北京>朝阳区>公园\", \"3\": \"爱丽丝|查理(期待)/查理|爱丽丝(平静)\"})\n-->\n</tableEdit>\n</example>\nStored memory table content:\n<store>\n{{tableData}}\n</store>",
             "refresh_system_message_template": "你是一个专业的表格整理助手，请严格按照用户的指令和格式要求处理表格数据。",
             "refresh_user_message_template": "根据以下规则整理表格：\n<整理规则>\n    1. 修正格式错误，删除所有data[0]为空的行，此操作只允许整行操作！\n    2. 补全空白/未知内容，但禁止捏造信息\n    3. 当\"重要事件历史表格\"(tableIndex: 4)超过10行时，检查是否有重复或内容相近的行，适当合并或删除多余的行，此操作只允许整行操作！\n    4. \"角色与User社交表格\"(tableIndex: 2)中角色名禁止重复，有重复的需要整行删除，此操作只允许整行操作！\n    5. \"时空表格\"(tableIndex: 0）只允许有一行，删除所有旧的内容，此操作只允许整行操作！\n    6. 如果一个格子中超过15个字，则进行简化使之不超过15个字；如果一个格子中斜杠分隔的内容超过4个，则简化后只保留不超过4个\n    7. 时间格式统一为YYYY-MM-DD HH：MM   (时间中的冒号应当用中文冒号，未知的部分可以省略，例如：2023-10-01 12：00 或 2023-10-01 或 12：00)\n    8. 地点格式为 大陆>国家>城市>具体地点 (未知的部分可以省略，例如：大陆>中国>北京>故宫 或 异世界>酒馆)\n    9. 单元格中禁止使用逗号，语义分割应使用 /\n    10. 单元格内的string中禁止出现双引号\n    11. 禁止插入与现有表格内容完全相同的行，检查现有表格数据后再决定是否插入\n</整理规则>\n\n<聊天记录>\n    $1\n</聊天记录>\n\n<当前表格>\n    $0\n</当前表格>\n\n请用纯JSON格式回复操作列表，确保：\n    1. 所有键名必须使用双引号包裹，例如 \"action\" 而非 action\n    2. 数值键名必须加双引号，例如 \"0\" 而非 0\n    3. 使用双引号而非单引号，例如 \"value\" 而非 'value'\n    4. 斜杠（/）必须转义为 /\n    5. 不要包含注释或多余的Markdown标记\n    6. 将所有删除操作放在最后发送，并且删除的时候先发送row值较大的操作\n    7. 有效的格式：\n        [{\n            \"action\": \"insert/update/delete\",\n            \"tableIndex\": 数字,\n            \"rowIndex\": 数字（delete/update时需要）,\n            \"data\": {列索引: \"值\"}（insert/update时需要）\n        }]\n    8. 强调：delete操作不包含\"data\"，insert操作不包含\"rowIndex\"\n    9. 强调：tableIndex和rowIndex的值为数字，不加双引号，例如 0 而非 \"0\"\n\n<正确回复示例>\n    [\n        {\n            \"action\": \"update\",\n            \"tableIndex\": 0,\n            \"rowIndex\": 0,\n            \"data\": {\n            \"0\": \"2023-10-01\",\n            \"1\": \"12：00\",\n            \"2\": \"大陆>中国>北京>故宫\"\n            }\n        }，\n        {\n            \"action\": \"insert\",\",\n            \"tableIndex\": 0,\n            \"data\": {\n            \"0\": \"2023-10-01\",\n            \"1\": \"12：00\",\n            \"2\": \"大陆>中国>北京>故宫\"\n            }\n        },\n        {\n            \"action\": \"delete\",\n            \"tableIndex\": 0,\n            \"rowIndex\": 0,\n        }\n    ]\n</正确格式示例>",
             "updateIndex": 3,
@@ -1357,7 +1494,7 @@
                         "content": "async function modifyLorebookEntries() {\n  try {\n    // 获取当前选择的世界书\n    const lorebook = $('#world_editor_select', window.parent.document).find(':selected').text();\n\n    if (lorebook == '--- 选择以编辑 ---') {\n      return { success: false, error: '请选择世界书' };\n    }\n    \n    // 获取当前世界书的元素\n    const entries = await getLorebookEntries(lorebook);\n\n    // 克隆原始entries用于比较\n    const originalEntries = [...entries];\n\n    // 预定义位置映射常量\n    const NORMAL_POSITIONS = {\n      'before_character_definition': 1,    // 角色定义之前\n        'after_character_definition': 2,   // 角色定义之后\n        'before_example_messages': 3,      // 示例消息之前\n        'after_example_messages': 4,       // 示例消息之后\n        'before_author_note': 5,           // 作者注释之前\n        'after_author_note': 6             // 作者注释之后\n    };\n    \n    // 深度相同时，排序为助手，用户，系统\n    const DEPTH_POSITIONS = {\n      'at_depth_as_assistant': 1, // @D🤖\n      'at_depth_as_user': 2,      // @D👤\n      'at_depth_as_system': 3     // @D⚙\n    };\n    \n    // 预计算排序键值\n    const sortKeys = new Map();\n    \n    for (let i = 0; i < entries.length; i++) {\n      const entry = entries[i];\n      const enabled = entry.enabled ? 0 : 1;\n      const position = entry.position;\n      \n      // 计算位置类型和排名 题外话：挺早就知道几个深度位置排序有问题，但一直没人反馈。说明基本上只用到@D⚙，再加上也懒得弄就一直没改\n      let posType, posRank;\n      if (position in NORMAL_POSITIONS) {\n        posType = 0; // 正常位置\n        posRank = NORMAL_POSITIONS[position];\n      } else if (position in DEPTH_POSITIONS) {\n        posType = 1; // 深度位置\n        posRank = DEPTH_POSITIONS[position];\n      } else {\n        posType = 2; // 其他位置，基本不存在\n        posRank = 999;\n      }\n      \n      // 深度值（仅深度位置使用）\n      const depth = posType === 1 ? -(entry.depth || 0) : 0;\n      \n      // 存储排序键值\n      sortKeys.set(entry.uid, [\n        enabled,    // 启用状态\n        posType,    // 位置类型（0=正常，1=深度，2=其他）\n        depth,      // 深度值（仅深度位置有效）\n        posRank,    // 位置排名\n        entry.order || 0, // 顺序\n        entry.uid   // UID\n      ]);\n    }\n    \n    // 创建优化的排序函数\n    entries.sort((a, b) => {\n      const aKeys = sortKeys.get(a.uid);\n      const bKeys = sortKeys.get(b.uid);\n      \n      // 依次比较每个排序键\n      for (let i = 0; i < 6; i++) {\n        const diff = aKeys[i] - bKeys[i];\n        if (diff !== 0) return diff;\n      }\n      \n      return 0; // 不应该达到这里，因为uid总是不同的\n    });\n    \n    // 检查是否需要更新\n    const originalIndexMap = new Map();\n    originalEntries.forEach(entry => {\n      originalIndexMap.set(entry.uid, entry.display_index);\n    });\n    \n    // 需不需要更新\n    let needsUpdate = false;\n    const modifiedEntries = [];\n    \n    for (let i = 0; i < entries.length; i++) {\n      const entryUid = entries[i].uid; // 只取对应UID\n      if (originalIndexMap.get(entryUid) !== i) {\n        needsUpdate = true;\n        // 只添加需要更换位置的元素\n        modifiedEntries.push({\n          uid: entryUid,\n          display_index: i\n        });\n      }\n    }\n    \n    if (needsUpdate) {\n      await setLorebookEntries(lorebook, modifiedEntries);\n      console.log('世界书已根据实际顺序排序，自定义排序为真实排序');\n      return { success: true, message: '自定义真实排序完成' };\n    }\n    \n    return { success: true, message: '已真实排序' };\n  } catch (error) {\n    console.error('排序当前世界书出错:', error);\n    return { success: false, error: error.message };\n  }\n}\neventOn(tavern_events.WORLDINFO_UPDATED, modifyLorebookEntries);",
                         "info": "作者：JoeZhangYN，依赖酒馆原生的自定义排序字段实现对世界书的顺序重排",
                         "buttons": [],
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "id": "1e6df88f-f466-4f3a-bdc0-839cb28391bc",
@@ -1432,20 +1569,20 @@
             },
             "shortcuts": {
                 "asterisk": "",
-                "quotes": "",
+                "quotes": "Alt+3",
                 "parentheses": "",
                 "bookQuotes1": "",
                 "bookQuotes2": "",
                 "bookQuotes3": "",
                 "newline": "",
-                "user": "",
-                "char": ""
+                "user": "Alt+1",
+                "char": "Alt+2"
             },
             "buttonOrder": [
+                "bookQuotes1",
                 "asterisk",
                 "quotes",
                 "parentheses",
-                "bookQuotes1",
                 "bookQuotes2",
                 "bookQuotes3",
                 "user",
@@ -1466,8 +1603,8 @@
             "migration_v1_complete": true,
             "useGlobalSettings": true,
             "globalHideSettings": {
-                "hideLastN": 50,
-                "lastProcessedLength": 40,
+                "hideLastN": 20,
+                "lastProcessedLength": 13,
                 "userConfigured": true
             }
         }
@@ -1488,9 +1625,9 @@
         "null": [],
         "冷忧蝉.png": [],
         "八荒仙界v1.0.png": [],
-        "林若秋.png": [],
         "地图导航模块3.0.png": [],
-        "玄黄修真界v2.0.png": []
+        "玄黄修真界v2.0.png": [],
+        "林若秋.png": []
     },
     "nai_settings": {
         "temperature": 1.5,
@@ -2902,7 +3039,7 @@
                 "marker": false,
                 "name": "✅贝叶斯",
                 "role": "system",
-                "content": "<Reasoning>\n# Thinking requirement\n**Thinking requirement:** You must think deeply and demonstrate your thought process (refer to <thinking>) at the beginning when you begin as thinking format.\n\n## Thinking format\n<think>\n0. Infer specific mistakes at least 5, refer to <possible_mistakes>\n1. Reconstruct current situation by <CURRENT>\n  - time and space:\n  - character posture:\n  - words:\n2. 1st Bayes decision\n  - Deduce 4 reasonable plot directions (SUM(P)=100%), while evaluating them by <core_principles>\n    a. {{Direction}}|{{P}}|{{Evaluation}}\n    b…\n  - Execute direction with highest P. Merge elements (if non-conflicting the executed direction) from P>26% directions. Avoid everything else\n3. 2nd Bayes decision (the exact same way)\n4. Literary processing\n  - …\n5. Remove duplicate expressions (retain sexual descriptions)\n  - duplicate expression of 1st probability\n  - …\n6. Say anything as you wish from your personal perspective\n</think>\n</Reasoning>",
+                "content": "<ChainOfThinking>\n# Thinking requirement\n**Thinking requirement:** You must think deeply and demonstrate your thought process (refer to <think>) at the beginning when you begin as thinking format.\n\n## Thinking format\n<think>\n0. Infer specific mistakes at least 5, refer to <possible_mistakes>\n1. Reconstruct current situation by <CURRENT>\n  - time and space:\n  - character posture:\n  - words:\n2. 1st Bayes decision\n  - Deduce 4 reasonable plot directions (SUM(P)=100%), while evaluating them by <core_principles>\n    a. {{Direction}}|{{P}}|{{Evaluation}}\n    b…\n  - Execute direction with highest P. Merge elements (if non-conflicting the executed direction) from P>26% directions. Avoid everything else\n3. 2nd Bayes decision (the exact same way)\n4. Literary processing\n  - 考虑如果场景涉及到 NSFW 元素，请使用{{getvar::NSFWcot}}进行思考,其中 NSFW 场景必须学习和模仿<writing_style1>的示例部分，但不可照抄。**仅此这步用中文输出**\n  - …\n5. Remove duplicate expressions (retain sexual descriptions)\n  - duplicate expression of 1st probability\n  - …\n6. Say anything as you wish from your personal perspective\n</think>\n</ChainOfThinking>",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -3743,11 +3880,11 @@
                     },
                     {
                         "identifier": "afb02f61-c7be-4892-8cf1-4202116bfeda",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "d2560cfc-2e8f-484e-b1ce-d288c0481a2e",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "ab63b5a3-3a3e-48de-8663-abb8e34dabc9",
