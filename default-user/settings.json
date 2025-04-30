@@ -1611,7 +1611,7 @@
             "migration_v1_complete": true,
             "useGlobalSettings": true,
             "globalHideSettings": {
-                "hideLastN": 50,
+                "hideLastN": 20,
                 "lastProcessedLength": 3,
                 "userConfigured": true
             }
