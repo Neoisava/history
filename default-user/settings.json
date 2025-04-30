@@ -396,12 +396,12 @@
         "default_persona": null,
         "persona_descriptions": {
             "user-default.png": {
-                "description": "{{user}}是{{char}}的亲生儿子。十岁，是一个小正太。未知原因与{{char}}分开多年，所以{{user}}不知道。{{user}}是{{char}}苦苦寻找的【天选之人】。目前修为：练气大圆满",
+                "description": "{{user}}是{{char}}的亲生儿子。十岁，是一个小正太。未知原因与{{char}}分开多年，所以{{user}}不知道{{char}}是他娘亲。{{user}}是{{char}}苦苦寻找的【天选之人】。目前修为：练气大圆满",
                 "position": 2,
                 "lorebook": "母性世界书"
             }
         },
-        "persona_description": "{{user}}是{{char}}的亲生儿子。十岁，是一个小正太。未知原因与{{char}}分开多年，所以{{user}}不知道。{{user}}是{{char}}苦苦寻找的【天选之人】。目前修为：练气大圆满",
+        "persona_description": "{{user}}是{{char}}的亲生儿子。十岁，是一个小正太。未知原因与{{char}}分开多年，所以{{user}}不知道{{char}}是他娘亲。{{user}}是{{char}}苦苦寻找的【天选之人】。目前修为：练气大圆满",
         "persona_description_position": 2,
         "persona_description_role": 0,
         "persona_description_depth": 2,
