@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "true",
-        "NavOpened": "false",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -42,7 +42,6 @@
                 "A",
                 "SSVGG 1.9.3",
                 "SSVGG 1.9.4",
-                "世界书：淫纹效果",
                 "八荒仙界v1.0世界书",
                 "双修功法",
                 "多维情感网络动态",
@@ -53,7 +52,9 @@
                 "性知识普及 (1)",
                 "性经验调整世界书",
                 "我们的甜蜜情话",
+                "新二次元性格对话",
                 "油猴世界书末尾添加",
+                "通用隐奸",
                 "部位特写",
                 "针对2.5pro的瑟瑟场景"
             ],
@@ -396,12 +397,12 @@
         "default_persona": null,
         "persona_descriptions": {
             "user-default.png": {
-                "description": "{{user}}是{{char}}的亲生儿子。十岁，是一个小正太。未知原因与{{char}}分开多年，所以{{char}}不认识这个亲儿子。{{user}}是{{char}}苦苦寻找的【天选之人】。目前修为：练气大圆满",
+                "description": "{{user}}是{{char}}的亲生儿子。十岁，是一个小正太。未知原因与{{char}}分开多年，所以{{user}}不知道{{char}}是他娘亲。{{char}}也不知道{{user}}是自己苦苦寻找的【天选之人】。目前修为：练气大圆满",
                 "position": 2,
                 "lorebook": "母性世界书"
             }
         },
-        "persona_description": "{{user}}是{{char}}的亲生儿子。十岁，是一个小正太。未知原因与{{char}}分开多年，所以{{char}}不认识这个亲儿子。{{user}}是{{char}}苦苦寻找的【天选之人】。目前修为：练气大圆满",
+        "persona_description": "{{user}}是{{char}}的亲生儿子。十岁，是一个小正太。未知原因与{{char}}分开多年，所以{{user}}不知道{{char}}是他娘亲。{{char}}也不知道{{user}}是自己苦苦寻找的【天选之人】。目前修为：练气大圆满",
         "persona_description_position": 2,
         "persona_description_role": 0,
         "persona_description_depth": 2,
@@ -598,7 +599,7 @@
             {
                 "id": "5b1a5c51-910a-4b5a-956a-390d4f9caca6",
                 "scriptName": "部位特写",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<font[^>]*>(.|\\n)*<\\/font>/gm",
                 "replaceString": "",
@@ -667,7 +668,7 @@
             {
                 "id": "929086f7-c1a3-4b79-bb35-64226ee7ee86",
                 "scriptName": "删除cot",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<thinking>[\\s\\S]*?</thinking>/gm",
                 "replaceString": "",
@@ -1146,6 +1147,10 @@
                     {
                         "set": "AutoContinue",
                         "isVisible": true
+                    },
+                    {
+                        "set": "角色扮演輔助導演版(1.1)",
+                        "isVisible": true
                     }
                 ]
             }
@@ -1604,7 +1609,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 21,
+                "lastProcessedLength": 128,
                 "userConfigured": true
             }
         }
@@ -3976,7 +3981,7 @@
                     },
                     {
                         "identifier": "24071d00-49f1-4533-9ca7-809ada76766d",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "8203021f-b95d-4cfd-896b-912a0dcef828",
