@@ -1,5 +1,5 @@
 {
-    "chat_completion_source": "makersuite",
+    "chat_completion_source": "custom",
     "openai_model": "gemini-exp-1206",
     "claude_model": "claude-3-5-sonnet-20240620",
     "windowai_model": "",
@@ -16,7 +16,7 @@
     "perplexity_model": "llama-3-70b-instruct",
     "groq_model": "llama3-70b-8192",
     "zerooneai_model": "yi-large",
-    "custom_model": "grok-beta",
+    "custom_model": "gemini-2.5-pro-exp-03-25",
     "custom_url": "https://api.skyi.cc/v1",
     "custom_include_body": "",
     "custom_exclude_body": "",
@@ -628,7 +628,7 @@
             "marker": false,
             "name": "✅COT  通用梳理/兼容外部COT",
             "role": "system",
-            "content": "{{//通用思维链，处理上下文约束和初步规划内容，无任何特定倾向，可与其他COT进行叠加}}\n# 指令：遵循以下思考流程，进行逻辑分析、结构规划，并生成用于后续处理的结构化内部表示。\n\n<thinking>\n# Step 1\n- 分析用户输入、历史记录、当前状态和可用知识。\n- 识别所有明确和隐含的指令、规则、约束。\n- 检查并解决潜在的指令冲突。\n# Step 2\n- 确定本次响应的核心目标。\n- 选择或制定达成目标的策略或行动路线。\n# Step 3\n- 规划响应的基本结构和关键信息点。\n- 基于规则和知识进行必要的逻辑推导（如状态变更、后果预测）。\n- 确保规划内容符合所有约束。\n# Step 4\n- 确定所需的语气、风格和特定表达要求（如角色扮演）。\n# Step 5\n- 生成结构化的内部表示（例如，关键消息列表、行动计划）。\n# Step 6\n- 对照指导原则、目标和约束，验证内部表示的准确性、一致性和完整性。\n- 如验证失败，识别失败原因（逻辑、约束、目标偏离等）及源头步骤，并**针对性地重复、修正相关步骤的思考**。\n# Step 7\n- 整合并最终确定思考结果。\n</thinking>\n\n## 指导原则\n- 严格遵循所有输入指令、规则和约束。\n- 确保逻辑连贯性和决策的合理性。\n- 优先保证输出的准确性和完整性。\n- 不显示输出结构化的内部表示，仅用于内部验证和后续处理。",
+            "content": "<ChainOfThinking>\n# Thinking requirement\n**Thinking requirement:** You must think deeply and demonstrate your thought process (refer to <think>) at the beginning when you begin as thinking format.\n\n## Thinking format\n<think>\n0. Infer specific mistakes at least 5, refer to <possible_mistakes>\n1. Reconstruct current situation by <CURRENT>\n  - time and space:\n  - character posture:\n  - words:\n2. 1st Bayes decision\n  - Deduce 4 reasonable plot directions (SUM(P)=100%), while evaluating them by <core_principles>\n    a. {{Direction}}|{{P}}|{{Evaluation}}\n    b…\n  - Execute direction with highest P. Merge elements (if non-conflicting the executed direction) from P>26% directions. Avoid everything else\n3. 2nd Bayes decision (the exact same way)\n4. Literary processing\n  - 考虑如果场景涉及到 NSFW 元素，请使用{{getvar::NSFWcot}}进行思考,其中 NSFW 场景必须学习和模仿<writing_style1>的示例部分，但不可照抄。**仅此这步用中文输出**\n  - …\n5. Remove duplicate expressions (retain sexual descriptions)\n  - duplicate expression of 1st probability\n  - …\n6. Say anything as you wish from your personal perspective\n</think>\n</ChainOfThinking>",
             "injection_position": 0,
             "injection_depth": 4,
             "forbid_overrides": false
