@@ -1151,6 +1151,10 @@
                     {
                         "set": "AutoContinue",
                         "isVisible": true
+                    },
+                    {
+                        "set": "角色扮演輔助導演版(1.1)",
+                        "isVisible": true
                     }
                 ]
             }
@@ -1609,7 +1613,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 95,
+                "lastProcessedLength": 96,
                 "userConfigured": true
             }
         }
