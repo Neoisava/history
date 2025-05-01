@@ -16,8 +16,11 @@
     "perplexity_model": "llama-3-70b-instruct",
     "groq_model": "llama3-70b-8192",
     "zerooneai_model": "yi-large",
-    "blockentropy_model": "be-70b-base-llama3.1",
     "custom_model": "grok-beta",
+    "custom_url": "https://api.skyi.cc/v1",
+    "custom_include_body": "",
+    "custom_exclude_body": "",
+    "custom_include_headers": "",
     "custom_prompt_post_processing": "merge",
     "google_model": "gemini-2.5-pro-exp-03-25",
     "temperature": 0.8,
@@ -33,13 +36,14 @@
     "wrap_in_quotes": false,
     "names_behavior": -1,
     "send_if_empty": "",
-    "jailbreak_system": false,
     "impersonation_prompt": "[Write your next reply from the point of view of {{user}}, using the chat history so far as a guideline for the writing style of {{user}}. Don't write as {{char}} or system. Don't describe actions of {{char}}.]",
     "new_chat_prompt": "[Start a new Chat]",
     "new_group_chat_prompt": "[Start a new group chat. Group members: {{group}}]",
     "new_example_chat_prompt": "[Example Chat]",
     "continue_nudge_prompt": "[Continue the following message. Do not include ANY parts of the original message. Use capitalization and punctuation as if your reply is a part of the original message: {{lastChatMessage}}]",
     "bias_preset_selected": "Default (none)",
+    "reverse_proxy": "",
+    "proxy_password": "",
     "max_context_unlocked": true,
     "wi_format": "{0}",
     "scenario_format": "[Circumstances and context of the dialogue: {{scenario}}]",
@@ -933,11 +937,11 @@
                 },
                 {
                     "identifier": "008c0cd3-2b49-43b6-aafb-46bf4536965f",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "a5d9aec8-000e-404e-aae0-322cfa9b0cc3",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ef561905-81b9-4a5d-8d4f-3799ea6a9740",
@@ -1069,7 +1073,7 @@
                 },
                 {
                     "identifier": "dd48898f-bd42-4078-96a8-a0e73be7745b",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "88c01024-fec7-43d2-9d75-306fcf8c69c2",
@@ -1081,7 +1085,7 @@
                 },
                 {
                     "identifier": "3c7de215-03ac-4059-ab54-6b7cb3881ba5",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "7e5b4340-9821-45da-9639-602727ed7a94",
@@ -1101,15 +1105,15 @@
                 },
                 {
                     "identifier": "574b1099-0e15-4ade-83bf-a2ac7d03a3a0",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ffc1c51f-fdd2-48cd-b63c-838126e59d1f",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "728db1e0-d49f-476d-bf53-8ac1f266150f",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "68a3e539-e18c-49a0-bbd7-adc2d9b78906",
@@ -1162,6 +1166,8 @@
     "function_calling": false,
     "show_thoughts": false,
     "reasoning_effort": "medium",
+    "enable_web_search": false,
+    "request_images": false,
     "seed": -1,
     "n": 1
 }
