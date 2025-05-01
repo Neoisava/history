@@ -89,7 +89,7 @@
         "world_info_depth": 100,
         "world_info_min_activations": 30,
         "world_info_min_activations_depth_max": 0,
-        "world_info_budget": 22,
+        "world_info_budget": 100,
         "world_info_include_names": true,
         "world_info_recursive": true,
         "world_info_overflow_alert": false,
@@ -1619,7 +1619,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 8,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         }
