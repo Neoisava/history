@@ -56,7 +56,6 @@
                 "性经验调整世界书",
                 "我们的甜蜜情话",
                 "新二次元性格对话",
-                "状态栏（属性面板）",
                 "通用隐奸",
                 "道德伦理(1)",
                 "部位特写",
@@ -98,7 +97,7 @@
         "world_info_overflow_alert": false,
         "world_info_case_sensitive": false,
         "world_info_match_whole_words": true,
-        "world_info_character_strategy": 1,
+        "world_info_character_strategy": 2,
         "world_info_budget_cap": 0,
         "world_info_use_group_scoring": false,
         "world_info_max_recursion_steps": 0
@@ -1622,7 +1621,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 6,
+                "lastProcessedLength": 7,
                 "userConfigured": true
             }
         }
