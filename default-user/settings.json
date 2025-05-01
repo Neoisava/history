@@ -20,11 +20,13 @@
         "AlertRegex_玄黄修真界v2.0.png": "true",
         "AlertWI_default_Seraphina.png": "true",
         "WINavLockOn": "false",
-        "AlertRegex_林若秋.png": "true"
+        "AlertRegex_林若秋.png": "true",
+        "AlertWI_凡人修仙传·凤起灵绝·大罗真魂都市修仙灵气复苏（地图互动RPG带系统版）.png": "true",
+        "AlertRegex_凡人修仙传·凤起灵绝·大罗真魂都市修仙灵气复苏（地图互动RPG带系统版）.png": "true"
     },
     "currentVersion": "1.12.14",
     "username": "林子安",
-    "active_character": "林若秋.png",
+    "active_character": "凡人修仙传·凤起灵绝·大罗真魂都市修仙灵气复苏（地图互动RPG带系统版）.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -895,7 +897,8 @@
             "八荒仙界v1.0.png",
             "地图导航模块3.0.png",
             "玄黄修真界v2.0.png",
-            "林若秋.png"
+            "林若秋.png",
+            "凡人修仙传·凤起灵绝·大罗真魂都市修仙灵气复苏（地图互动RPG带系统版）.png"
         ],
         "tts": {
             "voiceMap": "",
@@ -1608,7 +1611,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 130,
+                "lastProcessedLength": 1,
                 "userConfigured": true
             }
         }
@@ -1631,7 +1634,8 @@
         "八荒仙界v1.0.png": [],
         "地图导航模块3.0.png": [],
         "玄黄修真界v2.0.png": [],
-        "林若秋.png": []
+        "林若秋.png": [],
+        "凡人修仙传·凤起灵绝·大罗真魂都市修仙灵气复苏（地图互动RPG带系统版）.png": []
     },
     "nai_settings": {
         "temperature": 1.5,
