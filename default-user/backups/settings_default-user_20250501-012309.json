@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -42,7 +42,6 @@
                 "A",
                 "SSVGG 1.9.3",
                 "SSVGG 1.9.4",
-                "世界书：淫纹效果",
                 "八荒仙界v1.0世界书",
                 "双修功法",
                 "多维情感网络动态",
@@ -53,7 +52,9 @@
                 "性知识普及 (1)",
                 "性经验调整世界书",
                 "我们的甜蜜情话",
+                "新二次元性格对话",
                 "油猴世界书末尾添加",
+                "通用隐奸",
                 "部位特写",
                 "针对2.5pro的瑟瑟场景"
             ],
@@ -396,12 +397,12 @@
         "default_persona": null,
         "persona_descriptions": {
             "user-default.png": {
-                "description": "{{user}}是{{char}}的亲生儿子。十岁，是一个小正太。未知原因与{{char}}分开多年，所以{{char}}不认识这个亲儿子。{{user}}是{{char}}苦苦寻找的【天选之人】。目前修为：练气大圆满",
+                "description": "{{user}}是{{char}}的亲生儿子。十岁，是一个小正太。未知原因与{{char}}分开多年，所以{{user}}不知道{{char}}是他娘亲。{{char}}也不知道{{user}}是自己苦苦寻找的【天选之人】。目前修为：练气大圆满",
                 "position": 2,
                 "lorebook": "母性世界书"
             }
         },
-        "persona_description": "{{user}}是{{char}}的亲生儿子。十岁，是一个小正太。未知原因与{{char}}分开多年，所以{{char}}不认识这个亲儿子。{{user}}是{{char}}苦苦寻找的【天选之人】。目前修为：练气大圆满",
+        "persona_description": "{{user}}是{{char}}的亲生儿子。十岁，是一个小正太。未知原因与{{char}}分开多年，所以{{user}}不知道{{char}}是他娘亲。{{char}}也不知道{{user}}是自己苦苦寻找的【天选之人】。目前修为：练气大圆满",
         "persona_description_position": 2,
         "persona_description_role": 0,
         "persona_description_depth": 2,
@@ -616,7 +617,7 @@
             {
                 "id": "6251ab3d-44f4-4105-9bd2-8121171b44d9",
                 "scriptName": "移除思维链和多余标签v2",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/(.*\\</thinking>\\n|.*\\<content[\\s\\S]*?>\\n|</content>|<(/)content_format>)/gs",
                 "replaceString": "",
@@ -1146,6 +1147,10 @@
                     {
                         "set": "AutoContinue",
                         "isVisible": true
+                    },
+                    {
+                        "set": "角色扮演輔助導演版(1.1)",
+                        "isVisible": true
                     }
                 ]
             }
@@ -1604,7 +1609,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 4,
+                "lastProcessedLength": 101,
                 "userConfigured": true
             }
         }
