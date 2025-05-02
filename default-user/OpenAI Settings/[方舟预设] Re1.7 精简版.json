@@ -17,7 +17,7 @@
     "groq_model": "llama3-70b-8192",
     "zerooneai_model": "yi-large",
     "custom_model": "gemini-2.5-pro-exp-03-25",
-    "custom_url": "https://api.skyi.cc/v1",
+    "custom_url": "https://api.huaapi.asia/v1",
     "custom_include_body": "",
     "custom_exclude_body": "",
     "custom_include_headers": "",
@@ -861,7 +861,7 @@
                 },
                 {
                     "identifier": "dd48898f-bd42-4078-96a8-a0e73be7745b",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "f182f69f-c4c8-4f00-82cc-2b1cdfd8cd70",
@@ -869,7 +869,7 @@
                 },
                 {
                     "identifier": "3c7de215-03ac-4059-ab54-6b7cb3881ba5",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "7e5b4340-9821-45da-9639-602727ed7a94",
