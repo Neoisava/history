@@ -3485,7 +3485,7 @@
             {
                 "id": "5eb6f1e9-59e1-43cb-9786-4c9664f7b2d8",
                 "scriptName": "（斯拉）仅保留总结2",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/[\\s\\S]*?<This_round_events>([\\s\\S]*?)<\\/This_round_events>([\\s\\S]*)/gm",
                 "replaceString": "<!--\n<This_round_events>$1</This_round_events>\n-->",
