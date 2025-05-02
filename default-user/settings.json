@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "false",
-        "NavOpened": "false",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -3502,7 +3502,7 @@
             {
                 "id": "c711d11f-7d08-4fb3-84a3-496ab7dbed0c",
                 "scriptName": "（斯拉）删除think",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<think>[\\s\\S]*</think>/gm",
                 "replaceString": "",
@@ -3519,7 +3519,7 @@
             {
                 "id": "929086f7-c1a3-4b79-bb35-64226ee7ee86",
                 "scriptName": "删除cot",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<thinking>[\\s\\S]*?</thinking>/gm",
                 "replaceString": "",
@@ -3536,7 +3536,7 @@
             {
                 "id": "d29a7d8d-8ef6-4cfe-b990-fac6a42ca4a5",
                 "scriptName": "con",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": false,
                 "findRegex": "/<content>[\\s\\S]*?</content>/gm",
                 "replaceString": "",
@@ -4460,7 +4460,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 34,
+                "lastProcessedLength": 1,
                 "userConfigured": true
             }
         }
