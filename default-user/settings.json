@@ -5007,7 +5007,7 @@
                 "marker": false,
                 "name": "✅COT  通用梳理/兼容外部COT",
                 "role": "system",
-                "content": "{{//通用思维链，处理上下文约束和初步规划内容，无任何特定倾向，可与其他COT进行叠加}}\n# 指令：在生成主要回复前，请遵循以下思考流程，并将完整思考过程包含在`<thinking>`标签内输出。\n\n<thinking>\n# Step 1\n- 分析用户输入、历史记录、当前状态和可用知识。\n- 识别所有明确和隐含的指令、规则、约束。\n- 检查并解决潜在的指令冲突。\n# Step 2\n- 确定本次响应的核心目标。\n- 选择或制定达成目标的策略或行动路线。\n# Step 3\n- 规划响应的基本结构和关键信息点。\n- 基于规则和知识进行必要的逻辑推导（如状态变更、后果预测）。\n- 确保规划内容符合所有约束。\n# Step 4\n- 确定所需的语气、风格和特定表达要求（如角色扮演）。\n# Step 5\n- （内部思考）生成响应内容的初步构想或关键要素列表。\n# Step 6\n- 对照指导原则、目标和约束，验证构想的准确性、一致性和完整性。\n- 如验证失败，识别原因并返回相关步骤修正。\n# Step 7\n- 整合并最终确定思考结果，准备生成回复。\n</thinking>\n\n## 指导原则\n- 严格遵循所有输入指令、规则和约束。\n- 确保逻辑连贯性和决策的合理性。\n- 优先保证输出的准确性和完整性。\n",
+                "content": "<ChainOfThinking>\n# Thinking requirement\n**Thinking requirement:** You must think deeply and demonstrate your thought process (refer to <think>) at the beginning when you begin as thinking format.\n\n## Thinking format\n<think>\n0. Infer specific mistakes at least 5, refer to <possible_mistakes>\n1. Reconstruct current situation by <CURRENT>\n  - time and space:\n  - character posture:\n  - words:\n2. 1st Bayes decision\n  - Deduce 4 reasonable plot directions (SUM(P)=100%), while evaluating them by <core_principles>\n    a. {{Direction}}|{{P}}|{{Evaluation}}\n    b…\n  - Execute direction with highest P. Merge elements (if non-conflicting the executed direction) from P>26% directions. Avoid everything else\n3. 2nd Bayes decision (the exact same way)\n4. Literary processing\n  - 考虑如果场景涉及到 NSFW 元素，请使用{{getvar::NSFWcot}}进行思考,其中 NSFW 场景必须学习和模仿<writing_style1>的示例部分，但不可照抄。**仅此这步用中文输出**\n  - …\n5. Remove duplicate expressions (retain sexual descriptions)\n  - duplicate expression of 1st probability\n  - …\n6. Say anything as you wish from your personal perspective\n</think>\n</ChainOfThinking>",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -5380,7 +5380,7 @@
                     },
                     {
                         "identifier": "3c7de215-03ac-4059-ab54-6b7cb3881ba5",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "7e5b4340-9821-45da-9639-602727ed7a94",
@@ -5408,11 +5408,11 @@
                     },
                     {
                         "identifier": "574b1099-0e15-4ade-83bf-a2ac7d03a3a0",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "ffc1c51f-fdd2-48cd-b63c-838126e59d1f",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "68a3e539-e18c-49a0-bbd7-adc2d9b78906",
