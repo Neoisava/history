@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -36,7 +36,6 @@
         "world_info": {
             "globalSelect": [
                 "_性爱世界书",
-                "--油猴世界书nai4改(4) (1)",
                 "【地图导航】",
                 "A",
                 "SSVGG 1.9.4",
@@ -3708,7 +3707,7 @@
             {
                 "id": "603909c4-e6e7-49fc-a7f8-f5dbb5db5fc2",
                 "scriptName": "昆仑图片",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<image>([\\s\\S]*?)</image>/g",
                 "replaceString": "",
@@ -4468,7 +4467,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 60,
+                "lastProcessedLength": 177,
                 "userConfigured": true
             }
         }
@@ -5270,11 +5269,11 @@
                     },
                     {
                         "identifier": "61593a20-3bf4-415b-9f78-e002a234f2ac",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "f775e4f2-497a-4ea4-8e75-9226c4498e1d",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "a4b0be6f-e131-4982-9c9e-18ba300fb3c4",
@@ -5446,11 +5445,11 @@
                     },
                     {
                         "identifier": "cffe7691-94d1-42cb-bf52-e3942703ef96",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "d82cf8f6-3334-44a7-bcc2-f6c00f2b4c9e",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "e5097714-e9fc-4abe-91c1-7c7e5799d1e4",
