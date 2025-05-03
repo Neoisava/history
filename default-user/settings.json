@@ -3518,7 +3518,7 @@
             {
                 "id": "929086f7-c1a3-4b79-bb35-64226ee7ee86",
                 "scriptName": "删除cot",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<thinking>[\\s\\S]*?</thinking>/gm",
                 "replaceString": "",
@@ -4459,7 +4459,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 30,
+                "lastProcessedLength": 29,
                 "userConfigured": true
             }
         }
