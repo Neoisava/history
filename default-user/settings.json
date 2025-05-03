@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -4467,7 +4467,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 171,
+                "lastProcessedLength": 170,
                 "userConfigured": true
             }
         }
@@ -5389,7 +5389,7 @@
                     },
                     {
                         "identifier": "7e5b4340-9821-45da-9639-602727ed7a94",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "07a98d3b-d492-41b3-b5b4-883041dc68cb",
@@ -5445,11 +5445,11 @@
                     },
                     {
                         "identifier": "cffe7691-94d1-42cb-bf52-e3942703ef96",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "d82cf8f6-3334-44a7-bcc2-f6c00f2b4c9e",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "e5097714-e9fc-4abe-91c1-7c7e5799d1e4",
