@@ -5539,7 +5539,7 @@
         "names_behavior": -1,
         "continue_postfix": " ",
         "custom_prompt_post_processing": "merge",
-        "show_thoughts": false,
+        "show_thoughts": true,
         "reasoning_effort": "medium",
         "enable_web_search": false,
         "request_images": false,
