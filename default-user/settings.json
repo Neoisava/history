@@ -3309,7 +3309,8 @@
             "custom_api_url": "https://api.zhizengzeng.com/v1",
             "custom_api_key": "001f004b5c065407065700065202550e1f4463635c715c65505424323756231356663505502140003462240e650169055c4a4d",
             "custom_model_name": "claude-3-7-sonnet-20250219"
-        }
+        },
+        "spoiler_free_mode": true
     },
     "extension_settings": {
         "apiUrl": "http://localhost:5100",
@@ -4467,7 +4468,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 325,
+                "lastProcessedLength": 326,
                 "userConfigured": true
             }
         }
