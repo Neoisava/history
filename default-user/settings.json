@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
+        "LNavOpened": "true",
         "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -7721,7 +7721,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "gemini-2.5-flash-preview-04-17",
+        "custom_model": "gemini-2.5-pro-exp-03-25",
         "custom_url": "https://api.huaapi.asia/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
