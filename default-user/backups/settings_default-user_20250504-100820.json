@@ -2,8 +2,8 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
-        "NavOpened": "false",
+        "LNavOpened": "true",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -267,7 +267,7 @@
         "chat_width": 50,
         "never_resize_avatars": true,
         "show_card_avatar_urls": false,
-        "play_message_sound": false,
+        "play_message_sound": true,
         "play_sound_unfocused": false,
         "auto_save_msg_edits": true,
         "confirm_message_delete": true,
@@ -3309,7 +3309,8 @@
             "custom_api_url": "https://api.zhizengzeng.com/v1",
             "custom_api_key": "001f004b5c065407065700065202550e1f4463635c715c65505424323756231356663505502140003462240e650169055c4a4d",
             "custom_model_name": "claude-3-7-sonnet-20250219"
-        }
+        },
+        "spoiler_free_mode": true
     },
     "extension_settings": {
         "apiUrl": "http://localhost:5100",
@@ -4466,8 +4467,8 @@
             "migration_v1_complete": true,
             "useGlobalSettings": true,
             "globalHideSettings": {
-                "hideLastN": 20,
-                "lastProcessedLength": 233,
+                "hideLastN": 50,
+                "lastProcessedLength": 301,
                 "userConfigured": true
             }
         }
@@ -5285,11 +5286,11 @@
                     },
                     {
                         "identifier": "008c0cd3-2b49-43b6-aafb-46bf4536965f",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "a5d9aec8-000e-404e-aae0-322cfa9b0cc3",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "1adc95a8-ad85-4a99-8acd-06fc5810104a",
@@ -5445,11 +5446,11 @@
                     },
                     {
                         "identifier": "cffe7691-94d1-42cb-bf52-e3942703ef96",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "d82cf8f6-3334-44a7-bcc2-f6c00f2b4c9e",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "e5097714-e9fc-4abe-91c1-7c7e5799d1e4",
@@ -5539,7 +5540,7 @@
         "names_behavior": -1,
         "continue_postfix": " ",
         "custom_prompt_post_processing": "merge",
-        "show_thoughts": false,
+        "show_thoughts": true,
         "reasoning_effort": "medium",
         "enable_web_search": false,
         "request_images": false,
