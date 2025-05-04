@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
+        "LNavOpened": "true",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -320,7 +320,7 @@
         "enableLabMode": false,
         "prefer_character_prompt": true,
         "prefer_character_jailbreak": true,
-        "quick_continue": false,
+        "quick_continue": true,
         "quick_impersonate": false,
         "continue_on_send": false,
         "trim_spaces": true,
@@ -3309,7 +3309,8 @@
             "custom_api_url": "https://api.zhizengzeng.com/v1",
             "custom_api_key": "001f004b5c065407065700065202550e1f4463635c715c65505424323756231356663505502140003462240e650169055c4a4d",
             "custom_model_name": "claude-3-7-sonnet-20250219"
-        }
+        },
+        "spoiler_free_mode": true
     },
     "extension_settings": {
         "apiUrl": "http://localhost:5100",
@@ -4466,8 +4467,8 @@
             "migration_v1_complete": true,
             "useGlobalSettings": true,
             "globalHideSettings": {
-                "hideLastN": 20,
-                "lastProcessedLength": 247,
+                "hideLastN": 50,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         }
@@ -5393,7 +5394,7 @@
                     },
                     {
                         "identifier": "07a98d3b-d492-41b3-b5b4-883041dc68cb",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "9e84f2e2-ebc5-4bbd-963c-aac25d452d0f",
@@ -5506,7 +5507,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "gemini-2.5-pro-exp-03-25",
+        "custom_model": "gemini-2.5-pro-exp-03-25-search",
         "custom_url": "https://api.huaapi.asia/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
@@ -5539,7 +5540,7 @@
         "names_behavior": -1,
         "continue_postfix": " ",
         "custom_prompt_post_processing": "merge",
-        "show_thoughts": false,
+        "show_thoughts": true,
         "reasoning_effort": "medium",
         "enable_web_search": false,
         "request_images": false,
