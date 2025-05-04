@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "false",
-        "NavOpened": "false",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -4466,8 +4466,8 @@
             "migration_v1_complete": true,
             "useGlobalSettings": true,
             "globalHideSettings": {
-                "hideLastN": 20,
-                "lastProcessedLength": 176,
+                "hideLastN": 50,
+                "lastProcessedLength": 292,
                 "userConfigured": true
             }
         }
@@ -5269,11 +5269,11 @@
                     },
                     {
                         "identifier": "61593a20-3bf4-415b-9f78-e002a234f2ac",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "f775e4f2-497a-4ea4-8e75-9226c4498e1d",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "a4b0be6f-e131-4982-9c9e-18ba300fb3c4",
@@ -5285,11 +5285,11 @@
                     },
                     {
                         "identifier": "008c0cd3-2b49-43b6-aafb-46bf4536965f",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "a5d9aec8-000e-404e-aae0-322cfa9b0cc3",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "1adc95a8-ad85-4a99-8acd-06fc5810104a",
@@ -5393,7 +5393,7 @@
                     },
                     {
                         "identifier": "07a98d3b-d492-41b3-b5b4-883041dc68cb",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "9e84f2e2-ebc5-4bbd-963c-aac25d452d0f",
@@ -5539,7 +5539,7 @@
         "names_behavior": -1,
         "continue_postfix": " ",
         "custom_prompt_post_processing": "merge",
-        "show_thoughts": true,
+        "show_thoughts": false,
         "reasoning_effort": "medium",
         "enable_web_search": false,
         "request_images": false,
