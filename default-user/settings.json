@@ -13,7 +13,7 @@
         "Assets_SkipConfirm_2502775700152061": "false",
         "AlertWI_八荒仙界v1.0.png": "true",
         "AlertRegex_八荒仙界v1.0.png": "true",
-        "LNavLockOn": "false",
+        "LNavLockOn": "true",
         "AlertWI_地图导航模块3.0.png": "true",
         "AlertWI_冷忧蝉.png": "true",
         "AlertWI_玄黄修真界v2.0.png": "true",
@@ -6682,7 +6682,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 328,
+                "lastProcessedLength": 327,
                 "userConfigured": true
             }
         }
@@ -7500,11 +7500,11 @@
                     },
                     {
                         "identifier": "008c0cd3-2b49-43b6-aafb-46bf4536965f",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "a5d9aec8-000e-404e-aae0-322cfa9b0cc3",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "1adc95a8-ad85-4a99-8acd-06fc5810104a",
