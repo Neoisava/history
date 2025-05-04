@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -36,7 +36,6 @@
         "world_info": {
             "globalSelect": [
                 "_性爱世界书",
-                "--油猴世界书nai4改(4) (1)",
                 "【地图导航】",
                 "A",
                 "SSVGG 1.9.4",
@@ -268,7 +267,7 @@
         "chat_width": 50,
         "never_resize_avatars": true,
         "show_card_avatar_urls": false,
-        "play_message_sound": true,
+        "play_message_sound": false,
         "play_sound_unfocused": false,
         "auto_save_msg_edits": true,
         "confirm_message_delete": true,
@@ -3708,7 +3707,7 @@
             {
                 "id": "603909c4-e6e7-49fc-a7f8-f5dbb5db5fc2",
                 "scriptName": "昆仑图片",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<image>([\\s\\S]*?)</image>/g",
                 "replaceString": "",
@@ -4468,7 +4467,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 121,
+                "lastProcessedLength": 237,
                 "userConfigured": true
             }
         }
@@ -5446,11 +5445,11 @@
                     },
                     {
                         "identifier": "cffe7691-94d1-42cb-bf52-e3942703ef96",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "d82cf8f6-3334-44a7-bcc2-f6c00f2b4c9e",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "e5097714-e9fc-4abe-91c1-7c7e5799d1e4",
@@ -5540,7 +5539,7 @@
         "names_behavior": -1,
         "continue_postfix": " ",
         "custom_prompt_post_processing": "merge",
-        "show_thoughts": true,
+        "show_thoughts": false,
         "reasoning_effort": "medium",
         "enable_web_search": false,
         "request_images": false,
