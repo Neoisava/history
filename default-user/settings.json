@@ -997,7 +997,7 @@
             "isAiReadTable": true,
             "isAiWriteTable": true,
             "isTableToChat": false,
-            "use_main_api": true,
+            "use_main_api": false,
             "bool_ignore_del": true,
             "confirm_before_execution": true,
             "custom_max_tokens": 2048,
@@ -5522,7 +5522,7 @@
         "IMPORTANT_USER_PRIVACY_DATA": {
             "custom_api_url": "https://api.zhizengzeng.com/v1",
             "custom_api_key": "001f004b5c06540505500504510c56051f63764108565670300020551333260373030241375d5740157639437d245c51604a4d",
-            "custom_model_name": "claude-3-7-sonnet-20250219"
+            "custom_model_name": "deepseek-r1"
         },
         "spoiler_free_mode": true
     },
