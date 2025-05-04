@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
+        "LNavOpened": "true",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -267,7 +267,7 @@
         "chat_width": 50,
         "never_resize_avatars": true,
         "show_card_avatar_urls": false,
-        "play_message_sound": false,
+        "play_message_sound": true,
         "play_sound_unfocused": false,
         "auto_save_msg_edits": true,
         "confirm_message_delete": true,
@@ -4466,8 +4466,8 @@
             "migration_v1_complete": true,
             "useGlobalSettings": true,
             "globalHideSettings": {
-                "hideLastN": 20,
-                "lastProcessedLength": 221,
+                "hideLastN": 50,
+                "lastProcessedLength": 323,
                 "userConfigured": true
             }
         }
@@ -5285,11 +5285,11 @@
                     },
                     {
                         "identifier": "008c0cd3-2b49-43b6-aafb-46bf4536965f",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "a5d9aec8-000e-404e-aae0-322cfa9b0cc3",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "1adc95a8-ad85-4a99-8acd-06fc5810104a",
@@ -5539,7 +5539,7 @@
         "names_behavior": -1,
         "continue_postfix": " ",
         "custom_prompt_post_processing": "merge",
-        "show_thoughts": true,
+        "show_thoughts": false,
         "reasoning_effort": "medium",
         "enable_web_search": false,
         "request_images": false,
