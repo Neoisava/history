@@ -1027,7 +1027,7 @@
             "isExtensionAble": true,
             "isAiReadTable": true,
             "isAiWriteTable": true,
-            "isTableToChat": true,
+            "isTableToChat": false,
             "use_main_api": false,
             "bool_ignore_del": true,
             "confirm_before_execution": true,
@@ -6389,10 +6389,10 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 37,
-                "LAST_RECEIVE_CHARS": 57,
-                "LAST_SEND_TOKENS": 95928,
-                "LAST_SEND_CHARS": 160231
+                "LAST_RECEIVE_TOKENS": 1818,
+                "LAST_RECEIVE_CHARS": 2573,
+                "LAST_SEND_TOKENS": 97379,
+                "LAST_SEND_CHARS": 162351
             }
         },
         "attachments": [],
@@ -6908,7 +6908,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 453,
+                "lastProcessedLength": 454,
                 "userConfigured": true
             }
         },
@@ -8473,15 +8473,15 @@
                     },
                     {
                         "identifier": "71",
-                        "enabled": true
-                    },
-                    {
-                        "identifier": "72",
                         "enabled": false
                     },
                     {
-                        "identifier": "73",
+                        "identifier": "72",
                         "enabled": true
+                    },
+                    {
+                        "identifier": "73",
+                        "enabled": false
                     },
                     {
                         "identifier": "74",
@@ -8501,7 +8501,7 @@
                     },
                     {
                         "identifier": "78",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "79",
