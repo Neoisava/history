@@ -26,12 +26,12 @@
         "WI_PerPage": "100"
     },
     "currentVersion": "1.12.14",
-    "username": "林若秋",
+    "username": "林子安",
     "active_character": "林若秋.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
-    "user_avatar": "1746440806294-.png",
+    "user_avatar": "user-default.png",
     "amount_gen": 350,
     "max_context": 8192,
     "main_api": "openai",
@@ -40,8 +40,10 @@
             "globalSelect": [
                 "_性爱世界书",
                 "[基本]服装色情化世界",
+                "【地图导航】",
                 "A",
                 "SSVGG 1.9.4",
+                "八荒仙界v1.0世界书",
                 "多维情感网络动态",
                 "女性本能世界书 by LULUZ",
                 "女性高潮参考资料",
@@ -102,7 +104,7 @@
         "world_info_overflow_alert": false,
         "world_info_case_sensitive": false,
         "world_info_match_whole_words": true,
-        "world_info_character_strategy": 1,
+        "world_info_character_strategy": 2,
         "world_info_budget_cap": 0,
         "world_info_use_group_scoring": false,
         "world_info_max_recursion_steps": 0
@@ -274,8 +276,8 @@
         "streaming_fps": 30,
         "smooth_streaming": true,
         "smooth_streaming_speed": 100,
-        "fast_ui_mode": false,
-        "avatar_style": 1,
+        "fast_ui_mode": true,
+        "avatar_style": 2,
         "chat_display": 1,
         "chat_width": 50,
         "never_resize_avatars": true,
@@ -288,25 +290,25 @@
         "sort_order": "asc",
         "sort_rule": null,
         "font_scale": 1,
-        "blur_strength": 11,
-        "shadow_width": 5,
-        "main_text_color": "rgba(171, 198, 223, 1)",
-        "italics_text_color": "rgba(255, 255, 255, 1)",
-        "underline_text_color": "rgba(188, 231, 207, 1)",
-        "quote_text_color": "rgba(111, 133, 253, 1)",
-        "blur_tint_color": "rgba(23, 30, 33, 0.61)",
-        "chat_tint_color": "rgba(23, 23, 23, 0)",
-        "user_mes_blur_tint_color": "rgba(0, 28, 174, 0.2)",
-        "bot_mes_blur_tint_color": "rgba(0, 13, 57, 0.22)",
+        "blur_strength": 10,
+        "shadow_width": 2,
+        "main_text_color": "rgba(192, 180, 161, 1)",
+        "italics_text_color": "rgba(145, 145, 145, 1)",
+        "underline_text_color": "rgba(161, 143, 98, 1)",
+        "quote_text_color": "rgba(209, 203, 194, 1)",
+        "blur_tint_color": "rgba(22, 22, 24, 1)",
+        "chat_tint_color": "rgba(28, 28, 30, 1)",
+        "user_mes_blur_tint_color": "rgba(28, 28, 30, 0.95)",
+        "bot_mes_blur_tint_color": "rgba(22, 22, 24, 0.95)",
         "shadow_color": "rgba(0, 0, 0, 1)",
-        "border_color": "rgba(0, 0, 0, 0.5)",
-        "custom_css": "",
+        "border_color": "rgba(28, 28, 30, 1)",
+        "custom_css": "/* ==========================================================\n   样式作者：@Junezz\n   版本：v1.54\n   发布于：类脑 Discord 社区\n\n   本样式仅供个人使用与参考，禁止任何形式的商用。\n   可二改不可二传。请保留本注释和原作者署名。\n   ========================================================== */\n\n/* 字体 */\n@import url(\"https://fontsapi.zeoseven.com/515/main/result.css\");\n\nbody {\n    font-family: \"LXGW Neo XiHei Plus\";\n    font-weight: normal;\n}\n\n  :root {\n    --mainFontSize: calc(var(--fontScale)* 16px);\n    --standardIconSize: calc(var(--mainFontSize)* 1);\n    --bottomFormIconSize: calc(var(--mainFontSize)* 1.3);\n    --genericRadius: 8px; /* 通用圆角 */\n    --avatar-base-width: 48px;\n    --avatar-base-height: 48px;\n    --scrollBarWidth: 5px;\n    --pagePadding: calc(var(--scrollBarWidth) + 3px);\n    --black30a: #ffffff10 !important;\n    --warning: #ce3636;\n    --crimson70a: #0252ff66;\n    --crimson-hover: #2a60d5ba;\n    --boxShadowSubtle: 0px 8px 22px -6px rgba(24, 39, 75, 0.12);\n    --menuBackgroundColor: #181819;\n    --mesHeadlineColor: #ffffff0b;\n    --buttonFill: #ececee10;\n  }\n  \n  /* 聊天框背景 */\n  #chat {\n    padding: var( --pagePadding) 3px var( --pagePadding) var( --pagePadding);\n    overflow-y: scroll;\n    border-radius: 0px 0px var(--genericRadius) var(--genericRadius);\n  }\n\n  /* 顶栏 */\n  #top-bar {\n    background-color: transparent !important;\n    height: var(--topBarBlockSize);\n  }\n\n  #top-settings-holder {\n    box-shadow: var(--boxShadowSubtle);\n  }\n\n/* Apply unified background color to nav & menu buttons */\n  #rightNavHolder,\n  #persona-management-button,\n  #extensions-settings-button,\n  #logo_block,\n  #user-settings-button,\n  #WI-SP-button,\n  #advanced-formatting-button,\n  #sys-settings-button,\n  #ai-config-button {\n  background-color: var(--menuBackgroundColor);\n  }\n\n  #extensions_settings .inline-drawer-toggle.inline-drawer-header,\n  #extensions_settings2 .inline-drawer-toggle.inline-drawer-header,\n  #user-settings-block h4,\n  .standoutHeader,\n  .userSettingsInnerExpandable, .bg_example {\n    border: transparent !important;\n  }\n\n  #left-nav-panel,\n  #rm_api_block,\n  #AdvancedFormatting,\n  #WorldInfo,\n  #user-settings-block,\n  #Backgrounds,\n  #rm_extensions_block,\n  .drawer-content.openDrawer,\n  #right-nav-panel {\n    background-color: var(--menuBackgroundColor) !important;\n    border-radius: 0px 0px var(--genericRadius) var(--genericRadius);\n    padding: 8px;\n  }\n\n  .drawer-content {\n    border-top-right-radius: 0px;\n    border-top-left-radius: 0px;\n    box-shadow: 0 1px 0 0 #3b352d;\n    padding-top: 8px;\n  }\n  \n  /* Icon Sizes & Colors */\n  #completion_prompt_manager #completion_prompt_manager_list li.completion_prompt_manager_prompt span span span,\n  #completion_prompt_manager #completion_prompt_manager_list .completion_prompt_manager_prompt .completion_prompt_manager_prompt_name .fa-solid,\n  #rm_button_characters, #rm_button_panel_pin_div, #lm_button_panel_pin_div, #WI_button_panel_pin_div,\n  #completion_prompt_manager .completion_prompt_manager_footer a,\n  .fa, .fa-brands, .fa-classic, .fa-regular, .fa-sharp, .fa-solid, .fab, .far, .fas {\n    font-size: var(--standardIconSize);\n  }\n\n  /* 底栏icon */\n  #rightSendForm>div:not(.mes_stop), #leftSendForm>div, .fa-solid.fa-circle-stop {\n    font-size: var(--bottomFormIconSize);\n  }\n\n   /* 底栏icon 对齐 */\n   #leftSendForm, #rightSendForm {\n    align-items: center;\n  }\n  \n  /* 标题样式 */\n  \n  /* 清除设置页相关模块标题的背景图，并精简上下 padding */\n#extensions_settings .inline-drawer-toggle.inline-drawer-header,\n#extensions_settings2 .inline-drawer-toggle.inline-drawer-header,\n#user-settings-block h4, .standoutHeader{\n  background-image: none !important;\n  padding: 2px 0 !important;\n}\n\n /* 原始元素样式 */\n.standoutHeader:not(h4),\n#rm_PinAndTabs,\n#title_api,\n#rm_api_block .flex-container.alignItemsBaseline,\n#AdvancedFormatting .flex-container.alignItemsBaseline:not(h3),\n#WorldInfo .alignitemscenter:not(#world_popup *),\n#user-settings-block div[name=\"userSettingsRowOne\"],\n#rm_extensions_block .alignitemscenter.flex-container.wide100p:not(.justifyCenter),\n#top-settings-holder .drawer:not(:first-child):not(:last-child) .drawer-content .alignItemsBaseline.wide100p {\n  position: relative; /* 必须要有 */\n  padding-left: 12px;\n  margin-top: calc(var(--mainFontSize) * 0.2) !important;\n  margin-bottom: calc(var(--mainFontSize) * 0.2) !important;\n}\n\n/* 小竖线 */\n#rm_PinAndTabs::before,\n#title_api::before,\n#rm_api_block .flex-container.alignItemsBaseline::before,\n#AdvancedFormatting .flex-container.alignItemsBaseline:not(h3)::before,\n#WorldInfo .alignitemscenter:not(#world_popup *)::before,\n#user-settings-block div[name=\"userSettingsRowOne\"]::before,\n#rm_extensions_block .alignitemscenter.flex-container.wide100p:not(.justifyCenter)::before,\n#top-settings-holder .drawer:not(:first-child):not(:last-child) .drawer-content .alignItemsBaseline.wide100p::before {\n  content: '';\n  position: absolute;\n  left: 0;\n  top: 6px;\n  bottom: 6px;\n  width: 3px;\n  background-color: var(--SmartThemeUnderlineColor);\n  border-radius: 1px;\n}\n\n  /* === 统一标题文字的行高（使阅读更舒适）=== */\n  .standoutHeader strong,\n  #right-nav-panel h2,\n  .drawer-content > h3,\n  .drawer-content .flex-container h3:first-of-type:not(#Backgrounds .textAlignCenter),\n  .drawer-content .flex-container .flex-container h3:first-of-type,\n  .popup h3:not(dialog *) {\n    line-height: 1.6;\n  }\n\n  .flex-container {\n    gap: 8px;\n  }\n\n\n  .redOverlayGlow {\n    color: #9c2c2c;\n  }\n  \n  /* AI聊天气泡样式 */\n  body.bubblechat .mes[is_user=\"false\"]{\n    margin-top: 8px;\n    margin-bottom: 16px;\n  }\n\n  /* menu颜色 */\n  #options, #extensionsMenu, .popup .popper-modal, .select2-dropdown {\n    background-color: var(--menuBackgroundColor);\n  }\n\n  /* 聊天气泡 */\n  body.bubblechat .mes {\n    border-radius: var(--genericRadius);\n    padding: 16px;\n    display: flex;\n    flex-direction: column;\n  }\n\n  /* 头像 */\n  .mesAvatarWrapper {\n    display: flex;\n    flex-direction: row; /* 从竖排改成横排 */\n    align-items: center; /* 垂直居中 */\n    gap: 8px; /* 头像和气泡之间的间距 */\n    background-color: var(--mesHeadlineColor);\n    padding: 8px; /* 间距 */\n    padding-right: 12px; /* 右侧间距 */\n    border-top-left-radius: var(--genericRadius);\n    border-top-right-radius: var(--genericRadius);\n    overflow: hidden;\n    width: 100%;\n  }\n\n    /* 头像处理 */\n  .mes .avatar img{\n   padding: 0px;\n  }\n\n  body.square-avatars .avatar, body.square-avatars .avatar img{\n    border-radius: var(--genericRadius) !important;\n  }\n\n  .avatar img {\n    border: none;\n    box-shadow: none !important;\n  }\n\n  body.big-avatars .avatar {\n    align-items: self-start !important;\n  }\n\n    /* 名字 */\n  .mes_block .ch_name {\n    background-color: var(--mesHeadlineColor);\n    border-bottom-left-radius: var(--genericRadius);\n    border-bottom-right-radius: var(--genericRadius);\n    padding: 8px; /* 间距 */\n    margin-bottom: 12px;\n  }\n\n    /* 正文 */\n  .mes_text {\n    padding: 0px 4px !important;\n  }\n    \n  .last_mes .mesAvatarWrapper {\n    padding-bottom: 8px !important;\n}\n  .mes_block {\n    padding-left: 0px !important;\n  }\n\n  /* 快捷回复 */\n  .menu_button  {\n    filter: none !important;\n    background-color: var(--buttonFill);\n    border-radius: 4px !important;\n    border:transparent !important;\n  }\n\n  /* 发送bar */\n  body.no-blur #send_form {\n    border-top: #3b352d solid 1px;\n    border-radius: var(--genericRadius);\n    padding: 6px 8px;\n    box-shadow: 0 -1px 0px 0 var(--SmartThemeChatTintColor);\n  }\n\n  /* 按键选项等颜色 */\n  select, .range-block-counter input, .text_pole, textarea, .neo-range-input {\n    filter: none !important;\n    background-color: var(--buttonFill) !important;\n    border: transparent !important;\n    margin: 4px 0px !important;\n  }\n\n  /* 发送input */\n  #send_textarea {\n    background-color: transparent !important;\n    border: none !important;\n    margin: 0px !important;\n  }\n\n  .menu_button.menu_button_default {\n    box-shadow: none !important;\n  }\n\n   /* 世界书设置 */\n   .wi-card-entry {\n    margin-top: 12px;\n    padding: 8px;\n    background-color: var(--mesHeadlineColor);\n  }\n\n  /* 滑轮 */\n  input[type=\"range\"] {\n    box-shadow: none;\n    background-color: var(--black30a) !important;\n    height: 5px;\n  }\n\n  /* Checkbox */\n  input[type='checkbox'] {\n    background-color: #ffffff2b;\n    border: none;\n    box-shadow: none;\n    border-radius: 2px;\n  }\n  input[type=\"checkbox\"]::before {\n    box-shadow: inset 1em 1em var(--SmartThemeEmColor);\n  }\n\n  /* 预设 */\n  #completion_prompt_manager_list {\n    background-color: var(--menuBackgroundColor) !important;\n    padding: 0px 8px;\n  }\n  \n  #completion_prompt_manager .caution {\n    color: var(--warning);\n  }\n\n  #completion_prompt_manager #completion_prompt_manager_list li.completion_prompt_manager_prompt {\n    background-color: #1c1c1e;\n    border: none;\n    border-radius: 2px;\n    padding: 8px;\n    margin-bottom: 8px;\n  }\n  #completion_prompt_manager #completion_prompt_manager_list .completion_prompt_manager_prompt.completion_prompt_manager_prompt_disabled {\n    background-color: var(--menuBackgroundColor);\n    border: none;\n    border-radius: 2px;\n    padding: 8px;\n    margin-bottom: 8px;\n  }\n\n  #completion_prompt_manager #completion_prompt_manager_list \n.completion_prompt_manager_prompt .completion_prompt_manager_prompt_name .fa-solid {\n  color: inherit;\n  }\n\n  /* Spacing Adjustment */\n  .range-block-title {\n    margin: 8px 0px;\n    text-align: left;\n  }\n\n  hr {\n    background-image: none;\n    background-color: var(--SmartThemeUnderlineColor);\n    margin: 12px 0px;\n  }\n\n  .range-block {\n    margin-bottom: 8px;\n  }\n  .checkbox_label {\n    margin: 2px 0px;\n  }\n\n  #result_info_text {\n    color: var(--SmartThemeBodyColor);\n  }\n\n  .editable-slider-notification {\n    top:10px;\n  }\n  \n  /* 圆形滑动条 */\n  input[type=\"range\"]::-webkit-slider-thumb {\n    box-shadow: none;\n    background-color: var(--SmartThemeEmColor);\n    width: 12px;\n    height: 12px;\n  }\n\n  #userSettingsRowOne {\n    margin: 8px 0px;\n  }\n\n  .mes_reasoning_header_title {\n    padding-right: 16px;\n  }\n\n  #rm_print_characters_block {\n    margin-top: 8px;\n  }\n\n  #ui_language_select {\n    width: 6em !important;\n }\n\n  /* 角色 */\n  #rm_print_characters_pagination {\n    background-color: var(--menuBackgroundColor);\n    border-radius: var(--genericRadius);\n    padding: 8px;\n    margin: 8px;\n  }\n  .avatar-container.selected {\n    border: 1px solid var(--SmartThemeUnderlineColor);\n    border-radius: 4px;\n  }\n  \n  .avatar-container:hover {\n    background-color: var(--white20a);\n  }\n\n  .character_select.is_fav .ch_name, .group_select.is_fav .ch_name, .group_member.is_fav .ch_name {\n    color: var(--SmartThemeUnderlineColor);\n  }\n\n  .character_select.is_fav .avatar {\n    outline: 1px solid var(--SmartThemeUnderlineColor);\n  }\n\n  /* 思维链 */\n  .mes_reasoning_header {\n    background-color: #ffffff18;\n    justify-content: center;\n    padding: 8px;\n    letter-spacing: 0.5px;\n    margin-bottom: 12px;\n    transition: all 0.25s ease;\n    border-left: 3px solid var(--SmartThemeUnderlineColor);\n    cursor: pointer;\n  }\n\n  .mes_reasoning_header:hover {\n    background-color: #ffffff24;\n  }\n\n  .mes_reasoning_details .mes_reasoning_arrow {\n    height: var(--mainFontSize)*0.9;\n    width: var(--mainFontSize)*0.9;\n  }\n\n  .mes_reasoning {\n    border-left: var(--SmartThemeUnderlineColor) solid 2px;\n    color: var(--SmartThemeBodyColor)\n  }\n\n  /* scrollbar */\n  ::-webkit-scrollbar {\n    width: var(--scrollBarWidth);\n    height: var(--scrollBarWidth);\n  }\n\n   ::-webkit-scrollbar-track {\n    background: transparent;\n  }\n\n  ::-webkit-scrollbar-thumb:vertical,\n  ::-webkit-scrollbar-thumb:horizontal {\n  background-color: var(--white20a);\n  border:none;\n  box-shadow: none;\n  }\n  \n  /* 其他 */\n  .drawer-content .alignItemsBaseline {\n    align-items: center !important;\n  }\n\n  .flex1.flex-container.alignItemsBaseline {\n    min-width: 214px;\n  }\n\n  .fa-solid.fa-circle-question.note-link-span {\n    padding-top: 5px;\n    padding-bottom: 5px;\n  }\n\n  .doubleRangeContainer > .doubleRangeInputContainer::after {\n    background-color: var(--SmartThemeEmColor);\n    box-shadow: none !important;\n  } \n\n  /* pagination */\n  div[is_user=\"false\"].last_mes .mes_block {\n    padding-bottom: 48px;\n  }\n\n  /* 对话样式 */\n  .mes_text q {\n    color: var(--SmartThemeQuoteColor);\n    background-color: #faffdf14;\n    margin: 0px 3px;\n    padding: 2px 4px;\n    padding-left: 8px;\n    border-radius: 2px;\n    border-left: #faffdf61 1.5px solid;\n    border-right: #faffdf61 1.5px solid;\n    font-size: calc(0.97* var(--mainFontSize));\n  }\n  \n  /* 角色收藏滚动条 */\n  #HotSwapWrapper > div {\n    overflow: auto hidden;\n    flex-wrap: nowrap;\n    justify-content: flex-start;\n    gap: 8px;\n    min-height: calc(var(--avatar-base-height)* 1.5);\n  }\n  \n  #HotSwapWrapper > div::-webkit-scrollbar-thumb {\n  background-color: var(--white20a);\n  }\n\n  #HotSwapWrapper {\n    overflow: hidden;\n  }\n \n /* 表格样式 */\n .mes_text table {\n  width: 100%;\n  border-collapse: collapse;\n  margin: 8px 0;\n  color: var(--SmartThemeQuoteColor);\n  background-color: rgba(255, 255, 255, 0.04);\n  border-radius: var(--genericRadius);\n  overflow: hidden;\n }\n\n .mes_text th,\n .mes_text td {\n  border: none;\n  border-right: 1px solid rgba(255, 255, 255, 0.05);\n  padding: 10px 14px;\n  text-align: left;\n  border-bottom: 1px solid rgb(243 227 192 / 12%);\n }\n\n .mes_text th {\n  color: var(--SmartThemeQuoteColor);\n  font-weight: 700;\n }\n\n .mes_text tr:last-child td {\n  border-bottom: none;\n }\n\n .mes_text tr:nth-child(even) {\n  background-color: rgba(255, 255, 255, 0.025);\n }\n\n .mes_text td:last-child,\n .mes_text th:last-child {\n  border-right: none;\n }\n \n/* 基础代码块 */\n.mes_text pre {\n  background-color: rgba(255, 255, 255, 0.04);\n  padding: 12px 14px;\n  border-radius: var(--genericRadius);\n  font-family: inherit;    \n  font-size: calc(var(--mainFontSize)* 0.95);\n  letter-spacing: 0.3px;\n  overflow-x: auto;\n  white-space: pre-wrap;\n  word-break: break-word;\n  border-left: 3px solid var(--SmartThemeUnderlineColor);\n  margin: 10px 0;\n  position: relative; \n}\n\n .mes_text pre code{\n  line-height: 1.4;\n}\n   .hljs-variable {\n  color: #ff6074;\n}\n\n\n/* 保留字体继承，不破坏复制按钮结构 */\n.mes_text pre code {\n  font-family: inherit;\n  color: inherit;\n  background: none;\n  border: none\n}\n\n/* 记忆插件表格 */\n\n.tableToolbar {\n    background: var(--grey10) !important;\n    border: 1px solid var(--grey30) !important;\n}\n\n/* 手机适配 */\n@media (max-width: 600px) {\n  #rm_extensions_block {\n    padding-right: 24px;\n  }\n  #bg_menu_content {\n    width: 100%;\n  }\n}\n\n/* Safari 适配 */\n@supports (-webkit-touch-callout: none) {\n  #chat {\n    padding-right: var(--pagePadding); /* 手动留出滚动条空间 */\n  }\n  .drawer-content:not(#left-nav-panel):not(#right-nav-panel) {\n    max-width: 100dvw;\n  }\n  #world_popup {\n    width: 100%;\n  }\n}\n\n/* iPad safari */\n@supports (-webkit-touch-callout: none) {\n  @media screen and (min-width: 768px) {\n    #sheld {\n      width: var(--sheldWidth);\n      margin-left: auto;\n      margin-right: auto;\n    }\n    #top-bar, #top-settings-holder .drawer .drawer-content {\n      width: var(--sheldWidth);\n    }\n    #left-nav-panel,\n    #right-nav-panel,\n    #character_popup,\n    #world_popup,\n    .drawer-content {\n      top: var(--topBarBlockSize);\n    }\n    #character_popup,\n    #world_popup,\n    .drawer-content {\n      margin-top: 0px;\n      top: var(--topBarBlockSize);\n    }\n  }\n}\n\n\n/* 插件适配 */\n\n/* 文生图 */\n#settings-panel input, #settings-panel select, #settings-panel textarea,\n#settings-panel2 input, #settings-panel2 select {\n  background-color: var(--buttonFill) !important;\n}\n\n/* qr隐藏插件 */\n#quick-reply-rocket-button i {\n  font-size: var(--bottomFormIconSize) !important;\n  color: var(--SmartThemeBodyColor) !important;\n}\n\n/* 输入助手 */\n.form-group label {\n  color: var(--SmartThemeBodyColor) !important;\n}\n\n.form-group input, .form-group select {\n  border: none !important;\n  background-color: var(--buttonFill) !important;\n  color: var(--SmartThemeBodyColor) !important;\n}\n\n",
         "waifuMode": false,
         "movingUI": false,
         "movingUIState": {},
         "movingUIPreset": "1",
-        "noShadows": false,
-        "theme": "Azure",
+        "noShadows": true,
+        "theme": "深色简约卡片",
         "gestures": true,
         "auto_swipe": false,
         "auto_swipe_minimum_length": 0,
@@ -327,7 +329,7 @@
         "mesIDDisplay_enabled": true,
         "hideChatAvatars_enabled": false,
         "max_context_unlocked": false,
-        "message_token_count_enabled": false,
+        "message_token_count_enabled": true,
         "expand_message_actions": false,
         "enableZenSliders": false,
         "enableLabMode": false,
@@ -426,11 +428,11 @@
                 "lorebook": ""
             }
         },
-        "persona_description": "",
-        "persona_description_position": 0,
+        "persona_description": "{{user}}是{{char}}的亲生儿子。十岁，是一个小正太。未知原因与{{char}}分开多年，所以{{user}}不知道{{char}}是他娘亲。{{char}}也不知道{{user}}是自己苦苦寻找的【天选之人】。目前修为：练气大圆满",
+        "persona_description_position": 2,
         "persona_description_role": 0,
         "persona_description_depth": 2,
-        "persona_description_lorebook": "",
+        "persona_description_lorebook": "母性世界书",
         "persona_show_notifications": true,
         "persona_sort_order": "asc",
         "custom_stopping_strings": "[]",
@@ -444,7 +446,7 @@
                 "lastConnection": 1745138408417
             }
         ],
-        "bogus_folders": false,
+        "bogus_folders": true,
         "zoomed_avatar_magnification": false,
         "show_tag_filters": false,
         "aux_field": "character_version",
@@ -469,8 +471,8 @@
             }
         },
         "restore_user_input": true,
-        "reduced_motion": false,
-        "compact_input_area": false,
+        "reduced_motion": true,
+        "compact_input_area": true,
         "show_swipe_num_all_messages": false,
         "auto_connect": true,
         "auto_load_chat": false,
@@ -6152,6 +6154,25 @@
                 "substituteRegex": 0,
                 "minDepth": null,
                 "maxDepth": 1
+            },
+            {
+                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2,
+                    6
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -6368,10 +6389,10 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 796,
-                "LAST_RECEIVE_CHARS": 1051,
-                "LAST_SEND_TOKENS": 54127,
-                "LAST_SEND_CHARS": 99586
+                "LAST_RECEIVE_TOKENS": 951,
+                "LAST_RECEIVE_CHARS": 1343,
+                "LAST_SEND_TOKENS": 101302,
+                "LAST_SEND_CHARS": 168165
             }
         },
         "attachments": [],
@@ -6887,7 +6908,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 453,
                 "userConfigured": true
             }
         },
@@ -6999,7 +7020,7 @@
         "min_p_openai": 0,
         "top_a_openai": 1,
         "repetition_penalty_openai": 1,
-        "stream_openai": true,
+        "stream_openai": false,
         "openai_max_context": 2000000,
         "openai_max_tokens": 8192,
         "wrap_in_quotes": false,
@@ -8348,7 +8369,7 @@
                     },
                     {
                         "identifier": "42",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "43",
