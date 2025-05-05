@@ -5745,6 +5745,23 @@
                 "promptOnly": true
             },
             {
+                "id": "d29a7d8d-8ef6-4cfe-b990-fac6a42ca4a5",
+                "scriptName": "con",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/<content>[\\s\\S]*?</content>/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
                 "id": "c711d11f-7d08-4fb3-84a3-496ab7dbed0c",
                 "scriptName": "（斯拉）删除think",
                 "disabled": true,
@@ -5776,23 +5793,6 @@
                 "minDepth": null,
                 "maxDepth": null,
                 "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "d29a7d8d-8ef6-4cfe-b990-fac6a42ca4a5",
-                "scriptName": "con",
-                "disabled": false,
-                "runOnEdit": false,
-                "findRegex": "/<content>[\\s\\S]*?</content>/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": false,
                 "promptOnly": true
             },
             {
@@ -6011,7 +6011,7 @@
                 "placement": [
                     2
                 ],
-                "disabled": false,
+                "disabled": true,
                 "markdownOnly": true,
                 "promptOnly": false,
                 "runOnEdit": true,
@@ -6154,25 +6154,6 @@
                 "substituteRegex": 0,
                 "minDepth": null,
                 "maxDepth": 1
-            },
-            {
-                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2,
-                    6
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": false,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -6391,8 +6372,8 @@
                 "content": "{继续剧情}",
                 "LAST_RECEIVE_TOKENS": 951,
                 "LAST_RECEIVE_CHARS": 1343,
-                "LAST_SEND_TOKENS": 101302,
-                "LAST_SEND_CHARS": 168165
+                "LAST_SEND_TOKENS": 95436,
+                "LAST_SEND_CHARS": 159371
             }
         },
         "attachments": [],
