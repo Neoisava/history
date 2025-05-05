@@ -387,7 +387,8 @@
             "name": "DeepSeek"
         },
         "personas": {
-            "user-default.png": "林子安"
+            "user-default.png": "林子安",
+            "1746416876729-.png": "石头"
         },
         "default_persona": null,
         "persona_descriptions": {
@@ -395,6 +396,13 @@
                 "description": "{{user}}是{{char}}的亲生儿子。十岁，是一个小正太。未知原因与{{char}}分开多年，所以{{user}}不知道{{char}}是他娘亲。{{char}}也不知道{{user}}是自己苦苦寻找的【天选之人】。目前修为：练气大圆满",
                 "position": 2,
                 "lorebook": "母性世界书"
+            },
+            "1746416876729-.png": {
+                "description": "",
+                "position": 0,
+                "depth": 2,
+                "role": 0,
+                "lorebook": ""
             }
         },
         "persona_description": "{{user}}是{{char}}的亲生儿子。十岁，是一个小正太。未知原因与{{char}}分开多年，所以{{user}}不知道{{char}}是他娘亲。{{char}}也不知道{{user}}是自己苦苦寻找的【天选之人】。目前修为：练气大圆满",
@@ -6682,7 +6690,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 415,
                 "userConfigured": true
             }
         }
