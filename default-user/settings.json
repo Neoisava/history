@@ -20,11 +20,13 @@
         "AlertRegex_玄黄修真界v2.0.png": "true",
         "AlertWI_default_Seraphina.png": "true",
         "WINavLockOn": "false",
-        "AlertRegex_林若秋.png": "true"
+        "AlertRegex_林若秋.png": "true",
+        "AlertWI_修仙之路2.0.png": "true",
+        "AlertRegex_修仙之路2.0.png": "true"
     },
     "currentVersion": "1.12.14",
     "username": "林子安",
-    "active_character": "凡人修仙传·凤起灵绝·大罗真魂都市修仙灵气复苏（地图互动RPG带系统版）.png",
+    "active_character": "修仙之路2.0.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -6004,7 +6006,8 @@
             "地图导航模块3.0.png",
             "玄黄修真界v2.0.png",
             "林若秋.png",
-            "凡人修仙传·凤起灵绝·大罗真魂都市修仙灵气复苏（地图互动RPG带系统版）.png"
+            "凡人修仙传·凤起灵绝·大罗真魂都市修仙灵气复苏（地图互动RPG带系统版）.png",
+            "修仙之路2.0.png"
         ],
         "tts": {
             "voiceMap": "",
@@ -6210,8 +6213,8 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 19,
-                "LAST_RECEIVE_CHARS": 94,
+                "LAST_RECEIVE_TOKENS": 5,
+                "LAST_RECEIVE_CHARS": 9,
                 "LAST_SEND_TOKENS": 105332,
                 "LAST_SEND_CHARS": 207243
             }
