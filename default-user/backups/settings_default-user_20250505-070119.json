@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
+        "LNavOpened": "true",
         "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -13,7 +13,7 @@
         "Assets_SkipConfirm_2502775700152061": "false",
         "AlertWI_八荒仙界v1.0.png": "true",
         "AlertRegex_八荒仙界v1.0.png": "true",
-        "LNavLockOn": "true",
+        "LNavLockOn": "false",
         "AlertWI_地图导航模块3.0.png": "true",
         "AlertWI_冷忧蝉.png": "true",
         "AlertWI_玄黄修真界v2.0.png": "true",
@@ -387,7 +387,8 @@
             "name": "DeepSeek"
         },
         "personas": {
-            "user-default.png": "林子安"
+            "user-default.png": "林子安",
+            "1746416876729-.png": "石头"
         },
         "default_persona": null,
         "persona_descriptions": {
@@ -395,6 +396,13 @@
                 "description": "{{user}}是{{char}}的亲生儿子。十岁，是一个小正太。未知原因与{{char}}分开多年，所以{{user}}不知道{{char}}是他娘亲。{{char}}也不知道{{user}}是自己苦苦寻找的【天选之人】。目前修为：练气大圆满",
                 "position": 2,
                 "lorebook": "母性世界书"
+            },
+            "1746416876729-.png": {
+                "description": "原名王铁柱，性别男，年龄未知。世界书的阅读者，穿梭于各种世界书之间。有随意改写世界书的能力。",
+                "position": 0,
+                "depth": 2,
+                "role": 0,
+                "lorebook": ""
             }
         },
         "persona_description": "{{user}}是{{char}}的亲生儿子。十岁，是一个小正太。未知原因与{{char}}分开多年，所以{{user}}不知道{{char}}是他娘亲。{{char}}也不知道{{user}}是自己苦苦寻找的【天选之人】。目前修为：练气大圆满",
@@ -6681,8 +6689,8 @@
             "migration_v1_complete": true,
             "useGlobalSettings": true,
             "globalHideSettings": {
-                "hideLastN": 50,
-                "lastProcessedLength": 329,
+                "hideLastN": 20,
+                "lastProcessedLength": 443,
                 "userConfigured": true
             }
         }
@@ -7035,7 +7043,7 @@
                 "marker": false,
                 "name": "☑️角色扮演 (玩家主导)",
                 "role": "system",
-                "content": "# 交互模式：AI驱动叙事\n\n在此模式下，你作为主要的叙述者，控制所有角色（包括玩家角色 `<user>`），主动推进故事。\n\n核心原则：\n*   叙事主导权：你负责驱动情节发展，依据既定场景、角色档案、内在逻辑及总体叙事目标，生成所有角色的行动、对话及内心状态。\n*   解读玩家导向：主要将玩家输入视为高层级的导演性指导、场景请求或角色（包括`<user>`）的目标。将这些指导创造性地、合乎逻辑地整合进你正在生成的叙事流中。你不仅限于执行明确命令，应解读输入背后的意图。\n*   演绎 `<user>`：作为你叙事生成的一部分，依据其角色档案和玩家指导，描绘`<user>`的行动、言语、想法及感受。\n*   构建均衡的群像叙事：作为故事的主导者，你的责任是构建一个丰富且平衡的叙事整体。即使玩家指令聚焦于`<user>`，你也必须主动地为NPC分配戏份、设计其独立的行动逻辑、展现其视角和反应。目标是创造一个所有关键角色都显得生动、有自身目的和影响力的“群像戏”，而非围绕`<user>`的“独角戏”。NPC的行为和发展应与`<user>`的情节线相互交织、共同推进故事。\n*   维持一致性：确保所有生成的事件，包括受玩家指导影响的部分，严格遵循已建立的世界规则和角色连贯性。若某项指导与既定逻辑根本冲突，应合理地调整它，或巧妙地暗示其中的张力。\n*   持续推进：生成叙事进展，直至达到一个自然的停顿点、场景结束或重要情节发展完成，若有必要则等待玩家进一步的指导。",
+                "content": "# 交互模式：AI驱动叙事\n\n在此模式下，你作为主要的叙述者，控制所有角色（包括玩家角色 `<user>`），主动推进故事。\n\n核心原则：\n*   叙事主导权：你负责驱动情节发展，依据既定场景、角色档案、内在逻辑及总体叙事目标，生成所有角色的行动、对话及内心状态。\n*   解读玩家导向：主要将玩家输入视为最高层级的导演性指导、场景请求或角色（包括`<user>`）的目标。将这些指导创造性地、合乎逻辑地整合进你正在生成的叙事流中。你不仅限于执行明确命令，应解读输入背后的意图。\n*   演绎 `<user>`：作为你叙事生成的一部分，依据其角色档案和玩家指导，描绘`<user>`的行动、言语、想法及感受。\n*   构建均衡的群像叙事：作为故事的主导者，你的责任是构建一个丰富且平衡的叙事整体。即使玩家指令聚焦于`<user>`，你也必须主动地为NPC分配戏份、设计其独立的行动逻辑、展现其视角和反应。目标是创造一个所有关键角色都显得生动、有自身目的和影响力的“群像戏”，而非围绕`<user>`的“独角戏”。NPC的行为和发展应与`<user>`的情节线相互交织、共同推进故事。\n*   维持一致性：确保所有生成的事件，包括受玩家指导影响的部分，严格遵循已建立的世界规则和角色连贯性。若某项指导与既定逻辑根本冲突，应合理地调整它，或巧妙地暗示其中的张力。\n*   持续推进：生成叙事进展，直至达到一个自然的停顿点、场景结束或重要情节发展完成，若有必要则等待玩家进一步的指导。",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -7500,11 +7508,11 @@
                     },
                     {
                         "identifier": "008c0cd3-2b49-43b6-aafb-46bf4536965f",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "a5d9aec8-000e-404e-aae0-322cfa9b0cc3",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "1adc95a8-ad85-4a99-8acd-06fc5810104a",
@@ -7608,7 +7616,7 @@
                     },
                     {
                         "identifier": "07a98d3b-d492-41b3-b5b4-883041dc68cb",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "9e84f2e2-ebc5-4bbd-963c-aac25d452d0f",
