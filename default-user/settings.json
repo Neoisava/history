@@ -6050,6 +6050,91 @@
                 "substituteRegex": 0,
                 "minDepth": null,
                 "maxDepth": null
+            },
+            {
+                "id": "77d09953-c7e5-4ffa-8ac0-65e7a0f35bda",
+                "scriptName": "【戏剧之王】去除10楼以下摘要文本",
+                "findRegex": "/<details>\\s*<summary>\\s*摘要\\s*<\\/summary>[\\s\\S]*?<\\/details>/gsi",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": 10
+            },
+            {
+                "id": "670ff826-c2df-4fd0-9412-95c43aa35a15",
+                "scriptName": "【戏剧之王】去除10楼之上的除摘要部分",
+                "findRegex": "/([\\s\\S]*?<details>\\s*<summary>\\s*摘要\\s*<\\/summary>|<\\/details>[\\s\\S]*?$)/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 11,
+                "maxDepth": null
+            },
+            {
+                "id": "532d91d7-0100-4022-a1a7-16eea6243215",
+                "scriptName": "【戏剧之王】去思维链、disclaimer多余内容",
+                "findRegex": "/(<disclaimer>.*?<\\/disclaimer>)|((.*)(?=<theatre>(?![\\s\\S]*<theatre>)))|((?:<\\s*!?\\s*-\\s*-|<\\s*-\\s*-)[\\s\\S]*?-\\s*-\\s*>(\\n)?)|(.*?<\\/think(?:ing)?>(\\n)?)|(<think(?:ing)?>[\\s\\S]*<\\/think(?:ing)?>(\\n)?)/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "b373ec02-c136-4a4e-b7e6-fd43e2248a1c",
+                "scriptName": "【戏剧之王】置空用户输入（去除10楼以上user的输入）",
+                "findRegex": "[\\s\\S]*",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 10,
+                "maxDepth": null
+            },
+            {
+                "id": "06755a08-58d7-4972-988f-2736e9a15cb0",
+                "scriptName": "Gemini去省略号|感叹号|星号|括号",
+                "findRegex": "/(…)|(!)|(！)|(\\*{2})|(（[^）]*）)|(\\([^)]*\\))/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
