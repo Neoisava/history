@@ -2,8 +2,8 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
-        "NavOpened": "false",
+        "LNavOpened": "true",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -13,7 +13,7 @@
         "Assets_SkipConfirm_2502775700152061": "false",
         "AlertWI_八荒仙界v1.0.png": "true",
         "AlertRegex_八荒仙界v1.0.png": "true",
-        "LNavLockOn": "true",
+        "LNavLockOn": "false",
         "AlertWI_地图导航模块3.0.png": "true",
         "AlertWI_冷忧蝉.png": "true",
         "AlertWI_玄黄修真界v2.0.png": "true",
@@ -387,7 +387,8 @@
             "name": "DeepSeek"
         },
         "personas": {
-            "user-default.png": "林子安"
+            "user-default.png": "林子安",
+            "1746416876729-.png": "石头"
         },
         "default_persona": null,
         "persona_descriptions": {
@@ -395,6 +396,13 @@
                 "description": "{{user}}是{{char}}的亲生儿子。十岁，是一个小正太。未知原因与{{char}}分开多年，所以{{user}}不知道{{char}}是他娘亲。{{char}}也不知道{{user}}是自己苦苦寻找的【天选之人】。目前修为：练气大圆满",
                 "position": 2,
                 "lorebook": "母性世界书"
+            },
+            "1746416876729-.png": {
+                "description": "原名王铁柱，性别男，年龄未知。世界书的阅读者，穿梭于各种世界书之间。有随意改写世界书的能力。",
+                "position": 0,
+                "depth": 2,
+                "role": 0,
+                "lorebook": ""
             }
         },
         "persona_description": "{{user}}是{{char}}的亲生儿子。十岁，是一个小正太。未知原因与{{char}}分开多年，所以{{user}}不知道{{char}}是他娘亲。{{char}}也不知道{{user}}是自己苦苦寻找的【天选之人】。目前修为：练气大圆满",
@@ -6166,7 +6174,11 @@
         "vectors": {},
         "variables": {
             "global": {
-                "content": "{继续剧情}"
+                "content": "{继续剧情}",
+                "LAST_RECEIVE_TOKENS": 4278,
+                "LAST_RECEIVE_CHARS": 5917,
+                "LAST_SEND_TOKENS": 105577,
+                "LAST_SEND_CHARS": 209387
             }
         },
         "attachments": [],
@@ -6681,10 +6693,26 @@
             "migration_v1_complete": true,
             "useGlobalSettings": true,
             "globalHideSettings": {
-                "hideLastN": 50,
-                "lastProcessedLength": 342,
+                "hideLastN": 20,
+                "lastProcessedLength": 448,
                 "userConfigured": true
             }
+        },
+        "EjsTemplate": {
+            "enabled": true,
+            "generate_enabled": true,
+            "generate_loader_enabled": true,
+            "render_enabled": true,
+            "render_loader_enabled": true,
+            "strict_enabled": false,
+            "debug_enabled": false,
+            "autosave_enabled": true,
+            "preload_worldinfo_enabled": true,
+            "code_blocks_enabled": false,
+            "world_active_enabled": true,
+            "raw_message_evaluation_enabled": false,
+            "filter_message_enabled": true,
+            "cache_enabled": false
         }
     },
     "tags": [
@@ -7500,11 +7528,11 @@
                     },
                     {
                         "identifier": "008c0cd3-2b49-43b6-aafb-46bf4536965f",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "a5d9aec8-000e-404e-aae0-322cfa9b0cc3",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "1adc95a8-ad85-4a99-8acd-06fc5810104a",
@@ -7604,7 +7632,7 @@
                     },
                     {
                         "identifier": "7e5b4340-9821-45da-9639-602727ed7a94",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "07a98d3b-d492-41b3-b5b4-883041dc68cb",
