@@ -6135,6 +6135,23 @@
                 "substituteRegex": 0,
                 "minDepth": null,
                 "maxDepth": null
+            },
+            {
+                "id": "90691121-f38c-43b7-9cff-aa9487f826f4",
+                "scriptName": "【戏剧之王】user消息加<Last_inputs>",
+                "findRegex": "^([\\s\\S]*)$",
+                "replaceString": "<Last_inputs>\n$1\n</Last_inputs>",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": 1
             }
         ],
         "character_allowed_regex": [
@@ -8191,7 +8208,7 @@
                     },
                     {
                         "identifier": "7",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "90",
