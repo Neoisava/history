@@ -6174,7 +6174,9 @@
         "vectors": {},
         "variables": {
             "global": {
-                "content": "{继续剧情}"
+                "content": "{继续剧情}",
+                "LAST_RECEIVE_TOKENS": 4473,
+                "LAST_RECEIVE_CHARS": 6165
             }
         },
         "attachments": [],
@@ -6690,7 +6692,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 443,
                 "userConfigured": true
             }
         },
