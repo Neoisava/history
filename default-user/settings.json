@@ -7806,7 +7806,7 @@
                 "identifier": "77",
                 "name": "☑️摘要(默认语言：日语)",
                 "role": "system",
-                "content": "<abstract_format>\n**YOU MUST**:\n[After the content and all status blocks (if any), Sophobarnum outputs an abstract in the following format]\n<details><summary>摘要</summary>\n<status>${第X天+specific time}${place}(if place changes, use  ‘A→B’ format)</status>\n{{random::A succinct Japanese paragraph with a God's-eye view (100-130 words) summarizing the basic developments in this segment. Include only specific events  in the format : X did Y. Maintain the tone of the narrative::Condense the events with a God's-eye view in Japanese that occurred in this segment into a single paragraph (100-130 words) that captures the main development of the events. Use “X did Y” as the format, focusing on character behavioral transitions, key dialogue elements, and the cause of plot development}}. Exclude  \"在整个过程中...\", \"展现了...\" and other concluding phrases.\n</details>\n</abstract_format>",
+                "content": "<abstract_format>\n**YOU MUST**:\n[After the content and all status blocks (if any), Sophobarnum outputs an abstract in the following format]\n<details><summary>摘要</summary>\n<status>${第X天+specific time}${place}(if place changes, use  ‘A→B’ format)</status>\n{{random::A succinct Japanese paragraph with a God's-eye view (100-130 words) summarizing the basic developments in this segment. Include only specific events  in the format : X did Y. Maintain the tone of the narrative::Condense the events with a God's-eye view in chinese that occurred in this segment into a single paragraph (100-130 words) that captures the main development of the events. Use “X did Y” as the format, focusing on character behavioral transitions, key dialogue elements, and the cause of plot development}}. Exclude  \"在整个过程中...\", \"展现了...\" and other concluding phrases.\n</details>\n</abstract_format>",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false,
@@ -8454,7 +8454,7 @@
                     },
                     {
                         "identifier": "71",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "72",
@@ -8462,7 +8462,7 @@
                     },
                     {
                         "identifier": "73",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "74",
