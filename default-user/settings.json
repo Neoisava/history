@@ -9,7 +9,7 @@
         "SelectedNavTab": "rm_button_characters",
         "Personas_GridView": "false",
         "world_info_sort_order": "6",
-        "NavLockOn": "true",
+        "NavLockOn": "false",
         "Assets_SkipConfirm_2502775700152061": "false",
         "AlertWI_八荒仙界v1.0.png": "true",
         "AlertRegex_八荒仙界v1.0.png": "true",
@@ -26,7 +26,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林子安",
-    "active_character": "林若秋.png",
+    "active_character": "修仙之路2.0.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -36,24 +36,7 @@
     "main_api": "openai",
     "world_info_settings": {
         "world_info": {
-            "globalSelect": [
-                "_性爱世界书",
-                "【地图导航】",
-                "A",
-                "SSVGG 1.9.4",
-                "多维情感网络动态",
-                "女性本能世界书 by LULUZ",
-                "女性高潮参考资料",
-                "性情与场景书",
-                "性经验调整世界书",
-                "我们的甜蜜情话",
-                "新二次元性格对话",
-                "母子世界",
-                "母性世界书",
-                "渲染库模板",
-                "道德伦理(1)",
-                "针对2.5pro的瑟瑟场景"
-            ],
+            "globalSelect": [],
             "charLore": [
                 {
                     "name": "冷忧蝉",
@@ -5771,7 +5754,7 @@
             {
                 "id": "d29a7d8d-8ef6-4cfe-b990-fac6a42ca4a5",
                 "scriptName": "con",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": false,
                 "findRegex": "/<content>[\\s\\S]*?</content>/gm",
                 "replaceString": "",
@@ -5984,7 +5967,7 @@
                 "placement": [
                     2
                 ],
-                "disabled": true,
+                "disabled": false,
                 "markdownOnly": true,
                 "promptOnly": false,
                 "runOnEdit": true,
@@ -6001,7 +5984,7 @@
                 "placement": [
                     2
                 ],
-                "disabled": true,
+                "disabled": false,
                 "markdownOnly": true,
                 "promptOnly": false,
                 "runOnEdit": true,
@@ -6743,7 +6726,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 452,
+                "lastProcessedLength": 1,
                 "userConfigured": true
             }
         },
