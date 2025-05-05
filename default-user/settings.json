@@ -25,12 +25,12 @@
         "AlertRegex_修仙之路2.0.png": "true"
     },
     "currentVersion": "1.12.14",
-    "username": "林子安",
+    "username": "林若秋",
     "active_character": "修仙之路2.0.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
-    "user_avatar": "user-default.png",
+    "user_avatar": "1746440806294-.png",
     "amount_gen": 350,
     "max_context": 8192,
     "main_api": "openai",
@@ -399,7 +399,8 @@
         },
         "personas": {
             "user-default.png": "林子安",
-            "1746416876729-.png": "石头"
+            "1746416876729-.png": "石头",
+            "1746440806294-.png": "林若秋"
         },
         "default_persona": null,
         "persona_descriptions": {
@@ -414,13 +415,20 @@
                 "depth": 2,
                 "role": 0,
                 "lorebook": ""
+            },
+            "1746440806294-.png": {
+                "description": "",
+                "position": 0,
+                "depth": 2,
+                "role": 0,
+                "lorebook": ""
             }
         },
-        "persona_description": "{{user}}是{{char}}的亲生儿子。十岁，是一个小正太。未知原因与{{char}}分开多年，所以{{user}}不知道{{char}}是他娘亲。{{char}}也不知道{{user}}是自己苦苦寻找的【天选之人】。目前修为：练气大圆满",
-        "persona_description_position": 2,
+        "persona_description": "",
+        "persona_description_position": 0,
         "persona_description_role": 0,
         "persona_description_depth": 2,
-        "persona_description_lorebook": "母性世界书",
+        "persona_description_lorebook": "",
         "persona_show_notifications": true,
         "persona_sort_order": "asc",
         "custom_stopping_strings": "[]",
@@ -6222,10 +6230,10 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 5,
-                "LAST_RECEIVE_CHARS": 9,
-                "LAST_SEND_TOKENS": 105332,
-                "LAST_SEND_CHARS": 207243
+                "LAST_RECEIVE_TOKENS": 897,
+                "LAST_RECEIVE_CHARS": 1142,
+                "LAST_SEND_TOKENS": 86259,
+                "LAST_SEND_CHARS": 155617
             }
         },
         "attachments": [],
@@ -6741,7 +6749,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 1,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
