@@ -22,7 +22,8 @@
         "WINavLockOn": "false",
         "AlertRegex_林若秋.png": "true",
         "AlertWI_修仙之路2.0.png": "true",
-        "AlertRegex_修仙之路2.0.png": "true"
+        "AlertRegex_修仙之路2.0.png": "true",
+        "WI_PerPage": "100"
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
@@ -6231,10 +6232,10 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 7,
-                "LAST_RECEIVE_CHARS": 10,
-                "LAST_SEND_TOKENS": 84803,
-                "LAST_SEND_CHARS": 153634
+                "LAST_RECEIVE_TOKENS": 4706,
+                "LAST_RECEIVE_CHARS": 12963,
+                "LAST_SEND_TOKENS": 88870,
+                "LAST_SEND_CHARS": 159610
             }
         },
         "attachments": [],
@@ -6750,7 +6751,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 4,
+                "lastProcessedLength": 1,
                 "userConfigured": true
             }
         },
@@ -7685,7 +7686,7 @@
                     },
                     {
                         "identifier": "3c7de215-03ac-4059-ab54-6b7cb3881ba5",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "7e5b4340-9821-45da-9639-602727ed7a94",
