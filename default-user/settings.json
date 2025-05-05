@@ -6154,25 +6154,6 @@
                 "substituteRegex": 0,
                 "minDepth": null,
                 "maxDepth": 1
-            },
-            {
-                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2,
-                    6
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": false,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -6908,7 +6889,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 454,
                 "userConfigured": true
             }
         },
@@ -8353,11 +8334,11 @@
                     },
                     {
                         "identifier": "38",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "39",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "40",
