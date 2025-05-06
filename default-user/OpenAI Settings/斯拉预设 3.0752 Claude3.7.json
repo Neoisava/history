@@ -16,8 +16,8 @@
     "perplexity_model": "llama-3-70b-instruct",
     "groq_model": "llama3-70b-8192",
     "zerooneai_model": "yi-large",
-    "custom_model": "gemini-2.5-pro-exp-03-25",
-    "custom_url": "https://newapi.aixiaowu.xyz/v1",
+    "custom_model": "claude-3.7-sonnet",
+    "custom_url": "https://sllt.uk/v1",
     "custom_include_body": "",
     "custom_exclude_body": "",
     "custom_include_headers": "",
@@ -49,7 +49,7 @@
     "scenario_format": "[Circumstances and context of the dialogue: {{scenario}}]",
     "personality_format": "[{{char}}'s personality: {{personality}}]",
     "group_nudge_prompt": "[Write the next reply only as the group members.]",
-    "stream_openai": true,
+    "stream_openai": false,
     "prompts": [
         {
             "name": "🔵设置",
@@ -2159,11 +2159,11 @@
                 },
                 {
                     "identifier": "f3324b7a-219b-4c75-9cf9-da83234180fa",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "c92b0d5d-4910-4d97-a98a-fb82910027a1",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "60ce7330-21a5-48de-a626-fcedc5c1f0b1",
@@ -2267,19 +2267,19 @@
                 },
                 {
                     "identifier": "9a95c63d-f0b4-4998-88d5-d6ecc948d0aa",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "2d84b7ee-7121-44fa-a3d3-44696e46f06f",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "92d0eb0a-d5e5-49cd-84e0-1d428d94590f",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ca0d801a-784e-49a4-b105-41ece06defdf",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "4a5483a9-b90e-4450-9c59-d3235964ba8c",
@@ -2323,7 +2323,7 @@
                 },
                 {
                     "identifier": "24071d00-49f1-4533-9ca7-809ada76766d",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "8203021f-b95d-4cfd-896b-912a0dcef828",
