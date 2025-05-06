@@ -2879,8 +2879,8 @@
                 "content": "{继续剧情}",
                 "LAST_RECEIVE_TOKENS": 7617,
                 "LAST_RECEIVE_CHARS": 10622,
-                "LAST_SEND_TOKENS": 115738,
-                "LAST_SEND_CHARS": 181893
+                "LAST_SEND_TOKENS": 115719,
+                "LAST_SEND_CHARS": 181797
             }
         },
         "attachments": [],
@@ -2929,10 +2929,6 @@
                     },
                     {
                         "set": "角色扮演輔助導演版(1.1)",
-                        "isVisible": true
-                    },
-                    {
-                        "set": "人物状态栏保存",
                         "isVisible": true
                     }
                 ]
