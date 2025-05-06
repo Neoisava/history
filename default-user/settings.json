@@ -2188,7 +2188,7 @@
             {
                 "id": "6251ab3d-44f4-4105-9bd2-8121171b44d9",
                 "scriptName": "移除思维链和多余标签v2",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/(.*\\</thinking>\\n|.*\\<content[\\s\\S]*?>\\n|</content>|<(/)content_format>)/gs",
                 "replaceString": "",
@@ -2599,7 +2599,7 @@
             {
                 "id": "70afed1d-fd6c-417d-a159-28f9b4b670d4",
                 "scriptName": "状态插件-通用正则（纯替换）",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": false,
                 "findRegex": "{{getvar::状态插件-通用正则匹配}}",
                 "replaceString": "{{getvar::状态插件-通用正则替换}}",
