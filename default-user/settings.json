@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
+        "LNavOpened": "true",
         "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -6147,25 +6147,6 @@
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
-            },
-            {
-                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2,
-                    6
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": false,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -6382,10 +6363,10 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 29,
-                "LAST_RECEIVE_CHARS": 42,
-                "LAST_SEND_TOKENS": 38239,
-                "LAST_SEND_CHARS": 70974
+                "LAST_RECEIVE_TOKENS": 30152,
+                "LAST_RECEIVE_CHARS": 90912,
+                "LAST_SEND_TOKENS": 39139,
+                "LAST_SEND_CHARS": 72367
             }
         },
         "attachments": [],
@@ -6901,7 +6882,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 12,
+                "lastProcessedLength": 13,
                 "userConfigured": true
             }
         },
@@ -7488,7 +7469,7 @@
                 "identifier": "47",
                 "name": "☑️字数+语言+格式规定(必看！！！)",
                 "role": "system",
-                "content": "{{setvar::Word_count::Minimum 200}}{{setvar::Word_language::简体中文}}\n{{//\n修改1200→`别的数字`可以调整最大字数限制\n修改Maximum→Minimum可变成最小字数要求\n可修改“简体中文”为其他语言\n}}\n\n**Craft a dramatic masterpiece of content with {{getvar::Word_count}} words in {{getvar::Word_language}} within <theatre> tags**\n\n{{//\n注释：\n- 部分角色卡有生成格式，要么把\"<theatre>\"改成角色卡需要的格式\n要么把“within <theatre> tags”删掉，这样正文就会用前段卡要求的格式包裹\n}}\n",
+                "content": "{{setvar::Word_count::Minimum 800}}{{setvar::Word_language::简体中文}}\n{{//\n修改3200→`别的数字`可以调整最大字数限制\n修改Maximum→Minimum可变成最小字数要求\n可修改“简体中文”为其他语言\n}}\n\n**Craft a dramatic masterpiece of content with {{getvar::Word_count}} words in {{getvar::Word_language}} within <theatre> tags**\n\n{{//\n注释：\n- 部分角色卡有生成格式，要么把\"<theatre>\"改成角色卡需要的格式\n要么把“within <theatre> tags”删掉，这样正文就会用前段卡要求的格式包裹\n}}\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false,
