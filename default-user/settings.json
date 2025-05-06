@@ -37,7 +37,9 @@
     "main_api": "openai",
     "world_info_settings": {
         "world_info": {
-            "globalSelect": [],
+            "globalSelect": [
+                "Chat_Book_2_0_2025_05_06_10h07m45s"
+            ],
             "charLore": [
                 {
                     "name": "冷忧蝉",
@@ -6164,6 +6166,23 @@
                 "runOnEdit": false,
                 "substituteRegex": 1,
                 "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "f6e1eba2-4e8e-4e9f-8a7d-8d36b0856636",
+                "scriptName": "状态插件-通用正则（第1组）",
+                "findRegex": "{{getvar::状态插件-通用正则匹配}}",
+                "replaceString": "$1",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": false,
+                "substituteRegex": 1,
+                "minDepth": 999,
                 "maxDepth": null
             }
         ],
