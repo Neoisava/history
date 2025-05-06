@@ -6106,7 +6106,7 @@
             {
                 "id": "06755a08-58d7-4972-988f-2736e9a15cb0",
                 "scriptName": "Gemini去省略号|感叹号|星号|括号",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/(…)|(!)|(！)|(\\*{2})|(（[^）]*）)|(\\([^)]*\\))/g",
                 "replaceString": "",
