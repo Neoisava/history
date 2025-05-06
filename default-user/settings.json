@@ -79,6 +79,7 @@
                     "name": "修仙之路2.0",
                     "extraBooks": [
                         "[基本]服装色情化世界",
+                        "世界书：淫纹效果",
                         "性经验调整世界书",
                         "我们的甜蜜情话",
                         "新二次元性格对话",
@@ -414,14 +415,14 @@
                 "lorebook": ""
             },
             "1746440806294-.png": {
-                "description": "{{user}}小腹子宫位置有粉色线条简单的淫纹，无阴毛",
+                "description": "{{user}}小腹子宫位置有粉色线条简单的“娇艳”淫纹，无阴毛",
                 "position": 0,
                 "depth": 2,
                 "role": 0,
                 "lorebook": ""
             }
         },
-        "persona_description": "{{user}}小腹子宫位置有粉色线条简单的淫纹，无阴毛",
+        "persona_description": "{{user}}小腹子宫位置有粉色线条简单的“娇艳”淫纹，无阴毛",
         "persona_description_position": 0,
         "persona_description_role": 0,
         "persona_description_depth": 2,
@@ -6398,8 +6399,8 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 30018,
-                "LAST_RECEIVE_CHARS": 90660,
+                "LAST_RECEIVE_TOKENS": 30313,
+                "LAST_RECEIVE_CHARS": 91170,
                 "LAST_SEND_TOKENS": 31222,
                 "LAST_SEND_CHARS": 61032
             }
@@ -6921,7 +6922,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 3,
                 "userConfigured": true
             }
         },
