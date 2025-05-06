@@ -79,6 +79,8 @@
                         "我们的甜蜜情话",
                         "新二次元性格对话",
                         "母性世界书",
+                        "渲染库模板",
+                        "部位特写",
                         "针对2.5pro的瑟瑟场景"
                     ]
                 }
@@ -2174,7 +2176,7 @@
             {
                 "id": "5b1a5c51-910a-4b5a-956a-390d4f9caca6",
                 "scriptName": "部位特写",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<font[^>]*>(.|\\n)*<\\/font>/gm",
                 "replaceString": "",
@@ -2881,10 +2883,10 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 35366,
-                "LAST_RECEIVE_CHARS": 98424,
-                "LAST_SEND_TOKENS": 113587,
-                "LAST_SEND_CHARS": 184142
+                "LAST_RECEIVE_TOKENS": 35427,
+                "LAST_RECEIVE_CHARS": 98476,
+                "LAST_SEND_TOKENS": 105049,
+                "LAST_SEND_CHARS": 168588
             }
         },
         "attachments": [],
