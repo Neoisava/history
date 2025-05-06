@@ -6115,23 +6115,6 @@
                 "promptOnly": true
             },
             {
-                "id": "06755a08-58d7-4972-988f-2736e9a15cb0",
-                "scriptName": "Gemini去省略号|感叹号|星号|括号",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/(…)|(!)|(！)|(\\*{2})|(（[^）]*）)|(\\([^)]*\\))/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
                 "id": "90691121-f38c-43b7-9cff-aa9487f826f4",
                 "scriptName": "【戏剧之王】user消息加<Last_inputs>",
                 "disabled": false,
@@ -6146,6 +6129,23 @@
                 "minDepth": null,
                 "maxDepth": 1,
                 "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "06755a08-58d7-4972-988f-2736e9a15cb0",
+                "scriptName": "Gemini去省略号|感叹号|星号|括号",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/(…)|(!)|(！)|(\\*{2})|(（[^）]*）)|(\\([^)]*\\))/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
                 "promptOnly": true
             }
         ],
