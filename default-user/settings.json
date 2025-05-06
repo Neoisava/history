@@ -6147,6 +6147,24 @@
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
+            },
+            {
+                "id": "70afed1d-fd6c-417d-a159-28f9b4b670d4",
+                "scriptName": "状态插件-通用正则（纯替换）",
+                "findRegex": "{{getvar::状态插件-通用正则匹配}}",
+                "replaceString": "{{getvar::状态插件-通用正则替换}}",
+                "trimStrings": [],
+                "placement": [
+                    2,
+                    3
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": false,
+                "substituteRegex": 1,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -6415,6 +6433,10 @@
                     },
                     {
                         "set": "角色扮演輔助導演版(1.1)",
+                        "isVisible": true
+                    },
+                    {
+                        "set": "人物状态栏保存",
                         "isVisible": true
                     }
                 ]

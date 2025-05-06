@@ -1,0 +1,29 @@
+{
+    "version": 2,
+    "name": "人物状态栏保存",
+    "disableSend": false,
+    "placeBeforeInput": false,
+    "injectInput": false,
+    "color": "rgba(0, 0, 0, 0)",
+    "onlyBorderColor": false,
+    "qrList": [
+        {
+            "id": 4,
+            "showLabel": false,
+            "label": "人物状态栏自动更新",
+            "title": "",
+            "message": "/*=============函数区域=============*|\n\n/*--------用于输出纯替换后结果-----*|\n/let key=regex_replace {:regex=\"{{noop}\" replace=\"{{noop}}\" text=\"{{noop}}\"\n\t/setvar key=状态插件-通用正则匹配 \"{{var::regex}}\"|\n\t/setvar key=状态插件-通用正则替换 \"{{var::replace}}\"|\n\t/let key=ret {:/regex name=状态插件-通用正则（纯替换） \"{{var::text}}\"|:}()| \n\t/flushvar 状态插件-通用正则匹配|\n\t/flushvar 状态插件-通用正则替换|\n\t/return \"{{var::ret}}\"|\n:}|\n\n/*--------用于输出替换为第一组的结果--*|\n/let key=regex_1st_group {:regex=\"{{noop}\" text=\"{{noop}}\"\n\t/setvar key=状态插件-通用正则匹配 \"{{var::regex}}\"|\n\t/let key=ret {:/regex name=状态插件-通用正则（第1组） \"{{var::text}}\"|:}()|\n\t/flushvar 状态插件-通用正则匹配|\n\t/return \"{{var::ret}}\"|\n:}|\n\n/*--------人物提取-----------------*|\n/let key=splitTextToList {:text=\n\t/let key=剩余文本 {{var::text}}|\n\t/let key=返回列表 [{{noop}}]|\n\t/times 6 {:\n\t\t/let key=剩余文本(正则后) {:/:regex_replace regex=\"/[\\s\\S]*?<StatusBlock>([\\s\\S]*?)<\\/StatusBlock>/m\" text={{var::剩余文本}}|:}()|\n\t\t/if left={{var::剩余文本(正则后)}} right={{var::剩余文本}} rule=neq else={:\n\t\t\t/break|\n\t\t:} {:\n\t\t\t/var key=返回列表 index={:/len {{var::返回列表}} |:}() {:/:regex_1st_group regex=\"/[\\s\\S]*?<StatusBlock>([\\s\\S]*?)<\\/StatusBlock>[\\s\\S]*/gm\" text={{var::剩余文本}}|:}()|\n\t\t\t/var key=剩余文本 {{var::剩余文本(正则后)}}|\n\t\t:}| \n\t:}|\n\t/return {{var::返回列表}}|\n:}|\t\n\n/*=============运行部分=============*|\n\n/setvar key=ChatLoreName {:|/getchatlore:}() ||\n/setvar key=人物状态列表 {:|/:splitTextToList text={{lastCharMessage}}|:}()|\n/times {:/len {{getvar::人物状态列表}}|:}() {:\n\t/setvar key=CharStatus {:/getvar key=人物状态列表 index={{timesIndex}}|:}()|\n\t/setvar key=人物姓名 {:/:regex_1st_group regex=\"/[\\s\\S]*?[姓名|角色]\\s*[:：]\\s*([^ （(\\n,，]+)[\\s\\S]*/gm\" text=\"{{getvar::CharStatus}}\"|:}()|\n\t/if left=人物姓名 right={{noop}} else={:\n\t\t/findentry file={{getvar::ChatLoreName}} field=comment {{getvar::人物姓名}}|\n\t\t/setvar key=CharUID|\n\t\t/if left=CharUID right=\"{{noop}}\" {:\n\t\t\t/setvar key=CharUID {:/createentry file={{getvar::ChatLoreName}}|:}()|\n\t\t\t/setentryfield file={{getvar::ChatLoreName}}  uid={{getvar::CharUID}} field=comment {{getvar::人物姓名}} |\n\t\t\t/setentryfield file={{getvar::ChatLoreName}}  uid={{getvar::CharUID}} field=key {{getvar::人物姓名}} |\n\t\t\t/setentryfield file={{getvar::ChatLoreName}}  uid={{getvar::CharUID}} field=position 2|\n\t\t\t/setentryfield file={{getvar::ChatLoreName}}  uid={{getvar::CharUID}} field=order 80|\n\t\t\t/setentryfield file={{getvar::ChatLoreName}}  uid={{getvar::CharUID}} field=scanDepth 1|\n\t\t\t/setentryfield file={{getvar::ChatLoreName}}  uid={{getvar::CharUID}} field=content {{getvar::CharStatus}}|\n\t\t\t\n\t\t\t/*---不希望出现弹窗，请把下面这行删除--*|\n\t\t\t/echo {{getvar::人物姓名}}已新增存档|\n\t\n\t\t:}| else={:\n\t\t\t/setvar key=CharUID|\t\t\n\t\t\t/setentryfield file={{getvar::ChatLoreName}} uid={{getvar::CharUID}} field=content {{getvar::CharStatus}}|\n\t\t    \n\t\t    /*---不希望出现弹窗，请把下面这行删除--*|\n        \t/echo {{getvar::人物姓名}}已更新|\n\t\t:}|\t\n\t:}|\t\n:}|\n\n\n\n",
+            "contextList": [],
+            "preventAutoExecute": false,
+            "isHidden": false,
+            "executeOnStartup": false,
+            "executeOnUser": false,
+            "executeOnAi": false,
+            "executeOnChatChange": false,
+            "executeOnGroupMemberDraft": false,
+            "executeOnNewChat": false,
+            "automationId": ""
+        }
+    ],
+    "idIndex": 4
+}
