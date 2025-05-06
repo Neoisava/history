@@ -79,8 +79,6 @@
                     "name": "修仙之路2.0",
                     "extraBooks": [
                         "[基本]服装色情化世界",
-                        "多维情感网络动态",
-                        "女性本能世界书 by LULUZ",
                         "性经验调整世界书",
                         "我们的甜蜜情话",
                         "新二次元性格对话",
@@ -6149,25 +6147,6 @@
                 "maxDepth": 1,
                 "markdownOnly": true,
                 "promptOnly": true
-            },
-            {
-                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2,
-                    6
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": false,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -6384,10 +6363,10 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 11,
-                "LAST_RECEIVE_CHARS": 16,
-                "LAST_SEND_TOKENS": 34171,
-                "LAST_SEND_CHARS": 69714
+                "LAST_RECEIVE_TOKENS": 30275,
+                "LAST_RECEIVE_CHARS": 91131,
+                "LAST_SEND_TOKENS": 36882,
+                "LAST_SEND_CHARS": 73760
             }
         },
         "attachments": [],
@@ -6903,7 +6882,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 6,
+                "lastProcessedLength": 7,
                 "userConfigured": true
             }
         },
