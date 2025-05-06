@@ -17,6 +17,10 @@
     "groq_model": "llama3-70b-8192",
     "zerooneai_model": "yi-large",
     "custom_model": "gemini-2.5-pro-exp-03-25",
+    "custom_url": "https://api.huaapi.asia/v1",
+    "custom_include_body": "",
+    "custom_exclude_body": "",
+    "custom_include_headers": "",
     "custom_prompt_post_processing": "strict",
     "google_model": "gemini-1.5-pro-exp-0801",
     "temperature": 1.1,
@@ -38,6 +42,8 @@
     "new_example_chat_prompt": "[Chat Example Start Point]",
     "continue_nudge_prompt": "[Continue the story. Do not include ANY parts of the original message. Use capitalization and punctuation as if your reply is a part of the original message: {{lastChatMessage}}]",
     "bias_preset_selected": "Default (none)",
+    "reverse_proxy": "",
+    "proxy_password": "",
     "max_context_unlocked": true,
     "wi_format": "{0}",
     "scenario_format": "[Circumstances: {{scenario}}]",
@@ -1249,11 +1255,11 @@
                 },
                 {
                     "identifier": "7",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "90",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "91",
@@ -1449,7 +1455,7 @@
                 },
                 {
                     "identifier": "60",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "61",
@@ -1477,7 +1483,7 @@
                 },
                 {
                     "identifier": "67",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "68",
@@ -1501,7 +1507,7 @@
                 },
                 {
                     "identifier": "73",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "74",
