@@ -78,7 +78,6 @@
                 {
                     "name": "修仙之路2.0",
                     "extraBooks": [
-                        "[基本]服装色情化世界",
                         "世界书：淫纹效果",
                         "性经验调整世界书",
                         "我们的甜蜜情话",
@@ -4185,8 +4184,8 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 4880,
-                "LAST_RECEIVE_CHARS": 6934,
+                "LAST_RECEIVE_TOKENS": 32478,
+                "LAST_RECEIVE_CHARS": 94171,
                 "LAST_SEND_TOKENS": 62380,
                 "LAST_SEND_CHARS": 106359
             }
@@ -4708,7 +4707,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 20,
+                "lastProcessedLength": 21,
                 "userConfigured": true
             }
         },
