@@ -73,15 +73,10 @@
                 {
                     "name": "修仙之路2.0",
                     "extraBooks": [
-                        "SSVGG 1.9.4",
                         "世界书：淫纹效果",
                         "人类本能世界书",
-                        "性经验调整世界书",
                         "我们的甜蜜情话",
-                        "新二次元性格对话",
-                        "母性世界书",
                         "渲染库模板",
-                        "部位特写",
                         "针对2.5pro的瑟瑟场景"
                     ]
                 }
@@ -2177,7 +2172,7 @@
             {
                 "id": "5b1a5c51-910a-4b5a-956a-390d4f9caca6",
                 "scriptName": "部位特写",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<font[^>]*>(.|\\n)*<\\/font>/gm",
                 "replaceString": "",
@@ -2884,8 +2879,8 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 1480,
-                "LAST_RECEIVE_CHARS": 2056,
+                "LAST_RECEIVE_TOKENS": 34217,
+                "LAST_RECEIVE_CHARS": 96876,
                 "LAST_SEND_TOKENS": 124503,
                 "LAST_SEND_CHARS": 195909
             }
@@ -4757,7 +4752,7 @@
                     },
                     {
                         "identifier": "15",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "14",
