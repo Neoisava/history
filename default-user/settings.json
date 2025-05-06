@@ -75,6 +75,7 @@
                     "extraBooks": [
                         "SSVGG 1.9.4",
                         "世界书：淫纹效果",
+                        "人类本能世界书",
                         "性经验调整世界书",
                         "我们的甜蜜情话",
                         "新二次元性格对话",
@@ -2670,6 +2671,25 @@
                 "substituteRegex": 1,
                 "minDepth": 999,
                 "maxDepth": null
+            },
+            {
+                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2,
+                    6
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -3406,7 +3426,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 31,
+                "lastProcessedLength": 30,
                 "userConfigured": true
             }
         },
