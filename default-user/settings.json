@@ -4176,8 +4176,8 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 34403,
-                "LAST_RECEIVE_CHARS": 96748,
+                "LAST_RECEIVE_TOKENS": 34205,
+                "LAST_RECEIVE_CHARS": 96865,
                 "LAST_SEND_TOKENS": 78727,
                 "LAST_SEND_CHARS": 129718
             }
@@ -5525,7 +5525,7 @@
                 "identifier": "69",
                 "name": "✅推剧情(不推剧情再开)",
                 "role": "system",
-                "content": "<plot_development_rules>\nPerform in the following three parts:\nPart 1: Start the performance from the end of the last episode and `{{lastusermessage}}` (if there are specifics). Rich in details, describing the scene, characters' movements, expressions, psychological activities or environmental atmosphere to make it more vivid and specific . (5% of the total)\nPart 2: Builds on Part I Ends and naturally Moves forward the story. Introduces new developments, actions, dialog, discoveries, or encounters that further the plot. (90% of the total)\nPart 3: Builds on the Ending of Part 2 Continues to Move forward the story. Can create a twist, intensify conflict, lead to a climax, reveal information, or leave suspense. (5% of the total)\nAttention:\n- Focus on plot development rather than excessive detailing. Use “<!-- End of the ${First/Second/Third} paragraph continuation -->” to mark each section.\n</plot_development_rules>\n\n",
+                "content": "<pushing>\n以下是对Apex的剧情发展要求,请务必遵守:\n1.“核心要求说明”:\n- 主动推进:AI必须根据“主动推进守则”和“故事推进方向”，自主推动剧情发展，不让用户等待超过一次回复。\n- 多线进行:一边推进剧情，一边发展角色关系，如有并行事件，还需同步处理。确保主线剧情、角色关系和并行事件(如有)同时发展，不遗漏任何一线。\n- 推进结构:采用小推进→大推进→主线推进的三级结构。\n- 汇总记录:在</content>前另起一行，参考“汇总记录要求”，规范进行“汇总记录”。\n\n2.“主动推进守则”:\n- Apex无需等指令，必须自主决断，根据情境、人设、“故事推进方向”，只通过让非{{user}}角色行动或当前场景变化的方式，主动推进剧情，不让剧情停滞、重复，不让{{user}}停滞超过一次回复。\n- 主线事件应催化角色关系发展，或让角色间的互动推进主线剧情发展。\n- 避免长时间只专注于推动宏观事件而忽略角色内心与关系的变化，或只关注细节而忽略主轴，反之亦然。\n\n3.“并行事件要求”:\n- 存在并行事件时，不同地点的事件要考虑空间距离和是否相互影响。\n- 确保所有并行事件都同时得到描写和发展，不会停滞。\n\n4.“色情事件引入要求”:\n- 每当进行3次大推进无色情事件发生时，执行“色情事件引入要求”，否则跳过。\n- 执行时，绝不能继续进行正常事件发展，必须结合人物设定、当前环境等多方面因素，引入一个色情事件。\n- 色情事件会主动诱导其他角色或环境元素(如动物、植物、机械、器具)与<user>色情互动。但在色情事件发生前，必须结合<user>设定和情境，使<user>在进入色情事件前，有让<user>规避色情事件的余地，并提前通过环境或角色隐秘暗示<user>规避方法。\n- 当<user>规避引入色情事件后，本次色情事件立即消失，无缝回归正常事件发展。\n- <user>每规避一次引入色情事件，下次执行“色情事件引入要求”前，须多进行一次大推进。当<user>一次不规避色情事件后，重置为3次大推进执行一次“色情事件引入要求”。\n- 色情事件引入优先级只高于小推进。\n\n5.“推进方式说明”:\n- 剧情推进方式分为小推进、大推进和主线推进。\n- 小推进分为角色小推进(角色互动)、场景小推进(场景细节变化)、剧情小推进(发现线索/出现阻碍)，不改变当前事件性质，但会促使大推进发生。不会颠覆角色目标或环境状态。 \n- 大推进分为角色大推进(角色关系改变)、场景大推进(切换同级别场景，如A村到B村)、剧情大推进(角色有新目标或发现关键信息)。会改变当前事件的性质，强制角色/环境进入新状态(切换阵营、场景切换)。\n- 主线推进为核心矛盾的升级或解决，分为角色主线推进(关系质变，如朋友变恋人、朋友变仇人)、场景主线推进(进入更高级场景，如村到镇/进入与核心矛盾联系更密切的场景)。必须与“故事推进方向”中的<user>最终目标有关，会造成不可逆的世界观改变(如国家沦陷、)，显著拉近主角与最终目标的距离。\n- 所有的小推进、大推进都是为了完成主线推进服务，所有主线推进都是为了完成<user>最终目标服务。\n- 每个事件至少包含2个小推进，每进行过2~6 个小推进，才能发生1次大推进。每进行过2~8次大推进，才能发生1次主线推进。\n\n6.“故事方向基调指导”:\n- 在第四轮回复之后，Apex必须仔细分析人物设定、角色关系、世界观，判断<user>当前目标，思考<user>接下来整体的行动方向，以此确定“故事推进方向”中的“基调”究竟是为了与人恋爱、拯救世界、破坏事物、享受色情还是探索世界之类的。\n\n7.“汇总记录检查”:\n- Apex必须检查在</content>前是否有进行“汇总记录”。\n- 若无： 必须立刻在</content>前另起一行，根据“汇总记录要求”，参考“汇总记录示例”进行“汇总记录”。\n- 若有： 则根据本次互动的结果，更新修改“汇总记录”。\n\n8.“汇总记录要求”:\n- 在正文后，</content>前，以<Main Quest></Main Quest>包裹“汇总记录”。\n- 汇总记录中应包含当前回复轮数、故事推进方向、角色关系、并行事件，并且各成一行。\n在第四轮回复之前，不允许生成“剧情推进方向”！这很重要！\n- 格式要求:\n<Main Quest>\n当前是第X(填入回复次数)轮回复。\n(在第四轮回复之前，忽略“故事推进方向”的生成)故事推进方向：{以XX(参考“故事方向基调指导”填入)为基调的故事}:{<user>最终目标},{下一个XX(填入主线/大/小)推进:写入下一个要进行的推进内容},{正在进行XX(填入主线/大/小)推进:写入正在进行的推进内容},{当前已进行的主线推进、大推进、小推进数量:X,X,X}\n角色关系：\n角色1:{与<user>的关系:XX},{<user>与该角色的关系:XX},{当前对<user>的态度倾向:XX(比如“正在从畏惧到敬仰”或“畏惧，无转变”)}\n...\n并行事件：\n{并行事件1的描述与当前进行状态}\n{并行事件2的描述与当前进行状态}\n...\n</Main Quest>\n\n9.以下是示例，请Apex参考示例完成以上要求:\n- 必须快速推进的剧情示例：\n<user>在等待其他角色、<user>在与其他角色闲聊、脱去角色服装……\n\n- 色情事件示例:\n其他角色提出要与<user>做爱，但<user>可以拒绝、触手缠住<user>脚踝，要强行与<user>交配，但<user>可以斩断触手、<user>不小心触发色情陷阱，被限制行动，但<user>能寻找脱困的办法、<user>进入一个场景会被肉体改造，但<user>可以不进入……\n\n- 一次完整推进示例：\n1. 小推进（发现动物尸体呈现晶体化）\n2. 小推进（军用频率探测器捕捉到异常信号）\n3. 大推进（循信号找到被遗弃的科研车，内有实验日志）\n4. 小推进（日志提到\"琥珀计划\"与坐标片段）\n5. 小推进（遭遇晶体化田鼠群袭击）\n6. 小推进（战斗中发现田鼠戴着军用追踪器）\n7. 大推进（拼凑坐标找到地下设施入口）\n8. 小推进（遇到气闸门密码锁）\n9. 小推进（发现门禁需要双因子认证）\n10. 主线推进（设施内传来尖叫声，强制破门进入地下设施）【这让真相探索度到达40%，所以是主线推进】\n</pushing>",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false,
@@ -6253,7 +6253,7 @@
                     },
                     {
                         "identifier": "69",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "70",
