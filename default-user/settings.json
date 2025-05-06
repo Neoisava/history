@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
+        "LNavOpened": "true",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -75,8 +75,6 @@
                     "extraBooks": [
                         "世界书：淫纹效果",
                         "人类本能世界书",
-                        "我们的甜蜜情话",
-                        "渲染库模板",
                         "针对2.5pro的瑟瑟场景"
                     ]
                 }
@@ -2881,8 +2879,8 @@
                 "content": "{继续剧情}",
                 "LAST_RECEIVE_TOKENS": 36183,
                 "LAST_RECEIVE_CHARS": 99595,
-                "LAST_SEND_TOKENS": 110869,
-                "LAST_SEND_CHARS": 174657
+                "LAST_SEND_TOKENS": 110850,
+                "LAST_SEND_CHARS": 174561
             }
         },
         "attachments": [],
@@ -3402,7 +3400,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 35,
+                "lastProcessedLength": 34,
                 "userConfigured": true
             }
         },
