@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -3964,25 +3964,6 @@
                 "substituteRegex": 1,
                 "minDepth": 999,
                 "maxDepth": null
-            },
-            {
-                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2,
-                    6
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": false,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -4196,10 +4177,10 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 35110,
-                "LAST_RECEIVE_CHARS": 98220,
-                "LAST_SEND_TOKENS": 102029,
-                "LAST_SEND_CHARS": 166545
+                "LAST_RECEIVE_TOKENS": 35366,
+                "LAST_RECEIVE_CHARS": 98424,
+                "LAST_SEND_TOKENS": 113587,
+                "LAST_SEND_CHARS": 184142
             }
         },
         "attachments": [],
@@ -4719,7 +4700,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 30,
+                "lastProcessedLength": 31,
                 "userConfigured": true
             }
         },
