@@ -27,7 +27,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林子安",
-    "active_character": "林若秋.png",
+    "active_character": null,
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -6871,7 +6871,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 455,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
@@ -8196,7 +8196,7 @@
                     },
                     {
                         "identifier": "90",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "91",
@@ -8204,7 +8204,7 @@
                     },
                     {
                         "identifier": "9",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "10",
@@ -8356,7 +8356,7 @@
                     },
                     {
                         "identifier": "47",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "48",
