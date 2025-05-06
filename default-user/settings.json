@@ -13,7 +13,7 @@
         "Assets_SkipConfirm_2502775700152061": "false",
         "AlertWI_八荒仙界v1.0.png": "true",
         "AlertRegex_八荒仙界v1.0.png": "true",
-        "LNavLockOn": "false",
+        "LNavLockOn": "true",
         "AlertWI_地图导航模块3.0.png": "true",
         "AlertWI_冷忧蝉.png": "true",
         "AlertWI_玄黄修真界v2.0.png": "true",
@@ -6399,10 +6399,10 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 8,
-                "LAST_RECEIVE_CHARS": 9,
-                "LAST_SEND_TOKENS": 42665,
-                "LAST_SEND_CHARS": 77713
+                "LAST_RECEIVE_TOKENS": 5281,
+                "LAST_RECEIVE_CHARS": 7409,
+                "LAST_SEND_TOKENS": 42669,
+                "LAST_SEND_CHARS": 77791
             }
         },
         "attachments": [],
@@ -6922,7 +6922,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 14,
+                "lastProcessedLength": 15,
                 "userConfigured": true
             }
         },
@@ -7509,7 +7509,7 @@
                 "identifier": "47",
                 "name": "☑️字数+语言+格式规定(必看！！！)",
                 "role": "system",
-                "content": "{{setvar::Word_count::Minimum 800}}{{setvar::Word_language::简体中文}}\n{{//\n修改3200→`别的数字`可以调整最大字数限制\n修改Maximum→Minimum可变成最小字数要求\n可修改“简体中文”为其他语言\n}}\n\n**Craft a dramatic masterpiece of content with {{getvar::Word_count}} words in {{getvar::Word_language}} within <theatre> tags**\n\n{{//\n注释：\n- 部分角色卡有生成格式，要么把\"<theatre>\"改成角色卡需要的格式\n要么把“within <theatre> tags”删掉，这样正文就会用前段卡要求的格式包裹\n}}\n",
+                "content": "{{setvar::Word_count::Minimum 800}}{{setvar::Word_language::简体中文}}\n{{//\n修改2400→`别的数字`可以调整最大字数限制\n修改Maximum→Minimum可变成最小字数要求\n可修改“简体中文”为其他语言\n}}\n\n**Craft a dramatic masterpiece of content with {{getvar::Word_count}} words in {{getvar::Word_language}} within <theatre> tags**\n\n{{//\n注释：\n- 部分角色卡有生成格式，要么把\"<theatre>\"改成角色卡需要的格式\n要么把“within <theatre> tags”删掉，这样正文就会用前段卡要求的格式包裹\n}}\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false,
@@ -8515,7 +8515,7 @@
                     },
                     {
                         "identifier": "78",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "79",
