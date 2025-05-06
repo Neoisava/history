@@ -88,8 +88,8 @@
                 }
             ]
         },
-        "world_info_depth": 100,
-        "world_info_min_activations": 30,
+        "world_info_depth": 2,
+        "world_info_min_activations": 0,
         "world_info_min_activations_depth_max": 0,
         "world_info_budget": 100,
         "world_info_include_names": true,
@@ -6363,8 +6363,8 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 30010,
-                "LAST_RECEIVE_CHARS": 91014,
+                "LAST_RECEIVE_TOKENS": 30051,
+                "LAST_RECEIVE_CHARS": 90900,
                 "LAST_SEND_TOKENS": 44672,
                 "LAST_SEND_CHARS": 80332
             }
