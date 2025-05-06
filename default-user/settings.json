@@ -73,6 +73,7 @@
                 {
                     "name": "修仙之路2.0",
                     "extraBooks": [
+                        "SSVGG 1.9.4",
                         "世界书：淫纹效果",
                         "性经验调整世界书",
                         "我们的甜蜜情话",
@@ -3963,6 +3964,25 @@
                 "substituteRegex": 1,
                 "minDepth": 999,
                 "maxDepth": null
+            },
+            {
+                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2,
+                    6
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -4176,10 +4196,10 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 7,
-                "LAST_RECEIVE_CHARS": 6,
-                "LAST_SEND_TOKENS": 88901,
-                "LAST_SEND_CHARS": 144736
+                "LAST_RECEIVE_TOKENS": 35203,
+                "LAST_RECEIVE_CHARS": 98290,
+                "LAST_SEND_TOKENS": 86513,
+                "LAST_SEND_CHARS": 141190
             }
         },
         "attachments": [],
