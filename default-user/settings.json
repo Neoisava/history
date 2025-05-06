@@ -2599,7 +2599,7 @@
             {
                 "id": "70afed1d-fd6c-417d-a159-28f9b4b670d4",
                 "scriptName": "状态插件-通用正则（纯替换）",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": false,
                 "findRegex": "{{getvar::状态插件-通用正则匹配}}",
                 "replaceString": "{{getvar::状态插件-通用正则替换}}",
