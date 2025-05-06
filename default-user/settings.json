@@ -2205,7 +2205,7 @@
             {
                 "id": "5eb6f1e9-59e1-43cb-9786-4c9664f7b2d8",
                 "scriptName": "（斯拉）仅保留总结2",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/[\\s\\S]*?<This_round_events>([\\s\\S]*?)<\\/This_round_events>([\\s\\S]*)/gm",
                 "replaceString": "<!--\n<This_round_events>$1</This_round_events>\n-->",
@@ -2843,10 +2843,10 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 122,
-                "LAST_RECEIVE_CHARS": 106,
-                "LAST_SEND_TOKENS": 97415,
-                "LAST_SEND_CHARS": 106706
+                "LAST_RECEIVE_TOKENS": 40,
+                "LAST_RECEIVE_CHARS": 296,
+                "LAST_SEND_TOKENS": 125163,
+                "LAST_SEND_CHARS": 195200
             }
         },
         "attachments": [],
@@ -3370,7 +3370,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 40,
+                "lastProcessedLength": 1,
                 "userConfigured": true
             }
         },
