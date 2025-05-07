@@ -15,9 +15,7 @@
         "AlertWI_冷忧蝉.png": "true",
         "WINavLockOn": "false",
         "AlertRegex_林若秋.png": "true",
-        "WI_PerPage": "100",
-        "AlertRegex_修仙之路2.0.png": "true",
-        "AlertWI_修仙之路2.0.png": "true"
+        "WI_PerPage": "100"
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
@@ -3603,8 +3601,7 @@
         "character_allowed_regex": [
             "冷忧蝉.png",
             "林若秋.png",
-            "凡人修仙传·凤起灵绝·大罗真魂都市修仙灵气复苏（地图互动RPG带系统版）.png",
-            "修仙之路2.0.png"
+            "凡人修仙传·凤起灵绝·大罗真魂都市修仙灵气复苏（地图互动RPG带系统版）.png"
         ],
         "tts": {
             "voiceMap": "",
@@ -4381,8 +4378,7 @@
         "undefined": [],
         "null": [],
         "冷忧蝉.png": [],
-        "林若秋.png": [],
-        "修仙之路2.0.png": []
+        "林若秋.png": []
     },
     "nai_settings": {
         "temperature": 1.5,
