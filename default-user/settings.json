@@ -616,7 +616,7 @@
             "isAiReadTable": true,
             "isAiWriteTable": true,
             "isTableToChat": false,
-            "use_main_api": true,
+            "use_main_api": false,
             "bool_ignore_del": false,
             "confirm_before_execution": true,
             "custom_max_tokens": 4096,
