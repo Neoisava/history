@@ -21,7 +21,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": "修仙之路2.0.png",
+    "active_character": null,
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2203,7 +2203,7 @@
             {
                 "id": "5eb6f1e9-59e1-43cb-9786-4c9664f7b2d8",
                 "scriptName": "（斯拉）仅保留总结2",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/[\\s\\S]*?<This_round_events>([\\s\\S]*?)<\\/This_round_events>([\\s\\S]*)/gm",
                 "replaceString": "<!--\n<This_round_events>$1</This_round_events>\n-->",
@@ -2220,7 +2220,7 @@
             {
                 "id": "d29a7d8d-8ef6-4cfe-b990-fac6a42ca4a5",
                 "scriptName": "con",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": false,
                 "findRegex": "/<content>[\\s\\S]*?</content>/gm",
                 "replaceString": "",
@@ -2237,7 +2237,7 @@
             {
                 "id": "c711d11f-7d08-4fb3-84a3-496ab7dbed0c",
                 "scriptName": "（斯拉）删除think",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<think>[\\s\\S]*</think>/gm",
                 "replaceString": "",
@@ -2254,7 +2254,7 @@
             {
                 "id": "929086f7-c1a3-4b79-bb35-64226ee7ee86",
                 "scriptName": "删除cot",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<thinking>[\\s\\S]*?</thinking>/gm",
                 "replaceString": "",
@@ -3367,7 +3367,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 49,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
