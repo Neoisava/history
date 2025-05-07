@@ -2594,6 +2594,57 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": false
+            },
+            {
+                "id": "af782fbe-d9bd-4783-b469-2c44ae97e629",
+                "scriptName": "【Lyean】[不发送]5楼以上除摘要外文本",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/([\\s\\S]*?<details><summary>摘要</summary>|</details>[\\s\\S]*?$)/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 5,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "5cf281b3-14b8-426a-8b95-94fd92106093",
+                "scriptName": "【Lyean】[不发送]5楼以下摘要文本",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/<details><summary>摘要</summary>([\\s\\S]*?)</details>/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": 5,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "63ad249a-7a41-4c68-a194-77c60bb02f6a",
+                "scriptName": "【Lyean】[不发送]以前的用户输入",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "^([\\s\\S]*)$",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "substituteRegex": 0,
+                "minDepth": 1,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
             }
         ],
         "character_allowed_regex": [
