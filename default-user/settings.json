@@ -31,7 +31,9 @@
     "main_api": "openai",
     "world_info_settings": {
         "world_info": {
-            "globalSelect": [],
+            "globalSelect": [
+                "mod工具包"
+            ],
             "charLore": [
                 {
                     "name": "冷忧蝉",
