@@ -2136,7 +2136,7 @@
                     "mode": "cc",
                     "exclude": [],
                     "api": "custom",
-                    "preset": "斯拉预设 3.0752 Claude3.7",
+                    "preset": "Lyean3.18.1_Nyarlathotep",
                     "api-url": "https://sllt.uk/v1",
                     "model": "claude-3.7-sonnet",
                     "proxy": "None",
@@ -2844,8 +2844,8 @@
                 "content": "{继续剧情}",
                 "LAST_RECEIVE_TOKENS": 7706,
                 "LAST_RECEIVE_CHARS": 10298,
-                "LAST_SEND_TOKENS": 291795,
-                "LAST_SEND_CHARS": 291286
+                "LAST_SEND_TOKENS": 4,
+                "LAST_SEND_CHARS": 2
             }
         },
         "attachments": [],
