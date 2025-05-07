@@ -2682,6 +2682,23 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": true
+            },
+            {
+                "id": "707e8bab-7e48-4ae8-8a56-49c31eee8d72",
+                "scriptName": "【Nya】thinking",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/<disclaimer>([\\s\\S]*?)</disclaimer>|([\\s\\S]*?)</metacognition>|([\\s\\S]*?)<game>|([\\s\\S]*?)<thinking>|([\\s\\S]*?)<theatre>|([\\s\\S]*?)<game_content>|<thinking>([\\s\\S]*?)</thinking>|\\[\\s*reasoning\\s*[：:]\\s*([\\s\\S]*?\\s*\\][^\\S\\r\\n]*)|(<!--\\s*reasoning[：:]\\s*(.*?)\\s*-->(?=[\\s\\S]|$))/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
             }
         ],
         "character_allowed_regex": [
