@@ -2993,7 +2993,8 @@
                 "bookQuotes3": false,
                 "newline": true,
                 "user": true,
-                "char": true
+                "char": true,
+                "custom_0": true
             },
             "shortcuts": {
                 "asterisk": "",
@@ -3004,7 +3005,8 @@
                 "bookQuotes3": "",
                 "newline": "",
                 "user": "Alt+1",
-                "char": "Alt+2"
+                "char": "Alt+2",
+                "custom_0": ""
             },
             "buttonOrder": [
                 "bookQuotes1",
@@ -3015,9 +3017,17 @@
                 "bookQuotes3",
                 "user",
                 "char",
-                "newline"
+                "newline",
+                "custom_0"
             ],
-            "customSymbols": []
+            "customSymbols": [
+                {
+                    "name": "角色扮演模式",
+                    "symbol": "◎role",
+                    "display": "◎role",
+                    "cursorPos": "middle"
+                }
+            ]
         },
         "hide_4": {
             "enabled": true,
