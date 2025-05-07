@@ -2302,58 +2302,6 @@
                 "maxDepth": 1,
                 "markdownOnly": true,
                 "promptOnly": true
-            },
-            {
-                "id": "362b8f1c-ba1c-44d8-ad44-fabc72be0686",
-                "scriptName": "【Lyean】用户输入添加tag",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "^([\\s\\S]*)$",
-                "replaceString": "<inputs>\n$1\n</inputs>",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": 1,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "84b14e5b-10d8-436d-8545-d356900e6e0f",
-                "scriptName": "隐藏表格思维链",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<tableThink_cot\\b[^>]*>[\\s\\S]*?<\\/tableThink_cot>/s",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "disabled": false,
-                "runOnEdit": false,
-                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
             }
         ],
         "character_allowed_regex": [
