@@ -21,7 +21,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": null,
+    "active_character": "修仙之路2.0.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2135,9 +2135,9 @@
                     "mode": "cc",
                     "exclude": [],
                     "api": "custom",
-                    "preset": "GEMI标准版-base",
+                    "preset": "GEMI预设-启明：超验扮演系统",
                     "api-url": "https://api.skyi.cc/v1",
-                    "model": "gemini-2.5-pro-exp-03-25",
+                    "model": "gemini-1.5-flash",
                     "proxy": "None",
                     "stop-strings": "[]",
                     "start-reply-with": "",
@@ -2149,9 +2149,26 @@
         "dice": {},
         "regex": [
             {
+                "id": "77d09953-c7e5-4ffa-8ac0-65e7a0f35bda",
+                "scriptName": "【戏剧之王】去除10楼以下摘要文本",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<details>\\s*<summary>\\s*摘要\\s*<\\/summary>[\\s\\S]*?<\\/details>/gsi",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": 10,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
                 "id": "532d91d7-0100-4022-a1a7-16eea6243215",
                 "scriptName": "【戏剧之王】去思维链、disclaimer多余内容",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/(<disclaimer>.*?<\\/disclaimer>)|((.*)(?=<theatre>(?![\\s\\S]*<theatre>)))|((?:<\\s*!?\\s*-\\s*-|<\\s*-\\s*-)[\\s\\S]*?-\\s*-\\s*>(\\n)?)|(.*?<\\/think(?:ing)?>(\\n)?)|(<think(?:ing)?>[\\s\\S]*<\\/think(?:ing)?>(\\n)?)/gs",
                 "replaceString": "",
@@ -2168,7 +2185,7 @@
             {
                 "id": "b373ec02-c136-4a4e-b7e6-fd43e2248a1c",
                 "scriptName": "【戏剧之王】置空用户输入（去除10楼以上user的输入）",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "[\\s\\S]*",
                 "replaceString": "",
@@ -2185,7 +2202,7 @@
             {
                 "id": "90691121-f38c-43b7-9cff-aa9487f826f4",
                 "scriptName": "【戏剧之王】user消息加<Last_inputs>",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "^([\\s\\S]*)$",
                 "replaceString": "<Last_inputs>\n$1\n</Last_inputs>",
@@ -2202,7 +2219,7 @@
             {
                 "id": "f666561d-9a98-495c-9f2d-1c2eaf3d11e8",
                 "scriptName": "【戏剧之王】user去除</Main_Quest>",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<Main_Quest>[\\s\\S]*?<\\/Main_Quest>/gm",
                 "replaceString": "",
@@ -2219,7 +2236,7 @@
             {
                 "id": "0d40b7d2-db2b-4f17-b547-8cf37efb28f9",
                 "scriptName": "【戏剧之王】ai去除非最新楼层的</Main_Quest>",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<Main_Quest>[\\s\\S]*?<\\/Main_Quest>/gm",
                 "replaceString": "",
@@ -2234,26 +2251,9 @@
                 "promptOnly": true
             },
             {
-                "id": "77d09953-c7e5-4ffa-8ac0-65e7a0f35bda",
-                "scriptName": "【戏剧之王】去除10楼以下摘要文本",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<details>\\s*<summary>\\s*摘要\\s*<\\/summary>[\\s\\S]*?<\\/details>/gsi",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": 10,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
                 "id": "670ff826-c2df-4fd0-9412-95c43aa35a15",
                 "scriptName": "【戏剧之王】去除10楼之上的除摘要部分",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/([\\s\\S]*?<details>\\s*<summary>\\s*摘要\\s*<\\/summary>|<\\/details>[\\s\\S]*?$)/gs",
                 "replaceString": "",
