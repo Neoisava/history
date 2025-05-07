@@ -2496,23 +2496,6 @@
                 "promptOnly": true
             },
             {
-                "id": "f6e1eba2-4e8e-4e9f-8a7d-8d36b0856636",
-                "scriptName": "状态插件-通用正则（第1组）",
-                "disabled": true,
-                "runOnEdit": false,
-                "findRegex": "{{getvar::状态插件-通用正则匹配}}",
-                "replaceString": "$1",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 999,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
                 "id": "af782fbe-d9bd-4783-b469-2c44ae97e629",
                 "scriptName": "【Lyean】[不发送]5楼以上除摘要外文本",
                 "disabled": true,
