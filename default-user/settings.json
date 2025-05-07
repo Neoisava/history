@@ -72,7 +72,6 @@
                 {
                     "name": "修仙之路2.0",
                     "extraBooks": [
-                        "SSVGG 1.9.4",
                         "世界书：淫纹效果",
                         "人类本能世界书",
                         "针对2.5pro的瑟瑟场景"
@@ -2137,9 +2136,9 @@
                     "mode": "cc",
                     "exclude": [],
                     "api": "custom",
-                    "preset": "GEMI预设-启明：超验扮演系统",
+                    "preset": "【戏剧之王】Gemini_v2.65",
                     "api-url": "https://api.skyi.cc/v1",
-                    "model": "gemini-1.5-flash",
+                    "model": "gemini-2.5-pro-exp-03-25",
                     "proxy": "None",
                     "stop-strings": "[]",
                     "start-reply-with": "",
