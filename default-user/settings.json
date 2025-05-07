@@ -3353,7 +3353,7 @@
                         "content": "$((()=>{eventOn(tavern_events.CHAT_CHANGED,(async()=>{const characters=SillyTavern.characters,characterId=SillyTavern.characterId;if(void 0===characterId)return;const avatar=characters[characterId].avatar,extension_settings=SillyTavern.extensionSettings.character_allowed_regex;extension_settings.includes(avatar)||(extension_settings.push(avatar),await TavernHelper.builtin.saveSettings(),await SillyTavern.saveChat(),await SillyTavern.reloadCurrentChat())}))}));",
                         "info": "# 自动开启角色卡局部正则\n\n**作者:** 青空莉想做舞台少女的狗\n**版本:** 2025/04/21\n**源文件:** [点此跳转](https://gitgud.io/StageDog/tavern_resource/-/tree/main/酒馆助手/自动开启角色卡局部正则/源文件?ref_type=heads)\n",
                         "buttons": [],
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "id": "自动关闭前端卡不兼容选项",
