@@ -1,6 +1,6 @@
 {
-    "chat_completion_source": "openai",
-    "openai_model": "claude-3-7-sonnet-20250219",
+    "chat_completion_source": "custom",
+    "openai_model": "",
     "claude_model": "claude-3-5-sonnet-20240620",
     "windowai_model": "",
     "openrouter_model": "OR_Website",
@@ -16,8 +16,11 @@
     "perplexity_model": "llama-3-70b-instruct",
     "groq_model": "llama3-70b-8192",
     "zerooneai_model": "yi-large",
-    "blockentropy_model": "be-70b-base-llama3.1",
-    "custom_model": "claude-3-7-sonnet-20250219",
+    "custom_model": "claude-3.7-sonnet",
+    "custom_url": "https://sllt.uk/v1",
+    "custom_include_body": "",
+    "custom_exclude_body": "",
+    "custom_include_headers": "",
     "custom_prompt_post_processing": "strict",
     "google_model": "gemini-2.0-pro-exp",
     "temperature": 1,
@@ -33,19 +36,20 @@
     "wrap_in_quotes": false,
     "names_behavior": -1,
     "send_if_empty": "",
-    "jailbreak_system": false,
     "impersonation_prompt": "[Write your next reply from the point of view of {{user}}, using the preceding context so far as references.]",
     "new_chat_prompt": "",
     "new_group_chat_prompt": "[Start a new group chat. Group members: {{group}}]",
     "new_example_chat_prompt": "[Chat Example Start Point]",
     "continue_nudge_prompt": "[Continue the story. Do not include ANY parts of the original message. Use capitalization and punctuation as if your reply is a part of the original message: {{lastChatMessage}}]",
     "bias_preset_selected": "Default (none)",
+    "reverse_proxy": "",
+    "proxy_password": "",
     "max_context_unlocked": true,
     "wi_format": "{0}\n",
     "scenario_format": "[Circumstances of the novel: {{scenario}}]",
     "personality_format": "[{{char}}'s personality: {{personality}}]",
     "group_nudge_prompt": "[Write the next reply only as {{char}}.]",
-    "stream_openai": true,
+    "stream_openai": false,
     "prompts": [
         {
             "name": "Main Prompt",
@@ -998,15 +1002,15 @@
                 },
                 {
                     "identifier": "48765a77-af27-48e3-bfc9-5ec07eb8fc38",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "4d195a81-cc73-4b36-b03c-2a50168a4102",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "f8c575ba-5601-4d15-be46-f0cb59f30c94",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "5d2016c1-78c7-459e-a23b-089d5f558e23",
@@ -1018,7 +1022,7 @@
                 },
                 {
                     "identifier": "35f5a401-4d3e-4421-867a-cac3f61da808",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "aacd97d1-9c57-4cda-b878-1b494e72be0d",
@@ -1034,7 +1038,7 @@
                 },
                 {
                     "identifier": "ed2e0455-7b01-4d2a-a15c-3b82b3f796a4",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "9b55ad04-51ed-4eab-abb2-1e3932496826",
@@ -1050,7 +1054,7 @@
                 },
                 {
                     "identifier": "73ff12ce-6c3a-4168-bfb2-c89f256e51a9",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "7790c3a2-a03d-4d7e-86ab-b3e859dff3b9",
@@ -1074,7 +1078,7 @@
                 },
                 {
                     "identifier": "32ec4ef1-9c19-49c9-b26b-36b87704a2c7",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "8fbc5ef3-743a-4127-8b0a-0eb835c64105",
@@ -1098,7 +1102,7 @@
                 },
                 {
                     "identifier": "883b8c98-441e-4043-8810-a2aaab148ad4",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "64650c2b-1acb-4720-8f32-6359d316b642",
@@ -1106,7 +1110,7 @@
                 },
                 {
                     "identifier": "a00e3e70-5876-4cba-a4d1-e0aa1c733f1a",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "bdd4e34f-b446-4387-8587-c542d2e73f19",
@@ -1122,15 +1126,15 @@
                 },
                 {
                     "identifier": "2e71bdba-a69d-41f5-980d-3774fd5123f3",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "98da4184-ec66-429a-9a29-e5202eb098dd",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "4be2fa0c-1a0c-449c-b5e9-363cfffffe03",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "3b443f0a-31cd-489a-ac1b-702929c536d4",
@@ -1138,7 +1142,7 @@
                 },
                 {
                     "identifier": "b3b924d0-beca-4d61-96b5-1df2734fe56c",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "630cadb6-e7c6-4979-8c1f-2ab44e3fa227",
@@ -1199,6 +1203,8 @@
     "function_calling": false,
     "show_thoughts": false,
     "reasoning_effort": "low",
+    "enable_web_search": false,
+    "request_images": false,
     "seed": -1,
     "n": 1
 }
