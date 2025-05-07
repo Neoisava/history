@@ -2669,7 +2669,7 @@
             {
                 "id": "84b14e5b-10d8-436d-8545-d356900e6e0f",
                 "scriptName": "隐藏表格思维链",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<tableThink_cot\\b[^>]*>[\\s\\S]*?<\\/tableThink_cot>/s",
                 "replaceString": "",
@@ -2681,24 +2681,6 @@
                 "minDepth": null,
                 "maxDepth": null,
                 "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "disabled": false,
-                "runOnEdit": false,
-                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": false,
                 "promptOnly": true
             },
             {
@@ -3524,7 +3506,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 8,
+                "lastProcessedLength": 0,
                 "userConfigured": true
             }
         },
