@@ -49,7 +49,7 @@
     "scenario_format": "[Circumstances: {{scenario}}]",
     "personality_format": "[{{char}}'s personality: {{personality}}]",
     "group_nudge_prompt": "[Write the next reply only as {{char}}.]",
-    "stream_openai": true,
+    "stream_openai": false,
     "prompts": [
         {
             "identifier": "1",
@@ -143,7 +143,7 @@
             "identifier": "9",
             "name": "✅正常启动（推荐）",
             "role": "assistant",
-            "content": "Now, I am ready. Please give me the info needed.",
+            "content": "Now, I am ready. Please give me the info needed..",
             "injection_position": 0,
             "injection_depth": 4,
             "forbid_overrides": false,
@@ -1455,7 +1455,7 @@
                 },
                 {
                     "identifier": "60",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "61",
