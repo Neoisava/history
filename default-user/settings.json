@@ -2151,23 +2151,6 @@
         "dice": {},
         "regex": [
             {
-                "id": "3102182e-0997-4f97-bafc-ecdc18e2e41a",
-                "scriptName": "隐藏表格思维链",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<tableThink_cot\\b[^>]*>[\\s\\S]*?<\\/tableThink_cot>/s",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
                 "id": "5b1a5c51-910a-4b5a-956a-390d4f9caca6",
                 "scriptName": "部位特写",
                 "disabled": true,
@@ -2893,8 +2876,8 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 30931,
-                "LAST_RECEIVE_CHARS": 92006,
+                "LAST_RECEIVE_TOKENS": 30246,
+                "LAST_RECEIVE_CHARS": 91112,
                 "LAST_SEND_TOKENS": 45072,
                 "LAST_SEND_CHARS": 79439
             }
