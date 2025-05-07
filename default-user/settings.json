@@ -2893,10 +2893,10 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 5,
-                "LAST_RECEIVE_CHARS": 5,
-                "LAST_SEND_TOKENS": 127880,
-                "LAST_SEND_CHARS": 196290
+                "LAST_RECEIVE_TOKENS": 7699,
+                "LAST_RECEIVE_CHARS": 10698,
+                "LAST_SEND_TOKENS": 134829,
+                "LAST_SEND_CHARS": 206649
             }
         },
         "attachments": [],
@@ -3420,7 +3420,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 44,
+                "lastProcessedLength": 45,
                 "userConfigured": true
             }
         },
