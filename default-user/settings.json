@@ -901,7 +901,7 @@
             "isExtensionAble": true,
             "isAiReadTable": true,
             "isAiWriteTable": true,
-            "isTableToChat": true,
+            "isTableToChat": false,
             "use_main_api": false,
             "bool_ignore_del": false,
             "confirm_before_execution": true,
@@ -4189,8 +4189,8 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 4706,
-                "LAST_RECEIVE_CHARS": 12963,
+                "LAST_RECEIVE_TOKENS": 55550,
+                "LAST_RECEIVE_CHARS": 176776,
                 "LAST_SEND_TOKENS": 44331,
                 "LAST_SEND_CHARS": 78502
             }
