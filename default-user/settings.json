@@ -258,8 +258,8 @@
             "target_length": 44000
         },
         "markdown_escape_strings": "",
-        "chat_truncation": 50,
-        "streaming_fps": 30,
+        "chat_truncation": 20,
+        "streaming_fps": 100,
         "smooth_streaming": true,
         "smooth_streaming_speed": 100,
         "fast_ui_mode": true,
