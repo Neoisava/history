@@ -2844,8 +2844,8 @@
                 "content": "{继续剧情}",
                 "LAST_RECEIVE_TOKENS": 7706,
                 "LAST_RECEIVE_CHARS": 10298,
-                "LAST_SEND_TOKENS": 291891,
-                "LAST_SEND_CHARS": 291934
+                "LAST_SEND_TOKENS": 292396,
+                "LAST_SEND_CHARS": 293589
             }
         },
         "attachments": [],
@@ -5551,7 +5551,7 @@
                 "order": [
                     {
                         "identifier": "95a4038c-1378-4b44-ab45-504fa24f8e64",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "d919c136-9a69-4beb-bbbc-910967e2c94d",
@@ -5559,7 +5559,7 @@
                     },
                     {
                         "identifier": "6d6e266c-e612-49a6-9ccc-78107c439a42",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "ce3c483c-3357-45de-a472-3312ca2438b0",
