@@ -15,7 +15,9 @@
         "AlertWI_冷忧蝉.png": "true",
         "WINavLockOn": "false",
         "AlertRegex_林若秋.png": "true",
-        "WI_PerPage": "100"
+        "WI_PerPage": "100",
+        "AlertRegex_修仙之路2.0.png": "true",
+        "AlertWI_修仙之路2.0.png": "true"
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
@@ -71,7 +73,6 @@
                     "name": "修仙之路2.0",
                     "extraBooks": [
                         "世界书：淫纹效果",
-                        "人类本能世界书",
                         "针对2.5pro的瑟瑟场景"
                     ]
                 }
@@ -3601,7 +3602,8 @@
         "character_allowed_regex": [
             "冷忧蝉.png",
             "林若秋.png",
-            "凡人修仙传·凤起灵绝·大罗真魂都市修仙灵气复苏（地图互动RPG带系统版）.png"
+            "凡人修仙传·凤起灵绝·大罗真魂都市修仙灵气复苏（地图互动RPG带系统版）.png",
+            "修仙之路2.0.png"
         ],
         "tts": {
             "voiceMap": "",
@@ -4378,7 +4380,8 @@
         "undefined": [],
         "null": [],
         "冷忧蝉.png": [],
-        "林若秋.png": []
+        "林若秋.png": [],
+        "修仙之路2.0.png": []
     },
     "nai_settings": {
         "temperature": 1.5,
@@ -4547,7 +4550,7 @@
                 "identifier": "9",
                 "name": "✅正常启动（推荐）",
                 "role": "assistant",
-                "content": "Now, I am ready. Please give me the info needed.",
+                "content": "Now, I am ready. Please give me the info needed..",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false,
