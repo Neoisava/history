@@ -2319,6 +2319,23 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": true
+            },
+            {
+                "id": "afb484d5-a798-4236-8eb6-d8caa4737f79",
+                "scriptName": "【Nya】delect\"/\"",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/([^\\/\\s<]+)\\/(?![^<>]*>)([^\\/\\s<]+)/gm",
+                "replaceString": "$1$2",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
             }
         ],
         "character_allowed_regex": [
