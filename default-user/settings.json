@@ -615,7 +615,7 @@
             "isExtensionAble": true,
             "isAiReadTable": true,
             "isAiWriteTable": true,
-            "isTableToChat": false,
+            "isTableToChat": true,
             "use_main_api": false,
             "bool_ignore_del": false,
             "confirm_before_execution": true,
