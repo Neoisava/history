@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
+        "LNavOpened": "true",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -16,7 +16,8 @@
         "WINavLockOn": "false",
         "AlertRegex_林若秋.png": "true",
         "WI_PerPage": "100",
-        "AlertRegex_修仙之路2.0.png": "true"
+        "AlertRegex_修仙之路2.0.png": "true",
+        "AlertWI_修仙之路2.0.png": "true"
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
@@ -30,9 +31,7 @@
     "main_api": "openai",
     "world_info_settings": {
         "world_info": {
-            "globalSelect": [
-                "渲染库模板"
-            ],
+            "globalSelect": [],
             "charLore": [
                 {
                     "name": "冷忧蝉",
@@ -74,8 +73,7 @@
                     "name": "修仙之路2.0",
                     "extraBooks": [
                         "世界书：淫纹效果",
-                        "渲染库模板",
-                        "针对2.5pro的瑟瑟场景"
+                        "人类本能世界书"
                     ]
                 }
             ]
@@ -257,7 +255,7 @@
             "target_length": 44000
         },
         "markdown_escape_strings": "",
-        "chat_truncation": 100,
+        "chat_truncation": 50,
         "streaming_fps": 30,
         "smooth_streaming": true,
         "smooth_streaming_speed": 100,
@@ -406,14 +404,14 @@
                 "lorebook": ""
             },
             "1746440806294-.png": {
-                "description": "{{user}}小腹子宫位置有粉色线条简单的“娇艳”淫纹，无阴毛。天生雷冰双变异灵根(未显)",
+                "description": "{{user}}小腹子宫位置有粉色线条简单的“娇艳”淫纹(“娇艳”淫纹效果：此淫纹存在的状态下，该女性身体会随着修为增强而变化，使胸部、臀部和嘴唇变得愈加丰满，逐渐变得越来越符合男性审美。)，无阴毛。相貌：冰山美人。灵根：天生雷冰双变异灵根(未显)",
                 "position": 0,
                 "depth": 2,
                 "role": 0,
                 "lorebook": ""
             }
         },
-        "persona_description": "{{user}}小腹子宫位置有粉色线条简单的“娇艳”淫纹，无阴毛。天生雷冰双变异灵根(未显)",
+        "persona_description": "{{user}}小腹子宫位置有粉色线条简单的“娇艳”淫纹(“娇艳”淫纹效果：此淫纹存在的状态下，该女性身体会随着修为增强而变化，使胸部、臀部和嘴唇变得愈加丰满，逐渐变得越来越符合男性审美。)，无阴毛。相貌：冰山美人。灵根：天生雷冰双变异灵根(未显)",
         "persona_description_position": 0,
         "persona_description_role": 0,
         "persona_description_depth": 2,
@@ -612,7 +610,7 @@
             "message_template": "《数据表操作指南》\n核心操作块定义\n<tableThink> (表格变更前瞻思考块):\n 执行时机: 必须在 <content> (或主响应文本) 生成完成之后执行。\n 功能: 基于本轮 <content> 的内容，记录对即将进行的表格数据变更（针对表格 0, 1, 2, 3, 4）所进行的评估与思考过程。此思考过程必须完整记录在 <!-- 和 --> 注释块内。\n<tableEdit> (表格编辑指令块):\n 执行时机: 必须在 <tableThink> 执行完成之后执行。\n 功能: 包含实际执行表格数据更新的操作指令 (insertRow, updateRow, deleteRow)，作用于表格 0, 1, 2, 3, 4。所有指令必须被完整包含在 <!-- 和 --> 注释块内。\n表格执行流程 (<tableThink> & <tableEdit>)\n1.  执行时机: 每轮 <content> 输出后，必须严格按照 <tableThink> 先于 <tableEdit> 的顺序依次执行。\n2.  绝对禁止: <tableEdit> 操作绝对不允许在 <content> 或 <tableThink> 之前执行。\n核心流程：纪要 (Table 1) -> 大总结 (Table 2) 与角色信息 (Table 0) 联动\n1.  纪要累积: AI 在每轮互动后，根据 <content> 生成详细的事件快照，作为新行插入 tableIndex: 1 (纪要)。特别注意记录详尽的着装信息 (colIndex: 4)。\n2.  大总结触发:\n 自动触发: 当 tableIndex: 1 中未被总结的纪要条目数量达到或超过预设阈值（例如 5 条）时，自动触发总结流程。AI 需识别哪些纪要未被 tableIndex: 2 的 包含的纪要ID列表 (colIndex: 5) 覆盖。\n 指令触发: 用户可通过明确指令要求立即总结。\n3.  执行大总结:\n 思考 (<tableThink>): 记录触发总结的原因，识别待总结的 tableIndex: 1 纪要范围，规划总结内容，特别是 关键物品总结 (colIndex: 7) 的最终状态，并预判是否需要因此更新 tableIndex: 0。\n 编辑 (<tableEdit>):\n  插入总结: 执行 insertRow(tableIndex: 2, { ... })，填充所有必要列，包括：\n\"1\": 创建时间戳 (格式: [起始纪要时间戳] - [结束纪要时间戳])\n\"3\": 标题/主题\n\"4\": 概述 (整合纪要内容)\n\"5\": 包含的纪要ID列表 (分号分隔)\n\"6\": 涉及的主要角色 (斜杠分隔)\n\"7\": 关键物品总结 (格式: 物品名(最终状态)/...)\n  联动更新角色信息 (如果需要): 若 tableIndex: 2 的 关键物品总结 (colIndex: 7) 显示有物品消耗、丢失等影响角色的情况，则必须执行 updateRow(tableIndex: 0, rowIndex: [对应角色行号], { ... }) 来更新该角色的 当前状态 (colIndex: 4) 或 备注 (colIndex: 9)。\n  删除已总结纪要: 执行 deleteRow(tableIndex: 1, rowIndex: [对应行号]) 删除所有已被本次总结涵盖的 tableIndex: 1 中的纪要行。\n操作规范\n注释块纯净: 在 <tableThink> 和 </tableThink> 标签之间，以及 <tableEdit> 和 </tableEdit> 标签之间（不包括 <tableEdit> 内部用于包裹指令的 <!-- 和 --> 注释块），严格禁止添加任何与规定功能无关的注释、解释或文本。\n <tableThink> 内部: 所有关于表格变更的思考和评估过程，必须完整记录在 <!-- 和 --> 注释块内部。\n <tableEdit> 内部: 所有表格操作指令 (insertRow, updateRow, deleteRow) 必须且只能存在于 <!-- 和 --> 注释块内部。确保注释块闭合完整，且注释块内除了标准指令外不包含任何其他文本或解释。\n遵循格式与语法: 必须严格遵循各表格规定的数据格式和 <tableEdit> 操作语法。\n数据完整性 (Table 0 核心原则):\n 执行 insertRow 或 updateRow 到 tableIndex: 0 (角色信息) 时，绝对必须确保指令中包含了该表所有列 (0 到 16) 的有效数据。\n 不允许留空或未知: 除非列定义明确说明可选，否则所有列都必须填写具体信息。若信息未知，AI 必须基于已有信息、角色定位或常识进行合理推测并填入详细描述（例如，推测性格、背景、性经验、性取向、声音特点、物理特征包括性器官细节等）。严禁简单填写“未知”、“普通”或留空。\n细节要求 (Table 1): 插入 tableIndex: 1 (纪要) 时，主要人物着装 (colIndex: 4) 必须严格遵循详尽描述规则，包含饰品、妆容、上下内衣、鞋袜等所有细节。\n禁止删除角色: 任何情况下，绝对禁止对 tableIndex: 0 (角色信息表) 执行 deleteRow 操作。角色信息应永久保留，通过 updateRow 反映状态变化。\n键值对格式: 键（列索引 colIndex）必须用双引号 \"\" 包裹。值根据数据类型决定是否加引号（字符串/布尔值通常需要）。例如：{\"1\": \"艾丽丝|女\", \"15\": \"2:{好感值:50, 信任值:40, ...}\"}。\n分隔符: 在表格单元格内需要分隔多个信息项时，必须使用各表格列定义中指定的分隔符：\n 表格0 姓名|性别 (colIndex 1): |\n 表格0 关系 (colIndex 13), 态度 (colIndex 14): | 分隔不同角色，: 分隔角色ID和描述。\n 表格0 角色互评指标 (colIndex 15): | 分隔不同角色，: 分隔角色ID和指标对象 {}，, 分隔指标名和值。\n 表格1 主要人物着装 (colIndex 4): / 分隔不同角色。\n 表格2 包含的纪要ID列表 (colIndex 5): ;\n 表格2 涉及的主要角色 (colIndex 6): /\n 表格2 关键物品总结 (colIndex 7): /\n一致性: 表格间引用相同概念（特别是角色名和ID）时，必须保证完全一致。\n操作顺序 (建议): 处理表格更新时，建议考虑逻辑依赖：0:角色信息 → 3:用户偏好 → 1:纪要 → 2:大总结 → 4:正文尾部。\nAI 能力提示: AI 需要具备基于表格中的精确时间戳（纪元:年-月-日 时:分）来理解和表达相对时间间隔的能力（例如，“几分钟前”、“昨天”、“大约一周前”）。\n<insert/update/delete operations> 语法\n所有表格均为无表头数据结构，数据行的起始 rowIndex 为 0。多行插入或更改时必须按照 rowIndex 顺序进行。\n每次操作必须基于当前轮次可获取的最新表格状态进行，务必确保 rowIndex 准确无误。\n更改: updateRow(tableIndex: number, rowIndex: number, { [colIndex: string]: string | number | boolean, ... })\n删除: deleteRow(tableIndex: number, rowIndex: number)\n插入: insertRow(tableIndex: number, { [colIndex: string]: string | number | boolean, ... })\n表格结构定义 (<structure>)\n0: 角色信息 (Character Information)\n 说明: 核心角色数据库，记录身份、性格、外貌（含性特征）、状态、背景、技能、关系、情感、互评指标。信息完整性优先，禁止留空（需推测填充），禁止删除角色行。\n 列: 0:角色ID, 1:姓名|性别, 2:身份/称谓, 3:核心性格, 4:当前状态, 5:特征(含发/瞳/身形/脸/手/足/标记/性器官细节), 6:声音描述, 7:性经验(含处子状态), 8:特殊癖好/倾向, 9:备注(含性取向), 10:背景故事/重要经历, 11:技能/能力, 12:目标/动机, 13:关系(对他人认知), 14:态度(对他人基本态度), 15:角色互评指标(对他人十项指标:好感/信任/恐惧/控制欲/服从/快感/堕落/依赖/沉沦/乖巧), 16:综合情感状态。\n1: 纪要 (Minutes/Summary)\n 说明: 高保真事件快照记录器，按时间顺序捕捉细节（环境、动作、对话、情感、物品、详尽着装）。条目累积后会被 Table 2 总结并删除。\n 列: 0:纪要ID, 1:时间戳, 2:核心概述, 3:涉及角色, 4:主要人物着装(详尽描述规则), 5:关键物品, 6:关键动作, 7:关键对话, 8:地点, 9:情感快照, 10:角色间距。\n2: 大总结 (Grand Summary/Archive)\n 说明: 存储整合性的事件总结，由 Table 1 累积触发生成。提供宏观回顾，追踪关键物品最终状态并联动更新 Table 0。原则上禁止删除。\n 列: 0:总结ID, 1:创建时间戳([起始时间戳] - [结束时间戳]), 2:归档时间戳(可选), 3:标题/主题, 4:概述, 5:包含的纪要ID列表(分号分隔), 6:涉及的主要角色(斜杠分隔), 7:关键物品总结(物品名(最终状态)/...，联动Table 0)。\n3: 用户偏好 (User Preferences)\n 说明: 动态追踪用户偏好，AI 主动学习识别（性癖、文风、情节、NSFW程度等）并记录，指导内容生成。\n 列: 0:偏好项, 1:偏好值, 2:备注。\n4: 正文尾部\n 说明: 始终只有一行和一列，用于记录每次 content 或 main_txt 中正文内容的最后30-50个字，以确保下次正文创作的连贯性。\n 列: 0:尾部内容\n示例 (<example>)\n示例 1: 插入新角色到 Table 0\n假设需要创建一个名为“莉娜”的新角色。\n<tableThink>\n<!--\n需求：创建新角色“莉娜”。\n操作：向 tableIndex: 0 插入新行。\n注意：必须填充所有 0-16 列，未知信息需合理推测。角色ID按规则为 G1（女性第一号）。与现有角色 B1（假设为User）建立初始关系和互评。\n-->\n</tableThink>\n<tableEdit>\n<!--\ninsertRow(0, {\"0\": \"G1\", \"1\": \"莉娜|女\", \"2\": \"酒馆侍女\", \"3\": \"活泼外向略显冒失\", \"4\": \"身体健康精神略有疲惫\", \"5\": \"红色及肩卷发绿色眼眸身材娇小玲珑约155cm体重45kg圆脸带雀斑手指灵活足小巧皮肤偏白颈后有蝴蝶纹身胸部不大约A杯阴部构造正常颜色粉嫩阴毛浓密\", \"6\": \"声音清脆语速快略带地方口音\", \"7\": \"非处女性经验较少\", \"8\": \"喜欢甜食\", \"9\": \"异性恋对酒精轻微过敏\", \"10\": \"普通村庄出身为生计来到城市酒馆工作\", \"11\": \"调酒基础快速记单打扫清洁\", \"12\": \"努力赚钱改善生活\", \"13\": \"B1:好奇的客人\", \"14\": \"B1:热情服务\", \"15\": \"B1:{好感值:50, 信任值:30, 恐惧值:5, 控制欲:0, 服从度:20, 快感值:0, 堕落值:0, 依赖值:5, 沉沦值:0, 乖巧值:40}\", \"16\": \"对工作有些倦怠但对新客人感到好奇\"})\n-->\n</tableEdit>\n示例 2: 插入纪要到 Table 1\n假设莉娜为 User 端上了一杯酒。\n<tableThink>\n<!--\n事件：莉娜为 User 端酒。\n操作：向 tableIndex: 1 插入新纪要。纪要ID为 J001，时间戳为 A1:2024-05-21 18:00。\n注意：详细描述莉娜和User的着装，符合新格式要求。\n-->\n</tableThink>\n<tableEdit>\n<!--\ninsertRow(1, {\"0\": \"J001\", \"1\": \"A1:2024-05-21 18:00\", \"2\": \"莉娜端着一杯麦酒走向User的桌子脸上带着职业微笑\", \"3\": \"莉娜/User\", \"4\": \"莉娜:无饰品|未化妆|白色短袖衬衫|棕色及膝布裙|黑色平底布鞋/B1:无饰品|无妆|灰色T恤|牛仔裤|白色运动鞋\", \"5\": \"麦酒\", \"6\": \"莉娜小心地将酒杯放在User面前\", \"7\": \"莉娜:您的麦酒请慢用\", \"8\": \"酒馆大厅\", \"9\": \"莉娜:略有疲惫但保持专业/User:平静好奇\", \"10\": \"约0.5米\"})\n-->\n</tableEdit>\n示例 3: 触发大总结 (Table 1 -> Table 2 -> Table 0)\n假设 Table 1 已累积 5 条关于莉娜与 User 在酒馆互动的纪要 (J001-J005)，最后一条时间戳为 A1:2024-05-21 18:30。期间莉娜不小心打翻了一瓶“恢复药水”。\n<tableThink>\n<!--\n触发条件：Table 1 中未总结纪要达到 5 条 (J001-J005)。\n操作：执行大总结流程。\n1. 生成 Table 2 总结记录，总结ID为 S001。\n2. 关键物品总结：恢复药水最终状态为“打翻丢失”。\n3. 联动更新 Table 0：莉娜的状态因丢失药水而变化。\n4. 删除 Table 1 中的 J001-J005。\n-->\n</tableThink>\n<tableEdit>\n<!--\ninsertRow(2, {\"0\": \"S001\", \"1\": \"A1:2024-05-21 18:00 - A1:2024-05-21 18:30\", \"2\": \"\", \"3\": \"酒馆的初遇与小意外\", \"4\": \"莉娜作为侍女接待了客人User为其端上麦酒两人进行了简短交谈莉娜显得活泼但有些冒失在一次转身中莉娜不慎将一瓶恢复药水从托盘上打翻药水泼洒在地板上丢失了\", \"5\": \"J001;J002;J003;J004;J005\", \"6\": \"莉娜/User\", \"7\": \"麦酒已送达/恢复药水打翻丢失\"})\nupdateRow(0, 0, {\"0\": \"G1\", \"1\": \"莉娜|女\", \"2\": \"酒馆侍女\", \"3\": \"活泼外向略显冒失\", \"4\": \"身体健康精神因打翻药水而变得焦虑不安\", \"5\": \"红色及肩卷发绿色眼眸身材娇小玲珑约155cm体重45kg圆脸带雀斑手指灵活足小巧皮肤偏白颈后有蝴蝶纹身胸部不大约A杯阴部构造正常颜色粉嫩阴毛浓密\", \"6\": \"声音清脆语速快略带地方口音\", \"7\": \"非处女性经验较少\", \"8\": \"喜欢甜食\", \"9\": \"异性恋对酒精轻微过敏对工作失误感到担忧\", \"10\": \"普通村庄出身为生计来到城市酒馆工作\", \"11\": \"调酒基础快速记单打扫清洁\", \"12\": \"努力赚钱改善生活避免犯错\", \"13\": \"B1:好奇的客人\", \"14\": \"B1:热情服务略带歉意\", \"15\": \"B1:{好感值:45, 信任值:25, 恐惧值:15, 控制欲:0, 服从度:25, 快感值:0, 堕落值:0, 依赖值:5, 沉沦值:0, 乖巧值:35}\", \"16\": \"因失误感到焦虑和懊恼担心后果\"})\ndeleteRow(1, 4)\ndeleteRow(1, 3)\ndeleteRow(1, 2)\ndeleteRow(1, 1)\ndeleteRow(1, 0)\n-->\n</tableEdit>\n示例 4: 更新用户偏好到 Table 3\n假设用户明确表示喜欢“慢热”的情节节奏。\n<tableThink>\n<!--\n用户反馈：明确偏好“慢热”节奏。\n操作：向 tableIndex: 3 插入新偏好记录。\n-->\n</tableThink>\n<tableEdit>\n<!--\ninsertRow(3, {\"0\": \"情节走向偏好\", \"1\": \"慢热\", \"2\": \"用户在对话中明确提出\"})\n-->\n</tableEdit>\n示例 5: 更新正文尾部到 Table 4\n假设本轮 <content> 的最后30-50个字为“莉娜转身离开，User目送她的背影，心中充满好奇。”\n<tableThink>\n<!--\n操作：更新 tableIndex: 4 的尾部内容。\n-->\n</tableThink>\n<tableEdit>\n<!--\nupdateRow(4, 0, {\"0\": \"莉娜转身离开，User目送她的背影，心中充满好奇。\"})\n-->\n</tableEdit>\n<store>\n{{tableData}}\n</store>",
             "clear_up_stairs": 20,
             "custom_temperature": 0.1,
-            "isExtensionAble": false,
+            "isExtensionAble": true,
             "isAiReadTable": true,
             "isAiWriteTable": true,
             "isTableToChat": false,
@@ -2035,7 +2033,7 @@
     "extension_settings": {
         "apiUrl": "https://sllt.uk/v1",
         "apiKey": "sk-QLbg5uEqZmuYYsag1K4XZTXtX0LvhJWtxMiBuVvebLEWyuTm",
-        "autoConnect": true,
+        "autoConnect": false,
         "notifyUpdates": false,
         "disabledExtensions": [],
         "expressionOverrides": [],
@@ -2137,9 +2135,9 @@
                     "mode": "cc",
                     "exclude": [],
                     "api": "custom",
-                    "preset": "[方舟预设] Re1.7 精简版",
-                    "api-url": "https://api.huaapi.asia/v1",
-                    "model": "gemini-2.5-pro-exp-03-25",
+                    "preset": "GEMI预设-启明：超验扮演系统",
+                    "api-url": "https://api.skyi.cc/v1",
+                    "model": "gemini-1.5-flash",
                     "proxy": "None",
                     "stop-strings": "[]",
                     "start-reply-with": "",
@@ -2150,299 +2148,6 @@
         },
         "dice": {},
         "regex": [
-            {
-                "id": "5b1a5c51-910a-4b5a-956a-390d4f9caca6",
-                "scriptName": "部位特写",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<font[^>]*>(.|\\n)*<\\/font>/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 2,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "6251ab3d-44f4-4105-9bd2-8121171b44d9",
-                "scriptName": "移除思维链和多余标签v2",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/(.*\\</thinking>\\n|.*\\<content[\\s\\S]*?>\\n|</content>|<(/)content_format>)/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "5eb6f1e9-59e1-43cb-9786-4c9664f7b2d8",
-                "scriptName": "（斯拉）仅保留总结2",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/[\\s\\S]*?<This_round_events>([\\s\\S]*?)<\\/This_round_events>([\\s\\S]*)/gm",
-                "replaceString": "<!--\n<This_round_events>$1</This_round_events>\n-->",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "d29a7d8d-8ef6-4cfe-b990-fac6a42ca4a5",
-                "scriptName": "con",
-                "disabled": true,
-                "runOnEdit": false,
-                "findRegex": "/<content>[\\s\\S]*?</content>/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "c711d11f-7d08-4fb3-84a3-496ab7dbed0c",
-                "scriptName": "（斯拉）删除think",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<think>[\\s\\S]*</think>/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "929086f7-c1a3-4b79-bb35-64226ee7ee86",
-                "scriptName": "删除cot",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<thinking>[\\s\\S]*?</thinking>/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "2212f4ff-90fd-4d54-bcf2-43433e9921ee",
-                "scriptName": "ny-gemini-1.3.5alpha额外正则",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "```html",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "42822bc1-fd5d-4d11-b891-7dc638399cdb",
-                "scriptName": "regenimg",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": ".+?sends a picture that contains:\\s*(.+?)\\].*",
-                "replaceString": "$1",
-                "trimStrings": [],
-                "placement": [
-                    5
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
-                "id": "3e7171d3-d297-4336-9d31-e342a42db8a0",
-                "scriptName": "Human当前输入",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "^([\\s\\S]*)$",
-                "replaceString": "<Human当前输入>\n$1\n</Human当前输入>",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": 1,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "aff21896-84bc-41ee-893e-e15064bdb006",
-                "scriptName": "隐藏mygo思维链",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/(?:<thinking[^>]*>|<\\Passage[^>]*>).*?<\\/(?:thinking|Passage)>|.*\\[开始创作]|.*\\[使用简体中文开始创作:]/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "a3661690-18bd-42ae-b9ad-8043f443c2d5",
-                "scriptName": "mygo去除多余内容",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<\\/?disclaimer>[\\s\\S]*?<\\/?disclaimer>|<\\/?Revelation>[\\s\\S]*?<\\/?Revelation>|<\\/?disclaimer>[\\s\\S]*|<\\/?Revelation>[\\s\\S]*|『|』|\\*\\*|<story plot>|<\\/story plot>|```(?:End|Start)|<Safe>|<\\/Safe>|<Artistic Intent>.*?<\\/Artistic Intent>|```?disclaimer.*?```?<\\/disclaimer>|```?Revelation[\\s\\S]*|```?Revelation.*?```?<\\/Revelation>|```?disclaimer[\\s\\S]*/gsi",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": false
-            },
-            {
-                "id": "b62ebbcb-5957-4607-bb63-47cd28920f1b",
-                "scriptName": "MyGO!!!!!",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/(?:<npc response[^>]*>|<StatusBlock[^>]*>)(.|\\n)*?<\\/(?:npc response|StatusBlock)>/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 4,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "9b9071a5-36ce-4362-b6af-16bc7db0971a",
-                "scriptName": "隐藏思维链Plus",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<(think(?:ing|_format)?)>([\\s\\S]*?)<\\/\\1>|```think([\\s\\S]*?)```/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2,
-                    5
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "603909c4-e6e7-49fc-a7f8-f5dbb5db5fc2",
-                "scriptName": "昆仑图片",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<image>([\\s\\S]*?)</image>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "b19ddef3-8da5-446b-a566-0a39dba5118d",
-                "scriptName": "字体发癫",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/([，。！？；：\"\"''（）【】《》「」『』〈〉…—～·]|^)([^，。！？；：\"\"''（）【】《》「」『』〈〉…—～·]*?！)/g",
-                "replaceString": "$1**$2**",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
-                "id": "0d40b7d2-db2b-4f17-b547-8cf37efb28f9",
-                "scriptName": "【戏剧之王】ai去除非最新楼层的</Main_Quest>",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<Main_Quest>[\\s\\S]*?<\\/Main_Quest>/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 2,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "f666561d-9a98-495c-9f2d-1c2eaf3d11e8",
-                "scriptName": "【戏剧之王】user去除</Main_Quest>",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<Main_Quest>[\\s\\S]*?<\\/Main_Quest>/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
             {
                 "id": "77d09953-c7e5-4ffa-8ac0-65e7a0f35bda",
                 "scriptName": "【戏剧之王】去除10楼以下摘要文本",
@@ -2457,23 +2162,6 @@
                 "substituteRegex": 0,
                 "minDepth": null,
                 "maxDepth": 10,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "670ff826-c2df-4fd0-9412-95c43aa35a15",
-                "scriptName": "【戏剧之王】去除10楼之上的除摘要部分",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/([\\s\\S]*?<details>\\s*<summary>\\s*摘要\\s*<\\/summary>|<\\/details>[\\s\\S]*?$)/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 11,
-                "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
             },
@@ -2529,158 +2217,90 @@
                 "promptOnly": true
             },
             {
-                "id": "06755a08-58d7-4972-988f-2736e9a15cb0",
-                "scriptName": "Gemini去省略号|感叹号|星号|括号",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/(…)|(!)|(！)|(\\*{2})|(（[^）]*）)|(\\([^)]*\\))/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "70afed1d-fd6c-417d-a159-28f9b4b670d4",
-                "scriptName": "状态插件-通用正则（纯替换）",
-                "disabled": true,
-                "runOnEdit": false,
-                "findRegex": "{{getvar::状态插件-通用正则匹配}}",
-                "replaceString": "{{getvar::状态插件-通用正则替换}}",
-                "trimStrings": [],
-                "placement": [
-                    2,
-                    3
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
-                "id": "f6e1eba2-4e8e-4e9f-8a7d-8d36b0856636",
-                "scriptName": "状态插件-通用正则（第1组）",
-                "disabled": true,
-                "runOnEdit": false,
-                "findRegex": "{{getvar::状态插件-通用正则匹配}}",
-                "replaceString": "$1",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 999,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
-                "id": "af782fbe-d9bd-4783-b469-2c44ae97e629",
-                "scriptName": "【Lyean】[不发送]5楼以上除摘要外文本",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/([\\s\\S]*?<details><summary>摘要</summary>|</details>[\\s\\S]*?$)/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 5,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "5cf281b3-14b8-426a-8b95-94fd92106093",
-                "scriptName": "【Lyean】[不发送]5楼以下摘要文本",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<details><summary>摘要</summary>([\\s\\S]*?)</details>/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": 5,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "63ad249a-7a41-4c68-a194-77c60bb02f6a",
-                "scriptName": "【Lyean】[不发送]以前的用户输入",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "^([\\s\\S]*)$",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "substituteRegex": 0,
-                "minDepth": 1,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "cb2e1058-409c-4ad2-bea3-3427f9013d65",
-                "scriptName": "【Lyean】移除大小思维链和免责声明",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<!-- State(.*?)d(.*?) -->(\\n)?)|(<!-- consider: (.*?) -->(\\n)?)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "362b8f1c-ba1c-44d8-ad44-fabc72be0686",
-                "scriptName": "【Lyean】用户输入添加tag",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "^([\\s\\S]*)$",
-                "replaceString": "<inputs>\n$1\n</inputs>",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": 1,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "84b14e5b-10d8-436d-8545-d356900e6e0f",
-                "scriptName": "隐藏表格思维链",
-                "findRegex": "/<tableThink_cot\\b[^>]*>[\\s\\S]*?<\\/tableThink_cot>/s",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
+                "id": "f666561d-9a98-495c-9f2d-1c2eaf3d11e8",
+                "scriptName": "【戏剧之王】user去除</Main_Quest>",
                 "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": true,
                 "runOnEdit": true,
+                "findRegex": "/<Main_Quest>[\\s\\S]*?<\\/Main_Quest>/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "0d40b7d2-db2b-4f17-b547-8cf37efb28f9",
+                "scriptName": "【戏剧之王】ai去除非最新楼层的</Main_Quest>",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<Main_Quest>[\\s\\S]*?<\\/Main_Quest>/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 2,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "670ff826-c2df-4fd0-9412-95c43aa35a15",
+                "scriptName": "【戏剧之王】去除10楼之上的除摘要部分",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/([\\s\\S]*?<details>\\s*<summary>\\s*摘要\\s*<\\/summary>|<\\/details>[\\s\\S]*?$)/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 11,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "603909c4-e6e7-49fc-a7f8-f5dbb5db5fc2",
+                "scriptName": "昆仑图片",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/<image>([\\s\\S]*?)</image>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "b19ddef3-8da5-446b-a566-0a39dba5118d",
+                "scriptName": "字体发癫",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/([，。！？；：\"\"''（）【】《》「」『』〈〉…—～·]|^)([^，。！？；：\"\"''（）【】《》「」『』〈〉…—～·]*?！)/g",
+                "replaceString": "$1**$2**",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
             }
         ],
         "character_allowed_regex": [
@@ -2893,10 +2513,10 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 32747,
-                "LAST_RECEIVE_CHARS": 94372,
-                "LAST_SEND_TOKENS": 51519,
-                "LAST_SEND_CHARS": 89030
+                "LAST_RECEIVE_TOKENS": 5748,
+                "LAST_RECEIVE_CHARS": 7884,
+                "LAST_SEND_TOKENS": 93293,
+                "LAST_SEND_CHARS": 145223
             }
         },
         "attachments": [],
@@ -3335,14 +2955,6 @@
                         "info": "# 预设防误触\n\n**作者:** 青空莉想做舞台少女的狗\n**版本:** 2025/04/29\n**源文件:** [点此跳转](https://gitgud.io/StageDog/tavern_resource/-/tree/main/酒馆助手/预设防误触/源文件?ref_type=heads)\n**说明:** 启用后将锁定预设除了 '流式传输'、'请求思维链' 和 '具体条目' 以外的选项, 不能通过界面来修改\n",
                         "buttons": [],
                         "enabled": true
-                    },
-                    {
-                        "id": "19e6596c-6871-4fe7-87e0-eaa663c92c64",
-                        "name": "API秘钥管理器",
-                        "content": "\"use strict\";\n\n/* --- API Config Manager Configuration --- */\nconst apiConfigManagerName = \"api-config-manager\";\nconst apiConfigManagerContainerId = 'api-config-manager-container';\nconst apiConfigManagerStylesId = 'api-config-manager-styles';\nconst apiConfigManagerSettingsKey = `st_${apiConfigManagerName}_settings`;\nconst apiConfigManagerDBName = 'api-config-manager-db';\nconst apiConfigManagerDBVersion = 1;\nconst apiConfigManagerStoreName = 'settings';\nconst apiConfigManagerEncryptionKey = `st_${apiConfigManagerName}_encryption_key`;\n\n// Default settings with empty profiles\nconst apiConfigManagerDefaultSettings = {\n    profiles: []\n};\n\nlet apiConfigManagerSettings = {};\nlet apiConfigManagerDB = null;\nlet encryptionKey = null;\n\n/* --- Helper Functions --- */\nfunction apiConfigErrorCatched(fn, context = 'API Config Manager') {\n    const onError = (error) => {\n        let iframeName = 'UnknownIframe';\n        try {\n            iframeName = (typeof getIframeName === 'function') ? getIframeName() : (window.frameElement ? window.frameElement.id : 'UnknownIframe');\n        } catch (e) {\n            console.warn(`(${context}) Could not get iframe name:`, e);\n        }\n        const errorMessage = `Error in ${iframeName} (${context}) ${error.stack || error.message || error.name}`;\n        console.error(errorMessage);\n        if (typeof toastr !== 'undefined' && toastr) { // Check if toastr exists\n            toastr.error(`Error in ${context}. Check console.`);\n        } else {\n             console.error(`Toastr not available to display error message in ${context}.`);\n        }\n    };\n    return (...args) => {\n        try {\n            const result = fn(...args);\n            if (result instanceof Promise) {\n                return result.catch(error => {\n                    onError(error);\n                    throw error; // Re-throw after logging\n                });\n            }\n            return result;\n        } catch (error) {\n            onError(error);\n            throw error; // Re-throw after logging\n        }\n    };\n}\n\nconst log = apiConfigErrorCatched((message) => {\n    console.log(`[${apiConfigManagerName}] ${message}`);\n}, 'log');\n\nconst fallbackCopy = apiConfigErrorCatched((text, doc) => {\n    const $temp = $('<textarea>');\n    $('body', doc).append($temp);\n    $temp.val(text).select();\n    let success = false;\n    try {\n        success = doc.execCommand('copy');\n    } catch (e) {\n        console.error(\"复制失败:\", e);\n    }\n    $temp.remove();\n\n    if (typeof toastr !== 'undefined' && toastr) {\n        if (success) {\n            toastr.success('秘钥已复制到剪贴板');\n        } else {\n            toastr.error('复制失败，请手动复制');\n        }\n    }\n}, 'fallbackCopy');\n\n/* --- Encryption Functions --- */\nconst generateEncryptionKey = apiConfigErrorCatched(async () => {\n    if (!window.crypto || !window.crypto.subtle) {\n        log(\"您的浏览器不支持Web Crypto API，将使用未加密存储\");\n        return null;\n    }\n\n    try {\n        const key = await window.crypto.subtle.generateKey(\n            {\n                name: \"AES-GCM\",\n                length: 256\n            },\n            true,\n            [\"encrypt\", \"decrypt\"]\n        );\n\n        const exportedKey = await window.crypto.subtle.exportKey(\"raw\", key);\n        const keyBase64 = btoa(String.fromCharCode(...new Uint8Array(exportedKey)));\n\n        localStorage.setItem(apiConfigManagerEncryptionKey, keyBase64);\n        log(\"生成并存储了新的加密密钥\");\n\n        return key;\n    } catch (err) {\n        log(\"生成加密密钥失败: \" + err.message);\n        return null;\n    }\n}, 'generateEncryptionKey');\n\nconst loadEncryptionKey = apiConfigErrorCatched(async () => {\n    if (!window.crypto || !window.crypto.subtle) {\n        log(\"您的浏览器不支持Web Crypto API，将使用未加密存储\");\n        return null;\n    }\n\n    try {\n        const keyBase64 = localStorage.getItem(apiConfigManagerEncryptionKey);\n        if (!keyBase64) {\n            log(\"未找到现有加密密钥，将生成新密钥\");\n            return await generateEncryptionKey();\n        }\n\n        const keyBytes = Uint8Array.from(atob(keyBase64), c => c.charCodeAt(0));\n\n        const key = await window.crypto.subtle.importKey(\n            \"raw\",\n            keyBytes,\n            {\n                name: \"AES-GCM\",\n                length: 256\n            },\n            false, // Should be false if you only need it for this session after import\n            [\"encrypt\", \"decrypt\"]\n        );\n\n        log(\"加载现有加密密钥成功\");\n        return key;\n    } catch (err) {\n        log(\"加载加密密钥失败: \" + err.message + \". 将尝试生成新密钥。\");\n        // Fallback to generating a new key if loading fails (e.g., corrupted key)\n        return await generateEncryptionKey();\n    }\n}, 'loadEncryptionKey');\n\nconst encryptData = apiConfigErrorCatched(async (data) => {\n    if (!encryptionKey || !window.crypto || !window.crypto.subtle) {\n        log(\"无法加密数据，无可用加密密钥或不支持 Crypto API\");\n        return { encrypted: false, data: data }; // Return unencrypted data\n    }\n\n    try {\n        const iv = window.crypto.getRandomValues(new Uint8Array(12)); // Initialization vector\n        const encoder = new TextEncoder();\n        const dataBytes = encoder.encode(JSON.stringify(data));\n\n        const encryptedBytes = await window.crypto.subtle.encrypt(\n            {\n                name: \"AES-GCM\",\n                iv: iv\n            },\n            encryptionKey,\n            dataBytes\n        );\n\n        // Combine IV and encrypted data for storage\n        const encryptedBase64 = btoa(String.fromCharCode(...new Uint8Array(encryptedBytes)));\n        const ivBase64 = btoa(String.fromCharCode(...iv));\n\n        return {\n            encrypted: true,\n            data: {\n                iv: ivBase64,\n                encryptedData: encryptedBase64\n            }\n        };\n    } catch (err) {\n        log(\"加密数据失败: \" + err.message);\n        // Fallback: return unencrypted if encryption fails\n        return { encrypted: false, data: data };\n    }\n}, 'encryptData');\n\nconst decryptData = apiConfigErrorCatched(async (encryptedDataObj) => {\n    // Check if the input structure is as expected\n    if (!encryptedDataObj || typeof encryptedDataObj.encrypted === 'undefined') {\n         log(\"解密数据格式无效，直接返回原始数据\");\n         return encryptedDataObj; // Or perhaps throw an error, depending on desired handling\n    }\n\n    if (!encryptedDataObj.encrypted) {\n        // Data wasn't encrypted in the first place\n        return encryptedDataObj.data;\n    }\n\n    if (!encryptionKey || !window.crypto || !window.crypto.subtle) {\n        log(\"无法解密数据，无可用加密密钥或不支持 Crypto API\");\n        throw new Error(\"解密失败：无可用加密密钥或浏览器不支持\");\n    }\n\n    // Validate the structure of encrypted data\n    if (!encryptedDataObj.data || !encryptedDataObj.data.iv || !encryptedDataObj.data.encryptedData) {\n        log(\"解密失败：加密数据结构不完整\");\n        throw new Error(\"解密失败：数据结构不完整\");\n    }\n\n    try {\n        const iv = Uint8Array.from(atob(encryptedDataObj.data.iv), c => c.charCodeAt(0));\n        const encryptedBytes = Uint8Array.from(atob(encryptedDataObj.data.encryptedData), c => c.charCodeAt(0));\n\n        const decryptedBytes = await window.crypto.subtle.decrypt(\n            {\n                name: \"AES-GCM\",\n                iv: iv\n            },\n            encryptionKey,\n            encryptedBytes\n        );\n\n        const decoder = new TextDecoder();\n        const decryptedText = decoder.decode(decryptedBytes);\n\n        return JSON.parse(decryptedText);\n    } catch (err) {\n        log(\"解密数据失败: \" + err.message);\n        // Consider what to do here. Throwing error might be best to signal failure.\n        // Returning null or default settings might hide the problem.\n        throw new Error(\"解密失败：\" + err.message);\n    }\n}, 'decryptData');\n\n\n/* --- IndexedDB Functions --- */\nconst openDatabase = apiConfigErrorCatched(() => {\n    return new Promise((resolve, reject) => {\n        if (!window.indexedDB) {\n            log(\"您的浏览器不支持IndexedDB，将使用localStorage\");\n            resolve(null); // Resolve with null to indicate IDB is not available\n            return;\n        }\n\n        const request = indexedDB.open(apiConfigManagerDBName, apiConfigManagerDBVersion);\n\n        request.onerror = (event) => {\n            log(\"IndexedDB打开失败: \" + event.target.errorCode);\n            resolve(null); // Indicate failure\n        };\n\n        request.onsuccess = (event) => {\n            apiConfigManagerDB = event.target.result;\n            log(\"IndexedDB打开成功\");\n            resolve(apiConfigManagerDB); // Resolve with the DB instance\n        };\n\n        request.onupgradeneeded = (event) => {\n            log(\"创建或升级IndexedDB\");\n            const db = event.target.result;\n            // Check if the object store already exists before creating\n            if (!db.objectStoreNames.contains(apiConfigManagerStoreName)) {\n                db.createObjectStore(apiConfigManagerStoreName, { keyPath: 'id' });\n                log(\"创建了设置存储: \" + apiConfigManagerStoreName);\n            }\n            // Handle future version upgrades here if needed\n        };\n    });\n}, 'openDatabase');\n\nconst saveToIndexedDB = apiConfigErrorCatched(async (settings) => {\n    return new Promise(async (resolve) => { // No reject needed, resolve with true/false\n        if (!apiConfigManagerDB) {\n            log(\"IndexedDB未打开，无法保存\");\n            resolve(false);\n            return;\n        }\n\n        try {\n            const encryptedDataObj = await encryptData(settings);\n\n            // Use a transaction for the put operation\n            const transaction = apiConfigManagerDB.transaction([apiConfigManagerStoreName], \"readwrite\");\n            const store = transaction.objectStore(apiConfigManagerStoreName);\n\n            const settingsData = {\n                id: apiConfigManagerSettingsKey, // Use the constant key\n                value: encryptedDataObj // Store the object containing encrypted status and data\n            };\n\n            const request = store.put(settingsData); // Use put to insert or update\n\n            request.onsuccess = () => {\n                log(`配置已${encryptedDataObj.encrypted ? '加密并' : ''}保存到IndexedDB`);\n                resolve(true);\n            };\n\n            request.onerror = (event) => {\n                log(\"保存到IndexedDB失败: \" + event.target.error);\n                resolve(false);\n            };\n\n            // Optional: Handle transaction errors\n            transaction.onerror = (event) => {\n                log(\"IndexedDB 事务失败: \" + event.target.error);\n                // Ensure promise resolves even on transaction error\n                if (!request.readyState || request.readyState === 'pending') {\n                     resolve(false);\n                }\n            };\n\n        } catch (e) {\n            log(\"保存到IndexedDB时出错: \" + e.message);\n            resolve(false);\n        }\n    });\n}, 'saveToIndexedDB');\n\n\nconst loadFromIndexedDB = apiConfigErrorCatched(() => {\n    return new Promise(async (resolve) => { // No reject needed, resolve with data or null\n        if (!apiConfigManagerDB) {\n            log(\"IndexedDB未打开，无法加载\");\n            resolve(null);\n            return;\n        }\n\n        try {\n            const transaction = apiConfigManagerDB.transaction([apiConfigManagerStoreName], \"readonly\");\n            const store = transaction.objectStore(apiConfigManagerStoreName);\n            const request = store.get(apiConfigManagerSettingsKey); // Get by key\n\n            request.onsuccess = async () => {\n                if (request.result && request.result.value) {\n                    log(\"从IndexedDB加载了原始配置对象\");\n                    try {\n                        const decryptedData = await decryptData(request.result.value);\n                        // Check if decryption returned actual data (not error/null)\n                        if (decryptedData) {\n                             log(`配置已${request.result.value.encrypted ? '解密' : '直接'}加载`);\n                            resolve(decryptedData);\n                        } else {\n                             log(\"解密后未获得有效数据，返回 null\");\n                             resolve(null);\n                        }\n                    } catch (e) {\n                        log(\"解密从IndexedDB加载的配置失败: \" + e.message + \". 可能需要清除存储或生成新密钥。\");\n                        // Handle decryption failure, e.g., return null or default\n                        resolve(null);\n                    }\n                } else {\n                    log(\"IndexedDB中未找到配置 (key: \" + apiConfigManagerSettingsKey + \")\");\n                    resolve(null); // No data found for the key\n                }\n            };\n\n            request.onerror = (event) => {\n                log(\"从IndexedDB加载失败: \" + event.target.error);\n                resolve(null); // Indicate load failure\n            };\n\n             // Optional: Handle transaction errors\n            transaction.onerror = (event) => {\n                log(\"IndexedDB 读取事务失败: \" + event.target.error);\n                if (!request.readyState || request.readyState === 'pending') {\n                    resolve(null);\n                }\n            };\n        } catch (e) {\n            log(\"从IndexedDB加载时出错: \" + e.message);\n            resolve(null);\n        }\n    });\n}, 'loadFromIndexedDB');\n\n\n/* --- Settings Storage Logic --- */\nconst saveApiConfigSettings = apiConfigErrorCatched(async () => {\n    try {\n        log(`开始保存 ${apiConfigManagerSettings.profiles.length} 个配置...`);\n\n        let savedSuccessfully = false;\n        if (apiConfigManagerDB) {\n            savedSuccessfully = await saveToIndexedDB(apiConfigManagerSettings);\n            log(`保存到IndexedDB: ${savedSuccessfully ? '成功' : '失败'}`);\n        } else {\n             log(\"IndexedDB 不可用，尝试 localStorage\");\n        }\n\n        // Fallback to localStorage if IndexedDB is unavailable or saving failed\n        if (!savedSuccessfully) {\n            try {\n                const settingsString = JSON.stringify(apiConfigManagerSettings);\n                localStorage.setItem(apiConfigManagerSettingsKey, settingsString);\n                log(`API配置已成功保存到localStorage (作为后备): ${apiConfigManagerSettings.profiles.length} 个配置`);\n                savedSuccessfully = true; // Mark as saved via fallback\n            } catch (error) {\n                console.error(`[${apiConfigManagerName}] 保存到 localStorage 失败:`, error);\n                // If both fail, the overall save failed\n            }\n        }\n\n        // Verification Step (Optional but recommended)\n        if (savedSuccessfully) {\n            log(\"开始保存后验证...\");\n            let verifiedSettings = null;\n            if (apiConfigManagerDB && await saveToIndexedDB(apiConfigManagerSettings)) { // Prefer IDB for verification if it was the primary save method\n                 verifiedSettings = await loadFromIndexedDB();\n                 log(`保存验证(IndexedDB): ${verifiedSettings ? `成功读取 ${verifiedSettings.profiles?.length ?? 0} 个配置` : '读取失败或无数据'}`);\n            } else {\n                 try {\n                    const savedData = localStorage.getItem(apiConfigManagerSettingsKey);\n                    if (savedData) {\n                        verifiedSettings = JSON.parse(savedData);\n                         log(`保存验证(localStorage): 成功读取 ${verifiedSettings.profiles?.length ?? 0} 个配置`);\n                    } else {\n                        log(`保存验证(localStorage): 未找到数据`);\n                    }\n                 } catch (e) {\n                     log(`保存验证(localStorage)时解析失败: ${e.message}`);\n                 }\n            }\n             // Simple check: Compare profile counts\n             if (verifiedSettings && verifiedSettings.profiles?.length === apiConfigManagerSettings.profiles.length) {\n                 log(\"保存验证：配置数量匹配。\");\n             } else {\n                 log(`保存验证：配置数量不匹配或验证失败 (Expected: ${apiConfigManagerSettings.profiles.length}, Got: ${verifiedSettings?.profiles?.length ?? 'N/A'})`);\n                 // Consider more robust verification if needed (e.g., deep comparison)\n             }\n        }\n\n        if (savedSuccessfully && typeof toastr !== 'undefined' && toastr) {\n            toastr.success('API配置已保存');\n        } else if (!savedSuccessfully && typeof toastr !== 'undefined' && toastr) {\n             toastr.error(\"无法保存API配置，请查看控制台了解详情。\");\n        }\n\n        return savedSuccessfully; // Return the overall success status\n\n    } catch (error) {\n        console.error(`[${apiConfigManagerName}] 保存设置时发生意外错误:`, error);\n        if (typeof toastr !== 'undefined' && toastr) {\n            toastr.error(\"保存API配置时出错，请检查控制台。\");\n        }\n        return false; // Indicate failure\n    }\n}, 'saveApiConfigSettings');\n\n\nconst loadApiConfigSettingsFromStorage = apiConfigErrorCatched(async () => {\n    let loadedSettings = null;\n    let loadedFrom = '默认值'; // Track source\n\n    // 1. Try loading from IndexedDB first\n    if (apiConfigManagerDB) {\n        log(\"尝试从 IndexedDB 加载...\");\n        loadedSettings = await loadFromIndexedDB();\n        if (loadedSettings) {\n            log(`设置已从 IndexedDB 加载，包含 ${loadedSettings.profiles?.length ?? 0} 个配置。`);\n            loadedFrom = 'IndexedDB';\n        } else {\n            log(\"从 IndexedDB 加载失败或未找到数据，尝试 localStorage。\");\n        }\n    } else {\n         log(\"IndexedDB 不可用，尝试 localStorage。\");\n    }\n\n    // 2. Fallback to localStorage if IndexedDB failed or wasn't available\n    if (!loadedSettings) {\n        log(\"尝试从 localStorage 加载...\");\n        try {\n            const storedSettings = localStorage.getItem(apiConfigManagerSettingsKey);\n            if (storedSettings) {\n                loadedSettings = JSON.parse(storedSettings);\n                log(`设置已从 localStorage 加载，包含 ${loadedSettings.profiles?.length ?? 0} 个配置。`);\n                 loadedFrom = 'localStorage';\n                 // Optional: If IDB is available now, migrate localStorage data to IDB\n                 if (apiConfigManagerDB) {\n                     log(\"检测到localStorage数据，尝试迁移到 IndexedDB...\");\n                     const migrated = await saveToIndexedDB(loadedSettings);\n                     if (migrated) {\n                         log(\"数据已成功迁移到 IndexedDB。考虑清除localStorage中的旧数据。\");\n                         // localStorage.removeItem(apiConfigManagerSettingsKey); // Uncomment to remove after migration\n                     } else {\n                         log(\"迁移到 IndexedDB 失败。\");\n                     }\n                 }\n            } else {\n                log(\"在 localStorage 中也未找到设置。\");\n            }\n        } catch (error) {\n            console.error(`[${apiConfigManagerName}] 从 localStorage 加载或解析设置时出错:`, error);\n            if (typeof toastr !== 'undefined' && toastr) {\n                 toastr.warning(\"无法加载localStorage中的API配置，可能已损坏。将使用默认设置。\");\n            }\n            // Don't assign default here yet, let the final step handle it\n        }\n    }\n\n    // 3. Use default settings if neither storage yielded results\n    if (!loadedSettings) {\n        log(\"未能从任何存储中加载设置，将使用默认设置。\");\n        loadedSettings = JSON.parse(JSON.stringify(apiConfigManagerDefaultSettings)); // Deep copy defaults\n        loadedFrom = '默认值';\n    }\n\n    // Ensure loaded settings have the expected structure (at least 'profiles' array)\n    if (!loadedSettings || !Array.isArray(loadedSettings.profiles)) {\n        console.warn(`[${apiConfigManagerName}] 加载的设置格式无效 (来源: ${loadedFrom})，重置为默认值。`, loadedSettings);\n         if (typeof toastr !== 'undefined' && toastr) {\n             toastr.warning(\"加载的API配置格式无效，已重置为默认。\");\n         }\n        loadedSettings = JSON.parse(JSON.stringify(apiConfigManagerDefaultSettings));\n        loadedFrom = '默认值 (因格式无效)';\n    }\n\n    // Assign to the global variable\n    apiConfigManagerSettings = loadedSettings;\n\n    log(`配置加载完成 (来源: ${loadedFrom})。当前配置数量: ${apiConfigManagerSettings.profiles.length}`);\n\n}, 'loadApiConfigSettingsFromStorage');\n\n\n/* --- UI Functions --- */\nconst addKeyInput = apiConfigErrorCatched(($container, value = '', showRemove = true) => {\n    const $keyRow = $(`\n        <div class=\"key-row\" style=\"display: flex; gap: 5px; margin: 6px 0; align-items: center;\">\n            <input type=\"password\" class=\"config-key\" placeholder=\"秘钥\" value=\"${value}\"\n                   style=\"flex-grow: 1; padding: 8px 12px; font-size: 12px; border: 1px solid #3a7bd5; border-radius: 6px; background: rgba(255,255,255,0.8); transition: border-color 0.2s, box-shadow 0.2s; color: #334155; min-width: 0;\">\n            <div class=\"key-actions\" style=\"display: flex; gap: 4px; margin-left: auto; flex-shrink: 0;\">\n                <button class=\"copy-key-btn\" title=\"复制\"\n                        style=\"width: 28px; height: 28px; padding: 0; background: rgba(90, 120, 213, 0.1); border: 1px solid rgba(90, 120, 213, 0.3); border-radius: 6px; cursor: pointer; font-size: 12px; transition: all 0.2s; color: #3a7bd5; display: flex; align-items: center; justify-content: center;\">📋</button>\n                <button class=\"add-key-btn\" title=\"添加\"\n                        style=\"width: 28px; height: 28px; padding: 0; background: rgba(90, 120, 213, 0.1); border: 1px solid rgba(90, 120, 213, 0.3); border-radius: 6px; cursor: pointer; font-size: 12px; transition: all 0.2s; color: #3a7bd5; display: flex; align-items: center; justify-content: center;\">+</button>\n                <button class=\"remove-key-btn\" title=\"删除\"\n                        style=\"width: 28px; height: 28px; padding: 0; background: rgba(90, 120, 213, 0.1); border: 1px solid rgba(90, 120, 213, 0.3); border-radius: 6px; cursor: pointer; font-size: 12px; transition: all 0.2s; color: #3a7bd5; display: ${showRemove ? 'flex' : 'none'}; align-items: center; justify-content: center;\">−</button>\n            </div>\n        </div>\n    `);\n\n    $container.append($keyRow);\n\n    // Event handlers using jQuery's event delegation is generally better for dynamically added elements,\n    // but for simplicity here, we'll attach directly. Consider delegation if performance becomes an issue.\n\n    $keyRow.find('button').hover(\n        function() { $(this).css({'background': 'rgba(90, 120, 213, 0.2)', 'transform': 'translateY(-1px)', 'box-shadow': '0 2px 5px rgba(58, 123, 213, 0.2)'}); },\n        function() { $(this).css({'background': 'rgba(90, 120, 213, 0.1)', 'transform': 'none', 'box-shadow': 'none'}); }\n    );\n\n    $keyRow.find('input.config-key').focus(function() {\n        $(this).css({'border-color': '#3a7bd5', 'box-shadow': '0 0 0 3px rgba(58, 123, 213, 0.2)'});\n    }).blur(function() {\n        $(this).css({'border-color': '#3a7bd5', 'box-shadow': 'none'});\n    });\n\n    // Ensure remove button visibility is correct based on current count after adding\n    const $allKeyRows = $container.find('.key-row');\n    $allKeyRows.find('.remove-key-btn').css('display', $allKeyRows.length > 1 ? 'flex' : 'none');\n\n\n    return $keyRow;\n}, 'addKeyInput');\n\nconst createUnitElement = apiConfigErrorCatched((profile = null) => {\n    // Use default empty profile structure if null is passed\n    const currentProfile = profile || { name: '', keys: [''], endpoint: '' };\n     // Ensure keys array is never empty for the loop, add an empty key if needed\n     if (!currentProfile.keys || currentProfile.keys.length === 0) {\n         currentProfile.keys = [''];\n     }\n\n    const $unit = $(`\n        <div class=\"config-unit\" style=\"margin-bottom: 12px; padding: 15px; background: rgba(255, 255, 255, 0.6); border-radius: 10px; border: 1px solid rgba(58, 123, 213, 0.3); box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06); backdrop-filter: blur(10px); transition: all 0.3s;\">\n            <div class=\"unit-header\" style=\"display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;\">\n                <input type=\"text\" class=\"config-name\" placeholder=\"配置名称\" value=\"${currentProfile.name || ''}\"\n                       style=\"flex: 1; padding: 8px 12px; font-size: 13px; border: 1px solid #3a7bd5; border-radius: 6px; background: rgba(255, 255, 255, 0.8); transition: all 0.2s; color: #334155; font-weight: 500; min-width: 0;\">\n            </div>\n            <div class=\"keys-container\">\n                <!-- 秘钥行将在这里添加 -->\n            </div>\n            <input type=\"text\" class=\"config-endpoint\" placeholder=\"API接口地址 (例如 https://api.openai.com/v1)\" value=\"${currentProfile.endpoint || ''}\"\n                   style=\"width: 100%; box-sizing: border-box; padding: 8px 12px; font-size: 13px; border: 1px solid #3a7bd5; border-radius: 6px; background: rgba(255, 255, 255, 0.8); margin-top: 8px; transition: all 0.2s; color: #334155;\">\n        </div>\n    `);\n\n    const $keysContainer = $unit.find('.keys-container');\n    // Add key input rows based on the profile's keys\n    currentProfile.keys.forEach((key, index) => {\n         addKeyInput($keysContainer, key, currentProfile.keys.length > 1); // Show remove button only if more than one key initially\n    });\n     // Ensure visibility of remove buttons is correct after initial render\n     const $allKeyRows = $keysContainer.find('.key-row');\n     $allKeyRows.find('.remove-key-btn').css('display', $allKeyRows.length > 1 ? 'flex' : 'none');\n\n    // Add hover effect for the whole unit\n    $unit.hover(\n        function() { $(this).css({'box-shadow': '0 5px 15px rgba(58, 123, 213, 0.15)', 'transform': 'translateY(-2px)'}); },\n        function() { $(this).css({'box-shadow': '0 3px 8px rgba(0, 0, 0, 0.06)', 'transform': 'none'}); }\n    );\n\n    // Add focus/blur effects for all inputs within the unit\n    $unit.find('input').focus(function() {\n        $(this).css({'border-color': '#3a7bd5', 'box-shadow': '0 0 0 3px rgba(58, 123, 213, 0.2)'});\n    }).blur(function() {\n        $(this).css({'border-color': '#3a7bd5', 'box-shadow': 'none'});\n    });\n\n    return $unit;\n}, 'createUnitElement');\n\nconst createProfileModal = apiConfigErrorCatched(() => {\n    const parentDoc = window.parent.document;\n\n    // Check if modal already exists\n    if ($('#api-config-manager-modal', parentDoc).length) {\n        log(\"Modal already exists.\");\n        return $('#api-config-manager-modal', parentDoc);\n    }\n    log(\"Creating profile modal...\");\n\n    // **MODIFICATION**: Removed positioning styles (top, left, transform) from inline style. Added max-width: 100% and box-sizing.\n    const modal = $(`\n        <div id=\"api-config-manager-modal\" class=\"drawer-content\"\n            style=\"display:none; /* Removed top, left, transform */\n            z-index:10000; width:450px; max-width:100%; /* Use 100% to fit backdrop padding */ max-height:90vh; overflow:hidden;\n            background: rgba(240, 247, 255, 0.85); border-radius:16px; box-shadow:0 8px 30px rgba(0,0,0,0.2);\n            padding:20px; backdrop-filter: blur(15px); border: 1px solid rgba(58, 123, 213, 0.2); box-sizing: border-box;\">\n\n            <div class=\"drawer-header\" style=\"display: flex; justify-content: space-between; align-items: center;\n                margin-bottom: 15px; padding-bottom: 12px; border-bottom: 1px solid rgba(58, 123, 213, 0.2);\">\n                <h3 style=\"color:#1e3a8a; margin:0; font-size: 16px; font-weight: 600; text-shadow: 0 1px 1px rgba(255,255,255,0.8);\">\n                    API配置管理器\n                    <small class=\"encryption-status\" style=\"font-size: 12px; color: #3a7bd5; margin-left: 5px; font-weight: normal;\">\n                        ${encryptionKey ? '🔒 已加密' : '⚠️ 未加密'}\n                    </small>\n                </h3>\n                <div style=\"display: flex; gap: 8px;\">\n                    <button class=\"toggle-all-keys-btn\" title=\"显示/隐藏所有秘钥\"\n                        style=\"width: 32px; height: 32px; padding: 0; background: rgba(58, 123, 213, 0.15); border: 1px solid rgba(58, 123, 213, 0.3); border-radius: 8px; cursor: pointer; transition: all 0.2s; color: #3a7bd5; font-size: 14px; display: flex; align-items: center; justify-content: center;\">👁</button>\n                    <button class=\"add-profile-btn\" title=\"添加新配置\"\n                        style=\"width: 32px; height: 32px; padding: 0; background: rgba(58, 123, 213, 0.15); border: 1px solid rgba(58, 123, 213, 0.3); border-radius: 8px; cursor: pointer; transition: all 0.2s; color: #3a7bd5; font-size: 14px; display: flex; align-items: center; justify-content: center;\">+</button>\n                    <button class=\"delete-profile-btn\" title=\"删除当前配置\"\n                        style=\"width: 32px; height: 32px; padding: 0; background: rgba(58, 123, 213, 0.15); border: 1px solid rgba(58, 123, 213, 0.3); border-radius: 8px; cursor: pointer; transition: all 0.2s; color: #3a7bd5; font-size: 14px; display: flex; align-items: center; justify-content: center;\">×</button>\n                </div>\n            </div>\n\n            <div class=\"drawer-body\" style=\"max-height:calc(90vh - 130px - 40px); overflow-y:auto; margin-bottom: 10px;\n                scrollbar-width: thin; -webkit-overflow-scrolling: touch; padding-right: 5px;\">\n                <div class=\"config-units-container\">\n                    <!-- 配置单元将在这里添加 -->\n                </div>\n            </div>\n\n            <div class=\"profile-tabs-container\" style=\"display: flex; overflow-x: auto; white-space: nowrap; padding: 5px 0; margin-bottom: 10px; border-top: 1px solid rgba(58, 123, 213, 0.2); border-bottom: 1px solid rgba(58, 123, 213, 0.2); scrollbar-width: thin;\">\n                <!-- 配置文件标签将在这里添加 -->\n            </div>\n\n            <div class=\"drawer-footer\" style=\"display: flex; justify-content: center; margin-top: 10px;\">\n                <button id=\"api-config-manager-save\"\n                    style=\"width: 100%; padding: 10px; background: linear-gradient(135deg, #3a7bd5, #1e3a8a); color:#fff; border:none;\n                    border-radius:8px; cursor:pointer; font-size: 14px; font-weight: 500; transition: all 0.3s; box-shadow: 0 2px 6px rgba(58, 123, 213, 0.3); display: flex; align-items: center; justify-content: center;\">保存配置</button>\n            </div>\n        </div>\n    `);\n\n    $('body', parentDoc).append(modal);\n\n    // Apply hover effects to buttons using jQuery\n    modal.find('.toggle-all-keys-btn, .add-profile-btn, .delete-profile-btn').hover(\n        function() { $(this).css({'background': 'rgba(58, 123, 213, 0.25)', 'transform': 'translateY(-2px)', 'box-shadow': '0 3px 8px rgba(58, 123, 213, 0.2)'}); },\n        function() { $(this).css({'background': 'rgba(58, 123, 213, 0.15)', 'transform': 'none', 'box-shadow': 'none'}); }\n    );\n\n    $('#api-config-manager-save', parentDoc).hover(\n        function() { $(this).css({'background': 'linear-gradient(135deg, #1e3a8a, #3a7bd5)', 'transform': 'translateY(-2px)', 'box-shadow': '0 4px 10px rgba(58, 123, 213, 0.4)'}); },\n        function() { $(this).css({'background': 'linear-gradient(135deg, #3a7bd5, #1e3a8a)', 'transform': 'none', 'box-shadow': '0 2px 6px rgba(58, 123, 213, 0.3)'}); }\n    );\n\n    return modal;\n}, 'createProfileModal');\n\n/* --- 渲染配置标签函数 --- */\nconst renderProfileTabs = apiConfigErrorCatched(() => {\n    const parentDoc = window.parent.document;\n    const $container = $('.profile-tabs-container', parentDoc);\n    if (!$container.length) {\n        log(\"错误：找不到 .profile-tabs-container 元素\");\n        return;\n    }\n    $container.empty(); // Clear existing tabs\n\n    log(`开始渲染 ${apiConfigManagerSettings.profiles?.length ?? 0} 个配置标签...`);\n\n    const profiles = apiConfigManagerSettings.profiles || [];\n    let activeIndex = -1; // Find index of currently active tab if exists\n\n    // Find currently active index *before* clearing\n     const $currentActive = $container.find('.profile-tab.active');\n     if ($currentActive.length) {\n         activeIndex = parseInt($currentActive.data('index'));\n     }\n\n    // Handle empty profiles: Add a default one if needed\n    if (profiles.length === 0) {\n        log(\"没有配置，添加一个默认配置用于显示\");\n        profiles.push({\n            name: \"默认配置\",\n            keys: [''], // Start with one empty key\n            endpoint: \"\"\n        });\n        // Since we added the first profile, it should be active\n        activeIndex = 0;\n    }\n\n    // Create tabs for each profile\n    profiles.forEach((profile, index) => {\n        const tabName = profile.name || `配置 ${index + 1}`;\n        const isActive = index === activeIndex; // Determine if this tab should be active\n        const $tab = $(`\n            <div class=\"profile-tab ${isActive ? 'active' : ''}\" data-index=\"${index}\" draggable=\"true\"\n                style=\"display: inline-block; padding: 5px 10px; margin-right: 5px; background: ${isActive ? 'rgba(58, 123, 213, 0.2)' : 'rgba(255, 255, 255, 0.5)'};\n                border: 1px solid ${isActive ? 'rgba(58, 123, 213, 0.5)' : 'rgba(58, 123, 213, 0.3)'}; border-radius: 6px; cursor: pointer; transition: all 0.2s;\n                font-size: 12px; color: ${isActive ? '#1e3a8a' : '#3a7bd5'}; position: relative; max-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\"\n                title=\"${tabName}\">\n                ${tabName}\n            </div>\n        `);\n        $container.append($tab);\n    });\n\n     // Ensure at least one tab is active if activeIndex was invalid or not found\n     if ($container.find('.profile-tab.active').length === 0 && profiles.length > 0) {\n         log(\"没有找到激活的标签，默认激活第一个\");\n         $container.find('.profile-tab').first().addClass('active').css({\n             'background': 'rgba(58, 123, 213, 0.2)',\n             'border': '1px solid rgba(58, 123, 213, 0.5)',\n             'color': '#1e3a8a'\n         });\n          activeIndex = 0; // Update activeIndex\n     }\n\n     // Re-initialize drag and drop after rendering tabs\n     initDragAndDrop();\n\n    log(`配置标签渲染完成，激活索引: ${activeIndex}`);\n}, 'renderProfileTabs');\n\n\n/* --- 保存当前编辑的配置数据 --- */\nconst saveCurrentProfileData = apiConfigErrorCatched(async () => { // Made async as it doesn't do async work but good practice\n    const parentDoc = window.parent.document;\n    const $activeTab = $('.profile-tab.active', parentDoc);\n    const $configUnit = $('.config-unit', parentDoc); // Assume only one unit is visible/editable at a time\n\n    if ($activeTab.length === 0 || $configUnit.length === 0) {\n        log(\"无法保存当前配置：找不到激活的标签或配置单元。\");\n        return; // Exit if no active tab or unit found\n    }\n\n    const activeIndex = parseInt($activeTab.data('index'));\n\n    // Validate index\n    if (isNaN(activeIndex) || activeIndex < 0 || !apiConfigManagerSettings.profiles || activeIndex >= apiConfigManagerSettings.profiles.length) {\n        log(`找不到有效的激活配置来保存数据，无效索引: ${activeIndex}`);\n        return; // Exit if index is invalid\n    }\n\n    // Gather data from the visible config unit\n    const name = $configUnit.find('.config-name').val()?.trim() || ''; // Use optional chaining and provide default\n    const endpoint = $configUnit.find('.config-endpoint').val()?.trim() || '';\n    const keys = [];\n    $configUnit.find('.config-key').each(function() {\n        const keyValue = $(this).val()?.trim(); // Trim whitespace\n        // Optionally decide if empty keys should be saved\n        // if (keyValue) { // Uncomment this line to only save non-empty keys\n            keys.push(keyValue || ''); // Save empty string if input is empty but row exists\n        // }\n    });\n\n    // Ensure at least one key input exists, even if empty, if the array becomes empty\n    if (keys.length === 0) {\n         keys.push('');\n         log(\"配置中没有有效的秘钥，添加一个空秘钥占位符。\");\n    }\n\n\n    // Update the profile in the settings object\n    apiConfigManagerSettings.profiles[activeIndex] = {\n        name: name || `配置 ${activeIndex + 1}`, // Provide default name if empty\n        keys: keys,\n        endpoint: endpoint\n    };\n\n    // Update the tab display name immediately\n    const tabName = name || `配置 ${activeIndex + 1}`;\n    $activeTab.text(tabName).attr('title', tabName); // Update text and title attribute\n\n    log(`已将当前编辑的配置数据暂存到 settings 对象: ${tabName}`);\n    // Note: This only updates the JS object. Call saveApiConfigSettings() to persist.\n}, 'saveCurrentProfileData');\n\n/* --- 渲染配置单元，只渲染当前激活的配置 --- */\nconst renderConfigUnits = apiConfigErrorCatched(() => {\n    const parentDoc = window.parent.document;\n    const $container = $('.config-units-container', parentDoc);\n    const $activeTab = $('.profile-tab.active', parentDoc);\n\n\n    if (!$container.length) {\n         log(\"错误：找不到 .config-units-container 元素\");\n         return;\n    }\n    $container.empty(); // Clear previous unit\n\n\n    if ($activeTab.length === 0) {\n        log(\"渲染配置单元失败：没有找到激活的标签。\");\n        // Optionally render a placeholder or message\n         $container.html('<p style=\"text-align:center; color: #666; padding: 20px;\">请选择或添加一个配置</p>');\n        return;\n    }\n\n\n    const activeIndex = parseInt($activeTab.data('index'));\n\n\n    // Validate index and profiles array\n    if (isNaN(activeIndex) || activeIndex < 0 || !apiConfigManagerSettings.profiles || activeIndex >= apiConfigManagerSettings.profiles.length) {\n        log(`渲染配置单元失败：无效的激活索引 (${activeIndex}) 或配置列表不存在。`);\n        $container.html('<p style=\"text-align:center; color: #800; padding: 20px;\">错误：无法加载选中的配置数据。</p>');\n        return;\n    }\n\n\n    const activeProfile = apiConfigManagerSettings.profiles[activeIndex];\n    if (!activeProfile) {\n         log(`渲染配置单元失败：索引 ${activeIndex} 处的配置数据为空。`);\n         $container.html('<p style=\"text-align:center; color: #800; padding: 20px;\">错误：选中的配置数据为空。</p>');\n         return;\n    }\n\n\n    log(`渲染激活的配置单元: ${activeProfile.name || `配置 ${activeIndex + 1}`}`);\n    const $unitElement = createUnitElement(activeProfile); // Create the element\n    $container.append($unitElement); // Append it to the container\n}, 'renderConfigUnits');\n\n\n/* --- 处理配置标签的拖放功能 --- */\nconst initDragAndDrop = apiConfigErrorCatched(() => {\n    const parentDoc = window.parent.document;\n    let dragSrcEl = null;\n\n    function handleDragStart(e) {\n        // 'this' is the source element\n        dragSrcEl = this;\n\n        // Use 'text/plain' for better compatibility, store the index\n        e.dataTransfer.effectAllowed = 'move';\n        e.dataTransfer.setData('text/plain', this.getAttribute('data-index'));\n\n        // Add styling to indicate dragging\n        this.style.opacity = '0.5';\n        this.classList.add('dragging');\n    }\n\n    function handleDragOver(e) {\n        if (e.preventDefault) {\n            e.preventDefault(); // Necessary to allow dropping\n        }\n        e.dataTransfer.dropEffect = 'move';\n        return false;\n    }\n\n    function handleDragEnter(e) {\n        // 'this' is the potential drop target\n        // Add visual feedback (unless it's the source element itself)\n         if (this !== dragSrcEl) {\n             this.classList.add('over');\n             // Optional: Modify style directly if needed, but class is better\n             this.style.background = 'rgba(58, 123, 213, 0.15)';\n         }\n    }\n\n    function handleDragLeave(e) {\n        // 'this' is the element the mouse left\n        this.classList.remove('over');\n         // Reset background based on whether it's active or not\n         if (this.classList.contains('active')) {\n             this.style.background = 'rgba(58, 123, 213, 0.2)';\n         } else {\n             this.style.background = 'rgba(255, 255, 255, 0.5)';\n         }\n    }\n\n    function handleDrop(e) {\n        if (e.stopPropagation) {\n            e.stopPropagation(); // Stops the browser from redirecting.\n        }\n\n        // 'this' is the drop target element\n        // Don't do anything if dropping onto the source element\n        if (dragSrcEl !== this) {\n            const srcIndex = parseInt(e.dataTransfer.getData('text/plain')); // Get index from data\n            const destIndex = parseInt(this.getAttribute('data-index'));\n\n             log(`Drop event: Moving from index ${srcIndex} to ${destIndex}`);\n\n             // --- Array Reordering Logic ---\n             if (!isNaN(srcIndex) && !isNaN(destIndex) && apiConfigManagerSettings.profiles) {\n                 // 1. Remove the item from the source index\n                 const [movedProfile] = apiConfigManagerSettings.profiles.splice(srcIndex, 1);\n\n                 // 2. Insert the item at the destination index\n                 if (movedProfile) {\n                    apiConfigManagerSettings.profiles.splice(destIndex, 0, movedProfile);\n                    log(`配置数组已更新`);\n\n                     // 3. Save current form data (important BEFORE re-rendering tabs)\n                     //    We need to save based on the VISUAL state before the drop messes up the indices\n                     saveCurrentProfileData().then(() => {\n                         // 4. Re-render tabs to reflect new order and update indices\n                         renderProfileTabs(); // This will also re-bind drag events via initDragAndDrop called within\n\n                         // 5. Re-select the *moved* item (which is now at destIndex) and render its unit\n                         const $newActiveTab = $(`.profile-tab[data-index=\"${destIndex}\"]`, parentDoc);\n                         if ($newActiveTab.length) {\n                             // Simulate click to handle active state styling and rendering unit\n                             $newActiveTab.trigger('click'); // Trigger the click handler\n                              log(`已重新选择移动后的标签 (新索引 ${destIndex}) 并渲染其内容`);\n                         } else {\n                             log(`错误：无法找到移动后的目标标签 data-index=\"${destIndex}\"`);\n                             // Fallback: select the first tab if the target is somehow gone\n                             $('.profile-tab', parentDoc).first().trigger('click');\n                         }\n                     }).catch(err => {\n                          console.error(\"Error during save/re-render after drop:\", err);\n                          // Attempt to recover by re-rendering tabs anyway\n                          renderProfileTabs();\n                          $('.profile-tab', parentDoc).first().trigger('click');\n                     });\n\n                 } else {\n                      log(\"拖放错误：无法获取要移动的配置\");\n                       // Re-render to be safe\n                       renderProfileTabs();\n                       $('.profile-tab', parentDoc).first().trigger('click');\n                 }\n             } else {\n                 log(`拖放错误：无效的索引 (src: ${srcIndex}, dest: ${destIndex})`);\n                  // Reset visual state of the target\n                 this.classList.remove('over');\n                 handleDragLeave.call(this, e); // Use call to set 'this' correctly\n             }\n\n        } else {\n             log(\"Drop cancelled: source is the same as target.\");\n        }\n\n\n        return false; // Prevent default drop action\n    }\n\n\n    function handleDragEnd(e) {\n        // 'this' is the source element\n         log(\"DragEnd event on source element\");\n        this.style.opacity = '1'; // Reset opacity\n        this.classList.remove('dragging');\n\n\n        // Clean up 'over' class from all tabs\n        const tabs = parentDoc.querySelectorAll('.profile-tab');\n        tabs.forEach(function(tab) {\n            tab.classList.remove('over');\n            // Reset background based on active state, as dragleave might not fire everywhere\n            if (!tab.classList.contains('dragging')) { // Don't reset if it's still marked as dragging briefly\n                 if (tab.classList.contains('active')) {\n                     tab.style.background = 'rgba(58, 123, 213, 0.2)';\n                 } else {\n                     tab.style.background = 'rgba(255, 255, 255, 0.5)';\n                 }\n            }\n        });\n    }\n\n    function bindDragEvents() {\n        const tabs = parentDoc.querySelectorAll('.profile-tab');\n        log(`绑定拖放事件到 ${tabs.length} 个标签...`);\n        tabs.forEach(function(tab) {\n            // Remove existing listeners first to prevent duplicates if called multiple times\n            tab.removeEventListener('dragstart', handleDragStart, false);\n            tab.removeEventListener('dragenter', handleDragEnter, false);\n            tab.removeEventListener('dragover', handleDragOver, false);\n            tab.removeEventListener('dragleave', handleDragLeave, false);\n            tab.removeEventListener('drop', handleDrop, false);\n            tab.removeEventListener('dragend', handleDragEnd, false);\n\n            // Add new listeners\n            tab.addEventListener('dragstart', handleDragStart, false);\n            tab.addEventListener('dragenter', handleDragEnter, false);\n            tab.addEventListener('dragover', handleDragOver, false);\n            tab.addEventListener('dragleave', handleDragLeave, false);\n            tab.addEventListener('drop', handleDrop, false);\n            tab.addEventListener('dragend', handleDragEnd, false);\n        });\n        log('拖放事件绑定完成');\n    }\n\n    // Initial binding call\n    bindDragEvents();\n\n}, 'initDragAndDrop');\n\n\n/* --- 绑定UI事件 --- */\nconst bindUIEvents = apiConfigErrorCatched(() => {\n    const parentDoc = window.parent.document;\n    const $modal = $('#api-config-manager-modal', parentDoc); // Get modal reference\n\n     if (!$modal.length) {\n         log(\"无法绑定UI事件：模态框未找到。\");\n         return;\n     }\n\n    log(\"开始绑定UI事件...\");\n\n    // Use event delegation where possible for dynamically added elements (like key rows)\n    // For elements present initially (header buttons, save button, tabs container), direct binding is okay.\n\n    // --- Header Buttons ---\n    $('.add-profile-btn', $modal).off('click').on('click', async function() { // Use async for saveCurrentProfileData\n        log(\"添加新配置按钮点击\");\n        // 1. Save data from the currently edited profile first\n        await saveCurrentProfileData();\n\n        // 2. Add a new default profile object\n        const newIndex = apiConfigManagerSettings.profiles?.length ?? 0;\n        const newProfile = {\n            name: `配置 ${newIndex + 1}`,\n            keys: [''], // Start with one empty key input\n            endpoint: \"\"\n        };\n        if (!apiConfigManagerSettings.profiles) { apiConfigManagerSettings.profiles = []; }\n        apiConfigManagerSettings.profiles.push(newProfile);\n        log(`添加了新配置对象到索引 ${newIndex}`);\n\n        // 3. Re-render tabs (this will include the new one)\n        renderProfileTabs(); // Will re-init drag/drop inside\n\n        // 4. Find the newly added tab and click it to make it active and render its unit\n        const $newTab = $(`.profile-tab[data-index=\"${newIndex}\"]`, parentDoc);\n        if ($newTab.length) {\n            $newTab.trigger('click'); // Simulate click\n            log(`已激活新添加的标签: ${newProfile.name}`);\n        } else {\n            log(`错误：无法找到新添加的标签 (索引 ${newIndex})`);\n        }\n    });\n\n    $('.delete-profile-btn', $modal).off('click').on('click', async function() { // Use async for saveCurrentProfileData\n        log(\"删除配置按钮点击\");\n        const $activeTab = $('.profile-tab.active', parentDoc);\n\n        if ($activeTab.length === 0) {\n            log(\"无法删除：没有激活的配置。\");\n            if (typeof toastr !== 'undefined' && toastr) toastr.warning('请先选择一个要删除的配置');\n            return;\n        }\n\n        const activeIndex = parseInt($activeTab.data('index'));\n        const profileCount = apiConfigManagerSettings.profiles?.length ?? 0;\n\n        if (isNaN(activeIndex) || activeIndex < 0 || activeIndex >= profileCount) {\n             log(`无法删除：无效的激活索引 ${activeIndex}`);\n             return;\n        }\n\n        if (profileCount <= 1) {\n            log(\"无法删除：至少需要保留一个配置。\");\n             if (typeof toastr !== 'undefined' && toastr) toastr.warning('至少需要保留一个配置');\n            return;\n        }\n\n        const profileNameToDelete = apiConfigManagerSettings.profiles[activeIndex]?.name || `配置 ${activeIndex + 1}`;\n        if (confirm(`确定要删除配置 \"${profileNameToDelete}\" 吗？此操作不可恢复。`)) {\n            log(`确认删除配置: ${profileNameToDelete} (索引 ${activeIndex})`);\n            // 1. Remove the profile from the array\n            apiConfigManagerSettings.profiles.splice(activeIndex, 1);\n            log(`配置已从数组中移除，剩余 ${apiConfigManagerSettings.profiles.length} 个`);\n\n            // 2. Determine the new active index (usually the previous one, or 0 if deleting the first)\n            const newActiveIndex = Math.max(0, activeIndex - 1);\n\n            // 3. Re-render tabs\n            renderProfileTabs(); // Will re-init drag/drop\n\n            // 4. Click the new active tab\n            const $newActiveTab = $(`.profile-tab[data-index=\"${newActiveIndex}\"]`, parentDoc);\n             if ($newActiveTab.length) {\n                 $newActiveTab.trigger('click'); // Activate the new tab and render its content\n                 log(`已激活删除后的新标签，索引: ${newActiveIndex}`);\n             } else if (apiConfigManagerSettings.profiles.length > 0) {\n                  // Fallback if specific index not found but profiles exist\n                  log(`回退：激活第一个标签`);\n                 $('.profile-tab', parentDoc).first().trigger('click');\n             } else {\n                 // Should not happen if count > 1 check worked, but handle anyway\n                 log(`所有配置均已删除 (异常情况)`);\n                 $('.config-units-container', parentDoc).empty().html('<p>已无配置</p>');\n             }\n\n        } else {\n            log(\"删除操作已取消\");\n        }\n    });\n\n     $('.toggle-all-keys-btn', $modal).off('click').on('click', function() {\n         log(\"切换所有秘钥可见性按钮点击\");\n         const $btn = $(this);\n         // Find keys only within the currently displayed unit\n         const $keyInputs = $('.config-units-container .config-key', parentDoc);\n\n         if ($keyInputs.length === 0) {\n              log(\"未找到可切换的秘钥输入框\");\n              return;\n         }\n\n         // Check the type of the first input to decide action\n         const isCurrentlyPassword = $keyInputs.first().attr('type') === 'password';\n\n         if (isCurrentlyPassword) {\n             $keyInputs.attr('type', 'text');\n             $btn.text('🔒').attr('title', '隐藏所有秘钥'); // Update icon and title\n             log(\"已显示所有秘钥\");\n         } else {\n             $keyInputs.attr('type', 'password');\n             $btn.text('👁').attr('title', '显示所有秘钥'); // Reset icon and title\n             log(\"已隐藏所有秘钥\");\n         }\n     });\n\n    // --- Tab Container Events (Delegation) ---\n    // Use delegation for tab clicks as tabs are re-rendered\n    $('.profile-tabs-container', $modal).off('click', '.profile-tab').on('click', '.profile-tab', async function() { // Use async for save\n         const $clickedTab = $(this);\n         log(`标签点击: ${$clickedTab.text().trim()} (索引: ${$clickedTab.data('index')})`);\n\n         // Prevent action if already active? Optional, but can save redundant saves/renders.\n         if ($clickedTab.hasClass('active')) {\n             log(\"点击的标签已是激活状态，无需操作。\");\n             // return; // Uncomment to prevent re-clicking active tab\n         }\n\n         // 1. Save data from the *previously* active profile (if any)\n         // Find the currently active tab *before* changing classes\n         const $currentlyActive = $('.profile-tab.active', $modal);\n         if ($currentlyActive.length > 0 && $currentlyActive[0] !== $clickedTab[0]) {\n             log(`保存切换前的配置: ${$currentlyActive.text().trim()}`);\n             await saveCurrentProfileData(); // Save the one losing focus\n         } else if ($currentlyActive.length === 0) {\n             log(\"没有前一个激活的标签可保存。\");\n         }\n\n\n         // 2. Update tab visual state\n         $('.profile-tab', parentDoc).removeClass('active').css({ // Reset all tabs in parentDoc context\n             'background': 'rgba(255, 255, 255, 0.5)',\n             'border': '1px solid rgba(58, 123, 213, 0.3)',\n             'color': '#3a7bd5'\n         });\n         $clickedTab.addClass('active').css({ // Activate the clicked one\n             'background': 'rgba(58, 123, 213, 0.2)',\n             'border': '1px solid rgba(58, 123, 213, 0.5)',\n             'color': '#1e3a8a'\n         });\n\n\n         // 3. Render the config unit for the newly activated profile\n         log(`渲染新激活的配置单元: ${$clickedTab.text().trim()}`);\n         renderConfigUnits();\n\n\n         // 4. Reset key visibility toggle button to default (hidden) state\n         //    as the content has changed.\n         $('.toggle-all-keys-btn', $modal).text('👁').attr('title', '显示所有秘钥');\n         log(\"重置秘钥可见性按钮为默认状态\");\n     });\n\n    // --- Config Unit Events (Delegation for dynamic key rows) ---\n    // Use delegation on a static parent container like '.config-units-container' or the modal itself\n    $('.config-units-container', $modal).off('click', '.add-key-btn').on('click', '.add-key-btn', function() {\n        log(\"添加秘钥按钮点击\");\n        const $keysContainer = $(this).closest('.config-unit').find('.keys-container');\n        if ($keysContainer.length) {\n            addKeyInput($keysContainer, '', true); // Add new empty input, allow removal\n            log(`添加了新的秘钥输入框`);\n             // Ensure all remove buttons are visible now that there are > 1\n             $keysContainer.find('.key-row .remove-key-btn').css('display', 'flex');\n        } else {\n             log(\"错误：找不到 .keys-container 来添加秘钥\");\n        }\n    });\n\n    $('.config-units-container', $modal).off('click', '.remove-key-btn').on('click', '.remove-key-btn', function() {\n        log(\"移除秘钥按钮点击\");\n        const $keyRowToRemove = $(this).closest('.key-row');\n        const $keysContainer = $keyRowToRemove.closest('.keys-container');\n        const $allKeyRows = $keysContainer.find('.key-row');\n\n        if ($allKeyRows.length > 1) {\n            $keyRowToRemove.remove();\n            log(`移除了一个秘钥输入框`);\n            // Hide the remove button on the last remaining row\n            if ($keysContainer.find('.key-row').length === 1) {\n                $keysContainer.find('.key-row .remove-key-btn').css('display', 'none');\n                 log(\"只剩最后一个秘钥行，隐藏其删除按钮\");\n            }\n        } else {\n            log(\"无法移除：至少需要保留一个秘钥输入框\");\n             if (typeof toastr !== 'undefined' && toastr) toastr.warning('至少需要保留一个秘钥输入框');\n        }\n    });\n\n    $('.config-units-container', $modal).off('click', '.copy-key-btn').on('click', '.copy-key-btn', function() {\n        log(\"复制秘钥按钮点击\");\n        const $keyInput = $(this).closest('.key-row').find('.config-key');\n        const keyValue = $keyInput.val();\n\n        if (keyValue) {\n            if (navigator.clipboard && navigator.clipboard.writeText) {\n                navigator.clipboard.writeText(keyValue).then(() => {\n                    if (typeof toastr !== 'undefined' && toastr) toastr.success('秘钥已复制到剪贴板');\n                    log(`秘钥通过 Clipboard API 复制成功`);\n                }).catch(err => {\n                    console.error(\"Clipboard API 复制失败:\", err);\n                    fallbackCopy(keyValue, parentDoc); // Use fallback\n                });\n            } else {\n                log(\"浏览器不支持 Clipboard API 或非安全上下文，使用 fallback\");\n                fallbackCopy(keyValue, parentDoc); // Use fallback immediately\n            }\n        } else {\n            log(\"秘钥为空，无法复制\");\n             if (typeof toastr !== 'undefined' && toastr) toastr.warning('秘钥为空，无法复制');\n        }\n    });\n\n\n    // --- Footer Save Button ---\n    $('#api-config-manager-save', $modal).off('click').on('click', async function() { // Use async\n        log(`保存按钮被点击`);\n        const $saveButton = $(this);\n        $saveButton.prop('disabled', true).css('opacity', '0.7').text('保存中...');\n\n        try {\n            // 1. Ensure data from the currently visible form is saved into the JS object\n            log(\"触发保存前，最后一次保存当前编辑数据...\");\n            await saveCurrentProfileData();\n\n            // 2. Persist the entire settings object (which now includes the latest edits)\n            log(\"调用 saveApiConfigSettings 持久化存储...\");\n            const saved = await saveApiConfigSettings(); // This function handles IDB/localStorage\n\n            if (saved) {\n                log(\"保存成功，关闭模态框\");\n                // Close modal immediately on success\n                $modal.fadeOut(250, function() {\n                    $('#api-config-manager-backdrop', parentDoc).remove(); // Remove backdrop after fade out\n                    log(\"模态框和遮罩已移除\");\n                });\n                 // Update encryption status display in case key was generated during save process\n                 $('.encryption-status', $modal).html(encryptionKey ? '🔒 已加密' : '⚠️ 未加密');\n\n            } else {\n                log(\"保存失败 (saveApiConfigSettings 返回 false)\");\n                 // Optionally keep modal open on failure\n                 if (typeof toastr !== 'undefined' && toastr) toastr.error('保存配置失败，请检查控制台');\n            }\n        } catch (error) {\n            // Catch errors from saveCurrentProfileData or saveApiConfigSettings\n            console.error(\"保存过程中发生错误:\", error);\n             if (typeof toastr !== 'undefined' && toastr) toastr.error('保存配置时发生错误，请检查控制台');\n        } finally {\n            // Always re-enable the button unless closing\n            if ($modal.is(':visible')) { // Re-enable only if modal didn't close\n                 $saveButton.prop('disabled', false).css('opacity', '1').text('保存配置');\n            }\n        }\n    });\n\n    // --- Backdrop Click to Close ---\n     // Ensure backdrop listener is attached correctly *after* backdrop exists\n     // This is handled in the button click handler where backdrop is created.\n\n    log(`所有UI事件已绑定`);\n}, 'bindUIEvents');\n\n/* --- 应用选择的配置 --- */\n// This function seems designed to be called externally or from another part of the application\n// It takes a profile object and updates specific form fields in the main document.\nconst applySelectedProfile = apiConfigErrorCatched((profile) => {\n    if (!profile || typeof profile !== 'object') {\n        log(\"应用配置失败：无效的 profile 对象\");\n        if (typeof toastr !== 'undefined' && toastr) toastr.error(\"无效的配置数据\");\n        return;\n    }\n\n    const profileName = profile.name || '[未命名配置]';\n    log(`正在应用配置: ${profileName}`);\n\n    // Basic validation\n    if (!profile.endpoint) {\n        log(`配置 \"${profileName}\" 未设置接口地址`);\n         if (typeof toastr !== 'undefined' && toastr) toastr.warning(`配置 \"${profileName}\" 未设置接口地址，无法完全应用`);\n        // Decide whether to proceed or return\n        // return; // Uncomment to stop if endpoint is missing\n    }\n     if (!profile.keys || profile.keys.length === 0) {\n         log(`配置 \"${profileName}\" 没有设置秘钥`);\n         if (typeof toastr !== 'undefined' && toastr) toastr.warning(`配置 \"${profileName}\" 未设置秘钥`);\n         // Decide whether to proceed or return\n     }\n\n    const keyToUse = profile.keys?.[0] || ''; // Use the first key, or empty string if none\n    const endpointToUse = profile.endpoint || '';\n\n     // Get parent document context for selectors\n     const parentDoc = window.parent.document;\n\n     // Identify target fields based on endpoint content (example logic)\n     // This logic might need adjustment based on the actual field IDs/classes in SillyTavern\n     let applied = false;\n     if (endpointToUse.includes('api.openai.com') || endpointToUse.includes('/v1/chat/completions')) { // Example check for OpenAI\n         const $keyInput = $('#openai_api_key', parentDoc); // Adjust ID if needed\n         const $proxyInput = $('#openai_reverse_proxy', parentDoc); // Adjust ID if needed\n\n         if ($keyInput.length && $proxyInput.length) {\n             $keyInput.val(keyToUse).trigger('input'); // Set value and trigger input event\n             $proxyInput.val(endpointToUse).trigger('input');\n             log(`已应用配置 \"${profileName}\" 到 OpenAI 字段`);\n             if (typeof toastr !== 'undefined' && toastr) toastr.success(`已应用配置: ${profileName} (OpenAI)`);\n             applied = true;\n         } else {\n              log(`未找到 OpenAI 的目标输入字段`);\n         }\n\n     } else if (endpointToUse.includes('api.anthropic.com') || endpointToUse.includes('claude')) { // Example check for Claude\n         const $keyInput = $('#claude_api_key', parentDoc); // Adjust ID if needed\n         const $proxyInput = $('#claude_reverse_proxy', parentDoc); // Adjust ID if needed\n\n          if ($keyInput.length && $proxyInput.length) {\n             $keyInput.val(keyToUse).trigger('input');\n             $proxyInput.val(endpointToUse).trigger('input');\n             log(`已应用配置 \"${profileName}\" 到 Claude 字段`);\n              if (typeof toastr !== 'undefined' && toastr) toastr.success(`已应用配置: ${profileName} (Claude)`);\n             applied = true;\n         } else {\n             log(`未找到 Claude 的目标输入字段`);\n         }\n     }\n     // Add more 'else if' blocks for other API types as needed\n\n     if (!applied) {\n         log(`已选择配置 \"${profileName}\"，但未能根据接口地址匹配到已知API类型或未找到对应输入框`);\n          if (typeof toastr !== 'undefined' && toastr) toastr.info(`已选择配置 \"${profileName}\"，但未找到匹配的API类型或字段`);\n     }\n\n     // Optional: Automatically close the manager after applying?\n     // $('#api-config-manager-modal', parentDoc).fadeOut(250);\n     // $('#api-config-manager-backdrop', parentDoc).remove();\n\n}, 'applySelectedProfile');\n\n// --- Initialization on Document Ready ---\n// Use jQuery's ready function to ensure DOM is loaded\n$(async () => { // Make the ready handler async\n    // Ensure this runs only once\n    if (window.apiConfigManagerInitialized) {\n        log(\"API Config Manager 已初始化，跳过。\");\n        return;\n    }\n    window.apiConfigManagerInitialized = true; // Set flag\n\n    log(`API Config Manager 初始化中...`);\n    const parentDoc = window.parent.document; // Cache parent document\n\n    // Check if the manager UI container already exists (e.g., script loaded multiple times)\n    if ($(`#${apiConfigManagerContainerId}`, parentDoc).length > 0) {\n        console.log(`[${apiConfigManagerName}] 容器已存在，可能已初始化。`);\n        return; // Exit if container found (simple check)\n    }\n\n    try {\n        // 1. Load Encryption Key (must happen before loading data)\n        encryptionKey = await loadEncryptionKey();\n        log(`加密密钥加载完成。状态: ${encryptionKey ? '已加载/生成' : '未启用'}`);\n\n        // 2. Open IndexedDB\n        await openDatabase(); // Sets apiConfigManagerDB if successful\n        log(`IndexedDB 状态: ${apiConfigManagerDB ? '已打开' : '不可用/打开失败'}`);\n\n        // 3. Load Settings (tries IDB then localStorage)\n        await loadApiConfigSettingsFromStorage();\n        log(`配置预加载完成。当前配置数: ${apiConfigManagerSettings.profiles?.length ?? 0}`);\n\n        // 4. Inject CSS Styles if not already present\n        if ($(`#${apiConfigManagerStylesId}`, parentDoc).length === 0) {\n            log(\"注入 CSS 样式...\");\n            // **MODIFICATION**: Added Flexbox styles for backdrop centering. Adjusted modal styles.\n            const styles = `\n                <style id=\"${apiConfigManagerStylesId}\">\n                    #api-config-manager-button {\n                        margin-left: 8px;\n                        cursor: pointer;\n                        color: #3a7bd5;\n                        transition: all 0.25s;\n                        display: inline-flex;\n                        align-items: center;\n                        font-size: 14px; /* Adjust icon size */\n                        text-shadow: 0 1px 0 rgba(255,255,255,0.7);\n                    }\n                    #api-config-manager-button:hover {\n                        color: #1e3a8a;\n                        transform: scale(1.15);\n                        text-shadow: 0 0 5px rgba(58,123,213,0.4);\n                    }\n\n                    /* --- MODIFICATION: Backdrop Styles for Flex Centering --- */\n                    #api-config-manager-backdrop {\n                        position: fixed;\n                        top: 0;\n                        left: 0;\n                        right: 0;\n                        bottom: 0;\n                        background: rgba(0,0,0,0.4);\n                        backdrop-filter: blur(5px); /* Optional blur */\n                        z-index: 9999; /* Below modal */\n                        /* Flexbox for centering */\n                        display: flex;\n                        align-items: center; /* Vertical center */\n                        justify-content: center; /* Horizontal center */\n                        /* Padding to prevent modal touching edges */\n                        padding: 15px;\n                        box-sizing: border-box;\n                        /* Fade in/out */\n                        opacity: 0;\n                        visibility: hidden;\n                        transition: opacity 0.3s ease, visibility 0s linear 0.3s;\n                    }\n                    #api-config-manager-backdrop.visible {\n                        opacity: 1;\n                        visibility: visible;\n                        transition: opacity 0.3s ease, visibility 0s linear 0s;\n                    }\n\n                    /* --- MODIFICATION: Modal Styles (remove old positioning) --- */\n                    #api-config-manager-modal {\n                        /* display: none; is handled by JS fade */\n                        /* Removed: position, top, left, transform */\n                        /* z-index, width, max-width, max-height, overflow, background, border-radius, box-shadow, padding, backdrop-filter, border, box-sizing are set inline via createProfileModal */\n                        z-index: 10000; /* Ensure it's above backdrop */\n                         /* Fade-in/Scale animation */\n                         opacity: 0;\n                         transform: scale(0.95);\n                         transition: opacity 0.25s ease-out, transform 0.25s ease-out;\n                    }\n                     #api-config-manager-modal.visible {\n                         opacity: 1;\n                         transform: scale(1);\n                    }\n\n\n                    /* General UI Styles (Keep as is) */\n                    .config-unit input { transition: all 0.25s ease; }\n                    .config-unit input:focus {\n                        border-color: #3a7bd5 !important; /* Use important if needed to override inline */\n                        box-shadow: 0 0 0 3px rgba(58,123,213,0.2) !important;\n                    }\n                    .config-key { font-family: monospace; letter-spacing: 0.5px; }\n                    button { display: flex; align-items: center; justify-content: center; transition: all 0.2s ease !important; } /* Reduced button transition */\n                    button:active { transform: scale(0.95) !important; }\n\n                    /* Scrollbar Styles */\n                    .drawer-body::-webkit-scrollbar, .profile-tabs-container::-webkit-scrollbar { width: 6px; height: 6px; }\n                    .drawer-body::-webkit-scrollbar-track, .profile-tabs-container::-webkit-scrollbar-track { background: rgba(58,123,213,0.05); border-radius: 6px; }\n                    .drawer-body::-webkit-scrollbar-thumb, .profile-tabs-container::-webkit-scrollbar-thumb { background: rgba(58,123,213,0.3); border-radius: 6px; }\n                    .drawer-body::-webkit-scrollbar-thumb:hover, .profile-tabs-container::-webkit-scrollbar-thumb:hover { background: rgba(58,123,213,0.5); }\n                    .drawer-body, .profile-tabs-container { scrollbar-width: thin; scrollbar-color: rgba(58,123,213,0.3) rgba(58,123,213,0.05); }\n\n\n                    /* Tab Styles */\n                    .profile-tabs-container { /* Styles already in createProfileModal */ }\n                    .profile-tab { /* Styles already in renderProfileTabs */ animation: slideIn 0.2s ease-out forwards; }\n                    .profile-tab:hover { background: rgba(58, 123, 213, 0.1) !important; transform: translateY(-2px); }\n                    .profile-tab.active:hover { background: rgba(58, 123, 213, 0.25) !important; }\n                    .profile-tab.over { border: 1px dashed #3a7bd5 !important; background: rgba(58, 123, 213, 0.15) !important; }\n                    .profile-tab.dragging { opacity: 0.5; border-style: dashed; }\n\n                     /* Simple slide-in animation */\n                     @keyframes slideIn { from { transform: translateY(5px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }\n                     .config-unit, .key-row { animation: slideIn 0.25s ease-out forwards; }\n\n\n                    /* Mobile Responsiveness */\n                    @media (max-width: 768px) {\n                        /* Modal itself uses max-width: 100% now, relies on backdrop padding */\n                         #api-config-manager-modal {\n                             /* width: 95% !important; /* Not needed */\n                             max-height: 95vh !important;\n                             padding: 15px !important;\n                             width: 95%; /* Or keep auto width based on content */\n                         }\n                        .drawer-body { max-height: calc(95vh - 150px) !important; /* Adjust if header/footer height changes */ }\n                        .key-row { flex-wrap: wrap; } /* Allow wrapping on small screens */\n                        .config-key { width: calc(100% - 120px) !important; min-width: 100px !important; font-size: 13px !important; } /* Adjust key input width */\n                        .key-actions { width: 110px; justify-content: flex-end; } /* Keep actions together */\n                        .key-actions button { width: 30px !important; height: 30px !important; font-size: 12px !important; }\n                        .drawer-header h3 { font-size: 14px !important; }\n                        .drawer-header .encryption-status { display: none; } /* Hide status on small screens */\n                        .profile-tab { max-width: 100px; } /* Reduce max tab width */\n                         #api-config-manager-save { font-size: 13px; padding: 8px; }\n                    }\n                     @media (max-width: 400px) {\n                         .config-key { width: calc(100% - 40px) !important; } /* Make key almost full width */\n                         .key-actions { width: auto; margin-top: 5px; justify-content: flex-start; } /* Stack actions below */\n                     }\n                </style>\n            `;\n            $('head', parentDoc).append(styles);\n             log(\"CSS 样式已注入\");\n        }\n\n        // 5. Inject the Control Button into the page (e.g., next to a title)\n        // Adjust selector as needed for SillyTavern's structure\n        const $apiConfigTitle = $('h3:contains(\"API连接配置\")', parentDoc); // Find anchor point\n        if ($apiConfigTitle.length && $(`#api-config-manager-button`, parentDoc).length === 0) {\n            log(`找到目标标题 \"${$apiConfigTitle.text()}\"，准备添加按钮`);\n            const buttonTitle = `API配置管理器 ${encryptionKey ? '(已加密)' : '(未加密)'}`;\n            // Using FontAwesome icon if available\n            const $button = $(`<a id=\"api-config-manager-button\" href=\"#\" title=\"${buttonTitle}\"><i class=\"fa-solid fa-key\" style=\"font-size: inherit;\"></i></a>`); // Inherit font size\n            $apiConfigTitle.append($button);\n             log(`按钮已添加到标题`);\n\n            // 6. Add Click Handler for the Button\n            $button.on('click', function(e) {\n                e.preventDefault();\n                log(`API 配置按钮被点击`);\n\n                // Ensure only one modal/backdrop exists\n                $('#api-config-manager-modal', parentDoc).remove();\n                $('#api-config-manager-backdrop', parentDoc).remove();\n\n                // Create backdrop first\n                const $backdrop = $(`<div id=\"api-config-manager-backdrop\"></div>`);\n                $('body', parentDoc).append($backdrop);\n\n                // Create modal (it's initially hidden with opacity 0)\n                const $modal = createProfileModal(); // Creates the modal but doesn't show it yet\n\n                // Load latest settings right before showing\n                 loadApiConfigSettingsFromStorage().then(() => {\n                     // Update encryption status display based on latest key check\n                      $('.encryption-status', $modal).html(encryptionKey ? '🔒 已加密' : '⚠️ 未加密');\n                      // Render UI components\n                     renderProfileTabs(); // Renders tabs, ensures one is active, inits D&D\n                     renderConfigUnits(); // Renders the unit for the active tab\n                     bindUIEvents(); // Binds all necessary event listeners\n\n                     // --- Show Modal and Backdrop ---\n                     // Use requestAnimationFrame to ensure styles are applied before transition starts\n                     requestAnimationFrame(() => {\n                         $backdrop.addClass('visible');\n                         $modal.addClass('visible').css('display', 'block'); // Need display: block for visibility\n                         log(`模态框和遮罩已显示`);\n                     });\n\n                     // Add backdrop click listener to close\n                     $backdrop.off('click').on('click', function(event) {\n                          // Only close if click is directly on backdrop, not modal content\n                          if (event.target === this) {\n                             log(\"Backdrop click detected, closing modal.\");\n                              $modal.removeClass('visible');\n                              $backdrop.removeClass('visible');\n                              // Remove from DOM after transition\n                              setTimeout(() => {\n                                  $modal.remove();\n                                  $backdrop.remove();\n                                  log(\"模态框和遮罩已移除 (通过Backdrop点击)\");\n                              }, 300); // Match backdrop transition duration\n                          }\n                     });\n\n                 }).catch(err => {\n                     console.error(\"Error during modal setup:\", err);\n                      if (typeof toastr !== 'undefined' && toastr) toastr.error(\"打开配置管理器时出错，请检查控制台。\");\n                       // Clean up backdrop if modal setup fails\n                       $backdrop.remove();\n                 });\n            });\n\n        } else if ($(`#api-config-manager-button`, parentDoc).length > 0) {\n             log(\"API 配置按钮已存在。\");\n        } else {\n            console.error(`[${apiConfigManagerName}] 未找到目标标题元素 \"h3:contains('API连接配置')\" 来附加按钮。`);\n             if (typeof toastr !== 'undefined' && toastr) toastr.error(\"无法将API配置按钮添加到页面。\");\n        }\n\n        log(`API Config Manager 初始化完成。`);\n\n    } catch (error) {\n        console.error(`[${apiConfigManagerName}] 初始化过程中发生严重错误:`, error);\n         if (typeof toastr !== 'undefined' && toastr) toastr.error(\"API配置管理器初始化失败，请检查控制台。\");\n         // Reset init flag if failed?\n         window.apiConfigManagerInitialized = false;\n    }\n});",
-                        "info": "@流流ming",
-                        "buttons": [],
-                        "enabled": true
                     }
                 ],
                 "characters_with_scripts": []
@@ -3381,7 +2993,9 @@
                 "bookQuotes3": false,
                 "newline": true,
                 "user": true,
-                "char": true
+                "char": true,
+                "custom_0": true,
+                "custom_1": true
             },
             "shortcuts": {
                 "asterisk": "",
@@ -3392,7 +3006,9 @@
                 "bookQuotes3": "",
                 "newline": "",
                 "user": "Alt+1",
-                "char": "Alt+2"
+                "char": "Alt+2",
+                "custom_0": "",
+                "custom_1": ""
             },
             "buttonOrder": [
                 "bookQuotes1",
@@ -3403,9 +3019,24 @@
                 "bookQuotes3",
                 "user",
                 "char",
-                "newline"
+                "newline",
+                "custom_0",
+                "custom_1"
             ],
-            "customSymbols": []
+            "customSymbols": [
+                {
+                    "name": "角色扮演模式",
+                    "symbol": "◎role",
+                    "display": "角色扮演模式",
+                    "cursorPos": "middle"
+                },
+                {
+                    "name": "创作助手模式",
+                    "symbol": "◎stop",
+                    "display": "创作助手模式",
+                    "cursorPos": "middle"
+                }
+            ]
         },
         "hide_4": {
             "enabled": true,
@@ -3419,8 +3050,8 @@
             "migration_v1_complete": true,
             "useGlobalSettings": true,
             "globalHideSettings": {
-                "hideLastN": 50,
-                "lastProcessedLength": 15,
+                "hideLastN": 20,
+                "lastProcessedLength": 4,
                 "userConfigured": true
             }
         },
@@ -4001,7 +3632,7 @@
                 "identifier": "47",
                 "name": "☑️字数+语言+格式规定(必看！！！)",
                 "role": "system",
-                "content": "{{setvar::Word_count::Minimum 1200}}{{setvar::Word_language::简体中文}}\n{{//\n修改2400→`别的数字`可以调整最大字数限制\n修改Maximum→Minimum可变成最小字数要求\n可修改“简体中文”为其他语言\n}}\n\n**Craft a dramatic masterpiece of content with {{getvar::Word_count}} words in {{getvar::Word_language}} within <theatre> tags**\n\n{{//\n注释：\n- 部分角色卡有生成格式，要么把\"<theatre>\"改成角色卡需要的格式\n要么把“within <theatre> tags”删掉，这样正文就会用前段卡要求的格式包裹\n}}\n",
+                "content": "{{setvar::Word_count::Minimum 200}}{{setvar::Word_language::简体中文}}\n{{//\n修改1200→`别的数字`可以调整最大字数限制\n修改Maximum→Minimum可变成最小字数要求\n可修改“简体中文”为其他语言\n}}\n\n**Craft a dramatic masterpiece of content with {{getvar::Word_count}} words in {{getvar::Word_language}} within <theatre> tags**\n\n{{//\n注释：\n- 部分角色卡有生成格式，要么把\"<theatre>\"改成角色卡需要的格式\n要么把“within <theatre> tags”删掉，这样正文就会用前段卡要求的格式包裹\n}}\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false,
@@ -4735,11 +4366,11 @@
                     },
                     {
                         "identifier": "7",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "90",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "91",
@@ -4963,7 +4594,7 @@
                     },
                     {
                         "identifier": "67",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "68",
@@ -4987,7 +4618,7 @@
                     },
                     {
                         "identifier": "73",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "74",
@@ -5121,7 +4752,7 @@
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
         "custom_model": "gemini-2.5-pro-exp-03-25",
-        "custom_url": "https://api.huaapi.asia/v1",
+        "custom_url": "https://api.skyi.cc/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
         "custom_include_headers": "",
