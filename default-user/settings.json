@@ -2150,25 +2150,6 @@
         "dice": {},
         "regex": [
             {
-                "id": "9b9071a5-36ce-4362-b6af-16bc7db0971a",
-                "scriptName": "隐藏思维链Plus",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<(think(?:ing|_format)?)>([\\s\\S]*?)<\\/\\1>|```think([\\s\\S]*?)```/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2,
-                    5
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
                 "id": "603909c4-e6e7-49fc-a7f8-f5dbb5db5fc2",
                 "scriptName": "昆仑图片",
                 "disabled": true,
@@ -2321,41 +2302,6 @@
                 "maxDepth": 1,
                 "markdownOnly": true,
                 "promptOnly": true
-            },
-            {
-                "id": "06755a08-58d7-4972-988f-2736e9a15cb0",
-                "scriptName": "Gemini去省略号|感叹号|星号|括号",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/(…)|(!)|(！)|(\\*{2})|(（[^）]*）)|(\\([^)]*\\))/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "70afed1d-fd6c-417d-a159-28f9b4b670d4",
-                "scriptName": "状态插件-通用正则（纯替换）",
-                "disabled": true,
-                "runOnEdit": false,
-                "findRegex": "{{getvar::状态插件-通用正则匹配}}",
-                "replaceString": "{{getvar::状态插件-通用正则替换}}",
-                "trimStrings": [],
-                "placement": [
-                    2,
-                    3
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
             },
             {
                 "id": "f6e1eba2-4e8e-4e9f-8a7d-8d36b0856636",
