@@ -2994,7 +2994,8 @@
                 "newline": true,
                 "user": true,
                 "char": true,
-                "custom_0": true
+                "custom_0": true,
+                "custom_1": true
             },
             "shortcuts": {
                 "asterisk": "",
@@ -3006,7 +3007,8 @@
                 "newline": "",
                 "user": "Alt+1",
                 "char": "Alt+2",
-                "custom_0": ""
+                "custom_0": "",
+                "custom_1": ""
             },
             "buttonOrder": [
                 "bookQuotes1",
@@ -3018,13 +3020,20 @@
                 "user",
                 "char",
                 "newline",
-                "custom_0"
+                "custom_0",
+                "custom_1"
             ],
             "customSymbols": [
                 {
                     "name": "角色扮演模式",
                     "symbol": "◎role",
                     "display": "◎role",
+                    "cursorPos": "middle"
+                },
+                {
+                    "name": "创作助手模式",
+                    "symbol": "◎stop",
+                    "display": "◎stop",
                     "cursorPos": "middle"
                 }
             ]
