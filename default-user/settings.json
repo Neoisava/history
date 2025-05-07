@@ -2206,7 +2206,7 @@
             {
                 "id": "5eb6f1e9-59e1-43cb-9786-4c9664f7b2d8",
                 "scriptName": "（斯拉）仅保留总结2",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/[\\s\\S]*?<This_round_events>([\\s\\S]*?)<\\/This_round_events>([\\s\\S]*)/gm",
                 "replaceString": "<!--\n<This_round_events>$1</This_round_events>\n-->",
@@ -2223,7 +2223,7 @@
             {
                 "id": "d29a7d8d-8ef6-4cfe-b990-fac6a42ca4a5",
                 "scriptName": "con",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": false,
                 "findRegex": "/<content>[\\s\\S]*?</content>/gm",
                 "replaceString": "",
@@ -2240,7 +2240,7 @@
             {
                 "id": "c711d11f-7d08-4fb3-84a3-496ab7dbed0c",
                 "scriptName": "（斯拉）删除think",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<think>[\\s\\S]*</think>/gm",
                 "replaceString": "",
@@ -2257,7 +2257,7 @@
             {
                 "id": "929086f7-c1a3-4b79-bb35-64226ee7ee86",
                 "scriptName": "删除cot",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<thinking>[\\s\\S]*?</thinking>/gm",
                 "replaceString": "",
