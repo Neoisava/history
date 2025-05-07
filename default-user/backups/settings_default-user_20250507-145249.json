@@ -2218,23 +2218,6 @@
                 "promptOnly": true
             },
             {
-                "id": "e6e80185-ff13-4a3a-8e26-95de3d7108f5",
-                "scriptName": "【Nya】[不发送]以前的用户输入inputs",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "^([\\s\\S]*)$",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
                 "id": "603909c4-e6e7-49fc-a7f8-f5dbb5db5fc2",
                 "scriptName": "昆仑图片",
                 "disabled": true,
@@ -2387,6 +2370,23 @@
                 "maxDepth": 1,
                 "markdownOnly": true,
                 "promptOnly": true
+            },
+            {
+                "id": "e6e80185-ff13-4a3a-8e26-95de3d7108f5",
+                "scriptName": "【Nya】[不发送]以前的用户输入inputs",
+                "findRegex": "^([\\s\\S]*)$",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
