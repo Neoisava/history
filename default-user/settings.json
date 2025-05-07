@@ -2669,7 +2669,7 @@
             {
                 "id": "84b14e5b-10d8-436d-8545-d356900e6e0f",
                 "scriptName": "隐藏表格思维链",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<tableThink_cot\\b[^>]*>[\\s\\S]*?<\\/tableThink_cot>/s",
                 "replaceString": "",
@@ -2686,7 +2686,7 @@
             {
                 "id": "59f079a9-3188-45dc-841f-63475fb4161a",
                 "scriptName": "【Nya】[不发送]以前的用户输入inputs",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "^([\\s\\S]*)$",
                 "replaceString": "",
@@ -2703,7 +2703,7 @@
             {
                 "id": "3897c1e8-4111-4737-92e2-2cacae681956",
                 "scriptName": "【Nya】……",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/……/gm",
                 "replaceString": "…",
@@ -2720,7 +2720,7 @@
             {
                 "id": "9ec5ea20-182f-4aad-a5a3-8c40033daa64",
                 "scriptName": "【Nya】banwords",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/一丝丝|不容拒绝地|低低地|低低的|几不可闻地|微不可察地|不易察索的|不易察觉地|不容拒绝的|不容忽视的|一丝|\\s*cố\\s*gắng\\s*|，嗯？|破罐子破摔的|几不可查地|又笨拙地|近乎痛苦的|胸腔的震动|每一次|每一次的|不易察觉的|生理性的|破罐子破摔般的|破罐子破摔般地|几不可查的|微不可察的|微不可查地|微不可查的|不容置喙的|禁欲色彩的|禁欲系|\\*\\*|不容置疑的|不容错认的|不容错辨的|的意味|几不可察地|几不可察的|几不可闻的|不容抗拒的|不容拒绝的|灭顶的|灭顶|近乎虔诚的|不易察测的|近乎残忍的|灭顶般的|残酷的|残忍的/gs",
                 "replaceString": "",
@@ -2737,7 +2737,7 @@
             {
                 "id": "db2dda69-06ff-483c-80c2-3d601e742c9a",
                 "scriptName": "【Nya】delect\"/\"",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/([^\\/\\s<]+)\\/(?![^<>]*>)([^\\/\\s<]+)/gm",
                 "replaceString": "$1$2",
@@ -2754,7 +2754,7 @@
             {
                 "id": "af1e0e9b-cc89-4844-82bb-3e20d9b92dc4",
                 "scriptName": "【Nya】thinking",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<disclaimer>([\\s\\S]*?)</disclaimer>|([\\s\\S]*?)</metacognition>|([\\s\\S]*?)<game>|([\\s\\S]*?)<thinking>|([\\s\\S]*?)<theatre>|([\\s\\S]*?)<game_content>|<thinking>([\\s\\S]*?)</thinking>|\\[\\s*reasoning\\s*[：:]\\s*([\\s\\S]*?\\s*\\][^\\S\\r\\n]*)|(<!--\\s*reasoning[：:]\\s*(.*?)\\s*-->(?=[\\s\\S]|$))/gm",
                 "replaceString": "",
