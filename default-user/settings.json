@@ -2479,23 +2479,6 @@
                 "promptOnly": true
             },
             {
-                "id": "06755a08-58d7-4972-988f-2736e9a15cb0",
-                "scriptName": "Gemini去省略号|感叹号|星号|括号",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/(…)|(!)|(！)|(\\*{2})|(（[^）]*）)|(\\([^)]*\\))/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
                 "id": "af782fbe-d9bd-4783-b469-2c44ae97e629",
                 "scriptName": "【Lyean】[不发送]5楼以上除摘要外文本",
                 "disabled": true,
