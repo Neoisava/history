@@ -13,7 +13,6 @@
         "Assets_SkipConfirm_2502775700152061": "false",
         "LNavLockOn": "false",
         "AlertWI_冷忧蝉.png": "true",
-        "AlertWI_default_Seraphina.png": "true",
         "WINavLockOn": "false",
         "AlertRegex_林若秋.png": "true",
         "AlertWI_修仙之路2.0.png": "true",
@@ -2629,11 +2628,29 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": false
+            },
+            {
+                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2,
+                    6
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
             "冷忧蝉.png",
-            "default_Seraphina.png",
             "林若秋.png",
             "凡人修仙传·凤起灵绝·大罗真魂都市修仙灵气复苏（地图互动RPG带系统版）.png",
             "修仙之路2.0.png"
@@ -3399,9 +3416,6 @@
         }
     ],
     "tag_map": {
-        "default_Seraphina.png": [
-            "1345561466591"
-        ],
         "undefined": [],
         "null": [],
         "冷忧蝉.png": [],
