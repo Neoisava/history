@@ -31,9 +31,7 @@
     "main_api": "openai",
     "world_info_settings": {
         "world_info": {
-            "globalSelect": [
-                "SSVGG 1.9.4"
-            ],
+            "globalSelect": [],
             "charLore": [
                 {
                     "name": "冷忧蝉",
@@ -74,6 +72,7 @@
                 {
                     "name": "修仙之路2.0",
                     "extraBooks": [
+                        "SSVGG 1.9.4",
                         "世界书：淫纹效果",
                         "人类本能世界书",
                         "针对2.5pro的瑟瑟场景"
