@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -4735,7 +4735,7 @@
                     },
                     {
                         "identifier": "7",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "90",
@@ -4743,7 +4743,7 @@
                     },
                     {
                         "identifier": "91",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "9",
