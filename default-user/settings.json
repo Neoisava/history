@@ -20,7 +20,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": "修仙之路2.0.png",
+    "active_character": null,
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2150,143 +2150,6 @@
         "dice": {},
         "regex": [
             {
-                "id": "5b1a5c51-910a-4b5a-956a-390d4f9caca6",
-                "scriptName": "部位特写",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<font[^>]*>(.|\\n)*<\\/font>/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 2,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "6251ab3d-44f4-4105-9bd2-8121171b44d9",
-                "scriptName": "移除思维链和多余标签v2",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/(.*\\</thinking>\\n|.*\\<content[\\s\\S]*?>\\n|</content>|<(/)content_format>)/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "5eb6f1e9-59e1-43cb-9786-4c9664f7b2d8",
-                "scriptName": "（斯拉）仅保留总结2",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/[\\s\\S]*?<This_round_events>([\\s\\S]*?)<\\/This_round_events>([\\s\\S]*)/gm",
-                "replaceString": "<!--\n<This_round_events>$1</This_round_events>\n-->",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "d29a7d8d-8ef6-4cfe-b990-fac6a42ca4a5",
-                "scriptName": "con",
-                "disabled": true,
-                "runOnEdit": false,
-                "findRegex": "/<content>[\\s\\S]*?</content>/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "c711d11f-7d08-4fb3-84a3-496ab7dbed0c",
-                "scriptName": "（斯拉）删除think",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<think>[\\s\\S]*</think>/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "929086f7-c1a3-4b79-bb35-64226ee7ee86",
-                "scriptName": "删除cot",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<thinking>[\\s\\S]*?</thinking>/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "2212f4ff-90fd-4d54-bcf2-43433e9921ee",
-                "scriptName": "ny-gemini-1.3.5alpha额外正则",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "```html",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "42822bc1-fd5d-4d11-b891-7dc638399cdb",
-                "scriptName": "regenimg",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": ".+?sends a picture that contains:\\s*(.+?)\\].*",
-                "replaceString": "$1",
-                "trimStrings": [],
-                "placement": [
-                    5
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
                 "id": "3e7171d3-d297-4336-9d31-e342a42db8a0",
                 "scriptName": "Human当前输入",
                 "disabled": true,
@@ -3429,7 +3292,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 3,
+                "lastProcessedLength": 1,
                 "userConfigured": true
             }
         },
@@ -3526,7 +3389,7 @@
         "seed": -1
     },
     "oai_settings": {
-        "preset_settings_openai": "斯拉预设 3.0752 Claude3.7",
+        "preset_settings_openai": null,
         "temp_openai": 1.05,
         "freq_pen_openai": -0.05,
         "pres_pen_openai": -0.03,
