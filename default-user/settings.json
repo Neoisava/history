@@ -2547,24 +2547,6 @@
                 "promptOnly": true
             },
             {
-                "id": "70afed1d-fd6c-417d-a159-28f9b4b670d4",
-                "scriptName": "状态插件-通用正则（纯替换）",
-                "disabled": true,
-                "runOnEdit": false,
-                "findRegex": "{{getvar::状态插件-通用正则匹配}}",
-                "replaceString": "{{getvar::状态插件-通用正则替换}}",
-                "trimStrings": [],
-                "placement": [
-                    2,
-                    3
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
                 "id": "f6e1eba2-4e8e-4e9f-8a7d-8d36b0856636",
                 "scriptName": "状态插件-通用正则（第1组）",
                 "disabled": true,
