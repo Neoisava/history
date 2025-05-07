@@ -2255,23 +2255,6 @@
                 "promptOnly": true
             },
             {
-                "id": "3e7171d3-d297-4336-9d31-e342a42db8a0",
-                "scriptName": "Human当前输入",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "^([\\s\\S]*)$",
-                "replaceString": "<Human当前输入>\n$1\n</Human当前输入>",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": 1,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
                 "id": "aff21896-84bc-41ee-893e-e15064bdb006",
                 "scriptName": "隐藏mygo思维链",
                 "disabled": true,
