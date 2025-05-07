@@ -2150,23 +2150,6 @@
         "dice": {},
         "regex": [
             {
-                "id": "e6e80185-ff13-4a3a-8e26-95de3d7108f5",
-                "scriptName": "【Nya】[不发送]以前的用户输入inputs",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "^([\\s\\S]*)$",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
                 "id": "603909c4-e6e7-49fc-a7f8-f5dbb5db5fc2",
                 "scriptName": "昆仑图片",
                 "disabled": true,
@@ -3050,7 +3033,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 0,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
@@ -3147,7 +3130,7 @@
         "seed": -1
     },
     "oai_settings": {
-        "preset_settings_openai": "Nya_Gemini_v1.6",
+        "preset_settings_openai": null,
         "temp_openai": 1.21,
         "freq_pen_openai": 0,
         "pres_pen_openai": 0,
