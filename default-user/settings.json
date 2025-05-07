@@ -2150,12 +2150,63 @@
         "dice": {},
         "regex": [
             {
+                "id": "335ec6c0-13e1-43fe-84a6-dc9b3a25e187",
+                "scriptName": "【Nya】thinking",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/<disclaimer>([\\s\\S]*?)</disclaimer>|([\\s\\S]*?)</metacognition>|([\\s\\S]*?)<game>|([\\s\\S]*?)<thinking>|([\\s\\S]*?)<theatre>|([\\s\\S]*?)<game_content>|<thinking>([\\s\\S]*?)</thinking>|\\[\\s*reasoning\\s*[：:]\\s*([\\s\\S]*?\\s*\\][^\\S\\r\\n]*)|(<!--\\s*reasoning[：:]\\s*(.*?)\\s*-->(?=[\\s\\S]|$))/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "afb484d5-a798-4236-8eb6-d8caa4737f79",
+                "scriptName": "【Nya】delect\"/\"",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/([^\\/\\s<]+)\\/(?![^<>]*>)([^\\/\\s<]+)/gm",
+                "replaceString": "$1$2",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
                 "id": "5b3f76fc-eead-4479-8174-029a1764f402",
                 "scriptName": "【Nya】banwords",
                 "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/一丝丝|不容拒绝地|低低地|低低的|几不可闻地|微不可察地|不易察索的|不易察觉地|不容拒绝的|不容忽视的|一丝|\\s*cố\\s*gắng\\s*|，嗯？|破罐子破摔的|几不可查地|又笨拙地|近乎痛苦的|胸腔的震动|每一次|每一次的|不易察觉的|生理性的|破罐子破摔般的|破罐子破摔般地|几不可查的|微不可察的|微不可查地|微不可查的|不容置喙的|禁欲色彩的|禁欲系|\\*\\*|不容置疑的|不容错认的|不容错辨的|的意味|几不可察地|几不可察的|几不可闻的|不容抗拒的|不容拒绝的|灭顶的|灭顶|近乎虔诚的|不易察测的|近乎残忍的|灭顶般的|残酷的|残忍的/gs",
                 "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "eb183e94-51c7-489a-b01c-52bbff6e0dc8",
+                "scriptName": "【Nya】……",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/……/gm",
+                "replaceString": "…",
                 "trimStrings": [],
                 "placement": [
                     2
@@ -2317,40 +2368,6 @@
                 "substituteRegex": 0,
                 "minDepth": null,
                 "maxDepth": 1,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "afb484d5-a798-4236-8eb6-d8caa4737f79",
-                "scriptName": "【Nya】delect\"/\"",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/([^\\/\\s<]+)\\/(?![^<>]*>)([^\\/\\s<]+)/gm",
-                "replaceString": "$1$2",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "335ec6c0-13e1-43fe-84a6-dc9b3a25e187",
-                "scriptName": "【Nya】thinking",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<disclaimer>([\\s\\S]*?)</disclaimer>|([\\s\\S]*?)</metacognition>|([\\s\\S]*?)<game>|([\\s\\S]*?)<thinking>|([\\s\\S]*?)<theatre>|([\\s\\S]*?)<game_content>|<thinking>([\\s\\S]*?)</thinking>|\\[\\s*reasoning\\s*[：:]\\s*([\\s\\S]*?\\s*\\][^\\S\\r\\n]*)|(<!--\\s*reasoning[：:]\\s*(.*?)\\s*-->(?=[\\s\\S]|$))/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": true
             }
