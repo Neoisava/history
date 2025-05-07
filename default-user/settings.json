@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -21,7 +21,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": "冷忧蝉.png",
+    "active_character": "修仙之路2.0.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -73,6 +73,7 @@
                     "name": "修仙之路2.0",
                     "extraBooks": [
                         "世界书：淫纹效果",
+                        "人类本能世界书",
                         "针对2.5pro的瑟瑟场景"
                     ]
                 }
@@ -4347,7 +4348,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 8,
                 "userConfigured": true
             }
         },
