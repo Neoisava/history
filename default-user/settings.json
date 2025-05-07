@@ -31,7 +31,9 @@
     "main_api": "openai",
     "world_info_settings": {
         "world_info": {
-            "globalSelect": [],
+            "globalSelect": [
+                "SSVGG 1.9.4"
+            ],
             "charLore": [
                 {
                     "name": "冷忧蝉",
