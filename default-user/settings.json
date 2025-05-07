@@ -902,7 +902,7 @@
             "isTableToChat": false,
             "use_main_api": false,
             "bool_ignore_del": false,
-            "confirm_before_execution": true,
+            "confirm_before_execution": false,
             "custom_max_tokens": 2048,
             "custom_top_p": 1,
             "ignore_user_sent": true,
