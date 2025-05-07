@@ -2664,6 +2664,23 @@
                 "maxDepth": 1,
                 "markdownOnly": true,
                 "promptOnly": true
+            },
+            {
+                "id": "84b14e5b-10d8-436d-8545-d356900e6e0f",
+                "scriptName": "隐藏表格思维链",
+                "findRegex": "/<tableThink_cot\\b[^>]*>[\\s\\S]*?<\\/tableThink_cot>/s",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
