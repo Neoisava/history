@@ -2188,7 +2188,7 @@
             {
                 "id": "6251ab3d-44f4-4105-9bd2-8121171b44d9",
                 "scriptName": "移除思维链和多余标签v2",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/(.*\\</thinking>\\n|.*\\<content[\\s\\S]*?>\\n|</content>|<(/)content_format>)/gs",
                 "replaceString": "",
@@ -3370,7 +3370,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 45,
+                "lastProcessedLength": 42,
                 "userConfigured": true
             }
         },
