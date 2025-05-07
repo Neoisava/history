@@ -257,7 +257,7 @@
             "target_length": 44000
         },
         "markdown_escape_strings": "",
-        "chat_truncation": 100,
+        "chat_truncation": 50,
         "streaming_fps": 30,
         "smooth_streaming": true,
         "smooth_streaming_speed": 100,
@@ -3419,8 +3419,8 @@
             "migration_v1_complete": true,
             "useGlobalSettings": true,
             "globalHideSettings": {
-                "hideLastN": 50,
-                "lastProcessedLength": 2,
+                "hideLastN": 20,
+                "lastProcessedLength": 39,
                 "userConfigured": true
             }
         },
