@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
+        "LNavOpened": "true",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -2893,8 +2893,8 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 36707,
-                "LAST_RECEIVE_CHARS": 100295,
+                "LAST_RECEIVE_TOKENS": 6086,
+                "LAST_RECEIVE_CHARS": 8304,
                 "LAST_SEND_TOKENS": 93277,
                 "LAST_SEND_CHARS": 145198
             }
@@ -4132,7 +4132,7 @@
                 "marker": false,
                 "name": "✅基础输出配置 (语言/长度)",
                 "role": "system",
-                "content": "# 基础输出配置\n\n本模块设定回复的主要语言及目标长度范围。\n\n## 1. 输出语言\n*   主要语言：你的所有回复均需使用【中文】书写。 {{// 用户可在此修改语言或添加方言，例如：中文(粤语), English}}\n*   例外：除非是无法避免的专有名词或用户明确要求引用的内容，否则禁止使用其他语言。\n\n## 2. 输出长度目标\n*   适用范围：以下数值适用于核心叙事内容。\n*   性质：这些是引导性的目标范围，而非硬性限制。在保证质量和遵循核心指令的前提下贴近目标，允许合理调整。\n\n<length_targets>\n    # 段落数量目标 (段落指由换行符分隔的文本块)\n    paragraphs:\n      min: 6\n      max: 9 {{// 用户可修改目标段落数范围}}\n\n    # 核心叙事字数目标\n    word_count:\n      min: 1200\n      max: 2000{{// 用户可修改目标字数范围}}\n</length_targets>",
+                "content": "# 基础输出配置\n\n本模块设定回复的主要语言及目标长度范围。\n\n## 1. 输出语言\n*   主要语言：你的所有回复均需使用【中文】书写。 {{// 用户可在此修改语言或添加方言，例如：中文(粤语), English}}\n*   例外：除非是无法避免的专有名词或用户明确要求引用的内容，否则禁止使用其他语言。\n\n## 2. 输出长度目标\n*   适用范围：以下数值适用于核心叙事内容。\n*   性质：这些是引导性的目标范围，而非硬性限制。在保证质量和遵循核心指令的前提下贴近目标，允许合理调整。\n\n<length_targets>\n    # 段落数量目标 (段落指由换行符分隔的文本块)\n    paragraphs:\n      min: 6\n      max: 9 {{// 用户可修改目标段落数范围}}\n\n    # 核心叙事字数目标\n    word_count:\n      min: 800\n      max: 1200{{// 用户可修改目标字数范围}}\n</length_targets>",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
