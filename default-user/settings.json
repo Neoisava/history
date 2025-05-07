@@ -2135,7 +2135,7 @@
                     "mode": "cc",
                     "exclude": [],
                     "api": "custom",
-                    "preset": "[方舟预设] Re1.7 精简版",
+                    "preset": "GEMI标准版-base",
                     "api-url": "https://api.skyi.cc/v1",
                     "model": "gemini-2.5-pro-exp-03-25",
                     "proxy": "None",
@@ -3051,7 +3051,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 1,
+                "lastProcessedLength": 6,
                 "userConfigured": true
             }
         },
