@@ -900,7 +900,7 @@
             "isAiReadTable": true,
             "isAiWriteTable": true,
             "isTableToChat": true,
-            "use_main_api": true,
+            "use_main_api": false,
             "bool_ignore_del": false,
             "confirm_before_execution": true,
             "custom_max_tokens": 2048,
@@ -3321,8 +3321,8 @@
         ],
         "IMPORTANT_USER_PRIVACY_DATA": {
             "custom_api_url": "https://api.zhizengzeng.com/v1",
-            "custom_api_key": "001f004b5c06540505500504510c56051f63764108565670300020551333260373030241375d5740157639437d245c51604a4d",
-            "custom_model_name": "deepseek-r1"
+            "custom_api_key": "001f004b5c065407065700065202550e1f4463635c715c65505424323756231356663505502140003462240e650169055c4a4d",
+            "custom_model_name": "deepseek-v3"
         },
         "spoiler_free_mode": true
     },
@@ -4189,8 +4189,8 @@
                 "content": "{继续剧情}",
                 "LAST_RECEIVE_TOKENS": 7591,
                 "LAST_RECEIVE_CHARS": 6706,
-                "LAST_SEND_TOKENS": 62456,
-                "LAST_SEND_CHARS": 78009
+                "LAST_SEND_TOKENS": 155346,
+                "LAST_SEND_CHARS": 147797
             }
         },
         "attachments": [],
