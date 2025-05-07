@@ -2666,19 +2666,19 @@
             {
                 "id": "362b8f1c-ba1c-44d8-ad44-fabc72be0686",
                 "scriptName": "【Lyean】用户输入添加tag",
+                "disabled": true,
+                "runOnEdit": true,
                 "findRegex": "^([\\s\\S]*)$",
                 "replaceString": "<inputs>\n$1\n</inputs>",
                 "trimStrings": [],
                 "placement": [
                     1
                 ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": 1
+                "maxDepth": 1,
+                "markdownOnly": true,
+                "promptOnly": true
             }
         ],
         "character_allowed_regex": [
