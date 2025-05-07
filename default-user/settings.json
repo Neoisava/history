@@ -30,9 +30,7 @@
     "main_api": "openai",
     "world_info_settings": {
         "world_info": {
-            "globalSelect": [
-                "渲染库模板"
-            ],
+            "globalSelect": [],
             "charLore": [
                 {
                     "name": "冷忧蝉",
@@ -76,6 +74,7 @@
                         "世界书：淫纹效果",
                         "人类本能世界书",
                         "渲染库模板",
+                        "道德伦理(1)",
                         "针对2.5pro的瑟瑟场景"
                     ]
                 }
