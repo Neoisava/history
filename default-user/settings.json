@@ -19,12 +19,12 @@
         "AlertRegex_修仙之路2.0.png": "true"
     },
     "currentVersion": "1.12.14",
-    "username": "林若秋",
+    "username": "林子安",
     "active_character": "林若秋.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
-    "user_avatar": "1746440806294-.png",
+    "user_avatar": "user-default.png",
     "amount_gen": 350,
     "max_context": 8192,
     "main_api": "openai",
@@ -413,11 +413,11 @@
                 "lorebook": ""
             }
         },
-        "persona_description": "{{user}}小腹子宫位置有粉色线条简单的“娇艳”淫纹，无阴毛。天生雷冰双变异灵根(未显)",
-        "persona_description_position": 0,
+        "persona_description": "{{user}}是{{char}}的亲生儿子。十岁，是一个小正太。未知原因与{{char}}分开多年，所以{{user}}不知道{{char}}是他娘亲。{{char}}也不知道{{user}}是自己苦苦寻找的【天选之人】。目前修为：练气大圆满",
+        "persona_description_position": 2,
         "persona_description_role": 0,
         "persona_description_depth": 2,
-        "persona_description_lorebook": "",
+        "persona_description_lorebook": "母性世界书",
         "persona_show_notifications": true,
         "persona_sort_order": "asc",
         "custom_stopping_strings": "[]",
@@ -4734,7 +4734,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 1,
                 "userConfigured": true
             }
         },
