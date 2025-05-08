@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -2184,23 +2184,6 @@
                 "promptOnly": true
             },
             {
-                "id": "b373ec02-c136-4a4e-b7e6-fd43e2248a1c",
-                "scriptName": "【戏剧之王】置空用户输入（去除10楼以上user的输入）",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "[\\s\\S]*",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "substituteRegex": 0,
-                "minDepth": 10,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
                 "id": "90691121-f38c-43b7-9cff-aa9487f826f4",
                 "scriptName": "【戏剧之王】user消息加<Last_inputs>",
                 "disabled": false,
@@ -2215,6 +2198,23 @@
                 "minDepth": null,
                 "maxDepth": 1,
                 "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "b373ec02-c136-4a4e-b7e6-fd43e2248a1c",
+                "scriptName": "【戏剧之王】置空用户输入（去除10楼以上user的输入）",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "[\\s\\S]*",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "substituteRegex": 0,
+                "minDepth": 10,
+                "maxDepth": null,
+                "markdownOnly": false,
                 "promptOnly": true
             },
             {
@@ -4615,7 +4615,7 @@
                     },
                     {
                         "identifier": "72",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "73",
