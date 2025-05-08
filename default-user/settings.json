@@ -3617,6 +3617,23 @@
                 "maxDepth": 1
             },
             {
+                "id": "747217d0-c80c-4a06-9104-b65fd7b2e717",
+                "scriptName": "K去除多余内容修复",
+                "findRegex": "/(<disclaimer>.*?</disclaimer>)|```start|<content>|</content>|```end|<done>|`<done>`|(<!-- consider: (.*?) -->(\\n)?)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
                 "id": "478e2302-2990-4b8d-ad74-0a33516cdb69",
                 "scriptName": "D1汇总记录折叠",
                 "findRegex": "/<Main_Quest>(.*?)</Main_Quest>/gs",
@@ -3665,23 +3682,6 @@
                 "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": 3,
-                "maxDepth": null
-            },
-            {
-                "id": "747217d0-c80c-4a06-9104-b65fd7b2e717",
-                "scriptName": "K去除多余内容修复",
-                "findRegex": "/(<disclaimer>.*?</disclaimer>)|```start|<content>|</content>|```end|<done>|`<done>`|(<!-- consider: (.*?) -->(\\n)?)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
                 "maxDepth": null
             },
             {
