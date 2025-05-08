@@ -2386,241 +2386,257 @@
             {
                 "id": "b1ad28aa-fbaf-42d1-ada9-6dfdcfbfac01",
                 "scriptName": "K添加tag",
+                "disabled": false,
+                "runOnEdit": true,
                 "findRegex": "^([\\s\\S]*)$",
                 "replaceString": "<user_input>\n$1\n</user_input>",
                 "trimStrings": [],
                 "placement": [
                     1
                 ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": 1
+                "maxDepth": 1,
+                "markdownOnly": true,
+                "promptOnly": true
             },
             {
                 "id": "747217d0-c80c-4a06-9104-b65fd7b2e717",
                 "scriptName": "K去除多余内容修复",
+                "disabled": false,
+                "runOnEdit": true,
                 "findRegex": "/(<disclaimer>.*?</disclaimer>)|```start|<content>|</content>|```end|<done>|`<done>`|(<!-- consider: (.*?) -->(\\n)?)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
             },
             {
                 "id": "4c843708-8353-4595-8142-25823df09f51",
                 "scriptName": "小总结1",
+                "disabled": true,
+                "runOnEdit": true,
                 "findRegex": "/<details>\\s*<summary>\\s*摘要\\s*<\\/summary>[\\s\\S]*?<\\/details>/gsi",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": true,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": 10
+                "maxDepth": 10,
+                "markdownOnly": false,
+                "promptOnly": true
             },
             {
                 "id": "ae9e9b76-6afc-40d7-9c63-e6ca716b5dd5",
                 "scriptName": "小总结2",
+                "disabled": true,
+                "runOnEdit": true,
                 "findRegex": "/([\\s\\S]*?<details>\\s*<summary>\\s*摘要\\s*<\\/summary>|<\\/details>[\\s\\S]*?$)/gs",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": true,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": 11,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
             },
             {
                 "id": "478e2302-2990-4b8d-ad74-0a33516cdb69",
                 "scriptName": "D1汇总记录折叠",
+                "disabled": false,
+                "runOnEdit": true,
                 "findRegex": "/<Main_Quest>(.*?)</Main_Quest>/gs",
                 "replaceString": "<details><summary>*汇总记录*</summary>\n> $1\n</details>",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
             },
             {
                 "id": "6cf87455-02e8-48a6-a042-7a49f5c9fdf0",
                 "scriptName": "D2汇总记录隐藏",
+                "disabled": true,
+                "runOnEdit": true,
                 "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": true,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
             },
             {
                 "id": "784bca38-dbd7-4e31-87f1-e6af62676e65",
                 "scriptName": "D3略三楼前汇总",
+                "disabled": false,
+                "runOnEdit": true,
                 "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": 3,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
             },
             {
                 "id": "dd454e7c-8a55-4b17-98e7-af0a04323949",
                 "scriptName": "用户输入置空[2]",
+                "disabled": false,
+                "runOnEdit": true,
                 "findRegex": "/[\\s\\S]*/gm",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     1
                 ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": 2,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
             },
             {
                 "id": "78d424d7-616b-4ff3-acc8-eb5c3936e781",
                 "scriptName": "保留摘要[10]",
+                "disabled": false,
+                "runOnEdit": false,
                 "findRegex": "([\\s\\S]*?)(<summary>摘要</summary>)([\\s\\S]*?)",
                 "replaceString": "$3",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": false,
                 "substituteRegex": 0,
                 "minDepth": 10,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
             },
             {
                 "id": "d86a4dcf-74d2-45f3-ae05-efeeece93297",
                 "scriptName": "上下文限制[20]",
+                "disabled": false,
+                "runOnEdit": true,
                 "findRegex": "/[\\s\\S]*/gm",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
-                    2,
-                    6
+                    2
                 ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": 20,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
             },
             {
                 "id": "7666661c-c23e-4e07-87d3-13129041967b",
                 "scriptName": "替绝望羊",
+                "disabled": false,
+                "runOnEdit": true,
                 "findRegex": "/<air>[\\s\\S]*?</air>/g",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
             },
             {
                 "id": "c054e616-94c9-42d6-a528-4e20f439a948",
                 "scriptName": "D1缔制表格姬隐藏",
+                "disabled": false,
+                "runOnEdit": true,
                 "findRegex": "/<tableEdit>[\\s\\S]*?</tableEdit>/g",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
             },
             {
                 "id": "45c383e3-3934-486e-a498-8ee5b62128af",
                 "scriptName": "D2缔制表格姬隐藏",
+                "disabled": false,
+                "runOnEdit": true,
                 "findRegex": "/<tableThink>[\\s\\S]*?</tableThink>/g",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
             },
             {
                 "id": "cdb31708-2cb9-4936-816d-e1331cfb8211",
                 "scriptName": "去省略号",
+                "disabled": false,
+                "runOnEdit": true,
                 "findRegex": "…",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "19929337-08d0-4781-b0b3-0330c9d17558",
+                "scriptName": "【可点击的选择框】[不发送]选择框",
+                "disabled": true,
+                "runOnEdit": false,
+                "findRegex": "/```\\S*\\s*<checkbox>.*<\\/checkbox>\\s*```/gsi",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
             }
         ],
         "character_allowed_regex": [
@@ -3387,7 +3403,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 1,
                 "userConfigured": true
             }
         },
