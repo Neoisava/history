@@ -3734,6 +3734,57 @@
                 "substituteRegex": 0,
                 "minDepth": 11,
                 "maxDepth": null
+            },
+            {
+                "id": "c054e616-94c9-42d6-a528-4e20f439a948",
+                "scriptName": "D1缔制表格姬隐藏",
+                "findRegex": "/<tableEdit>[\\s\\S]*?</tableEdit>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "45c383e3-3934-486e-a498-8ee5b62128af",
+                "scriptName": "D2缔制表格姬隐藏",
+                "findRegex": "/<tableThink>[\\s\\S]*?</tableThink>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "78d424d7-616b-4ff3-acc8-eb5c3936e781",
+                "scriptName": "保留摘要[10]",
+                "findRegex": "([\\s\\S]*?)(<summary>摘要</summary>)([\\s\\S]*?)",
+                "replaceString": "$3",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": 10,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
