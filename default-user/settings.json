@@ -32,7 +32,11 @@
     "world_info_settings": {
         "world_info": {
             "globalSelect": [
-                "A"
+                "A",
+                "SSVGG 1.9.4",
+                "世界书：淫纹效果",
+                "人类本能世界书",
+                "性情与场景书"
             ],
             "charLore": [
                 {
@@ -3393,7 +3397,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 52,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
