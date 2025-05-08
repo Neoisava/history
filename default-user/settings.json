@@ -3582,6 +3582,23 @@
                 "promptOnly": true
             },
             {
+                "id": "b1ad28aa-fbaf-42d1-ada9-6dfdcfbfac01",
+                "scriptName": "K添加tag",
+                "findRegex": "^([\\s\\S]*)$",
+                "replaceString": "<user_input>\n$1\n</user_input>",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": 1
+            },
+            {
                 "id": "b19ddef3-8da5-446b-a566-0a39dba5118d",
                 "scriptName": "字体发癫",
                 "disabled": false,
@@ -3666,23 +3683,6 @@
                 "substituteRegex": 0,
                 "minDepth": null,
                 "maxDepth": null
-            },
-            {
-                "id": "b1ad28aa-fbaf-42d1-ada9-6dfdcfbfac01",
-                "scriptName": "K添加tag",
-                "findRegex": "^([\\s\\S]*)$",
-                "replaceString": "<user_input>\n$1\n</user_input>",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": 1
             },
             {
                 "id": "7666661c-c23e-4e07-87d3-13129041967b",
