@@ -3649,6 +3649,57 @@
                 "substituteRegex": 0,
                 "minDepth": 3,
                 "maxDepth": null
+            },
+            {
+                "id": "747217d0-c80c-4a06-9104-b65fd7b2e717",
+                "scriptName": "K去除多余内容修复",
+                "findRegex": "/(<disclaimer>.*?</disclaimer>)|```start|<content>|</content>|```end|<done>|`<done>`|(<!-- consider: (.*?) -->(\\n)?)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "b1ad28aa-fbaf-42d1-ada9-6dfdcfbfac01",
+                "scriptName": "K添加tag",
+                "findRegex": "^([\\s\\S]*)$",
+                "replaceString": "<user_input>\n$1\n</user_input>",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": 1
+            },
+            {
+                "id": "7666661c-c23e-4e07-87d3-13129041967b",
+                "scriptName": "替绝望羊",
+                "findRegex": "/<air>[\\s\\S]*?</air>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
