@@ -2620,23 +2620,6 @@
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
-            },
-            {
-                "id": "19929337-08d0-4781-b0b3-0330c9d17558",
-                "scriptName": "【可点击的选择框】[不发送]选择框",
-                "disabled": true,
-                "runOnEdit": false,
-                "findRegex": "/```\\S*\\s*<checkbox>.*<\\/checkbox>\\s*```/gsi",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
             }
         ],
         "character_allowed_regex": [
