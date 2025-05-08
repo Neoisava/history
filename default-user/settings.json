@@ -4657,6 +4657,18 @@
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
+            },
+            {
+                "identifier": "f6b57e1f-7582-4d92-9563-608233db4142",
+                "system_prompt": false,
+                "enabled": false,
+                "marker": false,
+                "name": "世界书COT",
+                "role": "system",
+                "content": "",
+                "injection_position": 0,
+                "injection_depth": 4,
+                "forbid_overrides": false
             }
         ],
         "prompt_order": [
