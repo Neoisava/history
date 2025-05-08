@@ -21,7 +21,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": "修仙之路2.0.png",
+    "active_character": null,
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -31,18 +31,7 @@
     "main_api": "openai",
     "world_info_settings": {
         "world_info": {
-            "globalSelect": [
-                "SSVGG 1.9.4",
-                "世界书：淫纹效果",
-                "人类本能世界书",
-                "多维情感网络动态",
-                "性情与场景书",
-                "我们的甜蜜情话",
-                "新二次元性格对话",
-                "渲染库模板",
-                "道德伦理(1)",
-                "针对2.5pro的瑟瑟场景"
-            ],
+            "globalSelect": [],
             "charLore": [
                 {
                     "name": "冷忧蝉",
