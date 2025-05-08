@@ -3052,7 +3052,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 10,
+                "lastProcessedLength": 11,
                 "userConfigured": true
             }
         },
@@ -4591,7 +4591,7 @@
                     },
                     {
                         "identifier": "66",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "67",
@@ -4615,7 +4615,7 @@
                     },
                     {
                         "identifier": "72",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "73",
