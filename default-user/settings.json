@@ -38,6 +38,7 @@
                 "多维情感网络动态",
                 "性情与场景书",
                 "渲染库模板",
+                "绝望替身世界书",
                 "道德伦理(1)",
                 "针对2.5pro的瑟瑟场景"
             ],
@@ -2638,6 +2639,23 @@
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
+            },
+            {
+                "id": "733b8fc8-6d02-4c46-8015-6280a5d6490d",
+                "scriptName": "绝望替身",
+                "findRegex": "/<air>[\\s\\S]*?</air>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
