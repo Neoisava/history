@@ -21,7 +21,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": "修仙之路2.0.png",
+    "active_character": null,
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -3418,7 +3418,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 54,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
@@ -4821,11 +4821,11 @@
                     },
                     {
                         "identifier": "33fd4ed0-f960-4d67-a5c3-988bacb49f08",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "f6b57e1f-7582-4d92-9563-608233db4142",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "6fcbe5ba-b5e5-4af6-94a5-3eb8062a7ae5",
