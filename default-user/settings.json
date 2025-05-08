@@ -3446,6 +3446,41 @@
         "dice": {},
         "regex": [
             {
+                "id": "b19ddef3-8da5-446b-a566-0a39dba5118d",
+                "scriptName": "字体发癫",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/([，。！？；：\"\"''（）【】《》「」『』〈〉…—～·]|^)([^，。！？；：\"\"''（）【】《》「」『』〈〉…—～·]*?！)/g",
+                "replaceString": "$1**$2**",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "603909c4-e6e7-49fc-a7f8-f5dbb5db5fc2",
+                "scriptName": "昆仑图片",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/<image>([\\s\\S]*?)</image>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
                 "id": "77d09953-c7e5-4ffa-8ac0-65e7a0f35bda",
                 "scriptName": "【戏剧之王】去除10楼以下摘要文本",
                 "disabled": true,
@@ -3565,23 +3600,6 @@
                 "promptOnly": true
             },
             {
-                "id": "603909c4-e6e7-49fc-a7f8-f5dbb5db5fc2",
-                "scriptName": "昆仑图片",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<image>([\\s\\S]*?)</image>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
                 "id": "b1ad28aa-fbaf-42d1-ada9-6dfdcfbfac01",
                 "scriptName": "K添加tag",
                 "findRegex": "^([\\s\\S]*)$",
@@ -3597,24 +3615,6 @@
                 "substituteRegex": 0,
                 "minDepth": null,
                 "maxDepth": 1
-            },
-            {
-                "id": "b19ddef3-8da5-446b-a566-0a39dba5118d",
-                "scriptName": "字体发癫",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/([，。！？；：\"\"''（）【】《》「」『』〈〉…—～·]|^)([^，。！？；：\"\"''（）【】《》「」『』〈〉…—～·]*?！)/g",
-                "replaceString": "$1**$2**",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
             },
             {
                 "id": "478e2302-2990-4b8d-ad74-0a33516cdb69",
