@@ -17,11 +17,11 @@
     "groq_model": "llama3-70b-8192",
     "zerooneai_model": "yi-large",
     "custom_model": "gemini-2.5-pro-exp-03-25",
-    "custom_url": "https://api.skyi.cc/v1",
+    "custom_url": "https://api.huaapi.asia/v1",
     "custom_include_body": "",
     "custom_exclude_body": "",
     "custom_include_headers": "",
-    "custom_prompt_post_processing": "strict",
+    "custom_prompt_post_processing": "merge",
     "google_model": "gemini-1.5-pro-exp-0801",
     "temperature": 1.1,
     "frequency_penalty": 0,
@@ -1483,7 +1483,7 @@
                 },
                 {
                     "identifier": "67",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "68",
@@ -1503,7 +1503,7 @@
                 },
                 {
                     "identifier": "72",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "73",
