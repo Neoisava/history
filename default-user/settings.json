@@ -3785,6 +3785,41 @@
                 "substituteRegex": 0,
                 "minDepth": 10,
                 "maxDepth": null
+            },
+            {
+                "id": "d86a4dcf-74d2-45f3-ae05-efeeece93297",
+                "scriptName": "上下文限制[20]",
+                "findRegex": "/[\\s\\S]*/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2,
+                    6
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 20,
+                "maxDepth": null
+            },
+            {
+                "id": "dd454e7c-8a55-4b17-98e7-af0a04323949",
+                "scriptName": "用户输入置空[2]",
+                "findRegex": "/[\\s\\S]*/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 2,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
