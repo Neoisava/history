@@ -3685,6 +3685,40 @@
                 "maxDepth": null
             },
             {
+                "id": "dd454e7c-8a55-4b17-98e7-af0a04323949",
+                "scriptName": "用户输入置空[2]",
+                "findRegex": "/[\\s\\S]*/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 2,
+                "maxDepth": null
+            },
+            {
+                "id": "78d424d7-616b-4ff3-acc8-eb5c3936e781",
+                "scriptName": "保留摘要[10]",
+                "findRegex": "([\\s\\S]*?)(<summary>摘要</summary>)([\\s\\S]*?)",
+                "replaceString": "$3",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": 10,
+                "maxDepth": null
+            },
+            {
                 "id": "7666661c-c23e-4e07-87d3-13129041967b",
                 "scriptName": "替绝望羊",
                 "findRegex": "/<air>[\\s\\S]*?</air>/g",
@@ -3770,23 +3804,6 @@
                 "maxDepth": null
             },
             {
-                "id": "78d424d7-616b-4ff3-acc8-eb5c3936e781",
-                "scriptName": "保留摘要[10]",
-                "findRegex": "([\\s\\S]*?)(<summary>摘要</summary>)([\\s\\S]*?)",
-                "replaceString": "$3",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": false,
-                "substituteRegex": 0,
-                "minDepth": 10,
-                "maxDepth": null
-            },
-            {
                 "id": "d86a4dcf-74d2-45f3-ae05-efeeece93297",
                 "scriptName": "上下文限制[20]",
                 "findRegex": "/[\\s\\S]*/gm",
@@ -3802,23 +3819,6 @@
                 "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": 20,
-                "maxDepth": null
-            },
-            {
-                "id": "dd454e7c-8a55-4b17-98e7-af0a04323949",
-                "scriptName": "用户输入置空[2]",
-                "findRegex": "/[\\s\\S]*/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": 2,
                 "maxDepth": null
             }
         ],
