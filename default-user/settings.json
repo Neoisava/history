@@ -3511,9 +3511,9 @@
             "debug_enabled": false,
             "autosave_enabled": true,
             "preload_worldinfo_enabled": true,
-            "code_blocks_enabled": false,
+            "code_blocks_enabled": true,
             "world_active_enabled": true,
-            "raw_message_evaluation_enabled": false,
+            "raw_message_evaluation_enabled": true,
             "filter_message_enabled": true,
             "cache_enabled": false
         }
