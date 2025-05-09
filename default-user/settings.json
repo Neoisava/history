@@ -1792,25 +1792,6 @@
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
-            },
-            {
-                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2,
-                    6
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": false,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -2025,8 +2006,8 @@
                 "content": "{继续剧情}",
                 "LAST_RECEIVE_TOKENS": 14,
                 "LAST_RECEIVE_CHARS": 16,
-                "LAST_SEND_TOKENS": 102995,
-                "LAST_SEND_CHARS": 161766
+                "LAST_SEND_TOKENS": 108159,
+                "LAST_SEND_CHARS": 168068
             }
         },
         "attachments": [],
@@ -2562,19 +2543,19 @@
             }
         },
         "EjsTemplate": {
-            "enabled": true,
-            "generate_enabled": true,
-            "generate_loader_enabled": true,
-            "render_enabled": true,
-            "render_loader_enabled": true,
+            "enabled": false,
+            "generate_enabled": false,
+            "generate_loader_enabled": false,
+            "render_enabled": false,
+            "render_loader_enabled": false,
             "strict_enabled": false,
             "debug_enabled": false,
-            "autosave_enabled": true,
-            "preload_worldinfo_enabled": true,
-            "code_blocks_enabled": true,
-            "world_active_enabled": true,
-            "raw_message_evaluation_enabled": true,
-            "filter_message_enabled": true,
+            "autosave_enabled": false,
+            "preload_worldinfo_enabled": false,
+            "code_blocks_enabled": false,
+            "world_active_enabled": false,
+            "raw_message_evaluation_enabled": false,
+            "filter_message_enabled": false,
             "cache_enabled": false
         }
     },
