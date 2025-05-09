@@ -921,7 +921,7 @@
             "isAiReadTable": true,
             "isAiWriteTable": true,
             "isTableToChat": true,
-            "use_main_api": true,
+            "use_main_api": false,
             "bool_ignore_del": false,
             "confirm_before_execution": true,
             "custom_max_tokens": 2048,
@@ -2201,7 +2201,7 @@
         "IMPORTANT_USER_PRIVACY_DATA": {
             "custom_api_url": "https://api.zhizengzeng.com/v1",
             "custom_api_key": "001f004b5c06015350025201530201594e1666320c260d6056077261310520150964630506244002623b200e675063555d1112",
-            "custom_model_name": "deepseek-r1"
+            "custom_model_name": "deepseek-v3"
         },
         "spoiler_free_mode": true
     },
