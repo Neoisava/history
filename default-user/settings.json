@@ -697,7 +697,7 @@
             "message_template": "《dataTable operation guide》\n<rule>\n启用附属切片[表格姬]\n表格姬会在每轮(main content或npcresponse或main txt或摘要)后方进行表格操作<tableEdit>和<tableThink>\n<tableEdit>：执行insertRow/updateRow/deleteRow操作\n操作rule:\n - 未知留空\n - 用/分隔\n - 键加双引号\n - 值无引号\n - 记录内容尽可能与其他记录方式保持一致\n<tableThink>：进行表格操作思考，如当前姿态，角色信息等如何填写，并且输出总结计数值（初始0，每次回复增加1，达到10总结一次并清空成0）\n</rule>\n\n<增删改Operations> \n更新内容:updateRow(tableIndex:num,rowIndex:num,{[colIndex:num]:str/num,…})\n删除整行:deleteRow(tableIndex:num,rowIndex:num)\n插入整行:insertRow(tableIndex:num,{[colIndex:num]:str/num,…})\n</增删改Operations>\n\n<structure>\n0:当前状态-角色名/穿着姿态[上装&下装&脚]/动作姿态[发起者&方向&动作]/手持物品/备注\n1:角色信息-角色名/体征/性格/职业/爱好/备注\n2:好感度-角色名/对<user>关系/对<user>好感/备注\n3:任务约定-角色/任务/期限/备注\n4:能力-拥有人/能力名/能力描述/效果&意义&代价/来源/备注\n5:物品-持有人/物品名/物品描述/效果&意义&代价/来源/备注\n9:表格姬-时间段/总结内容/备注\n</structure>\n\n<example>\n<tableThink>\n<!--\n计数值为0，无需总结。\n根据上下文，需要编辑当前姿态，bob应该处于即将接过咖啡的姿态，身上穿着西装，还有需要更新bob的好感度\n-->\n</tableThink>\n<tableEdit>\n<!--\n//强制清理非当前地点角色状态\ndeleteRow(0, findAllRowsWhere(0, row => !ifCurrentLocationCharacters(row))\nupdateRow(0,{\"0\":\"Alice\",\"1\":\"衬衫/西裤/皮鞋\",\"2\":\"Alice/向Bob/递咖啡杯\",\"3\":\"咖啡杯\",\"4\":\"咖啡杯内有毒\"})\n-->\n</tableEdit>\n</example>\n\nStored memory table contents:<store>\n{{tableData}}\n</store>",
             "clear_up_stairs": 20,
             "custom_temperature": 0.9,
-            "isExtensionAble": true,
+            "isExtensionAble": false,
             "isAiReadTable": true,
             "isAiWriteTable": true,
             "isTableToChat": false,
