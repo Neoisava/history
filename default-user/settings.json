@@ -921,7 +921,7 @@
             "isAiReadTable": true,
             "isAiWriteTable": true,
             "isTableToChat": true,
-            "use_main_api": true,
+            "use_main_api": false,
             "bool_ignore_del": false,
             "confirm_before_execution": true,
             "custom_max_tokens": 2048,
@@ -2945,8 +2945,8 @@
                 "content": "{继续剧情}",
                 "LAST_RECEIVE_TOKENS": 36423,
                 "LAST_RECEIVE_CHARS": 100170,
-                "LAST_SEND_TOKENS": 78561,
-                "LAST_SEND_CHARS": 124924
+                "LAST_SEND_TOKENS": 83889,
+                "LAST_SEND_CHARS": 133753
             }
         },
         "attachments": [],
@@ -3477,7 +3477,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 238,
+                "lastProcessedLength": 239,
                 "userConfigured": true
             }
         },
@@ -3583,7 +3583,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": true,
+        "stream_openai": false,
         "openai_max_context": 500000,
         "openai_max_tokens": 52000,
         "wrap_in_quotes": false,
