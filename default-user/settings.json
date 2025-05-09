@@ -613,8 +613,8 @@
             "isExtensionAble": false,
             "isAiReadTable": true,
             "isAiWriteTable": true,
-            "isTableToChat": true,
-            "use_main_api": true,
+            "isTableToChat": false,
+            "use_main_api": false,
             "bool_ignore_del": false,
             "confirm_before_execution": true,
             "custom_max_tokens": 4096,
@@ -641,7 +641,9 @@
         "table_selected_sheets": [
             "template_F172qY2B",
             "template_CfZmhBvg",
-            "template_crIPxM0f"
+            "template_crIPxM0f",
+            "template_tbXYfWns",
+            "template_hkxZsL4S"
         ],
         "table_database_templates": [
             {
@@ -1141,6 +1143,118 @@
                 ],
                 "config": {
                     "toChat": true,
+                    "enable": true
+                }
+            },
+            {
+                "uid": "template_tbXYfWns",
+                "name": "用户偏好",
+                "domain": "global",
+                "type": "dynamic",
+                "enable": true,
+                "required": false,
+                "tochat": true,
+                "hashSheet": [
+                    [
+                        "cell_undefined_of9aK4l65MNQIxVU",
+                        "cell_undefined_3W7v4S0sz6VN5wcG",
+                        "cell_undefined_Bgb1Btu89tPmeSyJ",
+                        "cell_undefined_Q5wv03OPzHMRfreU"
+                    ]
+                ],
+                "cellHistory": [
+                    {
+                        "uid": "cell_undefined_of9aK4l65MNQIxVU",
+                        "type": "sheet_origin",
+                        "status": "",
+                        "coordUid": "coo_xojgjEhvrHbFy49",
+                        "data": {
+                            "note": "tableIndex: 3 - 用户偏好 (User Preferences)\n说明:\n本表是动态追踪并记录用户偏好的核心档案。它的主要目的是让AI能够主动学习、识别并适应用户的个性化需求和喜好，从而提供最贴心、最符合用户心意的内容。\n核心机制：AI主动识别与推断。AI必须持续分析用户的每一次互动——包括但不限于用户的直接指令、选择偏好、对特定情节或描写的反应（积极或消极）、提出的问题、以及任何明确或隐含表达出来的喜好——来主动识别、推断、记录并更新用户的偏好。\n识别范围（包括但不限于）：\n性癖/特别偏好: 如特定的身体部位偏好、情节偏好（如束缚、支配/服从、特定场景）、特殊互动方式、禁忌点等。\n文风偏好: 如喜欢的叙事风格（细腻、直白、文艺、幽默）、描写侧重（心理、动作、环境）、对话风格、以及特定的写作模式标签（如“青春：笨拙的温柔”）。\n情节走向偏好: 如对故事结局的倾向（HE、BE、开放式）、情节节奏（快热、慢热）、冲突激烈程度、是否喜欢反转或意料之外的发展等。\n性爱程度偏好: 如对NSFW内容的详细度、露骨程度、情感与肉体描写的比例、特定行为的接受度、以及整体的强度偏好（温柔、激烈等）。\n其他偏好: 如喜欢的角色类型、世界观设定偏好、特定主题（冒险、日常、悬疑等）的喜好度、对AI扮演角色的期望等。\n作用: 本表记录的所有偏好项，都将作为AI生成内容时的重要指导依据，旨在最大化地贴合用户的个人口味，创造令用户满意和愉悦的体验。",
+                            "initNode": "表格初始状态通常为空，或仅包含极少数基于通用情况推测的基础偏好（例如，默认故事节奏为“中等”推测而来）。\nAI从与用户的第一次互动开始，就启动偏好识别和学习机制。",
+                            "deleteNode": "触发时机:\n当AI有足够强的证据（例如，用户持续、明确地表达反对或厌恶，或行为模式发生根本性转变）表明某个已记录的偏好已不再适用或用户已不再喜欢时。基于推断的删除应谨慎，建议置信度非常高时才执行。\n当用户明确指令要求删除某个偏好时。\n操作: AI自动删除 tableIndex: 3 中对应的行。\n（可选）记录: 在删除前，可以在内部日志或备注中记录删除的原因，以便追踪用户偏好的长期变化。",
+                            "updateNode": "触发时机:\n当AI观察到用户对某个已记录偏好表现出变化（例如，程度加深/减弱、细节修正、态度转变）时。\n当用户明确提出修改某个偏好时。\n当AI通过持续学习，对某个偏好的理解更加深入或精确时。\n操作: AI自动更新 tableIndex: 3 中对应的行。\n内容填充: 修改 colIndex: 1 (偏好值) 以反映新的偏好状态，并必须在 colIndex: 2 (备注) 中说明更新的原因和依据。例如：“用户要求增加强度”、“观察到用户近期对某风格反应更积极增强偏好记录”、“用户澄清偏好细节：非完全拒绝而是需特定情境”。",
+                            "insertNode": "触发时机: 当AI通过分析用户互动，首次识别或推断出一个明确的、新的、且尚未记录在案的用户偏好时。这可能源于用户的直接说明，也可能基于用户一贯的行为模式或对特定内容的持续积极/消极反馈。\n操作: AI自动在 tableIndex: 3 中插入一个新行。\n内容填充:\ncolIndex: 0 (偏好项): 清晰、具体地命名被识别出的偏好项。例如：“性癖:轻度捆绑”、“文风:心理描写优先”、“情节:倾向HE”、“NSFW强度:偏好温柔细节”。\ncolIndex: 1 (偏好值): 给出该偏好的具体设定或描述。例如：“轻度”、“优先”、“倾向HE”、“温柔细节”。\ncolIndex: 2 (备注): 记录AI做出此判断的依据和置信度。必须说明是基于用户的“明确说明”还是“推断”。若是推断，应简述推断来源，例如：“根据用户多次选择含捆绑元素的选项推断置信度中等”、“用户明确要求此文风”、“分析用户对多个结局的反馈倾向HE置信度高”、“根据用户对激烈情节的回避反应推断置信度高”。"
+                        },
+                        "targetUid": ""
+                    },
+                    {
+                        "uid": "cell_undefined_3W7v4S0sz6VN5wcG",
+                        "type": "column_header",
+                        "status": "",
+                        "coordUid": "coo_shL1uZtcxfdzKJ3",
+                        "data": {
+                            "value": "偏好项"
+                        },
+                        "targetUid": ""
+                    },
+                    {
+                        "uid": "cell_undefined_Bgb1Btu89tPmeSyJ",
+                        "type": "column_header",
+                        "status": "",
+                        "coordUid": "coo_jYxYIxeYEcOqIYH",
+                        "data": {
+                            "value": "偏好值"
+                        },
+                        "targetUid": ""
+                    },
+                    {
+                        "uid": "cell_undefined_Q5wv03OPzHMRfreU",
+                        "type": "column_header",
+                        "status": "",
+                        "coordUid": "coo_QNhlY7ACKlZFz9E",
+                        "data": {
+                            "value": "备注"
+                        },
+                        "targetUid": ""
+                    }
+                ],
+                "config": {
+                    "toChat": true,
+                    "enable": true
+                }
+            },
+            {
+                "uid": "template_hkxZsL4S",
+                "name": "正文尾部",
+                "domain": "global",
+                "type": "dynamic",
+                "enable": true,
+                "required": false,
+                "tochat": true,
+                "hashSheet": [
+                    [
+                        "cell_undefined_vV4tmrDltdndbRN8",
+                        "cell_undefined_cx9LllFM0HHMSBHl"
+                    ]
+                ],
+                "cellHistory": [
+                    {
+                        "uid": "cell_undefined_vV4tmrDltdndbRN8",
+                        "type": "sheet_origin",
+                        "status": "",
+                        "coordUid": "coo_20TWEkUPGyrSuZG",
+                        "data": {
+                            "note": "tableIndex: 4 - 正文尾部\n说明:\n本表始终只有一行和一列，用于记录每次 content 或 main_txt 中正文内容的最后30-50个字，以确保下次正文创作的连贯性。\n列说明:\ncolIndex: 0 (尾部内容): 记录正文内容的最后30-50个字。",
+                            "initNode": "表格初始时包含一行，内容为“初始尾部内容”。",
+                            "deleteNode": "不适用，始终只有一行。",
+                            "updateNode": "每次生成新的 content 后，更新这一行的内容为新的尾部内容。",
+                            "insertNode": "不适用，始终只有一行。"
+                        },
+                        "targetUid": ""
+                    },
+                    {
+                        "uid": "cell_undefined_cx9LllFM0HHMSBHl",
+                        "type": "column_header",
+                        "status": "",
+                        "coordUid": "coo_bfJbnWzfFsCUJfS",
+                        "data": {
+                            "value": "尾部内容"
+                        },
+                        "targetUid": ""
+                    }
+                ],
+                "config": {
+                    "toChat": false,
                     "enable": true
                 }
             }
@@ -2440,7 +2554,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 224,
+                "lastProcessedLength": 225,
                 "userConfigured": true
             }
         },
