@@ -2128,6 +2128,78 @@
                     "tochat": true,
                     "enable": true
                 }
+            },
+            {
+                "uid": "template_FczBlNVm",
+                "name": "新模板_lNVm",
+                "domain": "global",
+                "type": "dynamic",
+                "enable": false,
+                "required": false,
+                "tochat": true,
+                "triggerSend": false,
+                "triggerSendDeep": 1,
+                "hashSheet": [
+                    [
+                        "cell_undefined_BW1Iz31hrHKyK0V4",
+                        "cell_undefined_zV5CYSaf7lJBMRKv"
+                    ],
+                    [
+                        "cell_undefined_KuiGtDECG6uwJPHB",
+                        "cell_undefined_V7DgpnYwrqT3ubV8"
+                    ]
+                ],
+                "cellHistory": [
+                    {
+                        "uid": "cell_undefined_BW1Iz31hrHKyK0V4",
+                        "type": "sheet_origin",
+                        "status": "",
+                        "coordUid": "coo_XM8fbXsJAfDeeC1",
+                        "data": {},
+                        "targetUid": ""
+                    },
+                    {
+                        "uid": "cell_undefined_zV5CYSaf7lJBMRKv",
+                        "type": "column_header",
+                        "status": "",
+                        "coordUid": "coo_60dNnV1saXLR4nY",
+                        "data": {},
+                        "targetUid": ""
+                    },
+                    {
+                        "uid": "cell_undefined_KuiGtDECG6uwJPHB",
+                        "type": "row_header",
+                        "status": "",
+                        "coordUid": "coo_iGfo3mAnKZrohif",
+                        "data": {},
+                        "targetUid": ""
+                    },
+                    {
+                        "uid": "cell_undefined_V7DgpnYwrqT3ubV8",
+                        "type": "cell",
+                        "status": "",
+                        "coordUid": "coo_g0oWATZZ7hQDUwD",
+                        "data": {},
+                        "targetUid": ""
+                    }
+                ],
+                "config": {
+                    "toChat": true,
+                    "useCustomStyle": false,
+                    "triggerSendToChat": false,
+                    "alternateTable": false,
+                    "alternateLevel": 0,
+                    "skipTop": false,
+                    "selectedCustomStyleKey": "",
+                    "customStyles": {
+                        "自定义样式": {
+                            "mode": "regex",
+                            "basedOn": "html",
+                            "regex": "/(^[\\s\\S]*$)/g",
+                            "replace": "$1"
+                        }
+                    }
+                }
             }
         ],
         "IMPORTANT_USER_PRIVACY_DATA": {
