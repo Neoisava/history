@@ -899,7 +899,7 @@
             "isExtensionAble": true,
             "isAiReadTable": true,
             "isAiWriteTable": true,
-            "isTableToChat": true,
+            "isTableToChat": false,
             "use_main_api": false,
             "bool_ignore_del": false,
             "confirm_before_execution": true,
@@ -3425,7 +3425,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 218,
                 "userConfigured": true
             }
         },
