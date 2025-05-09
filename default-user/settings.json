@@ -2497,7 +2497,6 @@
                 "newline": true,
                 "user": true,
                 "char": true,
-                "custom_0": false,
                 "custom_1": false
             },
             "shortcuts": {
@@ -2510,7 +2509,6 @@
                 "newline": "",
                 "user": "Alt+1",
                 "char": "Alt+2",
-                "custom_0": "",
                 "custom_1": ""
             },
             "buttonOrder": [
@@ -2523,23 +2521,9 @@
                 "user",
                 "char",
                 "newline",
-                "custom_0",
                 "custom_1"
             ],
-            "customSymbols": [
-                {
-                    "name": "角色扮演模式",
-                    "symbol": "◎role",
-                    "display": "角色扮演模式",
-                    "cursorPos": "middle"
-                },
-                {
-                    "name": "创作助手模式",
-                    "symbol": "◎stop",
-                    "display": "创作助手模式",
-                    "cursorPos": "middle"
-                }
-            ]
+            "customSymbols": []
         },
         "hide_4": {
             "enabled": true,
