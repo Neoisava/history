@@ -11,7 +11,7 @@
         "world_info_sort_order": "6",
         "NavLockOn": "false",
         "Assets_SkipConfirm_2502775700152061": "false",
-        "LNavLockOn": "true",
+        "LNavLockOn": "false",
         "AlertWI_冷忧蝉.png": "true",
         "WINavLockOn": "false",
         "AlertRegex_林若秋.png": "true",
@@ -31,18 +31,7 @@
     "main_api": "openai",
     "world_info_settings": {
         "world_info": {
-            "globalSelect": [
-                "SSVGG 1.9.4",
-                "世界书：淫纹效果",
-                "人类本能世界书",
-                "多维情感网络动态",
-                "性情与场景书",
-                "我们的甜蜜情话",
-                "新二次元性格对话",
-                "渲染库模板",
-                "道德伦理(1)",
-                "针对2.5pro的瑟瑟场景"
-            ],
+            "globalSelect": [],
             "charLore": [
                 {
                     "name": "冷忧蝉",
@@ -77,6 +66,13 @@
                         "母性世界书",
                         "渲染库模板",
                         "道德伦理(1)",
+                        "针对2.5pro的瑟瑟场景"
+                    ]
+                },
+                {
+                    "name": "修仙之路2.0",
+                    "extraBooks": [
+                        "人类本能世界书",
                         "针对2.5pro的瑟瑟场景"
                     ]
                 }
@@ -701,7 +697,7 @@
             "message_template": "《dataTable operation guide》\n<rule>\n启用附属切片[表格姬]\n表格姬会在每轮(main content或npcresponse或main txt或摘要)后方进行表格操作<tableEdit>和<tableThink>\n<tableEdit>：执行insertRow/updateRow/deleteRow操作\n操作rule:\n - 未知留空\n - 用/分隔\n - 键加双引号\n - 值无引号\n - 记录内容尽可能与其他记录方式保持一致\n<tableThink>：进行表格操作思考，如当前姿态，角色信息等如何填写，并且输出总结计数值（初始0，每次回复增加1，达到10总结一次并清空成0）\n</rule>\n\n<增删改Operations> \n更新内容:updateRow(tableIndex:num,rowIndex:num,{[colIndex:num]:str/num,…})\n删除整行:deleteRow(tableIndex:num,rowIndex:num)\n插入整行:insertRow(tableIndex:num,{[colIndex:num]:str/num,…})\n</增删改Operations>\n\n<structure>\n0:当前状态-角色名/穿着姿态[上装&下装&脚]/动作姿态[发起者&方向&动作]/手持物品/备注\n1:角色信息-角色名/体征/性格/职业/爱好/备注\n2:好感度-角色名/对<user>关系/对<user>好感/备注\n3:任务约定-角色/任务/期限/备注\n4:能力-拥有人/能力名/能力描述/效果&意义&代价/来源/备注\n5:物品-持有人/物品名/物品描述/效果&意义&代价/来源/备注\n9:表格姬-时间段/总结内容/备注\n</structure>\n\n<example>\n<tableThink>\n<!--\n计数值为0，无需总结。\n根据上下文，需要编辑当前姿态，bob应该处于即将接过咖啡的姿态，身上穿着西装，还有需要更新bob的好感度\n-->\n</tableThink>\n<tableEdit>\n<!--\n//强制清理非当前地点角色状态\ndeleteRow(0, findAllRowsWhere(0, row => !ifCurrentLocationCharacters(row))\nupdateRow(0,{\"0\":\"Alice\",\"1\":\"衬衫/西裤/皮鞋\",\"2\":\"Alice/向Bob/递咖啡杯\",\"3\":\"咖啡杯\",\"4\":\"咖啡杯内有毒\"})\n-->\n</tableEdit>\n</example>\n\nStored memory table contents:<store>\n{{tableData}}\n</store>",
             "clear_up_stairs": 20,
             "custom_temperature": 0.9,
-            "isExtensionAble": true,
+            "isExtensionAble": false,
             "isAiReadTable": true,
             "isAiWriteTable": true,
             "isTableToChat": false,
@@ -3401,8 +3397,8 @@
             "migration_v1_complete": true,
             "useGlobalSettings": true,
             "globalHideSettings": {
-                "hideLastN": 20,
-                "lastProcessedLength": 53,
+                "hideLastN": 10,
+                "lastProcessedLength": 164,
                 "userConfigured": true
             }
         },
@@ -4805,27 +4801,27 @@
                     },
                     {
                         "identifier": "33fd4ed0-f960-4d67-a5c3-988bacb49f08",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "f6b57e1f-7582-4d92-9563-608233db4142",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "6fcbe5ba-b5e5-4af6-94a5-3eb8062a7ae5",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "dc4d00b6-d409-44e8-abf8-767abef64d5f",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "c2f574eb-d893-4dd3-abc0-0a37c236b5c7",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "ea49939d-3b30-4065-a540-450ae4cb7c6f",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "cb6c2c80-8528-43ca-acb3-795e795db780",
@@ -4833,11 +4829,11 @@
                     },
                     {
                         "identifier": "1e405b9d-6c0c-472e-abcc-dfae58bc84be",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "9549b3e7-a8a8-48f5-904d-b9f40784fc03",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "046501f1-6394-44a4-aa55-2d6326e20cb9",
@@ -4849,7 +4845,7 @@
                     },
                     {
                         "identifier": "a90860ee-b332-48ce-9d0a-62b1d27b5fc9",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "c7a0c690-db4f-4c91-bff3-ca8259d2e58e",
@@ -4857,11 +4853,11 @@
                     },
                     {
                         "identifier": "c38aa062-5c9a-4c02-ad7b-c5a9802caa56",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "8dcdbbef-35d9-408a-83d5-980d3ffa0d4a",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "4824e52a-7740-4ca9-914a-ef7c96f73256",
@@ -5194,7 +5190,7 @@
         "function_calling": true,
         "names_behavior": 0,
         "continue_postfix": " ",
-        "custom_prompt_post_processing": "strict",
+        "custom_prompt_post_processing": "merge",
         "show_thoughts": true,
         "reasoning_effort": "medium",
         "enable_web_search": false,
