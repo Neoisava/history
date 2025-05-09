@@ -318,7 +318,7 @@
         "enableLabMode": false,
         "prefer_character_prompt": true,
         "prefer_character_jailbreak": true,
-        "quick_continue": true,
+        "quick_continue": false,
         "quick_impersonate": false,
         "continue_on_send": false,
         "trim_spaces": true,
@@ -2538,7 +2538,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 249,
+                "lastProcessedLength": 250,
                 "userConfigured": true
             }
         },
