@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "false",
-        "NavOpened": "false",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -72,6 +72,7 @@
                 {
                     "name": "修仙之路2.0",
                     "extraBooks": [
+                        "_性爱世界书",
                         "人类本能世界书",
                         "针对2.5pro的瑟瑟场景"
                     ]
@@ -636,7 +637,7 @@
             "table_to_chat_can_edit": false,
             "table_to_chat_mode": "context_bottom",
             "to_chat_container": "<div class=\"table-preview-bar\">\n$0\n</div>\n\n<style>\n.table-preview-bar {; \n    background-color: #CEF8E7;\n    padding: 0 8px;\n    border-radius: 10px;\n    color: black;\n    font-size: 1.4rem;\n}\n</style>",
-            "alternate_switch": true
+            "alternate_switch": false
         },
         "table_selected_sheets": [
             "template_Eh7ZQIlP",
@@ -2004,10 +2005,10 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 14,
-                "LAST_RECEIVE_CHARS": 16,
-                "LAST_SEND_TOKENS": 108159,
-                "LAST_SEND_CHARS": 168068
+                "LAST_RECEIVE_TOKENS": 39161,
+                "LAST_RECEIVE_CHARS": 103252,
+                "LAST_SEND_TOKENS": 143307,
+                "LAST_SEND_CHARS": 209396
             }
         },
         "attachments": [],
@@ -2538,24 +2539,24 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 253,
+                "lastProcessedLength": 349,
                 "userConfigured": true
             }
         },
         "EjsTemplate": {
-            "enabled": false,
-            "generate_enabled": false,
-            "generate_loader_enabled": false,
-            "render_enabled": false,
-            "render_loader_enabled": false,
+            "enabled": true,
+            "generate_enabled": true,
+            "generate_loader_enabled": true,
+            "render_enabled": true,
+            "render_loader_enabled": true,
             "strict_enabled": false,
             "debug_enabled": false,
             "autosave_enabled": false,
-            "preload_worldinfo_enabled": false,
-            "code_blocks_enabled": false,
+            "preload_worldinfo_enabled": true,
+            "code_blocks_enabled": true,
             "world_active_enabled": false,
             "raw_message_evaluation_enabled": false,
-            "filter_message_enabled": false,
+            "filter_message_enabled": true,
             "cache_enabled": false
         }
     },
