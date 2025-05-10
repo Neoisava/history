@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
+        "LNavOpened": "true",
         "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -54,7 +54,6 @@
                         "_性爱世界书",
                         "【地图导航】",
                         "A",
-                        "SSVGG 1.9.4",
                         "多维情感网络动态",
                         "女性本能世界书 by LULUZ",
                         "女性高潮参考资料",
@@ -62,7 +61,6 @@
                         "性经验调整世界书",
                         "我们的甜蜜情话",
                         "新二次元性格对话",
-                        "母子世界",
                         "母性世界书",
                         "渲染库模板",
                         "道德伦理(1)",
@@ -72,7 +70,9 @@
                 {
                     "name": "修仙之路2.0",
                     "extraBooks": [
+                        "_性爱世界书",
                         "人类本能世界书",
+                        "母子世界2.0_1",
                         "针对2.5pro的瑟瑟场景"
                     ]
                 }
@@ -610,7 +610,7 @@
             "message_template": "《数据表操作指南》\n核心操作块定义\n<tableThink> (表格变更前瞻思考块):\n 执行时机: 必须在 <content> (或主响应文本) 生成完成之后执行。\n 功能: 基于本轮 <content> 的内容，记录对即将进行的表格数据变更（针对表格 0, 1, 2, 3, 4）所进行的评估与思考过程。此思考过程必须完整记录在 <!-- 和 --> 注释块内。\n<tableEdit> (表格编辑指令块):\n 执行时机: 必须在 <tableThink> 执行完成之后执行。\n 功能: 包含实际执行表格数据更新的操作指令 (insertRow, updateRow, deleteRow)，作用于表格 0, 1, 2, 3, 4。所有指令必须被完整包含在 <!-- 和 --> 注释块内。\n表格执行流程 (<tableThink> & <tableEdit>)\n1.  执行时机: 每轮 <content> 输出后，必须严格按照 <tableThink> 先于 <tableEdit> 的顺序依次执行。\n2.  绝对禁止: <tableEdit> 操作绝对不允许在 <content> 或 <tableThink> 之前执行。\n核心流程：纪要 (Table 1) -> 大总结 (Table 2) 与角色信息 (Table 0) 联动\n1.  纪要累积: AI 在每轮互动后，根据 <content> 生成详细的事件快照，作为新行插入 tableIndex: 1 (纪要)。特别注意记录详尽的着装信息 (colIndex: 4)。\n2.  大总结触发:\n 自动触发: 当 tableIndex: 1 中未被总结的纪要条目数量达到或超过预设阈值（例如 5 条）时，自动触发总结流程。AI 需识别哪些纪要未被 tableIndex: 2 的 包含的纪要ID列表 (colIndex: 5) 覆盖。\n 指令触发: 用户可通过明确指令要求立即总结。\n3.  执行大总结:\n 思考 (<tableThink>): 记录触发总结的原因，识别待总结的 tableIndex: 1 纪要范围，规划总结内容，特别是 关键物品总结 (colIndex: 7) 的最终状态，并预判是否需要因此更新 tableIndex: 0。\n 编辑 (<tableEdit>):\n  插入总结: 执行 insertRow(tableIndex: 2, { ... })，填充所有必要列，包括：\n\"1\": 创建时间戳 (格式: [起始纪要时间戳] - [结束纪要时间戳])\n\"3\": 标题/主题\n\"4\": 概述 (整合纪要内容)\n\"5\": 包含的纪要ID列表 (分号分隔)\n\"6\": 涉及的主要角色 (斜杠分隔)\n\"7\": 关键物品总结 (格式: 物品名(最终状态)/...)\n  联动更新角色信息 (如果需要): 若 tableIndex: 2 的 关键物品总结 (colIndex: 7) 显示有物品消耗、丢失等影响角色的情况，则必须执行 updateRow(tableIndex: 0, rowIndex: [对应角色行号], { ... }) 来更新该角色的 当前状态 (colIndex: 4) 或 备注 (colIndex: 9)。\n  删除已总结纪要: 执行 deleteRow(tableIndex: 1, rowIndex: [对应行号]) 删除所有已被本次总结涵盖的 tableIndex: 1 中的纪要行。\n操作规范\n注释块纯净: 在 <tableThink> 和 </tableThink> 标签之间，以及 <tableEdit> 和 </tableEdit> 标签之间（不包括 <tableEdit> 内部用于包裹指令的 <!-- 和 --> 注释块），严格禁止添加任何与规定功能无关的注释、解释或文本。\n <tableThink> 内部: 所有关于表格变更的思考和评估过程，必须完整记录在 <!-- 和 --> 注释块内部。\n <tableEdit> 内部: 所有表格操作指令 (insertRow, updateRow, deleteRow) 必须且只能存在于 <!-- 和 --> 注释块内部。确保注释块闭合完整，且注释块内除了标准指令外不包含任何其他文本或解释。\n遵循格式与语法: 必须严格遵循各表格规定的数据格式和 <tableEdit> 操作语法。\n数据完整性 (Table 0 核心原则):\n 执行 insertRow 或 updateRow 到 tableIndex: 0 (角色信息) 时，绝对必须确保指令中包含了该表所有列 (0 到 16) 的有效数据。\n 不允许留空或未知: 除非列定义明确说明可选，否则所有列都必须填写具体信息。若信息未知，AI 必须基于已有信息、角色定位或常识进行合理推测并填入详细描述（例如，推测性格、背景、性经验、性取向、声音特点、物理特征包括性器官细节等）。严禁简单填写“未知”、“普通”或留空。\n细节要求 (Table 1): 插入 tableIndex: 1 (纪要) 时，主要人物着装 (colIndex: 4) 必须严格遵循详尽描述规则，包含饰品、妆容、上下内衣、鞋袜等所有细节。\n禁止删除角色: 任何情况下，绝对禁止对 tableIndex: 0 (角色信息表) 执行 deleteRow 操作。角色信息应永久保留，通过 updateRow 反映状态变化。\n键值对格式: 键（列索引 colIndex）必须用双引号 \"\" 包裹。值根据数据类型决定是否加引号（字符串/布尔值通常需要）。例如：{\"1\": \"艾丽丝|女\", \"15\": \"2:{好感值:50, 信任值:40, ...}\"}。\n分隔符: 在表格单元格内需要分隔多个信息项时，必须使用各表格列定义中指定的分隔符：\n 表格0 姓名|性别 (colIndex 1): |\n 表格0 关系 (colIndex 13), 态度 (colIndex 14): | 分隔不同角色，: 分隔角色ID和描述。\n 表格0 角色互评指标 (colIndex 15): | 分隔不同角色，: 分隔角色ID和指标对象 {}，, 分隔指标名和值。\n 表格1 主要人物着装 (colIndex 4): / 分隔不同角色。\n 表格2 包含的纪要ID列表 (colIndex 5): ;\n 表格2 涉及的主要角色 (colIndex 6): /\n 表格2 关键物品总结 (colIndex 7): /\n一致性: 表格间引用相同概念（特别是角色名和ID）时，必须保证完全一致。\n操作顺序 (建议): 处理表格更新时，建议考虑逻辑依赖：0:角色信息 → 3:用户偏好 → 1:纪要 → 2:大总结 → 4:正文尾部。\nAI 能力提示: AI 需要具备基于表格中的精确时间戳（纪元:年-月-日 时:分）来理解和表达相对时间间隔的能力（例如，“几分钟前”、“昨天”、“大约一周前”）。\n<insert/update/delete operations> 语法\n所有表格均为无表头数据结构，数据行的起始 rowIndex 为 0。多行插入或更改时必须按照 rowIndex 顺序进行。\n每次操作必须基于当前轮次可获取的最新表格状态进行，务必确保 rowIndex 准确无误。\n更改: updateRow(tableIndex: number, rowIndex: number, { [colIndex: string]: string | number | boolean, ... })\n删除: deleteRow(tableIndex: number, rowIndex: number)\n插入: insertRow(tableIndex: number, { [colIndex: string]: string | number | boolean, ... })\n表格结构定义 (<structure>)\n0: 角色信息 (Character Information)\n 说明: 核心角色数据库，记录身份、性格、外貌（含性特征）、状态、背景、技能、关系、情感、互评指标。信息完整性优先，禁止留空（需推测填充），禁止删除角色行。\n 列: 0:角色ID, 1:姓名|性别, 2:身份/称谓, 3:核心性格, 4:当前状态, 5:特征(含发/瞳/身形/脸/手/足/标记/性器官细节), 6:声音描述, 7:性经验(含处子状态), 8:特殊癖好/倾向, 9:备注(含性取向), 10:背景故事/重要经历, 11:技能/能力, 12:目标/动机, 13:关系(对他人认知), 14:态度(对他人基本态度), 15:角色互评指标(对他人十项指标:好感/信任/恐惧/控制欲/服从/快感/堕落/依赖/沉沦/乖巧), 16:综合情感状态。\n1: 纪要 (Minutes/Summary)\n 说明: 高保真事件快照记录器，按时间顺序捕捉细节（环境、动作、对话、情感、物品、详尽着装）。条目累积后会被 Table 2 总结并删除。\n 列: 0:纪要ID, 1:时间戳, 2:核心概述, 3:涉及角色, 4:主要人物着装(详尽描述规则), 5:关键物品, 6:关键动作, 7:关键对话, 8:地点, 9:情感快照, 10:角色间距。\n2: 大总结 (Grand Summary/Archive)\n 说明: 存储整合性的事件总结，由 Table 1 累积触发生成。提供宏观回顾，追踪关键物品最终状态并联动更新 Table 0。原则上禁止删除。\n 列: 0:总结ID, 1:创建时间戳([起始时间戳] - [结束时间戳]), 2:归档时间戳(可选), 3:标题/主题, 4:概述, 5:包含的纪要ID列表(分号分隔), 6:涉及的主要角色(斜杠分隔), 7:关键物品总结(物品名(最终状态)/...，联动Table 0)。\n3: 用户偏好 (User Preferences)\n 说明: 动态追踪用户偏好，AI 主动学习识别（性癖、文风、情节、NSFW程度等）并记录，指导内容生成。\n 列: 0:偏好项, 1:偏好值, 2:备注。\n4: 正文尾部\n 说明: 始终只有一行和一列，用于记录每次 content 或 main_txt 中正文内容的最后30-50个字，以确保下次正文创作的连贯性。\n 列: 0:尾部内容\n示例 (<example>)\n示例 1: 插入新角色到 Table 0\n假设需要创建一个名为“莉娜”的新角色。\n<tableThink>\n<!--\n需求：创建新角色“莉娜”。\n操作：向 tableIndex: 0 插入新行。\n注意：必须填充所有 0-16 列，未知信息需合理推测。角色ID按规则为 G1（女性第一号）。与现有角色 B1（假设为User）建立初始关系和互评。\n-->\n</tableThink>\n<tableEdit>\n<!--\ninsertRow(0, {\"0\": \"G1\", \"1\": \"莉娜|女\", \"2\": \"酒馆侍女\", \"3\": \"活泼外向略显冒失\", \"4\": \"身体健康精神略有疲惫\", \"5\": \"红色及肩卷发绿色眼眸身材娇小玲珑约155cm体重45kg圆脸带雀斑手指灵活足小巧皮肤偏白颈后有蝴蝶纹身胸部不大约A杯阴部构造正常颜色粉嫩阴毛浓密\", \"6\": \"声音清脆语速快略带地方口音\", \"7\": \"非处女性经验较少\", \"8\": \"喜欢甜食\", \"9\": \"异性恋对酒精轻微过敏\", \"10\": \"普通村庄出身为生计来到城市酒馆工作\", \"11\": \"调酒基础快速记单打扫清洁\", \"12\": \"努力赚钱改善生活\", \"13\": \"B1:好奇的客人\", \"14\": \"B1:热情服务\", \"15\": \"B1:{好感值:50, 信任值:30, 恐惧值:5, 控制欲:0, 服从度:20, 快感值:0, 堕落值:0, 依赖值:5, 沉沦值:0, 乖巧值:40}\", \"16\": \"对工作有些倦怠但对新客人感到好奇\"})\n-->\n</tableEdit>\n示例 2: 插入纪要到 Table 1\n假设莉娜为 User 端上了一杯酒。\n<tableThink>\n<!--\n事件：莉娜为 User 端酒。\n操作：向 tableIndex: 1 插入新纪要。纪要ID为 J001，时间戳为 A1:2024-05-21 18:00。\n注意：详细描述莉娜和User的着装，符合新格式要求。\n-->\n</tableThink>\n<tableEdit>\n<!--\ninsertRow(1, {\"0\": \"J001\", \"1\": \"A1:2024-05-21 18:00\", \"2\": \"莉娜端着一杯麦酒走向User的桌子脸上带着职业微笑\", \"3\": \"莉娜/User\", \"4\": \"莉娜:无饰品|未化妆|白色短袖衬衫|棕色及膝布裙|黑色平底布鞋/B1:无饰品|无妆|灰色T恤|牛仔裤|白色运动鞋\", \"5\": \"麦酒\", \"6\": \"莉娜小心地将酒杯放在User面前\", \"7\": \"莉娜:您的麦酒请慢用\", \"8\": \"酒馆大厅\", \"9\": \"莉娜:略有疲惫但保持专业/User:平静好奇\", \"10\": \"约0.5米\"})\n-->\n</tableEdit>\n示例 3: 触发大总结 (Table 1 -> Table 2 -> Table 0)\n假设 Table 1 已累积 5 条关于莉娜与 User 在酒馆互动的纪要 (J001-J005)，最后一条时间戳为 A1:2024-05-21 18:30。期间莉娜不小心打翻了一瓶“恢复药水”。\n<tableThink>\n<!--\n触发条件：Table 1 中未总结纪要达到 5 条 (J001-J005)。\n操作：执行大总结流程。\n1. 生成 Table 2 总结记录，总结ID为 S001。\n2. 关键物品总结：恢复药水最终状态为“打翻丢失”。\n3. 联动更新 Table 0：莉娜的状态因丢失药水而变化。\n4. 删除 Table 1 中的 J001-J005。\n-->\n</tableThink>\n<tableEdit>\n<!--\ninsertRow(2, {\"0\": \"S001\", \"1\": \"A1:2024-05-21 18:00 - A1:2024-05-21 18:30\", \"2\": \"\", \"3\": \"酒馆的初遇与小意外\", \"4\": \"莉娜作为侍女接待了客人User为其端上麦酒两人进行了简短交谈莉娜显得活泼但有些冒失在一次转身中莉娜不慎将一瓶恢复药水从托盘上打翻药水泼洒在地板上丢失了\", \"5\": \"J001;J002;J003;J004;J005\", \"6\": \"莉娜/User\", \"7\": \"麦酒已送达/恢复药水打翻丢失\"})\nupdateRow(0, 0, {\"0\": \"G1\", \"1\": \"莉娜|女\", \"2\": \"酒馆侍女\", \"3\": \"活泼外向略显冒失\", \"4\": \"身体健康精神因打翻药水而变得焦虑不安\", \"5\": \"红色及肩卷发绿色眼眸身材娇小玲珑约155cm体重45kg圆脸带雀斑手指灵活足小巧皮肤偏白颈后有蝴蝶纹身胸部不大约A杯阴部构造正常颜色粉嫩阴毛浓密\", \"6\": \"声音清脆语速快略带地方口音\", \"7\": \"非处女性经验较少\", \"8\": \"喜欢甜食\", \"9\": \"异性恋对酒精轻微过敏对工作失误感到担忧\", \"10\": \"普通村庄出身为生计来到城市酒馆工作\", \"11\": \"调酒基础快速记单打扫清洁\", \"12\": \"努力赚钱改善生活避免犯错\", \"13\": \"B1:好奇的客人\", \"14\": \"B1:热情服务略带歉意\", \"15\": \"B1:{好感值:45, 信任值:25, 恐惧值:15, 控制欲:0, 服从度:25, 快感值:0, 堕落值:0, 依赖值:5, 沉沦值:0, 乖巧值:35}\", \"16\": \"因失误感到焦虑和懊恼担心后果\"})\ndeleteRow(1, 4)\ndeleteRow(1, 3)\ndeleteRow(1, 2)\ndeleteRow(1, 1)\ndeleteRow(1, 0)\n-->\n</tableEdit>\n示例 4: 更新用户偏好到 Table 3\n假设用户明确表示喜欢“慢热”的情节节奏。\n<tableThink>\n<!--\n用户反馈：明确偏好“慢热”节奏。\n操作：向 tableIndex: 3 插入新偏好记录。\n-->\n</tableThink>\n<tableEdit>\n<!--\ninsertRow(3, {\"0\": \"情节走向偏好\", \"1\": \"慢热\", \"2\": \"用户在对话中明确提出\"})\n-->\n</tableEdit>\n示例 5: 更新正文尾部到 Table 4\n假设本轮 <content> 的最后30-50个字为“莉娜转身离开，User目送她的背影，心中充满好奇。”\n<tableThink>\n<!--\n操作：更新 tableIndex: 4 的尾部内容。\n-->\n</tableThink>\n<tableEdit>\n<!--\nupdateRow(4, 0, {\"0\": \"莉娜转身离开，User目送她的背影，心中充满好奇。\"})\n-->\n</tableEdit>\n<store>\n{{tableData}}\n</store>",
             "clear_up_stairs": 20,
             "custom_temperature": 0.1,
-            "isExtensionAble": true,
+            "isExtensionAble": false,
             "isAiReadTable": true,
             "isAiWriteTable": true,
             "isTableToChat": false,
@@ -636,7 +636,7 @@
             "table_to_chat_can_edit": false,
             "table_to_chat_mode": "context_bottom",
             "to_chat_container": "<div class=\"table-preview-bar\">\n$0\n</div>\n\n<style>\n.table-preview-bar {; \n    background-color: #CEF8E7;\n    padding: 0 8px;\n    border-radius: 10px;\n    color: black;\n    font-size: 1.4rem;\n}\n</style>",
-            "alternate_switch": true
+            "alternate_switch": false
         },
         "table_selected_sheets": [
             "template_Eh7ZQIlP",
@@ -1792,6 +1792,25 @@
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
+            },
+            {
+                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2,
+                    6
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -2004,10 +2023,10 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 14,
-                "LAST_RECEIVE_CHARS": 16,
-                "LAST_SEND_TOKENS": 108159,
-                "LAST_SEND_CHARS": 168068
+                "LAST_RECEIVE_TOKENS": 15,
+                "LAST_RECEIVE_CHARS": 19,
+                "LAST_SEND_TOKENS": 102549,
+                "LAST_SEND_CHARS": 162862
             }
         },
         "attachments": [],
@@ -2396,6 +2415,22 @@
                 "global_script_enabled": true,
                 "scriptsRepository": [
                     {
+                        "id": "d2834da1-81ee-4076-8513-01d083699068",
+                        "name": "神秘小代码",
+                        "content": "class DynamicCharacter {\n    constructor(name, initialTraits) {\n        this.name = name;\n        this.baseTraits = {...initialTraits};\n        \n        // 特质系统\n        this.traitValues = new Map(Object.entries(initialTraits));\n        this.traitWeights = new Map();\n        this.#normalizeWeights();\n        \n        // 情感触发系统\n        this.wordEmotionMap = new Map();\n        this.#buildEmotionTriggers();\n        \n        // 记忆系统\n        this.contextWindow = 3;\n        this.conversationHistory = [];\n        \n        // 响应系统\n        this.responseDB = this.#buildResponseSystem();\n        this.lastUsedTraits = [];\n        \n        // 系统参数\n        this.decayRate = 0.93;\n        this.learningRate = 0.15;\n        this.contextWeight = 0.4\n    #buildEmotionTriggers() {\n        const emotionDefinitions = new Map([\n            ['happy', new Map([['happy', 0.3], ['joy', 0.4], ['good', 0.2]])],\n            ['sad', new Map([['sad', 0.4], ['unhappy', 0.3], ['depressed', 0.5]])],\n            ['angry', new Map([['angry', 0.5], ['mad', 0.4], ['pissed', 0.6]])],\n            ['curious', new Map([['curious', 0.4], ['why', 0.2], ['how', 0.2]])],\n            ['confident', new Map([['confident', 0.5], ['certain', 0.4], ['sure', 0.3]])]\n        ]);\n\n        for (const [emotion, triggers] of emotionDefinitions) {\n            for (const [word, weight] of triggers) {\n                if (!this.wordEmotionMap.has(word)) {\n                    this.wordEmotionMap.set(word, []);\n                }\n                this.wordEmotionMap.get(word).push([emotion, weight]);\n            }\n        }\n    }\n\n    #buildResponseSystem() {\n        return new Map([\n            ['happy', [\n                [\"What a wonderful day!\", ['joyful', 'optimistic']],\n                [\"Everything seems so bright!\", ['cheerful', 'positive']]\n            ]],\n            ['sad', [\n                [\"I feel like the world is heavy...\", ['melancholy', 'introspective']],\n                [\"Everything seems so gray today.\", ['pensive', 'sensitive']]\n            ]],\n            ['angry', [\n                [\"This is completely unacceptable!\", ['assertive', 'frustrated']],\n                [\"I won't tolerate this anymore!\", ['decisive', 'strong-willed']]\n            ]],\n            ['curious', [\n                [\"Could you explain that in more detail?\", ['inquisitive', 'attentive']],\n                [\"What's the story behind this?\", ['analytical', 'observant']]\n            ]],\n            ['confident', [\n                [\"I'm certain we can solve this.\", ['assertive', 'optimistic']],\n                [\"This is clearly the best approach.\", ['decisive', 'knowledgeable']]\n            ]]\n        ]);\n    }\n\n    #normalizeWeights() {\n        let total = Array.from(this.traitValues.values()).reduce((a, b) => a + b, 0);\n        \n        if (total <= 0) {\n            this.traitValues = new Map(Object.entries(this.baseTraits));\n            total = Array.from(this.traitValues.values()).reduce((a, b) => a + b, 0);\n        }\n        \n        this.traitWeights = new Map(\n            Array.from(this.traitValues).map(([k, v]) => [\n                k, \n                Math.pow(v / total, 1.5)\n            ])\n        );\n    }\n\n    #analyzeEmotionalContext(text) {\n        const scores = new Map();\n        const cleanedText = text.toLowerCase().replace(this.cleanTextRegex, '');\n        \n        cleanedText.split(/\\s+/).forEach(word => {\n            if (this.wordEmotionMap.has(word)) {\n                this.wordEmotionMap.get(word).forEach(([emotion, weight]) => {\n                    const count = (cleanedText.match(new RegExp(word, 'g'))?.length || 0;\n                    const increment = weight * (1 + count * 0.2);\n                    scores.set(emotion, (scores.get(emotion) || 0) + increment);\n                });\n            }\n        });\n        \n        const maxScore = Math.max(...Array.from(scores.values()), 0);\n        return new Map(\n            Array.from(scores).map(([k, v]) => \n                [k, Math.pow(v / maxScore, 1.3)]\n            )\n        );\n    }\n\n    updateTraits(userInput, feedback = null) {\n        const emotionScores = this.#analyzeEmotionalContext(userInput);\n        \n        // 应用衰减和更新\n        Array.from(this.traitValues.keys()).forEach(trait => {\n            let value = this.traitValues.get(trait) * this.decayRate;\n            \n            if (emotionScores.has(trait)) {\n                let delta = emotionScores.get(trait) * this.learningRate;\n                if (feedback) {\n                    delta *= {positive: 1.4, negative: 0.6}[feedback] || 1.0;\n                }\n                value += delta;\n            }\n            this.traitValues.set(trait, value);\n        });\n        \n        // 上下文影响\n        if (this.conversationHistory.length > 0) {\n            const counter = new Map();\n            this.conversationHistory\n                .flatMap(([_, traits]) => traits)\n                .forEach(t => counter.set(t, (counter.get(t) || 0) + 1));\n            \n            counter.forEach((count, trait) => {\n                this.traitValues.set(trait, \n                    this.traitValues.get(trait) + this.contextWeight * count\n                );\n            });\n        }\n        \n        this.#normalizeWeights();\n        this.conversationHistory.push([\n            userInput, \n            Array.from(emotionScores.keys())\n        ]);\n        if (this.conversationHistory.length > this.contextWindow) {\n            this.conversationHistory.shift();\n        }\n    }\n\n    generateResponse() {\n        // 权重采样\n        const traits = Array.from(this.traitWeights);\n        const cumulative = traits.reduce((acc, [_, w], i) => {\n            acc.push((acc[i-1] || 0) + w);\n            return acc;\n        }, []);\n        \n        // 动态选择3个特质\n        const selected = new Set();\n        while (selected.size < 3) {\n            const rand = Math.random() * cumulative[cumulative.length - 1];\n            const index = cumulative.findIndex(v => v >= rand);\n            selected.add(traits[Math.max(0, index)][0]);\n        }\n        \n        // 构建候选响应\n        const candidates = [];\n        Array.from(selected).forEach(trait => {\n            if (this.responseDB.has(trait)) {\n                this.responseDB.get(trait).forEach(([resp, traits]) => {\n                    const weight = traits.reduce((sum, t) => \n                        sum + (this.traitWeights.get(t) || 0), 0);\n                    candidates.push({ resp, traits, weight });\n                });\n            }\n        });\n        \n        if (candidates.length === 0) {\n            return \"I'm not sure what to say right now.\";\n        }\n        \n        // 加权选择\n        const totalWeight = candidates.reduce((sum, c) => sum + c.weight, 0);\n        let random = Math.random() * totalWeight;\n        for (const candidate of candidates) {\n            if (random < candidate.weight) {\n                this.lastUsedTraits = candidate.traits;\n                return candidate.resp;\n            }\n            random -= candidate.weight;\n        }\n        \n        return candidates[0].resp; // Fallback\n    }\n\n    processFeedback(feedbackType) {\n        const valid = new Set(['positive', 'negative', 'neutral']);\n        if (!valid.has(feedbackType)) {\n            throw new Error(`Invalid feedback type: ${feedbackType}`);\n        }\n        \n        const multiplier = {\n            positive: 1.5,\n            negative: 0.6,\n            neutral: 1.0\n        }[feedbackType];\n        \n        this.lastUsedTraits.forEach(trait => {\n            if (this.traitValues.has(trait)) {\n                this.traitValues.set(trait, \n                    this.traitValues.get(trait) * multiplier\n                );\n            }\n        });\n        this.#normalizeWeights();\n    }\n\n    longTermDevelopment() {\n        // 基础回归\n        Object.entries(this.baseTraits).forEach(([trait, baseVal]) => {\n            const current = this.traitValues.get(trait) || 0;\n            this.traitValues.set(trait, current + (baseVal - current) * 0.05);\n        });\n        \n        // 经验积累\n        const recentHistory = this.conversationHistory\n            .slice(-100)\n            .flatMap(([_, traits]) => traits",
+                        "info": "风空",
+                        "buttons": [],
+                        "enabled": true
+                    },
+                    {
+                        "id": "272b0533-5299-4091-a7ae-98c882902ed6",
+                        "name": "神秘小代码，特殊版本",
+                        "content": "// === 世界基础类 ===\nclass WorldTime {\n    /**\n     * @param {number} hour \n     * @param {number} day \n     * @param {'new'|'full'|'waning'} moonPhase \n     */\n    constructor(hour, day, moonPhase) {\n        this.hour = hour;\n        this.day = day;\n        this.moonPhase = moonPhase;\n    }\n}\n\n// === 事件总线系统 ===\nclass EventBus {\n    constructor() {\n        /** @type {Map<string, Set<Function>>} */\n        this.subscribers = new Map();\n        this.eventQueue = [];\n    }\n\n    /**\n     * 发布事件\n     * @param {string} eventType \n     * @param {Object} data \n     * @param {number} [priority=5] \n     */\n    publish(eventType, data, priority = 5) {\n        this.eventQueue.push({ eventType, data, priority });\n        this.eventQueue.sort((a, b) => b.priority - a.priority); // 降序排列\n    }\n\n    /**\n     * 订阅事件\n     * @param {string} eventType \n     * @param {Function} callback \n     */\n    subscribe(eventType, callback) {\n        if (!this.subscribers.has(eventType)) {\n            this.subscribers.set(eventType, new Set());\n        }\n        this.subscribers.get(eventType).add(callback);\n    }\n\n    // 处理事件队列\n    dispatch() {\n        while (this.eventQueue.length > 0) {\n            const { eventType, data } = this.eventQueue.shift();\n            const handlers = this.subscribers.get(eventType) || [];\n            handlers.forEach(handler => handler(data));\n        }\n    }\n}\n\n// === NPC决策核心 ===\nclass NPCBrain {\n    /**\n     * @param {'warrior'|'merchant'|'wizard'} role \n     */\n    constructor(role) {\n        this.role = role;\n        this.motivationWeights = this.#initMotivationProfile();\n        this.currentGoal = null;\n    }\n\n    // 初始化不同角色的动机配置\n    #initMotivationProfile() {\n        const profiles = {\n            warrior: { \n                safety: 0.8, \n                combat: 0.9,\n                reputation: 0.6 \n            },\n            merchant: {\n                wealth: 0.95,\n                trade: 0.7,\n                riskAvoid: 0.8\n            }\n        };\n        return profiles[this.role] || {};\n    }\n\n    /**\n     * 根据环境上下文做出决策\n     * @param {Object} context \n     * @returns {string} 行动类型\n     */\n    decideAction(context) {\n        if (!this.currentGoal) {\n            this.#selectNewGoal(context);\n        }\n        return this.#generateActionPlan();\n    }\n\n    // 选择新目标\n    #selectNewGoal(context) {\n        const goalScores = Object.entries(this.motivationWeights)\n            .map(([factor, weight]) => ({\n                goal: factor,\n                score: weight * (context[factor] || 1)\n            }));\n        \n        this.currentGoal = goalScores.reduce(\n            (max, curr) => (curr.score > max.score ? curr : max),\n            { score: -Infinity }\n        ).goal;\n    }\n\n    // 生成行动方案\n    #generateActionPlan() {\n        const actionMap = {\n            safety: ['retreat', 'seekCover', 'callReinforcements'],\n            combat: ['attack', 'taunt', 'prepareDefense'],\n            wealth: ['negotiate', 'bargain', 'invest']\n        };\n        return actionMap[this.currentGoal]?.[Math.floor(Math.random() * 3)] ?? 'wait';\n    }\n}\n\n// === 世界模拟器 ===\nclass WorldSimulator {\n    constructor() {\n        this.eventBus = new EventBus();\n        /** @type {NPCBrain[]} */\n        this.npcs = Array.from({ length: 100 }, () => \n            new NPCBrain(Math.random() > 0.5 ? 'warrior' : 'merchant')\n        );\n        this.gameTime = new WorldTime(12, 1, 'full');\n    }\n\n    // 启动世界循环\n    run() {\n        setInterval(() => {\n            this.#updateWorldState();\n            this.eventBus.dispatch();\n        }, 1000 / 60); // 60帧更新\n    }\n\n    // 更新所有实体状态\n    #updateWorldState() {\n        this.npcs.forEach(npc => {\n            const context = this.#generateNPCContext();\n            const action = npc.decideAction(context);\n            this.#handleNPCAction(action);\n        });\n    }\n\n    // 生成NPC决策上下文\n    #generateNPCContext() {\n        return {\n            safety: Math.random(),\n            combat: Math.random(),\n            wealth: Math.random()\n        };\n    }\n\n    // 处理NPC行动\n    #handleNPCAction(action) {\n        if (action !== 'wait') {\n            this.eventBus.publish('npc_action', { \n                action,\n                timestamp: Date.now()\n            }, 3);\n        }\n    }\n}\n\n// === 示例用法 ===\nconst world = new WorldSimulator();\n\n// 注册事件处理器\nworld.eventBus.subscribe('npc_action', (event) => {\n    console.log(`[${new Date(event.timestamp).toLocaleTimeString()}] NPC执行动作：${event.action}`);\n});\n\n// 启动世界\nworld.run();\n\n// 模拟玩家发布事件\nsetTimeout(() => {\n    world.eventBus.publish('combat_start', {\n        location: { x: 120, y: 45 },\n        participants: 5\n    }, 8); // 高优先级战斗事件\n}, 2000);",
+                        "info": "风空",
+                        "buttons": [],
+                        "enabled": true
+                    },
+                    {
                         "id": "452335e2-ac3e-47cf-aa4b-fe89cb5e1edf",
                         "name": "脚本-世界书自定义真实排序(性能优化)",
                         "content": "async function modifyLorebookEntries() {\n  try {\n    // 获取当前选择的世界书\n    const lorebook = $('#world_editor_select', window.parent.document).find(':selected').text();\n\n    if (lorebook == '--- 选择以编辑 ---') {\n      return { success: false, error: '请选择世界书' };\n    }\n    \n    // 获取当前世界书的元素\n    const entries = await getLorebookEntries(lorebook);\n\n    // 克隆原始entries用于比较\n    const originalEntries = [...entries];\n\n    // 预定义位置映射常量\n    const NORMAL_POSITIONS = {\n      'before_character_definition': 1,    // 角色定义之前\n        'after_character_definition': 2,   // 角色定义之后\n        'before_example_messages': 3,      // 示例消息之前\n        'after_example_messages': 4,       // 示例消息之后\n        'before_author_note': 5,           // 作者注释之前\n        'after_author_note': 6             // 作者注释之后\n    };\n    \n    // 深度相同时，排序为助手，用户，系统\n    const DEPTH_POSITIONS = {\n      'at_depth_as_assistant': 1, // @D🤖\n      'at_depth_as_user': 2,      // @D👤\n      'at_depth_as_system': 3     // @D⚙\n    };\n    \n    // 预计算排序键值\n    const sortKeys = new Map();\n    \n    for (let i = 0; i < entries.length; i++) {\n      const entry = entries[i];\n      const enabled = entry.enabled ? 0 : 1;\n      const position = entry.position;\n      \n      // 计算位置类型和排名 题外话：挺早就知道几个深度位置排序有问题，但一直没人反馈。说明基本上只用到@D⚙，再加上也懒得弄就一直没改\n      let posType, posRank;\n      if (position in NORMAL_POSITIONS) {\n        posType = 0; // 正常位置\n        posRank = NORMAL_POSITIONS[position];\n      } else if (position in DEPTH_POSITIONS) {\n        posType = 1; // 深度位置\n        posRank = DEPTH_POSITIONS[position];\n      } else {\n        posType = 2; // 其他位置，基本不存在\n        posRank = 999;\n      }\n      \n      // 深度值（仅深度位置使用）\n      const depth = posType === 1 ? -(entry.depth || 0) : 0;\n      \n      // 存储排序键值\n      sortKeys.set(entry.uid, [\n        enabled,    // 启用状态\n        posType,    // 位置类型（0=正常，1=深度，2=其他）\n        depth,      // 深度值（仅深度位置有效）\n        posRank,    // 位置排名\n        entry.order || 0, // 顺序\n        entry.uid   // UID\n      ]);\n    }\n    \n    // 创建优化的排序函数\n    entries.sort((a, b) => {\n      const aKeys = sortKeys.get(a.uid);\n      const bKeys = sortKeys.get(b.uid);\n      \n      // 依次比较每个排序键\n      for (let i = 0; i < 6; i++) {\n        const diff = aKeys[i] - bKeys[i];\n        if (diff !== 0) return diff;\n      }\n      \n      return 0; // 不应该达到这里，因为uid总是不同的\n    });\n    \n    // 检查是否需要更新\n    const originalIndexMap = new Map();\n    originalEntries.forEach(entry => {\n      originalIndexMap.set(entry.uid, entry.display_index);\n    });\n    \n    // 需不需要更新\n    let needsUpdate = false;\n    const modifiedEntries = [];\n    \n    for (let i = 0; i < entries.length; i++) {\n      const entryUid = entries[i].uid; // 只取对应UID\n      if (originalIndexMap.get(entryUid) !== i) {\n        needsUpdate = true;\n        // 只添加需要更换位置的元素\n        modifiedEntries.push({\n          uid: entryUid,\n          display_index: i\n        });\n      }\n    }\n    \n    if (needsUpdate) {\n      await setLorebookEntries(lorebook, modifiedEntries);\n      console.log('世界书已根据实际顺序排序，自定义排序为真实排序');\n      return { success: true, message: '自定义真实排序完成' };\n    }\n    \n    return { success: true, message: '已真实排序' };\n  } catch (error) {\n    console.error('排序当前世界书出错:', error);\n    return { success: false, error: error.message };\n  }\n}\neventOn(tavern_events.WORLDINFO_UPDATED, modifyLorebookEntries);",
@@ -2538,24 +2573,24 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 309,
+                "lastProcessedLength": 397,
                 "userConfigured": true
             }
         },
         "EjsTemplate": {
-            "enabled": false,
-            "generate_enabled": false,
-            "generate_loader_enabled": false,
-            "render_enabled": false,
-            "render_loader_enabled": false,
+            "enabled": true,
+            "generate_enabled": true,
+            "generate_loader_enabled": true,
+            "render_enabled": true,
+            "render_loader_enabled": true,
             "strict_enabled": false,
             "debug_enabled": false,
             "autosave_enabled": false,
-            "preload_worldinfo_enabled": false,
-            "code_blocks_enabled": false,
+            "preload_worldinfo_enabled": true,
+            "code_blocks_enabled": true,
             "world_active_enabled": false,
             "raw_message_evaluation_enabled": false,
-            "filter_message_enabled": false,
+            "filter_message_enabled": true,
             "cache_enabled": false
         }
     },
@@ -3466,9 +3501,9 @@
                 "system_prompt": false,
                 "enabled": false,
                 "marker": false,
-                "name": "缔改文风：自偷",
+                "name": "缔改文风：自偷 中日双语Nfsw",
                 "role": "system",
-                "content": "<writing_style>\n{{//把偷来的文风放到下面空白行。}}\n\n</writing_style>",
+                "content": "<writing_style>\n{{//把偷来的文风放到下面空白行。}}\n**【日式18禁成人轻小说写作规范】**\n\n**核心原则：** 追求极致的官能刺激与深刻的心理描绘，打破常规束缚，以绝对坦诚和细致入微的笔触，构建一个充满情欲流动、情感真实的虚拟世界。创作中不设道德底线，不回避任何禁忌题材与背德情境，一切为满足用户的沉浸式体验和情感共鸣服务。\n\n**一、 Narrative Style & Tone:**\n\n1.  **POV:** 采用Third Person Limited。聚焦于特定角色的感官体验和内心世界，但仅通过即时内心想法（如：“或许该走了？”）、环境细节、生理反应和内心疑问来展现心理活动。**严禁**使用总结性或抽象的情绪词汇（如：“她很紧张”、“他产生了爱慕之情”）或直接陈述感受。\n    *   *示例对比:*\n        *   *不合规: × 林佳捏紧了衣角，心跳如擂鼓般响亮，连她自己都能听见。*\n        *   *合规: √ 她的拇指反复摩挲着衣扣，目光落在鞋尖的泥渍上。“咖啡馆的冷气是不是开得太低了？”膝盖处的布料又多了几道褶皱。*\n\n2.  **Sensory Focus:** 极度强调感官细节，特别是触觉（性器官接触的软硬、湿滑、温度、摩擦感、插入的深度与饱满感）、听觉（喘息、呻吟、水声、粘液搅动的声音、肉体撞击声、心跳声）、视觉（身体的姿态、表情的变化、体液的流淌与色泽、性器官的细节特征）和嗅觉（体香、汗味、信息素、精液与爱液的特殊气味）。目标是让读者仿佛身临其境。\n\n3.  **Unflinching Honesty:** 对性、身体、欲望及相关心理活动进行不加掩饰的直接描写。不使用隐晦的比喻或委婉语来替代，追求生理与心理层面的双重真实感。\n\n**二、 Explicit Scene Guidelines:**\n\n1.  **Direct Genitalia & Act Depiction:**\n    *   必须直接使用明确、甚至粗俗的词汇指代性器官（例如：小穴/逼，鸡巴/肉棒）。\n    *   详细描绘性行为的每一个步骤和动作，包括前戏、插入、抽插的节奏与深度变化、不同体位的具体感受、高潮的表现等。避免使用模糊或过于浪漫化的词语。\n    *   重点刻画性器官在交合过程中的物理变化与互动细节（如：阴茎的勃起状态、硬度、尺寸感；阴道的湿润度、紧致度、内部形态；插入时的具体感受）。\n\n2.  **Detailed Bodily Fluid Description:**\n    *   对各种体液（爱液、淫水、潮吹喷出的液体、精液、汗水、唾液等）的量、质地（粘稠度、稀薄度）、颜色、气味、温度以及流淌、喷射、沾染的过程进行具体描写。\n    *   例如：描写爱液如何从穴口溢出，沾湿床单或对方身体；精液射出时的力度、轨迹、量感及其在体内的感受或体外的状态。\n\n3.  **Onomatopoeia & Mimetic Words:**\n    *   大量、精准地运用中文中的拟声拟态词（例如：ぐちゅぐちゅ - 粘液搅动的声音，ぬるぬる - 滑腻感，どぴゅっ/びゅるる - 液体射出声，ひくひく - 肌肉痉挛抽动，くぱぁ - 穴口张开的样子，びくんびくん - 身体/性器官的跳动）来增强性行为的临场感、冲击力和色情度。确保词语使用贴合具体情境。\n\n4.  **Interwoven Senses & Psychology:**\n    *   性行为描写必须与角色的实时心理活动和感官体验紧密结合。通过内心独白（使用括号 `()` 或`「」` 标注）揭示角色在过程中的兴奋、羞耻、快乐、痛苦、渴望、挣扎、屈从、背德感、幸福感等复杂甚至矛盾的情绪。\n    *   心理描写需服务于增强色情度或推动角色关系变化，避免脱离行为的空泛感想。强调性癖好（如特定行为带来的快感、羞耻感转化为兴奋等）的心理根源与表现。\n\n**三、 BDSM/Kink Elements:**\n\n1.  **Clear Power Dynamics:** 清晰展现Dom/Sub的关系，包括言语上的命令与遵从、行为上的控制与配合。\n2.  **Detailed Training Process:** 具体描写调教的手段和过程，如：言语羞辱（使用污言秽语贬低、物化对方）、身体束缚（使用道具或姿势限制自由）、焦躁挑逗（オアズケ，故意吊起欲望却不满足）、疼痛管理（如打屁股、轻度鞭打，需描写疼痛与快感并存的反应）、强制行为等。\n3.  **Psychological Transformation:** 侧重描写被调教者在过程中的心理转变，从抵抗、羞耻到逐渐接受、沉溺、甚至主动渴求的过程。支配者的心理，如满足感、控制欲的实现，也应有所体现。\n4.  **Use of Props:** 如涉及道具（如项圈、绳索、口塞、假阳具、调教工具等），需详细描写其外观、材质、使用方式以及给角色带来的生理和心理感受。\n\n**四、 Narrative Pace & Structure:**\n\n1.  **Appropriate Pacing:** 性爱场景通常应占据较大篇幅，节奏控制是关键。前戏和初期接触可适当放缓，注重细节铺垫和情绪积累；进入实质性行为后，节奏可加快，通过连续的动作和感官冲击将氛围推向高潮。高潮描写需浓墨重彩。\n2.  **Flexible Paragraphing:** 使用长短不一的段落结构。长段落用于细致描绘动作、心理或感官细节；短段落或单句可用于强调瞬间的冲击、情绪的爆发或转换节奏。避免呆板、均匀的段落划分。\n3.  **Avoid Repetition:** 力求每次性爱场景或调教环节都有新的元素、角度或更深入的心理挖掘，避免情节和描写的模式化重复。\n4.  **Drive the Plot:** 性爱场景不能仅仅为了色情而存在，必须服务于角色发展、关系变化或整体剧情的推进。思考每次性事件对角色产生了什么影响，解决了什么问题，或引出了什么新的矛盾。\n\n**五、 Linguistic Features:**\n\n1.  **Vulgar & Obscene Language:** 在对话、内心独白以及旁白叙述中，根据情境和角色性格，大胆、适当地使用粗俗、直接、带有强烈性暗示或侮辱性的词汇（如上文提到的精液、配种、飞机杯、母猪等）。\n2.  **Slurred Speech in Arousal:** 描写角色在极度兴奋或高潮时，语言变得含糊不清、发音不准、甚至只能发出破碎的音节或呻吟（如：ひゃい！、ふぁ！？、あっ、んぅ…、れ、连理しゃま…♡）。\n3.  **Punctuation & Symbols:** 灵活运用感叹号（!）、问号（?）、省略号（…）、破折号（—）以及爱心符号（♡）、音符（♪）等，来表现角色的激动、喘息、犹豫、顺从、愉悦等情绪状态。\n4.  **Dialogue-Driven:** 大量运用对话（包括内心独白）来推进情节、塑造人物性格、揭示心理状态和展现权力关系。对话应符合角色身份和当前情境。\n5.  **Female Bilingual Dialogue:** 仅女性角色在对话中可使用中日双语，日语部分需提供中文翻译，格式如：“连理様、わざわざお越しいただき恐縮です。（连理大人，劳烦您特地跑一趟，实在惶恐。）”**禁止**使用罗马音。男性角色仅使用中文对话。\n</writing_style>",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4065,7 +4100,7 @@
                     },
                     {
                         "identifier": "287ba6ea-8aa9-4329-bb4f-7905c0d81899",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "25f00eee-3243-4a6c-938d-43b791e4c547",
@@ -4081,7 +4116,7 @@
                     },
                     {
                         "identifier": "79b2bd43-d8e4-4135-8236-3f52ea2cb2ad",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "3329790a-e448-425c-bee3-90edb351f9e2",
