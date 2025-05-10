@@ -636,7 +636,7 @@
             "table_to_chat_can_edit": false,
             "table_to_chat_mode": "context_bottom",
             "to_chat_container": "<div class=\"table-preview-bar\">\n$0\n</div>\n\n<style>\n.table-preview-bar {; \n    background-color: #CEF8E7;\n    padding: 0 8px;\n    border-radius: 10px;\n    color: black;\n    font-size: 1.4rem;\n}\n</style>",
-            "alternate_switch": true
+            "alternate_switch": false
         },
         "table_selected_sheets": [
             "template_Eh7ZQIlP",
@@ -2538,7 +2538,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 339,
+                "lastProcessedLength": 340,
                 "userConfigured": true
             }
         },
