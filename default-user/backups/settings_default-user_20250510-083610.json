@@ -2,8 +2,8 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
-        "NavOpened": "false",
+        "LNavOpened": "false",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -318,7 +318,7 @@
         "enableLabMode": false,
         "prefer_character_prompt": true,
         "prefer_character_jailbreak": true,
-        "quick_continue": true,
+        "quick_continue": false,
         "quick_impersonate": false,
         "continue_on_send": false,
         "trim_spaces": true,
@@ -636,7 +636,7 @@
             "table_to_chat_can_edit": false,
             "table_to_chat_mode": "context_bottom",
             "to_chat_container": "<div class=\"table-preview-bar\">\n$0\n</div>\n\n<style>\n.table-preview-bar {; \n    background-color: #CEF8E7;\n    padding: 0 8px;\n    border-radius: 10px;\n    color: black;\n    font-size: 1.4rem;\n}\n</style>",
-            "alternate_switch": true
+            "alternate_switch": false
         },
         "table_selected_sheets": [
             "template_Eh7ZQIlP",
@@ -2538,7 +2538,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 249,
+                "lastProcessedLength": 342,
                 "userConfigured": true
             }
         },
