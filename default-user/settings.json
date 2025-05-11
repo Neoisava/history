@@ -73,6 +73,7 @@
                         "_性爱世界书",
                         "SSVGG 2.0",
                         "人类本能世界书",
+                        "女性本能世界书 by LULUZ",
                         "母子世界2.0_1",
                         "针对2.5pro的瑟瑟场景"
                     ]
@@ -2134,10 +2135,10 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 38696,
-                "LAST_RECEIVE_CHARS": 103279,
-                "LAST_SEND_TOKENS": 166235,
-                "LAST_SEND_CHARS": 248218
+                "LAST_RECEIVE_TOKENS": 11,
+                "LAST_RECEIVE_CHARS": 13,
+                "LAST_SEND_TOKENS": 167000,
+                "LAST_SEND_CHARS": 249058
             }
         },
         "attachments": [],
@@ -2669,7 +2670,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 441,
+                "lastProcessedLength": 442,
                 "userConfigured": true
             }
         },
