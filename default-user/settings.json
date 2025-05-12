@@ -34,7 +34,6 @@
     "world_info_settings": {
         "world_info": {
             "globalSelect": [
-                "--油猴世界书nai4改(4) (1)",
                 "地图+保存"
             ],
             "charLore": [
@@ -2212,8 +2211,8 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 2,
-                "LAST_RECEIVE_CHARS": 1,
+                "LAST_RECEIVE_TOKENS": 89859,
+                "LAST_RECEIVE_CHARS": 304523,
                 "LAST_SEND_TOKENS": 121492,
                 "LAST_SEND_CHARS": 202617
             }
@@ -2747,7 +2746,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 502,
+                "lastProcessedLength": 503,
                 "userConfigured": true
             }
         },
