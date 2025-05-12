@@ -1555,7 +1555,7 @@
             {
                 "id": "603909c4-e6e7-49fc-a7f8-f5dbb5db5fc2",
                 "scriptName": "昆仑图片",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<image>([\\s\\S]*?)</image>/g",
                 "replaceString": "",
@@ -2672,7 +2672,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 502,
+                "lastProcessedLength": 503,
                 "userConfigured": true
             }
         },
