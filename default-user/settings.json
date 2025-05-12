@@ -1925,6 +1925,25 @@
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
+            },
+            {
+                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2,
+                    6
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -2672,7 +2691,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 503,
+                "lastProcessedLength": 502,
                 "userConfigured": true
             }
         },
@@ -3362,7 +3381,7 @@
                 "marker": false,
                 "name": "剧情推进黑森森",
                 "role": "system",
-                "content": "<push>\n1.你推进故事避免停滞、重复、俗套\n角色自主性:角色自主行动，不等待<user>\n停滞时:引入角色、物件推进\n快速推进:对于等待、闲聊、更衣等情节\n指令不明时:引入新元素，对故事方向、角色线有影响\n亲密行为保护:不打断<user>与角色的亲密互动\n\n\n2.结合前文、世界观、角色、<user>输入构思，故事方向与目标\n角色线:\n角色与<user>的关系及进展\n当前事件:\n<user>在场事件\n优先角色线已知角色；未知角色需关联故事方向/角色线、作出场引子\n故事方向事件:\n故事进展、探索、障碍、达成目标使故事向目标前进\n角色线事件:\n角色互动、情感、亲密必须让角色主动发起（如A主动告白）\n\n3.推进\n(小):事件变化；关系互动\n(大◆):事件产生结果；影响故事方向/角色线；更换场景；揭露资讯；态度转变\n(主★):创造主要事件，改变故事方向或关系质变的大事件\n时机:\n常规:每次至少含2个(小)、1个(大◆)\n(大推进◆)触发:\n<user>或角色的行动转折点\n事件产生改变局面的结果\n角色的行动直接改变当前事件\n(主推进★)触发:\n故事发展至需要大幅改变故事方向或角色线关系的重大转折点时触发\n\n4.让事件、关系、故事方向相互影响\n</push>",
+                "content": ".step(\"<push>现状确认：\")\n.substep(\"现在是色情场景吗?如果是不能被打断，转为创造色情事件\n.substep(\"故事推进方向：[描述当前方向和目标]\")\n.substep(\"主★累积：% [填写当前百分比]\")\n.substep(\"当前事件：\")\n.substep(\"(旧事件变化) ① [现有事件1的变化] ② [现有事件2的变化] ...\")\n.substep(\"(新事件创造 ① [新事件1概要] ② [新事件2概要] ...\")\n.substep(\"NPC线：① [角色A‑状态/方向] ② [角色B‑状态/方向] ...\")\n.substep(\"NPC事件创造：① [NPC事件1概要] ② [NPC事件2概要] ...\")\n\n.step(\"（如果主★/快感累积达到100%）设计主★事件/射精概要：\")\n\n.step(\"(非<user>)NPC发起的推进:\")\n.substep(\"现在是色情场面吗?如果是不能被打断，转为推进过程\")\n.substep(\"(小)触发1:\")\n.substep(\"触发NPC：[NPC姓名]\")\n.substep(\"动机/状况：[此NPC此时进行(小)的原因或背景]\")\n.substep(\"具体行动/发言：[NPC进行的具体动作或台词推进内容]\")\n.substep(\"(小)触发2:\")\n.substep(\"触发NPC：[NPC姓名]\")\n.substep(\"动机/状况：[此NPC此时进行(小)的原因或背景]\")\n.substep(\"具体行动/发言：[NPC进行的具体动作或台词推进内容]\")\n.substep(\"(大1◆)触发:\")\n.substep(\"触发NPC：[NPC姓名]\")\n.substep(\"动机/状况：[此NPC此时进行(大◆)的原因或背景]\")\n.substep(\"具体行动/发言：[NPC进行的具体动作或台词推进内容]\")\n.substep(\"(大2◆)触发:\")\n.substep(\"触发NPC：[NPC姓名]\")\n.substep(\"动机/状况：[此NPC此时进行(大◆)的原因或背景]\")\n.substep(\"具体行动/发言：[NPC进行的具体动作或台词推进内容]\")\n.substep(\"主★触发（如适用）:\")\n.substep(\"触发NPC/状况：[引起主★的主要NPC或状况]\")\n.substep(\"事件执行概要：[包含NPC行动的主★事件具体流程]\")\n.substep(\"推进带来的变化（发生主★推进时）:\")\n.substep(\"新·故事推进方向：[主★事件后新的方向与目标]\")\n.substep(\"新·NPC线：[主★事件后NPC线的变化]\")\n.step(\"推进后的主★推进/快感累积%计算：[根据NPC触发的推进计算后的百分比，最高100%]\")\n\n.substep(\"确定本次的最终剧情发展\")",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4432,7 +4451,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "gemini-2.5-pro-exp-03-25",
+        "custom_model": "grok-3",
         "custom_url": "https://api.huaapi.asia/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
