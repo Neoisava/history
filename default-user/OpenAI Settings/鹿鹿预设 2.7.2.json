@@ -16,8 +16,11 @@
     "perplexity_model": "llama-3-70b-instruct",
     "groq_model": "llama3-70b-8192",
     "zerooneai_model": "",
-    "blockentropy_model": "be-70b-base-llama3.1",
-    "custom_model": "claude-3-7-sonnet-20250219-thinking",
+    "custom_model": "claude-3.7-sonnet",
+    "custom_url": "https://sllt.uk/v1",
+    "custom_include_body": "",
+    "custom_exclude_body": "",
+    "custom_include_headers": "",
     "custom_prompt_post_processing": "strict",
     "google_model": "gemini-pro",
     "temperature": 1,
@@ -39,6 +42,8 @@
     "new_example_chat_prompt": "[Example Chat]",
     "continue_nudge_prompt": "[Continue the following message. Do not include ANY parts of the original message. Use capitalization and punctuation as if your reply is a part of the original message: {{lastChatMessage}}]",
     "bias_preset_selected": "Default (none)",
+    "reverse_proxy": "",
+    "proxy_password": "",
     "max_context_unlocked": true,
     "wi_format": "{0}",
     "scenario_format": "[Circumstances and context of the dialogue: {{scenario}}]",
@@ -1179,7 +1184,7 @@
                 },
                 {
                     "identifier": "2505c9c1-fac5-433f-8998-eec117a7f79b",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "b5b7f0fe-510f-4661-99d8-cadaa4cba961",
@@ -1191,7 +1196,7 @@
                 },
                 {
                     "identifier": "14495390-97a9-4021-9d7d-df4338f3519d",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "6b737efe-c383-49ca-94b9-8adc0f019b50",
@@ -1199,7 +1204,7 @@
                 },
                 {
                     "identifier": "fc97b6dc-e6e6-40c6-af6b-d8eb9a3911d2",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "1c4f1c93-f2ed-4f56-9813-a378dc1be937",
@@ -1207,7 +1212,7 @@
                 },
                 {
                     "identifier": "b219a45f-6785-4e10-a92d-abbeb3ed839a",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "04753dbf-c8d1-40b4-919d-461cdd0e316d",
