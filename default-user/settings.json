@@ -1755,40 +1755,6 @@
                 "promptOnly": true
             },
             {
-                "id": "478e2302-2990-4b8d-ad74-0a33516cdb69",
-                "scriptName": "D1汇总记录折叠",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<Main_Quest>(.*?)</Main_Quest>/gs",
-                "replaceString": "<details><summary>*汇总记录*</summary>\n> $1\n</details>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
-                "id": "6cf87455-02e8-48a6-a042-7a49f5c9fdf0",
-                "scriptName": "D2汇总记录隐藏",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
                 "id": "784bca38-dbd7-4e31-87f1-e6af62676e65",
                 "scriptName": "D3略三楼前汇总",
                 "disabled": false,
@@ -2670,7 +2636,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 498,
+                "lastProcessedLength": 0,
                 "userConfigured": true
             }
         },
@@ -3768,7 +3734,7 @@
                 "marker": false,
                 "name": "缔版剧推联动",
                 "role": "system",
-                "content": "- 根据<pushing>中的内容，逐条仔细思考以下问题:\n如何用小/大/主线推进，推进故事?\n如何按汇总记录管理进行汇总记录?\n是否有NSFW事件引入机制需要执行?如果有，如何铺垫?如何引进?如何进行?如何更新NSFW事件记录?\n当前小/大/主线推进是否在规定轮数内完成?\n是否应触发大/主线推进?如果是，如何完成?\n是否需要更新基调与目标?如果是，如何更新?\n角色行动与对话是否合理(如不超出上帝视角/符合人设/非极端消极等)?\n如有潜在问题，应如何解决(如用户输入怎么立即执行等)?\n",
+                "content": "- 根据<pushing>中的内容，逐条仔细思考以下问题:\n如何用小/大/主线推进，推进故事?\n是否按汇总记录管理进行汇总记录?(思考时提及汇总记录标签简写为 <MQ> ，记录时为完整标签)\n是否有NSFW事件引入机制需要执行?如果有，如何铺垫?如何引进?如何进行?有无更新NSFW事件记录?\n当前小/大/主线推进是否在规定轮数内完成?\n是否应触发大/主线推进?如果是，如何完成?\n是否需要更新基调与目标?如果是，如何更新?\n角色行动与对话是否合理(如不超出上帝视角/符合人设/非极端消极等)?\n如有潜在问题，应如何解决(如用户输入怎么立即执行等)?",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
