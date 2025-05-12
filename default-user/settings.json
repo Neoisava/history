@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "true",
-        "NavOpened": "true",
+        "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -2137,8 +2137,8 @@
                 "content": "{继续剧情}",
                 "LAST_RECEIVE_TOKENS": 9829,
                 "LAST_RECEIVE_CHARS": 13701,
-                "LAST_SEND_TOKENS": 161262,
-                "LAST_SEND_CHARS": 243887
+                "LAST_SEND_TOKENS": 157339,
+                "LAST_SEND_CHARS": 238435
             }
         },
         "attachments": [],
@@ -2670,7 +2670,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 469,
+                "lastProcessedLength": 468,
                 "userConfigured": true
             }
         },
