@@ -2832,23 +2832,6 @@
                 "promptOnly": true
             },
             {
-                "id": "bbafeba3-cc2f-451e-b51f-b9a1ae9a1034",
-                "scriptName": "【demini】开小总结用2",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/([\\s\\S]*?<details>\\s*<summary>\\s*摘要\\s*<\\/summary>|<\\/details>[\\s\\S]*?$)/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 11,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
                 "id": "c779cc31-9e2f-41dd-be51-2c49f453e1f5",
                 "scriptName": "【可点击的选择框】[不发送]选择框",
                 "disabled": true,
