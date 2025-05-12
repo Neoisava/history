@@ -23,7 +23,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": "修仙之路2.0.png",
+    "active_character": null,
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2032,25 +2032,6 @@
                 "substituteRegex": 0,
                 "minDepth": null,
                 "maxDepth": null
-            },
-            {
-                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2,
-                    6
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": false,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -2264,10 +2245,10 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 34107,
-                "LAST_RECEIVE_CHARS": 96607,
-                "LAST_SEND_TOKENS": 4,
-                "LAST_SEND_CHARS": 2
+                "LAST_RECEIVE_TOKENS": 849,
+                "LAST_RECEIVE_CHARS": 744,
+                "LAST_SEND_TOKENS": 162569,
+                "LAST_SEND_CHARS": 208905
             }
         },
         "attachments": [],
@@ -2807,7 +2788,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 506,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
@@ -4052,7 +4033,7 @@
                     },
                     {
                         "identifier": "2505c9c1-fac5-433f-8998-eec117a7f79b",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "b5b7f0fe-510f-4661-99d8-cadaa4cba961",
@@ -4064,7 +4045,7 @@
                     },
                     {
                         "identifier": "14495390-97a9-4021-9d7d-df4338f3519d",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "6b737efe-c383-49ca-94b9-8adc0f019b50",
@@ -4072,7 +4053,7 @@
                     },
                     {
                         "identifier": "fc97b6dc-e6e6-40c6-af6b-d8eb9a3911d2",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "1c4f1c93-f2ed-4f56-9813-a378dc1be937",
@@ -4080,7 +4061,7 @@
                     },
                     {
                         "identifier": "b219a45f-6785-4e10-a92d-abbeb3ed839a",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "04753dbf-c8d1-40b4-919d-461cdd0e316d",
