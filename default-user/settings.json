@@ -1076,18 +1076,596 @@
             "mate": {
                 "type": "chatSheets",
                 "version": 1
+            },
+            "sheet_ZVjLizMy": {
+                "uid": "sheet_ZVjLizMy",
+                "name": "地点",
+                "domain": "chat",
+                "type": "dynamic",
+                "enable": true,
+                "required": false,
+                "tochat": true,
+                "triggerSend": false,
+                "triggerSendDeep": 1,
+                "config": {
+                    "toChat": true,
+                    "useCustomStyle": false,
+                    "triggerSendToChat": false,
+                    "alternateTable": false,
+                    "alternateLevel": 0,
+                    "skipTop": false,
+                    "selectedCustomStyleKey": "",
+                    "customStyles": {
+                        "自定义样式": {
+                            "mode": "regex",
+                            "basedOn": "html",
+                            "regex": "/(^[\\s\\S]*$)/g",
+                            "replace": "$1"
+                        }
+                    }
+                },
+                "sourceData": {
+                    "note": "已出现势力的名称与内部建筑名称、作用（没有多余建筑可填无）"
+                },
+                "content": [
+                    [
+                        null,
+                        "势力名称",
+                        "面积",
+                        "天元坐标",
+                        "势力中心地元坐标",
+                        "建筑1（与描述）",
+                        "建筑2（与描述）",
+                        "建筑3（与描述）",
+                        "建筑4（与描述）",
+                        "建筑5（与描述）",
+                        "建筑6（与描述）",
+                        "建筑7（与描述）",
+                        "建筑8（与描述）",
+                        "（备注补充）"
+                    ],
+                    [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ]
+                ]
+            },
+            "sheet_5sI108Ne": {
+                "uid": "sheet_5sI108Ne",
+                "name": "NPC信息",
+                "domain": "chat",
+                "type": "dynamic",
+                "enable": true,
+                "required": false,
+                "tochat": true,
+                "triggerSend": false,
+                "triggerSendDeep": 1,
+                "config": {
+                    "toChat": true,
+                    "useCustomStyle": false,
+                    "triggerSendToChat": false,
+                    "alternateTable": false,
+                    "alternateLevel": 0,
+                    "skipTop": false,
+                    "selectedCustomStyleKey": "",
+                    "customStyles": {
+                        "自定义样式": {
+                            "mode": "regex",
+                            "basedOn": "html",
+                            "regex": "/(^[\\s\\S]*$)/g",
+                            "replace": "$1"
+                        }
+                    }
+                },
+                "sourceData": {
+                    "note": "拥有正式名字的NPC的角色信息（此内容不需要记录{{user}}相关内容）NPC角色只要还没死亡就必须持续更新当前在做的事情（哪怕是不在剧情中出现）"
+                },
+                "content": [
+                    [
+                        null,
+                        "角色名",
+                        "当前在做的事情",
+                        "道号/称号",
+                        "性别",
+                        "表面年龄",
+                        "真实年龄",
+                        "种族",
+                        "身高体重",
+                        "声音特质",
+                        "面容",
+                        "体型",
+                        "核心性格特质",
+                        "习惯性表情/姿态",
+                        "站姿坐姿的特点",
+                        "显著特征/印记",
+                        "特殊饰品",
+                        "气质",
+                        "主修境界等级",
+                        "灵根类型与品质",
+                        "体质（名称与等级）",
+                        "修炼天赋评级",
+                        "主修功法",
+                        "辅修功法",
+                        "势力归属与社会地位",
+                        "声望/名誉",
+                        "居所与活动范围",
+                        "常规活动区域",
+                        "所携带物品、法宝、丹药、灵石等",
+                        "关系表（名称与关系）",
+                        "（补充）"
+                    ],
+                    [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ]
+                ]
+            },
+            "sheet_PjxYY1VO": {
+                "uid": "sheet_PjxYY1VO",
+                "name": "储物袋",
+                "domain": "chat",
+                "type": "dynamic",
+                "enable": true,
+                "required": false,
+                "tochat": true,
+                "triggerSend": false,
+                "triggerSendDeep": 1,
+                "config": {
+                    "toChat": true,
+                    "useCustomStyle": false,
+                    "triggerSendToChat": false,
+                    "alternateTable": false,
+                    "alternateLevel": 0,
+                    "skipTop": false,
+                    "selectedCustomStyleKey": "",
+                    "customStyles": {
+                        "自定义样式": {
+                            "mode": "regex",
+                            "basedOn": "html",
+                            "regex": "/(^[\\s\\S]*$)/g",
+                            "replace": "$1"
+                        }
+                    }
+                },
+                "sourceData": {
+                    "note": "{{user}}的储物袋（只有{{user}}做出收纳或取出行为才需要更新）"
+                },
+                "content": [
+                    [
+                        null,
+                        "物品名",
+                        "外观",
+                        "物品描述",
+                        "物品用途",
+                        "品阶",
+                        "数量"
+                    ],
+                    [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ]
+                ]
+            },
+            "sheet_6mmxVjFX": {
+                "uid": "sheet_6mmxVjFX",
+                "name": "角色关系表",
+                "domain": "chat",
+                "type": "dynamic",
+                "enable": true,
+                "required": false,
+                "tochat": true,
+                "triggerSend": false,
+                "triggerSendDeep": 1,
+                "config": {
+                    "toChat": true,
+                    "useCustomStyle": false,
+                    "triggerSendToChat": false,
+                    "alternateTable": false,
+                    "alternateLevel": 0,
+                    "skipTop": false,
+                    "selectedCustomStyleKey": "",
+                    "customStyles": {
+                        "自定义样式": {
+                            "mode": "regex",
+                            "basedOn": "html",
+                            "regex": "/(^[\\s\\S]*$)/g",
+                            "replace": "$1"
+                        }
+                    }
+                },
+                "sourceData": {
+                    "note": "NPC角色对{{user}}的表面关系、态度、好感。"
+                },
+                "content": [
+                    [
+                        null,
+                        "角色名",
+                        "表面关系",
+                        "对{{user}}态度",
+                        "对{{user}}好感",
+                        "（备注补充）"
+                    ],
+                    [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ]
+                ]
+            },
+            "sheet_0VITb6SM": {
+                "uid": "sheet_0VITb6SM",
+                "name": "{{user}}真实面板",
+                "domain": "chat",
+                "type": "dynamic",
+                "enable": true,
+                "required": true,
+                "tochat": true,
+                "triggerSend": false,
+                "triggerSendDeep": 1,
+                "config": {
+                    "toChat": true,
+                    "useCustomStyle": false,
+                    "triggerSendToChat": false,
+                    "alternateTable": false,
+                    "alternateLevel": 0,
+                    "skipTop": false,
+                    "selectedCustomStyleKey": "",
+                    "customStyles": {
+                        "自定义样式": {
+                            "mode": "regex",
+                            "basedOn": "html",
+                            "regex": "/(^[\\s\\S]*$)/g",
+                            "replace": "$1"
+                        }
+                    }
+                },
+                "sourceData": {
+                    "note": "{{user}}的真实面板数据"
+                },
+                "content": [
+                    [
+                        null,
+                        "{{user}}的角色名称",
+                        "当前境界",
+                        "灵根",
+                        "功法",
+                        "法宝",
+                        "灵气积累率",
+                        "预计突破时间",
+                        "备注（补充）"
+                    ],
+                    [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ]
+                ]
+            },
+            "sheet_PW15txDW": {
+                "uid": "sheet_PW15txDW",
+                "name": "事件发生",
+                "domain": "chat",
+                "type": "dynamic",
+                "enable": true,
+                "required": true,
+                "tochat": true,
+                "triggerSend": false,
+                "triggerSendDeep": 1,
+                "config": {
+                    "toChat": true,
+                    "useCustomStyle": false,
+                    "triggerSendToChat": false,
+                    "alternateTable": false,
+                    "alternateLevel": 0,
+                    "skipTop": false,
+                    "selectedCustomStyleKey": "",
+                    "customStyles": {
+                        "自定义样式": {
+                            "mode": "regex",
+                            "basedOn": "html",
+                            "regex": "/(^[\\s\\S]*$)/g",
+                            "replace": "$1"
+                        }
+                    }
+                },
+                "sourceData": {
+                    "note": "{{user}}在剧情内发生的重要事情"
+                },
+                "content": [
+                    [
+                        null,
+                        "事件名称",
+                        "事件发生地（地名）",
+                        "天元坐标",
+                        "地元坐标",
+                        "在场角色",
+                        "事件发生内容",
+                        "（备注补充）"
+                    ],
+                    [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ]
+                ]
+            },
+            "sheet_LxTV2xWV": {
+                "uid": "sheet_LxTV2xWV",
+                "name": "使用者",
+                "domain": "chat",
+                "type": "dynamic",
+                "enable": true,
+                "required": false,
+                "tochat": true,
+                "triggerSend": false,
+                "triggerSendDeep": 1,
+                "config": {
+                    "toChat": true,
+                    "useCustomStyle": false,
+                    "triggerSendToChat": false,
+                    "alternateTable": false,
+                    "alternateLevel": 0,
+                    "skipTop": false,
+                    "selectedCustomStyleKey": "",
+                    "customStyles": {
+                        "自定义样式": {
+                            "mode": "regex",
+                            "basedOn": "html",
+                            "regex": "/(^[\\s\\S]*$)/g",
+                            "replace": "$1"
+                        }
+                    }
+                },
+                "sourceData": {
+                    "note": "使用过{{user}}精液的女性"
+                },
+                "content": [
+                    [
+                        null,
+                        "角色名",
+                        "真实关系",
+                        "是否被暗示",
+                        "是否被控制",
+                        "{{user}}在其内心形象",
+                        "（备注补充）"
+                    ],
+                    [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ]
+                ]
+            },
+            "sheet_JEub9PB0": {
+                "uid": "sheet_JEub9PB0",
+                "name": "万界大陆物品",
+                "domain": "chat",
+                "type": "dynamic",
+                "enable": true,
+                "required": false,
+                "tochat": true,
+                "triggerSend": false,
+                "triggerSendDeep": 1,
+                "config": {
+                    "toChat": true,
+                    "useCustomStyle": false,
+                    "triggerSendToChat": false,
+                    "alternateTable": false,
+                    "alternateLevel": 0,
+                    "skipTop": false,
+                    "selectedCustomStyleKey": "",
+                    "customStyles": {
+                        "自定义样式": {
+                            "mode": "regex",
+                            "basedOn": "html",
+                            "regex": "/(^[\\s\\S]*$)/g",
+                            "replace": "$1"
+                        }
+                    }
+                },
+                "sourceData": {
+                    "note": "在剧情内出现过的物品信息（仅限物品）"
+                },
+                "content": [
+                    [
+                        null,
+                        "物品名称",
+                        "外观",
+                        "类型",
+                        "作用",
+                        "品质",
+                        "（备注补充）"
+                    ],
+                    [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ]
+                ]
+            },
+            "sheet_Ec75ze80": {
+                "uid": "sheet_Ec75ze80",
+                "name": "事物",
+                "domain": "chat",
+                "type": "dynamic",
+                "enable": true,
+                "required": false,
+                "tochat": true,
+                "triggerSend": false,
+                "triggerSendDeep": 1,
+                "config": {
+                    "toChat": true,
+                    "useCustomStyle": false,
+                    "triggerSendToChat": false,
+                    "alternateTable": false,
+                    "alternateLevel": 0,
+                    "skipTop": false,
+                    "selectedCustomStyleKey": "",
+                    "customStyles": {
+                        "自定义样式": {
+                            "mode": "regex",
+                            "basedOn": "html",
+                            "regex": "/(^[\\s\\S]*$)/g",
+                            "replace": "$1"
+                        }
+                    }
+                },
+                "sourceData": {
+                    "note": "万界大陆已知的事物（是什么事情，是做什么的等内容，而不是物品）"
+                },
+                "content": [
+                    [
+                        null,
+                        "事物名称",
+                        "（补充1）",
+                        "（补充2）",
+                        "（补充3）",
+                        "（补充4）"
+                    ],
+                    [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ]
+                ]
+            },
+            "sheet_aDhKSQQa": {
+                "uid": "sheet_aDhKSQQa",
+                "name": "生物",
+                "domain": "chat",
+                "type": "dynamic",
+                "enable": true,
+                "required": false,
+                "tochat": true,
+                "triggerSend": false,
+                "triggerSendDeep": 1,
+                "config": {
+                    "toChat": true,
+                    "useCustomStyle": false,
+                    "triggerSendToChat": false,
+                    "alternateTable": false,
+                    "alternateLevel": 0,
+                    "skipTop": false,
+                    "selectedCustomStyleKey": "",
+                    "customStyles": {
+                        "自定义样式": {
+                            "mode": "regex",
+                            "basedOn": "html",
+                            "regex": "/(^[\\s\\S]*$)/g",
+                            "replace": "$1"
+                        }
+                    }
+                },
+                "sourceData": {
+                    "note": "万界大陆在剧情内出现的生物（不包含人类，人型生物）"
+                },
+                "content": [
+                    [
+                        null,
+                        "名称",
+                        "物种",
+                        "外观",
+                        "（补充1）",
+                        "（补充2）",
+                        "（补充3）",
+                        "（补充4）",
+                        "（补充5）"
+                    ],
+                    [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                    ]
+                ]
             }
         },
         "table_selected_sheets": [
-            "template_c1VrSPVc",
-            "template_dpJMYtw4",
-            "template_Hyt5cwcl",
-            "template_stEzXfKU",
-            "template_QImk76Wo"
+            "template_5lfmDIbY",
+            "template_tY8KIB51",
+            "template_b1EIGmqf",
+            "template_qBYSKzS0",
+            "template_eVMjWpQG"
         ],
         "table_database_templates": [
             {
-                "uid": "template_c1VrSPVc",
+                "uid": "template_5lfmDIbY",
                 "name": "角色信息",
                 "domain": "global",
                 "type": "dynamic",
@@ -1098,32 +1676,32 @@
                 "triggerSendDeep": 1,
                 "hashSheet": [
                     [
-                        "cell_undefined_MylQ6t9ei79Ek62i",
-                        "cell_undefined_Dy5VcOfxIyG7ACZR",
-                        "cell_undefined_fYj9yNuzD3WhA4uT",
-                        "cell_undefined_U3TvrcMGN32tC6bJ",
-                        "cell_undefined_07KrP8mZ0lczIW8k",
-                        "cell_undefined_eNnxp5hLem4m0Sqr",
-                        "cell_undefined_MD6bJCUXKRjndy6h",
-                        "cell_undefined_LkZCmai6RJRJhaUB",
-                        "cell_undefined_UjBZGAAsmQLPg60p",
-                        "cell_undefined_9p6jDO7ltD0vf5K5",
-                        "cell_undefined_sDBxJm4RC8kSjRx2",
-                        "cell_undefined_zgeemqyfK8c2PgiE",
-                        "cell_undefined_BHQpof5rkOaOhVYE",
-                        "cell_undefined_ucy7nFzRE0z45t6n",
-                        "cell_undefined_2jAQDualB8WxUz4w",
-                        "cell_undefined_7KVqCd94k53VZst1",
-                        "cell_undefined_1BdHqwIcyvFgA82Z",
-                        "cell_undefined_Rf4WxcIojp70Hmqq"
+                        "cell_undefined_HnmkKBaIK6uIBwQ0",
+                        "cell_undefined_rwR4Stxu04Q2P91e",
+                        "cell_undefined_kWStkUMiA14dVuqh",
+                        "cell_undefined_dOiGmEjZOROBEI6T",
+                        "cell_undefined_4T6Y80vKMycRqcMQ",
+                        "cell_undefined_3xVKAZK0rZk3VQ4B",
+                        "cell_undefined_z5YzUdlqEpzXRgUn",
+                        "cell_undefined_AnuPF55V77tjGTw6",
+                        "cell_undefined_3SMCyOdMo5Yej3B8",
+                        "cell_undefined_GJ1aUoAEZFRCkAgD",
+                        "cell_undefined_v25jvoxu7B2F6nGG",
+                        "cell_undefined_MunTeXsSyKdt2ho3",
+                        "cell_undefined_Y66lEym392WPtdO3",
+                        "cell_undefined_ZjPe5yNtBUrHpYFQ",
+                        "cell_undefined_VmxFYYOvxwIUs21f",
+                        "cell_undefined_4eTi69hxVT3QeUQm",
+                        "cell_undefined_xrctCaBTmfNEWVMq",
+                        "cell_undefined_tw2Xzw7Ysl4cOMjO"
                     ]
                 ],
                 "cellHistory": [
                     {
-                        "uid": "cell_undefined_MylQ6t9ei79Ek62i",
+                        "uid": "cell_undefined_HnmkKBaIK6uIBwQ0",
                         "type": "sheet_origin",
                         "status": "",
-                        "coordUid": "coo_s3EJernBrA2MN0m",
+                        "coordUid": "coo_TDbrDr7GGe3k4yR",
                         "data": {
                             "note": "tableIndex: 0 - 角色信息 (Character Information)\n说明: 核心角色库。完整性优先，禁留空/未知(需详尽推测)，禁删角色行。适用通用单元格精简及表0特定行级精简规则。\n列:\n `0:角色ID` (唯一, B/G/M+数字)\n `1:姓名|性别` (格式: `姓名|性别`。性别未知需推测)\n `2:身份/称谓` (未知需推测。适用单元格精简)\n `3:核心性格` (未知需推测。适用单元格精简)\n `4:当前状态` (动态更新, 初始需推测。适用单元格精简)\n `5:特征(含发/瞳/身形/脸/手/足/标记/性器官细节)` (务必全面详尽推测，含性器官细节。适用单元格及行级精简)\n `6:声音描述` (未知需推测。适用单元格精简)\n `7:性经验(含处子状态)` (务必明确处子状态及经验水平推测。适用单元格精简)\n `8:特殊癖好/倾向` (未知填“无明显特殊癖好推测而来”。适用单元格精简)\n `9:备注(含性取向)` (务必含性取向推测。适用单元格精简)\n `10:背景故事/重要经历` (未知需推测基础背景。适用单元格及行级精简)\n `11:技能/能力` (未知需推测基础能力。适用单元格及行级精简)\n `12:目标/动机` (未知需推测通用目标。适用单元格及行级精简)\n `13:关系(对他人认知)` (格式: `角色B ID:描述 | ...`。描述部分适用单元格精简)\n `14:态度(对他人基本态度)` (格式: `角色B ID:描述 | ...`。描述部分适用单元格精简)\n `15:角色互评指标(对他人十项指标)` (格式: `角色B ID:{指标名1:值,...}`。初创角色至少含核心初始值)\n `16:综合情感状态` (初始需推测。适用单元格精简)",
                             "initNode": "表格初始时可能为空，或者包含根据故事设定预先创建的几个核心角色信息。每个角色占一行，包含所有17列的初始数据，未知信息必须进行合理详尽推测。",
@@ -1134,170 +1712,170 @@
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_Dy5VcOfxIyG7ACZR",
+                        "uid": "cell_undefined_rwR4Stxu04Q2P91e",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_kdH7N9xIh9KHB0n",
+                        "coordUid": "coo_EoUtIAVC3DJ7XZU",
                         "data": {
                             "value": "角色ID"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_fYj9yNuzD3WhA4uT",
+                        "uid": "cell_undefined_kWStkUMiA14dVuqh",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_g8vtk0JhurxjQQJ",
+                        "coordUid": "coo_jNs2dcOBQ1MihrU",
                         "data": {
                             "value": "姓名|性别"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_U3TvrcMGN32tC6bJ",
+                        "uid": "cell_undefined_dOiGmEjZOROBEI6T",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_9H1juzarT2yPWOP",
+                        "coordUid": "coo_ysm48vfky2WMK97",
                         "data": {
                             "value": "身份/称谓"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_07KrP8mZ0lczIW8k",
+                        "uid": "cell_undefined_4T6Y80vKMycRqcMQ",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_y76e8MccaTW2Oip",
+                        "coordUid": "coo_Hb058pnUL8XRXwk",
                         "data": {
                             "value": "核心性格"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_eNnxp5hLem4m0Sqr",
+                        "uid": "cell_undefined_3xVKAZK0rZk3VQ4B",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_GX3J818MIFB1kR3",
+                        "coordUid": "coo_w44fdzZQauM5tGY",
                         "data": {
                             "value": "当前状态"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_MD6bJCUXKRjndy6h",
+                        "uid": "cell_undefined_z5YzUdlqEpzXRgUn",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_PlbFN3dNEzAug4x",
+                        "coordUid": "coo_R2V3epiKzwjUYe9",
                         "data": {
                             "value": "特征(含发/瞳/身形/脸/手/足/标记/性器官细节)"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_LkZCmai6RJRJhaUB",
+                        "uid": "cell_undefined_AnuPF55V77tjGTw6",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_fOAXzxutAuTMOMU",
+                        "coordUid": "coo_wL8htb5zq5jHMAS",
                         "data": {
                             "value": "声音描述"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_UjBZGAAsmQLPg60p",
+                        "uid": "cell_undefined_3SMCyOdMo5Yej3B8",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_qMllKdsQhBDEPJ8",
+                        "coordUid": "coo_2YiaWpgc3JgtgsZ",
                         "data": {
                             "value": "性经验(含处子状态)"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_9p6jDO7ltD0vf5K5",
+                        "uid": "cell_undefined_GJ1aUoAEZFRCkAgD",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_jp38jND3Ul6oejm",
+                        "coordUid": "coo_eDpFaSD6Nf3TOAD",
                         "data": {
                             "value": "特殊癖好/倾向"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_sDBxJm4RC8kSjRx2",
+                        "uid": "cell_undefined_v25jvoxu7B2F6nGG",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_X6OAVbUK3lHkpQX",
+                        "coordUid": "coo_VZG150jENPuVAcr",
                         "data": {
                             "value": "备注(含性取向)"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_zgeemqyfK8c2PgiE",
+                        "uid": "cell_undefined_MunTeXsSyKdt2ho3",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_2aLnlgOtSNjn6KT",
+                        "coordUid": "coo_1SDjXhPLv50CGIw",
                         "data": {
                             "value": "背景故事/重要经历"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_BHQpof5rkOaOhVYE",
+                        "uid": "cell_undefined_Y66lEym392WPtdO3",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_yi8QI9PFOo03qup",
+                        "coordUid": "coo_a7F0ZXDAGH471My",
                         "data": {
                             "value": "技能/能力"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_ucy7nFzRE0z45t6n",
+                        "uid": "cell_undefined_ZjPe5yNtBUrHpYFQ",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_FjzUHDUDfnA3PRe",
+                        "coordUid": "coo_zLCvE6vf9tyr66f",
                         "data": {
                             "value": "目标/动机"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_2jAQDualB8WxUz4w",
+                        "uid": "cell_undefined_VmxFYYOvxwIUs21f",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_VUZbEalRIJZMJys",
+                        "coordUid": "coo_YQwETDipjqBDcFf",
                         "data": {
                             "value": "关系(对他人认知)"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_7KVqCd94k53VZst1",
+                        "uid": "cell_undefined_4eTi69hxVT3QeUQm",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_uuJNd7z0ReFp9lm",
+                        "coordUid": "coo_R5kH20M7rF2DBO9",
                         "data": {
                             "value": "态度(对他人基本态度)"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_1BdHqwIcyvFgA82Z",
+                        "uid": "cell_undefined_xrctCaBTmfNEWVMq",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_p3AsxFH3y0vVNwI",
+                        "coordUid": "coo_kJmn1AmjSwNZtY5",
                         "data": {
                             "value": "角色互评指标(对他人十项指标)"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_Rf4WxcIojp70Hmqq",
+                        "uid": "cell_undefined_tw2Xzw7Ysl4cOMjO",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_cXA83QlMQdezzQr",
+                        "coordUid": "coo_Kin7N4ntzXHKgi7",
                         "data": {
                             "value": "综合情感状态"
                         },
@@ -1323,7 +1901,7 @@
                 }
             },
             {
-                "uid": "template_dpJMYtw4",
+                "uid": "template_tY8KIB51",
                 "name": "纪要",
                 "domain": "global",
                 "type": "dynamic",
@@ -1334,26 +1912,26 @@
                 "triggerSendDeep": 1,
                 "hashSheet": [
                     [
-                        "cell_undefined_KPUEk2wRWS9DeOpH",
-                        "cell_undefined_3GKExSnrO2w0wriT",
-                        "cell_undefined_DDBOxRrePsDZBdXQ",
-                        "cell_undefined_MIhu7M2fbDBd6seM",
-                        "cell_undefined_fM6v1sSTBZRmAPAj",
-                        "cell_undefined_nU9EsBMl5IMP6F05",
-                        "cell_undefined_HD4g7eUquBDvXVik",
-                        "cell_undefined_1gAVvlBHaDl6lrZQ",
-                        "cell_undefined_97vMl6Up97vsfaiq",
-                        "cell_undefined_Z9PTPX72Gs5QvMih",
-                        "cell_undefined_nHv9eswHWyMq6G19",
-                        "cell_undefined_3A0S4MMa6Z4aJVh9"
+                        "cell_undefined_l8LaRG5ZaRBWHfJt",
+                        "cell_undefined_T4Umu7vnOWMtssl1",
+                        "cell_undefined_uIJLtOOBco4Xm5IW",
+                        "cell_undefined_YxEZk9PR0ESrSM8l",
+                        "cell_undefined_fGdFttIZzuZ0t8mV",
+                        "cell_undefined_01o8tAQIyUNCXTgm",
+                        "cell_undefined_HI5cD9di4zFjR7A0",
+                        "cell_undefined_MPvabok3FjVpq6fL",
+                        "cell_undefined_m3W6sZ5UGravRFLq",
+                        "cell_undefined_7BrxuCrdDew9AkXi",
+                        "cell_undefined_0f2vFw0wA837wt3r",
+                        "cell_undefined_WCJpOP4Vbmz6T3uW"
                     ]
                 ],
                 "cellHistory": [
                     {
-                        "uid": "cell_undefined_KPUEk2wRWS9DeOpH",
+                        "uid": "cell_undefined_l8LaRG5ZaRBWHfJt",
                         "type": "sheet_origin",
                         "status": "",
-                        "coordUid": "coo_sLKgiZ53qrAhIi9",
+                        "coordUid": "coo_BA6MEFYqshpzPNw",
                         "data": {
                             "note": "tableIndex: 1 - 纪要 (Minutes/Summary)\n说明: 高保真事件快照。按时序捕捉细节，含详尽着装。累积后由Table 2总结并删除。适用通用单元格精简及Table 1特定自动总结规则（3条记录或总字符数超限）。\n列:\n `0:纪要ID`\n `1:时间戳` (纪元:年-月-日 时:分)\n `2:核心概述` (准确不省略细节。适用单元格精简)\n `3:涉及角色` (`/`分隔)\n `4:主要人物着装(详尽描述规则)` (格式: `饰品|上妆|上身衣物|下身衣物|鞋袜 / 角色间`。单角色各部分适用单元格精简)\n `5:关键物品` (适用单元格精简)\n `6:关键动作` (适用单元格精简)\n `7:关键对话` (精选几句。适用单元格精简)\n `8:地点` (适用单元格精简)\n `9:情感快照` (`/`分隔。单角色描述适用单元格精简)\n `10:角色间距` (适用单元格精简)",
                             "initNode": "表格初始状态为空，没有任何纪要记录。",
@@ -1364,110 +1942,110 @@
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_3GKExSnrO2w0wriT",
+                        "uid": "cell_undefined_T4Umu7vnOWMtssl1",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_tSt1SZ1EyEuuAPq",
+                        "coordUid": "coo_yf2shy09vpDPKhQ",
                         "data": {
                             "value": "纪要ID"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_DDBOxRrePsDZBdXQ",
+                        "uid": "cell_undefined_uIJLtOOBco4Xm5IW",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_4W3jUtXVzMnwsky",
+                        "coordUid": "coo_5ZidVoA2gpt8hgG",
                         "data": {
                             "value": "时间戳"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_MIhu7M2fbDBd6seM",
+                        "uid": "cell_undefined_YxEZk9PR0ESrSM8l",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_QARTKuqS1iOX9Fj",
+                        "coordUid": "coo_AB50610sb9WLwGR",
                         "data": {
                             "value": "核心概述"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_fM6v1sSTBZRmAPAj",
+                        "uid": "cell_undefined_fGdFttIZzuZ0t8mV",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_M3argkHCzrjOvke",
+                        "coordUid": "coo_d7XiLN3cPL90rvc",
                         "data": {
                             "value": "涉及角色"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_nU9EsBMl5IMP6F05",
+                        "uid": "cell_undefined_01o8tAQIyUNCXTgm",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_Gcs8AYnQmnZNqFb",
+                        "coordUid": "coo_8CIuqbpWv52Y5a9",
                         "data": {
                             "value": "主要人物着装(详尽描述规则)"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_HD4g7eUquBDvXVik",
+                        "uid": "cell_undefined_HI5cD9di4zFjR7A0",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_46kGP071dAXYmM3",
+                        "coordUid": "coo_jG8lDRHYCEI1srU",
                         "data": {
                             "value": "关键物品"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_1gAVvlBHaDl6lrZQ",
+                        "uid": "cell_undefined_MPvabok3FjVpq6fL",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_wHqgjp4UAt68vwA",
+                        "coordUid": "coo_KSeIxxoojReL7ie",
                         "data": {
                             "value": "关键动作"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_97vMl6Up97vsfaiq",
+                        "uid": "cell_undefined_m3W6sZ5UGravRFLq",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_FJhBnTxIIJ8YJNe",
+                        "coordUid": "coo_2PSRgfdWcoNimpP",
                         "data": {
                             "value": "关键对话"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_Z9PTPX72Gs5QvMih",
+                        "uid": "cell_undefined_7BrxuCrdDew9AkXi",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_gzmL4gxQf9lCUKt",
+                        "coordUid": "coo_LGLb4r2ajHM6yBd",
                         "data": {
                             "value": "地点"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_nHv9eswHWyMq6G19",
+                        "uid": "cell_undefined_0f2vFw0wA837wt3r",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_dB3Fj9o3CMFIZMp",
+                        "coordUid": "coo_BaPZBIBYzLVDK9c",
                         "data": {
                             "value": "情感快照"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_3A0S4MMa6Z4aJVh9",
+                        "uid": "cell_undefined_WCJpOP4Vbmz6T3uW",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_U1qLNfVn7DtRTw0",
+                        "coordUid": "coo_mkrtCSWyCg0HQ5y",
                         "data": {
                             "value": "角色间距"
                         },
@@ -1493,7 +2071,7 @@
                 }
             },
             {
-                "uid": "template_Hyt5cwcl",
+                "uid": "template_b1EIGmqf",
                 "name": "大总结",
                 "domain": "global",
                 "type": "dynamic",
@@ -1504,23 +2082,23 @@
                 "triggerSendDeep": 1,
                 "hashSheet": [
                     [
-                        "cell_undefined_6XHY8wIQG0WQf717",
-                        "cell_undefined_4CjR7n2IZFWJN4LF",
-                        "cell_undefined_3A0Qt28Mx4TicI6Q",
-                        "cell_undefined_tPfla6P6xowG2YhN",
-                        "cell_undefined_CxDUKPyP9tG9ycqF",
-                        "cell_undefined_lYVXYmDrIrlY21Ds",
-                        "cell_undefined_dOSLbuG0uTNTGZne",
-                        "cell_undefined_LfzIVvI9n9LJI8iZ",
-                        "cell_undefined_9oXsmss3Kr5RitCC"
+                        "cell_undefined_otkWbnai2YkmP6on",
+                        "cell_undefined_CJalSTneyNgY4Xgd",
+                        "cell_undefined_4RdzetVuO4tvPa00",
+                        "cell_undefined_730DN2AlKepnrNIS",
+                        "cell_undefined_EcqLb0cQHa9VGFXu",
+                        "cell_undefined_JSvLQcpVefzSbLSL",
+                        "cell_undefined_ykVQGIjjY0g6VhJR",
+                        "cell_undefined_xtyd3QWdpBmhhFOK",
+                        "cell_undefined_KfDDfyBnQAyZqJhG"
                     ]
                 ],
                 "cellHistory": [
                     {
-                        "uid": "cell_undefined_6XHY8wIQG0WQf717",
+                        "uid": "cell_undefined_otkWbnai2YkmP6on",
                         "type": "sheet_origin",
                         "status": "",
-                        "coordUid": "coo_ThwaPXLqwW8SI6r",
+                        "coordUid": "coo_QUzz3Z906Uvdd8A",
                         "data": {
                             "note": "tableIndex: 2 - 大总结 (Grand Summary/Archive)\n说明: 整合性事件总结，由Table 1触发。追踪关键物品最终状态并联动Table 0。原则上禁删。适用通用单元格精简及Table 2特定大总结精简规则。\n列:\n `0:总结ID`\n `1:创建时间戳` (格式: `[起始时间戳] - [结束时间戳]`)\n `2:归档时间戳` (可选, 单一时间戳)\n `3:标题/主题` (适用单元格精简)\n `4:概述` (详细连贯整合Table 1内容。适用单元格及Table 2自身精简)\n `5:包含的纪要ID列表` (`;`分隔)\n `6:涉及的主要角色` (`/`分隔)\n `7:关键物品总结` (格式: `物品名(最终状态)/...`。无则“无关键物品变化”。单物品描述适用单元格精简)",
                             "initNode": "表格初始时为空，不包含任何总结记录。",
@@ -1531,80 +2109,80 @@
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_4CjR7n2IZFWJN4LF",
+                        "uid": "cell_undefined_CJalSTneyNgY4Xgd",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_g2Ln16vEdEgKSvs",
+                        "coordUid": "coo_BSDqWZbydOAFcGF",
                         "data": {
                             "value": "总结ID"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_3A0Qt28Mx4TicI6Q",
+                        "uid": "cell_undefined_4RdzetVuO4tvPa00",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_5IoiT0Rm3qoRxPC",
+                        "coordUid": "coo_xfbwyHyg8A3NqYN",
                         "data": {
                             "value": "创建时间戳"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_tPfla6P6xowG2YhN",
+                        "uid": "cell_undefined_730DN2AlKepnrNIS",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_HMUSUyFAw0nDNtW",
+                        "coordUid": "coo_kYDB5sMqp6H65QK",
                         "data": {
                             "value": "归档时间戳"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_CxDUKPyP9tG9ycqF",
+                        "uid": "cell_undefined_EcqLb0cQHa9VGFXu",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_W9zPgFm7fNN7Y9D",
+                        "coordUid": "coo_SFFqXb7cQmpPR6l",
                         "data": {
                             "value": "标题/主题"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_lYVXYmDrIrlY21Ds",
+                        "uid": "cell_undefined_JSvLQcpVefzSbLSL",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_DLBv6Qs4xLoAGXD",
+                        "coordUid": "coo_lx1JHhqTQux4aIJ",
                         "data": {
                             "value": "概述"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_dOSLbuG0uTNTGZne",
+                        "uid": "cell_undefined_ykVQGIjjY0g6VhJR",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_df2quRszrBWvbKw",
+                        "coordUid": "coo_FofmuQ0IeiCk3p2",
                         "data": {
                             "value": "包含的纪要ID列表"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_LfzIVvI9n9LJI8iZ",
+                        "uid": "cell_undefined_xtyd3QWdpBmhhFOK",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_3d8aXAujTfPxEWq",
+                        "coordUid": "coo_5OVyAD0ybmWwYSO",
                         "data": {
                             "value": "涉及的主要角色"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_9oXsmss3Kr5RitCC",
+                        "uid": "cell_undefined_KfDDfyBnQAyZqJhG",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_2sGj9rmeOzSZaj6",
+                        "coordUid": "coo_rh9zKqDhnwMFo6g",
                         "data": {
                             "value": "关键物品总结"
                         },
@@ -1630,7 +2208,7 @@
                 }
             },
             {
-                "uid": "template_stEzXfKU",
+                "uid": "template_qBYSKzS0",
                 "name": "用户偏好",
                 "domain": "global",
                 "type": "dynamic",
@@ -1641,18 +2219,18 @@
                 "triggerSendDeep": 1,
                 "hashSheet": [
                     [
-                        "cell_undefined_1SIdqw59uc4f9o3N",
-                        "cell_undefined_UrLQSRS3LkBGu8ew",
-                        "cell_undefined_Qqijf8jwd15TKSSX",
-                        "cell_undefined_FOZIPcCChkYe5BWr"
+                        "cell_undefined_GlZauSXh6z7MLhZP",
+                        "cell_undefined_CRSczOVMa83gJrE4",
+                        "cell_undefined_NLIvyctE0yP3mghy",
+                        "cell_undefined_lFoAx2T4AkPSsXdC"
                     ]
                 ],
                 "cellHistory": [
                     {
-                        "uid": "cell_undefined_1SIdqw59uc4f9o3N",
+                        "uid": "cell_undefined_GlZauSXh6z7MLhZP",
                         "type": "sheet_origin",
                         "status": "",
-                        "coordUid": "coo_Epi7xEJakheotZQ",
+                        "coordUid": "coo_BHE5hWGRgmxJtMf",
                         "data": {
                             "note": "tableIndex: 3 - 用户偏好 (User Preferences)\n说明: AI主动学习识别用户偏好。设总字符数阈值及相似条目融合机制，满足条件时自动精简与融合。适用通用单元格精简及Table 3特定精简规则。\n列:\n `0:偏好项` (适用单元格精简)\n `1:偏好值` (适用单元格精简)\n `2:备注` (适用单元格精简)",
                             "initNode": "表格初始状态通常为空，或仅包含极少数基于通用情况推测的基础偏好。AI从与用户的第一次互动开始，启动偏好识别和学习机制。",
@@ -1663,30 +2241,30 @@
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_UrLQSRS3LkBGu8ew",
+                        "uid": "cell_undefined_CRSczOVMa83gJrE4",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_4ojLy1bQ8QOVKhc",
+                        "coordUid": "coo_0MVDn7vhBj2oB5d",
                         "data": {
                             "value": "偏好项"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_Qqijf8jwd15TKSSX",
+                        "uid": "cell_undefined_NLIvyctE0yP3mghy",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_DLBbnpUuRdAXX5t",
+                        "coordUid": "coo_NFoDX2u28F3m3Y0",
                         "data": {
                             "value": "偏好值"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_FOZIPcCChkYe5BWr",
+                        "uid": "cell_undefined_lFoAx2T4AkPSsXdC",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_tuArrCD8v092S0t",
+                        "coordUid": "coo_0Ow0E1F5LZVUcn9",
                         "data": {
                             "value": "备注"
                         },
@@ -1712,7 +2290,7 @@
                 }
             },
             {
-                "uid": "template_QImk76Wo",
+                "uid": "template_eVMjWpQG",
                 "name": "正文尾部",
                 "domain": "global",
                 "type": "dynamic",
@@ -1723,16 +2301,16 @@
                 "triggerSendDeep": 1,
                 "hashSheet": [
                     [
-                        "cell_undefined_QpDXyZs1t8upfco4",
-                        "cell_undefined_c6ZUtp8LQZSoHOWH"
+                        "cell_undefined_KRo5LLFQOGzIsZZf",
+                        "cell_undefined_bExN2V8JQTk3l0KH"
                     ]
                 ],
                 "cellHistory": [
                     {
-                        "uid": "cell_undefined_QpDXyZs1t8upfco4",
+                        "uid": "cell_undefined_KRo5LLFQOGzIsZZf",
                         "type": "sheet_origin",
                         "status": "",
-                        "coordUid": "coo_H19rERwQoiRaPNC",
+                        "coordUid": "coo_PdN2ch7x3nkQfMp",
                         "data": {
                             "note": "tableIndex: 4 - 正文尾部\n说明: 始终一行一列，记录`content`最后30-50字，保下次连贯。\n列:\n `0:尾部内容`",
                             "initNode": "表格初始时包含一行，内容为“初始尾部内容”。",
@@ -1743,10 +2321,10 @@
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_c6ZUtp8LQZSoHOWH",
+                        "uid": "cell_undefined_bExN2V8JQTk3l0KH",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_yy6nkaa0zVMGUrN",
+                        "coordUid": "coo_6CNZW6mRR9qIoQt",
                         "data": {
                             "value": "尾部内容"
                         },
