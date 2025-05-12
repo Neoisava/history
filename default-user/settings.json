@@ -23,7 +23,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": "林若秋.png",
+    "active_character": null,
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2245,8 +2245,8 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 31110,
-                "LAST_RECEIVE_CHARS": 93739,
+                "LAST_RECEIVE_TOKENS": 11,
+                "LAST_RECEIVE_CHARS": 7,
                 "LAST_SEND_TOKENS": 167498,
                 "LAST_SEND_CHARS": 210349
             }
@@ -2788,7 +2788,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 444,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
