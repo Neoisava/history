@@ -21,12 +21,12 @@
         "AlertWI_修仙世界-[万界大陆].png": "true"
     },
     "currentVersion": "1.12.14",
-    "username": "石头",
+    "username": "林若秋",
     "active_character": "修仙之路2.0.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
-    "user_avatar": "1746416876729-.png",
+    "user_avatar": "1746440806294-.png",
     "amount_gen": 350,
     "max_context": 8192,
     "main_api": "openai",
@@ -441,7 +441,7 @@
                 "lorebook": ""
             }
         },
-        "persona_description": "原名王铁柱，性别男，年龄未知。世界书的阅读者，穿梭于各种世界书之间。有随意改写世界书的能力。",
+        "persona_description": "{{user}}小腹子宫位置有粉色线条简单的“娇艳”淫纹(“娇艳”淫纹效果：此淫纹存在的状态下，该女性身体会随着修为增强而变化，使胸部、臀部和嘴唇变得愈加丰满，逐渐变得越来越符合男性审美。胸部最多到D)，无阴毛。相貌：冰山美人。灵根：天生雷冰双变异灵根(未显)。性别：女(重要设定：性别绝对不会改变，也不会长出男性性器官！)",
         "persona_description_position": 0,
         "persona_description_role": 0,
         "persona_description_depth": 2,
@@ -2989,6 +2989,25 @@
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": false
+            },
+            {
+                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2,
+                    6
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -3200,10 +3219,10 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 20,
-                "LAST_RECEIVE_CHARS": 16,
-                "LAST_SEND_TOKENS": 117704,
-                "LAST_SEND_CHARS": 192818
+                "LAST_RECEIVE_TOKENS": 4,
+                "LAST_RECEIVE_CHARS": 4,
+                "LAST_SEND_TOKENS": 115695,
+                "LAST_SEND_CHARS": 190995
             }
         },
         "attachments": [],
@@ -3743,7 +3762,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 507,
+                "lastProcessedLength": 506,
                 "userConfigured": true
             }
         },
