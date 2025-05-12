@@ -4,6 +4,7 @@
     "chat_start": "",
     "use_stop_strings": false,
     "allow_jailbreak": false,
+    "names_as_stop_strings": true,
     "always_force_name2": true,
     "trim_sentences": false,
     "single_line": false,
