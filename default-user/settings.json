@@ -22,7 +22,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": null,
+    "active_character": "修仙之路2.0.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -32,9 +32,7 @@
     "main_api": "openai",
     "world_info_settings": {
         "world_info": {
-            "globalSelect": [
-                "【可点击的选择框】"
-            ],
+            "globalSelect": [],
             "charLore": [
                 {
                     "name": "冷忧蝉",
@@ -2924,7 +2922,7 @@
             {
                 "id": "b37e17b8-3703-4661-bd60-87da35ccfc80",
                 "scriptName": "【可点击的选择框】[不发送]选择框",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": false,
                 "findRegex": "/```\\S*\\s*<checkbox>.*<\\/checkbox>\\s*```/gsi",
                 "replaceString": "",
@@ -3742,7 +3740,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 511,
                 "userConfigured": true
             }
         },
@@ -5537,7 +5535,7 @@
                     },
                     {
                         "identifier": "be09e85e-c5a3-4a53-8706-b531a174aa0f",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "722d88e3-337a-49cd-9a39-ba6bfe5c6089",
