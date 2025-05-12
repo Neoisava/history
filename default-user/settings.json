@@ -34,6 +34,7 @@
     "world_info_settings": {
         "world_info": {
             "globalSelect": [
+                "【可点击的选择框】",
                 "地图+保存"
             ],
             "charLore": [
@@ -1967,7 +1968,7 @@
             {
                 "id": "b37e17b8-3703-4661-bd60-87da35ccfc80",
                 "scriptName": "【可点击的选择框】[不发送]选择框",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": false,
                 "findRegex": "/```\\S*\\s*<checkbox>.*<\\/checkbox>\\s*```/gsi",
                 "replaceString": "",
