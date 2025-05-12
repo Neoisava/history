@@ -1831,7 +1831,7 @@
             {
                 "id": "1eb40bf6-d0d6-4d0a-97d9-79af404efef6",
                 "scriptName": "D1替绝望羊折叠正则",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<air>(.*?)</air>/gs",
                 "replaceString": "<details><summary>*<font color=#F08080>替绝望羊</font>*</summary>\n> $1\n</details>",
