@@ -23,7 +23,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": null,
+    "active_character": "修仙之路2.0.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -1981,6 +1981,57 @@
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
+            },
+            {
+                "id": "3cb47134-0ca5-4acb-8cd2-8404f95d0e54",
+                "scriptName": "隐藏模型思维think",
+                "findRegex": "/<think>[\\s\\S]*?<\\/think>/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": false,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "6880360a-ad6a-42cf-ac2f-0f4c07c58a78",
+                "scriptName": "隐藏正文的Thinking",
+                "findRegex": "/<Thinking>[\\s\\S]*?<\\/Thinking>/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": false,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "c1bbed6a-5bbc-4588-b08f-e71e80829628",
+                "scriptName": "删除多余内容",
+                "findRegex": "/The\\s+test\\s+was\\s+rejected|<\\/Assistant>/gi",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": false,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
