@@ -2989,6 +2989,25 @@
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": false
+            },
+            {
+                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2,
+                    6
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -3200,10 +3219,10 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 21,
-                "LAST_RECEIVE_CHARS": 15,
-                "LAST_SEND_TOKENS": 94712,
-                "LAST_SEND_CHARS": 123487
+                "LAST_RECEIVE_TOKENS": 22,
+                "LAST_RECEIVE_CHARS": 14,
+                "LAST_SEND_TOKENS": 96184,
+                "LAST_SEND_CHARS": 124928
             }
         },
         "attachments": [],
@@ -3743,7 +3762,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 8,
+                "lastProcessedLength": 10,
                 "userConfigured": true
             }
         },
