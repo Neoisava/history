@@ -1879,6 +1879,74 @@
                 "substituteRegex": 0,
                 "minDepth": null,
                 "maxDepth": null
+            },
+            {
+                "id": "f98e7f8e-bfde-4ef6-a029-ec837ca6f4ab",
+                "scriptName": "开小总结用1",
+                "findRegex": "/<details>\\s*<summary>\\s*摘要\\s*<\\/summary>[\\s\\S]*?<\\/details>/gsi",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": true,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": 10
+            },
+            {
+                "id": "6cd7f274-1b93-47ad-90ed-873eef2f89e0",
+                "scriptName": "开小总结用2",
+                "findRegex": "/([\\s\\S]*?<details>\\s*<summary>\\s*摘要\\s*<\\/summary>|<\\/details>[\\s\\S]*?$)/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": true,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 11,
+                "maxDepth": null
+            },
+            {
+                "id": "320576a1-bc90-496c-8f6e-c82253a04abc",
+                "scriptName": "D1添加用户输入TAG",
+                "findRegex": "^([\\s\\S]*)$",
+                "replaceString": "<user_input>\n$1\n</user_input>",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": 1
+            },
+            {
+                "id": "7eea3318-cb00-4727-a4d3-782fa00eff3e",
+                "scriptName": "D2缔改去除多余内容",
+                "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<content>|</content>|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(.*?<think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
