@@ -23,7 +23,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": "林若秋.png",
+    "active_character": "1.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2214,8 +2214,8 @@
                 "content": "{继续剧情}",
                 "LAST_RECEIVE_TOKENS": 1695,
                 "LAST_RECEIVE_CHARS": 2267,
-                "LAST_SEND_TOKENS": 2,
-                "LAST_SEND_CHARS": 2
+                "LAST_SEND_TOKENS": 39630,
+                "LAST_SEND_CHARS": 81876
             }
         },
         "attachments": [],
@@ -2755,7 +2755,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 3,
                 "userConfigured": true
             }
         },
@@ -4736,7 +4736,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "deepseek-ai/DeepSeek-R1",
+        "custom_model": "gemini-2.5-pro-exp-03-25-search",
         "custom_url": "https://api.huaapi.asia/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
@@ -4768,7 +4768,7 @@
         "function_calling": true,
         "names_behavior": 0,
         "continue_postfix": " ",
-        "custom_prompt_post_processing": "strict",
+        "custom_prompt_post_processing": "merge",
         "show_thoughts": true,
         "reasoning_effort": "medium",
         "enable_web_search": false,
