@@ -1755,21 +1755,55 @@
                 "promptOnly": true
             },
             {
-                "id": "784bca38-dbd7-4e31-87f1-e6af62676e65",
-                "scriptName": "D3略三楼前汇总",
+                "id": "0db8beb4-7ec6-482a-8f5a-88442f147e97",
+                "scriptName": "D1汇总记录折叠",
+                "findRegex": "/<Main_Quest>(.*?)</Main_Quest>/gs",
+                "replaceString": "<details><summary>*汇总记录*</summary>\n> $1\n</details>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
                 "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
                 "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "d92a5df8-c62e-4598-9334-4ed5706d1acb",
+                "scriptName": "D2汇总记录隐藏",
                 "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
+                "disabled": true,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "c8c1530d-4462-423f-a58a-166ceaa23223",
+                "scriptName": "D3略三楼前汇总",
+                "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": 3,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
+                "maxDepth": null
             },
             {
                 "id": "dd454e7c-8a55-4b17-98e7-af0a04323949",
@@ -1889,6 +1923,25 @@
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
+            },
+            {
+                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2,
+                    6
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -2636,7 +2689,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 0,
+                "lastProcessedLength": 498,
                 "userConfigured": true
             }
         },
