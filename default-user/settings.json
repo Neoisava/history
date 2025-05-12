@@ -2781,23 +2781,6 @@
                 "promptOnly": true
             },
             {
-                "id": "9231bde8-0bb2-446c-b04e-d2fa05d49899",
-                "scriptName": "【demini】D1替绝望羊折叠正则",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<air>(.*?)</air>/gs",
-                "replaceString": "<details><summary>*<font color=#F08080>替绝望羊</font>*</summary>\n> $1\n</details>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
                 "id": "96cc13d8-114b-4811-8cd5-3e58a608767b",
                 "scriptName": "【demini】D2替绝望羊隐藏正则",
                 "disabled": false,
@@ -3505,7 +3488,7 @@
                         "content": "$((()=>{eventOn(tavern_events.CHAT_CHANGED,(async()=>{const characters=SillyTavern.characters,characterId=SillyTavern.characterId;if(void 0===characterId)return;const avatar=characters[characterId].avatar,extension_settings=SillyTavern.extensionSettings.character_allowed_regex;extension_settings.includes(avatar)||(extension_settings.push(avatar),await TavernHelper.builtin.saveSettings(),await SillyTavern.saveChat(),await SillyTavern.reloadCurrentChat())}))}));",
                         "info": "# 自动开启角色卡局部正则\n\n**作者:** 青空莉想做舞台少女的狗\n**版本:** 2025/04/21\n**源文件:** [点此跳转](https://gitgud.io/StageDog/tavern_resource/-/tree/main/酒馆助手/自动开启角色卡局部正则/源文件?ref_type=heads)\n",
                         "buttons": [],
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "id": "预设防误触",
