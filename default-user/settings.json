@@ -21,12 +21,12 @@
         "AlertWI_修仙世界-[万界大陆].png": "true"
     },
     "currentVersion": "1.12.14",
-    "username": "林若秋",
+    "username": "{{user}}",
     "active_character": "修仙世界-[万界大陆].png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
-    "user_avatar": "1746440806294-.png",
+    "user_avatar": "1747043750532-user.png",
     "amount_gen": 350,
     "max_context": 8192,
     "main_api": "openai",
@@ -409,7 +409,8 @@
         "personas": {
             "user-default.png": "林子安",
             "1746416876729-.png": "石头",
-            "1746440806294-.png": "林若秋"
+            "1746440806294-.png": "林若秋",
+            "1747043750532-user.png": "{{user}}"
         },
         "default_persona": null,
         "persona_descriptions": {
@@ -431,9 +432,16 @@
                 "depth": 2,
                 "role": 0,
                 "lorebook": ""
+            },
+            "1747043750532-user.png": {
+                "description": "",
+                "position": 0,
+                "depth": 2,
+                "role": 0,
+                "lorebook": ""
             }
         },
-        "persona_description": "{{user}}小腹子宫位置有粉色线条简单的“娇艳”淫纹(“娇艳”淫纹效果：此淫纹存在的状态下，该女性身体会随着修为增强而变化，使胸部、臀部和嘴唇变得愈加丰满，逐渐变得越来越符合男性审美。)，无阴毛。相貌：冰山美人。灵根：天生雷冰双变异灵根(未显)",
+        "persona_description": "",
         "persona_description_position": 0,
         "persona_description_role": 0,
         "persona_description_depth": 2,
@@ -2981,6 +2989,25 @@
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": false
+            },
+            {
+                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2,
+                    6
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -3192,8 +3219,8 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 47,
-                "LAST_RECEIVE_CHARS": 31,
+                "LAST_RECEIVE_TOKENS": 9,
+                "LAST_RECEIVE_CHARS": 4,
                 "LAST_SEND_TOKENS": 167498,
                 "LAST_SEND_CHARS": 210349
             }
@@ -3735,7 +3762,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 1,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
