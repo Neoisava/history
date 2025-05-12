@@ -2660,6 +2660,57 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": false
+            },
+            {
+                "id": "106b839f-f828-4d48-8d50-cc5d3e36b8f3",
+                "scriptName": "【demini】D2非插件式表格隐藏",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<tableThink>[\\s\\S]*?</tableThink>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 22,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "6ee4bc2f-5013-4758-a423-572059e8abd1",
+                "scriptName": "【demini】D4隐藏全部前文[22]",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/[\\s\\S]*/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 22,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "6e71c6ed-810d-4d13-bcf5-87443818d7a9",
+                "scriptName": "【demini】专防省略号增殖正则",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/…/gi",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
             }
         ],
         "character_allowed_regex": [
