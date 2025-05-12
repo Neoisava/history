@@ -17,11 +17,12 @@
         "AlertRegex_修仙之路2.0.png": "true",
         "AlertWI_修仙之路2.0.png": "true",
         "AlertWI_1.png": "true",
-        "AlertRegex_1.png": "true"
+        "AlertRegex_1.png": "true",
+        "AlertWI_修仙世界-[万界大陆].png": "true"
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": "八荒仙界v1.0.png",
+    "active_character": "修仙世界-[万界大陆].png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -84,6 +85,15 @@
                     "name": "八荒仙界v1.0",
                     "extraBooks": [
                         "人类本能世界书",
+                        "女性本能世界书 by LULUZ",
+                        "道德伦理(1)"
+                    ]
+                },
+                {
+                    "name": "修仙世界-[万界大陆]",
+                    "extraBooks": [
+                        "人类本能世界书",
+                        "多维情感网络动态",
                         "女性本能世界书 by LULUZ",
                         "道德伦理(1)"
                     ]
@@ -3182,8 +3192,8 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 2031,
-                "LAST_RECEIVE_CHARS": 1824,
+                "LAST_RECEIVE_TOKENS": 47,
+                "LAST_RECEIVE_CHARS": 31,
                 "LAST_SEND_TOKENS": 167498,
                 "LAST_SEND_CHARS": 210349
             }
@@ -3758,7 +3768,8 @@
         "undefined": [],
         "null": [],
         "修仙之路2.0.png": [],
-        "1.png": []
+        "1.png": [],
+        "修仙世界-[万界大陆].png": []
     },
     "nai_settings": {
         "temperature": 1.5,
