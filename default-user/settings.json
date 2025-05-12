@@ -424,7 +424,7 @@
                 "lorebook": ""
             },
             "1746440806294-.png": {
-                "description": "{{user}}小腹子宫位置有粉色线条简单的“娇艳”淫纹(“娇艳”淫纹效果：此淫纹存在的状态下，该女性身体会随着修为增强而变化，使胸部、臀部和嘴唇变得愈加丰满，逐渐变得越来越符合男性审美。胸部最多到D)，无阴毛。相貌：冰山美人。灵根：天生雷冰双变异灵根(未显)。性别：女(重要设定：1.{{user}}性别绝对不会改变，也不会长出男性性器官！2. {{user}}和NPC对{{user}}都是女性，不会出现任何有关男性或者其他跨性别的认知！)",
+                "description": "{{user}}小腹子宫位置有粉色线条简单的“娇艳”淫纹(“娇艳”淫纹效果：此淫纹存在的状态下，该女性身体会随着修为增强而变化，使胸部、臀部和嘴唇变得愈加丰满，逐渐变得越来越符合男性审美。胸部最多到D)，无阴毛。相貌：冰山美人。灵根：天生雷冰双变异灵根(未显)。性别：女(重要设定：1.{{user}}性别绝对不会改变，也不会长出男性性器官！2. {{user}}自身和NPC对{{user}}的性别认知都是女性，不会出现任何有关男性或者其他跨性别的认知！)",
                 "position": 0,
                 "depth": 2,
                 "role": 0,
@@ -438,7 +438,7 @@
                 "lorebook": ""
             }
         },
-        "persona_description": "{{user}}小腹子宫位置有粉色线条简单的“娇艳”淫纹(“娇艳”淫纹效果：此淫纹存在的状态下，该女性身体会随着修为增强而变化，使胸部、臀部和嘴唇变得愈加丰满，逐渐变得越来越符合男性审美。胸部最多到D)，无阴毛。相貌：冰山美人。灵根：天生雷冰双变异灵根(未显)。性别：女(重要设定：1.{{user}}性别绝对不会改变，也不会长出男性性器官！2. {{user}}和NPC对{{user}}都是女性，不会出现任何有关男性或者其他跨性别的认知！)",
+        "persona_description": "{{user}}小腹子宫位置有粉色线条简单的“娇艳”淫纹(“娇艳”淫纹效果：此淫纹存在的状态下，该女性身体会随着修为增强而变化，使胸部、臀部和嘴唇变得愈加丰满，逐渐变得越来越符合男性审美。胸部最多到D)，无阴毛。相貌：冰山美人。灵根：天生雷冰双变异灵根(未显)。性别：女(重要设定：1.{{user}}性别绝对不会改变，也不会长出男性性器官！2. {{user}}自身和NPC对{{user}}的性别认知都是女性，不会出现任何有关男性或者其他跨性别的认知！)",
         "persona_description_position": 0,
         "persona_description_role": 0,
         "persona_description_depth": 2,
@@ -2847,25 +2847,6 @@
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
-            },
-            {
-                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2,
-                    6
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": false,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -3077,10 +3058,10 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 87,
-                "LAST_RECEIVE_CHARS": 126,
-                "LAST_SEND_TOKENS": 112842,
-                "LAST_SEND_CHARS": 186214
+                "LAST_RECEIVE_TOKENS": 37469,
+                "LAST_RECEIVE_CHARS": 101886,
+                "LAST_SEND_TOKENS": 105047,
+                "LAST_SEND_CHARS": 174765
             }
         },
         "attachments": [],
@@ -3620,7 +3601,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 548,
+                "lastProcessedLength": 549,
                 "userConfigured": true
             }
         },
