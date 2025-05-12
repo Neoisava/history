@@ -17,11 +17,13 @@
         "AlertRegex_林若秋.png": "true",
         "WI_PerPage": "100",
         "AlertRegex_修仙之路2.0.png": "true",
-        "AlertWI_修仙之路2.0.png": "true"
+        "AlertWI_修仙之路2.0.png": "true",
+        "AlertWI_1.png": "true",
+        "AlertRegex_1.png": "true"
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": null,
+    "active_character": "1.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -1931,7 +1933,8 @@
             "冷忧蝉.png",
             "林若秋.png",
             "凡人修仙传·凤起灵绝·大罗真魂都市修仙灵气复苏（地图互动RPG带系统版）.png",
-            "修仙之路2.0.png"
+            "修仙之路2.0.png",
+            "1.png"
         ],
         "tts": {
             "voiceMap": "",
@@ -2137,8 +2140,8 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 16,
-                "LAST_RECEIVE_CHARS": 26,
+                "LAST_RECEIVE_TOKENS": 53408,
+                "LAST_RECEIVE_CHARS": 204475,
                 "LAST_SEND_TOKENS": 115488,
                 "LAST_SEND_CHARS": 192696
             }
@@ -2672,7 +2675,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 1,
                 "userConfigured": true
             }
         },
@@ -2706,7 +2709,8 @@
         "null": [],
         "冷忧蝉.png": [],
         "林若秋.png": [],
-        "修仙之路2.0.png": []
+        "修仙之路2.0.png": [],
+        "1.png": []
     },
     "nai_settings": {
         "temperature": 1.5,
