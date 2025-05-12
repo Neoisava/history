@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "false",
-        "NavOpened": "true",
+        "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -21,12 +21,12 @@
         "AlertWI_修仙世界-[万界大陆].png": "true"
     },
     "currentVersion": "1.12.14",
-    "username": "{{user}}",
+    "username": "林若秋",
     "active_character": "修仙之路2.0.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
-    "user_avatar": "1747043750532-user.png",
+    "user_avatar": "1746440806294-.png",
     "amount_gen": 350,
     "max_context": 8192,
     "main_api": "openai",
@@ -441,7 +441,7 @@
                 "lorebook": ""
             }
         },
-        "persona_description": "",
+        "persona_description": "{{user}}小腹子宫位置有粉色线条简单的“娇艳”淫纹(“娇艳”淫纹效果：此淫纹存在的状态下，该女性身体会随着修为增强而变化，使胸部、臀部和嘴唇变得愈加丰满，逐渐变得越来越符合男性审美。)，无阴毛。相貌：冰山美人。灵根：天生雷冰双变异灵根(未显)",
         "persona_description_position": 0,
         "persona_description_role": 0,
         "persona_description_depth": 2,
