@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -2874,7 +2874,7 @@
             {
                 "id": "320576a1-bc90-496c-8f6e-c82253a04abc",
                 "scriptName": "D1添加用户输入TAG",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "^([\\s\\S]*)$",
                 "replaceString": "<user_input>\n$1\n</user_input>",
@@ -2891,7 +2891,7 @@
             {
                 "id": "7eea3318-cb00-4727-a4d3-782fa00eff3e",
                 "scriptName": "D2缔改去除多余内容",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<content>|</content>|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(.*?<think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
                 "replaceString": "",
@@ -2908,7 +2908,7 @@
             {
                 "id": "42d90c3c-d1cb-4980-a0c6-921f221e9e04",
                 "scriptName": "D3隐藏前文用户消息",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "^([\\s\\S]*)$",
                 "replaceString": "",
@@ -2942,7 +2942,7 @@
             {
                 "id": "3cb47134-0ca5-4acb-8cd2-8404f95d0e54",
                 "scriptName": "隐藏模型思维think",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": false,
                 "findRegex": "/<think>[\\s\\S]*?<\\/think>/gs",
                 "replaceString": "",
@@ -2959,7 +2959,7 @@
             {
                 "id": "6880360a-ad6a-42cf-ac2f-0f4c07c58a78",
                 "scriptName": "隐藏正文的Thinking",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": false,
                 "findRegex": "/<Thinking>[\\s\\S]*?<\\/Thinking>/gs",
                 "replaceString": "",
@@ -2976,7 +2976,7 @@
             {
                 "id": "c1bbed6a-5bbc-4588-b08f-e71e80829628",
                 "scriptName": "删除多余内容",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": false,
                 "findRegex": "/The\\s+test\\s+was\\s+rejected|<\\/Assistant>/gi",
                 "replaceString": "",
@@ -3001,7 +3001,7 @@
                     2,
                     6
                 ],
-                "disabled": false,
+                "disabled": true,
                 "markdownOnly": false,
                 "promptOnly": true,
                 "runOnEdit": false,
