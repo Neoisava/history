@@ -2696,6 +2696,23 @@
                 "promptOnly": true
             },
             {
+                "id": "6e71c6ed-810d-4d13-bcf5-87443818d7a9",
+                "scriptName": "【demini】专防省略号增殖正则",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/…/gi",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
                 "id": "7a40bafb-2b7a-404f-96aa-500e65e3f241",
                 "scriptName": "【demini】D1非插件式表格折叠",
                 "disabled": false,
@@ -2725,23 +2742,6 @@
                 ],
                 "substituteRegex": 0,
                 "minDepth": 22,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "6e71c6ed-810d-4d13-bcf5-87443818d7a9",
-                "scriptName": "【demini】专防省略号增殖正则",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/…/gi",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
