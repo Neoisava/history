@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
+        "LNavOpened": "true",
         "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -2477,13 +2477,13 @@
                     "mode": "cc",
                     "exclude": [],
                     "api": "custom",
-                    "preset": "缔改预设1.42",
+                    "preset": "【demini】1.50",
                     "api-url": "https://api.huaapi.asia/v1",
                     "model": "gemini-2.5-pro-exp-03-25",
                     "proxy": "None",
                     "stop-strings": "[]",
                     "start-reply-with": "",
-                    "reasoning-template": "DeepSeek",
+                    "reasoning-template": "[Migrated] Custom",
                     "name": "自己"
                 }
             ]
@@ -3058,10 +3058,10 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 31,
-                "LAST_RECEIVE_CHARS": 42,
-                "LAST_SEND_TOKENS": 105054,
-                "LAST_SEND_CHARS": 174636
+                "LAST_RECEIVE_TOKENS": 10236,
+                "LAST_RECEIVE_CHARS": 22023,
+                "LAST_SEND_TOKENS": 104921,
+                "LAST_SEND_CHARS": 174070
             }
         },
         "attachments": [],
@@ -5613,7 +5613,7 @@
         "function_calling": false,
         "names_behavior": 0,
         "continue_postfix": " ",
-        "custom_prompt_post_processing": "strict",
+        "custom_prompt_post_processing": "merge",
         "show_thoughts": true,
         "reasoning_effort": "medium",
         "enable_web_search": false,
