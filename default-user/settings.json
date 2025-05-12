@@ -1764,7 +1764,7 @@
             {
                 "id": "f4d12d7f-79dc-4917-b8bf-8024cc43280d",
                 "scriptName": "D1非插件式表格折叠",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<table>(.*?)</table>/gs",
                 "replaceString": "<details><summary>*<font color=#C0C0C0>非插件式表格<font>*</summary>\n> $1\n</details>",
@@ -1781,7 +1781,7 @@
             {
                 "id": "cbff13cb-a3c2-4911-bd71-020164621bbc",
                 "scriptName": "D2非插件式表格隐藏",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<tableThink>[\\s\\S]*?</tableThink>/g",
                 "replaceString": "",
@@ -1798,7 +1798,7 @@
             {
                 "id": "35e15c88-3400-4aa3-b06c-1b92586c550d",
                 "scriptName": "D4隐藏全部前文[22]",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/[\\s\\S]*/gm",
                 "replaceString": "",
@@ -1815,7 +1815,7 @@
             {
                 "id": "71b8e342-efc5-4947-979e-fe61efd27e86",
                 "scriptName": "专防省略号增殖正则",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/…/gi",
                 "replaceString": "",
@@ -1849,7 +1849,7 @@
             {
                 "id": "956a216d-383f-420f-a6d2-0d4235ef1811",
                 "scriptName": "D2替绝望羊隐藏正则",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<air>[\\s\\S]*?</air>/g",
                 "replaceString": "",
@@ -1866,7 +1866,7 @@
             {
                 "id": "608f42a5-5e9b-42dd-b8a2-839f91681c81",
                 "scriptName": "D3前绝望羊补牢正则",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<air>[\\s\\S]*?</air>/g",
                 "replaceString": "",
@@ -1917,7 +1917,7 @@
             {
                 "id": "320576a1-bc90-496c-8f6e-c82253a04abc",
                 "scriptName": "D1添加用户输入TAG",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "^([\\s\\S]*)$",
                 "replaceString": "<user_input>\n$1\n</user_input>",
@@ -1934,7 +1934,7 @@
             {
                 "id": "7eea3318-cb00-4727-a4d3-782fa00eff3e",
                 "scriptName": "D2缔改去除多余内容",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<content>|</content>|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(.*?<think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
                 "replaceString": "",
@@ -1951,7 +1951,7 @@
             {
                 "id": "42d90c3c-d1cb-4980-a0c6-921f221e9e04",
                 "scriptName": "D3隐藏前文用户消息",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "^([\\s\\S]*)$",
                 "replaceString": "",
@@ -2737,7 +2737,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 1,
                 "userConfigured": true
             }
         },
