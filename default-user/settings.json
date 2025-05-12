@@ -98,17 +98,17 @@
         "world_info_max_recursion_steps": 0
     },
     "textgenerationwebui_settings": {
-        "temp": 0.7,
+        "temp": 0.5,
         "temperature_last": true,
-        "top_p": 0.5,
-        "top_k": 40,
+        "top_p": 0.9,
+        "top_k": 0,
         "top_a": 0,
         "tfs": 1,
         "epsilon_cutoff": 0,
         "eta_cutoff": 0,
         "typical_p": 1,
         "min_p": 0,
-        "rep_pen": 1.2,
+        "rep_pen": 1.1,
         "rep_pen_range": 0,
         "rep_pen_decay": 0,
         "rep_pen_slope": 1,
@@ -251,7 +251,7 @@
         "pin_examples": false,
         "strip_examples": false,
         "trim_sentences": false,
-        "always_force_name2": false,
+        "always_force_name2": true,
         "user_prompt_bias": "",
         "show_user_prompt_bias": true,
         "auto_continue": {
@@ -335,26 +335,26 @@
         "disable_group_trimming": false,
         "single_line": false,
         "instruct": {
-            "enabled": false,
-            "preset": "Alpaca",
-            "input_sequence": "### Instruction:",
-            "output_sequence": "### Response:",
+            "enabled": true,
+            "preset": "Gemma 2",
+            "input_sequence": "<start_of_turn>user",
+            "output_sequence": "<start_of_turn>model",
             "last_output_sequence": "",
-            "system_sequence": "### Input:",
-            "stop_sequence": "",
+            "system_sequence": "<start_of_turn>system",
+            "stop_sequence": "<end_of_turn>",
             "wrap": true,
-            "macro": true,
-            "names_behavior": "force",
+            "macro": false,
+            "names_behavior": "none",
             "activation_regex": "",
             "system_sequence_prefix": "",
             "system_sequence_suffix": "",
             "first_output_sequence": "",
             "skip_examples": false,
-            "output_suffix": "\n\n",
-            "input_suffix": "\n\n",
-            "system_suffix": "\n\n",
+            "output_suffix": "<end_of_turn>\n",
+            "input_suffix": "<end_of_turn>\n",
+            "system_suffix": "<end_of_turn>\n",
             "user_alignment_message": "",
-            "system_same_as_user": false,
+            "system_same_as_user": true,
             "last_system_sequence": "",
             "first_input_sequence": "",
             "last_input_sequence": "",
@@ -363,31 +363,31 @@
             "bind_to_context": true
         },
         "context": {
-            "preset": "Default",
-            "story_string": "{{#if system}}{{system}}\n{{/if}}{{#if wiBefore}}{{wiBefore}}\n{{/if}}{{#if description}}{{description}}\n{{/if}}{{#if personality}}{{char}}'s personality: {{personality}}\n{{/if}}{{#if scenario}}Scenario: {{scenario}}\n{{/if}}{{#if wiAfter}}{{wiAfter}}\n{{/if}}{{#if persona}}{{persona}}\n{{/if}}b,与，",
-            "chat_start": "***wqz",
-            "example_separator": "***",
+            "preset": "Gemma 2",
+            "story_string": "<start_of_turn>user\n{{#if system}}{{system}}\n{{/if}}{{#if wiBefore}}{{wiBefore}}\n{{/if}}{{#if description}}{{description}}\n{{/if}}{{#if personality}}{{char}}'s personality: {{personality}}\n{{/if}}{{#if scenario}}Scenario: {{scenario}}\n{{/if}}{{#if wiAfter}}{{wiAfter}}\n{{/if}}{{#if persona}}{{persona}}\n{{/if}}{{trim}}<end_of_turn>",
+            "chat_start": "",
+            "example_separator": "",
             "use_stop_strings": false,
             "allow_jailbreak": false,
-            "names_as_stop_strings": false
+            "names_as_stop_strings": true
         },
         "context_derived": true,
         "context_size_derived": false,
         "sysprompt": {
             "enabled": true,
-            "name": "Neutral - Chat",
-            "content": "Write {{char}}'s next reply in a fictional chat between {{char}} and {{user}}."
+            "name": "Roleplay - Detailed",
+            "content": "Develop the plot slowly, always stay in character. Describe all actions in full, elaborate, explicit, graphic, and vivid detail. Mention all relevant sensory perceptions. Keep the story immersive and engaging."
         },
         "reasoning": {
             "auto_parse": false,
             "add_to_prompts": false,
             "auto_expand": false,
             "show_hidden": false,
-            "prefix": "<think>\n",
-            "suffix": "\n</think>",
+            "prefix": "<think>",
+            "suffix": "</think>",
             "separator": "\n\n",
             "max_additions": 1,
-            "name": "DeepSeek"
+            "name": "[Migrated] Custom"
         },
         "personas": {
             "user-default.png": "林子安",
@@ -1685,244 +1685,6 @@
                 ],
                 "substituteRegex": 0,
                 "minDepth": 11,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "b1ad28aa-fbaf-42d1-ada9-6dfdcfbfac01",
-                "scriptName": "K添加tag",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "^([\\s\\S]*)$",
-                "replaceString": "<user_input>\n$1\n</user_input>",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": 1,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "747217d0-c80c-4a06-9104-b65fd7b2e717",
-                "scriptName": "K去除多余内容修复",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/(<disclaimer>.*?</disclaimer>)|```start|<content>|</content>|```end|<done>|`<done>`|(<!-- consider: (.*?) -->(\\n)?)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "4c843708-8353-4595-8142-25823df09f51",
-                "scriptName": "小总结1",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<details>\\s*<summary>\\s*摘要\\s*<\\/summary>[\\s\\S]*?<\\/details>/gsi",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": 10,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "ae9e9b76-6afc-40d7-9c63-e6ca716b5dd5",
-                "scriptName": "小总结2",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/([\\s\\S]*?<details>\\s*<summary>\\s*摘要\\s*<\\/summary>|<\\/details>[\\s\\S]*?$)/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 11,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "0db8beb4-7ec6-482a-8f5a-88442f147e97",
-                "scriptName": "D1汇总记录折叠",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<Main_Quest>(.*?)</Main_Quest>/gs",
-                "replaceString": "<details><summary>*汇总记录*</summary>\n> $1\n</details>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
-                "id": "d92a5df8-c62e-4598-9334-4ed5706d1acb",
-                "scriptName": "D2汇总记录隐藏",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
-                "id": "c8c1530d-4462-423f-a58a-166ceaa23223",
-                "scriptName": "D3略三楼前汇总",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 3,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "dd454e7c-8a55-4b17-98e7-af0a04323949",
-                "scriptName": "用户输入置空[2]",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/[\\s\\S]*/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "substituteRegex": 0,
-                "minDepth": 2,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "78d424d7-616b-4ff3-acc8-eb5c3936e781",
-                "scriptName": "保留摘要[10]",
-                "disabled": false,
-                "runOnEdit": false,
-                "findRegex": "([\\s\\S]*?)(<summary>摘要</summary>)([\\s\\S]*?)",
-                "replaceString": "$3",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 10,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "d86a4dcf-74d2-45f3-ae05-efeeece93297",
-                "scriptName": "上下文限制[20]",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/[\\s\\S]*/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 20,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "7666661c-c23e-4e07-87d3-13129041967b",
-                "scriptName": "替绝望羊",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<air>[\\s\\S]*?</air>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "c054e616-94c9-42d6-a528-4e20f439a948",
-                "scriptName": "D1缔制表格姬隐藏",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<tableEdit>[\\s\\S]*?</tableEdit>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
-                "id": "45c383e3-3934-486e-a498-8ee5b62128af",
-                "scriptName": "D2缔制表格姬隐藏",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<tableThink>[\\s\\S]*?</tableThink>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
-                "id": "cdb31708-2cb9-4936-816d-e1331cfb8211",
-                "scriptName": "去省略号",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "…",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
