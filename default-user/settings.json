@@ -1759,6 +1759,75 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": false
+            },
+            {
+                "id": "f4d12d7f-79dc-4917-b8bf-8024cc43280d",
+                "scriptName": "D1非插件式表格折叠",
+                "findRegex": "/<table>(.*?)</table>/gs",
+                "replaceString": "<details><summary>*<font color=#C0C0C0>非插件式表格<font>*</summary>\n> $1\n</details>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "cbff13cb-a3c2-4911-bd71-020164621bbc",
+                "scriptName": "D2非插件式表格隐藏",
+                "findRegex": "/<tableThink>[\\s\\S]*?</tableThink>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 22,
+                "maxDepth": null
+            },
+            {
+                "id": "35e15c88-3400-4aa3-b06c-1b92586c550d",
+                "scriptName": "D4隐藏全部前文[22]",
+                "findRegex": "/[\\s\\S]*/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2,
+                    6
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 22,
+                "maxDepth": null
+            },
+            {
+                "id": "71b8e342-efc5-4947-979e-fe61efd27e86",
+                "scriptName": "专防省略号增殖正则",
+                "findRegex": "/…/gi",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
