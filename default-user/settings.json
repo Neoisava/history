@@ -2645,29 +2645,12 @@
                 "promptOnly": true
             },
             {
-                "id": "42d90c3c-d1cb-4980-a0c6-921f221e9e04",
-                "scriptName": "D3隐藏前文用户消息",
+                "id": "7a40bafb-2b7a-404f-96aa-500e65e3f241",
+                "scriptName": "【demini】D1非插件式表格折叠",
                 "disabled": false,
                 "runOnEdit": true,
-                "findRegex": "^([\\s\\S]*)$",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "substituteRegex": 0,
-                "minDepth": 1,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "b37e17b8-3703-4661-bd60-87da35ccfc80",
-                "scriptName": "【可点击的选择框】[不发送]选择框",
-                "disabled": true,
-                "runOnEdit": false,
-                "findRegex": "/```\\S*\\s*<checkbox>.*<\\/checkbox>\\s*```/gsi",
-                "replaceString": "",
+                "findRegex": "/<table>(.*?)</table>/gs",
+                "replaceString": "<details><summary>*<font color=#C0C0C0>非插件式表格<font>*</summary>\n> $1\n</details>",
                 "trimStrings": [],
                 "placement": [
                     2
@@ -2675,8 +2658,8 @@
                 "substituteRegex": 0,
                 "minDepth": null,
                 "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
+                "markdownOnly": true,
+                "promptOnly": false
             }
         ],
         "character_allowed_regex": [
