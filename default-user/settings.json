@@ -2859,7 +2859,7 @@
         "tts": {
             "voiceMap": "",
             "ttsEnabled": false,
-            "currentProvider": "System",
+            "currentProvider": "CosyVoice (Unofficial)",
             "auto_generation": false,
             "ElevenLabs": {},
             "System": {
@@ -2881,7 +2881,14 @@
                 }
             },
             "GPT-SoVITS-V2 (Unofficial)": {},
-            "VITS": {}
+            "VITS": {},
+            "CosyVoice (Unofficial)": {
+                "provider_endpoint": "http://localhost:9880",
+                "format": "wav",
+                "lang": "auto",
+                "streaming": false,
+                "voiceMap": {}
+            }
         },
         "sd": {
             "scale_min": 1,
