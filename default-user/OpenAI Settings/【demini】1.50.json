@@ -21,7 +21,7 @@
     "custom_include_body": "",
     "custom_exclude_body": "",
     "custom_include_headers": "",
-    "custom_prompt_post_processing": "strict",
+    "custom_prompt_post_processing": "merge",
     "google_model": "gemini-2.0-pro-exp-02-05",
     "temperature": 1.2,
     "frequency_penalty": 0.35,
@@ -1558,16 +1558,16 @@
                     "enabled": true
                 },
                 {
+                    "identifier": "0155daf7-b6d4-42de-afd3-4c5a52764455",
+                    "enabled": true
+                },
+                {
                     "identifier": "fc861191-c4e3-4caf-921b-3a333d578f70",
                     "enabled": false
                 },
                 {
                     "identifier": "a5fd75e6-af5a-4ba5-9c10-b9fec1c889a3",
                     "enabled": false
-                },
-                {
-                    "identifier": "0155daf7-b6d4-42de-afd3-4c5a52764455",
-                    "enabled": true
                 },
                 {
                     "identifier": "2353ad09-a181-4c99-8ce9-839b0c16f08a",
@@ -1631,7 +1631,7 @@
                 },
                 {
                     "identifier": "17c9d556-531a-49f8-a58a-c0223d0ea437",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "79b2bd43-d8e4-4135-8236-3f52ea2cb2ad",
@@ -1639,11 +1639,11 @@
                 },
                 {
                     "identifier": "3329790a-e448-425c-bee3-90edb351f9e2",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "5a6f8a19-617a-4531-8851-cda930a13746",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "07d1febf-b44c-4f07-8ad6-2de55908610d",
@@ -1691,7 +1691,7 @@
                 },
                 {
                     "identifier": "b47e7ca0-eb90-417f-94cf-6933f2807023",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "08ea39a7-8815-49c0-a50b-fd6b4ca29d9a",
