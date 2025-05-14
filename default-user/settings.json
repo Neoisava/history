@@ -22,7 +22,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": null,
+    "active_character": "修仙之路2.0.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2495,7 +2495,7 @@
             {
                 "id": "b19ddef3-8da5-446b-a566-0a39dba5118d",
                 "scriptName": "字体发癫",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/([，。！？；：\"\"''（）【】《》「」『』〈〉…—～·]|^)([^，。！？；：\"\"''（）【】《》「」『』〈〉…—～·]*?！)/g",
                 "replaceString": "$1**$2**",
@@ -2846,74 +2846,6 @@
                 ],
                 "substituteRegex": 0,
                 "minDepth": 1,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "594666d5-04bf-495c-81d7-6b946218ca29",
-                "scriptName": "【demini】D1添加用户输入TAG",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "^([\\s\\S]*)$",
-                "replaceString": "<user_input>\n$1\n</user_input>",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": 1,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "5784e977-e4c2-49f9-ba00-ea93fce8be1c",
-                "scriptName": "【demini】D2缔改去除多余内容",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<content>|</content>|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(.*?<think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "4705d751-4207-4e8e-bfcb-78e1125f961f",
-                "scriptName": "【demini】D3隐藏前文用户消息",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "^([\\s\\S]*)$",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "substituteRegex": 0,
-                "minDepth": 1,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "af41e790-b23d-41ae-accb-5fb74c910dba",
-                "scriptName": "【demini】专防省略号增殖正则",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/…/gi",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
@@ -3678,7 +3610,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 1,
                 "userConfigured": true
             }
         },
