@@ -2849,25 +2849,6 @@
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
-            },
-            {
-                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2,
-                    6
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": false,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -3088,8 +3069,8 @@
                 "content": "{继续剧情}",
                 "LAST_RECEIVE_TOKENS": 16,
                 "LAST_RECEIVE_CHARS": 20,
-                "LAST_SEND_TOKENS": 125257,
-                "LAST_SEND_CHARS": 213882
+                "LAST_SEND_TOKENS": 124407,
+                "LAST_SEND_CHARS": 212690
             }
         },
         "attachments": [],
@@ -5392,11 +5373,11 @@
                     },
                     {
                         "identifier": "17c9d556-531a-49f8-a58a-c0223d0ea437",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "79b2bd43-d8e4-4135-8236-3f52ea2cb2ad",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "3329790a-e448-425c-bee3-90edb351f9e2",
