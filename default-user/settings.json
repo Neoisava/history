@@ -22,7 +22,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": "修仙世界-[万界大陆].png",
+    "active_character": null,
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2849,25 +2849,6 @@
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
-            },
-            {
-                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2,
-                    6
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": false,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -3086,10 +3067,10 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 5,
-                "LAST_RECEIVE_CHARS": 5,
-                "LAST_SEND_TOKENS": 122594,
-                "LAST_SEND_CHARS": 211156
+                "LAST_RECEIVE_TOKENS": 1762,
+                "LAST_RECEIVE_CHARS": 2442,
+                "LAST_SEND_TOKENS": 61824,
+                "LAST_SEND_CHARS": 110961
             }
         },
         "attachments": [],
@@ -5396,7 +5377,7 @@
                     },
                     {
                         "identifier": "79b2bd43-d8e4-4135-8236-3f52ea2cb2ad",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "3329790a-e448-425c-bee3-90edb351f9e2",
@@ -5464,7 +5445,7 @@
                     },
                     {
                         "identifier": "15ffb698-4a16-4e27-aa40-8d6c382a254f",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "5ac6c61e-42d0-4740-9e4c-cb540810aa9d",
@@ -5472,7 +5453,7 @@
                     },
                     {
                         "identifier": "e6f1cf0c-34fa-49b2-9cf6-2d0334655643",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "ed033fc1-4819-45d8-9405-e4c2e2f8a878",
