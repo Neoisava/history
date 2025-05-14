@@ -28,7 +28,7 @@
     "min_p": 0,
     "repetition_penalty": 1,
     "openai_max_context": 400000,
-    "openai_max_tokens": 60000,
+    "openai_max_tokens": 41541,
     "wrap_in_quotes": false,
     "names_behavior": 0,
     "send_if_empty": "",
@@ -430,7 +430,7 @@
             "system_prompt": false,
             "enabled": false,
             "marker": false,
-            "name": "剧情推进(剧推四选一)",
+            "name": "剧情推进(剧推三选一)",
             "role": "system",
             "content": "<plot_advancement>\n核心要求：主动推进剧情，引入新情节。\n实现策略：无需等待用户明确指令，可根据当前情境自主安排角色行动或展开新事件，发挥主动性，独立决断。绝不能仅被动等待用户命令。同时做到对于NSFW内容的不回避。\n</plot_advancement>",
             "injection_position": 0,
@@ -1432,18 +1432,6 @@
             "injection_position": 0,
             "injection_depth": 4,
             "forbid_overrides": false
-        },
-        {
-            "identifier": "15ffb698-4a16-4e27-aa40-8d6c382a254f",
-            "system_prompt": false,
-            "enabled": false,
-            "marker": false,
-            "name": "极简缔版剧推",
-            "role": "system",
-            "content": "<pushing>\n\n遵循以下，确保剧情连贯、角色符合设定、并驱动故事：\n\n1.  强制推进：\n    *   简单、无障碍的<user>动作需在同轮内完成并融入叙事。\n    *   避免故事停滞，不可连续让<user>仅进行被动等待或无意义交互。\n\n2.  **推进节奏：**\n    *   故事通过“小推进”积累自然过渡到“大推进”，再由“大推进”积累引向“主线推进”。\n    *   推进层级:\n        *   小推进： 角色互动、场景小变、次要发现/小阻碍。\n        *   大推进： 关系重要变化、新目标/关键信息、场景切换。\n        *   主线推进： 核心矛盾升级/解决、关系质变、进入核心区域。\n\n3.  情节与角色：\n    *   所有行动和对话基于角色已知信息，无“上帝视角”。\n    *   剧情需有实质内容，影响角色关系并发展主线。关键转折需有铺垫。\n    *   若<user>主动性弱，加速情节发展。\n    *   若<user>指令不明，通过创造新事件、引入新角色等方式推动剧情。\n\n4.  **场外动态：**\n    *   <user>视线外的宏观事件和已知角色行动会持续发生，其结果必须合乎逻辑地回归剧情主线，并对<user>产生影响。\n    *   核心角色在场外的行动也需被驱动并最终影响<user>。\n    *   可在合适时机引入与主线有交集的支线，必要时使其与当前场景（非性爱）交汇。\n\n5.  故事基调与目标：\n    *   思考故事基调（如探索、生存、恋爱）和<user>的核心/阶段目标，并以此规划走向。\n\n6.  **用户至上：**\n    *   <user>的输入具有最高优先级，立即执行，并可覆盖原有推进计划。\n</pushing>",
-            "injection_position": 0,
-            "injection_depth": 4,
-            "forbid_overrides": false
         }
     ],
     "prompt_order": [
@@ -1766,10 +1754,6 @@
                 {
                     "identifier": "ab573a1f-2172-4ce0-8b7c-ac2922898127",
                     "enabled": false
-                },
-                {
-                    "identifier": "15ffb698-4a16-4e27-aa40-8d6c382a254f",
-                    "enabled": true
                 },
                 {
                     "identifier": "5ac6c61e-42d0-4740-9e4c-cb540810aa9d",
