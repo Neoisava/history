@@ -3067,10 +3067,10 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 13131,
-                "LAST_RECEIVE_CHARS": 18171,
-                "LAST_SEND_TOKENS": 122683,
-                "LAST_SEND_CHARS": 209425
+                "LAST_RECEIVE_TOKENS": 42302,
+                "LAST_RECEIVE_CHARS": 108126,
+                "LAST_SEND_TOKENS": 130026,
+                "LAST_SEND_CHARS": 219292
             }
         },
         "attachments": [],
@@ -5670,7 +5670,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "gemini-2.5-pro-preview-05-06",
+        "custom_model": "gemini-2.5-flash-preview-04-17",
         "custom_url": "https://api.huaapi.asia/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
