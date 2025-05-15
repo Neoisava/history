@@ -22,7 +22,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": null,
+    "active_character": "修仙之路2.0.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2814,57 +2814,6 @@
                 "minDepth": null,
                 "maxDepth": null,
                 "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "2e70aaa6-f96c-45dc-8835-8a7c8cdc3187",
-                "scriptName": "【demini】开小总结用1",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<details>\\s*<summary>\\s*摘要\\s*<\\/summary>[\\s\\S]*?<\\/details>/gsi",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": 10,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "afe1b960-2d99-4d45-9f01-3834250c929d",
-                "scriptName": "【demini】开小总结用2",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/([\\s\\S]*?<details>\\s*<summary>\\s*摘要\\s*<\\/summary>|<\\/details>[\\s\\S]*?$)/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 11,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "43575b59-0582-43ee-90b0-5be113be0a4d",
-                "scriptName": "【可点击的选择框】[不发送]选择框",
-                "disabled": true,
-                "runOnEdit": false,
-                "findRegex": "/```\\S*\\s*<checkbox>.*<\\/checkbox>\\s*```/gsi",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": false,
                 "promptOnly": true
             }
         ],
