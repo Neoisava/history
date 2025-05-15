@@ -49,7 +49,7 @@
     "scenario_format": "{{scenario}}",
     "personality_format": "{{personality}}",
     "group_nudge_prompt": "[Write the next reply only as {{char}}.]",
-    "stream_openai": false,
+    "stream_openai": true,
     "prompts": [
         {
             "name": "缔改角色[极简]",
@@ -2099,11 +2099,11 @@
                 },
                 {
                     "identifier": "7f757471-c49b-4ed3-aabc-0559e04b7c44",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "dfbca7e1-20f4-47fe-8c54-120ae09582b8",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "5dfbe9da-e0d7-4c8f-8e13-4af2b5fdf2d5",
@@ -2323,7 +2323,7 @@
                 },
                 {
                     "identifier": "dd79b31a-0610-4e8b-b249-f13af24455a7",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "b753738f-40b6-412d-b51a-fb3495d30388",
