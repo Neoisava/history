@@ -3084,10 +3084,10 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 572,
-                "LAST_RECEIVE_CHARS": 787,
-                "LAST_SEND_TOKENS": 80822,
-                "LAST_SEND_CHARS": 151300
+                "LAST_RECEIVE_TOKENS": 31560,
+                "LAST_RECEIVE_CHARS": 93384,
+                "LAST_SEND_TOKENS": 81264,
+                "LAST_SEND_CHARS": 152508
             }
         },
         "attachments": [],
@@ -3628,7 +3628,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 3,
                 "userConfigured": true
             }
         },
@@ -3734,7 +3734,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": true,
+        "stream_openai": false,
         "openai_max_context": 400000,
         "openai_max_tokens": 60000,
         "wrap_in_quotes": false,
