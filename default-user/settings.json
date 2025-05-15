@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
+        "LNavOpened": "true",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -22,7 +22,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": "修仙之路2.0.png",
+    "active_character": null,
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -3033,10 +3033,10 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 13837,
-                "LAST_RECEIVE_CHARS": 30012,
-                "LAST_SEND_TOKENS": 190568,
-                "LAST_SEND_CHARS": 310380
+                "LAST_RECEIVE_TOKENS": 14019,
+                "LAST_RECEIVE_CHARS": 30873,
+                "LAST_SEND_TOKENS": 186304,
+                "LAST_SEND_CHARS": 304456
             }
         },
         "attachments": [],
@@ -3576,7 +3576,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 827,
+                "lastProcessedLength": 828,
                 "userConfigured": true
             }
         },
@@ -5603,7 +5603,7 @@
                     },
                     {
                         "identifier": "14ff9822-3e7c-4426-bd00-2454e010d157",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "4533619c-eb05-4370-a13f-9f80c8e51cd5",
