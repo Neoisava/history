@@ -3118,8 +3118,8 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 30189,
-                "LAST_RECEIVE_CHARS": 91163,
+                "LAST_RECEIVE_TOKENS": 30337,
+                "LAST_RECEIVE_CHARS": 90981,
                 "LAST_SEND_TOKENS": 79000,
                 "LAST_SEND_CHARS": 147069
             }
@@ -3661,7 +3661,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 3,
                 "userConfigured": true
             }
         },
@@ -6590,7 +6590,7 @@
         "use_makersuite_sysprompt": true,
         "use_alt_scale": false,
         "squash_system_messages": false,
-        "image_inlining": true,
+        "image_inlining": false,
         "inline_image_quality": "auto",
         "bypass_status_check": false,
         "continue_prefill": true,
@@ -6598,7 +6598,7 @@
         "names_behavior": 0,
         "continue_postfix": " ",
         "custom_prompt_post_processing": "strict",
-        "show_thoughts": true,
+        "show_thoughts": false,
         "reasoning_effort": "high",
         "enable_web_search": false,
         "request_images": false,
