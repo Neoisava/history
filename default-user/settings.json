@@ -2732,6 +2732,40 @@
                 "promptOnly": true
             },
             {
+                "id": "bbdb6839-ef2f-44f0-8720-495e7267e5bf",
+                "scriptName": "【demini】D1非插件式表格折叠",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<table>(.*?)</table>/gs",
+                "replaceString": "<details><summary>*<font color=#C0C0C0>非插件式表格<font>*</summary>\n> $1\n</details>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "6b1357f7-bb82-4bf9-8fcf-97b6d304738c",
+                "scriptName": "【demini】D2非插件式表格隐藏",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<tableThink>[\\s\\S]*?</tableThink>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 22,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
                 "id": "663381b9-64f3-461b-9dab-e4bbc0c8af1b",
                 "scriptName": "【demini】D1汇总记录折叠",
                 "disabled": false,
@@ -2780,40 +2814,6 @@
                 "minDepth": 3,
                 "maxDepth": null,
                 "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "bbdb6839-ef2f-44f0-8720-495e7267e5bf",
-                "scriptName": "【demini】D1非插件式表格折叠",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<table>(.*?)</table>/gs",
-                "replaceString": "<details><summary>*<font color=#C0C0C0>非插件式表格<font>*</summary>\n> $1\n</details>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
-                "id": "6b1357f7-bb82-4bf9-8fcf-97b6d304738c",
-                "scriptName": "【demini】D2非插件式表格隐藏",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<tableThink>[\\s\\S]*?</tableThink>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 22,
-                "maxDepth": null,
-                "markdownOnly": false,
                 "promptOnly": true
             },
             {
