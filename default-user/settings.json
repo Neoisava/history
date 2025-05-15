@@ -2645,57 +2645,6 @@
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
-            },
-            {
-                "id": "62b9e780-90b0-418b-97ec-98039643dbbf",
-                "scriptName": "【demini】D4隐藏全部前文[22]",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/[\\s\\S]*/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 22,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "d71447ec-d565-4055-8f2a-92a1c2e25504",
-                "scriptName": "【demini】D2替绝望羊隐藏正则",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<air>[\\s\\S]*?</air>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
-                "id": "7c62e5a2-78b9-4703-af24-1ea49d9a5c28",
-                "scriptName": "【demini】D3前绝望羊补牢正则",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<air>[\\s\\S]*?</air>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
             }
         ],
         "character_allowed_regex": [
