@@ -2749,6 +2749,23 @@
                 "promptOnly": false
             },
             {
+                "id": "603c2e5e-285e-4b96-b262-31ec8a02dcc2",
+                "scriptName": "【demini】D4隐藏全部前文[22]",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/[\\s\\S]*/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 22,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
                 "id": "9d85e4b5-1e12-47fb-a10c-06b60666e098",
                 "scriptName": "【demini】D2汇总记录隐藏",
                 "disabled": false,
@@ -2851,6 +2868,40 @@
                 "promptOnly": true
             },
             {
+                "id": "5ac9a13c-00ab-4c46-b69c-fc6466c0a25b",
+                "scriptName": "【demini】开小总结用1",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<details>\\s*<summary>\\s*摘要\\s*<\\/summary>[\\s\\S]*?<\\/details>/gsi",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": 10,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "ddd9e763-f02d-4312-bac5-e7f2a4f295b1",
+                "scriptName": "【demini】开小总结用2",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/([\\s\\S]*?<details>\\s*<summary>\\s*摘要\\s*<\\/summary>|<\\/details>[\\s\\S]*?$)/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 11,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
                 "id": "201f4153-4628-414b-afc0-e3d11a329084",
                 "scriptName": "专防省略号增殖",
                 "disabled": false,
@@ -2897,57 +2948,6 @@
                 ],
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "603c2e5e-285e-4b96-b262-31ec8a02dcc2",
-                "scriptName": "【demini】D4隐藏全部前文[22]",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/[\\s\\S]*/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 22,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "5ac9a13c-00ab-4c46-b69c-fc6466c0a25b",
-                "scriptName": "【demini】开小总结用1",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<details>\\s*<summary>\\s*摘要\\s*<\\/summary>[\\s\\S]*?<\\/details>/gsi",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": 10,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "ddd9e763-f02d-4312-bac5-e7f2a4f295b1",
-                "scriptName": "【demini】开小总结用2",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/([\\s\\S]*?<details>\\s*<summary>\\s*摘要\\s*<\\/summary>|<\\/details>[\\s\\S]*?$)/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 11,
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
