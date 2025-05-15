@@ -22,7 +22,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": "修仙之路2.0.png",
+    "active_character": null,
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2866,25 +2866,6 @@
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
-            },
-            {
-                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2,
-                    6
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": false,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -5306,7 +5287,7 @@
                     },
                     {
                         "identifier": "4c9f1d00-fc78-49ab-8159-f122029a58fa",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "25f00eee-3243-4a6c-938d-43b791e4c547",
@@ -5338,7 +5319,7 @@
                     },
                     {
                         "identifier": "17c9d556-531a-49f8-a58a-c0223d0ea437",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "79b2bd43-d8e4-4135-8236-3f52ea2cb2ad",
@@ -5346,11 +5327,11 @@
                     },
                     {
                         "identifier": "3329790a-e448-425c-bee3-90edb351f9e2",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "5a6f8a19-617a-4531-8851-cda930a13746",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "07d1febf-b44c-4f07-8ad6-2de55908610d",
