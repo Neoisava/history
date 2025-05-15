@@ -2732,12 +2732,12 @@
                 "promptOnly": false
             },
             {
-                "id": "27cfec5d-ad6e-4621-b1cb-89cd2902bec0",
-                "scriptName": "【demini】D1汇总记录折叠",
+                "id": "7da36e2d-0bff-4b35-8ec8-9e438580ef85",
+                "scriptName": "【demini】D2汇总记录隐藏",
                 "disabled": false,
                 "runOnEdit": true,
-                "findRegex": "/<Main_Quest>(.*?)</Main_Quest>/gs",
-                "replaceString": "<details><summary>*<font color=#87CEFA>汇总记录</font>*</summary>\n> $1\n</details>",
+                "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
+                "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
@@ -3118,8 +3118,8 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 30009,
-                "LAST_RECEIVE_CHARS": 90999,
+                "LAST_RECEIVE_TOKENS": 29779,
+                "LAST_RECEIVE_CHARS": 90760,
                 "LAST_SEND_TOKENS": 79318,
                 "LAST_SEND_CHARS": 147514
             }
