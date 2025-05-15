@@ -3471,7 +3471,8 @@
                 "render_enabled": true,
                 "tampermonkey_compatibility": false,
                 "render_depth": 0,
-                "render_optimize": false
+                "render_optimize": false,
+                "render_hide_style": false
             },
             "script": {
                 "global_script_enabled": true,
