@@ -2645,6 +2645,23 @@
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
+            },
+            {
+                "id": "f0139ab5-aa19-4b74-8751-e9a3c717a638",
+                "scriptName": "【demini】D1添加用户输入TAG",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "^([\\s\\S]*)$",
+                "replaceString": "<user_input>\n$1\n</user_input>",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": 1,
+                "markdownOnly": true,
+                "promptOnly": true
             }
         ],
         "character_allowed_regex": [
