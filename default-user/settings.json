@@ -2900,25 +2900,6 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": true
-            },
-            {
-                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2,
-                    6
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": false,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -3139,8 +3120,8 @@
                 "content": "{继续剧情}",
                 "LAST_RECEIVE_TOKENS": 2477,
                 "LAST_RECEIVE_CHARS": 10596,
-                "LAST_SEND_TOKENS": 79414,
-                "LAST_SEND_CHARS": 146962
+                "LAST_SEND_TOKENS": 86724,
+                "LAST_SEND_CHARS": 179609
             }
         },
         "attachments": [],
@@ -3680,7 +3661,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 3,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
@@ -6355,11 +6336,11 @@
                     },
                     {
                         "identifier": "4f481a10-316b-4b85-a135-5c00486edf07",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "867f9ab7-51a0-48db-9eb3-68ec77433cd9",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "7d8b1e6e-869c-4bbf-aa93-98f58782b417",
