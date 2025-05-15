@@ -2615,7 +2615,7 @@
                 },
                 {
                     "identifier": "4f481a10-316b-4b85-a135-5c00486edf07",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "867f9ab7-51a0-48db-9eb3-68ec77433cd9",
@@ -2804,13 +2804,13 @@
     "use_makersuite_sysprompt": true,
     "use_alt_scale": false,
     "squash_system_messages": false,
-    "image_inlining": true,
+    "image_inlining": false,
     "inline_image_quality": "auto",
     "bypass_status_check": false,
     "continue_prefill": true,
     "continue_postfix": " ",
     "function_calling": true,
-    "show_thoughts": true,
+    "show_thoughts": false,
     "reasoning_effort": "high",
     "enable_web_search": false,
     "request_images": false,
