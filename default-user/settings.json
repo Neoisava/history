@@ -3086,8 +3086,8 @@
                 "content": "{继续剧情}",
                 "LAST_RECEIVE_TOKENS": 4978,
                 "LAST_RECEIVE_CHARS": 6659,
-                "LAST_SEND_TOKENS": 81287,
-                "LAST_SEND_CHARS": 149611
+                "LAST_SEND_TOKENS": 81282,
+                "LAST_SEND_CHARS": 149609
             }
         },
         "attachments": [],
@@ -3734,7 +3734,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": false,
+        "stream_openai": true,
         "openai_max_context": 400000,
         "openai_max_tokens": 60000,
         "wrap_in_quotes": false,
