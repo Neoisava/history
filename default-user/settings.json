@@ -2,8 +2,8 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
-        "NavOpened": "false",
+        "LNavOpened": "true",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -2815,25 +2815,6 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": true
-            },
-            {
-                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2,
-                    6
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": false,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -3054,8 +3035,8 @@
                 "content": "{继续剧情}",
                 "LAST_RECEIVE_TOKENS": 28,
                 "LAST_RECEIVE_CHARS": 35,
-                "LAST_SEND_TOKENS": 180860,
-                "LAST_SEND_CHARS": 289833
+                "LAST_SEND_TOKENS": 180667,
+                "LAST_SEND_CHARS": 291571
             }
         },
         "attachments": [],
@@ -5950,7 +5931,7 @@
                     },
                     {
                         "identifier": "e6f1cf0c-34fa-49b2-9cf6-2d0334655643",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "a3a92fb6-f6a4-420a-9393-edbee3245332",
@@ -6054,7 +6035,7 @@
                     },
                     {
                         "identifier": "5db36003-4e79-46c1-a6ea-66eedf6c9d32",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "a8860c00-4460-4ae9-a2d4-ac39e3f12d55",
