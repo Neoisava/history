@@ -11,7 +11,7 @@
         "world_info_sort_order": "6",
         "NavLockOn": "false",
         "Assets_SkipConfirm_2502775700152061": "true",
-        "LNavLockOn": "false",
+        "LNavLockOn": "true",
         "WINavLockOn": "false",
         "WI_PerPage": "100",
         "AlertRegex_修仙之路2.0.png": "true",
@@ -3033,8 +3033,8 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 49064,
-                "LAST_RECEIVE_CHARS": 124673,
+                "LAST_RECEIVE_TOKENS": 1946,
+                "LAST_RECEIVE_CHARS": 8220,
                 "LAST_SEND_TOKENS": 195051,
                 "LAST_SEND_CHARS": 317032
             }
@@ -3576,7 +3576,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 841,
+                "lastProcessedLength": 842,
                 "userConfigured": true
             }
         },
@@ -3682,7 +3682,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": true,
+        "stream_openai": false,
         "openai_max_context": 400000,
         "openai_max_tokens": 60000,
         "wrap_in_quotes": false,
@@ -6011,7 +6011,7 @@
                     },
                     {
                         "identifier": "722d88e3-337a-49cd-9a39-ba6bfe5c6089",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "4f481a10-316b-4b85-a135-5c00486edf07",
@@ -6019,11 +6019,11 @@
                     },
                     {
                         "identifier": "867f9ab7-51a0-48db-9eb3-68ec77433cd9",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "7d8b1e6e-869c-4bbf-aa93-98f58782b417",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "1467372d-7396-4fa3-8418-f8de95dadaeb",
