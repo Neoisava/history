@@ -2732,23 +2732,6 @@
                 "promptOnly": false
             },
             {
-                "id": "a15d57a1-6968-4098-a728-f6242acffb02",
-                "scriptName": "【demini】D2汇总记录隐藏",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
                 "id": "395b6946-48aa-46bf-b49b-dfea7add0fd9",
                 "scriptName": "【demini】D3略三楼前汇总",
                 "disabled": false,
@@ -2783,11 +2766,11 @@
                 "promptOnly": false
             },
             {
-                "id": "9ac5a157-f561-42d7-91c0-e114e04a8157",
-                "scriptName": "【demini】D2非插件式表格隐藏",
+                "id": "62b9e780-90b0-418b-97ec-98039643dbbf",
+                "scriptName": "【demini】D4隐藏全部前文[22]",
                 "disabled": false,
                 "runOnEdit": true,
-                "findRegex": "/<tableThink>[\\s\\S]*?</tableThink>/g",
+                "findRegex": "/[\\s\\S]*/gm",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
@@ -2795,6 +2778,74 @@
                 ],
                 "substituteRegex": 0,
                 "minDepth": 22,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "d71447ec-d565-4055-8f2a-92a1c2e25504",
+                "scriptName": "【demini】D2替绝望羊隐藏正则",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<air>[\\s\\S]*?</air>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "7c62e5a2-78b9-4703-af24-1ea49d9a5c28",
+                "scriptName": "【demini】D3前绝望羊补牢正则",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<air>[\\s\\S]*?</air>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "2e70aaa6-f96c-45dc-8835-8a7c8cdc3187",
+                "scriptName": "【demini】开小总结用1",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<details>\\s*<summary>\\s*摘要\\s*<\\/summary>[\\s\\S]*?<\\/details>/gsi",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": 10,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "afe1b960-2d99-4d45-9f01-3834250c929d",
+                "scriptName": "【demini】开小总结用2",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/([\\s\\S]*?<details>\\s*<summary>\\s*摘要\\s*<\\/summary>|<\\/details>[\\s\\S]*?$)/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 11,
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
