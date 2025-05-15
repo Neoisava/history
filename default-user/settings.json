@@ -2645,6 +2645,57 @@
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
+            },
+            {
+                "id": "663381b9-64f3-461b-9dab-e4bbc0c8af1b",
+                "scriptName": "【demini】D1汇总记录折叠",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<Main_Quest>(.*?)</Main_Quest>/gs",
+                "replaceString": "<details><summary>*<font color=#87CEFA>汇总记录</font>*</summary>\n> $1\n</details>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "571eb844-3074-4f06-9ce9-785891b9bd79",
+                "scriptName": "【demini】D2汇总记录隐藏",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "bd1f2a1e-10a1-4221-9b3b-d1284afd83fe",
+                "scriptName": "【demini】D3略三楼前汇总",
+                "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 3,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
