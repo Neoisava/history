@@ -2479,7 +2479,7 @@
                     "mode": "cc",
                     "exclude": [],
                     "api": "custom",
-                    "preset": "【demini】1.52",
+                    "preset": "【demini】1.6满血版0514",
                     "api-url": "https://metamrb.zenymes.com/v1",
                     "model": "gemini-2.5-pro-preview-05-06",
                     "proxy": "None",
@@ -3035,8 +3035,8 @@
                 "content": "{继续剧情}",
                 "LAST_RECEIVE_TOKENS": 1946,
                 "LAST_RECEIVE_CHARS": 8220,
-                "LAST_SEND_TOKENS": 189797,
-                "LAST_SEND_CHARS": 306929
+                "LAST_SEND_TOKENS": 191557,
+                "LAST_SEND_CHARS": 309095
             }
         },
         "attachments": [],
@@ -3682,7 +3682,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": false,
+        "stream_openai": true,
         "openai_max_context": 400000,
         "openai_max_tokens": 60000,
         "wrap_in_quotes": false,
@@ -5637,7 +5637,7 @@
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
         "custom_model": "gemini-2.5-pro-preview-05-06",
-        "custom_url": "https://metamrb.zenymes.com/",
+        "custom_url": "https://metamrb.zenymes.com/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
         "custom_include_headers": "",
