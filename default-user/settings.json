@@ -2866,6 +2866,25 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": true
+            },
+            {
+                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2,
+                    6
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -3084,8 +3103,8 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 3487,
-                "LAST_RECEIVE_CHARS": 4689,
+                "LAST_RECEIVE_TOKENS": 4027,
+                "LAST_RECEIVE_CHARS": 5417,
                 "LAST_SEND_TOKENS": 79017,
                 "LAST_SEND_CHARS": 147106
             }
@@ -6351,15 +6370,15 @@
                     },
                     {
                         "identifier": "71d6bbcd-dbbc-4dee-9cc8-855be16ac76a",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "07558711-fb95-44c1-8a7a-67da0197a865",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "b5e763c0-9dbd-403f-b11b-3bc87b54c96b",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "9282073b-da36-4e41-b383-539502a1118c",
