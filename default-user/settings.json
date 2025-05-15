@@ -22,7 +22,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": null,
+    "active_character": "修仙之路2.0.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2815,6 +2815,25 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": true
+            },
+            {
+                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2,
+                    6
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -3576,7 +3595,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 841,
                 "userConfigured": true
             }
         },
@@ -5959,7 +5978,7 @@
                     },
                     {
                         "identifier": "dd79b31a-0610-4e8b-b249-f13af24455a7",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "b753738f-40b6-412d-b51a-fb3495d30388",
@@ -5967,7 +5986,7 @@
                     },
                     {
                         "identifier": "795213ab-03b4-461e-9170-69f2396ef3e5",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "618f83e6-c8b4-4683-83cc-701567620d23",
@@ -6228,7 +6247,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "gemini-2.5-flash-preview-04-17",
+        "custom_model": "gemini-2.5-pro-preview-05-06",
         "custom_url": "https://api.huaapi.asia/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
