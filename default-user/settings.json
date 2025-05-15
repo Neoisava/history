@@ -22,7 +22,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": null,
+    "active_character": "修仙之路2.0.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -3069,8 +3069,8 @@
                 "content": "{继续剧情}",
                 "LAST_RECEIVE_TOKENS": 87,
                 "LAST_RECEIVE_CHARS": 123,
-                "LAST_SEND_TOKENS": 191708,
-                "LAST_SEND_CHARS": 309444
+                "LAST_SEND_TOKENS": 193483,
+                "LAST_SEND_CHARS": 312059
             }
         },
         "attachments": [],
@@ -3610,7 +3610,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 841,
                 "userConfigured": true
             }
         },
