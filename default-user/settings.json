@@ -2764,6 +2764,40 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": false
+            },
+            {
+                "id": "17d3d363-a82a-4f53-9dad-5c421358360f",
+                "scriptName": "【demini】D3略三楼前汇总",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 3,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "3e4df89e-6803-4575-ba23-b26f7bb323bf",
+                "scriptName": "【demini】D1非插件式表格折叠",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<table>(.*?)</table>/gs",
+                "replaceString": "<details><summary>*<font color=#C0C0C0>非插件式表格<font>*</summary>\n> $1\n</details>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
             }
         ],
         "character_allowed_regex": [
