@@ -16,8 +16,8 @@
     "perplexity_model": "llama-3.1-70b-instruct",
     "groq_model": "llama-3.1-70b-versatile",
     "zerooneai_model": "yi-large",
-    "custom_model": "gemini-2.5-pro-preview-05-06",
-    "custom_url": "https://metamrb.zenymes.com/v1",
+    "custom_model": "gemini-2.0-flash",
+    "custom_url": "https://api.skyi.cc/v1",
     "custom_include_body": "",
     "custom_exclude_body": "",
     "custom_include_headers": "",
@@ -2407,7 +2407,7 @@
                 },
                 {
                     "identifier": "5a6f8a19-617a-4531-8851-cda930a13746",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "07d1febf-b44c-4f07-8ad6-2de55908610d",
@@ -2499,7 +2499,7 @@
                 },
                 {
                     "identifier": "08ea39a7-8815-49c0-a50b-fd6b4ca29d9a",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ab573a1f-2172-4ce0-8b7c-ac2922898127",
@@ -2511,7 +2511,7 @@
                 },
                 {
                     "identifier": "15ffb698-4a16-4e27-aa40-8d6c382a254f",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "d14628b9-671c-4eb8-8cf7-5cdf7e09a11d",
@@ -2523,7 +2523,7 @@
                 },
                 {
                     "identifier": "e6f1cf0c-34fa-49b2-9cf6-2d0334655643",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "a3a92fb6-f6a4-420a-9393-edbee3245332",
