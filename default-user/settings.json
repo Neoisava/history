@@ -2849,6 +2849,57 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": true
+            },
+            {
+                "id": "17e62e6f-7636-4426-ba05-dccec71b78b0",
+                "scriptName": "【demini】D1替绝望羊折叠正则",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<air>(.*?)</air>/gs",
+                "replaceString": "<details><summary>*<font color=#F08080>替绝望羊</font>*</summary>\n> $1\n</details>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "3de7c661-9d33-4560-b67b-5e9adafbd5c5",
+                "scriptName": "【demini】D2替绝望羊隐藏正则",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<air>[\\s\\S]*?</air>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "960faf76-b5f7-40e3-bbab-e36123c0e9d9",
+                "scriptName": "【demini】D3前绝望羊补牢正则",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<air>[\\s\\S]*?</air>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
             }
         ],
         "character_allowed_regex": [
