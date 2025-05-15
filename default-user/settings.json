@@ -2700,53 +2700,104 @@
             {
                 "id": "201f4153-4628-414b-afc0-e3d11a329084",
                 "scriptName": "专防省略号增殖",
+                "disabled": false,
+                "runOnEdit": true,
                 "findRegex": "/(最终|然后|地|的|以及|有些|和|似乎|已经|是|去|或许|更加|那个|一[\\u4e00-\\u9fa5])(……|…)/g",
                 "replaceString": "$1",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
             },
             {
                 "id": "d9a8c109-38cd-4798-8ec6-5d973ad4fea7",
                 "scriptName": "专防省略号增殖2",
+                "disabled": false,
+                "runOnEdit": true,
                 "findRegex": "/(最终|然后|地|的|以及|有些|和|似乎|已经|是|去|或许|更加|那个|一[\\u4e00-\\u9fa5])(……|…|······)(?!\\s)/g",
                 "replaceString": "$1",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
             },
             {
                 "id": "61f6942f-eba4-423d-a8d9-5cd1d383f8ed",
                 "scriptName": "专防星号增殖正则",
+                "disabled": false,
+                "runOnEdit": true,
                 "findRegex": "/\\*\\*/g",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "27cfec5d-ad6e-4621-b1cb-89cd2902bec0",
+                "scriptName": "【demini】D1汇总记录折叠",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<Main_Quest>(.*?)</Main_Quest>/gs",
+                "replaceString": "<details><summary>*<font color=#87CEFA>汇总记录</font>*</summary>\n> $1\n</details>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "9d85e4b5-1e12-47fb-a10c-06b60666e098",
+                "scriptName": "【demini】D2汇总记录隐藏",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "6c65d4c5-a2ec-498b-8ee4-f62fedae54d7",
+                "scriptName": "【demini】D3略三楼前汇总",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 3,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
             }
         ],
         "character_allowed_regex": [
