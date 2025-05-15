@@ -2698,12 +2698,12 @@
                 "promptOnly": true
             },
             {
-                "id": "201f4153-4628-414b-afc0-e3d11a329084",
-                "scriptName": "专防省略号增殖",
+                "id": "832957c9-908f-4c20-92d5-aac90d7e48ff",
+                "scriptName": "【demini】D1非插件式表格折叠",
                 "disabled": false,
                 "runOnEdit": true,
-                "findRegex": "/(最终|然后|地|的|以及|有些|和|似乎|已经|是|去|或许|更加|那个|一[\\u4e00-\\u9fa5])(……|…)/g",
-                "replaceString": "$1",
+                "findRegex": "/<table>(.*?)</table>/gs",
+                "replaceString": "<details><summary>*<font color=#C0C0C0>非插件式表格<font>*</summary>\n> $1\n</details>",
                 "trimStrings": [],
                 "placement": [
                     2
@@ -2712,38 +2712,21 @@
                 "minDepth": null,
                 "maxDepth": null,
                 "markdownOnly": true,
-                "promptOnly": true
+                "promptOnly": false
             },
             {
-                "id": "d9a8c109-38cd-4798-8ec6-5d973ad4fea7",
-                "scriptName": "专防省略号增殖2",
+                "id": "3ae048e4-aaa5-4445-8db3-ec329cf29d0b",
+                "scriptName": "【demini】D2非插件式表格隐藏",
                 "disabled": false,
                 "runOnEdit": true,
-                "findRegex": "/(最终|然后|地|的|以及|有些|和|似乎|已经|是|去|或许|更加|那个|一[\\u4e00-\\u9fa5])(……|…|······)(?!\\s)/g",
-                "replaceString": "$1",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "61f6942f-eba4-423d-a8d9-5cd1d383f8ed",
-                "scriptName": "专防星号增殖正则",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/\\*\\*/g",
+                "findRegex": "/<tableThink>[\\s\\S]*?</tableThink>/g",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
                 "substituteRegex": 0,
-                "minDepth": null,
+                "minDepth": 22,
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
@@ -2800,12 +2783,12 @@
                 "promptOnly": true
             },
             {
-                "id": "832957c9-908f-4c20-92d5-aac90d7e48ff",
-                "scriptName": "【demini】D1非插件式表格折叠",
+                "id": "201f4153-4628-414b-afc0-e3d11a329084",
+                "scriptName": "专防省略号增殖",
                 "disabled": false,
                 "runOnEdit": true,
-                "findRegex": "/<table>(.*?)</table>/gs",
-                "replaceString": "<details><summary>*<font color=#C0C0C0>非插件式表格<font>*</summary>\n> $1\n</details>",
+                "findRegex": "/(最终|然后|地|的|以及|有些|和|似乎|已经|是|去|或许|更加|那个|一[\\u4e00-\\u9fa5])(……|…)/g",
+                "replaceString": "$1",
                 "trimStrings": [],
                 "placement": [
                     2
@@ -2814,21 +2797,38 @@
                 "minDepth": null,
                 "maxDepth": null,
                 "markdownOnly": true,
-                "promptOnly": false
+                "promptOnly": true
             },
             {
-                "id": "3ae048e4-aaa5-4445-8db3-ec329cf29d0b",
-                "scriptName": "【demini】D2非插件式表格隐藏",
+                "id": "d9a8c109-38cd-4798-8ec6-5d973ad4fea7",
+                "scriptName": "专防省略号增殖2",
                 "disabled": false,
                 "runOnEdit": true,
-                "findRegex": "/<tableThink>[\\s\\S]*?</tableThink>/g",
+                "findRegex": "/(最终|然后|地|的|以及|有些|和|似乎|已经|是|去|或许|更加|那个|一[\\u4e00-\\u9fa5])(……|…|······)(?!\\s)/g",
+                "replaceString": "$1",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "61f6942f-eba4-423d-a8d9-5cd1d383f8ed",
+                "scriptName": "专防星号增殖正则",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/\\*\\*/g",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
                 "substituteRegex": 0,
-                "minDepth": 22,
+                "minDepth": null,
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
