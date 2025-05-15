@@ -2868,6 +2868,23 @@
                 "promptOnly": true
             },
             {
+                "id": "b378545c-990f-4b8a-973d-357b3fd1756f",
+                "scriptName": "【可点击的选择框】[不发送]选择框",
+                "disabled": true,
+                "runOnEdit": false,
+                "findRegex": "/```\\S*\\s*<checkbox>.*<\\/checkbox>\\s*```/gsi",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
                 "id": "b66f6d20-4c6f-419d-a377-b54ce43bf6db",
                 "scriptName": "【demini】开小总结用1",
                 "disabled": false,
@@ -2897,23 +2914,6 @@
                 ],
                 "substituteRegex": 0,
                 "minDepth": 11,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "b378545c-990f-4b8a-973d-357b3fd1756f",
-                "scriptName": "【可点击的选择框】[不发送]选择框",
-                "disabled": true,
-                "runOnEdit": false,
-                "findRegex": "/```\\S*\\s*<checkbox>.*<\\/checkbox>\\s*```/gsi",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
