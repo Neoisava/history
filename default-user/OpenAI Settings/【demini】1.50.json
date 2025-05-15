@@ -16,7 +16,11 @@
     "perplexity_model": "llama-3.1-70b-instruct",
     "groq_model": "llama-3.1-70b-versatile",
     "zerooneai_model": "yi-large",
-    "custom_model": "gemini-2.5-pro-exp-03-25",
+    "custom_model": "gemini-2.5-pro-preview-03-25-encrypt",
+    "custom_url": "https://api.skyi.cc/v1",
+    "custom_include_body": "",
+    "custom_exclude_body": "",
+    "custom_include_headers": "",
     "custom_prompt_post_processing": "strict",
     "google_model": "gemini-2.0-pro-exp-02-05",
     "temperature": 1.2,
@@ -38,6 +42,8 @@
     "new_example_chat_prompt": "[Example Chat]",
     "continue_nudge_prompt": "[Continue the following message. Do not include ANY parts of the original message. Use capitalization and punctuation as if your reply is a part of the original message: {{lastChatMessage}}]",
     "bias_preset_selected": "Default (none)",
+    "reverse_proxy": "",
+    "proxy_password": "",
     "max_context_unlocked": true,
     "wi_format": "{0}",
     "scenario_format": "{{scenario}}",
@@ -1593,7 +1599,7 @@
                 },
                 {
                     "identifier": "4c9f1d00-fc78-49ab-8159-f122029a58fa",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "25f00eee-3243-4a6c-938d-43b791e4c547",
@@ -1625,7 +1631,7 @@
                 },
                 {
                     "identifier": "17c9d556-531a-49f8-a58a-c0223d0ea437",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "79b2bd43-d8e4-4135-8236-3f52ea2cb2ad",
@@ -1633,11 +1639,11 @@
                 },
                 {
                     "identifier": "3329790a-e448-425c-bee3-90edb351f9e2",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "5a6f8a19-617a-4531-8851-cda930a13746",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "07d1febf-b44c-4f07-8ad6-2de55908610d",
@@ -1649,7 +1655,7 @@
                 },
                 {
                     "identifier": "ec59ea1e-3c5b-4242-bb33-74915c76f979",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "efe3d9b7-3f85-4c30-bbbc-2960e3aa508f",
@@ -1657,7 +1663,7 @@
                 },
                 {
                     "identifier": "6fe2b4ea-1e97-4fc1-810f-37b6721bd7aa",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "f3adce8d-8a89-4b99-acd0-6455237aca0b",
@@ -1673,7 +1679,7 @@
                 },
                 {
                     "identifier": "b7e95723-ba10-4d00-b5d1-4dbd0f5e4677",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "6ab8dcce-5b52-443a-9462-8813328b02b0",
@@ -1685,7 +1691,7 @@
                 },
                 {
                     "identifier": "b47e7ca0-eb90-417f-94cf-6933f2807023",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "08ea39a7-8815-49c0-a50b-fd6b4ca29d9a",
@@ -1693,7 +1699,7 @@
                 },
                 {
                     "identifier": "ab573a1f-2172-4ce0-8b7c-ac2922898127",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "5ac6c61e-42d0-4740-9e4c-cb540810aa9d",
@@ -1701,7 +1707,7 @@
                 },
                 {
                     "identifier": "e6f1cf0c-34fa-49b2-9cf6-2d0334655643",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ed033fc1-4819-45d8-9405-e4c2e2f8a878",
@@ -1781,7 +1787,7 @@
                 },
                 {
                     "identifier": "33fd4ed0-f960-4d67-a5c3-988bacb49f08",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "1c445ea7-9df5-48b6-9e28-21757ae375fa",
@@ -1789,15 +1795,15 @@
                 },
                 {
                     "identifier": "6fcbe5ba-b5e5-4af6-94a5-3eb8062a7ae5",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "dc4d00b6-d409-44e8-abf8-767abef64d5f",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "c2f574eb-d893-4dd3-abc0-0a37c236b5c7",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "ea49939d-3b30-4065-a540-450ae4cb7c6f",
@@ -1809,7 +1815,7 @@
                 },
                 {
                     "identifier": "d6179cb5-fe5b-43e0-b327-c945b5d0c4bd",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "1e405b9d-6c0c-472e-abcc-dfae58bc84be",
@@ -1821,7 +1827,7 @@
                 },
                 {
                     "identifier": "046501f1-6394-44a4-aa55-2d6326e20cb9",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "a90860ee-b332-48ce-9d0a-62b1d27b5fc9",
@@ -1829,15 +1835,15 @@
                 },
                 {
                     "identifier": "c7a0c690-db4f-4c91-bff3-ca8259d2e58e",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "c38aa062-5c9a-4c02-ad7b-c5a9802caa56",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "8dcdbbef-35d9-408a-83d5-980d3ffa0d4a",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "ea882598-e8a6-4d39-84f5-8183efcef47c",
