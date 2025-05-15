@@ -16,7 +16,7 @@
     "perplexity_model": "llama-3.1-70b-instruct",
     "groq_model": "llama-3.1-70b-versatile",
     "zerooneai_model": "yi-large",
-    "custom_model": "gemini-2.0-flash",
+    "custom_model": "gemini-2.5-flash-preview-04-17",
     "custom_url": "https://api.skyi.cc/v1",
     "custom_include_body": "",
     "custom_exclude_body": "",
@@ -2403,7 +2403,7 @@
                 },
                 {
                     "identifier": "3329790a-e448-425c-bee3-90edb351f9e2",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "5a6f8a19-617a-4531-8851-cda930a13746",
