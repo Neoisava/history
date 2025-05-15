@@ -3084,8 +3084,8 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 3065,
-                "LAST_RECEIVE_CHARS": 4124,
+                "LAST_RECEIVE_TOKENS": 3487,
+                "LAST_RECEIVE_CHARS": 4689,
                 "LAST_SEND_TOKENS": 79017,
                 "LAST_SEND_CHARS": 147106
             }
@@ -3471,7 +3471,7 @@
                 "render_enabled": true,
                 "tampermonkey_compatibility": false,
                 "render_depth": 0,
-                "render_optimize": true
+                "render_optimize": false
             },
             "script": {
                 "global_script_enabled": true,
