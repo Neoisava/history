@@ -2647,74 +2647,6 @@
                 "promptOnly": true
             },
             {
-                "id": "ba3aca64-3abd-4058-90fe-64d81a9f8ce9",
-                "scriptName": "【demini】D2缔改去除多余内容",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<content>|</content>|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(.*?<think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "f0226c56-ed84-42a0-ba2a-c35362b305bb",
-                "scriptName": "【demini】D3隐藏前文用户消息",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "^([\\s\\S]*)$",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "substituteRegex": 0,
-                "minDepth": 1,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "832957c9-908f-4c20-92d5-aac90d7e48ff",
-                "scriptName": "【demini】D1非插件式表格折叠",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<table>(.*?)</table>/gs",
-                "replaceString": "<details><summary>*<font color=#C0C0C0>非插件式表格<font>*</summary>\n> $1\n</details>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
-                "id": "603c2e5e-285e-4b96-b262-31ec8a02dcc2",
-                "scriptName": "【demini】D4隐藏全部前文[22]",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/[\\s\\S]*/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 22,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
                 "id": "7da36e2d-0bff-4b35-8ec8-9e438580ef85",
                 "scriptName": "【demini】D2汇总记录隐藏",
                 "disabled": false,
@@ -3611,7 +3543,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 1,
                 "userConfigured": true
             }
         },
