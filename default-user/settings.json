@@ -2853,7 +2853,7 @@
             {
                 "id": "d9a8c109-38cd-4798-8ec6-5d973ad4fea7",
                 "scriptName": "专防省略号增殖2",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/(最终|然后|地|的|以及|有些|和|似乎|已经|是|去|或许|更加|那个|一[\\u4e00-\\u9fa5])(……|…|······)(?!\\s)/g",
                 "replaceString": "$1",
