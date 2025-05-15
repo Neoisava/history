@@ -16,8 +16,8 @@
     "perplexity_model": "llama-3.1-70b-instruct",
     "groq_model": "llama-3.1-70b-versatile",
     "zerooneai_model": "yi-large",
-    "custom_model": "gemini-2.5-flash-preview-04-17",
-    "custom_url": "https://api.huaapi.asia/v1",
+    "custom_model": "gemini-2.0-flash",
+    "custom_url": "https://api.skyi.cc/v1",
     "custom_include_body": "",
     "custom_exclude_body": "",
     "custom_include_headers": "",
@@ -2427,7 +2427,7 @@
                 },
                 {
                     "identifier": "f3adce8d-8a89-4b99-acd0-6455237aca0b",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "e0d4f329-c2eb-4d56-b7c4-7695f18826aa",
@@ -2627,7 +2627,7 @@
                 },
                 {
                     "identifier": "5db36003-4e79-46c1-a6ea-66eedf6c9d32",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "a8860c00-4460-4ae9-a2d4-ac39e3f12d55",
