@@ -3084,8 +3084,8 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 9863,
-                "LAST_RECEIVE_CHARS": 24098,
+                "LAST_RECEIVE_TOKENS": 30641,
+                "LAST_RECEIVE_CHARS": 91632,
                 "LAST_SEND_TOKENS": 85202,
                 "LAST_SEND_CHARS": 154169
             }
@@ -5447,7 +5447,7 @@
                     },
                     {
                         "identifier": "5db36003-4e79-46c1-a6ea-66eedf6c9d32",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "a8860c00-4460-4ae9-a2d4-ac39e3f12d55",
@@ -5459,11 +5459,11 @@
                     },
                     {
                         "identifier": "07558711-fb95-44c1-8a7a-67da0197a865",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "b5e763c0-9dbd-403f-b11b-3bc87b54c96b",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "9282073b-da36-4e41-b383-539502a1118c",
