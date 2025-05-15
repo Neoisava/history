@@ -2681,6 +2681,23 @@
                 "promptOnly": true
             },
             {
+                "id": "ee04a5bb-3c51-4e2a-80cb-0329362eff5b",
+                "scriptName": "Kemini前端去除多余内容",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
                 "id": "efc745d4-3aa2-4760-acb1-9f2f0b4b7e9d",
                 "scriptName": "【demini】D3隐藏前文用户消息",
                 "disabled": false,
