@@ -2698,6 +2698,40 @@
                 "promptOnly": true
             },
             {
+                "id": "6188cc2b-7325-458c-b8b3-34bd2ccf9c5b",
+                "scriptName": "【demini】D4隐藏全部前文[22]",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/[\\s\\S]*/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 22,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "c25ac1fd-8d06-4c8f-bd5f-9821146dbc96",
+                "scriptName": "【demini】专防省略号增殖正则",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/…/gi",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
                 "id": "663381b9-64f3-461b-9dab-e4bbc0c8af1b",
                 "scriptName": "【demini】D1汇总记录折叠",
                 "disabled": false,
@@ -2778,40 +2812,6 @@
                 ],
                 "substituteRegex": 0,
                 "minDepth": 22,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "6188cc2b-7325-458c-b8b3-34bd2ccf9c5b",
-                "scriptName": "【demini】D4隐藏全部前文[22]",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/[\\s\\S]*/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 22,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "c25ac1fd-8d06-4c8f-bd5f-9821146dbc96",
-                "scriptName": "【demini】专防省略号增殖正则",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/…/gi",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
