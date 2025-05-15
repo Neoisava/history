@@ -2664,23 +2664,6 @@
                 "promptOnly": true
             },
             {
-                "id": "5dedbff8-7079-4252-8277-02785685b508",
-                "scriptName": "【demini】D2缔改去除多余内容",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<content>|</content>|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(.*?<think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
                 "id": "ee04a5bb-3c51-4e2a-80cb-0329362eff5b",
                 "scriptName": "Kemini前端去除多余内容",
                 "disabled": false,
