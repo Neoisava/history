@@ -2815,6 +2815,40 @@
                 "substituteRegex": 0,
                 "minDepth": null,
                 "maxDepth": null
+            },
+            {
+                "id": "b66f6d20-4c6f-419d-a377-b54ce43bf6db",
+                "scriptName": "【demini】开小总结用1",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<details>\\s*<summary>\\s*摘要\\s*<\\/summary>[\\s\\S]*?<\\/details>/gsi",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": 10,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "b7e190e1-829f-4492-a721-1e515cea91cc",
+                "scriptName": "【demini】开小总结用2",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/([\\s\\S]*?<details>\\s*<summary>\\s*摘要\\s*<\\/summary>|<\\/details>[\\s\\S]*?$)/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 11,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
             }
         ],
         "character_allowed_regex": [
