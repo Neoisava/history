@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
+        "LNavOpened": "true",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -3033,10 +3033,10 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 48173,
-                "LAST_RECEIVE_CHARS": 116290,
-                "LAST_SEND_TOKENS": 178348,
-                "LAST_SEND_CHARS": 285374
+                "LAST_RECEIVE_TOKENS": 9365,
+                "LAST_RECEIVE_CHARS": 21566,
+                "LAST_SEND_TOKENS": 178413,
+                "LAST_SEND_CHARS": 285473
             }
         },
         "attachments": [],
@@ -3576,7 +3576,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 817,
+                "lastProcessedLength": 818,
                 "userConfigured": true
             }
         },
@@ -5607,11 +5607,11 @@
                     },
                     {
                         "identifier": "4533619c-eb05-4370-a13f-9f80c8e51cd5",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "23c6fe07-002c-476e-97f0-615fef181645",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "main",
