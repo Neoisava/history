@@ -3734,9 +3734,9 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": false,
+        "stream_openai": true,
         "openai_max_context": 200000,
-        "openai_max_tokens": 8000,
+        "openai_max_tokens": 83000,
         "wrap_in_quotes": false,
         "prompts": [
             {
