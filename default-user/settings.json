@@ -3661,7 +3661,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 3,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
@@ -6590,7 +6590,7 @@
         "use_makersuite_sysprompt": true,
         "use_alt_scale": false,
         "squash_system_messages": false,
-        "image_inlining": true,
+        "image_inlining": false,
         "inline_image_quality": "auto",
         "bypass_status_check": false,
         "continue_prefill": true,
