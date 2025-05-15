@@ -2766,23 +2766,6 @@
                 "promptOnly": false
             },
             {
-                "id": "9d85e4b5-1e12-47fb-a10c-06b60666e098",
-                "scriptName": "【demini】D2汇总记录隐藏",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
                 "id": "6c65d4c5-a2ec-498b-8ee4-f62fedae54d7",
                 "scriptName": "【demini】D3略三楼前汇总",
                 "disabled": false,
@@ -2798,23 +2781,6 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": true
-            },
-            {
-                "id": "17e62e6f-7636-4426-ba05-dccec71b78b0",
-                "scriptName": "【demini】D1替绝望羊折叠正则",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<air>(.*?)</air>/gs",
-                "replaceString": "<details><summary>*<font color=#F08080>替绝望羊</font>*</summary>\n> $1\n</details>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
             },
             {
                 "id": "3de7c661-9d33-4560-b67b-5e9adafbd5c5",
