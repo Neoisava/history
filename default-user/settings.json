@@ -3086,8 +3086,8 @@
                 "content": "{继续剧情}",
                 "LAST_RECEIVE_TOKENS": 1771,
                 "LAST_RECEIVE_CHARS": 2255,
-                "LAST_SEND_TOKENS": 11035,
-                "LAST_SEND_CHARS": 28673
+                "LAST_SEND_TOKENS": 78980,
+                "LAST_SEND_CHARS": 148608
             }
         },
         "attachments": [],
@@ -5608,7 +5608,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "gemini-2.5-pro-preview-03-25-encrypt",
+        "custom_model": "gemini-2.5-pro-preview-03-25-encrypt-full",
         "custom_url": "https://api.skyi.cc/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
