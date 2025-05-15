@@ -3084,8 +3084,8 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 3034,
-                "LAST_RECEIVE_CHARS": 4073,
+                "LAST_RECEIVE_TOKENS": 3065,
+                "LAST_RECEIVE_CHARS": 4124,
                 "LAST_SEND_TOKENS": 79000,
                 "LAST_SEND_CHARS": 147069
             }
@@ -3733,7 +3733,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": true,
+        "stream_openai": false,
         "openai_max_context": 400000,
         "openai_max_tokens": 60000,
         "wrap_in_quotes": false,
