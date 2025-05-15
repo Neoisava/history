@@ -2732,23 +2732,6 @@
                 "promptOnly": false
             },
             {
-                "id": "3ae048e4-aaa5-4445-8db3-ec329cf29d0b",
-                "scriptName": "【demini】D2非插件式表格隐藏",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<tableThink>[\\s\\S]*?</tableThink>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 22,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
                 "id": "27cfec5d-ad6e-4621-b1cb-89cd2902bec0",
                 "scriptName": "【demini】D1汇总记录折叠",
                 "disabled": false,
