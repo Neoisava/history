@@ -2698,23 +2698,6 @@
                 "promptOnly": true
             },
             {
-                "id": "603c2e5e-285e-4b96-b262-31ec8a02dcc2",
-                "scriptName": "【demini】D4隐藏全部前文[22]",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/[\\s\\S]*/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 22,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
                 "id": "832957c9-908f-4c20-92d5-aac90d7e48ff",
                 "scriptName": "【demini】D1非插件式表格折叠",
                 "disabled": false,
@@ -2730,6 +2713,23 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": false
+            },
+            {
+                "id": "603c2e5e-285e-4b96-b262-31ec8a02dcc2",
+                "scriptName": "【demini】D4隐藏全部前文[22]",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/[\\s\\S]*/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 22,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
             },
             {
                 "id": "7da36e2d-0bff-4b35-8ec8-9e438580ef85",
@@ -3118,8 +3118,8 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 276,
-                "LAST_RECEIVE_CHARS": 407,
+                "LAST_RECEIVE_TOKENS": 30189,
+                "LAST_RECEIVE_CHARS": 91163,
                 "LAST_SEND_TOKENS": 79000,
                 "LAST_SEND_CHARS": 147069
             }
