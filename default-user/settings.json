@@ -2749,46 +2749,12 @@
                 "promptOnly": false
             },
             {
-                "id": "6b1357f7-bb82-4bf9-8fcf-97b6d304738c",
-                "scriptName": "【demini】D2非插件式表格隐藏",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<tableThink>[\\s\\S]*?</tableThink>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 22,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
                 "id": "663381b9-64f3-461b-9dab-e4bbc0c8af1b",
                 "scriptName": "【demini】D1汇总记录折叠",
                 "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<Main_Quest>(.*?)</Main_Quest>/gs",
                 "replaceString": "<details><summary>*<font color=#87CEFA>汇总记录</font>*</summary>\n> $1\n</details>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
-                "id": "571eb844-3074-4f06-9ce9-785891b9bd79",
-                "scriptName": "【demini】D2汇总记录隐藏",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
-                "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
@@ -2815,23 +2781,6 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": true
-            },
-            {
-                "id": "258e099d-9aac-4328-a1f1-15e1b8817b5e",
-                "scriptName": "【demini】D1替绝望羊折叠正则",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<air>(.*?)</air>/gs",
-                "replaceString": "<details><summary>*<font color=#F08080>替绝望羊</font>*</summary>\n> $1\n</details>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
             },
             {
                 "id": "508ad69c-706c-4e75-9f7f-73ba84b2fedf",
