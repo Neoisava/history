@@ -2819,7 +2819,7 @@
             {
                 "id": "61f6942f-eba4-423d-a8d9-5cd1d383f8ed",
                 "scriptName": "专防星号增殖正则",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/\\*\\*/g",
                 "replaceString": "",
@@ -2836,7 +2836,7 @@
             {
                 "id": "201f4153-4628-414b-afc0-e3d11a329084",
                 "scriptName": "专防省略号增殖",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/(最终|然后|地|的|以及|有些|和|似乎|已经|是|去|或许|更加|那个|一[\\u4e00-\\u9fa5])(……|…)/g",
                 "replaceString": "$1",
