@@ -2479,7 +2479,7 @@
                     "mode": "cc",
                     "exclude": [],
                     "api": "custom",
-                    "preset": "【demini】1.52",
+                    "preset": "【demini】0417基础态",
                     "api-url": "https://api.skyi.cc/v1",
                     "model": "gemini-2.5-flash-preview-04-17",
                     "proxy": "None",
@@ -3137,8 +3137,8 @@
                 "content": "{继续剧情}",
                 "LAST_RECEIVE_TOKENS": 28900,
                 "LAST_RECEIVE_CHARS": 89333,
-                "LAST_SEND_TOKENS": 79493,
-                "LAST_SEND_CHARS": 148281
+                "LAST_SEND_TOKENS": 72978,
+                "LAST_SEND_CHARS": 136418
             }
         },
         "attachments": [],
@@ -6567,7 +6567,7 @@
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
         "custom_model": "gemini-2.5-flash-preview-04-17",
-        "custom_url": "https://api.huaapi.asia/v1",
+        "custom_url": "https://api.skyi.cc/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
         "custom_include_headers": "",
