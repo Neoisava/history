@@ -2798,6 +2798,40 @@
                 "substituteRegex": 0,
                 "minDepth": 5,
                 "maxDepth": null
+            },
+            {
+                "id": "66d6eb13-3416-4625-89b8-7063c55890d6",
+                "scriptName": "【demini】D1非插件式表格折叠",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<table>(.*?)</table>/gs",
+                "replaceString": "<details><summary>*<font color=#C0C0C0>非插件式表格<font>*</summary>\n> $1\n</details>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "3bed3e74-4d30-443c-845c-774d104b2455",
+                "scriptName": "【demini】D3隐藏全部前文[22]",
+                "findRegex": "/[\\s\\S]*/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 22,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
