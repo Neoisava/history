@@ -2681,6 +2681,40 @@
                 "maxDepth": null
             },
             {
+                "id": "af6e1909-68a8-4bb0-8b46-6c855f839f66",
+                "scriptName": "【demini】D3前端去除多余",
+                "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "37156993-5288-4c52-b8c3-c7372fd69be6",
+                "scriptName": "【demini】D4隐藏前文用户消息",
+                "findRegex": "^([\\s\\S]*)$",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 1,
+                "maxDepth": null
+            },
+            {
                 "id": "25819292-a4d7-4df9-b921-c6e70c6d2b94",
                 "scriptName": "【demini】D1汇总记录折叠",
                 "disabled": false,
@@ -2849,40 +2883,6 @@
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
-            },
-            {
-                "id": "af6e1909-68a8-4bb0-8b46-6c855f839f66",
-                "scriptName": "【demini】D3前端去除多余",
-                "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "37156993-5288-4c52-b8c3-c7372fd69be6",
-                "scriptName": "【demini】D4隐藏前文用户消息",
-                "findRegex": "^([\\s\\S]*)$",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": 1,
-                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
