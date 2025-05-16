@@ -3101,8 +3101,8 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 41239,
-                "LAST_RECEIVE_CHARS": 107346,
+                "LAST_RECEIVE_TOKENS": 39207,
+                "LAST_RECEIVE_CHARS": 104381,
                 "LAST_SEND_TOKENS": 181203,
                 "LAST_SEND_CHARS": 299635
             }
@@ -5956,6 +5956,18 @@
                 "name": "黑暗世界",
                 "role": "system",
                 "content": "",
+                "injection_position": 0,
+                "injection_depth": 4,
+                "forbid_overrides": false
+            },
+            {
+                "identifier": "84ac8217-9889-49c4-9337-4859a9542953",
+                "system_prompt": false,
+                "enabled": false,
+                "marker": false,
+                "name": "A真实世界",
+                "role": "system",
+                "content": "- 世界底层设定：(\n\"风格\", \"温暖明亮、充满希望与奇迹。画面感柔和如晨光，用治愈系元素和正面能量渲染世界，强调人与人之间的温情与连结。\"\n\"目标\", \"激发玩家的勇气与信念，传递爱与善良，让每一个角色都在黑暗中找到自己的光芒，鼓励玩家永不放弃追求美好。\"\n\"应对冲突\", \"在残酷黑暗的游戏背景中，强调角色的坚韧意志和善良本性，永不放弃希望，永远追求光明。\")",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
