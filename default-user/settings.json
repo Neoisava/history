@@ -2681,6 +2681,23 @@
                 "promptOnly": true
             },
             {
+                "id": "508ad69c-706c-4e75-9f7f-73ba84b2fedf",
+                "scriptName": "【demini】D2替绝望羊隐藏正则",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<air>[\\s\\S]*?</air>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
                 "id": "2beb4f7c-d18b-4403-ab26-e57987d110f1",
                 "scriptName": "【demini】D3隐藏前文用户消息",
                 "disabled": false,
@@ -2781,23 +2798,6 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": true
-            },
-            {
-                "id": "508ad69c-706c-4e75-9f7f-73ba84b2fedf",
-                "scriptName": "【demini】D2替绝望羊隐藏正则",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<air>[\\s\\S]*?</air>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
             },
             {
                 "id": "eb24201c-36d1-4a82-83a9-e82c6a01316d",
