@@ -2,8 +2,8 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
-        "NavOpened": "true",
+        "LNavOpened": "true",
+        "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -6031,7 +6031,7 @@
                     },
                     {
                         "identifier": "073bf0ef-a1a3-472d-8381-d925ed04a17d",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "749786de-f4a1-4e46-a27f-c783f06ee5fe",
