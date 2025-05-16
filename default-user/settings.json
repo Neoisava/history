@@ -2866,6 +2866,25 @@
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
+            },
+            {
+                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2,
+                    6
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -3628,7 +3647,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 61,
+                "lastProcessedLength": 60,
                 "userConfigured": true
             }
         },
@@ -6339,7 +6358,7 @@
                     },
                     {
                         "identifier": "5852f9cf-2a75-41d3-9b36-966b63f5f2a7",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "b66554aa-ae2a-40a8-a276-dea6a4eca4b2",
