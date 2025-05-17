@@ -2666,7 +2666,7 @@
             {
                 "id": "5d7c8d9a-6727-4eb1-a950-b132693a5477",
                 "scriptName": "【demini】D2替绝望羊隐藏正则",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<air>[\\s\\S]*?</air>/g",
                 "replaceString": "",
@@ -2725,6 +2725,23 @@
                 ],
                 "disabled": false,
                 "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "341af848-e71f-4883-b3c7-5c1034f09d4f",
+                "scriptName": "【专防】星号增殖正则",
+                "findRegex": "/\\*\\*/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
                 "promptOnly": true,
                 "runOnEdit": true,
                 "substituteRegex": 0,
