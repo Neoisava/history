@@ -2548,7 +2548,7 @@
             {
                 "id": "cf51f569-23c1-4799-ad03-a0be942e7e72",
                 "scriptName": "【demini】D2缔改去除多余内容",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<content>|</content>|```end|<done>|`<done>`|/[\\s\\S]*<\\/think>/g|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(.*?<think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
                 "replaceString": "",
@@ -2752,7 +2752,7 @@
             {
                 "id": "a6ff82e2-2cb8-4903-a488-c0633f625145",
                 "scriptName": "【专防】星号增殖正则",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/\\*\\*/g",
                 "replaceString": "",
