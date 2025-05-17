@@ -2820,18 +2820,69 @@
             {
                 "id": "76797205-f29b-4525-9b4a-e492c7682e78",
                 "scriptName": "【demini】D3隐藏全部前文[22]",
+                "disabled": false,
+                "runOnEdit": true,
                 "findRegex": "/[\\s\\S]*/gm",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
+                "substituteRegex": 0,
+                "minDepth": 22,
+                "maxDepth": null,
                 "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "05161855-2e36-44cc-8463-fa12f5197a03",
+                "scriptName": "【demini】自动推算时间",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "<currentTime>[\\s\\S]*?<\\/currentTime>",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "a56c8e2f-6ee0-4a8c-8809-335e64d3915c",
+                "scriptName": "【demini】D2替绝望羊隐藏正则",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<air>[\\s\\S]*?</air>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "1c37e81d-3cc2-4bf8-8803-32654fd40efa",
+                "scriptName": "【demini】D3前绝望羊补牢正则",
+                "findRegex": "/<air>[\\s\\S]*?</air>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
                 "promptOnly": true,
                 "runOnEdit": true,
                 "substituteRegex": 0,
-                "minDepth": 22,
+                "minDepth": null,
                 "maxDepth": null
             }
         ],
