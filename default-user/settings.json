@@ -2991,14 +2991,14 @@
         },
         "SillyTavern-Dialogue-Colorizer": {
             "charColorSettings": {
-                "colorizeSource": "avatar_vibrant",
+                "colorizeSource": "char_color_override",
                 "staticColor": "#e18a24",
                 "colorOverrides": {
                     "林若秋.png": "#00ffff"
                 }
             },
             "personaColorSettings": {
-                "colorizeSource": "avatar_vibrant",
+                "colorizeSource": "static_color",
                 "staticColor": "#e18a24",
                 "colorOverrides": {}
             },
