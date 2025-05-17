@@ -2765,6 +2765,25 @@
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
+            },
+            {
+                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2,
+                    6
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -3527,7 +3546,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 101,
+                "lastProcessedLength": 100,
                 "userConfigured": true
             }
         },
@@ -6434,7 +6453,7 @@
                     },
                     {
                         "identifier": "e6f1cf0c-34fa-49b2-9cf6-2d0334655643",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "13b0a1c6-a8a8-4d08-995f-1acf97994ce0",
@@ -6446,39 +6465,39 @@
                     },
                     {
                         "identifier": "98ce03a3-ad98-42b7-bd7e-688c1aa28215",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "05d8ce5e-e7a2-4795-a3f7-5573d5eb311f",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "f4f82e38-7bb1-4db0-a327-dc596be1ac4d",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "24e40b18-1fc5-43be-a697-720e0840ae41",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "e5dca796-d101-457e-b313-a96f6a9be3ec",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "dd79b31a-0610-4e8b-b249-f13af24455a7",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "b753738f-40b6-412d-b51a-fb3495d30388",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "795213ab-03b4-461e-9170-69f2396ef3e5",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "618f83e6-c8b4-4683-83cc-701567620d23",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "ed033fc1-4819-45d8-9405-e4c2e2f8a878",
