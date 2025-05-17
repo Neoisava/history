@@ -2577,6 +2577,91 @@
                 "substituteRegex": 0,
                 "minDepth": 1,
                 "maxDepth": null
+            },
+            {
+                "id": "56380efd-8d46-4b38-8cc4-990f6224feee",
+                "scriptName": "【demini】D1汇总记录折叠",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<Main_Quest>(.*?)</Main_Quest>/gs",
+                "replaceString": "<details><summary>*<font color=#87CEFA>汇总记录</font>*</summary>\n> $1\n</details>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "7a15b803-650c-4e1f-877e-333ea17a610e",
+                "scriptName": "【demini】D3略五楼前汇总",
+                "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 5,
+                "maxDepth": null
+            },
+            {
+                "id": "a44fc7d6-3c9c-40fa-b4f7-dbada7914461",
+                "scriptName": "【demini】D1非插件式表格折叠",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<table>(.*?)</table>/gs",
+                "replaceString": "<details><summary>*<font color=#C0C0C0>非插件式表格<font>*</summary>\n> $1\n</details>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "986ede64-b63a-4ffb-ab1e-72ddff7837eb",
+                "scriptName": "【demini】D3隐藏全部前文[22]",
+                "findRegex": "/[\\s\\S]*/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 22,
+                "maxDepth": null
+            },
+            {
+                "id": "233f7b3c-325d-4fe3-a413-48a3a04d28c7",
+                "scriptName": "【demini】自动推算时间",
+                "findRegex": "<currentTime>[\\s\\S]*?<\\/currentTime>",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
