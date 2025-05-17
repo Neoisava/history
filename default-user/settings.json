@@ -2529,91 +2529,6 @@
                 "promptOnly": true
             },
             {
-                "id": "6cb11d64-4b6e-4b4d-a37a-4cd3c2215d00",
-                "scriptName": "【demini】D1添加用户输入TAG",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "^([\\s\\S]*)$",
-                "replaceString": "<user_input>\n$1\n</user_input>",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": 1,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "cf51f569-23c1-4799-ad03-a0be942e7e72",
-                "scriptName": "【demini】D2缔改去除多余内容",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<content>|</content>|```end|<done>|`<done>`|/[\\s\\S]*<\\/think>/g|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(.*?<think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "623040b8-88be-4a12-9f48-ebd136c21cb6",
-                "scriptName": "【demini】D3前端去除多余",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "055dc50a-791e-4938-9894-c700813a6c88",
-                "scriptName": "【demini】D4隐藏前文用户消息",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "^([\\s\\S]*)$",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "substituteRegex": 0,
-                "minDepth": 1,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "46f84303-060e-4290-8a89-e51066225bcd",
-                "scriptName": "【demini】D1汇总记录折叠",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<Main_Quest>(.*?)</Main_Quest>/gs",
-                "replaceString": "<details><summary>*<font color=#87CEFA>汇总记录</font>*</summary>\n> $1\n</details>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
                 "id": "0e04faa5-1e3d-4538-835d-8ab75ad5e1e1",
                 "scriptName": "【demini】D3略五楼前汇总",
                 "disabled": false,
@@ -3527,7 +3442,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 1,
                 "userConfigured": true
             }
         },
@@ -6750,7 +6665,7 @@
                     },
                     {
                         "identifier": "d6179cb5-fe5b-43e0-b327-c945b5d0c4bd",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "1e405b9d-6c0c-472e-abcc-dfae58bc84be",
@@ -6758,7 +6673,7 @@
                     },
                     {
                         "identifier": "046501f1-6394-44a4-aa55-2d6326e20cb9",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "4f664a61-c7c1-4ae8-be0d-b3fd8c407ee0",
@@ -6778,15 +6693,15 @@
                     },
                     {
                         "identifier": "c7a0c690-db4f-4c91-bff3-ca8259d2e58e",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "c38aa062-5c9a-4c02-ad7b-c5a9802caa56",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "8dcdbbef-35d9-408a-83d5-980d3ffa0d4a",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "27d6c1e9-38c4-4df8-95b2-5551e283c3d3",
@@ -6883,7 +6798,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "gemini-1.5-flash",
+        "custom_model": "gemini-2.5-pro-preview-03-25",
         "custom_url": "https://api.skyi.cc/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
