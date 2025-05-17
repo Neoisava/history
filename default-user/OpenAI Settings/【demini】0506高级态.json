@@ -21,7 +21,7 @@
     "custom_include_body": "",
     "custom_exclude_body": "",
     "custom_include_headers": "",
-    "custom_prompt_post_processing": "strict",
+    "custom_prompt_post_processing": "merge",
     "google_model": "gemini-2.0-pro-exp-02-05",
     "temperature": 1.2,
     "frequency_penalty": 0,
