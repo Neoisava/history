@@ -2747,25 +2747,6 @@
                 "substituteRegex": 0,
                 "minDepth": null,
                 "maxDepth": null
-            },
-            {
-                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2,
-                    6
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": false,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -2984,10 +2965,10 @@
         "variables": {
             "global": {
                 "content": "{继续剧情}",
-                "LAST_RECEIVE_TOKENS": 8,
-                "LAST_RECEIVE_CHARS": 12,
-                "LAST_SEND_TOKENS": 223812,
-                "LAST_SEND_CHARS": 364311
+                "LAST_RECEIVE_TOKENS": 49857,
+                "LAST_RECEIVE_CHARS": 122815,
+                "LAST_SEND_TOKENS": 238303,
+                "LAST_SEND_CHARS": 385445
             }
         },
         "attachments": [],
@@ -3528,12 +3509,12 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 106,
+                "lastProcessedLength": 107,
                 "userConfigured": true
             }
         },
         "EjsTemplate": {
-            "enabled": true,
+            "enabled": false,
             "generate_enabled": true,
             "generate_loader_enabled": true,
             "render_enabled": true,
