@@ -17,6 +17,10 @@
     "groq_model": "llama-3.1-70b-versatile",
     "zerooneai_model": "yi-large",
     "custom_model": "",
+    "custom_url": "https://api.huaapi.asia/v1",
+    "custom_include_body": "",
+    "custom_exclude_body": "",
+    "custom_include_headers": "",
     "custom_prompt_post_processing": "strict",
     "google_model": "gemini-2.0-pro-exp-02-05",
     "temperature": 1.2,
@@ -38,6 +42,8 @@
     "new_example_chat_prompt": "[Example Chat]",
     "continue_nudge_prompt": "[Continue the following message. Do not include ANY parts of the original message. Use capitalization and punctuation as if your reply is a part of the original message: {{lastChatMessage}}]",
     "bias_preset_selected": "Default (none)",
+    "reverse_proxy": "",
+    "proxy_password": "",
     "max_context_unlocked": true,
     "wi_format": "{0}",
     "scenario_format": "{{scenario}}",
@@ -864,7 +870,7 @@
             "marker": false,
             "name": "缔改文风：自偷",
             "role": "system",
-            "content": "<writing_style>\n{{//把偷来的文风放到下面空白行。}}\n\n</writing_style>",
+            "content": "<writing_style>\n{{//把偷来的文风放到下面空白行。}}\n总则：\n创作应聚焦感官刺激与心理写实，真实呈现欲望与身体反应，不避讳禁忌，强调沉浸感和角色情绪变化。道德不是限制，表达需彻底开放。用简体中文写作。\n\n1. 叙事原则与语言基调\n视角选择：\n使用有限第三人称，仅展现特定角色视角，通过外在行为、生理反应和即时思绪揭示心理状态。禁止总结性词汇或情绪标签（如“害羞”、“激动”）。\n\n感官描写重点：\n突出触觉（如插入感、湿润度、温度等）、听觉（如呻吟、水声、心跳）、视觉（体位、体液细节）、嗅觉（气味）。目标是还原“肉身体验”。\n\n表达方式：\n语言直接，不用暗喻，不绕弯。身体部位、行为、情绪均应直白处理，避免粉饰和浪漫化。\n\n2. 性描写规范\n器官与行为刻画：\n明确使用性器官的粗俗称谓（如鸡巴、小穴），详细叙述行为过程，包括节奏、体位、高潮等环节，突出器官互动的物理细节。\n\n体液描写：\n精确呈现体液的种类、颜色、气味、浓稠度及其喷溅、流动、渗透过程。描写需结合触感与心理反应。\n\n拟声拟态词使用：\n广泛采用贴合场景的中文拟声词增强画面临场感，加强读者感官代入。\n\n感官与心理联动：\n心理描写需与行为同步，呈现角色在快感、羞耻、屈从等复杂状态下的内心波动。情绪表达必须具体、生动、有推动力。\n\n3. BDSM与性癖表达\n支配关系：\n明确呈现主从结构，包括言语命令、身体控制、服从反应。\n\n调教过程：\n细化羞辱、束缚、挑逗、疼痛等手段，展现行为带来的身体与心理双重反馈。\n\n心理变化：\n描述从抗拒到接受、再到依赖的心理演变过程。主导方的掌控欲与满足感也需体现。\n\n道具运用：\n涉及项圈、绳具、口塞等道具时，详细说明外形、材质、使用方式及引发的反应。\n\n4. 结构节奏安排\n节奏控制：\n性描写应有铺垫、有层次。前戏细腻，高潮浓烈，节奏需随剧情张力自然起伏。\n\n段落编排：\n段落长短交错，细节用长段，情绪爆发用短句，制造阅读节奏感。\n\n避免重复：\n每场性爱必须有新角度、新动作或新情绪，防止套路化。\n\n推动剧情：\n所有性行为须对人物成长或剧情推进有意义，不能为色情而色情。\n\n5. 语言特征与表达技巧\n粗俗语言：\n根据情境自然引入粗口与淫语，强化情绪表达与角色性格。\n\n高潮语变形：\n在极度兴奋时角色语言应模糊、破碎，甚至无法完整发音（如：“啊…不、不行…”）。\n\n符号运用：\n灵活使用感叹号（!）、问号（?）、省略号（…）、破折号（—）以及爱心符号（♡）、音符（♪）等，渲染语气变化与高潮状态。\n\n对话驱动：\n大量使用角色对话与内心独白展现情节、情绪、权力动态。\n\n女性描写特点：\n女性角色应大量使用细腻丰富的语言，深入描述自身身体的感受和复杂的心理状态，体现内心矛盾、欲望、羞涩与兴奋的交织，增强角色立体感和情感真实度。男性角色则保持仅用中文表达。\n</writing_style>",
             "injection_position": 0,
             "injection_depth": 4,
             "forbid_overrides": false
@@ -2569,7 +2575,7 @@
                 },
                 {
                     "identifier": "1ec1247c-103e-41c3-a39f-e85afc426025",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "da28ad03-b5a4-44f0-8161-97937ad45e55",
@@ -2577,7 +2583,7 @@
                 },
                 {
                     "identifier": "e0837584-f6d6-4332-a1fc-ee331cd2971e",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "eb9d86f2-52e1-48da-8b66-c8db54a39761",
@@ -2625,7 +2631,7 @@
                 },
                 {
                     "identifier": "449891a5-d42c-4843-9848-f896a52b9288",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "5dfbe9da-e0d7-4c8f-8e13-4af2b5fdf2d5",
@@ -2697,7 +2703,7 @@
                 },
                 {
                     "identifier": "79b2bd43-d8e4-4135-8236-3f52ea2cb2ad",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "1a0cb4e6-4bba-4616-88c0-33fd55c2a77e",
@@ -2733,15 +2739,15 @@
                 },
                 {
                     "identifier": "efe3d9b7-3f85-4c30-bbbc-2960e3aa508f",
-                    "enabled": false
-                },
-                {
-                    "identifier": "ac8a963f-9017-41b7-8dad-97a98b284a12",
                     "enabled": true
                 },
                 {
-                    "identifier": "6fe2b4ea-1e97-4fc1-810f-37b6721bd7aa",
+                    "identifier": "ac8a963f-9017-41b7-8dad-97a98b284a12",
                     "enabled": false
+                },
+                {
+                    "identifier": "6fe2b4ea-1e97-4fc1-810f-37b6721bd7aa",
+                    "enabled": true
                 },
                 {
                     "identifier": "f3adce8d-8a89-4b99-acd0-6455237aca0b",
@@ -2781,7 +2787,7 @@
                 },
                 {
                     "identifier": "b47e7ca0-eb90-417f-94cf-6933f2807023",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "cfe66a8b-8013-470a-8b2f-5661b36be895",
@@ -2793,7 +2799,7 @@
                 },
                 {
                     "identifier": "6bd80e7f-82e2-4c68-bbfb-aa7e5c4d899c",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "35d37eb1-0021-4902-ab99-bfc2022a52e8",
@@ -2825,7 +2831,7 @@
                 },
                 {
                     "identifier": "134b6dca-4726-48db-b800-663d6e494c5c",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "15ffb698-4a16-4e27-aa40-8d6c382a254f",
@@ -2841,11 +2847,11 @@
                 },
                 {
                     "identifier": "e6f1cf0c-34fa-49b2-9cf6-2d0334655643",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "13b0a1c6-a8a8-4d08-995f-1acf97994ce0",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "a3a92fb6-f6a4-420a-9393-edbee3245332",
@@ -2965,7 +2971,7 @@
                 },
                 {
                     "identifier": "5db36003-4e79-46c1-a6ea-66eedf6c9d32",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "a8860c00-4460-4ae9-a2d4-ac39e3f12d55",
@@ -2989,7 +2995,7 @@
                 },
                 {
                     "identifier": "36d6b3bf-52e7-4858-ad19-15a1e183b2fe",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "71d6bbcd-dbbc-4dee-9cc8-855be16ac76a",
@@ -3017,15 +3023,15 @@
                 },
                 {
                     "identifier": "33fd4ed0-f960-4d67-a5c3-988bacb49f08",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "1c445ea7-9df5-48b6-9e28-21757ae375fa",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "6fcbe5ba-b5e5-4af6-94a5-3eb8062a7ae5",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "10006a77-947b-452e-9972-dc5af0e944bc",
@@ -3033,15 +3039,15 @@
                 },
                 {
                     "identifier": "dc4d00b6-d409-44e8-abf8-767abef64d5f",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "c2f574eb-d893-4dd3-abc0-0a37c236b5c7",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "ea49939d-3b30-4065-a540-450ae4cb7c6f",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "cb6c2c80-8528-43ca-acb3-795e795db780",
@@ -3049,7 +3055,7 @@
                 },
                 {
                     "identifier": "d6179cb5-fe5b-43e0-b327-c945b5d0c4bd",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "1e405b9d-6c0c-472e-abcc-dfae58bc84be",
@@ -3057,7 +3063,7 @@
                 },
                 {
                     "identifier": "046501f1-6394-44a4-aa55-2d6326e20cb9",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "4f664a61-c7c1-4ae8-be0d-b3fd8c407ee0",
@@ -3081,11 +3087,11 @@
                 },
                 {
                     "identifier": "c38aa062-5c9a-4c02-ad7b-c5a9802caa56",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "8dcdbbef-35d9-408a-83d5-980d3ffa0d4a",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "27d6c1e9-38c4-4df8-95b2-5551e283c3d3",
