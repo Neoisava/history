@@ -2991,18 +2991,18 @@
         },
         "SillyTavern-Dialogue-Colorizer": {
             "charColorSettings": {
-                "colorizeSource": "char_color_override",
+                "colorizeSource": "avatar_vibrant",
                 "staticColor": "#9fb2fe",
                 "colorOverrides": {
                     "林若秋.png": "#00ffff"
                 }
             },
             "personaColorSettings": {
-                "colorizeSource": "static_color",
+                "colorizeSource": "avatar_vibrant",
                 "staticColor": "#e18a24",
                 "colorOverrides": {}
             },
-            "colorizeTargets": "2",
+            "colorizeTargets": "3",
             "chatBubbleLightness": 0.15
         },
         "quickReplyV2": {
@@ -3509,7 +3509,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 20,
+                "lastProcessedLength": 21,
                 "userConfigured": true
             }
         },
