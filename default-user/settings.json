@@ -2765,25 +2765,6 @@
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
-            },
-            {
-                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2,
-                    6
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": false,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -3004,8 +2985,8 @@
                 "content": "{继续剧情}",
                 "LAST_RECEIVE_TOKENS": 35,
                 "LAST_RECEIVE_CHARS": 20,
-                "LAST_SEND_TOKENS": 269281,
-                "LAST_SEND_CHARS": 425588
+                "LAST_SEND_TOKENS": 323836,
+                "LAST_SEND_CHARS": 328188
             }
         },
         "attachments": [],
@@ -3546,7 +3527,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 100,
+                "lastProcessedLength": 101,
                 "userConfigured": true
             }
         },
@@ -6795,7 +6776,7 @@
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
         "custom_model": "",
-        "custom_url": "https://api.huaapi.asia/v1",
+        "custom_url": "https://api.skyi.cc//v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
         "custom_include_headers": "",
