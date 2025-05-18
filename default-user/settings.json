@@ -2581,7 +2581,7 @@
             {
                 "id": "56380efd-8d46-4b38-8cc4-990f6224feee",
                 "scriptName": "【demini】D1汇总记录折叠",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<Main_Quest>(.*?)</Main_Quest>/gs",
                 "replaceString": "<details><summary>*<font color=#87CEFA>汇总记录</font>*</summary>\n> $1\n</details>",
@@ -2598,7 +2598,7 @@
             {
                 "id": "d21e2d5d-f339-443e-afdb-0191991369f7",
                 "scriptName": "【demini】D2汇总记录隐藏",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
                 "replaceString": "",
@@ -2632,7 +2632,7 @@
             {
                 "id": "a44fc7d6-3c9c-40fa-b4f7-dbada7914461",
                 "scriptName": "【demini】D1非插件式表格折叠",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<table>(.*?)</table>/gs",
                 "replaceString": "<details><summary>*<font color=#C0C0C0>非插件式表格<font>*</summary>\n> $1\n</details>",
@@ -2645,6 +2645,23 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": false
+            },
+            {
+                "id": "6c62e0c8-8724-4a37-a879-a5d0712ae9e2",
+                "scriptName": "【demini】D2非插件式表格隐藏",
+                "findRegex": "/<table>[\\s\\S]*?</table>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             },
             {
                 "id": "986ede64-b63a-4ffb-ab1e-72ddff7837eb",
@@ -2760,23 +2777,6 @@
                 "disabled": false,
                 "markdownOnly": false,
                 "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "6c62e0c8-8724-4a37-a879-a5d0712ae9e2",
-                "scriptName": "【demini】D2非插件式表格隐藏",
-                "findRegex": "/<table>[\\s\\S]*?</table>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
                 "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
