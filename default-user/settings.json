@@ -2596,6 +2596,23 @@
                 "promptOnly": false
             },
             {
+                "id": "d21e2d5d-f339-443e-afdb-0191991369f7",
+                "scriptName": "【demini】D2汇总记录隐藏",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
                 "id": "7a15b803-650c-4e1f-877e-333ea17a610e",
                 "scriptName": "【demini】D3略五楼前汇总",
                 "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
