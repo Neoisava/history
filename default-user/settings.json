@@ -22,7 +22,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": null,
+    "active_character": "修仙之路2.0.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2780,6 +2780,40 @@
                 "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "3b2c3d9c-f4f8-4dfa-96bc-1a8e7422b668",
+                "scriptName": "【DepressIon】剧情推进1 v2.5",
+                "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
+                "replaceString": "<details>\n<summary>剧情</summary>\n$1\n</details>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "0720c25b-8389-447a-bfaa-579f16d9dc08",
+                "scriptName": "【DepressIon】剧情推进2 v2.5",
+                "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 12,
                 "maxDepth": null
             }
         ],
