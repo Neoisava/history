@@ -2781,6 +2781,40 @@
                 "substituteRegex": 0,
                 "minDepth": null,
                 "maxDepth": null
+            },
+            {
+                "id": "3b2c3d9c-f4f8-4dfa-96bc-1a8e7422b668",
+                "scriptName": "【DepressIon】剧情推进1 v2.5",
+                "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
+                "replaceString": "<details>\n<summary>剧情</summary>\n$1\n</details>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": true,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "0720c25b-8389-447a-bfaa-579f16d9dc08",
+                "scriptName": "【DepressIon】剧情推进2 v2.5",
+                "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": true,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 12,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -3026,7 +3060,7 @@
         "SillyTavern-Dialogue-Colorizer": {
             "charColorSettings": {
                 "colorizeSource": "avatar_vibrant",
-                "staticColor": "#9fb2fe",
+                "staticColor": "#000000",
                 "colorOverrides": {
                     "林若秋.png": "#00ffff"
                 }
@@ -3543,7 +3577,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 130,
+                "lastProcessedLength": 213,
                 "userConfigured": true
             }
         },
