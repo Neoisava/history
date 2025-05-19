@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "true",
-        "NavOpened": "false",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -2781,6 +2781,40 @@
                 "substituteRegex": 0,
                 "minDepth": null,
                 "maxDepth": null
+            },
+            {
+                "id": "3b2c3d9c-f4f8-4dfa-96bc-1a8e7422b668",
+                "scriptName": "【DepressIon】剧情推进1 v2.5",
+                "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
+                "replaceString": "<details>\n<summary>剧情</summary>\n$1\n</details>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "0720c25b-8389-447a-bfaa-579f16d9dc08",
+                "scriptName": "【DepressIon】剧情推进2 v2.5",
+                "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 12,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -3026,7 +3060,7 @@
         "SillyTavern-Dialogue-Colorizer": {
             "charColorSettings": {
                 "colorizeSource": "avatar_vibrant",
-                "staticColor": "#9fb2fe",
+                "staticColor": "#000000",
                 "colorOverrides": {
                     "林若秋.png": "#00ffff"
                 }
@@ -6346,7 +6380,7 @@
                     },
                     {
                         "identifier": "a2e11435-ef82-46ce-9555-712f8ead6da0",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "b6b4ff93-8511-4ddc-b866-9e3bca759b84",
@@ -6358,7 +6392,7 @@
                     },
                     {
                         "identifier": "ea203a4a-c3ac-442b-bbb4-107f1b223ca0",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "1a254cbe-ed65-44a1-8c19-8d5a0a800838",
@@ -6382,7 +6416,7 @@
                     },
                     {
                         "identifier": "a7bb731c-9a2c-4c24-b92a-1dd2f0ec96c2",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "c63c82f5-a4d8-4bb2-acd3-a462cf4f9063",
@@ -6806,7 +6840,7 @@
                     },
                     {
                         "identifier": "e6f1cf0c-34fa-49b2-9cf6-2d0334655643",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "13b0a1c6-a8a8-4d08-995f-1acf97994ce0",
