@@ -2801,57 +2801,6 @@
                 "promptOnly": true
             },
             {
-                "id": "66ec6871-f09b-4dee-9cb6-28cb054dd287",
-                "scriptName": "【Dreammini】Kemini去除所有用户消息",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "^([\\s\\S]*)$",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "substituteRegex": 0,
-                "minDepth": 1,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "fd0a73a9-a8db-4eea-bbd3-12a6de8d7da3",
-                "scriptName": "【Dreammini】Kemini添加user输入tag",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "^([\\s\\S]*)$",
-                "replaceString": "<user_input>\n$1\n</user_input>",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": 1,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "c7fd39a1-4b89-444f-8e4e-169ade330fc4",
-                "scriptName": "【Dreammini】Kemini通用去除多余内容",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<dream>|</dream>|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
                 "id": "30fe58de-e6a4-45d8-b06e-a442744ed110",
                 "scriptName": "【Dreammini】DIE[推进(缩起)]",
                 "disabled": false,
@@ -2920,6 +2869,57 @@
                 "promptOnly": true
             },
             {
+                "id": "66ec6871-f09b-4dee-9cb6-28cb054dd287",
+                "scriptName": "【Dreammini】Kemini去除所有用户消息",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "^([\\s\\S]*)$",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "substituteRegex": 0,
+                "minDepth": 1,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "fd0a73a9-a8db-4eea-bbd3-12a6de8d7da3",
+                "scriptName": "【Dreammini】Kemini添加user输入tag",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "^([\\s\\S]*)$",
+                "replaceString": "<user_input>\n$1\n</user_input>",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": 1,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "c7fd39a1-4b89-444f-8e4e-169ade330fc4",
+                "scriptName": "【Dreammini】Kemini通用去除多余内容",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<dream>|</dream>|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
                 "id": "603909c4-e6e7-49fc-a7f8-f5dbb5db5fc2",
                 "scriptName": "昆仑图片",
                 "disabled": true,
@@ -2934,6 +2934,278 @@
                 "minDepth": null,
                 "maxDepth": null,
                 "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "980138d9-2862-4416-a255-11a27e0f5c61",
+                "scriptName": "替换-机械地",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/机械地/g",
+                "replaceString": "{{random:单调地::主动地:}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "0fe21048-f97a-4810-aec1-8b82a6d94483",
+                "scriptName": "替换-极度",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(极度)/g",
+                "replaceString": "比较",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "650eda21-801c-4076-8a23-2525f7d03d30",
+                "scriptName": "替换-狡黠",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(狡黠)/g",
+                "replaceString": "{{random:古灵精怪::调皮::促狭}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "57a46185-87e2-4efe-beb9-63da379bba2f",
+                "scriptName": "替换-痉挛",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(痉挛)/g",
+                "replaceString": "{{random:抽搐::强力收缩::肌肉紧张}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "2e175766-8ce5-4d58-b283-a90142370c80",
+                "scriptName": "替换-喟叹",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(喟叹)/g",
+                "replaceString": "{{random:叹息::感叹}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "9eda0e87-783a-4c03-82ef-2824f5c132c2",
+                "scriptName": "替换-勐",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/(勐)/g",
+                "replaceString": "猛",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "c0939e49-57f2-4a94-8e03-95591b0faa14",
+                "scriptName": "替换-灭顶",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(灭顶般|灭顶)/g",
+                "replaceString": "{{random:强烈::无边::难以言喻}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "1ac37bf1-631a-493a-bfa7-9b6efcf1916a",
+                "scriptName": "替换-扭曲",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/扭曲/g",
+                "replaceString": "{{random:别样::不凡::独特::特殊}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "9dd9a5b7-3ba4-4f05-ba95-4fb15597c348",
+                "scriptName": "替换-全然",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(全然)/g",
+                "replaceString": "{{random:纯粹::完全::全身心}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "05f2762e-1f62-4356-85b2-41ef3eb09296",
+                "scriptName": "替换-肉刃",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(肉刃|肉茎)/g",
+                "replaceString": "{{random:肉柱::阳具::阴茎::鸡巴::巨物::肉刃::龙根}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "66ab07ac-bfe9-4c1d-8095-e99b31bea29b",
+                "scriptName": "替换-生理系",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(生理性|生理上|生理层面)/g",
+                "replaceString": "{{random:本能的::源自身体的}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "d4ab199c-c101-4f3b-8d31-a95561bde29c",
+                "scriptName": "替换-四肢百骸",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(四肢百骸)/g",
+                "replaceString": "{{random:全身::周身::从头到脚::整个身体}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "225c3c92-7f8a-48c4-a9fd-cb3bda420ca1",
+                "scriptName": "替换-餍足",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(餍足)/g",
+                "replaceString": "满足",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "da7be401-7cd7-4dde-a12b-cd27c852e46e",
+                "scriptName": "替换-野兽系",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(小兽|幼兽)/g",
+                "replaceString": "{{random:像小猫::率直::本能而急切::像小狗::纯粹凭着感觉::懵懵懂懂}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "8e56e28d-543f-49b0-9369-04eb0f367065",
+                "scriptName": "替换-一丝",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(一丝丝|一丝(?!不苟))/g",
+                "replaceString": "{{random:些微::些许::一点::一丝}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "25aee51d-7112-4946-bcce-fda83ee75f56",
+                "scriptName": "替换-甬道",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(甬道)/g",
+                "replaceString": "穴道",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
                 "promptOnly": true
             },
             {
@@ -3019,6 +3291,414 @@
                 "minDepth": null,
                 "maxDepth": null,
                 "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "c4857206-aea6-4d61-ae16-16aba74f73e6",
+                "scriptName": "删除-不容系",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/不容[\\u4e00-\\u9fff]{2}(的|地|得)/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "2bab0d0b-7d88-4911-9dce-ae413cfa11a2",
+                "scriptName": "删除-弓起系（可选）",
+                "disabled": true,
+                "runOnEdit": false,
+                "findRegex": "(?:(?:弓起|像弓).*?(?:,|，)?.*?身.*?[,.，。？！!?])|(?:身.*?(?:,|，).*?弓起.*?[,.，。？！!?])|(?:.*?像.*?弓起.*?[,.，。？！!?])|像一张被拉满的弓.*?[,.，。？！!?]",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "e9679496-3686-4680-af5c-fc55c6c4b3f4",
+                "scriptName": "删除-勾起（可选）",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/勾起/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "7a92b108-b273-49ce-92fc-91390c272faa",
+                "scriptName": "删除-恨不得塞进去系",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(恨不|想要).*?塞进去[,\\.，。]?/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "89b81922-0629-4b12-b891-9a138734e437",
+                "scriptName": "删除-他只是系(可选)",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(他|她)没有.*?，?只是.*?[。，！？.,!?]?/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "021e005c-a493-4c7c-9a3a-cbf429bf68bf",
+                "scriptName": "删除-投石系",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(?:[,，]\\s*)?(?:(?:(?:如同|仿佛|犹如|像)\\s*(?:[^.。！？]*?))|(?:[^.。！？,，]*?))(?:(?:(?:掉落|掉入|掉进|抛入|抛进|抛落|落入|投进|投入|丢进|丢入|放入|投下)(?:[^,，.。！？]*?)(?:(?:风|冰块|石头|石子|巨石|炸弹)\\s*)?(?:[^,，.。！？]*?)[,，](?:[^,，.。！？]*?)涟漪(?:[)）])?)|(?:(?:(?:风|冰块|石头|石子|巨石|炸弹)\\s*)?(?:[^,，.。！？]*?)(?:掉落|掉入|掉进|抛入|抛进|抛落|落入|投进|投入|丢进|丢入|放入|投下)(?:[^,，.。！？]*?)[,，.。！？](?:[^,，.。！？]*?)涟漪(?:[)）])?)|(?:(?:(?:风|冰块|石头|石子|巨石|炸弹)\\s*)(?:[^,，.。！？]*?)(?:掉落|掉入|掉进|抛入|抛进|抛落|落入|投进|投入|丢进|丢入|放入|投下)(?:[^,，.。！？]*?)[,，.。！？])|(?:(?:掉落|掉入|掉进|抛入|抛进|抛落|落入|投进|投入|丢进|丢入|放入|投下)(?:[^,，.。！？]*?)(?:风|冰块|石头|石子|巨石|炸弹)(?:[)）])?)|(?:(?:掉落|掉入|掉进|抛入|抛进|抛落|落入|投进|投入|丢进|丢入|放入|投下)(?:[^,，.。！？]*?)[,，.。！？](?:[^,，.。！？]*?)涟漪(?:[)）])?))/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "b3380363-409d-4a12-acae-9d9fce6b9ce9",
+                "scriptName": "删除-z删除总则V11",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/不似人声(的|地|得)?/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "c79c091c-be49-4c24-a4da-8488a097ec3c",
+                "scriptName": "消除-♡（可选）",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/~?♡/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "37f6c7e2-5430-4783-a0a1-9bb22bc56f75",
+                "scriptName": "消除-成语系",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(初生牛犊不怕虎|心猿意马|饿虎扑食)/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "91490aab-faa4-4e20-998b-0f2586e98853",
+                "scriptName": "消除-淬毒刺针系",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/((如同|好像|犹如|仿佛)?\\s*淬(了)?(毒|冰)的(刺)?针(，般)?)/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "67a6c815-2f5f-43ac-a842-ba4998a17196",
+                "scriptName": "消除-害怕|恐惧",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(害怕|恐惧)/g",
+                "replaceString": "{{random:轻微无措::短暂无措}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "db4e71ce-df62-4fa8-bd66-2cad921778a1",
+                "scriptName": "消除-僵住",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/僵住/g",
+                "replaceString": "{{random:一时愣住::一时恍惚::没马上反应过来}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "60ecac18-07d5-4f9d-a67a-22e5afe7dc8f",
+                "scriptName": "消除-警觉",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(警觉|警觉)/g",
+                "replaceString": "{{random:留心::稍作留意::注意}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "cb2f0191-00a4-447c-a42d-56ca9a8e41aa",
+                "scriptName": "消除-绝望|崩溃",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/绝望|崩溃/g",
+                "replaceString": "{{random:短暂迷茫::心烦意乱::一时不知道如何是好}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "3d1d8eef-d131-45dc-ba16-47e94471b7b5",
+                "scriptName": "消除-空白",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(大脑一片空白)/g",
+                "replaceString": "{{random:脑子短暂顿了一下::大脑短暂茫然::没马上反应过来::一时语塞}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "52bfdb7b-95a0-42b0-acab-b462fb3a5c8f",
+                "scriptName": "消除-空洞",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(空洞)/g",
+                "replaceString": "短暂茫然",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "07529ef9-f2c8-4d70-82e7-441669983cec",
+                "scriptName": "消除-麻木",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/麻木/g",
+                "replaceString": "{{random:一时不知所措::一时不知如何是好}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "dd6182e2-8d84-4fda-b26f-de5f1f9ebc4d",
+                "scriptName": "消除-屈辱",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/屈辱/g",
+                "replaceString": "{{random:有点难堪::屈尊}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "1d579230-abec-48fc-86a8-e854e17ad4d0",
+                "scriptName": "消除-深沉",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/深沉/g",
+                "replaceString": "{{random:若有所思::陷入思索::从容}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "17edb399-9da0-424e-8c1b-18c9744df63a",
+                "scriptName": "消除-甜腻|蜜糖（可选）",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(蜜糖|甜腻)/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "2f7cb12b-21f5-42ca-a5a9-cc019fd6f21d",
+                "scriptName": "消除-吞噬系（可选）",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(吞噬|吞食)/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "7da9eeba-9060-402b-a956-9b174a2ddc1e",
+                "scriptName": "消除-羞耻",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(羞耻|羞耻感)/g",
+                "replaceString": "{{random:略微羞涩::不好意思}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "910dc545-d244-49fe-813b-e5cbcbbba761",
+                "scriptName": "消除-震惊|惧怕|恐慌|惊恐",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/((震惊|惧怕|恐慌|惊恐)(万分)?)/g",
+                "replaceString": "{{random:略微惊讶::突感意外::错愕::心头一紧::吓了一跳}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "6d4499e8-9953-4f6c-9fc3-3d8e06448139",
+                "scriptName": "消除-z基础总则v11",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/([，、, ]?\\s*(绝望|麻木|勾起|一丝|封闭|僵住|恐惧|恐慌|惧怕|震惊|羞耻|屈辱|病态|崩溃|四肢百骸|cốgắng|subtly|yet|滚烫的岩浆|生理的|生理性|生理层面|生理本能|压抑|不似人声|机械地|野兽|小兽|幼兽|毒蛇|恐慌|藤蔓|缠绕|肉刃|尖锐|冰冷|难以置信|不容置疑|不容置喙|泛白|他知道|她知道|濒临失控|意味深长|邪魅|邪笑|吞吃入腹|海啸|闪着|闪烁|低吼|唇舌|研磨|骨血|弓起|弓着|骨血之中|躁候|极致)(地|丝|的|得)?\\*{0,})/g",
+                "replaceString": "  ",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
                 "promptOnly": true
             }
         ],
