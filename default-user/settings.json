@@ -22,7 +22,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": null,
+    "active_character": "修仙之路2.0.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2582,7 +2582,7 @@
             {
                 "id": "56380efd-8d46-4b38-8cc4-990f6224feee",
                 "scriptName": "【demini】D1汇总记录折叠",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<Main_Quest>(.*?)</Main_Quest>/gs",
                 "replaceString": "<details><summary>*<font color=#87CEFA>汇总记录</font>*</summary>\n> $1\n</details>",
@@ -2667,7 +2667,7 @@
             {
                 "id": "5d7c8d9a-6727-4eb1-a950-b132693a5477",
                 "scriptName": "【demini】D2替绝望羊隐藏正则",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<air>[\\s\\S]*?</air>/g",
                 "replaceString": "",
@@ -2718,7 +2718,7 @@
             {
                 "id": "adec40bb-b485-4cb1-8238-ce32e89023be",
                 "scriptName": "【demini】D3前绝望羊补牢正则",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<air>[\\s\\S]*?</air>/g",
                 "replaceString": "",
@@ -2735,7 +2735,7 @@
             {
                 "id": "986ede64-b63a-4ffb-ab1e-72ddff7837eb",
                 "scriptName": "【demini】D3隐藏全部前文[22]",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/[\\s\\S]*/gm",
                 "replaceString": "",
@@ -2801,23 +2801,6 @@
                 "promptOnly": true
             },
             {
-                "id": "66ec6871-f09b-4dee-9cb6-28cb054dd287",
-                "scriptName": "【Dreammini】Kemini去除所有用户消息",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "^([\\s\\S]*)$",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "substituteRegex": 0,
-                "minDepth": 1,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
                 "id": "fd0a73a9-a8db-4eea-bbd3-12a6de8d7da3",
                 "scriptName": "【Dreammini】Kemini添加user输入tag",
                 "disabled": false,
@@ -2832,6 +2815,23 @@
                 "minDepth": null,
                 "maxDepth": 1,
                 "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "66ec6871-f09b-4dee-9cb6-28cb054dd287",
+                "scriptName": "【Dreammini】Kemini去除所有用户消息",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "^([\\s\\S]*)$",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "substituteRegex": 0,
+                "minDepth": 1,
+                "maxDepth": null,
+                "markdownOnly": false,
                 "promptOnly": true
             },
             {
@@ -3766,7 +3766,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 1,
+                "lastProcessedLength": 220,
                 "userConfigured": true
             }
         },
