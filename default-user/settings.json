@@ -22,7 +22,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": null,
+    "active_character": "修仙之路2.0.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -33,7 +33,8 @@
     "world_info_settings": {
         "world_info": {
             "globalSelect": [
-                "【基本】绿帽用"
+                "【基本】绿帽用",
+                "dreammini角色推进世界书色情DLC"
             ],
             "charLore": [
                 {
@@ -2494,11 +2495,45 @@
         "dice": {},
         "regex": [
             {
-                "id": "603909c4-e6e7-49fc-a7f8-f5dbb5db5fc2",
-                "scriptName": "昆仑图片",
+                "id": "4c397c72-97e9-4933-8ab3-290b29676141",
+                "scriptName": "【专防】省略号增殖",
                 "disabled": true,
                 "runOnEdit": true,
-                "findRegex": "/<image>([\\s\\S]*?)</image>/g",
+                "findRegex": "/(最终|然后|地|的|以及|有些|和|似乎|已经|是|去|或许|更加|那个|一[\\u4e00-\\u9fa5])(……|…)/g",
+                "replaceString": "$1",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "14ae9d34-c744-48f3-8178-5766e5a948c9",
+                "scriptName": "【专防】省略号增殖2",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/(最终|然后|地|的|以及|有些|和|似乎|已经|是|去|或许|更加|那个|一[\\u4e00-\\u9fa5])(……|…|······)(?!\\s)/g",
+                "replaceString": "$1",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "341af848-e71f-4883-b3c7-5c1034f09d4f",
+                "scriptName": "【专防】星号增殖正则",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/\\*\\*/g",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
@@ -2509,6 +2544,57 @@
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
+            },
+            {
+                "id": "233f7b3c-325d-4fe3-a413-48a3a04d28c7",
+                "scriptName": "【demini】自动推算时间",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "<currentTime>[\\s\\S]*?<\\/currentTime>",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "a44fc7d6-3c9c-40fa-b4f7-dbada7914461",
+                "scriptName": "【demini】D1非插件式表格折叠",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/<table>(.*?)</table>/gs",
+                "replaceString": "<details><summary>*<font color=#C0C0C0>非插件式表格<font>*</summary>\n> $1\n</details>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "56380efd-8d46-4b38-8cc4-990f6224feee",
+                "scriptName": "【demini】D1汇总记录折叠",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/<Main_Quest>(.*?)</Main_Quest>/gs",
+                "replaceString": "<details><summary>*<font color=#87CEFA>汇总记录</font>*</summary>\n> $1\n</details>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
             },
             {
                 "id": "2caf1d6b-d447-4eba-a812-e100c8f3efe2",
@@ -2530,61 +2616,27 @@
             {
                 "id": "defa7859-968f-4596-8ae4-60a0073e94f0",
                 "scriptName": "【demini】D2缔改去除多余内容",
+                "disabled": true,
+                "runOnEdit": true,
                 "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<content>|</content>|```end|<done>|`<done>`|/[\\s\\S]*<\\/think>/g|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(.*?<think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": true,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "a8474a7d-f8bf-4bc7-a1d3-779899b03d50",
-                "scriptName": "【demini】D3前端去除多余",
-                "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": true,
+                "maxDepth": null,
                 "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
+                "promptOnly": true
             },
             {
-                "id": "9be2dedd-c48c-43e6-b008-f8105a17d40e",
-                "scriptName": "【demini】D4隐藏前文用户消息",
-                "findRegex": "^([\\s\\S]*)$",
+                "id": "6c62e0c8-8724-4a37-a879-a5d0712ae9e2",
+                "scriptName": "【demini】D2非插件式表格隐藏",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/<table>[\\s\\S]*?</table>/g",
                 "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "disabled": true,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": 1,
-                "maxDepth": null
-            },
-            {
-                "id": "56380efd-8d46-4b38-8cc4-990f6224feee",
-                "scriptName": "【demini】D1汇总记录折叠",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<Main_Quest>(.*?)</Main_Quest>/gs",
-                "replaceString": "<details><summary>*<font color=#87CEFA>汇总记录</font>*</summary>\n> $1\n</details>",
                 "trimStrings": [],
                 "placement": [
                     2
@@ -2613,91 +2665,6 @@
                 "promptOnly": false
             },
             {
-                "id": "7a15b803-650c-4e1f-877e-333ea17a610e",
-                "scriptName": "【demini】D3略五楼前汇总",
-                "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": true,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": 5,
-                "maxDepth": null
-            },
-            {
-                "id": "a44fc7d6-3c9c-40fa-b4f7-dbada7914461",
-                "scriptName": "【demini】D1非插件式表格折叠",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<table>(.*?)</table>/gs",
-                "replaceString": "<details><summary>*<font color=#C0C0C0>非插件式表格<font>*</summary>\n> $1\n</details>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
-                "id": "6c62e0c8-8724-4a37-a879-a5d0712ae9e2",
-                "scriptName": "【demini】D2非插件式表格隐藏",
-                "findRegex": "/<table>[\\s\\S]*?</table>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": true,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "986ede64-b63a-4ffb-ab1e-72ddff7837eb",
-                "scriptName": "【demini】D3隐藏全部前文[22]",
-                "findRegex": "/[\\s\\S]*/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": true,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": 22,
-                "maxDepth": null
-            },
-            {
-                "id": "233f7b3c-325d-4fe3-a413-48a3a04d28c7",
-                "scriptName": "【demini】自动推算时间",
-                "findRegex": "<currentTime>[\\s\\S]*?<\\/currentTime>",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": true,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
                 "id": "5d7c8d9a-6727-4eb1-a950-b132693a5477",
                 "scriptName": "【demini】D2替绝望羊隐藏正则",
                 "disabled": true,
@@ -2715,225 +2682,1092 @@
                 "promptOnly": false
             },
             {
+                "id": "7a15b803-650c-4e1f-877e-333ea17a610e",
+                "scriptName": "【demini】D3略五楼前汇总",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 5,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "a8474a7d-f8bf-4bc7-a1d3-779899b03d50",
+                "scriptName": "【demini】D3前端去除多余",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
                 "id": "adec40bb-b485-4cb1-8238-ce32e89023be",
                 "scriptName": "【demini】D3前绝望羊补牢正则",
+                "disabled": true,
+                "runOnEdit": true,
                 "findRegex": "/<air>[\\s\\S]*?</air>/g",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
                 "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
+                "promptOnly": true
             },
             {
-                "id": "4c397c72-97e9-4933-8ab3-290b29676141",
-                "scriptName": "【专防】省略号增殖",
-                "findRegex": "/(最终|然后|地|的|以及|有些|和|似乎|已经|是|去|或许|更加|那个|一[\\u4e00-\\u9fa5])(……|…)/g",
-                "replaceString": "$1",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
+                "id": "986ede64-b63a-4ffb-ab1e-72ddff7837eb",
+                "scriptName": "【demini】D3隐藏全部前文[22]",
                 "disabled": true,
-                "markdownOnly": true,
-                "promptOnly": true,
                 "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "14ae9d34-c744-48f3-8178-5766e5a948c9",
-                "scriptName": "【专防】省略号增殖2",
-                "findRegex": "/(最终|然后|地|的|以及|有些|和|似乎|已经|是|去|或许|更加|那个|一[\\u4e00-\\u9fa5])(……|…|······)(?!\\s)/g",
-                "replaceString": "$1",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": true,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "341af848-e71f-4883-b3c7-5c1034f09d4f",
-                "scriptName": "【专防】星号增殖正则",
-                "findRegex": "/\\*\\*/g",
+                "findRegex": "/[\\s\\S]*/gm",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": true,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
+                "minDepth": 22,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "9be2dedd-c48c-43e6-b008-f8105a17d40e",
+                "scriptName": "【demini】D4隐藏前文用户消息",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "^([\\s\\S]*)$",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "substituteRegex": 0,
+                "minDepth": 1,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
             },
             {
                 "id": "3b2c3d9c-f4f8-4dfa-96bc-1a8e7422b668",
                 "scriptName": "【DepressIon】剧情推进1 v2.5",
+                "disabled": true,
+                "runOnEdit": true,
                 "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
                 "replaceString": "<details>\n<summary>剧情</summary>\n$1\n</details>",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": true,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
             },
             {
                 "id": "0720c25b-8389-447a-bfaa-579f16d9dc08",
                 "scriptName": "【DepressIon】剧情推进2 v2.5",
+                "disabled": true,
+                "runOnEdit": true,
                 "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": true,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": 12,
-                "maxDepth": null
-            },
-            {
-                "id": "66ec6871-f09b-4dee-9cb6-28cb054dd287",
-                "scriptName": "【Dreammini】Kemini去除所有用户消息",
-                "findRegex": "^([\\s\\S]*)$",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "disabled": false,
+                "maxDepth": null,
                 "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": 1,
-                "maxDepth": null
-            },
-            {
-                "id": "fd0a73a9-a8db-4eea-bbd3-12a6de8d7da3",
-                "scriptName": "【Dreammini】Kemini添加user输入tag",
-                "findRegex": "^([\\s\\S]*)$",
-                "replaceString": "<user_input>\n$1\n</user_input>",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": 1
-            },
-            {
-                "id": "c7fd39a1-4b89-444f-8e4e-169ade330fc4",
-                "scriptName": "【Dreammini】Kemini通用去除多余内容",
-                "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<dream>|</dream>|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
+                "promptOnly": true
             },
             {
                 "id": "30fe58de-e6a4-45d8-b06e-a442744ed110",
                 "scriptName": "【Dreammini】DIE[推进(缩起)]",
+                "disabled": false,
+                "runOnEdit": true,
                 "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
                 "replaceString": "<details>\n<summary>剧情</summary>\n$1\n</details>",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
             },
             {
                 "id": "ef3264c8-c1b6-47c4-b172-bfb47b5868ad",
                 "scriptName": "【Dreammini】DIE[推进(移除)]",
+                "disabled": false,
+                "runOnEdit": true,
                 "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": 4,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
             },
             {
                 "id": "f4b00b43-4b25-48d7-a496-ba1824c9bd87",
                 "scriptName": "【Dreammini】DIE小总结(格式)",
+                "disabled": false,
+                "runOnEdit": true,
                 "findRegex": "/(?<!<details>\\s*)<summary>(((?!<summary>)[\\s\\S])*?)<\\/summary>/g",
                 "replaceString": "<details>\n<summary>摘要</summary>\n$1\n</details>",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
             },
             {
                 "id": "c6fd6a1a-5e40-42db-8b7f-b0225d0622c6",
                 "scriptName": "【Dreammini】DIE小总结(移除正文)",
+                "disabled": false,
+                "runOnEdit": true,
                 "findRegex": "/[\\s\\S]*?(?<!<details>\\s*)<summary>([\\s\\S]*)<\\/summary>[\\s\\S]*/g",
                 "replaceString": "<summary>\n$1\n</summary>",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": 7,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "66ec6871-f09b-4dee-9cb6-28cb054dd287",
+                "scriptName": "【Dreammini】Kemini去除所有用户消息",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "^([\\s\\S]*)$",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "substituteRegex": 0,
+                "minDepth": 1,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "fd0a73a9-a8db-4eea-bbd3-12a6de8d7da3",
+                "scriptName": "【Dreammini】Kemini添加user输入tag",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "^([\\s\\S]*)$",
+                "replaceString": "<user_input>\n$1\n</user_input>",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": 1,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "c7fd39a1-4b89-444f-8e4e-169ade330fc4",
+                "scriptName": "【Dreammini】Kemini通用去除多余内容",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<dream>|</dream>|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "603909c4-e6e7-49fc-a7f8-f5dbb5db5fc2",
+                "scriptName": "昆仑图片",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/<image>([\\s\\S]*?)</image>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "db77fde6-a36c-4284-b1a1-96cb7f990f99",
+                "scriptName": "替换-不易察觉",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(不易察觉)/g",
+                "replaceString": "{{random:难以察觉::细微::隐约::难以觉察}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "2866c841-708f-45fe-b946-6b45b0c2328a",
+                "scriptName": "替换-封闭",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/封闭/g",
+                "replaceString": "{{random:略有犹豫::若有所思::短暂沉默}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "4d19fe72-9fc1-41e1-b63a-73e3042014ea",
+                "scriptName": "替换-吼叫类",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(低吼)/g",
+                "replaceString": "{{random:闷哼::低喘::喉音::粗重的呼吸::低吼}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "5ca29c80-34fd-4e38-9917-93a4fbc4a484",
+                "scriptName": "替换-花园系",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(花芯)|(花穴)|(花户)|(神秘的幽谷)|(秘密花园)|(神秘幽谷)|(神秘花瓣)|(神秘花园)|(神秘蜜穴)|(神秘缝隙)|(私密花园)/g",
+                "replaceString": "{{random:私处::花穴::蜜穴}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "980138d9-2862-4416-a255-11a27e0f5c61",
+                "scriptName": "替换-机械地",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/机械地/g",
+                "replaceString": "{{random:单调地::主动地:}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "0fe21048-f97a-4810-aec1-8b82a6d94483",
+                "scriptName": "替换-极度",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(极度)/g",
+                "replaceString": "比较",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "650eda21-801c-4076-8a23-2525f7d03d30",
+                "scriptName": "替换-狡黠",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(狡黠)/g",
+                "replaceString": "{{random:古灵精怪::调皮::促狭}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "57a46185-87e2-4efe-beb9-63da379bba2f",
+                "scriptName": "替换-痉挛",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(痉挛)/g",
+                "replaceString": "{{random:抽搐::强力收缩::肌肉紧张}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "2e175766-8ce5-4d58-b283-a90142370c80",
+                "scriptName": "替换-喟叹",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(喟叹)/g",
+                "replaceString": "{{random:叹息::感叹}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "9eda0e87-783a-4c03-82ef-2824f5c132c2",
+                "scriptName": "替换-勐",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/(勐)/g",
+                "replaceString": "猛",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "c0939e49-57f2-4a94-8e03-95591b0faa14",
+                "scriptName": "替换-灭顶",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(灭顶般|灭顶)/g",
+                "replaceString": "{{random:强烈::无边::难以言喻}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "1ac37bf1-631a-493a-bfa7-9b6efcf1916a",
+                "scriptName": "替换-扭曲",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/扭曲/g",
+                "replaceString": "{{random:别样::不凡::独特::特殊}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "9dd9a5b7-3ba4-4f05-ba95-4fb15597c348",
+                "scriptName": "替换-全然",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(全然)/g",
+                "replaceString": "{{random:纯粹::完全::全身心}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "05f2762e-1f62-4356-85b2-41ef3eb09296",
+                "scriptName": "替换-肉刃",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(肉刃|肉茎)/g",
+                "replaceString": "{{random:肉柱::阳具::阴茎::鸡巴::巨物::肉刃::龙根}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "66ab07ac-bfe9-4c1d-8095-e99b31bea29b",
+                "scriptName": "替换-生理系",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(生理性|生理上|生理层面)/g",
+                "replaceString": "{{random:本能的::源自身体的}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "d4ab199c-c101-4f3b-8d31-a95561bde29c",
+                "scriptName": "替换-四肢百骸",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(四肢百骸)/g",
+                "replaceString": "{{random:全身::周身::从头到脚::整个身体}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "225c3c92-7f8a-48c4-a9fd-cb3bda420ca1",
+                "scriptName": "替换-餍足",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(餍足)/g",
+                "replaceString": "满足",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "da7be401-7cd7-4dde-a12b-cd27c852e46e",
+                "scriptName": "替换-野兽系",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(小兽|幼兽)/g",
+                "replaceString": "{{random:像小猫::率直::本能而急切::像小狗::纯粹凭着感觉::懵懵懂懂}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "8e56e28d-543f-49b0-9369-04eb0f367065",
+                "scriptName": "替换-一丝",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(一丝丝|一丝(?!不苟))/g",
+                "replaceString": "{{random:些微::些许::一点::一丝}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "25aee51d-7112-4946-bcce-fda83ee75f56",
+                "scriptName": "替换-甬道",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(甬道)/g",
+                "replaceString": "穴道",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "0288920c-1e2c-4efa-9230-4c459b0bc836",
+                "scriptName": "替换-cốgắng",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(\\s*(cốgắng|cố gắng)(\\s*(?:\\(.*?\\)|（.*?）))?\\s*)/g",
+                "replaceString": "{{random:努力地::尽力地::力图}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "13a28bc4-f797-4046-9547-b6524bc6fb3e",
+                "scriptName": "替换-strangely",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/\\s*(strangely)\\s*/g",
+                "replaceString": "出奇地",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "86c2d833-dcbe-4606-830e-45f9f2918ee9",
+                "scriptName": "替换-subtly",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/\\s*(subtly)\\s*/g",
+                "replaceString": "{{random:微妙的::精妙的}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "ec22f125-91c2-4d51-ba8c-8e25bc3651f7",
+                "scriptName": "替换-vén",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/\\s*(vén)\\s*/g",
+                "replaceString": "揭",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "afea73ee-9fc4-48c2-ad25-9dbe15e2861e",
+                "scriptName": "替换-влажной",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/\\s*(влажной|влажный)\\s*/g",
+                "replaceString": "{{random:湿润::泛滥::泥泞}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "c4857206-aea6-4d61-ae16-16aba74f73e6",
+                "scriptName": "删除-不容系",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/不容[\\u4e00-\\u9fff]{2}(的|地|得)/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "2bab0d0b-7d88-4911-9dce-ae413cfa11a2",
+                "scriptName": "删除-弓起系（可选）",
+                "disabled": true,
+                "runOnEdit": false,
+                "findRegex": "(?:(?:弓起|像弓).*?(?:,|，)?.*?身.*?[,.，。？！!?])|(?:身.*?(?:,|，).*?弓起.*?[,.，。？！!?])|(?:.*?像.*?弓起.*?[,.，。？！!?])|像一张被拉满的弓.*?[,.，。？！!?]",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "e9679496-3686-4680-af5c-fc55c6c4b3f4",
+                "scriptName": "删除-勾起（可选）",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/勾起/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "7a92b108-b273-49ce-92fc-91390c272faa",
+                "scriptName": "删除-恨不得塞进去系",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(恨不|想要).*?塞进去[,\\.，。]?/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "89b81922-0629-4b12-b891-9a138734e437",
+                "scriptName": "删除-他只是系(可选)",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(他|她)没有.*?，?只是.*?[。，！？.,!?]?/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "021e005c-a493-4c7c-9a3a-cbf429bf68bf",
+                "scriptName": "删除-投石系",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(?:[,，]\\s*)?(?:(?:(?:如同|仿佛|犹如|像)\\s*(?:[^.。！？]*?))|(?:[^.。！？,，]*?))(?:(?:(?:掉落|掉入|掉进|抛入|抛进|抛落|落入|投进|投入|丢进|丢入|放入|投下)(?:[^,，.。！？]*?)(?:(?:风|冰块|石头|石子|巨石|炸弹)\\s*)?(?:[^,，.。！？]*?)[,，](?:[^,，.。！？]*?)涟漪(?:[)）])?)|(?:(?:(?:风|冰块|石头|石子|巨石|炸弹)\\s*)?(?:[^,，.。！？]*?)(?:掉落|掉入|掉进|抛入|抛进|抛落|落入|投进|投入|丢进|丢入|放入|投下)(?:[^,，.。！？]*?)[,，.。！？](?:[^,，.。！？]*?)涟漪(?:[)）])?)|(?:(?:(?:风|冰块|石头|石子|巨石|炸弹)\\s*)(?:[^,，.。！？]*?)(?:掉落|掉入|掉进|抛入|抛进|抛落|落入|投进|投入|丢进|丢入|放入|投下)(?:[^,，.。！？]*?)[,，.。！？])|(?:(?:掉落|掉入|掉进|抛入|抛进|抛落|落入|投进|投入|丢进|丢入|放入|投下)(?:[^,，.。！？]*?)(?:风|冰块|石头|石子|巨石|炸弹)(?:[)）])?)|(?:(?:掉落|掉入|掉进|抛入|抛进|抛落|落入|投进|投入|丢进|丢入|放入|投下)(?:[^,，.。！？]*?)[,，.。！？](?:[^,，.。！？]*?)涟漪(?:[)）])?))/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "b3380363-409d-4a12-acae-9d9fce6b9ce9",
+                "scriptName": "删除-z删除总则V11",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/不似人声(的|地|得)?/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "c79c091c-be49-4c24-a4da-8488a097ec3c",
+                "scriptName": "消除-♡（可选）",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/~?♡/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "37f6c7e2-5430-4783-a0a1-9bb22bc56f75",
+                "scriptName": "消除-成语系",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(初生牛犊不怕虎|心猿意马|饿虎扑食)/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "91490aab-faa4-4e20-998b-0f2586e98853",
+                "scriptName": "消除-淬毒刺针系",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/((如同|好像|犹如|仿佛)?\\s*淬(了)?(毒|冰)的(刺)?针(，般)?)/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "67a6c815-2f5f-43ac-a842-ba4998a17196",
+                "scriptName": "消除-害怕|恐惧",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(害怕|恐惧)/g",
+                "replaceString": "{{random:轻微无措::短暂无措}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "db4e71ce-df62-4fa8-bd66-2cad921778a1",
+                "scriptName": "消除-僵住",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/僵住/g",
+                "replaceString": "{{random:一时愣住::一时恍惚::没马上反应过来}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "60ecac18-07d5-4f9d-a67a-22e5afe7dc8f",
+                "scriptName": "消除-警觉",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(警觉|警觉)/g",
+                "replaceString": "{{random:留心::稍作留意::注意}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "cb2f0191-00a4-447c-a42d-56ca9a8e41aa",
+                "scriptName": "消除-绝望|崩溃",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/绝望|崩溃/g",
+                "replaceString": "{{random:短暂迷茫::心烦意乱::一时不知道如何是好}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "3d1d8eef-d131-45dc-ba16-47e94471b7b5",
+                "scriptName": "消除-空白",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(大脑一片空白)/g",
+                "replaceString": "{{random:脑子短暂顿了一下::大脑短暂茫然::没马上反应过来::一时语塞}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "52bfdb7b-95a0-42b0-acab-b462fb3a5c8f",
+                "scriptName": "消除-空洞",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(空洞)/g",
+                "replaceString": "短暂茫然",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "07529ef9-f2c8-4d70-82e7-441669983cec",
+                "scriptName": "消除-麻木",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/麻木/g",
+                "replaceString": "{{random:一时不知所措::一时不知如何是好}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "dd6182e2-8d84-4fda-b26f-de5f1f9ebc4d",
+                "scriptName": "消除-屈辱",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/屈辱/g",
+                "replaceString": "{{random:有点难堪::屈尊}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "1d579230-abec-48fc-86a8-e854e17ad4d0",
+                "scriptName": "消除-深沉",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/深沉/g",
+                "replaceString": "{{random:若有所思::陷入思索::从容}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "17edb399-9da0-424e-8c1b-18c9744df63a",
+                "scriptName": "消除-甜腻|蜜糖（可选）",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(蜜糖|甜腻)/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "2f7cb12b-21f5-42ca-a5a9-cc019fd6f21d",
+                "scriptName": "消除-吞噬系（可选）",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(吞噬|吞食)/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "7da9eeba-9060-402b-a956-9b174a2ddc1e",
+                "scriptName": "消除-羞耻",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(羞耻|羞耻感)/g",
+                "replaceString": "{{random:略微羞涩::不好意思}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "910dc545-d244-49fe-813b-e5cbcbbba761",
+                "scriptName": "消除-震惊|惧怕|恐慌|惊恐",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/((震惊|惧怕|恐慌|惊恐)(万分)?)/g",
+                "replaceString": "{{random:略微惊讶::突感意外::错愕::心头一紧::吓了一跳}}",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "6d4499e8-9953-4f6c-9fc3-3d8e06448139",
+                "scriptName": "消除-z基础总则v11",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/([，、, ]?\\s*(绝望|麻木|勾起|一丝|封闭|僵住|恐惧|恐慌|惧怕|震惊|羞耻|屈辱|病态|崩溃|四肢百骸|cốgắng|subtly|yet|滚烫的岩浆|生理的|生理性|生理层面|生理本能|压抑|不似人声|机械地|野兽|小兽|幼兽|毒蛇|恐慌|藤蔓|缠绕|肉刃|尖锐|冰冷|难以置信|不容置疑|不容置喙|泛白|他知道|她知道|濒临失控|意味深长|邪魅|邪笑|吞吃入腹|海啸|闪着|闪烁|低吼|唇舌|研磨|骨血|弓起|弓着|骨血之中|躁候|极致)(地|丝|的|得)?\\*{0,})/g",
+                "replaceString": "  ",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
             }
         ],
         "character_allowed_regex": [
@@ -3562,14 +4396,6 @@
                         "enabled": true
                     },
                     {
-                        "id": "452335e2-ac3e-47cf-aa4b-fe89cb5e1edf",
-                        "name": "脚本-世界书自定义真实排序(性能优化)",
-                        "content": "async function modifyLorebookEntries() {\n  try {\n    // 获取当前选择的世界书\n    const lorebook = $('#world_editor_select', window.parent.document).find(':selected').text();\n\n    if (lorebook == '--- 选择以编辑 ---') {\n      return { success: false, error: '请选择世界书' };\n    }\n    \n    // 获取当前世界书的元素\n    const entries = await getLorebookEntries(lorebook);\n\n    // 克隆原始entries用于比较\n    const originalEntries = [...entries];\n\n    // 预定义位置映射常量\n    const NORMAL_POSITIONS = {\n      'before_character_definition': 1,    // 角色定义之前\n        'after_character_definition': 2,   // 角色定义之后\n        'before_example_messages': 3,      // 示例消息之前\n        'after_example_messages': 4,       // 示例消息之后\n        'before_author_note': 5,           // 作者注释之前\n        'after_author_note': 6             // 作者注释之后\n    };\n    \n    // 深度相同时，排序为助手，用户，系统\n    const DEPTH_POSITIONS = {\n      'at_depth_as_assistant': 1, // @D🤖\n      'at_depth_as_user': 2,      // @D👤\n      'at_depth_as_system': 3     // @D⚙\n    };\n    \n    // 预计算排序键值\n    const sortKeys = new Map();\n    \n    for (let i = 0; i < entries.length; i++) {\n      const entry = entries[i];\n      const enabled = entry.enabled ? 0 : 1;\n      const position = entry.position;\n      \n      // 计算位置类型和排名 题外话：挺早就知道几个深度位置排序有问题，但一直没人反馈。说明基本上只用到@D⚙，再加上也懒得弄就一直没改\n      let posType, posRank;\n      if (position in NORMAL_POSITIONS) {\n        posType = 0; // 正常位置\n        posRank = NORMAL_POSITIONS[position];\n      } else if (position in DEPTH_POSITIONS) {\n        posType = 1; // 深度位置\n        posRank = DEPTH_POSITIONS[position];\n      } else {\n        posType = 2; // 其他位置，基本不存在\n        posRank = 999;\n      }\n      \n      // 深度值（仅深度位置使用）\n      const depth = posType === 1 ? -(entry.depth || 0) : 0;\n      \n      // 存储排序键值\n      sortKeys.set(entry.uid, [\n        enabled,    // 启用状态\n        posType,    // 位置类型（0=正常，1=深度，2=其他）\n        depth,      // 深度值（仅深度位置有效）\n        posRank,    // 位置排名\n        entry.order || 0, // 顺序\n        entry.uid   // UID\n      ]);\n    }\n    \n    // 创建优化的排序函数\n    entries.sort((a, b) => {\n      const aKeys = sortKeys.get(a.uid);\n      const bKeys = sortKeys.get(b.uid);\n      \n      // 依次比较每个排序键\n      for (let i = 0; i < 6; i++) {\n        const diff = aKeys[i] - bKeys[i];\n        if (diff !== 0) return diff;\n      }\n      \n      return 0; // 不应该达到这里，因为uid总是不同的\n    });\n    \n    // 检查是否需要更新\n    const originalIndexMap = new Map();\n    originalEntries.forEach(entry => {\n      originalIndexMap.set(entry.uid, entry.display_index);\n    });\n    \n    // 需不需要更新\n    let needsUpdate = false;\n    const modifiedEntries = [];\n    \n    for (let i = 0; i < entries.length; i++) {\n      const entryUid = entries[i].uid; // 只取对应UID\n      if (originalIndexMap.get(entryUid) !== i) {\n        needsUpdate = true;\n        // 只添加需要更换位置的元素\n        modifiedEntries.push({\n          uid: entryUid,\n          display_index: i\n        });\n      }\n    }\n    \n    if (needsUpdate) {\n      await setLorebookEntries(lorebook, modifiedEntries);\n      console.log('世界书已根据实际顺序排序，自定义排序为真实排序');\n      return { success: true, message: '自定义真实排序完成' };\n    }\n    \n    return { success: true, message: '已真实排序' };\n  } catch (error) {\n    console.error('排序当前世界书出错:', error);\n    return { success: false, error: error.message };\n  }\n}\neventOn(tavern_events.WORLDINFO_UPDATED, modifyLorebookEntries);",
-                        "info": "作者：JoeZhangYN，依赖酒馆原生的自定义排序字段实现对世界书的顺序重排",
-                        "buttons": [],
-                        "enabled": false
-                    },
-                    {
                         "id": "标签化",
                         "name": "标签化: 随世界书、预设或链接配置自动开关正则、提示词条目",
                         "content": "function extract_tags_from(name){return[...name.matchAll(/【(.*?)】/g)].map((match=>match[1].toLowerCase()))}function extract_control_tags(){return function sortUnique(array){return _.sortedUniq(_.sortBy(array))}([...extract_tags_from($(\"#settings_preset_openai\").find(\":selected\").text()),...$(\"#world_info\").find(\":selected\").toArray().map((node=>$(node).text())).flatMap(extract_tags_from),...extract_tags_from($(\"#connection_profiles\").find(\":checked\").text())])}function check_should_enable(title,tags){return[...title.matchAll(/【(.*?)】/g)].map((match=>match[1])).some((tag_list=>tag_list.split(\"&\").map((tag=>tag.toLowerCase())).every((expected=>tags.includes(expected)))))}const toggle_tags_throttled=_.throttle((async function toggle_tags(){const tags=extract_control_tags();!async function toggle_tagged_preset_prompts(tags){const prompt_identifiers_to_be_toggled=$(\"#completion_prompt_manager\").find(\"a[title]\").filter((function(){return null!==$(this).text().match(/【.*?】/)})).toArray().map((prompt_anchor=>{const $anchor=$(prompt_anchor),$li=$anchor.closest(\"li\");return{identifier:$li.attr(\"data-pm-identifier\"),should_toggle:check_should_enable($anchor.attr(\"title\"),tags)!==$li.find(\".prompt-manager-toggle-action\").hasClass(\"fa-toggle-on\")}})).filter((({should_toggle:should_toggle})=>should_toggle)).map((({identifier:identifier})=>`identifier=${identifier}`));0!==prompt_identifiers_to_be_toggled.length&&await triggerSlash(`/setpromptentry ${prompt_identifiers_to_be_toggled.join(\" \")}`)}(tags),async function toggle_tagged_regexes(tags){const regexes=getTavernRegexes({scope:\"all\"}),new_regexes=structuredClone(regexes);new_regexes.filter((regex=>null!==regex.script_name.match(/【.*?】/))).forEach((regex=>{regex.enabled=check_should_enable(regex.script_name,tags)})),_.isEqual(regexes,new_regexes)||await replaceTavernRegexes(new_regexes,{scope:\"all\"})}(tags),async function toggle_tagged_scripts(tags){const scripts_to_be_toggled=$(\"#script-settings-content\").find(\".script-item\").filter((function(){return null!==$(this).find(\".script-item-name\").text().match(/【.*?】/)})).toArray().map((script=>{const $div=$(script),should_enabled=check_should_enable($div.find(\".script-item-name\").text(),tags),is_enabled=$div.find(\".toggle-script\").prop(\"checked\");return{button:$div.find(\".script-toggle-\"+(is_enabled?\"on\":\"off\")),should_toggle:should_enabled!==is_enabled}})).filter((({should_toggle:should_toggle})=>should_toggle)).map((({button:button})=>button));for(const script of scripts_to_be_toggled)script.trigger(\"click\")}(tags)}),1e3,{trailing:!1});$((()=>{toggle_tags_throttled(),eventMakeFirst(tavern_events.SETTINGS_UPDATED,toggle_tags_throttled)}));\n",
@@ -3583,21 +4409,13 @@
                         "content": "$((()=>{eventOn(tavern_events.CHAT_CHANGED,(async()=>{const characters=SillyTavern.characters,characterId=SillyTavern.characterId;if(void 0===characterId)return;const avatar=characters[characterId].avatar,extension_settings=SillyTavern.extensionSettings.character_allowed_regex;extension_settings.includes(avatar)||(extension_settings.push(avatar),await TavernHelper.builtin.saveSettings(),await SillyTavern.saveChat(),await SillyTavern.reloadCurrentChat())}))}));",
                         "info": "# 自动开启角色卡局部正则\n\n**作者:** 青空莉想做舞台少女的狗\n**版本:** 2025/04/21\n**源文件:** [点此跳转](https://gitgud.io/StageDog/tavern_resource/-/tree/main/酒馆助手/自动开启角色卡局部正则/源文件?ref_type=heads)\n",
                         "buttons": [],
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "id": "预设防误触",
                         "name": "预设防误触",
                         "content": "function lock_inputs(enable) {\n    $('#range_block_openai :input').prop('disabled', enable);\n    $('#openai_settings > div:first-child :input').prop('disabled', enable);\n    $('#stream_toggle').prop('disabled', false);\n    $('#openai_show_thoughts').prop('disabled', false);\n}\n$(() => {\n    lock_inputs(true);\n});\n$(window).on('unload', () => lock_inputs(false));\nexport {};\n",
                         "info": "# 预设防误触\n\n**作者:** 青空莉想做舞台少女的狗\n**版本:** 2025/04/29\n**源文件:** [点此跳转](https://gitgud.io/StageDog/tavern_resource/-/tree/main/酒馆助手/预设防误触/源文件?ref_type=heads)\n**说明:** 启用后将锁定预设除了 '流式传输'、'请求思维链' 和 '具体条目' 以外的选项, 不能通过界面来修改\n",
-                        "buttons": [],
-                        "enabled": true
-                    },
-                    {
-                        "id": "dfe3c00c-58f6-49e4-a8c5-e2e54f83c625",
-                        "name": "更好的聊天记录管理",
-                        "content": "$((()=>{setTimeout((()=>{const t=$(\".options-content\").find(\"hr\").last();if(!$(\"#option_chat_history_manager\").length){const o=$(\"<a>\",{id:\"option_chat_history_manager\",class:\"interactable\",tabindex:0}).append($(\"<i>\",{class:\"fa-lg fa-solid fa-history\"})).append($(\"<span>\").text(\"聊天记录管理\"));function r(t){t.empty();try{const o=getLastMessageId();let r=getChatMessages(`0-${o}`);if(r=r.slice().reverse(),0===r.length)return void t.append('<div style=\"color:#888;text-align:center;\">暂无聊天记录</div>');r.forEach((o=>{const r=$(\"<div>\",{class:\"info-block\",css:{\"border-radius\":\"8px\",margin:\"6px 0\",padding:\"6px 8px\",background:\"rgba(163, 201, 241, 0.2)\",\"border-left\":\"4px solid var(--SmartThemeQuoteColor)\",\"box-shadow\":\"0 1px 4px 0 var(--black30a)\",\"font-size\":\"0.95em\",transition:\"background 0.2s\",\"word-break\":\"break-all\",\"white-space\":\"nowrap\",overflow:\"hidden\",\"text-overflow\":\"ellipsis\",cursor:\"pointer\",display:\"flex\",\"align-items\":\"center\",gap:\"4px\"},title:`[${o.role}] ${o.name}: ${o.message}`,mouseenter:function(){$(this).css(\"background\",\"rgba(225, 138, 36, 0.12)\")},mouseleave:function(){$(this).css(\"background\",\"rgba(163, 201, 241, 0.2)\")}}),n=$(\"<input>\",{type:\"checkbox\",class:\"chat-history-checkbox\",css:{margin:\"0 8px 0 0\",flex:\"0 0 auto\"},\"data-message-id\":o.message_id});r.append(n),r.append(`<span style='color:var(--SmartThemeEmColor);margin-right:8px;'>#${o.message_id}</span>`),r.append(`<span style='color:var(--SmartThemeEmColor);'>[${o.role}]</span> <b style='color:var(--SmartThemeQuoteColor);'>${_.escape(o.name)}</b>: <span>${_.escape(o.message)}</span>`),t.append(r)}))}catch(o){t.append('<div style=\"color:red;\">加载消息失败</div>')}}o.on(\"click\",(()=>{$(\"#options\").hide();let t,o=$(\"#chat_history_manager_modal\");if(o.length)return o.show(),t=$(\"#chat_history_message_list\"),void r(t);o=$(\"<div>\",{id:\"chat_history_manager_modal\",class:\"popup\",css:{position:\"absolute\",top:\"0\",left:\"0\",right:\"0\",bottom:\"0\",margin:\"auto\",display:\"flex\",\"flex-direction\":\"column\",\"align-items\":\"stretch\",\"justify-content\":\"flex-start\",\"z-index\":9999,padding:\"0\",background:\"var(--SmartThemeBlurTintColor)\",\"backdrop-filter\":\"blur(var(--SmartThemeBlurStrength))\",\"box-shadow\":\"0 0 14px var(--black70a)\",border:\"1px solid var(--SmartThemeBorderColor)\",\"border-radius\":\"10px\",width:\"var(--sheldWidth)\",\"max-height\":\"90vh\",\"min-height\":\"250px\",overflow:\"hidden\",color:\"var(--SmartThemeBodyColor)\",\"font-family\":\"var(--mainFontFamily)\",\"font-size\":\"var(--mainFontSize)\"}}),o.append(\"<style>@media screen and (max-width: 999px){#chat_history_manager_modal{position:fixed !important;top:0 !important;left:0 !important;right:0 !important;bottom:0 !important;transform:none !important;margin:0 !important;width:100% !important;max-width:none !important;height:100vh !important;max-height:100vh !important;min-height:100vh !important;overflow-y:auto !important;border-radius:0 !important;border-left:none !important;border-right:none !important;border-top:none !important;border-bottom:none !important;box-shadow:none !important}#chat_history_manager_modal .floating_panel_close{top:10px !important;right:10px !important;z-index:10005 !important;font-size:22px !important;background:rgba(0,0,0,.2) !important;border-radius:50% !important;padding:5px !important;width:32px !important;height:32px !important;display:flex !important;align-items:center !important;justify-content:center !important;opacity:.8 !important}#chat_history_manager_modal>div:first-of-type{padding-right:45px !important;justify-content:flex-start !important;flex-wrap:wrap !important;gap:5px !important}#chat_history_manager_modal>div:nth-of-type(2){padding-right:40px !important}#chat_history_manager_modal .menu_button{padding:3px 8px !important;margin:2px !important;font-size:.85em !important}#chat_history_manager_modal #chat_history_message_list{flex:1 1 auto !important;max-height:none !important;overflow-y:auto !important}.chat-history-dialog{position:fixed !important;top:40vh !important;left:50% !important;transform:translate(-50%, -50%) !important;margin:0 !important;max-height:90vh !important;overflow-y:auto !important;background:var(--SmartThemeBlurTintColor) !important;-webkit-backdrop-filter:blur(var(--SmartThemeBlurStrength)) !important;backdrop-filter:blur(var(--SmartThemeBlurStrength)) !important;border:1px solid var(--SmartThemeBorderColor) !important;border-radius:8px !important;color:var(--SmartThemeBodyColor) !important}.chat-history-dialog .popup-content{max-width:100% !important;padding:10px !important}.chat-history-dialog .popup-content h3{font-size:1.1em !important;margin:8px 0 !important}.chat-history-dialog .popup-controls{display:flex !important;flex-wrap:wrap !important;justify-content:center !important;padding:8px !important}.chat-history-dialog .popup-controls .menu_button{margin:5px 8px !important;min-width:70px !important}.chat-history-dialog .popup-input{margin:12px auto !important;display:block !important}#chat_history_insert_modal{position:fixed !important;top:40vh !important;left:50% !important;transform:translate(-50%, -50%) !important;margin:0 !important;width:90% !important;max-width:450px !important;max-height:80vh !important;padding:12px !important;overflow-y:auto !important}#chat_history_insert_modal textarea{min-height:100px !important}#chat_history_insert_modal button{padding:8px 16px !important;min-width:100px !important;margin-top:5px !important}#chat_history_delete_confirm{position:fixed !important;top:40vh !important;left:50% !important;transform:translate(-50%, -50%) !important;margin:0 !important;width:90% !important;max-width:350px !important;z-index:30000 !important}#chat_history_delete_confirm .popup-content{font-size:.95em !important}#chat_history_delete_confirm .popup-content h3{font-size:1.1em !important;margin:10px 0 !important}#chat_history_delete_confirm .popup-controls{margin-top:15px !important}#chat_history_delete_confirm .popup-controls .menu_button{min-width:80px !important;padding:8px 15px !important}#chat_history_move_confirm{position:fixed !important;top:40vh !important;left:50% !important;transform:translate(-50%, -50%) !important;margin:0 !important;width:90% !important;max-width:350px !important;z-index:30000 !important}#chat_history_move_confirm .popup-content{font-size:.95em !important}#chat_history_move_confirm .popup-content h3{font-size:1.1em !important;margin:10px 0 !important}#chat_history_move_confirm .popup-input{width:100px !important;height:36px !important;font-size:1.1em !important}#chat_history_move_confirm .popup-controls{margin-top:15px !important}#chat_history_move_confirm .popup-controls .menu_button{min-width:80px !important;padding:8px 15px !important}}.chat-history-dialog{position:fixed !important;top:50% !important;left:50% !important;transform:translate(-50%, -50%) !important;margin:0 !important;max-height:90vh !important;overflow-y:auto !important;z-index:30000 !important;background:var(--SmartThemeBlurTintColor) !important;-webkit-backdrop-filter:blur(var(--SmartThemeBlurStrength)) !important;backdrop-filter:blur(var(--SmartThemeBlurStrength)) !important;border:1px solid var(--SmartThemeBorderColor) !important;border-radius:8px !important;color:var(--SmartThemeBodyColor) !important;box-shadow:0 0 14px var(--black70a) !important}.chat-history-dialog .popup-content{padding:16px !important}.chat-history-dialog .popup-controls{padding:10px 16px 16px !important;display:flex !important;justify-content:center !important;gap:16px !important}.chat-history-dialog .popup-input{margin:16px auto !important;display:block !important}@media screen and (min-width: 1000px){#chat_history_insert_modal,#chat_history_delete_confirm,#chat_history_move_confirm{width:400px !important;max-width:400px !important;min-width:400px !important;padding:20px !important}#chat_history_insert_modal textarea{width:100% !important;min-height:120px !important;padding:8px !important}#chat_history_insert_modal select,#chat_history_insert_modal input{padding:5px 8px !important;margin-bottom:12px !important}#chat_history_delete_confirm .popup-body,#chat_history_move_confirm .popup-body{width:100% !important}#chat_history_delete_confirm .popup-content,#chat_history_move_confirm .popup-content{text-align:center !important}#chat_history_delete_confirm h3,#chat_history_move_confirm h3{font-size:16px !important;margin:10px 0 !important}.chat-history-dialog .menu_button{padding:6px 18px !important;min-width:90px !important}}</style>\");const n=$(\"<div>\",{css:{display:\"flex\",\"align-items\":\"center\",\"justify-content\":\"center\",padding:\"8px 16px 4px 16px\",\"border-bottom\":\"1px solid var(--SmartThemeBorderColor)\",background:\"none\",\"user-select\":\"none\",gap:\"8px\",position:\"relative\",\"z-index\":1,\"flex-wrap\":\"wrap\"}}),a=$(\"<button>\",{text:\"全选\",class:\"menu_button\",css:{background:\"var(--SmartThemeBlurTintColor)\",color:\"var(--SmartThemeBodyColor)\",border:\"1px solid var(--SmartThemeBorderColor)\",\"border-radius\":\"5px\",padding:\"4px 10px\",\"font-size\":\"0.9em\",cursor:\"pointer\",\"font-weight\":\"bold\",transition:\"background 0.2s\",margin:\"2px\"}});n.append(a);const i=$(\"<button>\",{text:\"反选\",class:\"menu_button\",css:{background:\"var(--SmartThemeBlurTintColor)\",color:\"var(--SmartThemeBodyColor)\",border:\"1px solid var(--SmartThemeBorderColor)\",\"border-radius\":\"5px\",padding:\"4px 10px\",\"font-size\":\"0.9em\",cursor:\"pointer\",\"font-weight\":\"bold\",transition:\"background 0.2s\",margin:\"2px\"}});n.append(i);const e=$(\"<button>\",{text:\"显示\",class:\"menu_button\",css:{background:\"var(--SmartThemeBlurTintColor)\",color:\"var(--SmartThemeBodyColor)\",border:\"1px solid var(--SmartThemeBorderColor)\",\"border-radius\":\"5px\",padding:\"4px 10px\",\"font-size\":\"0.9em\",cursor:\"pointer\",\"font-weight\":\"bold\",transition:\"background 0.2s\",margin:\"2px\"}});n.append(e);const p=$(\"<button>\",{text:\"隐藏\",class:\"menu_button\",css:{background:\"var(--SmartThemeBlurTintColor)\",color:\"var(--SmartThemeBodyColor)\",border:\"1px solid var(--SmartThemeBorderColor)\",\"border-radius\":\"5px\",padding:\"4px 10px\",\"font-size\":\"0.9em\",cursor:\"pointer\",\"font-weight\":\"bold\",transition:\"background 0.2s\",margin:\"2px\"}});n.append(p);const s=$(\"<button>\",{text:\"移动\",class:\"menu_button\",css:{background:\"var(--SmartThemeBlurTintColor)\",color:\"var(--SmartThemeBodyColor)\",border:\"1px solid var(--SmartThemeBorderColor)\",\"border-radius\":\"5px\",padding:\"4px 10px\",\"font-size\":\"0.9em\",cursor:\"pointer\",\"font-weight\":\"bold\",transition:\"background 0.2s\",margin:\"2px\"}});n.append(s);const m=$(\"<button>\",{text:\"插入\",class:\"menu_button\",css:{background:\"var(--SmartThemeBlurTintColor)\",color:\"var(--SmartThemeBodyColor)\",border:\"1px solid var(--SmartThemeBorderColor)\",\"border-radius\":\"5px\",padding:\"4px 10px\",\"font-size\":\"0.9em\",cursor:\"pointer\",\"font-weight\":\"bold\",transition:\"background 0.2s\",margin:\"2px\"}});n.append(m);const c=$(\"<button>\",{text:\"删除\",class:\"menu_button\",css:{background:\"var(--crimson70a)\",color:\"var(--SmartThemeBodyColor)\",border:\"none\",\"border-radius\":\"5px\",padding:\"4px 10px\",\"font-size\":\"0.9em\",cursor:\"pointer\",\"font-weight\":\"bold\",transition:\"background 0.2s\",margin:\"2px\"},mouseenter:function(){$(this).css(\"background\",\"var(--fullred)\")},mouseleave:function(){$(this).css(\"background\",\"var(--crimson70a)\")}});n.append(c),o.append(n);const d=$(\"<div>\",{css:{width:\"100%\",padding:\"0 16px 0 16px\",\"font-size\":\"1.2em\",\"font-weight\":\"bold\",\"letter-spacing\":\"1px\",color:\"var(--SmartThemeQuoteColor)\",background:\"none\",\"user-select\":\"none\",position:\"relative\",\"text-align\":\"center\",\"margin-top\":\"4px\",\"margin-bottom\":\"4px\"}}).text(\"聊天记录管理\");o.append(d);const l=$(\"<button>\",{html:'<i class=\"fa fa-times\"></i>',class:\"floating_panel_close\",css:{position:\"absolute\",top:\"14px\",right:\"18px\",\"font-size\":\"20px\",background:\"transparent\",border:\"none\",cursor:\"pointer\",color:\"var(--SmartThemeBodyColor)\",\"z-index\":10002,transition:\"opacity 0.2s\",opacity:.6},mouseenter:function(){$(this).css(\"opacity\",1)},mouseleave:function(){$(this).css(\"opacity\",.6)},click:()=>o.hide()});o.append(l),t=$(\"<div>\",{id:\"chat_history_message_list\",class:\"scrollableInnerFull\",css:{flex:\"1 1 auto\",padding:\"8px 12px 16px 12px\",\"overflow-y\":\"auto\",background:\"none\",\"min-height\":\"120px\",\"max-height\":\"calc(80vh - 100px)\"}}),o.append(t),r(t),$(\"body\").append(o),a.on(\"click\",(function(){const o=t.find(\".chat-history-checkbox\"),r=o.length>0&&o.filter(\":checked\").length===o.length;o.prop(\"checked\",!r)})),i.on(\"click\",(function(){t.find(\".chat-history-checkbox\").each((function(){$(this).prop(\"checked\",!$(this).prop(\"checked\"))}))})),p.on(\"click\",(async function(){const o=t.find(\".chat-history-checkbox:checked\");if(0===o.length)return void toastr.warning(\"请先选择要隐藏的消息\");const r=o.map((function(){return $(this).data(\"message-id\")})).get();if(0===r.length)return;r.sort(((t,o)=>t-o));const n=[];let a=r[0],i=r[0];for(let t=1;t<=r.length;t++)r[t]===i+1?i=r[t]:(n.push(a===i?`${a}`:`${a}-${i}`),a=i=r[t]);let e=0,p=0;for(const t of n)try{await triggerSlash(`/hide ${t}`),e++}catch(t){p++}e&&toastr.success(`已隐藏${e}段消息`),p&&toastr.error(`有${p}段消息隐藏失败`)})),e.on(\"click\",(async function(){const o=t.find(\".chat-history-checkbox:checked\");if(0===o.length)return void toastr.warning(\"请先选择要显示的消息\");const r=o.map((function(){return $(this).data(\"message-id\")})).get();if(0===r.length)return;r.sort(((t,o)=>t-o));const n=[];let a=r[0],i=r[0];for(let t=1;t<=r.length;t++)r[t]===i+1?i=r[t]:(n.push(a===i?`${a}`:`${a}-${i}`),a=i=r[t]);let e=0,p=0;for(const t of n)try{await triggerSlash(`/unhide ${t}`),e++}catch(t){p++}e&&toastr.success(`已显示${e}段消息`),p&&toastr.error(`有${p}段消息显示失败`)})),c.on(\"click\",(async function(){const o=t.find(\".chat-history-checkbox:checked\");if(0===o.length)return void toastr.warning(\"请先选择要删除的消息\");const n=o.map((function(){return $(this).data(\"message-id\")})).get();if(0===n.length)return;$(\"#chat_history_delete_confirm\").length&&$(\"#chat_history_delete_confirm\").remove();const a=$(\"<dialog>\",{id:\"chat_history_delete_confirm\",class:\"chat-history-dialog\",open:!0,css:{\"z-index\":20001,position:\"fixed\",top:.4*window.innerHeight+\"px\",left:\"50%\",transform:\"translate(-50%, -50%)\",margin:\"0\",\"max-width\":\"95vw\",width:\"auto\"}}),i=$(\"<div>\",{class:\"popup-body\"});i.append($(\"<div>\",{class:\"popup-content\"}).append($(\"<h3>\").text(`确定要删除选中的${n.length}条消息吗？`),$(\"<div>\").text(\"此操作不可撤销！\")));const e=$(\"<div>\",{class:\"popup-controls\"}),p=$(\"<div>\",{class:\"popup-button-ok menu_button result-control menu_button_default interactable\",text:\"是\",tabindex:0,css:{display:\"inline-block\",margin:\"0 12px\"},click:async function(){a.remove();try{await deleteChatMessages(n),toastr.success(\"删除成功\"),r(t)}catch(t){toastr.error(\"删除失败\")}}}),s=$(\"<div>\",{class:\"popup-button-cancel menu_button result-control interactable\",text:\"否\",tabindex:0,css:{display:\"inline-block\",margin:\"0 12px\"},click:function(){a.remove()}});e.append(p,s),i.append(e),a.append(i),a.on(\"keydown\",(function(t){\"Escape\"===t.key&&a.remove()})),$(\"body\").append(a)})),m.on(\"click\",(function(){if($(\"#chat_history_insert_modal\").length)return void $(\"#chat_history_insert_modal\").show();const o=$(\"<div>\",{id:\"chat_history_insert_modal\",class:\"chat-history-dialog\",css:{position:\"fixed\",top:.4*window.innerHeight+\"px\",left:\"50%\",transform:\"translate(-50%, -50%)\",\"z-index\":20001,margin:\"0\",background:\"var(--SmartThemeBlurTintColor)\",\"box-shadow\":\"0 0 14px var(--black70a)\",border:\"1px solid var(--SmartThemeBorderColor)\",\"border-radius\":\"10px\",padding:\"16px 24px 12px 24px\",width:\"auto\",\"min-width\":\"280px\",\"max-width\":\"90vw\",\"max-height\":\"85vh\",\"overflow-y\":\"auto\",color:\"var(--SmartThemeBodyColor)\",\"font-family\":\"var(--mainFontFamily)\",\"font-size\":\"var(--mainFontSize)\"}});o.append($(\"<div>\",{text:\"插入新消息\",css:{\"font-weight\":\"bold\",\"font-size\":\"1.1em\",color:\"var(--SmartThemeQuoteColor)\",\"margin-bottom\":\"12px\"}}));const n=$(\"<select>\",{css:{\"margin-bottom\":\"12px\",width:\"100%\",padding:\"4px\",\"font-size\":\"1em\"}}).append('<option value=\"user\">user</option>','<option value=\"assistant\">assistant</option>');o.append($(\"<div>\").append(\"角色: \",n));const a=$(\"<textarea>\",{placeholder:\"请输入消息内容\",css:{width:\"100%\",\"min-height\":\"60px\",\"margin-bottom\":\"12px\",\"font-size\":\"1em\",padding:\"4px\"}});o.append($(\"<div>\").append(\"内容: \",a));const i=$(\"<input>\",{type:\"number\",min:0,step:1,val:0,css:{width:\"80px\",\"margin-bottom\":\"12px\",\"font-size\":\"1em\",padding:\"4px\"}});o.append($(\"<div>\").append(\"插入到编号: \",i));const e=$(\"<div>\",{css:{\"text-align\":\"center\",\"margin-top\":\"16px\",display:\"flex\",\"justify-content\":\"center\",gap:\"12px\"}}),p=$(\"<button>\",{text:\"插入\",class:\"menu_button\",css:{\"margin-right\":\"0\",background:\"var(--okGreen70a)\",display:\"inline-block\",\"min-width\":\"80px\"}}),s=$(\"<button>\",{text:\"取消\",class:\"menu_button\",css:{background:\"var(--crimson70a)\",display:\"inline-block\",\"min-width\":\"80px\"}});e.append(p,s),o.append(e),$(\"body\").append(o),s.on(\"click\",(()=>o.hide())),p.on(\"click\",(async()=>{const e=\"assistant\"===n.val()?\"assistant\":\"user\",p=String(a.val()),s=Number(i.val());if(p&&!isNaN(s))try{await createChatMessages([{role:e,message:p}],{insert_at:s}),toastr.success(\"插入成功\"),o.hide(),r(t)}catch(t){toastr.error(\"插入失败\")}else toastr.warning(\"请填写完整\")}))})),s.on(\"click\",(function(){const o=t.find(\".chat-history-checkbox:checked\");if(0===o.length)return void toastr.warning(\"请先选择要移动的消息\");const n=o.map((function(){return $(this).data(\"message-id\")})).get();if(0===n.length)return;$(\"#chat_history_move_confirm\").length&&$(\"#chat_history_move_confirm\").remove();const a=$(\"<dialog>\",{id:\"chat_history_move_confirm\",class:\"chat-history-dialog\",open:!0,css:{\"z-index\":20001,position:\"fixed\",top:.4*window.innerHeight+\"px\",left:\"50%\",transform:\"translate(-50%, -50%)\",margin:\"0\",\"max-width\":\"95vw\",width:\"auto\"}}),i=$(\"<div>\",{class:\"popup-body\"});i.append($(\"<div>\",{class:\"popup-content\"}).append($(\"<h3>\").text(`将选中的${n.length}条消息移动到哪一楼之前？`),$(\"<div>\").text(\"请输入目标楼层号（0为最前，最大为最后一楼+1）\")));const e=$(\"<input>\",{type:\"number\",min:0,step:1,class:\"popup-input text_pole result-control\",css:{width:\"120px\",\"font-size\":\"1em\",margin:\"16px auto\",display:\"block\",\"text-align\":\"center\"},val:0});i.append(e);const p=$(\"<div>\",{class:\"popup-controls\"}),s=$(\"<div>\",{class:\"popup-button-ok menu_button result-control menu_button_default interactable\",text:\"是\",tabindex:0,css:{display:\"inline-block\",margin:\"0 12px\"},click:async function(){const o=Number(e.val());if(isNaN(o)||o<0)return void toastr.warning(\"请输入有效的楼层号\");let i,p;a.remove(),1===n.length?(i=n[0],p=n[0]+1):(n.sort(((t,o)=>t-o)),i=n[0],p=n[n.length-1]+1);try{await rotateChatMessages(o,i,p),toastr.success(\"移动成功\"),r(t)}catch(t){toastr.error(\"移动失败\")}}}),m=$(\"<div>\",{class:\"popup-button-cancel menu_button result-control interactable\",text:\"否\",tabindex:0,css:{display:\"inline-block\",margin:\"0 12px\"},click:function(){a.remove()}});p.append(s,m),i.append(p),a.append(i),a.on(\"keydown\",(function(t){\"Escape\"===t.key&&a.remove()})),$(\"body\").append(a),e.focus()}))})),o.insertBefore(t)}}),1e3)}));",
-                        "info": "\n# 聊天记录管理\n\n**作者**: 司马咩咩 @simamiemie\n\n这是一个强大的聊天记录管理工具，可以帮助您更高效地组织和操作SillyTavern中的对话内容。\n\n## 主要功能\n- **显示/隐藏消息**: 选择性地控制对话中的消息可见性\n- **批量操作**: 通过全选/反选快速处理多条消息\n- **消息插入**: 在指定位置添加新的对话内容\n- **消息移动**: 调整选中消息的位置顺序\n- **消息删除**: 安全地移除不需要的对话内容\n",
                         "buttons": [],
                         "enabled": true
                     },
@@ -3610,12 +4428,20 @@
                         "enabled": false
                     },
                     {
-                        "id": "66cbf8eb-6c0b-4ab5-96df-8892847a9e08",
-                        "name": "【可点击的选择框】",
-                        "content": "import 'https://testingcf.jsdelivr.net/gh/StageDog/tavern_resource/dist/世界书/可点击的选择框/脚本/index.js'",
-                        "info": "# 可点击的选择框\n\n**作者:** 柏柏、青空莉想做舞台少女的狗\n**版本:** 2025/05/07\n**原帖:** [点此跳转](https://discord.com/channels/1291925535324110879/1339825625782816788)\n**源文件:** [点此跳转](https://gitgud.io/StageDog/tavern_resource/-/tree/main/酒馆助手/可点击的选择框/源文件?ref_type=heads)\n",
+                        "id": "70c0bab7-c2a2-46f1-a0b9-21835bc4566e",
+                        "name": "一种批量更新覆盖支持压缩包的上传正则方式",
+                        "content": "const e=window.getTavernRegexes,n=window.replaceTavernRegexes,o=window.toastr,t=\"upload-regex-button\";let r=null;const i=\"https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js\";function s(e){const n=(e||\"\").toLowerCase();return n.startsWith(\"替换\")?2:n.startsWith(\"删除\")?3:n.startsWith(\"消除\")?4:1}async function c(e){const n=[],t=[];if(Array.from(e).some((e=>e.name.toLowerCase().endsWith(\".zip\"))))try{await async function(){return\"function\"==typeof JSZip?(console.log(\"JSZip 已加载。\"),Promise.resolve()):r?(console.log(\"JSZip 正在加载中...\"),r):(console.log(`尝试从 CDN 加载 JSZip: ${i}`),o&&\"function\"==typeof o.info&&o.info(\"首次上传ZIP，正在尝试加载 JSZip 库...\",\"请稍候\",{timeOut:3e3}),r=new Promise(((e,n)=>{const t=document.createElement(\"script\");t.src=i,t.async=!0,t.onload=()=>{\"function\"==typeof JSZip?(console.log(\"JSZip 从 CDN 加载成功。\"),o&&\"function\"==typeof o.success&&o.success(\"JSZip 库加载成功！\",\"成功\",{timeOut:2e3}),e()):(console.error(\"JSZip CDN 脚本已加载，但 JSZip 对象未定义。\"),o&&\"function\"==typeof o.error&&o.error(\"JSZip 库加载异常。\",\"错误\"),n(new Error(\"JSZip loaded but not defined.\")))},t.onerror=e=>{console.error(\"从 CDN 加载 JSZip 失败:\",e),o&&\"function\"==typeof o.error&&o.error(\"JSZip 库加载失败，无法处理ZIP文件。请检查网络连接或浏览器控制台。\",\"错误\"),r=null,n(e)},document.head.appendChild(t)})),r)}()}catch(e){console.error(\"JSZip 加载失败，部分ZIP文件可能无法处理。\",e)}for(const r of Array.from(e)){const e=r.name.toLowerCase();if(e.endsWith(\".json\"))try{const e=await r.text();n.push({originalFileName:r.name,content:e})}catch(e){t.push(`读取JSON文件 ${r.name} 失败: ${e.message}`)}else if(e.endsWith(\".zip\")){if(\"function\"!=typeof JSZip){const e=`JSZip 库未能加载或不可用，无法处理 ZIP 文件: ${r.name}。`;o&&\"function\"==typeof o.error?o.error(e.replace(/\\n/g,\"<br>\")):alert(e),console.error(e),t.push(`跳过ZIP ${r.name}: JSZip 未加载/不可用。`);continue}try{const e=new JSZip,o=await e.loadAsync(r),i=[];o.forEach(((e,o)=>{o.name.toLowerCase().endsWith(\".json\")&&!o.dir&&i.push(o.async(\"string\").then((e=>{n.push({originalFileName:o.name,content:e,sourceArchiveName:r.name})})).catch((e=>{t.push(`从ZIP ${r.name} 提取 ${o.name} 失败: ${e.message}`)})))})),await Promise.all(i)}catch(e){t.push(`处理 ZIP 文件 ${r.name} 失败: ${e.message}`)}}else t.push(`跳过不支持的文件类型: ${r.name}`)}return{jsonDataSources:n,processingErrors:t}}function a(e,n,o,t){let r=0,i=0,s=0;const c=e.filter((e=>n.some((n=>n.scope===e.scope&&(n.script_name===e.script_name||n.id===e.id)))));let a;c.length>0&&(a=c.map((e=>{let o=`脚本 \"${e.script_name}\" (ID: ${e.id}, 来自: ${e._sourceFile}`;e._sourceArchive&&(o+=` [ZIP: ${e._sourceArchive}]`),o+=\") 与现有正则冲突原因: \";const t=new Set;return n.forEach((n=>{if(n.scope===e.scope){const o=n.id===e.id,r=n.script_name===e.script_name;o&&r?t.add(`名称与ID均匹配现有 \"${n.script_name}\" (ID: ${n.id})`):o?t.add(`ID匹配现有 \"${n.script_name}\" (ID: ${n.id})`):r&&t.add(`名称匹配现有 \"${n.script_name}\" (ID: ${n.id})`)}})),o+=t.size>0?Array.from(t).join(\"; \"):\"未知冲突\",o})).join(\"\\n\"));let l=[...n];const p=[];for(const n of e){const{_sourceFile:e,_sourceArchive:o,...a}=n,u=c.some((e=>e.id===n.id&&e.script_name===n.script_name&&e.scope===n.scope));if(u&&!t){s++;continue}let f=!1;l.length;l=l.filter((e=>e.id!==a.id||e.scope!==a.scope||(f=!0,!1))),l=l.filter((e=>{if(e.script_name===a.script_name&&e.scope===a.scope&&e.id!==a.id){if(c.some((e=>e.script_name===a.script_name&&e.scope===a.scope&&e.id!==a.id&&(e.id===n.id||e.script_name===n.script_name)))||u&&t)return f=!0,!1}return!0})),p.push(a),f?i++:u&&t||r++}return l.push(...p),{finalRegexList:l,addedCount:r,overwrittenCount:i,skippedDueToDuplicateCount:s,conflictDetailsForPrompt:a}}$((()=>{const r=window.parent.document;console.log(\"上传正则扩展: 初始化中...\");const i=$(\"#extensionsMenu\",r);if(i.length)if(0===$(`#${t}`,r).length){const l=`\\n                <div id=\"${t}\" class=\"list-group-item flex-container flexGap5 interactable\" title=\"上传正则JSON文件或包含JSON的ZIP包(可多选)\" tabIndex=\"0\">\\n                    <i class=\"fa-solid fa-upload\"></i>\\n                    <span>上传正则</span>\\n            </div>\\n        `;try{i.append(l),console.log(\"上传正则扩展: 按钮已成功添加到扩展菜单。\");$(`#${t}`,r).on(\"click\",(()=>{if(console.log('\"上传正则\"按钮被点击。'),\"function\"!=typeof e||\"function\"!=typeof n){const e=\"SillyTavern 正则管理功能不可用。\";return o&&\"function\"==typeof o.error?o.error(e):alert(e),void console.error(\"getTavernRegexes or replaceTavernRegexes is not a function.\")}\"object\"==typeof o&&\"function\"==typeof o.error||console.warn(\"Toastr 通知系统不完全可用，某些消息将回退到使用 alert。\");const t=document.createElement(\"input\");t.type=\"file\",t.accept=\".json,.zip\",t.multiple=!0,t.style.display=\"none\",t.onchange=async r=>{const i=r.target.files;let l=t;if(!i||0===i.length)return o&&\"function\"==typeof o.warning?o.warning(\"没有选择文件。\"):alert(\"没有选择文件。\"),void(l.parentNode&&l.parentNode.removeChild(l));const{jsonDataSources:p,processingErrors:u}=await c(i);if(l.parentNode&&l.parentNode.removeChild(l),u.length>0){const e=`在文件读取/ZIP提取阶段出现以下问题:\\n${u.join(\"\\n\")}`;o&&\"function\"==typeof o.warning?o.warning(e.replace(/\\n/g,\"<br>\"),\"文件处理问题\",{timeOut:15e3,extendedTimeOut:7e3,escapeHtml:!1}):alert(e),console.warn(\"文件处理问题:\",u)}if(0===p.length){const e=\"未找到可供处理的 JSON 内容。\";return void(o&&\"function\"==typeof o.info?o.info(e):alert(e))}let f=null;if(window.confirm(`要将提取到的 ${p.length} 个正则条目全部上传为【全局】正则吗？\\n(点击\"取消\"将询问是否设为【局部】正则)`)?f=\"global\":window.confirm(`要将提取到的 ${p.length} 个正则条目全部上传为【局部】正则 (当前角色) 吗？`)&&(f=\"character\"),!f)return void(o&&\"function\"==typeof o.info?o.info(\"批量上传已取消：未选择作用域。\"):alert(\"批量上传已取消：未选择作用域。\"));console.log(`批量上传作用域选定为: ${f}`);const{tavernRegexObjects:d,parsingErrors:m}=function(e,n){const o=[],t=[];return e.forEach((e=>{try{const r=JSON.parse(e.content);if(!r.scriptName||!r.findRegex)return void t.push(`${e.originalFileName}${e.sourceArchiveName?` (来自ZIP: ${e.sourceArchiveName})`:\"\"}: 文件格式无效 (缺少 scriptName 或 findRegex)。`);const i={user_input:!1,ai_output:!1,slash_command:!1,world_info:!1},s=Array.isArray(r.placement)?r.placement:[];s.includes(1)&&(i.user_input=!0),s.includes(2)&&(i.ai_output=!0),s.includes(3)&&(i.slash_command=!0),s.includes(5)&&(i.world_info=!0);const c={display:\"boolean\"==typeof r.markdownOnly&&r.markdownOnly,prompt:\"boolean\"==typeof r.promptOnly&&r.promptOnly};o.push({id:r.id||window.crypto.randomUUID(),script_name:r.scriptName,find_regex:r.findRegex,replace_string:r.replaceString||\"\",enabled:\"boolean\"!=typeof r.disabled||!r.disabled,run_on_edit:\"boolean\"==typeof r.runOnEdit&&r.runOnEdit,scope:n,source:i,destination:c,min_depth:void 0===r.minDepth||null===r.minDepth?null:Number(r.minDepth),max_depth:void 0===r.maxDepth||null===r.maxDepth?null:Number(r.maxDepth),_sourceFile:e.originalFileName,_sourceArchive:e.sourceArchiveName})}catch(n){t.push(`${e.originalFileName}${e.sourceArchiveName?` (来自ZIP: ${e.sourceArchiveName})`:\"\"}: 解析JSON失败 (${n.message})。`)}})),o.sort(((e,n)=>{const o=s(e.script_name),t=s(n.script_name);if(o!==t)return o-t;const r=e.script_name||\"\",i=n.script_name||\"\";return r.localeCompare(i)})),{tavernRegexObjects:o,parsingErrors:t}}(p,f);if(m.length>0){const e=`在JSON内容解析/验证阶段出现以下问题:\\n${m.join(\"\\n\")}`;o&&\"function\"==typeof o.warning?o.warning(e.replace(/\\n/g,\"<br>\"),\"JSON 处理警告\",{timeOut:15e3,extendedTimeOut:7e3,escapeHtml:!1}):alert(e),console.warn(\"JSON 内容解析/验证问题:\",m)}if(0!==d.length)try{const t=await e({scope:\"all\"})||[],r=a(d,t,0,!0);let i=!0;r.conflictDetailsForPrompt&&(i=window.confirm(`以下 ${r.conflictDetailsForPrompt.split(\"\\n\").length} 个待上传正则与系统中现有正则 (作用域 \"${f}\") 存在名称或ID冲突：\\n${r.conflictDetailsForPrompt}\\n\\n是否要覆盖它们？\\n(点击\"取消\"将跳过这些冲突的正则)`));const{finalRegexList:c,addedCount:l,overwrittenCount:p,skippedDueToDuplicateCount:h}=a(d,t,0,i);let g=l>0||p>0;if(g){await n(c,{scope:\"all\"});let e=`批量上传完成 (作用域: ${f}):\\n`;l>0&&(e+=`- ${l} 个新正则已添加。\\n`),p>0&&(e+=`- ${p} 个正则已覆盖。\\n`),h>0&&(e+=`- ${h} 个冲突正则已跳过。\\n`);const t=u.length+m.length;t>0&&(e+=`\\n(注意: 有 ${t} 个文件/条目在处理早期阶段失败)`),o&&\"function\"==typeof o.success?o.success(e.replace(/\\n/g,\"<br>\"),\"批量上传结果\",{timeOut:15e3,extendedTimeOut:7e3,escapeHtml:!1}):alert(e),console.log(\"批量上传成功:\",{addedCount:l,overwrittenCount:p,skippedDueToDuplicateCount:h})}else{let e=\"没有正则被添加或更新。\";h>0?e=`${h} 个冲突正则均被跳过。`:d.length>0&&(e=\"所有待上传正则均无变化或被跳过。\");(0===u.length+m.length||e&&d.length>0)&&(o&&\"function\"==typeof o.info?o.info(e):alert(e))}if(g||h>0||d.length>0){const t=g?c:await e({scope:\"all\"})||[];if(window.confirm(`导入操作完成。\\n是否需要对当前所有的正则 (共 ${t.length} 个) 进行一次整体自定义排序？`))try{let t=await e({scope:\"all\"})||[];t.sort(((e,n)=>{const o=s(e.script_name),t=s(n.script_name);if(o!==t)return o-t;const r=e.script_name||\"\",i=n.script_name||\"\";return r.localeCompare(i)})),await n(t,{scope:\"all\"}),o&&\"function\"==typeof o.success?o.success(\"所有正则已按自定义优先级重新排序！\"):alert(\"所有正则已按自定义优先级重新排序！\"),console.log(\"全局正则自定义排序完成。\")}catch(e){const n=`全局自定义排序时发生错误: ${e.message}`;o&&\"function\"==typeof o.error?o.error(n):alert(n),console.error(\"全局自定义排序错误:\",e)}}}catch(e){const n=`处理或保存正则时发生严重错误: ${e.message}`;o&&\"function\"==typeof o.error?o.error(n):alert(n),console.error(\"批量上传正则处理/保存错误:\",e)}else{const e=\"没有有效的正则数据可供上传。\";o&&\"function\"==typeof o.info?o.info(e):alert(e)}},document.body.appendChild(t),t.click()}))}catch(e){console.error(\"上传正则扩展: 添加按钮到扩展菜单失败。\",e)}}else console.log(\"上传正则扩展: 按钮已经存在，无需重复添加。\");else console.warn(\"上传正则扩展: 未找到扩展菜单 (#extensionsMenu)。按钮无法添加。\");console.log(\"上传正则扩展: 初始化完成。\")}));",
+                        "info": "作者：糕\n功能：\n1.批量/zip压缩包上传正则;\n2.自动选择覆盖重复正则（名称/ID相同）；\n3.可选对所上传或者全局正则进行排序。",
                         "buttons": [],
-                        "enabled": false
+                        "enabled": true
+                    },
+                    {
+                        "id": "f7412d63-cd31-49bb-ab27-ed14f77fcd8f",
+                        "name": "正则&脚本自动分组+筛选查看",
+                        "content": "const config_CONFIG={STORAGE_KEY_BASE:\"scriptGroupingEnabled\",getStorageKey:function(areaKey){return`${this.STORAGE_KEY_BASE}_${areaKey}`},GROUP_PREFIX_REGEX:/^(?:【([^】]+)】|\\[([^\\]]+)\\]|([^-\\s]+)-)\\s*(.+)$/,AREAS:{\"global-regex\":{titleSelector:\"#global_scripts_block > div:first-child\",listSelector:\"#saved_regex_scripts\",itemSelector:\".regex-script-label\",nameSelector:\".regex_script_name\",dragHandleSelector:\".drag-handle\",sortableId:\"#saved_regex_scripts\",isRegexType:!0},\"scoped-regex\":{titleSelector:\"#scoped_scripts_block .flex-container.alignItemsBaseline strong\",listSelector:\"#saved_scoped_scripts\",itemSelector:\".regex-script-label\",nameSelector:\".regex_script_name\",dragHandleSelector:\".drag-handle\",sortableId:\"#saved_scoped_scripts\",isRegexType:!0},\"global-script\":{titleSelector:'.settings-title-text:contains(\"全局脚本库\")',listSelector:\"#global-script-list\",itemSelector:\".script-item\",nameSelector:\".script-name\",dragHandleSelector:\".drag-handle\",sortableId:\"#global-script-list\",isRegexType:!1},\"scoped-script\":{titleSelector:'.settings-title-text:contains(\"局部脚本库\")',listSelector:\"#scoped-script-list\",itemSelector:\".script-item\",nameSelector:\".script-name\",dragHandleSelector:\".drag-handle\",sortableId:\"#scoped-script-list\",isRegexType:!1}},STYLES:{groupHeaderStyle:\"\\n            padding: 4px 10px;\\n            background: var(--SmartThemeBorderColor, rgba(240, 240, 240, 0.2));\\n            border-radius: 4px;\\n            margin: 4px 0;\\n            cursor: pointer;\\n            display: flex;\\n            justify-content: space-between;\\n            align-items: center;\\n            font-weight: bold;\\n            border-left: 2px solid var(--SmartThemeUnderlineColor, rgba(52, 152, 219, 0.4));\\n            width: 100%;\\n        \",groupContentStyle:\"\\n            padding-left: 6px;\\n            border-left: 1px dashed var(--SmartThemeEmColor, rgba(204, 204, 204, 0.4));\\n            margin-left: 12px;\\n            width: 100%;\\n        \",iconStyle:\"\\n            cursor: pointer;\\n            margin-left: 8px;\\n            font-size: 0.9em;\\n            color: var(--SmartThemeBodyColor, inherit);\\n        \",toggleAllButtonStyle:\"\\n            font-size: 0.9em;\\n            cursor: pointer;\\n            margin-left: 5px;\\n            color: var(--SmartThemeBodyColor, inherit);\\n        \"}};function groupScripts($items,nameSelector,isRegexType){const groups=[];let currentGroup=null,currentGroupItems=[];if(!$items||0===$items.length)return console.error(\"没有提供有效的条目列表进行分组\"),groups;$items.each((function(index){const $item=$(this),scriptName=function extractScriptName($item,nameSelector,isRegexType){try{let $nameElement=$item.find(nameSelector);if(0===$nameElement.length)if(isRegexType){const regexSelectors=[\".regex_script_name\",\".name\",\"div.flexGrow\",\"div:first\"];for(const selector of regexSelectors)if($nameElement=$item.find(selector),$nameElement.length>0)break}else{const scriptSelectors=[\".script-name\",\".name\",\".script-title\",\"div:first\"];for(const selector of scriptSelectors)if($nameElement=$item.find(selector),$nameElement.length>0)break}if($nameElement.length>0)return $nameElement.text().trim()}catch(e){console.error(\"提取脚本名称出错:\",e)}return null}($item,nameSelector,isRegexType);if(!scriptName)return console.warn(`项目 #${index} 无法提取名称，跳过分组`),null!==currentGroup&&currentGroupItems.length>0&&(groups.push({name:currentGroup,items:currentGroupItems.slice()}),currentGroupItems=[]),groups.push({name:null,items:[$item]}),currentGroup=null,!0;const groupName=function detectGroup(scriptName){if(!scriptName||\"string\"!=typeof scriptName)return null;const match=scriptName.match(config_CONFIG.GROUP_PREFIX_REGEX);return match?match[1]||match[2]||match[3]||\"未分组\":null}(scriptName);null===groupName?null===currentGroup?currentGroupItems.push($item):(groups.push({name:currentGroup,items:currentGroupItems.slice()}),currentGroup=null,currentGroupItems=[$item]):currentGroup===groupName?currentGroupItems.push($item):(currentGroupItems.length>0&&groups.push({name:currentGroup,items:currentGroupItems.slice()}),currentGroup=groupName,currentGroupItems=[$item])})),currentGroupItems.length>0&&groups.push({name:currentGroup,items:currentGroupItems.slice()});let groupedItems=0;return groups.forEach((group=>{null!==group.name?0:0,groupedItems+=group.items.length})),groupedItems!==$items.length&&console.warn(`警告：处理的项目数 (${groupedItems}) 与原始项目数 (${$items.length}) 不一致！`),groups}let isDebouncing=!1,operationStartTime=0,debouncedButtons=[];const operationQueue=[];async function debounceUI(callback,options={}){const{minDelay=100,operationName=\"操作\"}=\"number\"==typeof options?{minDelay:options}:options;if(isDebouncing)return null;try{isDebouncing=!0,operationStartTime=performance.now(),function dimAllButtons(){debouncedButtons=[],$('i[id$=\"-filter-icon\"], i[id$=\"-group-icon\"], i[id$=\"-toggle-all\"], i[id$=\"-refresh-icon\"], .group-toggle-icon').each((function(){const $button=$(this),buttonInfo={$button,originalOpacity:\"1\",originalPointerEvents:\"auto\"};$button.css({opacity:\"0.3\",\"pointer-events\":\"none\",transition:\"opacity 0.05s\"}),debouncedButtons.push(buttonInfo)}))}();const result=await callback(),operationDuration=performance.now()-operationStartTime,cooldownTime=Math.max(function calculateCooldownTime(operationDuration){return 100+Math.min(.5*operationDuration,1e3)}(operationDuration),minDelay);return await new Promise((resolve=>setTimeout(resolve,cooldownTime))),result}catch(error){return console.error(`[FilterGroup]${operationName}执行出错:`,error),null}finally{!function restoreAllButtons(){if(!debouncedButtons||0===debouncedButtons.length)return console.debug(\"[FilterGroup]没有需要恢复的按钮\"),void(debouncedButtons=[]);debouncedButtons.forEach(((buttonInfo,index)=>{try{if(!buttonInfo||!buttonInfo.$button||0===buttonInfo.$button.length)return void console.warn(`[FilterGroup]按钮对象无效 [${index}]`);buttonInfo.$button.css({opacity:buttonInfo.originalOpacity||\"1\",\"pointer-events\":buttonInfo.originalPointerEvents||\"auto\",transition:\"opacity 0.05s\"})}catch(error){console.error(`[FilterGroup]恢复按钮[${index}]状态出错:`,error)}})),debouncedButtons.length,debouncedButtons=[]}(),isDebouncing=!1,operationQueue.length>0&&setTimeout(processNextOperation,100)}}function processNextOperation(){if(0===operationQueue.length||isDebouncing)return;const nextOperation=operationQueue.shift();nextOperation.callback().then((result=>{operationQueue.length>0&&setTimeout(processNextOperation,100)})).catch((error=>{console.error(`[FilterGroup]队列操作 ${nextOperation.name} 执行出错:`,error),operationQueue.length>0&&setTimeout(processNextOperation,100)}))}function isUIDebouncing(){return isDebouncing}function addDebouncedClickHandler(selector,callback,options={}){const{stopPropagation=!0,minDelay=100,operationName=null}=options;(\"string\"==typeof selector?$(selector):selector).off(\"click\").on(\"click\",(async function(e){if(stopPropagation&&e.stopPropagation(),isUIDebouncing())return;const $this=$(this),buttonText=$this.attr(\"title\")||$this.text()||\"按钮\",opName=operationName||buttonText;await debounceUI((async()=>await callback.call(this,e,$this)),{minDelay,operationName:opName})}))}function addFilterIcon($titleElem,areaKey,getFilterState,updateFilterIcon,applyUIState,capitalizeFirstLetter){const filterIconId=`${areaKey}-filter-icon`;0===$(`#${filterIconId}`).length&&($titleElem.append(`<i id=\"${filterIconId}\" class=\"fa-solid fa-filter\" style=\"${config_CONFIG.STYLES.iconStyle}\"></i>`),addDebouncedClickHandler(`#${filterIconId}`,(function(e){const newState=(getFilterState(areaKey)+1)%3;return localStorage.setItem(`regexFilter${capitalizeFirstLetter(areaKey)}`,newState),updateFilterIcon(areaKey),applyUIState(areaKey)}),{operationName:`筛选切换(${areaKey})`}),updateFilterIcon(areaKey))}function addGroupIcons($titleElem,areaKey,getGroupingEnabledState,updateGroupIcon,applyUIState){const groupIconId=`${areaKey}-group-icon`;if(0===$(`#${groupIconId}`).length){const isGroupEnabled=getGroupingEnabledState(areaKey);$titleElem.append(`<i id=\"${groupIconId}\" class=\"fa-solid ${isGroupEnabled?\"fa-folder-open\":\"fa-folder\"}\" style=\"${config_CONFIG.STYLES.iconStyle}\" title=\"${isGroupEnabled?\"关闭分组\":\"开启分组\"}\"></i>`),function addToggleAllIcon($titleElem,areaKey,isGroupEnabled){const toggleAllId=`${areaKey}-toggle-all`;0===$(`#${toggleAllId}`).length&&($titleElem.append(`<i id=\"${toggleAllId}\" class=\"fa-solid fa-angle-down\" style=\"${config_CONFIG.STYLES.toggleAllButtonStyle}\" title=\"一键展开/折叠分组\"></i>`),isGroupEnabled?$(`#${toggleAllId}`).css(\"display\",\"\"):$(`#${toggleAllId}`).css(\"display\",\"none\"),function bindToggleAllEvent(toggleAllId,areaKey){addDebouncedClickHandler(`#${toggleAllId}`,(function(e,$this){const isExpand=$this.hasClass(\"fa-angle-down\");return $this.attr(\"class\",\"fa-solid \"+(isExpand?\"fa-angle-up\":\"fa-angle-down\")),$this.attr(\"title\",isExpand?\"一键折叠分组\":\"一键展开分组\"),function toggleAllGroups(areaKey,isExpand){const $area=$(config_CONFIG.AREAS[areaKey].listSelector);$area.find(\".script-group-header\").each((function(){const $header=$(this),$groupContent=$header.next(\".script-group-content\"),$icon=$header.find(\".group-toggle-icon\");isExpand?($groupContent.show(),$icon.attr(\"class\",\"fa-solid fa-angle-up group-toggle-icon\")):($groupContent.hide(),$icon.attr(\"class\",\"fa-solid fa-angle-down group-toggle-icon\"))})),function saveAllGroupFoldStates(areaKey,allFolded){const $area=$(config_CONFIG.AREAS[areaKey].listSelector),foldStates={};$area.find(\".script-group-header\").each((function(){const groupName=$(this).find(\"span\").text().split(\" (\")[0];foldStates[groupName]=allFolded}));const storageKey=`script_group_fold_state_${areaKey}`;localStorage.setItem(storageKey,JSON.stringify(foldStates))}(areaKey,!isExpand)}(areaKey,isExpand)}),{operationName:`一键展开/折叠分组(${areaKey})`})}(toggleAllId,areaKey))}($titleElem,areaKey,isGroupEnabled),addDebouncedClickHandler(`#${groupIconId}`,(function(e){const newState=!getGroupingEnabledState(areaKey);return localStorage.setItem(config_CONFIG.getStorageKey(areaKey),newState),updateGroupIcon(areaKey),applyUIState(areaKey)}),{operationName:`分组切换(${areaKey})`}),updateGroupIcon(areaKey)}}function addRefreshIcon($titleElem,areaKey,applyAllUIStates){const refreshIconId=`${areaKey}-refresh-icon`;0===$(`#${refreshIconId}`).length&&($titleElem.append(`<i id=\"${refreshIconId}\" class=\"fa-solid fa-rotate\" style=\"${config_CONFIG.STYLES.iconStyle}\" title=\"刷新\"></i>`),addDebouncedClickHandler(`#${refreshIconId}`,(function(){return applyAllUIStates()}),{operationName:`刷新UI(${areaKey})`}))}function addGroupHeaderClickHandler($groupHeader,areaKey){addDebouncedClickHandler($groupHeader,(function(){const $header=$(this),$icon=$header.find(\".group-toggle-icon\"),$content=$header.next(\".script-group-content\"),isExpanded=$icon.hasClass(\"fa-angle-up\"),thisGroupName=$header.find(\"span\").text().split(\" (\")[0];$icon.attr(\"class\",`fa-solid fa-angle-${isExpanded?\"down\":\"up\"} group-toggle-icon`),$content[isExpanded?\"hide\":\"show\"](),function saveGroupFoldState(areaKey,groupName,isFolded){const storageKey=`script_group_fold_state_${areaKey}`,foldStates=JSON.parse(localStorage.getItem(storageKey)||\"{}\");foldStates[groupName]=isFolded,localStorage.setItem(storageKey,JSON.stringify(foldStates))}(areaKey,thisGroupName,isExpanded)}),{minDelay:200,operationName:`切换分组(${areaKey})`})}function initializeUnifiedUI(){window.unifiedUIInitialized||(window.unifiedUIInitialized=!0,console.log(\"[FilterGroup]正在初始化统一UI处理模块...\"),function addControlIcons(){for(const[areaKey,config]of Object.entries(config_CONFIG.AREAS)){const $titleElem=$(config.titleSelector);0!==$titleElem.length&&(addFilterIcon($titleElem,areaKey,getFilterState,updateFilterIcon,applyUIState,capitalizeFirstLetter),addGroupIcons($titleElem,areaKey,getGroupingEnabledState,updateGroupIcon,applyUIState),addRefreshIcon($titleElem,areaKey,applyAllUIStates))}}(),function setupEventListeners(){\"function\"==typeof eventMakeFirst&&\"undefined\"!=typeof tavern_events&&tavern_events.SETTINGS_UPDATED&&eventMakeFirst(tavern_events.SETTINGS_UPDATED,(function(){console.log(\"[FilterGroup]设置已更新，正在刷新UI...\"),applyAllUIStates().then((()=>{console.log(\"[FilterGroup]UI刷新完成\")}))}))}(),applyAllUIStates())}function getGroupingEnabledState(areaKey){return\"true\"===localStorage.getItem(config_CONFIG.getStorageKey(areaKey))}function getFilterState(areaKey){return parseInt(localStorage.getItem(`regexFilter${capitalizeFirstLetter(areaKey)}`)||\"0\")}function capitalizeFirstLetter(string){return string.split(\"-\").map((word=>word.charAt(0).toUpperCase()+word.slice(1))).join(\"\")}function resetAreaUI(areaKey){const config=config_CONFIG.AREAS[areaKey],$list=$(config.listSelector);return 0!==$list.length&&(function removeGrouping(areaKey){const config=config_CONFIG.AREAS[areaKey],$list=$(config.listSelector);if(0===$list.length)return!1;const $groupHeaders=$list.find(\".script-group-header\"),$groupContents=$list.find(\".script-group-content\");if(0===$groupHeaders.length||0===$groupContents.length)return!1;const $items=$list.find(config.itemSelector);return $items.each((function(){$(this).css({width:\"\",\"padding-left\":\"\"}).find(\".drag-handle\").show()})),$list.append($items),$groupHeaders.remove(),$groupContents.remove(),function restoreSortable(areaKey){const config=config_CONFIG.AREAS[areaKey],$list=$(config.listSelector);$list.length&&($list.find(\".drag-handle, \"+config.itemSelector).off(\"mousedown.groupui dragstart.groupui\"),$list.find(\".drag-handle\").show())}(areaKey),!0}(areaKey),$list.find(config.itemSelector).css(\"display\",\"\"),!0)}function updateFilterIcon(areaKey){const $icon=$(`#${areaKey}-filter-icon`);if(0===$icon.length)return;const config=[{class:\"fa-filter\",color:\"\",title:\"显示全部 (点击切换到仅显示开启)\"},{class:\"fa-check-circle\",color:\"\",title:\"仅显示开启 (点击切换到仅显示隐藏)\"},{class:\"fa-times-circle\",color:\"\",title:\"仅显示隐藏 (点击切换到显示全部)\"}][getFilterState(areaKey)];$icon.attr(\"class\",\"\").addClass(\"fa-solid \"+config.class),$icon.attr(\"title\",config.title)}function updateGroupIcon(areaKey){const isGroupEnabled=getGroupingEnabledState(areaKey),$groupIcon=$(`#${areaKey}-group-icon`);$groupIcon.length>0&&($groupIcon.attr(\"class\",\"fa-solid \"+(isGroupEnabled?\"fa-folder-open\":\"fa-folder\")),$groupIcon.attr(\"title\",isGroupEnabled?\"关闭分组\":\"开启分组\"));const $toggleAll=$(`#${areaKey}-toggle-all`);$toggleAll.length>0&&(isGroupEnabled?$toggleAll.css(\"display\",\"\"):$toggleAll.css(\"display\",\"none\"))}function applyUIState(areaKey){if(!config_CONFIG.AREAS[areaKey])return console.log(`[FilterGroup]区域 ${areaKey} 配置不存在，跳过处理`),!1;const config=config_CONFIG.AREAS[areaKey],isGroupEnabled=getGroupingEnabledState(areaKey),filterState=getFilterState(areaKey);resetAreaUI(areaKey);const $list=$(config.listSelector);if(0===$list.length)return!1;return $list.find(config.itemSelector).each((function(){const $item=$(this);let isEnabled;isEnabled=config.isRegexType?!$item.find(\".disable_regex\").prop(\"checked\"):\"none\"!==$item.find(\".script-toggle-on\").css(\"display\"),0===filterState?$item.css(\"display\",\"\"):1===filterState?$item.css(\"display\",isEnabled?\"\":\"none\"):2===filterState&&$item.css(\"display\",isEnabled?\"none\":\"\")})),isGroupEnabled&&function applyGrouping(areaKey){const config=config_CONFIG.AREAS[areaKey],$list=$(config.listSelector);if(0===$list.length)return!1;const $items=$list.find(config.itemSelector);if(0===$items.length)return!1;const groups=groupScripts($items,config.nameSelector,config.isRegexType);if(!groups||0===groups.length)return!1;return!!groups.some((group=>null!==group.name))&&($list.children().detach(),groups.forEach((group=>{const groupName=null===group.name?\"未分组\":group.name,isFolded=function getGroupFoldState(areaKey,groupName,defaultState=!0){const storageKey=`script_group_fold_state_${areaKey}`,foldStates=JSON.parse(localStorage.getItem(storageKey)||\"{}\");return groupName in foldStates?foldStates[groupName]:defaultState}(areaKey,groupName,!0),visibleItems=group.items.filter((item=>\"none\"!==$(item).css(\"display\"))),$groupHeader=$(`\\n            <div class=\"script-group-header\" style=\"${config_CONFIG.STYLES.groupHeaderStyle}${0===visibleItems.length?\"display: none;\":\"\"}\">\\n                <span>${groupName} (${visibleItems.length})</span>\\n                <i class=\"fa-solid ${isFolded?\"fa-angle-down\":\"fa-angle-up\"} group-toggle-icon\"></i>\\n            </div>\\n        `),$groupContent=$(`\\n            <div class=\"script-group-content\" style=\"${config_CONFIG.STYLES.groupContentStyle}${isFolded||0===visibleItems.length?\" display: none;\":\"\"}\">\\n            </div>\\n        `);$list.append($groupHeader),$list.append($groupContent),group.items.forEach(($item=>{$item.css({width:\"97% !important\",\"padding-left\":\"6px\"}).find(\".drag-handle\").hide(),$groupContent.append($item)})),addGroupHeaderClickHandler($groupHeader,areaKey)})),function fixSortableAfterGrouping(areaKey){const config=config_CONFIG.AREAS[areaKey],$list=$(config.listSelector);$list.length&&($list.find(\".drag-handle\").hide(),$list.find(\".drag-handle, .script-group-header, .script-group-content, \"+config.itemSelector).off(\"mousedown.groupui dragstart.groupui\").on(\"mousedown.groupui dragstart.groupui\",(function(e){return e.stopPropagation(),e.preventDefault(),!1})))}(areaKey),!0)}(areaKey),!0}function applyAllUIStates(){return isUIDebouncing()?(console.log(\"[FilterGroup]UI操作已在进行中，已添加到操作队列\"),function queueOperation(name,callback,options={}){const{priority=10}=options,operation={name,callback,priority,timestamp:Date.now()};let inserted=!1;for(let i=0;i<operationQueue.length;i++)if(operationQueue[i].priority>priority){operationQueue.splice(i,0,operation),inserted=!0;break}return inserted||operationQueue.push(operation),isDebouncing||processNextOperation(),Promise.resolve(!1)}(\"刷新UI\",(()=>refreshAllAreas().then((()=>(console.log(\"[FilterGroup]队列刷新完成\"),!0)))),{priority:5})):debounceUI((async()=>await refreshAllAreas()),{operationName:\"应用所有UI状态\",minDelay:500})}async function refreshAllAreas(){await new Promise((resolve=>setTimeout(resolve,100)));const promises=[];for(const areaKey in config_CONFIG.AREAS){applyUIState(areaKey)||promises.push(new Promise((resolve=>{setTimeout((()=>{resolve(applyUIState(areaKey))}),500)})))}return await Promise.all(promises),console.log(\"[FilterGroup]所有区域UI刷新完成\"),!0}const unifiedUI={initialize:initializeUnifiedUI,applyState:applyUIState,applyAllStates:applyAllUIStates,resetUI:resetAreaUI,isDebouncing:isUIDebouncing};$((function(){setTimeout((function(){!function initializeAllUI(){console.log(\"[FilterGroup]正在初始化统一UI组件...\"),initializeUnifiedUI()}()}),500)})),window.unifiedUI=unifiedUI,$((function(){console.log(\"正则脚本统一UI管理已初始化\")}));",
+                        "info": "**作者**：Lai\n**版本**：250507\n**脚本说明：** 根据正则/酒馆助手脚本开关状态筛选条目，快速切换显示，并支持分组视图。\n\n## 功能简介\n\n此脚本在全局和局部正则/酒馆助手脚本库标题旁添加了分组、筛选与刷新图标，点击图标即可切换视图。\n\n## ！！非常重要！！\n**如果在【开启分组视图】的情况下拖动了条目/分组，可能会【丢失所有正则】！虽然脚本【已经禁用】了分组视图下的拖拽功能，但是如果你依然发现自己~~（不知为何）~~拖动了条目，请【不要松手按 F5/cmd+R 直接刷新网页或者直接锁屏手机】打断这个过程。**\n\n上述情况应该【极其少见】，如果你发现自己依然能够拖拽，请回帖 at 我。\n\n在没有打开分组视图（也就是条目左边有三个小横杠）的时候是能够正常拖拽改变顺序的。\n\n## 筛选功能\n\n各部条目开关状态筛选条目，支持循环切换三种显示模式：\n\n- :clipboard: **显示全部** - 显示所有可用正则/酒馆助手脚本\n- :white_check_mark: **仅显示已开启** - 筛选出当前已激活的正则/酒馆助手脚本（打勾图标）\n- :x: **仅显示已隐藏** - 筛选出当前已关闭的正则/酒馆助手脚本（打叉图标）\n\n## 分组功能\n\n脚本会根据名称前缀自动为**连续的**条目建立分组，从而得到美观的分组视图。分组支持多种命名格式：\n\n- **【分组名】脚本名称** - 使用中文方括号\n- **[分组名]脚本名称** - 使用英文方括号\n- **分组名-脚本名称** - 使用短横线分隔\n\n如需支持更多格式，欢迎回帖提出。\n\n### 分组特性：\n\n- **根据前缀分组**：根据脚本名称中的前缀自动分组\n- **顺序保持**：保持条目的原始排序\n- **折叠/展开**：可一键展开或折叠所有分组，提高界面整洁度\n- **分组统计**：显示每个分组内包含的条目数量\n\n通过标题旁的文件夹图标可以随时切换启用/禁用分组功能。\n\n## 使用提示\n\n- 使用分组功能，需要编辑好前缀与条目顺序。\n- 分组和筛选功能可以同时使用。\n- 分组状态（包括折叠状态）和筛选设置会记录在浏览器本地存储中，刷新了也能保持。\n- 支持与 https://discord.com/channels/1291925535324110879/1344362686900605043 等脚本共同使用，不会冲突。\n- 更改条目设置（比如开关状态）后，稍等一小下，视图**会自动刷新**。\n- 具有防快速点击延迟，避免过快地操作出现问题。\n- 注意：某些情况视图可能会出错，请试试点击“刷新”小图标，或者刷新酒馆网页。",
+                        "buttons": [],
+                        "enabled": true
                     }
                 ],
                 "characters_with_scripts": []
@@ -3696,7 +4522,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 1,
                 "userConfigured": true
             }
         },
@@ -4983,7 +5809,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "gemini-2.5-pro-exp-03-25-openai",
+        "custom_model": "[正常]gemini-2.5-pro-preview-03-25",
         "custom_url": "https://api.skyi.cc/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
