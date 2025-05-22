@@ -2513,7 +2513,7 @@
             {
                 "id": "2caf1d6b-d447-4eba-a812-e100c8f3efe2",
                 "scriptName": "【demini】D1添加用户输入TAG",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "^([\\s\\S]*)$",
                 "replaceString": "<user_input>\n$1\n</user_input>",
@@ -2536,7 +2536,7 @@
                 "placement": [
                     2
                 ],
-                "disabled": false,
+                "disabled": true,
                 "markdownOnly": true,
                 "promptOnly": true,
                 "runOnEdit": true,
@@ -2553,7 +2553,7 @@
                 "placement": [
                     2
                 ],
-                "disabled": false,
+                "disabled": true,
                 "markdownOnly": true,
                 "promptOnly": true,
                 "runOnEdit": true,
@@ -2570,7 +2570,7 @@
                 "placement": [
                     1
                 ],
-                "disabled": false,
+                "disabled": true,
                 "markdownOnly": false,
                 "promptOnly": true,
                 "runOnEdit": true,
@@ -2598,7 +2598,7 @@
             {
                 "id": "d21e2d5d-f339-443e-afdb-0191991369f7",
                 "scriptName": "【demini】D2汇总记录隐藏",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
                 "replaceString": "",
@@ -2621,7 +2621,7 @@
                 "placement": [
                     2
                 ],
-                "disabled": false,
+                "disabled": true,
                 "markdownOnly": true,
                 "promptOnly": true,
                 "runOnEdit": true,
@@ -2632,7 +2632,7 @@
             {
                 "id": "a44fc7d6-3c9c-40fa-b4f7-dbada7914461",
                 "scriptName": "【demini】D1非插件式表格折叠",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<table>(.*?)</table>/gs",
                 "replaceString": "<details><summary>*<font color=#C0C0C0>非插件式表格<font>*</summary>\n> $1\n</details>",
@@ -2672,7 +2672,7 @@
                 "placement": [
                     2
                 ],
-                "disabled": false,
+                "disabled": true,
                 "markdownOnly": true,
                 "promptOnly": true,
                 "runOnEdit": true,
@@ -2689,7 +2689,7 @@
                 "placement": [
                     2
                 ],
-                "disabled": false,
+                "disabled": true,
                 "markdownOnly": true,
                 "promptOnly": false,
                 "runOnEdit": true,
@@ -2700,7 +2700,7 @@
             {
                 "id": "5d7c8d9a-6727-4eb1-a950-b132693a5477",
                 "scriptName": "【demini】D2替绝望羊隐藏正则",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<air>[\\s\\S]*?</air>/g",
                 "replaceString": "",
@@ -2723,7 +2723,7 @@
                 "placement": [
                     2
                 ],
-                "disabled": false,
+                "disabled": true,
                 "markdownOnly": false,
                 "promptOnly": true,
                 "runOnEdit": true,
@@ -2740,7 +2740,7 @@
                 "placement": [
                     2
                 ],
-                "disabled": false,
+                "disabled": true,
                 "markdownOnly": true,
                 "promptOnly": true,
                 "runOnEdit": true,
@@ -2757,7 +2757,7 @@
                 "placement": [
                     2
                 ],
-                "disabled": false,
+                "disabled": true,
                 "markdownOnly": true,
                 "promptOnly": true,
                 "runOnEdit": true,
@@ -2774,7 +2774,7 @@
                 "placement": [
                     2
                 ],
-                "disabled": false,
+                "disabled": true,
                 "markdownOnly": false,
                 "promptOnly": true,
                 "runOnEdit": true,
@@ -2808,7 +2808,7 @@
                 "placement": [
                     2
                 ],
-                "disabled": false,
+                "disabled": true,
                 "markdownOnly": false,
                 "promptOnly": true,
                 "runOnEdit": true,
@@ -4699,7 +4699,7 @@
                     },
                     {
                         "identifier": "60a7fb1e-6d2a-4089-b8f4-bac8b9d9592c",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "944fea24-e7ba-4174-8d22-a84ddacf3cd0",
@@ -4707,7 +4707,7 @@
                     },
                     {
                         "identifier": "d050df6e-2077-4b7c-9250-e13e40751708",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "4c258266-39bd-4920-bf26-4e1a90b38cf2",
@@ -4751,7 +4751,7 @@
                     },
                     {
                         "identifier": "b30e6b7e-13ff-4467-8ae2-ba243ced739c",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "64740e0a-fd2b-4a46-84ac-d4c4f2c40e29",
@@ -4763,7 +4763,7 @@
                     },
                     {
                         "identifier": "130beff6-72f2-4736-a984-982c3fc50d17",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "205d31f5-0772-4fa9-87a0-ad696ec29339",
@@ -4783,11 +4783,11 @@
                     },
                     {
                         "identifier": "64951c52-e225-4214-8e6a-50eee3cbdeeb",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "c7d0194e-5335-4d3a-9b05-5e6a1cdd59e3",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "00ac09d5-7d36-4e37-aad8-6bc037e8ceb7",
