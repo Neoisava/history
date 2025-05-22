@@ -2820,7 +2820,7 @@
             {
                 "id": "ef3264c8-c1b6-47c4-b172-bfb47b5868ad",
                 "scriptName": "【Dreammini】DIE[推进(移除)]",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
                 "replaceString": "",
@@ -2837,7 +2837,7 @@
             {
                 "id": "f4b00b43-4b25-48d7-a496-ba1824c9bd87",
                 "scriptName": "【Dreammini】DIE小总结(格式)",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/(?<!<details>\\s*)<summary>(((?!<summary>)[\\s\\S])*?)<\\/summary>/g",
                 "replaceString": "<details>\n<summary>摘要</summary>\n$1\n</details>",
@@ -2854,7 +2854,7 @@
             {
                 "id": "c6fd6a1a-5e40-42db-8b7f-b0225d0622c6",
                 "scriptName": "【Dreammini】DIE小总结(移除正文)",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/[\\s\\S]*?(?<!<details>\\s*)<summary>([\\s\\S]*)<\\/summary>[\\s\\S]*/g",
                 "replaceString": "<summary>\n$1\n</summary>",
@@ -4522,7 +4522,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 1,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
@@ -5684,7 +5684,7 @@
                     },
                     {
                         "identifier": "0a8db465-0891-4e30-b254-8a12d765954d",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "a8ca7c5c-0282-491b-b1e0-02f60406ab16",
