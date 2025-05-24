@@ -22,14 +22,14 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": null,
+    "active_character": "修仙之路2.0.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
     "user_avatar": "1746440806294-.png",
     "amount_gen": 350,
     "max_context": 8192,
-    "main_api": "openai",
+    "main_api": "novel",
     "world_info_settings": {
         "world_info": {
             "globalSelect": [
@@ -2839,7 +2839,7 @@
             {
                 "id": "603909c4-e6e7-49fc-a7f8-f5dbb5db5fc2",
                 "scriptName": "昆仑图片",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<image>([\\s\\S]*?)</image>/g",
                 "replaceString": "",
@@ -3624,7 +3624,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 42,
                 "userConfigured": true
             }
         },
