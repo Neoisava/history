@@ -29,7 +29,7 @@
     "user_avatar": "1746440806294-.png",
     "amount_gen": 350,
     "max_context": 8192,
-    "main_api": "novel",
+    "main_api": "openai",
     "world_info_settings": {
         "world_info": {
             "globalSelect": [
@@ -3597,7 +3597,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 34,
+                "lastProcessedLength": 35,
                 "userConfigured": true
             }
         },
