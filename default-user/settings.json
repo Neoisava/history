@@ -22,7 +22,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": null,
+    "active_character": "修仙之路2.0.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -3624,7 +3624,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 38,
                 "userConfigured": true
             }
         },
@@ -4856,7 +4856,7 @@
                     },
                     {
                         "identifier": "7775a027-c11c-44e6-915d-aea1897dfd1f",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "a7c40be7-317f-45ee-afc9-f2736dbc3c7c",
@@ -4956,11 +4956,11 @@
                     },
                     {
                         "identifier": "d5965fbc-4258-4552-9912-06078d9e218c",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "218095d1-b8b3-49dd-8e25-d0ec1adbeca0",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "d81c2780-201d-4315-a116-f0e197f060a8",
@@ -4976,7 +4976,7 @@
                     },
                     {
                         "identifier": "a5e930bc-8be5-46f9-a061-2ef082cfd44f",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "2512fa4e-eb17-4472-a5aa-8ed308dd8d44",
@@ -5008,7 +5008,7 @@
                     },
                     {
                         "identifier": "4c258266-39bd-4920-bf26-4e1a90b38cf2",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "3adafb1e-67b5-4be8-97ed-6dc8dbd87302",
@@ -5076,7 +5076,7 @@
                     },
                     {
                         "identifier": "130beff6-72f2-4736-a984-982c3fc50d17",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "205d31f5-0772-4fa9-87a0-ad696ec29339",
@@ -5088,7 +5088,7 @@
                     },
                     {
                         "identifier": "8d03f550-80df-48bb-bbef-1943325461e2",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "ef027033-c7ff-4c79-972a-70f491e5460c",
@@ -5189,7 +5189,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "gemini-2.5-pro-exp-03-25-openai",
+        "custom_model": "[正常]gemini-2.5-pro-preview-03-25",
         "custom_url": "https://api.skyi.cc/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
