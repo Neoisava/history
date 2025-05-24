@@ -2566,7 +2566,7 @@
             {
                 "id": "2caf1d6b-d447-4eba-a812-e100c8f3efe2",
                 "scriptName": "【demini】D1添加用户输入TAG",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "^([\\s\\S]*)$",
                 "replaceString": "<user_input>\n$1\n</user_input>",
@@ -2583,7 +2583,7 @@
             {
                 "id": "defa7859-968f-4596-8ae4-60a0073e94f0",
                 "scriptName": "【demini】D2缔改去除多余内容",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<content>|</content>|```end|<done>|`<done>`|/[\\s\\S]*<\\/think>/g|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(.*?<think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
                 "replaceString": "",
@@ -2598,26 +2598,9 @@
                 "promptOnly": true
             },
             {
-                "id": "986ede64-b63a-4ffb-ab1e-72ddff7837eb",
-                "scriptName": "【demini】D3隐藏全部前文[22]",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/[\\s\\S]*/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 22,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
                 "id": "a8474a7d-f8bf-4bc7-a1d3-779899b03d50",
                 "scriptName": "【demini】D3前端去除多余",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
                 "replaceString": "",
@@ -2644,6 +2627,23 @@
                 ],
                 "substituteRegex": 0,
                 "minDepth": 5,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "986ede64-b63a-4ffb-ab1e-72ddff7837eb",
+                "scriptName": "【demini】D3隐藏全部前文[22]",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/[\\s\\S]*/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 22,
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": true
@@ -2787,7 +2787,7 @@
             {
                 "id": "6d9fbba5-cad1-433b-b029-2bede24458d3",
                 "scriptName": "【Dreammini】Kemini添加user输入tag",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "^([\\s\\S]*)$",
                 "replaceString": "<user_input>\n$1\n</user_input>",
@@ -2804,7 +2804,7 @@
             {
                 "id": "a9eef03a-b5d2-41ba-a3ff-984bd8b55367",
                 "scriptName": "【Dreammini】Kemini去除所有用户消息",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "^([\\s\\S]*)$",
                 "replaceString": "",
@@ -2821,7 +2821,7 @@
             {
                 "id": "2688e9e7-81f0-40b9-8dd6-719ccead6391",
                 "scriptName": "【Dreammini】Kemini通用去除多余内容",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<dream>|</dream>|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
                 "replaceString": "",
@@ -3665,7 +3665,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 5,
+                "lastProcessedLength": 4,
                 "userConfigured": true
             }
         },
@@ -6920,7 +6920,7 @@
                     },
                     {
                         "identifier": "d14628b9-671c-4eb8-8cf7-5cdf7e09a11d",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "5ac6c61e-42d0-4740-9e4c-cb540810aa9d",
@@ -6928,7 +6928,7 @@
                     },
                     {
                         "identifier": "e6f1cf0c-34fa-49b2-9cf6-2d0334655643",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "13b0a1c6-a8a8-4d08-995f-1acf97994ce0",
@@ -7309,7 +7309,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "gemini-2.5-pro-preview-03-25",
+        "custom_model": "[正常]gemini-2.5-pro-preview-03-25",
         "custom_url": "https://api.skyi.cc/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
