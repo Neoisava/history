@@ -22,7 +22,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": "修仙之路2.0.png",
+    "active_character": null,
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -458,7 +458,7 @@
             {
                 "label": "kobold",
                 "url": "http://127.0.0.1:5000/api",
-                "lastConnection": 1745138408417
+                "lastConnection": 1748106956082
             }
         ],
         "bogus_folders": true,
@@ -2927,8 +2927,8 @@
             "height": 512,
             "prompt_prefix": "NFWS,best quality, absurdres, masterpiece,",
             "negative_prompt": "lowres, bad anatomy, bad hands, text, error, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
-            "sampler": null,
-            "model": null,
+            "sampler": "k_euler_ancestral",
+            "model": "nai-diffusion-4-full",
             "restore_faces": false,
             "enable_hr": false,
             "horde": true,
@@ -2951,8 +2951,8 @@
                 "-2": "The text prompt used to generate the image. Must represent an exhaustive description of the desired image that will allow an artist or a photographer to perfectly recreate it."
             },
             "character_prompts": {},
-            "source": "comfy",
-            "scheduler": null,
+            "source": "novel",
+            "scheduler": "karras",
             "vae": null,
             "seed": -1,
             "adetailer_face": false,
@@ -3624,7 +3624,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 42,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
