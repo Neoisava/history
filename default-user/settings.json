@@ -22,7 +22,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": null,
+    "active_character": "修仙之路2.0.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2615,6 +2615,40 @@
                 "promptOnly": true
             },
             {
+                "id": "249f095d-cc10-4ee7-9ed4-d34010e23421",
+                "scriptName": "【demini】D1替绝望羊折叠正则",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<air>(.*?)</air>/gs",
+                "replaceString": "<details><summary>*<font color=#F08080>替绝望羊</font>*</summary>\n> $1\n</details>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "bd50397e-794d-4be1-8e60-afc69a6e7a28",
+                "scriptName": "【demini】D3前绝望羊补牢正则",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<air>[\\s\\S]*?</air>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
                 "id": "0d28134f-5b68-4619-8cc9-df6ce99d5eb3",
                 "scriptName": "【demini】专防省略号增殖正则",
                 "disabled": false,
@@ -3529,7 +3563,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 1,
+                "lastProcessedLength": 4,
                 "userConfigured": true
             }
         },
