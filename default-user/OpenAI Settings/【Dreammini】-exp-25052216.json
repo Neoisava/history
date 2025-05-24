@@ -16,9 +16,12 @@
     "perplexity_model": "llama-3.1-70b-instruct",
     "groq_model": "llama-3.1-70b-versatile",
     "zerooneai_model": "yi-large",
-    "blockentropy_model": "be-70b-base-llama3.1",
-    "custom_model": "gemini-2.5-pro-exp-03-25-openai",
-    "custom_prompt_post_processing": "strict",
+    "custom_model": "[混淆]gemini-2.5-pro-preview-05-06",
+    "custom_url": "https://api.skyi.cc/v1",
+    "custom_include_body": "",
+    "custom_exclude_body": "",
+    "custom_include_headers": "",
+    "custom_prompt_post_processing": "merge",
     "google_model": "gemini-2.0-pro-exp-02-05",
     "temperature": 1.15,
     "frequency_penalty": 0,
@@ -39,6 +42,8 @@
     "new_example_chat_prompt": "[Example Chat]",
     "continue_nudge_prompt": "[Continue the following message. Do not include ANY parts of the original message. Use capitalization and punctuation as if your reply is a part of the original message: {{lastChatMessage}}]",
     "bias_preset_selected": "Default (none)",
+    "reverse_proxy": "",
+    "proxy_password": "",
     "max_context_unlocked": true,
     "wi_format": "{0}",
     "scenario_format": "{{scenario}}",
@@ -304,7 +309,7 @@
             "marker": false,
             "name": "🤔角色卡自带思维链",
             "role": "user",
-            "content": "- 根据其他的<额外思考>进行思考,你不重复思考类似的步骤。\n\n{{// 如果角色卡自带思维链，(打开卡内的蓝灯dX思考)。\n使用<额外思考>将世界书的COT内容包起\n<额外思考>\n世界书的COT内容\n</额外思考>\n\n }}",
+            "content": "- 根据其他的<额外思考>进行思考,你不重复思考类似的步骤。\n\n{{// 如果角色卡自带思维链，(打开卡内的蓝灯dX思考)。\n使用<额外思考>将世界书的COT内容包起\n<额外思考>\n<thinking_format>\n  [Before writing as requested, think and output in Chinese within <thinking> tags]\n\n    0. Are all subtags completely generated? Includes <characterinfo>,<socialinfo>,<timelineinfo>,<sectinfo>\n                      1. Initial Game State Assessment:\n                      IF (new_game) {\n                      COLLECT:\n                      - Era selection\n                      - Difficulty level\n                      - World selection & special features\n                      - Player background & experience & race & gender &**START INFO**\n                      - Initial attributes:\n                      * Normal: All attributes = 4, talents = 0\n                      * Gifted: One attribute ≤ 10, talent ≤ 4\n                      * Exceptional: Attribute > 10 indicates extraordinary ability\n\n                      IF (experience.includes('穿越者')) {\n                      ENSURE:\n                      - Set initial timeline several months after arrival\n                      - Create consistent memory timeline:\n                      * Pre-travel memories\n                      * Travel event details\n                      * Post-arrival adaptation period (3-6 months)\n                      - Verify compatibility with other experiences\n                      - Adjust starting date: Current date - (3-6 months)\n                      - Add relevant timeline entries for adaptation period\n                      VALIDATE:\n                      - No timeline contradictions with other experiences\n                      - Logical integration of modern knowledge\n                      - Reasonable adaptation progress\n                      }\n\n                      GENERATE:\n                      - Background story (based on origin & experience)\n                      - Character behavior patterns (based on attributes)\n                      - World introduction (based on selected world)\n                      - Era context (based on selected era)\n                      - Starting scenario\n                      - Initial date: {{getvar::era}} + (300-800000) + \"Year\" + (1-12) + \"Month\" + (1-30) + \"Day\"\n                      - Starting wealth (based on background & luck attribute)\n                      }\n\n                      2. Context Analysis:\n                      - Current temporal setting\n                      - Spatial location\n                      - Scene description\n                      - Situational context\n                      - World-building consistency\n\n                      3. Cultivation System Verification:\n                      EVALUATE:\n                      - Cultivation methods' uniqueness\n                      - Social structure coherence\n                      - Institutional framework\n                      - System-world integration\n                      - Cultural consistency\n\n                      4. Narrative Style Requirements:\n                      IMPLEMENT:\n                      - Classical Chinese aesthetic elements\n                      - Detailed cultivation process descriptions\n                      - Character portrayal (actions, expressions, appearance)\n                      - Thought presentation format: *thoughts*\n                      - World-appropriate dialogue & descriptions\n                      - Cultural consistency check\n\n                      5. Format Compliance:\n                      ENSURE:\n                      - <gametext> wrapper\n                        - Proper subsection formatting\n                        - Content requirement adherence\n                        - Variable handling accuracy\n                        - Data structure consistency\n\n                        6. Player Agency Protection:\n                        AVOID:\n                        - Making decisions for {{user}}\n                        - Directing player thoughts\n                        - Forcing plot developments\n                        - Assuming player intentions\n\n                        7. Player Input Respect:\n                        MAINTAIN:\n                        - Action acknowledgment\n                        - Decision recognition\n                        - Input-based responses\n                        - Clean language standards\n                        - Structural variety\n\t\t\t\t\t\t- 需参照 World Info 中的<多维情感网络动态>，并严格依照<多维情感网络动态>进行输出，确保输出内容符合<多维情感网络动态>的规范。同时需考虑剧情展开中的相关事实（至少2项）\n\t\t\t\t\t\t- if: 考虑剧本是否包含NSFW要素。若包含，则根据{{getvar::NSFWcot}}进行推导，并严格模仿<writing_style1>中的示例输出每轮推理与学习内容。  \n\t\t\t\t\t\t- else: 忽略此步骤。  \n\n\n                        8. Consistency Verification:\n                        CHECK:\n                        - Text-variable alignment\n                        - Property/status updates\n                        - Timeline consistency\n                        - Attribute progression\n                        - Resource tracking\n                        - Causality verification\n                        - Do the character's name and personality match the information in the corresponding worldinfo?\n\n                        1. Variable Management:\n                        MONITOR:\n                        - Player action impacts\n                        - Variable adjustments\n                        - State changes\n                        - Progress tracking\n                        - System updates\n\n                        Implementation Rules:\n                        1. Descriptions must match cultivation world aesthetics\n                        2. Realm names must align with <level>\n                          3. Timeline must use consistent era naming\n                          4. Social relationships must be logical\n                          5. All changes must be player-action driven\n                          6. Content must be non-repetitive and appropriate\n                          7. All updates must be causally justified\n                          8.The main text must be output in the <maincontext> tag.\n                            9.You must ensure that \"当前章节正文|\" is output before the maincontext.\n\n                            10. Challenge & Failure System:\n                            IMPLEMENT:\n                            - Success Rate Calculation:\n                            * Base success rate = (Relevant_Attribute / Required_Attribute) * 100%\n                            * Modifier factors:\n                            - Realm difference penalty/bonus (±20% per realm gap)\n                            - Environmental effects (-30% to +30%)\n                            - Character status effects\n                            - Previous attempt penalties\n                            - Fatigue factor (-5% per consecutive attempt)\n\n                            - Action Validation:\n                            CHECK:\n                            - Current realm limitations\n                            - Physical capability boundaries\n                            - Knowledge restrictions\n                            - Resource requirements\n                            - Time constraints\n\n                            - Failure Consequences:\n                            GENERATE:\n                            - Minor setbacks (40% probability)\n                            - Moderate failures (35% probability)\n                            - Severe consequences (20% probability)\n                            - Catastrophic results (5% probability)\n\n                            - Reality Check System:\n                            VERIFY:\n                            - Action plausibility\n                            - Character capability match\n                            - Current state compatibility\n                            IF (implausible_action) {\n                            CONVERT:\n                            - Action to imagination/dream\n                            - Generate reality wake-up moment\n                            - Apply mental/physical feedback\n                            }\n\t\t\t\t\t\t\t- 阅读 <Table_Recording> 后思考:\n\t\t\t\t\t\t\t* 当前计时器应为多少?\n\t\t\t\t\t\t\t* 是否有进行表格记录?\n\t\t\t\t\t\t\t* 如何正确进行表格记录?\n\t\t\t\t\t\t\t* 当前回合是否需要进行完整表格记录(首次交互、计时器为零)?\n\n                            - Progressive Difficulty:\n                            ADJUST:\n                            - Task difficulty based on character growth\n                            - Environmental challenges\n                            - Competitor strength scaling\n                            - Resource scarcity increase\n                            - Time pressure elements\n\n                            Format Requirements:\n                            - Maintain complete <gametext> structure\n                              - Include all required subsections\n                              - Proper variable implementation\n                              - Consistent formatting\n                              - Logical progression\n                              - It is prohibited to summarize, sublimate or turn the plot at the end of the main text.\n</thinking_format>\n</额外思考>\n\n }}",
             "injection_position": 0,
             "injection_depth": 4,
             "forbid_overrides": false
@@ -937,7 +942,7 @@
                 },
                 {
                     "identifier": "4c56c6b2-3b1b-4e73-a25a-186ee4336357",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "8335c30d-24ee-4a98-a622-d158c1e9325a",
@@ -949,7 +954,7 @@
                 },
                 {
                     "identifier": "7775a027-c11c-44e6-915d-aea1897dfd1f",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "fa8177a8-ac08-4b40-9756-9e75aad92aa5",
@@ -1037,7 +1042,7 @@
                 },
                 {
                     "identifier": "218095d1-b8b3-49dd-8e25-d0ec1adbeca0",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "e5d85924-82e1-4f26-bf1c-8f7dce07a687",
@@ -1057,7 +1062,7 @@
                 },
                 {
                     "identifier": "60a7fb1e-6d2a-4089-b8f4-bac8b9d9592c",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "944fea24-e7ba-4174-8d22-a84ddacf3cd0",
@@ -1065,7 +1070,7 @@
                 },
                 {
                     "identifier": "d050df6e-2077-4b7c-9250-e13e40751708",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "4c258266-39bd-4920-bf26-4e1a90b38cf2",
@@ -1097,7 +1102,7 @@
                 },
                 {
                     "identifier": "0a8db465-0891-4e30-b254-8a12d765954d",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "a8ca7c5c-0282-491b-b1e0-02f60406ab16",
@@ -1109,7 +1114,7 @@
                 },
                 {
                     "identifier": "b30e6b7e-13ff-4467-8ae2-ba243ced739c",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "64740e0a-fd2b-4a46-84ac-d4c4f2c40e29",
@@ -1121,7 +1126,7 @@
                 },
                 {
                     "identifier": "130beff6-72f2-4736-a984-982c3fc50d17",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "205d31f5-0772-4fa9-87a0-ad696ec29339",
@@ -1141,11 +1146,11 @@
                 },
                 {
                     "identifier": "64951c52-e225-4214-8e6a-50eee3cbdeeb",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "c7d0194e-5335-4d3a-9b05-5e6a1cdd59e3",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "00ac09d5-7d36-4e37-aad8-6bc037e8ceb7",
