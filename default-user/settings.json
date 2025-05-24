@@ -22,7 +22,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": "修仙之路2.0.png",
+    "active_character": null,
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2517,24 +2517,7 @@
                 "scriptName": "【demini】D2缔改去除多余内容",
                 "disabled": false,
                 "runOnEdit": true,
-                "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<content>|</content>|```end|<done>|`<done>`|/[\\s\\S]*<\\/think>/g|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(.*?<think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "e47d31b1-4440-43ec-8f2b-cee248e920d5",
-                "scriptName": "【demini】D3前端去除多余",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
+                "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<content>|</content>|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(.*?<think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
@@ -2548,7 +2531,7 @@
             },
             {
                 "id": "815ae822-e790-4458-828d-a06bbbf98065",
-                "scriptName": "【demini】D4隐藏前文用户消息",
+                "scriptName": "【demini】D3隐藏前文用户消息",
                 "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "^([\\s\\S]*)$",
@@ -2564,7 +2547,7 @@
                 "promptOnly": true
             },
             {
-                "id": "81893123-ef30-43b1-8899-5cc0d9490fd5",
+                "id": "388b3c6b-bf9b-46eb-930d-0a19d10b2011",
                 "scriptName": "【demini】D1汇总记录折叠",
                 "disabled": false,
                 "runOnEdit": true,
@@ -2581,24 +2564,24 @@
                 "promptOnly": false
             },
             {
-                "id": "a792f09d-5fb3-4469-b622-eeb653f9f2e9",
-                "scriptName": "【demini】D3略五楼前汇总",
+                "id": "bf595364-459a-4884-8bee-0b7c9cb6f350",
+                "scriptName": "【demini】D3略三楼前汇总",
+                "disabled": false,
+                "runOnEdit": true,
                 "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
-                "minDepth": 5,
-                "maxDepth": null
+                "minDepth": 3,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
             },
             {
-                "id": "4a2617c9-ebce-4d06-95c6-e4db2a7c3109",
+                "id": "1a66b930-d2b1-44ac-934f-01fb9fbeba31",
                 "scriptName": "【demini】D1非插件式表格折叠",
                 "disabled": false,
                 "runOnEdit": true,
@@ -2615,29 +2598,29 @@
                 "promptOnly": false
             },
             {
-                "id": "d20f0852-12ad-418d-8876-69940e4ed951",
-                "scriptName": "【demini】D3隐藏全部前文[22]",
+                "id": "9fc31796-2f13-4085-a9cc-e10f5b5b4d1e",
+                "scriptName": "【demini】D4隐藏全部前文[22]",
+                "disabled": false,
+                "runOnEdit": true,
                 "findRegex": "/[\\s\\S]*/gm",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": 22,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
             },
             {
-                "id": "3e348862-e8cf-4dd5-a8ec-82313c05af74",
-                "scriptName": "【demini】D1替绝望羊折叠正则",
+                "id": "0d28134f-5b68-4619-8cc9-df6ce99d5eb3",
+                "scriptName": "【demini】专防省略号增殖正则",
                 "disabled": false,
                 "runOnEdit": true,
-                "findRegex": "/<air>(.*?)</air>/gs",
-                "replaceString": "<details><summary>*<font color=#F08080>替绝望羊</font>*</summary>\n> $1\n</details>",
+                "findRegex": "/…/gi",
+                "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
@@ -2645,127 +2628,8 @@
                 "substituteRegex": 0,
                 "minDepth": null,
                 "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
-                "id": "78741c84-9ee4-4a33-88f7-6950061414e4",
-                "scriptName": "【demini】D3前绝望羊补牢正则",
-                "findRegex": "/<air>[\\s\\S]*?</air>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "93f15b99-8c2e-450f-9300-1535eec6a668",
-                "scriptName": "【demini】自动推算时间",
-                "findRegex": "<currentTime>[\\s\\S]*?<\\/currentTime>",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "2c122066-fc4c-449c-96f7-e569fb927f57",
-                "scriptName": "【demini】开小总结用2",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/([\\s\\S]*?<details>\\s*<summary>\\s*摘要\\s*<\\/summary>|<\\/details>[\\s\\S]*?$)/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 11,
-                "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
-            },
-            {
-                "id": "67ae9a2e-1157-4fb0-86a0-da651d528142",
-                "scriptName": "【demini】开小总结用1",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<details>\\s*<summary>\\s*摘要\\s*<\\/summary>[\\s\\S]*?<\\/details>/gsi",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": 10,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "780bf160-1f1c-455f-93e7-e695c0e482d0",
-                "scriptName": "【专防】省略号增殖",
-                "findRegex": "/(最终|然后|地|的|以及|有些|和|似乎|已经|是|去|或许|更加|那个|一[\\u4e00-\\u9fa5])(……|…)/g",
-                "replaceString": "$1",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "30676b98-aacd-4d2d-bf98-654cb9e29824",
-                "scriptName": "【专防】省略号增殖2",
-                "findRegex": "/(最终|然后|地|的|以及|有些|和|似乎|已经|是|去|或许|更加|那个|一[\\u4e00-\\u9fa5])(……|…|······)(?!\\s)/g",
-                "replaceString": "$1",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "9dd34d96-3165-4007-8ba1-c9145daea66b",
-                "scriptName": "【专防】星号增殖正则",
-                "findRegex": "/\\*\\*/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
             },
             {
                 "id": "c28179a9-f094-4df5-a8a9-29c6f46fdd8a",
@@ -3665,7 +3529,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 4,
+                "lastProcessedLength": 1,
                 "userConfigured": true
             }
         },
