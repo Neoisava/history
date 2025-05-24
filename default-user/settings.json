@@ -2951,7 +2951,7 @@
                 "-2": "The text prompt used to generate the image. Must represent an exhaustive description of the desired image that will allow an artist or a photographer to perfectly recreate it."
             },
             "character_prompts": {
-                "修仙之路2.0": "中景,近景"
+                "修仙之路2.0": "中景,近景,NFWS"
             },
             "source": "novel",
             "scheduler": "native",
@@ -3633,7 +3633,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 49,
+                "lastProcessedLength": 50,
                 "userConfigured": true
             }
         },
