@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "true",
-        "NavOpened": "false",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -717,7 +717,7 @@
             "isExtensionAble": true,
             "isAiReadTable": true,
             "isAiWriteTable": true,
-            "isTableToChat": false,
+            "isTableToChat": true,
             "use_main_api": false,
             "bool_ignore_del": false,
             "confirm_before_execution": true,
@@ -740,7 +740,7 @@
             "table_to_chat_can_edit": false,
             "table_to_chat_mode": "context_bottom",
             "to_chat_container": "<html>\n<head>\n  <style>\n    .memory-table-container {\n      font-family: 'ZhuqueFangsong', serif;\n      width: 100%;\n      margin: 0 auto;\n      padding: 10px;\n      box-sizing: border-box;\n      position: relative;\n    }\n    .memory-table-title {\n      background: transparent;\n      color: rgba(185, 32, 11, 0.84);\n      text-align: center;\n      padding: 8px 15px;\n      margin: 5px auto;\n      border-radius: 8px;\n      cursor: pointer;\n      font-weight: 300;\n      font-size: 1rem;\n      display: block;\n      width: fit-content;\n      border: 1px solid rgba(200, 200, 200, 1);\n      outline: none;\n      position: relative;\n      z-index: 10;\n      transition: all 0.3s ease;\n    }\n    .memory-table-title:hover {\n      background-color: rgba(230, 230, 230, 1);\n      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);\n    }\n    .memory-table-content {\n      background-color: rgba(255, 255, 255, 0.8);\n      backdrop-filter: blur(5px);\n      -webkit-backdrop-filter: blur(5px);\n      border-radius: 8px;\n      padding: 15px;\n      color: rgba(0, 0, 0, 1);\n      overflow: auto;\n      max-height: 70vh;\n      position: absolute;\n      bottom: 100%;\n      left: 0;\n      right: 0;\n      z-index: 999;\n      transform-origin: bottom center;\n      margin-bottom: 10px;\n      display: none;\n      border: 1px solid rgba(200, 200, 200, 1);\n      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);\n      font-weight: 300;\n      line-height: 1.5;\n      scrollbar-width: thin;\n      scrollbar-color: rgba(185, 32, 11, 0.5) rgba(240, 240, 240, 0.5);\n    }\n    .memory-table-content::-webkit-scrollbar {\n      width: 12px;\n      height: 12px;\n    }\n    .memory-table-content::-webkit-scrollbar-track {\n      background: rgba(240, 240, 240, 0.5);\n      border-radius: 10px;\n    }\n    .memory-table-content::-webkit-scrollbar-thumb {\n      background-color: rgba(185, 32, 11, 0.5);\n      border-radius: 10px;\n      border: 3px solid rgba(240, 240, 240, 0.5);\n    }\n    .memory-table-content::-webkit-scrollbar-thumb:hover {\n      background-color: rgba(185, 32, 11, 0.7);\n    }\n    details {\n      position: relative;\n    }\n    details[open] .memory-table-title {\n      background-color: rgba(245, 245, 245, 1);\n    }\n    details[open] .memory-table-content {\n      display: block;\n      animation: popup-animation 0.3s ease-out forwards;\n    }\n    details:not([open]) .memory-table-content.closing {\n      display: block;\n      animation: close-animation 0.3s ease-in forwards;\n    }\n    @keyframes popup-animation {\n      0% { opacity: 0; transform: translateY(10px) scale(0.95); }\n      100% { opacity: 1; transform: translateY(0) scale(1); }\n    }\n    @keyframes close-animation {\n      0% { opacity: 1; transform: translateY(0) scale(1); }\n      100% { opacity: 0; transform: translateY(10px) scale(0.95); }\n    }\n    @media (max-width: 768px) {\n      .memory-table-container { padding: 5px; }\n      .memory-table-title { font-size: 0.9rem; padding: 6px 12px; }\n      .memory-table-content { padding: 10px; scrollbar-width: auto; }\n      .memory-table-content::-webkit-scrollbar { width: 8px; height: 8px; }\n      .memory-table-content::-webkit-scrollbar-thumb { border: 2px solid rgba(240, 240, 240, 0.5); }\n    }\n    @media (hover: none) {\n      .memory-table-content::-webkit-scrollbar { width: 10px; height: 10px; }\n    }\n  </style>\n</head>\n<body>\n  <div class=\"memory-table-container\">\n    <details id=\"memory-details\">\n      <summary class=\"memory-table-title\">记忆增强表格</summary>\n      <div class=\"memory-table-content\">\n        $0\n      </div>\n    </details>\n  </div>\n  <script>\n    document.addEventListener('DOMContentLoaded', function() {\n      const details = document.getElementById('memory-details');\n      const content = details.querySelector('.memory-table-content');\n      let isAnimating = false;\n      details.addEventListener('toggle', function(e) {\n        if (isAnimating) { e.preventDefault(); return; }\n        isAnimating = true;\n        if (details.open) {\n          content.style.display = 'block';\n          void content.offsetWidth;\n          content.style.animation = 'popup-animation 0.3s ease-out forwards';\n          content.addEventListener('animationend', function handleAnimationEnd() {\n            content.removeEventListener('animationend', handleAnimationEnd);\n            isAnimating = false;\n          }, {once: true});\n        } else {\n          content.classList.add('closing');\n          setTimeout(function() {\n            content.classList.remove('closing');\n            content.style.display = 'none';\n            isAnimating = false;\n          }, 300);\n        }\n      });\n      if ('ontouchstart' in window || navigator.maxTouchPoints) {\n        content.style.scrollBehavior = 'smooth';\n      }\n    });\n  </script>\n</body>\n</html>",
-            "alternate_switch": false,
+            "alternate_switch": true,
             "sheet_0yxIAD60": {
                 "uid": "sheet_0yxIAD60",
                 "name": "地点",
@@ -1677,15 +1677,15 @@
             "lastSelectedTemplate": "rebuild_base"
         },
         "table_selected_sheets": [
-            "template_YcpxTowp",
-            "template_HMvI6N6o",
-            "template_lhnOpQ0k",
-            "template_iFwtbSO8",
-            "template_DB2WBEaR"
+            "template_a4o9pWnP",
+            "template_nYKmUIos",
+            "template_iMH6KjQt",
+            "template_xqVC4dWZ",
+            "template_1tXCrBlN"
         ],
         "table_database_templates": [
             {
-                "uid": "template_YcpxTowp",
+                "uid": "template_a4o9pWnP",
                 "name": "角色信息",
                 "domain": "global",
                 "type": "dynamic",
@@ -1696,32 +1696,32 @@
                 "triggerSendDeep": 1,
                 "hashSheet": [
                     [
-                        "cell_undefined_HFHtnMvDRJliKomC",
-                        "cell_undefined_QLwnWS4dsUDDJIkz",
-                        "cell_undefined_6UVVEgsx8ktABGbB",
-                        "cell_undefined_65FOZrnmvbTdt8kN",
-                        "cell_undefined_UdqbllGiSMms1uJQ",
-                        "cell_undefined_oYaPrnTdgIF7ln7r",
-                        "cell_undefined_ZnWnRlMuhVIrEZnR",
-                        "cell_undefined_PZEeYsANJF51Hu0c",
-                        "cell_undefined_EGn1rRHchpLGOAGM",
-                        "cell_undefined_zenHMrKN2JJC5pmM",
-                        "cell_undefined_Ui6SJKmusuyOqftc",
-                        "cell_undefined_vg4flH7jjBZf92fv",
-                        "cell_undefined_OSXFgAAIFx48yGNI",
-                        "cell_undefined_JuJCL3u5yTYSXZ2L",
-                        "cell_undefined_DS5NZFrfGeDBWz0S",
-                        "cell_undefined_wvA5Tir4BUgkYmqK",
-                        "cell_undefined_NyiXEkzPT1rEadD6",
-                        "cell_undefined_mge8jBtF6iS1yWTc"
+                        "cell_undefined_9nXPpZ6XUZ4sqi9f",
+                        "cell_undefined_qVqaYhxvRa4rUWP6",
+                        "cell_undefined_NdQw38ID1WXJXEH1",
+                        "cell_undefined_GAGKzU39D8r1ve3L",
+                        "cell_undefined_YsJCk6xuDLaCIX8T",
+                        "cell_undefined_1je0WynwDrs7dSNl",
+                        "cell_undefined_HCSpODC5rJOlvjs9",
+                        "cell_undefined_TjjRCxmumXNcAOce",
+                        "cell_undefined_MeFYrT0EUpMG3aVd",
+                        "cell_undefined_fvPxvlgRWtwo6bgN",
+                        "cell_undefined_80nFIWQDZ206hUTy",
+                        "cell_undefined_99opWR2xsC2HMHVl",
+                        "cell_undefined_RPmjp5yqaN09DlcS",
+                        "cell_undefined_Fu1AdXm9OGQMLKNB",
+                        "cell_undefined_EkgZxtSfMxZar5iu",
+                        "cell_undefined_0fom6JfhLb3wnEZ8",
+                        "cell_undefined_UYD1BosTVIWRveZq",
+                        "cell_undefined_Qx1hdbjH428FG8OX"
                     ]
                 ],
                 "cellHistory": [
                     {
-                        "uid": "cell_undefined_HFHtnMvDRJliKomC",
+                        "uid": "cell_undefined_9nXPpZ6XUZ4sqi9f",
                         "type": "sheet_origin",
                         "status": "",
-                        "coordUid": "coo_WPX2OscAX1Fr030",
+                        "coordUid": "coo_xb3WGsIwvuF2PFD",
                         "data": {
                             "note": "tableIndex: 0 - 角色信息 (Character Information)\n说明: 核心角色库。完整性优先，禁留空/未知(需详尽推测)，禁删角色行。适用通用单元格精简及表0特定行级精简规则。\n列:\n `0:角色ID` (唯一, B/G/M+数字)\n `1:姓名|性别` (格式: `姓名|性别`。性别未知需推测)\n `2:身份/称谓` (未知需推测。适用单元格精简)\n `3:核心性格` (未知需推测。适用单元格精简)\n `4:当前状态` (动态更新, 初始需推测。适用单元格精简)\n `5:特征(含发/瞳/身形/脸/手/足/标记/性器官细节)` (务必全面详尽推测，含性器官细节。适用单元格及行级精简)\n `6:声音描述` (未知需推测。适用单元格精简)\n `7:性经验(含处子状态)` (务必明确处子状态及经验水平推测。适用单元格精简)\n `8:特殊癖好/倾向` (未知填“无明显特殊癖好推测而来”。适用单元格精简)\n `9:备注(含性取向)` (务必含性取向推测。适用单元格精简)\n `10:背景故事/重要经历` (未知需推测基础背景。适用单元格及行级精简)\n `11:技能/能力` (未知需推测基础能力。适用单元格及行级精简)\n `12:目标/动机` (未知需推测通用目标。适用单元格及行级精简)\n `13:关系(对他人认知)` (格式: `角色B ID:描述 | ...`。描述部分适用单元格精简)\n `14:态度(对他人基本态度)` (格式: `角色B ID:描述 | ...`。描述部分适用单元格精简)\n `15:角色互评指标(对他人十项指标)` (格式: `角色B ID:{指标名1:值,...}`。初创角色至少含核心初始值)\n `16:综合情感状态` (初始需推测。适用单元格精简)",
                             "initNode": "表格初始时可能为空，或者包含根据故事设定预先创建的几个核心角色信息。每个角色占一行，包含所有17列的初始数据，未知信息必须进行合理详尽推测。",
@@ -1732,170 +1732,170 @@
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_QLwnWS4dsUDDJIkz",
+                        "uid": "cell_undefined_qVqaYhxvRa4rUWP6",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_DvMGVRbRSq9v6qZ",
+                        "coordUid": "coo_cNEdPcFOOagd6NN",
                         "data": {
                             "value": "角色ID"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_6UVVEgsx8ktABGbB",
+                        "uid": "cell_undefined_NdQw38ID1WXJXEH1",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_GXPrAFFiTZuKxnK",
+                        "coordUid": "coo_NemE0yvxFnBuVLt",
                         "data": {
                             "value": "姓名|性别"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_65FOZrnmvbTdt8kN",
+                        "uid": "cell_undefined_GAGKzU39D8r1ve3L",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_GmiYXTaJ3E21fIb",
+                        "coordUid": "coo_I9sH6Q5qhGEDC5F",
                         "data": {
                             "value": "身份/称谓"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_UdqbllGiSMms1uJQ",
+                        "uid": "cell_undefined_YsJCk6xuDLaCIX8T",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_RPXGiDioVRVaJKm",
+                        "coordUid": "coo_6ZYiotgbR2KHpo5",
                         "data": {
                             "value": "核心性格"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_oYaPrnTdgIF7ln7r",
+                        "uid": "cell_undefined_1je0WynwDrs7dSNl",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_AFk7yk6gLfNlYkg",
+                        "coordUid": "coo_0PXCD21ea7aHRyu",
                         "data": {
                             "value": "当前状态"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_ZnWnRlMuhVIrEZnR",
+                        "uid": "cell_undefined_HCSpODC5rJOlvjs9",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_hSYZW9pnYFl17N1",
+                        "coordUid": "coo_Mncd3pfeURKAnVe",
                         "data": {
                             "value": "特征(含发/瞳/身形/脸/手/足/标记/性器官细节)"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_PZEeYsANJF51Hu0c",
+                        "uid": "cell_undefined_TjjRCxmumXNcAOce",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_X2PglJRvbpKjxKz",
+                        "coordUid": "coo_v1SSQDhfiowTuTv",
                         "data": {
                             "value": "声音描述"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_EGn1rRHchpLGOAGM",
+                        "uid": "cell_undefined_MeFYrT0EUpMG3aVd",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_7A9idxXC0Wfuqpk",
+                        "coordUid": "coo_3T18pn1XmDKS2Ps",
                         "data": {
                             "value": "性经验(含处子状态)"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_zenHMrKN2JJC5pmM",
+                        "uid": "cell_undefined_fvPxvlgRWtwo6bgN",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_f7LbZEXoDknqZcE",
+                        "coordUid": "coo_uC5bSk9pUozyqjo",
                         "data": {
                             "value": "特殊癖好/倾向"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_Ui6SJKmusuyOqftc",
+                        "uid": "cell_undefined_80nFIWQDZ206hUTy",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_H7pf0IgHaysO4HD",
+                        "coordUid": "coo_OvRKLDk8wXIQmY6",
                         "data": {
                             "value": "备注(含性取向)"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_vg4flH7jjBZf92fv",
+                        "uid": "cell_undefined_99opWR2xsC2HMHVl",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_7yH4yqKQS0wmIeK",
+                        "coordUid": "coo_F7jAJ0SM11Djthf",
                         "data": {
                             "value": "背景故事/重要经历"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_OSXFgAAIFx48yGNI",
+                        "uid": "cell_undefined_RPmjp5yqaN09DlcS",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_FPbe6fdohOFKNjj",
+                        "coordUid": "coo_q6Ls8ESkl7W5flO",
                         "data": {
                             "value": "技能/能力"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_JuJCL3u5yTYSXZ2L",
+                        "uid": "cell_undefined_Fu1AdXm9OGQMLKNB",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_N8rNrv2kebZ3PzH",
+                        "coordUid": "coo_l0qe0uJaX5GqHDI",
                         "data": {
                             "value": "目标/动机"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_DS5NZFrfGeDBWz0S",
+                        "uid": "cell_undefined_EkgZxtSfMxZar5iu",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_eIZqkNWtdlvCWFS",
+                        "coordUid": "coo_iqT69QWxd10Yptl",
                         "data": {
                             "value": "关系(对他人认知)"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_wvA5Tir4BUgkYmqK",
+                        "uid": "cell_undefined_0fom6JfhLb3wnEZ8",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_vd4JwkPEMlYx4Os",
+                        "coordUid": "coo_AjQCtqtVBHKkegT",
                         "data": {
                             "value": "态度(对他人基本态度)"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_NyiXEkzPT1rEadD6",
+                        "uid": "cell_undefined_UYD1BosTVIWRveZq",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_VOvhk0jMvlIT3BF",
+                        "coordUid": "coo_vtd0FzDVfX4m7ep",
                         "data": {
                             "value": "角色互评指标(对他人十项指标)"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_mge8jBtF6iS1yWTc",
+                        "uid": "cell_undefined_Qx1hdbjH428FG8OX",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_MTFOwHzeyWtoRtI",
+                        "coordUid": "coo_UzOUbhKZge6VOvh",
                         "data": {
                             "value": "综合情感状态"
                         },
@@ -1921,7 +1921,7 @@
                 }
             },
             {
-                "uid": "template_HMvI6N6o",
+                "uid": "template_nYKmUIos",
                 "name": "纪要",
                 "domain": "global",
                 "type": "dynamic",
@@ -1932,26 +1932,26 @@
                 "triggerSendDeep": 1,
                 "hashSheet": [
                     [
-                        "cell_undefined_qYI5vFBKkfV4WuRV",
-                        "cell_undefined_Q7xXKZOD0bv338lx",
-                        "cell_undefined_U58djtEslaovydX2",
-                        "cell_undefined_g9ZDI6OY7DSIX5j7",
-                        "cell_undefined_Enk9lr7vGwQloYqi",
-                        "cell_undefined_hP64qVas2zxbKQcB",
-                        "cell_undefined_HcvWm1fXIVOXWvsX",
-                        "cell_undefined_S3bYbW8VSwfZLoHL",
-                        "cell_undefined_xrR5OxlJlssh5Nme",
-                        "cell_undefined_8jU4c2pnfEsCpUX0",
-                        "cell_undefined_bEggzoLk80qh862u",
-                        "cell_undefined_oLp8hGvRhO5S6ocY"
+                        "cell_undefined_MwRlqqWziQugcW3O",
+                        "cell_undefined_BqWpAcjZmTSu0ExL",
+                        "cell_undefined_vfag6EYoXDXiluII",
+                        "cell_undefined_oScvlle6LOzJL2Nb",
+                        "cell_undefined_kAHMdfcQIL6MkpWz",
+                        "cell_undefined_ac5jaSwUvPshzqtt",
+                        "cell_undefined_B61MBgCgsMPWglBD",
+                        "cell_undefined_5B43Zagy0lzl0TGr",
+                        "cell_undefined_lJEOZColqM5Uz1et",
+                        "cell_undefined_6csDiXsSmaU3Fjog",
+                        "cell_undefined_ijD2qJgQ7dbItYKB",
+                        "cell_undefined_WkZxv7WdXU82bBve"
                     ]
                 ],
                 "cellHistory": [
                     {
-                        "uid": "cell_undefined_qYI5vFBKkfV4WuRV",
+                        "uid": "cell_undefined_MwRlqqWziQugcW3O",
                         "type": "sheet_origin",
                         "status": "",
-                        "coordUid": "coo_cGGrYjNP4j1Sklm",
+                        "coordUid": "coo_eW0byRYGVRWg0MH",
                         "data": {
                             "note": "tableIndex: 1 - 纪要 (Minutes/Summary)\n说明: 高保真事件快照。按时序捕捉细节，含详尽着装。累积后由Table 2总结并删除。适用通用单元格精简及Table 1特定自动总结规则（3条记录或总字符数超限）。\n列:\n `0:纪要ID`\n `1:时间戳` (纪元:年-月-日 时:分)\n `2:核心概述` (准确不省略细节。适用单元格精简)\n `3:涉及角色` (`/`分隔)\n `4:主要人物着装(详尽描述规则)` (格式: `饰品|上妆|上身衣物|下身衣物|鞋袜 / 角色间`。单角色各部分适用单元格精简)\n `5:关键物品` (适用单元格精简)\n `6:关键动作` (适用单元格精简)\n `7:关键对话` (精选几句。适用单元格精简)\n `8:地点` (适用单元格精简)\n `9:情感快照` (`/`分隔。单角色描述适用单元格精简)\n `10:角色间距` (适用单元格精简)",
                             "initNode": "表格初始状态为空，没有任何纪要记录。",
@@ -1962,110 +1962,110 @@
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_Q7xXKZOD0bv338lx",
+                        "uid": "cell_undefined_BqWpAcjZmTSu0ExL",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_Yxu8b3kuQU8Dhiz",
+                        "coordUid": "coo_utDTN1ysazfK3et",
                         "data": {
                             "value": "纪要ID"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_U58djtEslaovydX2",
+                        "uid": "cell_undefined_vfag6EYoXDXiluII",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_I2bnYOcpztnGJSm",
+                        "coordUid": "coo_AlDdyqEA9MBgBIg",
                         "data": {
                             "value": "时间戳"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_g9ZDI6OY7DSIX5j7",
+                        "uid": "cell_undefined_oScvlle6LOzJL2Nb",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_8j8l8bIpFdHBEtZ",
+                        "coordUid": "coo_vA2mY7UkNZ4N6ww",
                         "data": {
                             "value": "核心概述"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_Enk9lr7vGwQloYqi",
+                        "uid": "cell_undefined_kAHMdfcQIL6MkpWz",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_oSGkd6XYJnqOHwC",
+                        "coordUid": "coo_xY529lhfdIjdmog",
                         "data": {
                             "value": "涉及角色"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_hP64qVas2zxbKQcB",
+                        "uid": "cell_undefined_ac5jaSwUvPshzqtt",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_0lhjonzRfgVy7X5",
+                        "coordUid": "coo_6KXAWw31N7MrtpN",
                         "data": {
                             "value": "主要人物着装(详尽描述规则)"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_HcvWm1fXIVOXWvsX",
+                        "uid": "cell_undefined_B61MBgCgsMPWglBD",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_t3puFXczKSuyqhg",
+                        "coordUid": "coo_F27XHzqR9a4GS5t",
                         "data": {
                             "value": "关键物品"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_S3bYbW8VSwfZLoHL",
+                        "uid": "cell_undefined_5B43Zagy0lzl0TGr",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_2uDuxSc40ODsgkG",
+                        "coordUid": "coo_lwwHaTU90fzXuHK",
                         "data": {
                             "value": "关键动作"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_xrR5OxlJlssh5Nme",
+                        "uid": "cell_undefined_lJEOZColqM5Uz1et",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_kHIyJz2GoLoesFZ",
+                        "coordUid": "coo_LM85jfwcsY0L00T",
                         "data": {
                             "value": "关键对话"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_8jU4c2pnfEsCpUX0",
+                        "uid": "cell_undefined_6csDiXsSmaU3Fjog",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_WYoH5bMi4MUir1X",
+                        "coordUid": "coo_5dZ0WcjqAGAGc6O",
                         "data": {
                             "value": "地点"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_bEggzoLk80qh862u",
+                        "uid": "cell_undefined_ijD2qJgQ7dbItYKB",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_DsQ9PGFXhAQZHWV",
+                        "coordUid": "coo_JPiPAaCVK3SN2W8",
                         "data": {
                             "value": "情感快照"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_oLp8hGvRhO5S6ocY",
+                        "uid": "cell_undefined_WkZxv7WdXU82bBve",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_6sYsq4WIOkmjJKu",
+                        "coordUid": "coo_FjUfeydPGzaDqP1",
                         "data": {
                             "value": "角色间距"
                         },
@@ -2091,7 +2091,7 @@
                 }
             },
             {
-                "uid": "template_lhnOpQ0k",
+                "uid": "template_iMH6KjQt",
                 "name": "大总结",
                 "domain": "global",
                 "type": "dynamic",
@@ -2102,23 +2102,23 @@
                 "triggerSendDeep": 1,
                 "hashSheet": [
                     [
-                        "cell_undefined_ZQmhKfaTmJF18CBx",
-                        "cell_undefined_eBRt4A3ULBr6ff4y",
-                        "cell_undefined_hgEupfqmqAAhANrG",
-                        "cell_undefined_sk8T8uTZjCp7KM6x",
-                        "cell_undefined_cpvFcJVxNBiFTLX6",
-                        "cell_undefined_06R5gJzX86FfhmZu",
-                        "cell_undefined_DRk7Mi67QCys3ArR",
-                        "cell_undefined_shI5ELUlO15vgA2j",
-                        "cell_undefined_xyqCDaRuEpWxDYEx"
+                        "cell_undefined_J1WgG1SviYRkhGpS",
+                        "cell_undefined_76QqIkrQwQm5sbkp",
+                        "cell_undefined_sgw70CkUrJCu4zjH",
+                        "cell_undefined_vS2vLclnLxHrxfWx",
+                        "cell_undefined_1Mb2mzWO8TUBpZpt",
+                        "cell_undefined_KDvwSDSBSg2Fvrka",
+                        "cell_undefined_NWFhoflalIoho3EG",
+                        "cell_undefined_P5ib6It5c7eSXQ2F",
+                        "cell_undefined_y6WsYnZvx5X3xAtN"
                     ]
                 ],
                 "cellHistory": [
                     {
-                        "uid": "cell_undefined_ZQmhKfaTmJF18CBx",
+                        "uid": "cell_undefined_J1WgG1SviYRkhGpS",
                         "type": "sheet_origin",
                         "status": "",
-                        "coordUid": "coo_B5cnVOr7fNUD9Bf",
+                        "coordUid": "coo_ze87gWyXk83nTP3",
                         "data": {
                             "note": "tableIndex: 2 - 大总结 (Grand Summary/Archive)\n说明: 整合性事件总结，由Table 1触发。追踪关键物品最终状态并联动Table 0。原则上禁删。适用通用单元格精简及Table 2特定大总结精简规则。\n列:\n `0:总结ID`\n `1:创建时间戳` (格式: `[起始时间戳] - [结束时间戳]`)\n `2:归档时间戳` (可选, 单一时间戳)\n `3:标题/主题` (适用单元格精简)\n `4:概述` (详细连贯整合Table 1内容。适用单元格及Table 2自身精简)\n `5:包含的纪要ID列表` (`;`分隔)\n `6:涉及的主要角色` (`/`分隔)\n `7:关键物品总结` (格式: `物品名(最终状态)/...`。无则“无关键物品变化”。单物品描述适用单元格精简)",
                             "initNode": "表格初始时为空，不包含任何总结记录。",
@@ -2129,80 +2129,80 @@
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_eBRt4A3ULBr6ff4y",
+                        "uid": "cell_undefined_76QqIkrQwQm5sbkp",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_1ma1aJhHeRhMhrT",
+                        "coordUid": "coo_ekUFRtCYmvHedQy",
                         "data": {
                             "value": "总结ID"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_hgEupfqmqAAhANrG",
+                        "uid": "cell_undefined_sgw70CkUrJCu4zjH",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_vFgEGWJrUCqZW4Q",
+                        "coordUid": "coo_qwl4TqwwB4ea2hW",
                         "data": {
                             "value": "创建时间戳"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_sk8T8uTZjCp7KM6x",
+                        "uid": "cell_undefined_vS2vLclnLxHrxfWx",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_04GIRw6G935LmQ2",
+                        "coordUid": "coo_JdHPBoxBoRNUBnk",
                         "data": {
                             "value": "归档时间戳"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_cpvFcJVxNBiFTLX6",
+                        "uid": "cell_undefined_1Mb2mzWO8TUBpZpt",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_fPOzOugVw4ogUpe",
+                        "coordUid": "coo_F93JwaILhsLBXu9",
                         "data": {
                             "value": "标题/主题"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_06R5gJzX86FfhmZu",
+                        "uid": "cell_undefined_KDvwSDSBSg2Fvrka",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_E7urBxhmuxVRwAh",
+                        "coordUid": "coo_hebDuabQ1RdtbSw",
                         "data": {
                             "value": "概述"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_DRk7Mi67QCys3ArR",
+                        "uid": "cell_undefined_NWFhoflalIoho3EG",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_gOb0Yn6KvKGQGV5",
+                        "coordUid": "coo_0H3zUgpuQwWLwXs",
                         "data": {
                             "value": "包含的纪要ID列表"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_shI5ELUlO15vgA2j",
+                        "uid": "cell_undefined_P5ib6It5c7eSXQ2F",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_aXqKQ8HiUO0DO1w",
+                        "coordUid": "coo_IsxcV173lMV9A24",
                         "data": {
                             "value": "涉及的主要角色"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_xyqCDaRuEpWxDYEx",
+                        "uid": "cell_undefined_y6WsYnZvx5X3xAtN",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_FTagXx7lV6YIcqg",
+                        "coordUid": "coo_6ampxWzvHvWbenb",
                         "data": {
                             "value": "关键物品总结"
                         },
@@ -2228,7 +2228,7 @@
                 }
             },
             {
-                "uid": "template_iFwtbSO8",
+                "uid": "template_xqVC4dWZ",
                 "name": "用户偏好",
                 "domain": "global",
                 "type": "dynamic",
@@ -2239,18 +2239,18 @@
                 "triggerSendDeep": 1,
                 "hashSheet": [
                     [
-                        "cell_undefined_H48lYeP7hDnTH9d5",
-                        "cell_undefined_fFhSir3G174nwzMP",
-                        "cell_undefined_PRzaxPt1QE1T0toB",
-                        "cell_undefined_gFjjGBRDZMaAyZ6P"
+                        "cell_undefined_23Q2FJAJVuLRfAVo",
+                        "cell_undefined_JCdsyX68pVRnhswS",
+                        "cell_undefined_AuL9sPNvXfkIzENp",
+                        "cell_undefined_9Pcr3tIWD8D3aui2"
                     ]
                 ],
                 "cellHistory": [
                     {
-                        "uid": "cell_undefined_H48lYeP7hDnTH9d5",
+                        "uid": "cell_undefined_23Q2FJAJVuLRfAVo",
                         "type": "sheet_origin",
                         "status": "",
-                        "coordUid": "coo_taZ0Lj3nuBk2VBw",
+                        "coordUid": "coo_QG0hFEhXBrev0XV",
                         "data": {
                             "note": "tableIndex: 3 - 用户偏好 (User Preferences)\n说明: AI主动学习识别用户偏好。设总字符数阈值及相似条目融合机制，满足条件时自动精简与融合。适用通用单元格精简及Table 3特定精简规则。\n列:\n `0:偏好项` (适用单元格精简)\n `1:偏好值` (适用单元格精简)\n `2:备注` (适用单元格精简)",
                             "initNode": "表格初始状态通常为空，或仅包含极少数基于通用情况推测的基础偏好。AI从与用户的第一次互动开始，启动偏好识别和学习机制。",
@@ -2261,30 +2261,30 @@
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_fFhSir3G174nwzMP",
+                        "uid": "cell_undefined_JCdsyX68pVRnhswS",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_DlWft1DrTely7jE",
+                        "coordUid": "coo_Hh79CcdEdrKzlPy",
                         "data": {
                             "value": "偏好项"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_PRzaxPt1QE1T0toB",
+                        "uid": "cell_undefined_AuL9sPNvXfkIzENp",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_NV3CPsLbGtk3uWa",
+                        "coordUid": "coo_VngWpstpKyw1YfA",
                         "data": {
                             "value": "偏好值"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_gFjjGBRDZMaAyZ6P",
+                        "uid": "cell_undefined_9Pcr3tIWD8D3aui2",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_Ltb3sLaXT39eZO0",
+                        "coordUid": "coo_VCAVoWbTX84puBn",
                         "data": {
                             "value": "备注"
                         },
@@ -2310,7 +2310,7 @@
                 }
             },
             {
-                "uid": "template_DB2WBEaR",
+                "uid": "template_1tXCrBlN",
                 "name": "正文尾部",
                 "domain": "global",
                 "type": "dynamic",
@@ -2321,16 +2321,16 @@
                 "triggerSendDeep": 1,
                 "hashSheet": [
                     [
-                        "cell_undefined_24AM0uMPAimnJuv3",
-                        "cell_undefined_1jl7snhrBVYPyew0"
+                        "cell_undefined_547TQOmkvZcN8idz",
+                        "cell_undefined_XUOlisxszEntpA9u"
                     ]
                 ],
                 "cellHistory": [
                     {
-                        "uid": "cell_undefined_24AM0uMPAimnJuv3",
+                        "uid": "cell_undefined_547TQOmkvZcN8idz",
                         "type": "sheet_origin",
                         "status": "",
-                        "coordUid": "coo_LMmqC9Zvf6zRr37",
+                        "coordUid": "coo_zuNm8vypwmuLAgZ",
                         "data": {
                             "note": "tableIndex: 4 - 正文尾部\n说明: 始终一行一列，记录`content`最后30-50字，保下次连贯。\n列:\n `0:尾部内容`",
                             "initNode": "表格初始时包含一行，内容为“初始尾部内容”。",
@@ -2341,10 +2341,10 @@
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_1jl7snhrBVYPyew0",
+                        "uid": "cell_undefined_XUOlisxszEntpA9u",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_PXzsheUiLg6NqGY",
+                        "coordUid": "coo_kBLu5eSvsj2u5Bs",
                         "data": {
                             "value": "尾部内容"
                         },
@@ -2372,7 +2372,7 @@
         ],
         "IMPORTANT_USER_PRIVACY_DATA": {
             "custom_api_url": "https://api.zhizengzeng.com/v1",
-            "custom_api_key": "001f004b5c065407065700065202550e1f4463635c715c65505424323756231356663505502140003462240e650169055c4a4d",
+            "custom_api_key": "001f004b5c06540505500504510c56051f63764108565670300020551333260373030241375d5740157639437d245c51604a4d",
             "custom_model_name": "deepseek-v3"
         },
         "spoiler_free_mode": true
@@ -3597,7 +3597,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 26,
                 "userConfigured": true
             }
         },
