@@ -3766,7 +3766,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 5,
+                "lastProcessedLength": 4,
                 "userConfigured": true
             }
         },
@@ -4940,11 +4940,11 @@
                     },
                     {
                         "identifier": "b30e6b7e-13ff-4467-8ae2-ba243ced739c",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "64740e0a-fd2b-4a46-84ac-d4c4f2c40e29",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "cd70a552-8b07-48d4-8bfe-2a96cb7e5d0d",
@@ -4952,7 +4952,7 @@
                     },
                     {
                         "identifier": "130beff6-72f2-4736-a984-982c3fc50d17",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "205d31f5-0772-4fa9-87a0-ad696ec29339",
@@ -4976,7 +4976,7 @@
                     },
                     {
                         "identifier": "c7d0194e-5335-4d3a-9b05-5e6a1cdd59e3",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "00ac09d5-7d36-4e37-aad8-6bc037e8ceb7",
