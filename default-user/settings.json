@@ -2927,8 +2927,8 @@
             "height": 512,
             "prompt_prefix": "NFWS,best quality, absurdres, masterpiece,",
             "negative_prompt": "lowres, bad anatomy, bad hands, text, error, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
-            "sampler": "k_euler",
-            "model": "nai-diffusion-4-full",
+            "sampler": null,
+            "model": null,
             "restore_faces": false,
             "enable_hr": false,
             "horde": true,
@@ -2951,8 +2951,8 @@
                 "-2": "The text prompt used to generate the image. Must represent an exhaustive description of the desired image that will allow an artist or a photographer to perfectly recreate it."
             },
             "character_prompts": {},
-            "source": "novel",
-            "scheduler": "karras",
+            "source": "comfy",
+            "scheduler": null,
             "vae": null,
             "seed": -1,
             "adetailer_face": false,
@@ -2999,7 +2999,7 @@
                     "prefix": "best quality, absurdres, aesthetic,"
                 }
             ],
-            "comfy_url": "http://127.0.0.1:7860",
+            "comfy_url": "https://xnlbof--8188.ap-shanghai.cloudstudio.work/",
             "comfy_workflow": "Char_Avatar_Comfy_Workflow.json",
             "pollinations_enhance": false,
             "wand_visible": false,
@@ -3624,7 +3624,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 40,
+                "lastProcessedLength": 42,
                 "userConfigured": true
             }
         },
