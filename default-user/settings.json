@@ -2923,7 +2923,7 @@
             "dimension_min": 64,
             "dimension_max": 2048,
             "dimension_step": 64,
-            "width": 960,
+            "width": 768,
             "height": 512,
             "prompt_prefix": "NFWS,best quality, absurdres, masterpiece,",
             "negative_prompt": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
@@ -3633,7 +3633,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 52,
+                "lastProcessedLength": 54,
                 "userConfigured": true
             }
         },
