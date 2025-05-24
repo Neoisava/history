@@ -3597,7 +3597,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 20,
+                "lastProcessedLength": 21,
                 "userConfigured": true
             }
         },
@@ -4218,7 +4218,7 @@
                 "marker": false,
                 "name": "⚙️字数与结尾控制(自己改字数)",
                 "role": "system",
-                "content": "<output_constraints>\n- 每次回复的中文内容不少于1000字\n- 每次回复的中文内容最多1500字\n-  {{getvar::speak}}\n- 直接以角色（非<user>）的动作/语言作为每一次正文结尾，避免在结尾出现心理描写及评价性、展望未来描述。\n</output_constraints>",
+                "content": "<output_constraints>\n- 每次回复的中文内容不少于700字\n- 每次回复的中文内容最多1500字\n-  {{getvar::speak}}\n- 直接以角色（非<user>）的动作/语言作为每一次正文结尾，避免在结尾出现心理描写及评价性、展望未来描述。\n</output_constraints>",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
