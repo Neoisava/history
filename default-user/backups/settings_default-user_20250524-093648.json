@@ -22,7 +22,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": "修仙之路2.0.png",
+    "active_character": null,
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2802,40 +2802,6 @@
                 "promptOnly": true
             },
             {
-                "id": "e64bfa0a-4758-44b6-b107-7ef6d5f4feba",
-                "scriptName": "【Dreammini】重写正则1-当前回复前台隐藏",
-                "findRegex": "/[^<删\\n。．！？；.!?”]+[。．！？；.!?”)]<删>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "a1e6536a-f89e-4719-9b01-208f7911097d",
-                "scriptName": "【Dreammini】重写正则2-过去记录删除",
-                "findRegex": "/[^<删\\n。．！？；.!?”]+[。．！？；.!?”)]<删>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": 1,
-                "maxDepth": null
-            },
-            {
                 "id": "603909c4-e6e7-49fc-a7f8-f5dbb5db5fc2",
                 "scriptName": "昆仑图片",
                 "disabled": true,
@@ -3597,7 +3563,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 15,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
