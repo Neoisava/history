@@ -2905,7 +2905,7 @@
             "dimension_max": 2048,
             "dimension_step": 64,
             "width": 512,
-            "height": 768,
+            "height": 512,
             "prompt_prefix": "NFWS,best quality, absurdres, masterpiece,",
             "negative_prompt": "lowres, bad anatomy, bad hands, text, error, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
             "sampler": "k_euler",
@@ -3597,7 +3597,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 27,
+                "lastProcessedLength": 26,
                 "userConfigured": true
             }
         },
@@ -3616,16 +3616,6 @@
             "raw_message_evaluation_enabled": false,
             "filter_message_enabled": true,
             "cache_enabled": false
-        },
-        "st-image-auto-generation": {
-            "insertType": "inline",
-            "promptInjection": {
-                "enabled": true,
-                "prompt": "<image_generation>\nYou must insert a <pic prompt=\"example prompt\"> at end of the reply. Prompts are used for stable diffusion image generation, based on the plot and character to output appropriate prompts to generate captivating images.\n</image_generation>",
-                "regex": "<pic[^>]*\\sprompt=\"([^\"]*)\"[^>]*?>",
-                "position": "deep_system",
-                "depth": 0
-            }
         }
     },
     "tags": [
