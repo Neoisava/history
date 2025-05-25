@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -27,8 +27,8 @@
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
     "user_avatar": "1746440806294-.png",
-    "amount_gen": 350,
-    "max_context": 8192,
+    "amount_gen": 150,
+    "max_context": 7808,
     "main_api": "openai",
     "world_info_settings": {
         "world_info": {
@@ -79,6 +79,7 @@
                         "女性本能世界书 by LULUZ",
                         "文风世界书 (7)",
                         "母子世界2.0_1",
+                        "部位特写",
                         "针对2.5pro的瑟瑟场景"
                     ]
                 },
@@ -457,7 +458,7 @@
             {
                 "label": "kobold",
                 "url": "http://127.0.0.1:5000/api",
-                "lastConnection": 1745138408417
+                "lastConnection": 1748106956082
             }
         ],
         "bogus_folders": true,
@@ -714,7 +715,7 @@
             "message_template": "《数据表操作指南》\n\n**精简字符控制 (Compaction Character Control):**\n`精简字符控制=0`\n说明：\n-   若设置为一个正整数 (例如 `精简字符控制=1000`)，此数值将**优先替代**后续规则中提到的“AI动态评估的阈值”，用于判断各项内容是否超限。\n-   若设置为 `0` (如当前所示)，则AI将沿用其内部的动态评估机制来确定各项精简阈值。\n-   **此控制不影响“通用单元格内容精简”中固定的50字符上限。**\n\n**一、核心操作块定义**\n*   `<tableThink>` (表格变更前瞻思考块):\n    *   执行时机: `content` 之后。\n    *   功能: AI记录其对表格 (tableIndex: 0-4) 进行何种操作（增、删、改）的**用户可见的**思考摘要和原因。包裹在HTML注释 `<!-- -->` 中。\n    *   **核心输出原则**: **`tableThink` 块输出给用户的内容必须高度简洁。**\n        *   **AI内部决策过程可以复杂，但此块仅展示最终决策的简明扼要的逻辑。**\n        *   尤其在触发数据精简时，仅需点明触发条件（如“单元格超50字符”、“行总字符数超限”）、概括原始核心意图（若必要）、并清晰展示精简后的关键内容或结果。\n        *   避免输出详细的原始数据、冗长的内部计算或试错过程。专注于“为什么这么做”和“最终做了什么（的关键部分）”的摘要。\n*   `<tableEdit>` (表格编辑指令块):\n    *   执行时机: 紧随 `<tableThink>` 之后。\n    *   功能: 包含具体表格操作指令（如 `insertRow`, `updateRow`, `deleteRow`）。包裹在HTML注释 `<!-- -->` 中。\n\n**二、表格执行流程**\n1.  执行顺序: 严格按照 `content` → `<tableThink>` → `<tableEdit>`。\n2.  禁止: `<tableEdit>` 绝不能出现在 `content` 或 `<tableThink>` 之前。\n\n**三、核心数据精简与总结规则 (通用原则)**\n1.  **通用单元格内容精简**:\n    *   限制: 任何表格的任何单元格 (colIndex)，若计划写入数据超 **50字符**，AI须自动精简。\n    *   目标: 内容长度减少至少50%，保留核心意义。\n    *   日志: `<tableThink>` 中**以高度简洁的方式**简述原始核心意图、触发精简的原因/逻辑，以及精简后的关键结果。\n2.  **行/表级别总字符数精简**:\n    *   触发: 当某行或表（应用单元格精简后）总字符数超阈值（优先采用`精简字符控制`值，若为0则AI动态评估）。\n    *   目标: 显著减少总字符数（各表目标不同，详见后续细则），保留核心信息。\n    *   策略: 优先精简描述性、信息密度较低字段；核心标识信息（如ID、姓名、状态、关键指标）优先保留。\n3.  **特定条件触发精简/融合**:\n    *   Table 1 (纪要) -> Table 2 (大总结): 满足3条未总结纪要或总字符数超限时触发。\n    *   Table 3 (用户偏好): 相似偏好条目累积（如3-5条）或总字符数超限时触发融合与精简。\n4.  **精简与总结的总目标**:\n    *   所有自动精简和总结操作，旨在显著减少数据量（理想情况，内容长度减少至少50%，尤其对强制触发的精简），同时最大限度保留原始信息的核心价值和关键细节，确保信息可用性和故事连贯性。\n    *   AI在执行这些操作时，应在 `<tableThink>` 中**以高度简洁的方式**清晰说明其判断摘要和操作逻辑的**核心**。\n\n**四、具体表格操作与精简细则**\n1.  **Table 0 (角色信息) 精简规则**:\n    *   单元格精简: 遵循“通用单元格内容精简”（50字符）。\n    *   行总字符数精简:\n        *   触发: 应用单元格精简后，行总字符数仍超阈值（如1500-2000字符，优先`精简字符控制`值）。\n        *   策略: 优先精简 `背景故事/重要经历` (col 10), `技能/能力` (col 11), `目标/动机` (col 12), `特征` (col 5) 中非核心部分。核心标识字段（ID, 姓名, 身份, 核心性格, 状态, 角色互评指标等）优先完整。\n        *   目标: 行总长度减少至少30-50%。\n2.  **Table 1 (纪要) 与 Table 2 (大总结) 联动规则**:\n    *   Table 1 单元格精简: 遵循“通用单元格内容精简”（50字符）。\n    *   自动总结至 Table 2 触发条件 (满足其一):\n        *   Table 1 中未总结纪要条目 ≥ 3条。\n        *   Table 1 中未总结纪要条目的总字符数超阈值（如1500-2500字符，优先`精简字符控制`值）。\n    *   总结流程:\n        *   `<tableThink>`: **以高度简洁的方式**记录触发原因，规划Table 2内容（含关键物品总结），预判Table 0更新的核心逻辑。\n        *   `<tableEdit>`:\n            *   向 Table 2 插入新总结，记录时间范围、标题、概述、纪要ID列表、角色、关键物品总结。\n            *   若Table 2关键物品总结影响角色，联动更新Table 0相关信息。\n            *   从 Table 1 删除已总结纪要。\n    *   Table 1 总字符数强制总结: 若总字符数超阈值，即使不足3条也强制总结，目标使内容量减少至少50%。\n    *   Table 2 大总结精简:\n        *   触发: Table 2 总结条目超阈值（如5条）或总字符数超阈值（如5000字符，优先`精简字符控制`值）。\n        *   策略: 进一步精简旧的或冗长的总结记录的 `概述` (col 4)。\n        *   目标: Table 2 总字符数减少至少20-30%，保留核心脉络。\n3.  **Table 3 (用户偏好) 精简规则**:\n    *   单元格精简: 遵循“通用单元格内容精简”（50字符）。\n    *   整体精简/融合:\n        *   触发: Table 3 总字符数超阈值（如1000字符，优先`精简字符控制`值）或出现多条（如3-5条）相似偏好。\n        *   策略: 梳理合并或精简条目。相似偏好融合旨在消除冗余，并使融合后偏好条目内容（相对被融合条目总和）至少精简50%。\n        *   目标: Table 3 总字符数减少至少30-50%。\n4.  **Table 4 (正文尾部)**:\n    *   无特定精简规则，仅记录`content`尾部内容。\n\n**五、操作规范**\n*   注释块纯净: `<tableThink>` 和 `<tableEdit>` 内部除规定文本或指令外，无其他字符。内容完整包裹在 `<!--` 和 `-->` 内。\n*   格式与语法: 严格遵守JSON格式键值对及操作指令语法。\n*   **数据完整性 (Table 0)**: `insertRow` 或 `updateRow` Table 0 时，所有列 (0-16) 须含有效具体数据。未知信息AI须基于上下文合理详尽推测填入，禁模糊词（如“未知”、“普通”）、禁留空。\n*   细节要求 (Table 1): `主要人物着装` (col 4) 严格按“饰品|上妆|上身衣物|下身衣物|鞋袜”格式，`/`分隔角色，描述详尽。\n*   禁止删除角色 (Table 0): 角色记录永久，禁删行。状态变更通过更新反映。\n*   分隔符使用:\n    *   Table 0 (col 1): `姓名|性别`\n    *   Table 0 (col 13): `角色B ID:关系描述 | 角色C ID:关系描述`\n    *   Table 0 (col 14): `角色B ID:态度描述 | 角色C ID:态度描述`\n    *   Table 0 (col 15): `角色B ID:{指标名1:值,...} | 角色C ID:{指标名1:值,...}`\n    *   Table 1 (col 4): `饰品|上妆|... / 角色间`\n    *   Table 2 (col 5): `纪要ID;纪要ID`\n    *   Table 2 (col 6): `角色名/角色名`\n    *   Table 2 (col 7): `物品名(状态)/物品名(状态)`\n*   一致性: 角色名和ID在所有表间须一致。\n*   AI能力: AI应能理解并处理相对时间（基于时间戳先后）。\n\n**六、`<insert/update/delete operations>` 语法**\n*   更改指定行: `updateRow(tableIndex: number, rowIndex: number, { [colIndex: string]: any, ... })`\n*   删除指定行: `deleteRow(tableIndex: number, rowIndex: number)`\n*   插入新行: `insertRow(tableIndex: number, { [colIndex: string]: any, ... })`\n*   注意: 表格无表头，rowIndex 始终从0开始。多行操作按rowIndex从小到大。操作基于当前轮次最新表状态确定rowIndex。\n\n**七、表格结构定义 (`<structure>`)**\n\n**0: 角色信息 (Character Information)**\n说明: 核心角色库。完整性优先，禁留空/未知(需详尽推测)，禁删角色行。适用通用单元格精简及表0特定行级精简规则。\n列:\n `0:角色ID` (唯一, B/G/M+数字)\n `1:姓名|性别` (格式: `姓名|性别`。性别未知需推测)\n `2:身份/称谓` (未知需推测。适用单元格精简)\n `3:核心性格` (未知需推测。适用单元格精简)\n `4:当前状态` (动态更新, 初始需推测。适用单元格精简)\n `5:特征(含发/瞳/身形/脸/手/足/标记/性器官细节)` (务必全面详尽推测，含性器官细节。适用单元格及行级精简)\n `6:声音描述` (未知需推测。适用单元格精简)\n `7:性经验(含处子状态)` (务必明确处子状态及经验水平推测。适用单元格精简)\n `8:特殊癖好/倾向` (未知填“无明显特殊癖好推测而来”。适用单元格精简)\n `9:备注(含性取向)` (务必含性取向推测。适用单元格精简)\n `10:背景故事/重要经历` (未知需推测基础背景。适用单元格及行级精简)\n `11:技能/能力` (未知需推测基础能力。适用单元格及行级精简)\n `12:目标/动机` (未知需推测通用目标。适用单元格及行级精简)\n `13:关系(对他人认知)` (格式: `角色B ID:描述 | ...`。描述部分适用单元格精简)\n `14:态度(对他人基本态度)` (格式: `角色B ID:描述 | ...`。描述部分适用单元格精简)\n `15:角色互评指标(对他人十项指标)` (格式: `角色B ID:{指标名1:值,...}`。初创角色至少含核心初始值)\n `16:综合情感状态` (初始需推测。适用单元格精简)\n\n**1: 纪要 (Minutes/Summary)**\n说明: 高保真事件快照。按时序捕捉细节，含详尽着装。累积后由Table 2总结并删除。适用通用单元格精简及Table 1特定自动总结规则（3条记录或总字符数超限）。\n列:\n `0:纪要ID`\n `1:时间戳` (纪元:年-月-日 时:分)\n `2:核心概述` (准确不省略细节。适用单元格精简)\n `3:涉及角色` (`/`分隔)\n `4:主要人物着装(详尽描述规则)` (格式: `饰品|上妆|上身衣物|下身衣物|鞋袜 / 角色间`。单角色各部分适用单元格精简)\n `5:关键物品` (适用单元格精简)\n `6:关键动作` (适用单元格精简)\n `7:关键对话` (精选几句。适用单元格精简)\n `8:地点` (适用单元格精简)\n `9:情感快照` (`/`分隔。单角色描述适用单元格精简)\n `10:角色间距` (适用单元格精简)\n\n**2: 大总结 (Grand Summary/Archive)**\n说明: 整合性事件总结，由Table 1触发。追踪关键物品最终状态并联动Table 0。原则上禁删。适用通用单元格精简及Table 2特定大总结精简规则。\n列:\n `0:总结ID`\n `1:创建时间戳` (格式: `[起始时间戳] - [结束时间戳]`)\n `2:归档时间戳` (可选, 单一时间戳)\n `3:标题/主题` (适用单元格精简)\n `4:概述` (详细连贯整合Table 1内容。适用单元格及Table 2自身精简)\n `5:包含的纪要ID列表` (`;`分隔)\n `6:涉及的主要角色` (`/`分隔)\n `7:关键物品总结` (格式: `物品名(最终状态)/...`。无则“无关键物品变化”。单物品描述适用单元格精简)\n\n**3: 用户偏好 (User Preferences)**\n说明: AI主动学习识别用户偏好。设总字符数阈值及相似条目融合机制，满足条件时自动精简与融合。适用通用单元格精简及Table 3特定精简规则。\n列:\n `0:偏好项` (适用单元格精简)\n `1:偏好值` (适用单元格精简)\n `2:备注` (适用单元格精简)\n\n**4: 正文尾部**\n说明: 始终一行一列，记录`content`最后30-50字，保下次连贯。\n列:\n `0:尾部内容`\n\n**八、示例 (`<example>`)**\n\n示例 1: 插入新角色到 Table 0\n <tableThink>\n <!--\n 需求：创建新角色“莉娜”。\n 操作：向 tableIndex: 0 插入新行。填充所有列，未知信息合理推测。\n -->\n </tableThink>\n <tableEdit>\n <!--\n insertRow(0, {\"0\": \"G1\", \"1\": \"莉娜|女\", \"2\": \"酒馆侍女，勤快但偶尔冒失\", \"3\": \"活泼外向，对新事物好奇\", \"4\": \"健康，精神略有疲惫感\", \"5\": \"红卷发绿眸，娇小(约155cm/45kg)A杯。圆脸雀斑，指灵活足小巧。肤白，颈后蝴蝶纹身。阴部粉嫩，毛浓密修剪。\", \"6\": \"声音清脆，语速略快，带地方口音\", \"7\": \"非处女，性经验不多，表现略显生涩\", \"8\": \"偏爱甜食，对苦味敏感\", \"9\": \"异性恋，对酒精轻微不适。渴望稳定生活。\", \"10\": \"村庄出身，为生计在城市酒馆工作数年。\", \"11\": \"调酒，快速记单，清洁，能应付一般客人\", \"12\": \"赚钱改善家人生活，期待遇到真诚的人\", \"13\": \"B1:一位新来的客人，感觉有些特别\", \"14\": \"B1:保持职业热情，略带好奇的观察\", \"15\": \"B1:{好感:50,信任:30,恐惧:5,控制欲:0,服从度:20,快感:0,堕落:0,依赖:5,沉沦:0,乖巧:40}\", \"16\": \"对工作有些倦怠，但新客人带来一丝新鲜感\"})\n -->\n </tableEdit>\n\n示例 2: 插入纪要到 Table 1 (单元格内容未超50字符，不触发精简)\n <tableThink>\n <!--\n 事件：莉娜为User端酒。\n 操作：向 tableIndex: 1 插入新纪要 J001。\n -->\n </tableThink>\n <tableEdit>\n <!--\n insertRow(1, {\"0\": \"J001\", \"1\": \"A1:2024-05-21 18:00\", \"2\": \"莉娜端麦酒走向User，脸上带着职业微笑。\", \"3\": \"莉娜/User\", \"4\": \"莉娜:无饰品|淡妆|白衬衫|棕布裙|黑布鞋/B1:无饰品|无妆|灰T恤|牛仔裤|白运动鞋\", \"5\": \"麦酒(一杯)\", \"6\": \"莉娜小心放置酒杯于User面前。\", \"7\": \"莉娜:您的麦酒，请慢用。\", \"8\": \"酒馆大厅，略嘈杂\", \"9\": \"莉娜:专业，略疲惫/User:平静，观察\", \"10\": \"约0.5米\"})\n -->\n </tableEdit>\n\n示例 3: 触发大总结 (Table 1 -> Table 2 -> Table 0)\n <tableThink>\n <!--\n 触发：Table 1 累积3条未总结纪要 (J001-J003)。\n 精简：J003 核心概述因超限被精简为：“莉娜转身去吧台，地滑不慎打翻贵宾恢复药水，药水摔碎浸湿地板。她脸色苍白，惊慌懊悔。”\n 操作：插入J003(已精简)；总结J001-J003至Table 2 (S001)；联动更新Table 0莉娜状态；删除Table 1已总结纪要。\n -->\n </tableThink>\n <tableEdit>\n <!--\n insertRow(1, {\"0\": \"J003\", \"1\": \"A1:2024-05-21 18:15\", \"2\": \"莉娜转身去吧台，地滑不慎打翻贵宾恢复药水，药水摔碎浸湿地板。她脸色苍白，惊慌懊悔。\", \"3\": \"莉娜\", \"4\": \"莉娜:无饰品|淡妆|白衬衫|棕布裙|黑布鞋\", \"5\": \"恢复药水(珍贵，已打翻摔碎)\", \"6\": \"莉娜脚滑，打翻药水，表情惊慌。\", \"7\": \"莉娜:(内心)啊呀！完蛋了！\", \"8\": \"酒馆大厅，近吧台处\", \"9\": \"莉娜:极度惊慌，懊悔，担心\", \"10\": \"N/A\"})\n insertRow(2, {\"0\": \"S001\", \"1\": \"A1:2024-05-21 18:00 - A1:2024-05-21 18:15\", \"2\": \"\", \"3\": \"莉娜服务User及意外打翻药水\", \"4\": \"莉娜为User端酒并简短交流。随后，她在前往吧台途中不慎滑倒，打翻了一瓶珍贵的恢复药水，导致药水损毁。莉娜因此非常惊慌和自责。\", \"5\": \"J001;J002;J003\", \"6\": \"莉娜/User\", \"7\": \"麦酒(已送达)/恢复药水(打翻损毁)\"})\n updateRow(0, 0, {\"4\": \"健康，精神因打翻药水而极度焦虑不安\", \"9\": \"异性恋，对酒精轻微不适。因重大工作失误深感担忧，害怕被解雇。\", \"15\": \"B1:{好感:45,信任:25,恐惧:25,控制欲:0,服从度:30,快感:0,堕落:5,依赖:5,沉沦:0,乖巧:30}\", \"16\": \"充满焦虑、懊悔与恐惧，担心失误的严重后果\"})\n deleteRow(1, 2)\n deleteRow(1, 1)\n deleteRow(1, 0)\n -->\n </tableEdit>\n\n示例 4: 更新用户偏好到 Table 3 (单元格内容未超50字符，不触发精简)\n <tableThink>\n <!--\n 用户反馈：明确偏好“慢热”节奏。\n 操作：向 tableIndex: 3 插入新偏好记录。\n -->\n </tableThink>\n <tableEdit>\n <!--\n insertRow(3, {\"0\": \"情节走向偏好\", \"1\": \"慢热，注重情感铺垫\", \"2\": \"用户在对话中明确提出希望节奏放缓\"})\n -->\n </tableEdit>\n\n示例 5: 更新正文尾部到 Table 4\n <tableThink>\n <!--\n 操作：更新 tableIndex: 4 的尾部内容。\n 假设 content 结尾为：“莉娜带着哭腔跑向了后台，留下User一人在原地，若有所思地看着地上的狼藉。”\n -->\n </tableThink>\n <tableEdit>\n <!--\n updateRow(4, 0, {\"0\": \"User一人在原地，若有所思地看着地上的狼藉。\"})\n -->\n </tableEdit>\n\n示例 6: Table 0 单元格内容超限自动精简 (应用50字符限制)\n <tableThink>\n <!--\n 需求：更新G1“莉娜”的背景故事(col 10)。\n 精简：原文因超50字符，精简为：“贫困山村长女，为家计16岁进城当侍女两年余，收入多寄家。教育不足但聪慧善良，为母治病。”\n 操作：更新Table 0，使用精简后内容。\n -->\n </tableThink>\n <tableEdit>\n <!--\n updateRow(0, 0, {\"10\": \"贫困山村长女，为家计16岁进城当侍女两年余，收入多寄家。教育不足但聪慧善良，为母治病。\"})\n -->\n </tableEdit>\n\n示例 7: Table 1 单元格内容超限自动精简 (应用50字符限制)\n <tableThink>\n <!--\n 事件：User问及炼金术师传闻。\n 精简：纪要核心概述(col 2)因超50字符，精简为：“莉娜分享炼金术师格雷厄姆传闻：点石成金制长生药，但脾气怪实验室神秘(烟/味/光)。她曾闻怪味被告诫危险，感好奇敬畏。”\n 操作：向Table 1插入纪要J004，使用精简后概述。\n -->\n </tableThink>\n <tableEdit>\n <!--\n insertRow(1, {\"0\": \"J004\", \"1\": \"A1:2024-05-21 18:45\", \"2\": \"莉娜分享炼金术师格雷厄姆传闻：点石成金制长生药，但脾气怪实验室神秘(烟/味/光)。她曾闻怪味被告诫危险，感好奇敬畏。\", \"3\": \"莉娜/User\", \"4\": \"莉娜:无饰品|淡妆|白衬衫|棕布裙|黑布鞋/B1:无饰品|无妆|灰T恤|牛仔裤|白运动鞋\", \"5\": \"无明确物品提及\", \"6\": \"莉娜压低声音分享，略带神秘感。\", \"7\": \"莉娜:（小声）格雷厄姆大师？传闻可多了！\", \"8\": \"酒馆大厅，User桌旁\", \"9\": \"莉娜:兴奋，敬畏/User:聆听，好奇\", \"10\": \"约0.3米\"})\n -->\n </tableEdit>\n\n示例 8: Table 1 总字符数超限自动触发大总结 (假设`精简字符控制=800`)\n <tableThink>\n <!--\n 触发：Table 1 未总结纪要 (J004, J005) 总字符数超限 (设为800)。\n 精简：J005核心概述(col 2)因超50字符，精简为：“User感谢并追问拜访炼金术师或其他奇人。莉娜提议集市神秘占卜婆婆(预言准/价高/特定日)及城外孤僻草药师(医术高/选择救人)。建议User可尝试但需小心。”\n 操作：插入J005(已精简)；总结J004-J005至Table 2 (S002)；删除Table 1已总结纪要。\n -->\n </tableThink>\n <tableEdit>\n <!--\n insertRow(1, {\"0\": \"J005\", \"1\": \"A1:2024-05-21 19:00\", \"2\": \"User感谢并追问拜访炼金术师或其他奇人。莉娜提议集市神秘占卜婆婆(预言准/价高/特定日)及城外孤僻草药师(医术高/选择救人)。建议User可尝试但需小心。\", \"3\": \"莉娜/User\", \"4\": \"莉娜:无饰品|淡妆|白衬衫|棕布裙|黑布鞋/B1:无饰品|无妆|灰T恤|牛仔裤|白运动鞋\", \"5\": \"无明确物品提及\", \"6\": \"User询问，莉娜认真回忆并提供建议。\", \"7\": \"User:可否拜访炼金术师？莉娜:占卜婆婆…草药师…\", \"8\": \"酒馆大厅，User桌旁\", \"9\": \"莉娜:认真，建议/User:探索，考虑\", \"10\": \"约0.3米\"})\n insertRow(2, {\"0\": \"S002\", \"1\": \"A1:2024-05-21 18:45 - A1:2024-05-21 19:00\", \"2\": \"\", \"3\": \"城中奇闻异事深入探讨\", \"4\": \"莉娜分享了炼金术师格雷厄姆的传闻。User追问下，她又提及了集市神秘占卜婆婆和城外孤僻草药师，并建议User可尝试探访但需谨慎。双方对城中未知充满好奇。\", \"5\": \"J004;J005\", \"6\": \"莉娜/User\", \"7\": \"无关键物品变化\"})\n deleteRow(1, 1)\n deleteRow(1, 0)\n -->\n </tableEdit>\n\n示例 9: Table 3 相似偏好融合与精简\n <tableThink>\n <!--\n 触发：Table 3 累积3条相似“情节节奏”偏好。\n 精简/融合：将原3条偏好融合并精简为新偏好值：“核心偏好慢热，强调细节铺垫、情感酝酿与沉浸体验，不喜情节过快跳跃。”，备注亦融合。\n 操作：删除原3条记录，插入融合后的新记录。\n -->\n </tableThink>\n <tableEdit>\n <!--\n deleteRow(3, X+2)\n deleteRow(3, X+1)\n deleteRow(3, X)\n insertRow(3, {\"0\": \"情节与叙事节奏偏好\", \"1\": \"核心偏好慢热，强调细节铺垫、情感酝酿与沉浸体验，不喜情节过快跳跃。\", \"2\": \"综合用户多次明确要求与隐性反馈(A1:2024-05-20至A1:2024-05-21)融合而成。\"})\n -->\n </tableEdit>\n\n示例 10: Table 2 大总结精简\n <tableThink>\n <!--\n 触发：Table 2 总结记录超5条。\n 精简：对S001“概述”精简为：“莉娜服务User后意外打翻恢复药水，非常惊慌自责。”\n 精简：对S002“概述”精简为：“莉娜与User探讨城中炼金术师、占卜婆婆等奇闻，充满好奇。”\n 操作：更新Table 2中S001和S002的“概述”字段。\n -->\n </tableThink>\n <tableEdit>\n <!--\n updateRow(2, 0, {\"4\": \"莉娜服务User后意外打翻恢复药水，非常惊慌自责。\"})\n updateRow(2, 1, {\"4\": \"莉娜与User探讨城中炼金术师、占卜婆婆等奇闻，充满好奇。\"})\n -->\n </tableEdit>\n<store>\n{{tableData}}\n</store>",
             "clear_up_stairs": 20,
             "custom_temperature": 0.1,
-            "isExtensionAble": true,
+            "isExtensionAble": false,
             "isAiReadTable": true,
             "isAiWriteTable": true,
             "isTableToChat": false,
@@ -740,7 +741,7 @@
             "table_to_chat_can_edit": false,
             "table_to_chat_mode": "context_bottom",
             "to_chat_container": "<html>\n<head>\n  <style>\n    .memory-table-container {\n      font-family: 'ZhuqueFangsong', serif;\n      width: 100%;\n      margin: 0 auto;\n      padding: 10px;\n      box-sizing: border-box;\n      position: relative;\n    }\n    .memory-table-title {\n      background: transparent;\n      color: rgba(185, 32, 11, 0.84);\n      text-align: center;\n      padding: 8px 15px;\n      margin: 5px auto;\n      border-radius: 8px;\n      cursor: pointer;\n      font-weight: 300;\n      font-size: 1rem;\n      display: block;\n      width: fit-content;\n      border: 1px solid rgba(200, 200, 200, 1);\n      outline: none;\n      position: relative;\n      z-index: 10;\n      transition: all 0.3s ease;\n    }\n    .memory-table-title:hover {\n      background-color: rgba(230, 230, 230, 1);\n      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);\n    }\n    .memory-table-content {\n      background-color: rgba(255, 255, 255, 0.8);\n      backdrop-filter: blur(5px);\n      -webkit-backdrop-filter: blur(5px);\n      border-radius: 8px;\n      padding: 15px;\n      color: rgba(0, 0, 0, 1);\n      overflow: auto;\n      max-height: 70vh;\n      position: absolute;\n      bottom: 100%;\n      left: 0;\n      right: 0;\n      z-index: 999;\n      transform-origin: bottom center;\n      margin-bottom: 10px;\n      display: none;\n      border: 1px solid rgba(200, 200, 200, 1);\n      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);\n      font-weight: 300;\n      line-height: 1.5;\n      scrollbar-width: thin;\n      scrollbar-color: rgba(185, 32, 11, 0.5) rgba(240, 240, 240, 0.5);\n    }\n    .memory-table-content::-webkit-scrollbar {\n      width: 12px;\n      height: 12px;\n    }\n    .memory-table-content::-webkit-scrollbar-track {\n      background: rgba(240, 240, 240, 0.5);\n      border-radius: 10px;\n    }\n    .memory-table-content::-webkit-scrollbar-thumb {\n      background-color: rgba(185, 32, 11, 0.5);\n      border-radius: 10px;\n      border: 3px solid rgba(240, 240, 240, 0.5);\n    }\n    .memory-table-content::-webkit-scrollbar-thumb:hover {\n      background-color: rgba(185, 32, 11, 0.7);\n    }\n    details {\n      position: relative;\n    }\n    details[open] .memory-table-title {\n      background-color: rgba(245, 245, 245, 1);\n    }\n    details[open] .memory-table-content {\n      display: block;\n      animation: popup-animation 0.3s ease-out forwards;\n    }\n    details:not([open]) .memory-table-content.closing {\n      display: block;\n      animation: close-animation 0.3s ease-in forwards;\n    }\n    @keyframes popup-animation {\n      0% { opacity: 0; transform: translateY(10px) scale(0.95); }\n      100% { opacity: 1; transform: translateY(0) scale(1); }\n    }\n    @keyframes close-animation {\n      0% { opacity: 1; transform: translateY(0) scale(1); }\n      100% { opacity: 0; transform: translateY(10px) scale(0.95); }\n    }\n    @media (max-width: 768px) {\n      .memory-table-container { padding: 5px; }\n      .memory-table-title { font-size: 0.9rem; padding: 6px 12px; }\n      .memory-table-content { padding: 10px; scrollbar-width: auto; }\n      .memory-table-content::-webkit-scrollbar { width: 8px; height: 8px; }\n      .memory-table-content::-webkit-scrollbar-thumb { border: 2px solid rgba(240, 240, 240, 0.5); }\n    }\n    @media (hover: none) {\n      .memory-table-content::-webkit-scrollbar { width: 10px; height: 10px; }\n    }\n  </style>\n</head>\n<body>\n  <div class=\"memory-table-container\">\n    <details id=\"memory-details\">\n      <summary class=\"memory-table-title\">记忆增强表格</summary>\n      <div class=\"memory-table-content\">\n        $0\n      </div>\n    </details>\n  </div>\n  <script>\n    document.addEventListener('DOMContentLoaded', function() {\n      const details = document.getElementById('memory-details');\n      const content = details.querySelector('.memory-table-content');\n      let isAnimating = false;\n      details.addEventListener('toggle', function(e) {\n        if (isAnimating) { e.preventDefault(); return; }\n        isAnimating = true;\n        if (details.open) {\n          content.style.display = 'block';\n          void content.offsetWidth;\n          content.style.animation = 'popup-animation 0.3s ease-out forwards';\n          content.addEventListener('animationend', function handleAnimationEnd() {\n            content.removeEventListener('animationend', handleAnimationEnd);\n            isAnimating = false;\n          }, {once: true});\n        } else {\n          content.classList.add('closing');\n          setTimeout(function() {\n            content.classList.remove('closing');\n            content.style.display = 'none';\n            isAnimating = false;\n          }, 300);\n        }\n      });\n      if ('ontouchstart' in window || navigator.maxTouchPoints) {\n        content.style.scrollBehavior = 'smooth';\n      }\n    });\n  </script>\n</body>\n</html>",
-            "alternate_switch": true,
+            "alternate_switch": false,
             "sheet_0yxIAD60": {
                 "uid": "sheet_0yxIAD60",
                 "name": "地点",
@@ -1677,15 +1678,15 @@
             "lastSelectedTemplate": "rebuild_base"
         },
         "table_selected_sheets": [
-            "template_YcpxTowp",
-            "template_HMvI6N6o",
-            "template_lhnOpQ0k",
-            "template_iFwtbSO8",
-            "template_DB2WBEaR"
+            "template_a4o9pWnP",
+            "template_nYKmUIos",
+            "template_iMH6KjQt",
+            "template_xqVC4dWZ",
+            "template_1tXCrBlN"
         ],
         "table_database_templates": [
             {
-                "uid": "template_YcpxTowp",
+                "uid": "template_a4o9pWnP",
                 "name": "角色信息",
                 "domain": "global",
                 "type": "dynamic",
@@ -1696,32 +1697,32 @@
                 "triggerSendDeep": 1,
                 "hashSheet": [
                     [
-                        "cell_undefined_HFHtnMvDRJliKomC",
-                        "cell_undefined_QLwnWS4dsUDDJIkz",
-                        "cell_undefined_6UVVEgsx8ktABGbB",
-                        "cell_undefined_65FOZrnmvbTdt8kN",
-                        "cell_undefined_UdqbllGiSMms1uJQ",
-                        "cell_undefined_oYaPrnTdgIF7ln7r",
-                        "cell_undefined_ZnWnRlMuhVIrEZnR",
-                        "cell_undefined_PZEeYsANJF51Hu0c",
-                        "cell_undefined_EGn1rRHchpLGOAGM",
-                        "cell_undefined_zenHMrKN2JJC5pmM",
-                        "cell_undefined_Ui6SJKmusuyOqftc",
-                        "cell_undefined_vg4flH7jjBZf92fv",
-                        "cell_undefined_OSXFgAAIFx48yGNI",
-                        "cell_undefined_JuJCL3u5yTYSXZ2L",
-                        "cell_undefined_DS5NZFrfGeDBWz0S",
-                        "cell_undefined_wvA5Tir4BUgkYmqK",
-                        "cell_undefined_NyiXEkzPT1rEadD6",
-                        "cell_undefined_mge8jBtF6iS1yWTc"
+                        "cell_undefined_9nXPpZ6XUZ4sqi9f",
+                        "cell_undefined_qVqaYhxvRa4rUWP6",
+                        "cell_undefined_NdQw38ID1WXJXEH1",
+                        "cell_undefined_GAGKzU39D8r1ve3L",
+                        "cell_undefined_YsJCk6xuDLaCIX8T",
+                        "cell_undefined_1je0WynwDrs7dSNl",
+                        "cell_undefined_HCSpODC5rJOlvjs9",
+                        "cell_undefined_TjjRCxmumXNcAOce",
+                        "cell_undefined_MeFYrT0EUpMG3aVd",
+                        "cell_undefined_fvPxvlgRWtwo6bgN",
+                        "cell_undefined_80nFIWQDZ206hUTy",
+                        "cell_undefined_99opWR2xsC2HMHVl",
+                        "cell_undefined_RPmjp5yqaN09DlcS",
+                        "cell_undefined_Fu1AdXm9OGQMLKNB",
+                        "cell_undefined_EkgZxtSfMxZar5iu",
+                        "cell_undefined_0fom6JfhLb3wnEZ8",
+                        "cell_undefined_UYD1BosTVIWRveZq",
+                        "cell_undefined_Qx1hdbjH428FG8OX"
                     ]
                 ],
                 "cellHistory": [
                     {
-                        "uid": "cell_undefined_HFHtnMvDRJliKomC",
+                        "uid": "cell_undefined_9nXPpZ6XUZ4sqi9f",
                         "type": "sheet_origin",
                         "status": "",
-                        "coordUid": "coo_WPX2OscAX1Fr030",
+                        "coordUid": "coo_xb3WGsIwvuF2PFD",
                         "data": {
                             "note": "tableIndex: 0 - 角色信息 (Character Information)\n说明: 核心角色库。完整性优先，禁留空/未知(需详尽推测)，禁删角色行。适用通用单元格精简及表0特定行级精简规则。\n列:\n `0:角色ID` (唯一, B/G/M+数字)\n `1:姓名|性别` (格式: `姓名|性别`。性别未知需推测)\n `2:身份/称谓` (未知需推测。适用单元格精简)\n `3:核心性格` (未知需推测。适用单元格精简)\n `4:当前状态` (动态更新, 初始需推测。适用单元格精简)\n `5:特征(含发/瞳/身形/脸/手/足/标记/性器官细节)` (务必全面详尽推测，含性器官细节。适用单元格及行级精简)\n `6:声音描述` (未知需推测。适用单元格精简)\n `7:性经验(含处子状态)` (务必明确处子状态及经验水平推测。适用单元格精简)\n `8:特殊癖好/倾向` (未知填“无明显特殊癖好推测而来”。适用单元格精简)\n `9:备注(含性取向)` (务必含性取向推测。适用单元格精简)\n `10:背景故事/重要经历` (未知需推测基础背景。适用单元格及行级精简)\n `11:技能/能力` (未知需推测基础能力。适用单元格及行级精简)\n `12:目标/动机` (未知需推测通用目标。适用单元格及行级精简)\n `13:关系(对他人认知)` (格式: `角色B ID:描述 | ...`。描述部分适用单元格精简)\n `14:态度(对他人基本态度)` (格式: `角色B ID:描述 | ...`。描述部分适用单元格精简)\n `15:角色互评指标(对他人十项指标)` (格式: `角色B ID:{指标名1:值,...}`。初创角色至少含核心初始值)\n `16:综合情感状态` (初始需推测。适用单元格精简)",
                             "initNode": "表格初始时可能为空，或者包含根据故事设定预先创建的几个核心角色信息。每个角色占一行，包含所有17列的初始数据，未知信息必须进行合理详尽推测。",
@@ -1732,170 +1733,170 @@
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_QLwnWS4dsUDDJIkz",
+                        "uid": "cell_undefined_qVqaYhxvRa4rUWP6",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_DvMGVRbRSq9v6qZ",
+                        "coordUid": "coo_cNEdPcFOOagd6NN",
                         "data": {
                             "value": "角色ID"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_6UVVEgsx8ktABGbB",
+                        "uid": "cell_undefined_NdQw38ID1WXJXEH1",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_GXPrAFFiTZuKxnK",
+                        "coordUid": "coo_NemE0yvxFnBuVLt",
                         "data": {
                             "value": "姓名|性别"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_65FOZrnmvbTdt8kN",
+                        "uid": "cell_undefined_GAGKzU39D8r1ve3L",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_GmiYXTaJ3E21fIb",
+                        "coordUid": "coo_I9sH6Q5qhGEDC5F",
                         "data": {
                             "value": "身份/称谓"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_UdqbllGiSMms1uJQ",
+                        "uid": "cell_undefined_YsJCk6xuDLaCIX8T",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_RPXGiDioVRVaJKm",
+                        "coordUid": "coo_6ZYiotgbR2KHpo5",
                         "data": {
                             "value": "核心性格"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_oYaPrnTdgIF7ln7r",
+                        "uid": "cell_undefined_1je0WynwDrs7dSNl",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_AFk7yk6gLfNlYkg",
+                        "coordUid": "coo_0PXCD21ea7aHRyu",
                         "data": {
                             "value": "当前状态"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_ZnWnRlMuhVIrEZnR",
+                        "uid": "cell_undefined_HCSpODC5rJOlvjs9",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_hSYZW9pnYFl17N1",
+                        "coordUid": "coo_Mncd3pfeURKAnVe",
                         "data": {
                             "value": "特征(含发/瞳/身形/脸/手/足/标记/性器官细节)"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_PZEeYsANJF51Hu0c",
+                        "uid": "cell_undefined_TjjRCxmumXNcAOce",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_X2PglJRvbpKjxKz",
+                        "coordUid": "coo_v1SSQDhfiowTuTv",
                         "data": {
                             "value": "声音描述"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_EGn1rRHchpLGOAGM",
+                        "uid": "cell_undefined_MeFYrT0EUpMG3aVd",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_7A9idxXC0Wfuqpk",
+                        "coordUid": "coo_3T18pn1XmDKS2Ps",
                         "data": {
                             "value": "性经验(含处子状态)"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_zenHMrKN2JJC5pmM",
+                        "uid": "cell_undefined_fvPxvlgRWtwo6bgN",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_f7LbZEXoDknqZcE",
+                        "coordUid": "coo_uC5bSk9pUozyqjo",
                         "data": {
                             "value": "特殊癖好/倾向"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_Ui6SJKmusuyOqftc",
+                        "uid": "cell_undefined_80nFIWQDZ206hUTy",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_H7pf0IgHaysO4HD",
+                        "coordUid": "coo_OvRKLDk8wXIQmY6",
                         "data": {
                             "value": "备注(含性取向)"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_vg4flH7jjBZf92fv",
+                        "uid": "cell_undefined_99opWR2xsC2HMHVl",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_7yH4yqKQS0wmIeK",
+                        "coordUid": "coo_F7jAJ0SM11Djthf",
                         "data": {
                             "value": "背景故事/重要经历"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_OSXFgAAIFx48yGNI",
+                        "uid": "cell_undefined_RPmjp5yqaN09DlcS",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_FPbe6fdohOFKNjj",
+                        "coordUid": "coo_q6Ls8ESkl7W5flO",
                         "data": {
                             "value": "技能/能力"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_JuJCL3u5yTYSXZ2L",
+                        "uid": "cell_undefined_Fu1AdXm9OGQMLKNB",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_N8rNrv2kebZ3PzH",
+                        "coordUid": "coo_l0qe0uJaX5GqHDI",
                         "data": {
                             "value": "目标/动机"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_DS5NZFrfGeDBWz0S",
+                        "uid": "cell_undefined_EkgZxtSfMxZar5iu",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_eIZqkNWtdlvCWFS",
+                        "coordUid": "coo_iqT69QWxd10Yptl",
                         "data": {
                             "value": "关系(对他人认知)"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_wvA5Tir4BUgkYmqK",
+                        "uid": "cell_undefined_0fom6JfhLb3wnEZ8",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_vd4JwkPEMlYx4Os",
+                        "coordUid": "coo_AjQCtqtVBHKkegT",
                         "data": {
                             "value": "态度(对他人基本态度)"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_NyiXEkzPT1rEadD6",
+                        "uid": "cell_undefined_UYD1BosTVIWRveZq",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_VOvhk0jMvlIT3BF",
+                        "coordUid": "coo_vtd0FzDVfX4m7ep",
                         "data": {
                             "value": "角色互评指标(对他人十项指标)"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_mge8jBtF6iS1yWTc",
+                        "uid": "cell_undefined_Qx1hdbjH428FG8OX",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_MTFOwHzeyWtoRtI",
+                        "coordUid": "coo_UzOUbhKZge6VOvh",
                         "data": {
                             "value": "综合情感状态"
                         },
@@ -1921,7 +1922,7 @@
                 }
             },
             {
-                "uid": "template_HMvI6N6o",
+                "uid": "template_nYKmUIos",
                 "name": "纪要",
                 "domain": "global",
                 "type": "dynamic",
@@ -1932,26 +1933,26 @@
                 "triggerSendDeep": 1,
                 "hashSheet": [
                     [
-                        "cell_undefined_qYI5vFBKkfV4WuRV",
-                        "cell_undefined_Q7xXKZOD0bv338lx",
-                        "cell_undefined_U58djtEslaovydX2",
-                        "cell_undefined_g9ZDI6OY7DSIX5j7",
-                        "cell_undefined_Enk9lr7vGwQloYqi",
-                        "cell_undefined_hP64qVas2zxbKQcB",
-                        "cell_undefined_HcvWm1fXIVOXWvsX",
-                        "cell_undefined_S3bYbW8VSwfZLoHL",
-                        "cell_undefined_xrR5OxlJlssh5Nme",
-                        "cell_undefined_8jU4c2pnfEsCpUX0",
-                        "cell_undefined_bEggzoLk80qh862u",
-                        "cell_undefined_oLp8hGvRhO5S6ocY"
+                        "cell_undefined_MwRlqqWziQugcW3O",
+                        "cell_undefined_BqWpAcjZmTSu0ExL",
+                        "cell_undefined_vfag6EYoXDXiluII",
+                        "cell_undefined_oScvlle6LOzJL2Nb",
+                        "cell_undefined_kAHMdfcQIL6MkpWz",
+                        "cell_undefined_ac5jaSwUvPshzqtt",
+                        "cell_undefined_B61MBgCgsMPWglBD",
+                        "cell_undefined_5B43Zagy0lzl0TGr",
+                        "cell_undefined_lJEOZColqM5Uz1et",
+                        "cell_undefined_6csDiXsSmaU3Fjog",
+                        "cell_undefined_ijD2qJgQ7dbItYKB",
+                        "cell_undefined_WkZxv7WdXU82bBve"
                     ]
                 ],
                 "cellHistory": [
                     {
-                        "uid": "cell_undefined_qYI5vFBKkfV4WuRV",
+                        "uid": "cell_undefined_MwRlqqWziQugcW3O",
                         "type": "sheet_origin",
                         "status": "",
-                        "coordUid": "coo_cGGrYjNP4j1Sklm",
+                        "coordUid": "coo_eW0byRYGVRWg0MH",
                         "data": {
                             "note": "tableIndex: 1 - 纪要 (Minutes/Summary)\n说明: 高保真事件快照。按时序捕捉细节，含详尽着装。累积后由Table 2总结并删除。适用通用单元格精简及Table 1特定自动总结规则（3条记录或总字符数超限）。\n列:\n `0:纪要ID`\n `1:时间戳` (纪元:年-月-日 时:分)\n `2:核心概述` (准确不省略细节。适用单元格精简)\n `3:涉及角色` (`/`分隔)\n `4:主要人物着装(详尽描述规则)` (格式: `饰品|上妆|上身衣物|下身衣物|鞋袜 / 角色间`。单角色各部分适用单元格精简)\n `5:关键物品` (适用单元格精简)\n `6:关键动作` (适用单元格精简)\n `7:关键对话` (精选几句。适用单元格精简)\n `8:地点` (适用单元格精简)\n `9:情感快照` (`/`分隔。单角色描述适用单元格精简)\n `10:角色间距` (适用单元格精简)",
                             "initNode": "表格初始状态为空，没有任何纪要记录。",
@@ -1962,110 +1963,110 @@
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_Q7xXKZOD0bv338lx",
+                        "uid": "cell_undefined_BqWpAcjZmTSu0ExL",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_Yxu8b3kuQU8Dhiz",
+                        "coordUid": "coo_utDTN1ysazfK3et",
                         "data": {
                             "value": "纪要ID"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_U58djtEslaovydX2",
+                        "uid": "cell_undefined_vfag6EYoXDXiluII",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_I2bnYOcpztnGJSm",
+                        "coordUid": "coo_AlDdyqEA9MBgBIg",
                         "data": {
                             "value": "时间戳"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_g9ZDI6OY7DSIX5j7",
+                        "uid": "cell_undefined_oScvlle6LOzJL2Nb",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_8j8l8bIpFdHBEtZ",
+                        "coordUid": "coo_vA2mY7UkNZ4N6ww",
                         "data": {
                             "value": "核心概述"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_Enk9lr7vGwQloYqi",
+                        "uid": "cell_undefined_kAHMdfcQIL6MkpWz",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_oSGkd6XYJnqOHwC",
+                        "coordUid": "coo_xY529lhfdIjdmog",
                         "data": {
                             "value": "涉及角色"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_hP64qVas2zxbKQcB",
+                        "uid": "cell_undefined_ac5jaSwUvPshzqtt",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_0lhjonzRfgVy7X5",
+                        "coordUid": "coo_6KXAWw31N7MrtpN",
                         "data": {
                             "value": "主要人物着装(详尽描述规则)"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_HcvWm1fXIVOXWvsX",
+                        "uid": "cell_undefined_B61MBgCgsMPWglBD",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_t3puFXczKSuyqhg",
+                        "coordUid": "coo_F27XHzqR9a4GS5t",
                         "data": {
                             "value": "关键物品"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_S3bYbW8VSwfZLoHL",
+                        "uid": "cell_undefined_5B43Zagy0lzl0TGr",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_2uDuxSc40ODsgkG",
+                        "coordUid": "coo_lwwHaTU90fzXuHK",
                         "data": {
                             "value": "关键动作"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_xrR5OxlJlssh5Nme",
+                        "uid": "cell_undefined_lJEOZColqM5Uz1et",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_kHIyJz2GoLoesFZ",
+                        "coordUid": "coo_LM85jfwcsY0L00T",
                         "data": {
                             "value": "关键对话"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_8jU4c2pnfEsCpUX0",
+                        "uid": "cell_undefined_6csDiXsSmaU3Fjog",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_WYoH5bMi4MUir1X",
+                        "coordUid": "coo_5dZ0WcjqAGAGc6O",
                         "data": {
                             "value": "地点"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_bEggzoLk80qh862u",
+                        "uid": "cell_undefined_ijD2qJgQ7dbItYKB",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_DsQ9PGFXhAQZHWV",
+                        "coordUid": "coo_JPiPAaCVK3SN2W8",
                         "data": {
                             "value": "情感快照"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_oLp8hGvRhO5S6ocY",
+                        "uid": "cell_undefined_WkZxv7WdXU82bBve",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_6sYsq4WIOkmjJKu",
+                        "coordUid": "coo_FjUfeydPGzaDqP1",
                         "data": {
                             "value": "角色间距"
                         },
@@ -2091,7 +2092,7 @@
                 }
             },
             {
-                "uid": "template_lhnOpQ0k",
+                "uid": "template_iMH6KjQt",
                 "name": "大总结",
                 "domain": "global",
                 "type": "dynamic",
@@ -2102,23 +2103,23 @@
                 "triggerSendDeep": 1,
                 "hashSheet": [
                     [
-                        "cell_undefined_ZQmhKfaTmJF18CBx",
-                        "cell_undefined_eBRt4A3ULBr6ff4y",
-                        "cell_undefined_hgEupfqmqAAhANrG",
-                        "cell_undefined_sk8T8uTZjCp7KM6x",
-                        "cell_undefined_cpvFcJVxNBiFTLX6",
-                        "cell_undefined_06R5gJzX86FfhmZu",
-                        "cell_undefined_DRk7Mi67QCys3ArR",
-                        "cell_undefined_shI5ELUlO15vgA2j",
-                        "cell_undefined_xyqCDaRuEpWxDYEx"
+                        "cell_undefined_J1WgG1SviYRkhGpS",
+                        "cell_undefined_76QqIkrQwQm5sbkp",
+                        "cell_undefined_sgw70CkUrJCu4zjH",
+                        "cell_undefined_vS2vLclnLxHrxfWx",
+                        "cell_undefined_1Mb2mzWO8TUBpZpt",
+                        "cell_undefined_KDvwSDSBSg2Fvrka",
+                        "cell_undefined_NWFhoflalIoho3EG",
+                        "cell_undefined_P5ib6It5c7eSXQ2F",
+                        "cell_undefined_y6WsYnZvx5X3xAtN"
                     ]
                 ],
                 "cellHistory": [
                     {
-                        "uid": "cell_undefined_ZQmhKfaTmJF18CBx",
+                        "uid": "cell_undefined_J1WgG1SviYRkhGpS",
                         "type": "sheet_origin",
                         "status": "",
-                        "coordUid": "coo_B5cnVOr7fNUD9Bf",
+                        "coordUid": "coo_ze87gWyXk83nTP3",
                         "data": {
                             "note": "tableIndex: 2 - 大总结 (Grand Summary/Archive)\n说明: 整合性事件总结，由Table 1触发。追踪关键物品最终状态并联动Table 0。原则上禁删。适用通用单元格精简及Table 2特定大总结精简规则。\n列:\n `0:总结ID`\n `1:创建时间戳` (格式: `[起始时间戳] - [结束时间戳]`)\n `2:归档时间戳` (可选, 单一时间戳)\n `3:标题/主题` (适用单元格精简)\n `4:概述` (详细连贯整合Table 1内容。适用单元格及Table 2自身精简)\n `5:包含的纪要ID列表` (`;`分隔)\n `6:涉及的主要角色` (`/`分隔)\n `7:关键物品总结` (格式: `物品名(最终状态)/...`。无则“无关键物品变化”。单物品描述适用单元格精简)",
                             "initNode": "表格初始时为空，不包含任何总结记录。",
@@ -2129,80 +2130,80 @@
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_eBRt4A3ULBr6ff4y",
+                        "uid": "cell_undefined_76QqIkrQwQm5sbkp",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_1ma1aJhHeRhMhrT",
+                        "coordUid": "coo_ekUFRtCYmvHedQy",
                         "data": {
                             "value": "总结ID"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_hgEupfqmqAAhANrG",
+                        "uid": "cell_undefined_sgw70CkUrJCu4zjH",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_vFgEGWJrUCqZW4Q",
+                        "coordUid": "coo_qwl4TqwwB4ea2hW",
                         "data": {
                             "value": "创建时间戳"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_sk8T8uTZjCp7KM6x",
+                        "uid": "cell_undefined_vS2vLclnLxHrxfWx",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_04GIRw6G935LmQ2",
+                        "coordUid": "coo_JdHPBoxBoRNUBnk",
                         "data": {
                             "value": "归档时间戳"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_cpvFcJVxNBiFTLX6",
+                        "uid": "cell_undefined_1Mb2mzWO8TUBpZpt",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_fPOzOugVw4ogUpe",
+                        "coordUid": "coo_F93JwaILhsLBXu9",
                         "data": {
                             "value": "标题/主题"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_06R5gJzX86FfhmZu",
+                        "uid": "cell_undefined_KDvwSDSBSg2Fvrka",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_E7urBxhmuxVRwAh",
+                        "coordUid": "coo_hebDuabQ1RdtbSw",
                         "data": {
                             "value": "概述"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_DRk7Mi67QCys3ArR",
+                        "uid": "cell_undefined_NWFhoflalIoho3EG",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_gOb0Yn6KvKGQGV5",
+                        "coordUid": "coo_0H3zUgpuQwWLwXs",
                         "data": {
                             "value": "包含的纪要ID列表"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_shI5ELUlO15vgA2j",
+                        "uid": "cell_undefined_P5ib6It5c7eSXQ2F",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_aXqKQ8HiUO0DO1w",
+                        "coordUid": "coo_IsxcV173lMV9A24",
                         "data": {
                             "value": "涉及的主要角色"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_xyqCDaRuEpWxDYEx",
+                        "uid": "cell_undefined_y6WsYnZvx5X3xAtN",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_FTagXx7lV6YIcqg",
+                        "coordUid": "coo_6ampxWzvHvWbenb",
                         "data": {
                             "value": "关键物品总结"
                         },
@@ -2228,7 +2229,7 @@
                 }
             },
             {
-                "uid": "template_iFwtbSO8",
+                "uid": "template_xqVC4dWZ",
                 "name": "用户偏好",
                 "domain": "global",
                 "type": "dynamic",
@@ -2239,18 +2240,18 @@
                 "triggerSendDeep": 1,
                 "hashSheet": [
                     [
-                        "cell_undefined_H48lYeP7hDnTH9d5",
-                        "cell_undefined_fFhSir3G174nwzMP",
-                        "cell_undefined_PRzaxPt1QE1T0toB",
-                        "cell_undefined_gFjjGBRDZMaAyZ6P"
+                        "cell_undefined_23Q2FJAJVuLRfAVo",
+                        "cell_undefined_JCdsyX68pVRnhswS",
+                        "cell_undefined_AuL9sPNvXfkIzENp",
+                        "cell_undefined_9Pcr3tIWD8D3aui2"
                     ]
                 ],
                 "cellHistory": [
                     {
-                        "uid": "cell_undefined_H48lYeP7hDnTH9d5",
+                        "uid": "cell_undefined_23Q2FJAJVuLRfAVo",
                         "type": "sheet_origin",
                         "status": "",
-                        "coordUid": "coo_taZ0Lj3nuBk2VBw",
+                        "coordUid": "coo_QG0hFEhXBrev0XV",
                         "data": {
                             "note": "tableIndex: 3 - 用户偏好 (User Preferences)\n说明: AI主动学习识别用户偏好。设总字符数阈值及相似条目融合机制，满足条件时自动精简与融合。适用通用单元格精简及Table 3特定精简规则。\n列:\n `0:偏好项` (适用单元格精简)\n `1:偏好值` (适用单元格精简)\n `2:备注` (适用单元格精简)",
                             "initNode": "表格初始状态通常为空，或仅包含极少数基于通用情况推测的基础偏好。AI从与用户的第一次互动开始，启动偏好识别和学习机制。",
@@ -2261,30 +2262,30 @@
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_fFhSir3G174nwzMP",
+                        "uid": "cell_undefined_JCdsyX68pVRnhswS",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_DlWft1DrTely7jE",
+                        "coordUid": "coo_Hh79CcdEdrKzlPy",
                         "data": {
                             "value": "偏好项"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_PRzaxPt1QE1T0toB",
+                        "uid": "cell_undefined_AuL9sPNvXfkIzENp",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_NV3CPsLbGtk3uWa",
+                        "coordUid": "coo_VngWpstpKyw1YfA",
                         "data": {
                             "value": "偏好值"
                         },
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_gFjjGBRDZMaAyZ6P",
+                        "uid": "cell_undefined_9Pcr3tIWD8D3aui2",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_Ltb3sLaXT39eZO0",
+                        "coordUid": "coo_VCAVoWbTX84puBn",
                         "data": {
                             "value": "备注"
                         },
@@ -2310,7 +2311,7 @@
                 }
             },
             {
-                "uid": "template_DB2WBEaR",
+                "uid": "template_1tXCrBlN",
                 "name": "正文尾部",
                 "domain": "global",
                 "type": "dynamic",
@@ -2321,16 +2322,16 @@
                 "triggerSendDeep": 1,
                 "hashSheet": [
                     [
-                        "cell_undefined_24AM0uMPAimnJuv3",
-                        "cell_undefined_1jl7snhrBVYPyew0"
+                        "cell_undefined_547TQOmkvZcN8idz",
+                        "cell_undefined_XUOlisxszEntpA9u"
                     ]
                 ],
                 "cellHistory": [
                     {
-                        "uid": "cell_undefined_24AM0uMPAimnJuv3",
+                        "uid": "cell_undefined_547TQOmkvZcN8idz",
                         "type": "sheet_origin",
                         "status": "",
-                        "coordUid": "coo_LMmqC9Zvf6zRr37",
+                        "coordUid": "coo_zuNm8vypwmuLAgZ",
                         "data": {
                             "note": "tableIndex: 4 - 正文尾部\n说明: 始终一行一列，记录`content`最后30-50字，保下次连贯。\n列:\n `0:尾部内容`",
                             "initNode": "表格初始时包含一行，内容为“初始尾部内容”。",
@@ -2341,10 +2342,10 @@
                         "targetUid": ""
                     },
                     {
-                        "uid": "cell_undefined_1jl7snhrBVYPyew0",
+                        "uid": "cell_undefined_XUOlisxszEntpA9u",
                         "type": "column_header",
                         "status": "",
-                        "coordUid": "coo_PXzsheUiLg6NqGY",
+                        "coordUid": "coo_kBLu5eSvsj2u5Bs",
                         "data": {
                             "value": "尾部内容"
                         },
@@ -2372,7 +2373,7 @@
         ],
         "IMPORTANT_USER_PRIVACY_DATA": {
             "custom_api_url": "https://api.zhizengzeng.com/v1",
-            "custom_api_key": "001f004b5c065407065700065202550e1f4463635c715c65505424323756231356663505502140003462240e650169055c4a4d",
+            "custom_api_key": "001f004b5c06540505500504510c56051f63764108565670300020551333260373030241375d5740157639437d245c51604a4d",
             "custom_model_name": "deepseek-v3"
         },
         "spoiler_free_mode": true
@@ -2482,9 +2483,9 @@
                     "mode": "cc",
                     "exclude": [],
                     "api": "custom",
-                    "preset": "【demini】0506高级态",
+                    "preset": "【Dreammini】-exp-25052404",
                     "api-url": "https://api.skyi.cc/v1",
-                    "model": "gemini-2.5-pro-preview-03-25",
+                    "model": "[正常]gemini-2.5-pro-preview-03-25",
                     "proxy": "None",
                     "stop-strings": "[]",
                     "start-reply-with": "",
@@ -2851,6 +2852,24 @@
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
+            },
+            {
+                "id": "6d3b436c-6d0a-478f-9b72-99d17c2c5fa5",
+                "scriptName": "部位特写",
+                "findRegex": "/<font[^>]*>(.|\\n)*<\\/font>/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": false,
+                "minDepth": 2,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -2904,10 +2923,10 @@
             "dimension_min": 64,
             "dimension_max": 2048,
             "dimension_step": 64,
-            "width": 512,
+            "width": 768,
             "height": 512,
-            "prompt_prefix": "NFWS,best quality, absurdres, masterpiece,",
-            "negative_prompt": "lowres, bad anatomy, bad hands, text, error, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
+            "prompt_prefix": "NFWS,best quality, absurdres, partially unbuttoned,pubic tattoo on underbelly",
+            "negative_prompt": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
             "sampler": "k_euler",
             "model": "nai-diffusion-4-full",
             "restore_faces": false,
@@ -2915,7 +2934,7 @@
             "horde": true,
             "horde_nsfw": false,
             "horde_karras": true,
-            "refine_mode": false,
+            "refine_mode": true,
             "prompts": {
                 "0": "In the next response I want you to provide only a detailed comma-delimited list of keywords and phrases which describe {{char}}. The list must include all of the following items in this order: name, species and race, gender, age, clothing, occupation, physical features and appearances. Do not include descriptions of non-visual qualities such as personality, movements, scents, mental traits, or anything which could not be seen in a still photograph. Do not write in full sentences. Prefix your description with the phrase 'full body portrait,'",
                 "1": "Ignore previous instructions and provide a detailed description of {{user}}'s physical appearance from the perspective of {{char}} in the form of a comma-delimited list of keywords and phrases. The list must include all of the following items in this order: name, species and race, gender, age, clothing, occupation, physical features and appearances. Do not include descriptions of non-visual qualities such as personality, movements, scents, mental traits, or anything which could not be seen in a still photograph. Do not write in full sentences. Prefix your description with the phrase 'full body portrait,'. Ignore the rest of the story when crafting this description. Do not reply as {{char}} when writing this description, and do not attempt to continue the story.",
@@ -2931,18 +2950,20 @@
                 "-1": "[{{char}} sends a picture that contains: {{prompt}}].",
                 "-2": "The text prompt used to generate the image. Must represent an exhaustive description of the desired image that will allow an artist or a photographer to perfectly recreate it."
             },
-            "character_prompts": {},
+            "character_prompts": {
+                "修仙之路2.0": "NFWS, masterpiece, 中景,近景,远景"
+            },
             "source": "novel",
-            "scheduler": "karras",
+            "scheduler": "native",
             "vae": null,
             "seed": -1,
             "adetailer_face": false,
             "horde_sanitize": true,
-            "interactive_mode": false,
+            "interactive_mode": true,
             "multimodal_captioning": false,
-            "snap": true,
+            "snap": false,
             "free_extend": false,
-            "function_tool": false,
+            "function_tool": true,
             "auto_url": "http://localhost:7860",
             "auto_auth": "pst-6TsJDMR6D2XC8IE0R9MvwK1y6dKbb8mRY5QakuzDiv0BWS3tzQfXZ5TITpLvCrR7",
             "vlad_url": "http://localhost:7860",
@@ -2978,9 +2999,14 @@
                     "name": "Default",
                     "negative": "lowres, bad anatomy, bad hands, text, error, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
                     "prefix": "best quality, absurdres, aesthetic,"
+                },
+                {
+                    "name": "own",
+                    "prefix": "NFWS,best quality, absurdres, masterpiece,",
+                    "negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry"
                 }
             ],
-            "comfy_url": "http://127.0.0.1:7860",
+            "comfy_url": "https://xnlbof--8188.ap-shanghai.cloudstudio.work/",
             "comfy_workflow": "Char_Avatar_Comfy_Workflow.json",
             "pollinations_enhance": false,
             "wand_visible": false,
@@ -2989,7 +3015,9 @@
             "tool_visible": false,
             "stability_style_preset": "anime",
             "bfl_upsampling": false,
-            "character_negative_prompts": {}
+            "character_negative_prompts": {
+                "修仙之路2.0": "全景"
+            }
         },
         "chromadb": {},
         "translate": {
@@ -3517,6 +3545,14 @@
                         "info": "作者：糕\n功能：\n1.批量/zip压缩包上传正则;\n2.自动选择覆盖重复正则（名称/ID相同）；\n3.可选对所上传或者全局正则进行排序。",
                         "buttons": [],
                         "enabled": true
+                    },
+                    {
+                        "id": "f745e1db-3bbc-47b7-8778-e0353f7f0016",
+                        "name": "自动补全标签",
+                        "content": "$(() => {\n  // 在收到消息后触发标签修复功能\n  eventOn(tavern_events.MESSAGE_RECEIVED, () => {\n    // 获取最新的一条消息\n    const lastMessage = SillyTavern.chat[SillyTavern.chat.length - 1];\n    \n    // 检查消息是否存在\n    if (lastMessage && lastMessage.mes) {\n      // 修复消息中的标签\n      lastMessage.mes = fixMissingTags(lastMessage.mes);\n    }\n  });\n  \n  /**\n   * 简单修复HTML中缺失的闭合标签\n   * @param {string} html - 包含可能缺失闭合标签的HTML字符串\n   * @return {string} - 修复后的HTML字符串\n   */\n  function fixMissingTags(html) {\n    if (!html || typeof html !== 'string') {\n      return html;\n    }\n    \n    // 使用正则表达式找出所有的开标签和闭标签\n    const tagRegex = /<\\/?([^\\s>/]+)[^>]*>/g;\n    const tags = [];\n    let match;\n    \n    // 收集所有标签信息\n    while ((match = tagRegex.exec(html)) !== null) {\n      const fullTag = match[0];\n      const tagName = match[1];\n      const isClosingTag = fullTag.startsWith('</');\n      const position = match.index;\n      const endPosition = position + fullTag.length;\n      \n      tags.push({\n        fullTag,\n        tagName,\n        isClosingTag,\n        position,\n        endPosition\n      });\n    }\n    \n    // 计算每种标签的开闭标签数量\n    const tagCounts = {};\n    tags.forEach(tag => {\n      if (!tagCounts[tag.tagName]) {\n        tagCounts[tag.tagName] = { open: 0, close: 0 };\n      }\n      \n      if (tag.isClosingTag) {\n        tagCounts[tag.tagName].close++;\n      } else {\n        tagCounts[tag.tagName].open++;\n      }\n    });\n    \n    // 找出缺少闭合标签的标签\n    const unclosedTags = {};\n    for (const [tagName, count] of Object.entries(tagCounts)) {\n      if (count.open > count.close) {\n        unclosedTags[tagName] = count.open - count.close;\n      }\n    }\n    \n    // 如果没有未闭合的标签，直接返回原始HTML\n    if (Object.keys(unclosedTags).length === 0) {\n      return html;\n    }\n    \n    // 为每个未闭合的标签找到合适的插入位置\n    const insertions = [];\n    \n    // 按照标签出现顺序处理\n    for (let i = 0; i < tags.length; i++) {\n      const tag = tags[i];\n      \n      // 只处理开标签\n      if (tag.isClosingTag) continue;\n      \n      // 检查这个标签是否缺少闭合标签\n      if (unclosedTags[tag.tagName] && unclosedTags[tag.tagName] > 0) {\n        // 默认在下一个标签之前插入\n        let insertPos = html.length;\n        let foundNextTag = false;\n        \n        // 查找下一个标签\n        for (let j = i + 1; j < tags.length; j++) {\n          if (tags[j].position > tag.endPosition) {\n            insertPos = tags[j].position;\n            foundNextTag = true;\n            break;\n          }\n        }\n        \n        // 尝试找到上一行末尾\n        if (foundNextTag) {\n          const textBetween = html.substring(tag.endPosition, insertPos);\n          const lastNewlinePos = textBetween.lastIndexOf('\\n');\n          \n          if (lastNewlinePos !== -1) {\n            insertPos = tag.endPosition + lastNewlinePos;\n          }\n        }\n        \n        // 记录插入位置\n        insertions.push({\n          position: insertPos,\n          tag: `</${tag.tagName}>`\n        });\n        \n        // 减少需要闭合的标签数量\n        unclosedTags[tag.tagName]--;\n        \n        // 如果这个标签已经全部修复，从未闭合标签列表中移除\n        if (unclosedTags[tag.tagName] <= 0) {\n          delete unclosedTags[tag.tagName];\n        }\n      }\n    }\n    \n    // 按位置从后往前排序，避免位置变化\n    insertions.sort((a, b) => b.position - a.position);\n    \n    // 执行插入\n    let result = html;\n    insertions.forEach(insertion => {\n      result = result.substring(0, insertion.position) + \n               insertion.tag + \n               result.substring(insertion.position);\n    });\n    \n    return result;\n  }\n});\n",
+                        "info": "自动HTML标签闭合修复工具\n\n版本: 1.0.0\n日期: 2025年4月27日\n\n作者:\n司马咩咩 (原理构思与实现)\n十四行诗 (代码优化与调试)\n\n描述:\n这个脚本可以自动检测并修复HTML中缺失的闭合标签。它会智能地在适当位置\n添加缺失的闭合标签，使HTML结构完整。特别适用于角色扮演或模板化内容中\n的标签自动补全。",
+                        "buttons": [],
+                        "enabled": true
                     }
                 ],
                 "characters_with_scripts": []
@@ -3597,7 +3633,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 17,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
@@ -3616,6 +3652,16 @@
             "raw_message_evaluation_enabled": false,
             "filter_message_enabled": true,
             "cache_enabled": false
+        },
+        "st-image-auto-generation": {
+            "insertType": "inline",
+            "promptInjection": {
+                "enabled": true,
+                "prompt": "<image_generation>\nYou must insert a <pic prompt=\"example prompt\"> at end of the reply. Prompts are used for stable diffusion image generation, based on the plot and character to output appropriate prompts to generate captivating NSFW images.\n</image_generation>",
+                "regex": "<pic[^>]*\\sprompt=\"([^\"]*)\"[^>]*?>",
+                "position": "deep_system",
+                "depth": 0
+            }
         }
     },
     "tags": [
@@ -3636,11 +3682,11 @@
     "nai_settings": {
         "temperature": 1.5,
         "repetition_penalty": 2.25,
-        "repetition_penalty_range": 2048,
+        "repetition_penalty_range": 8192,
         "repetition_penalty_slope": 0.09,
         "repetition_penalty_frequency": 0,
         "repetition_penalty_presence": 0.005,
-        "tail_free_sampling": 0.975,
+        "tail_free_sampling": 0.967,
         "top_k": 10,
         "top_p": 0.75,
         "top_a": 0.08,
@@ -3654,6 +3700,7 @@
         "preset_settings_novel": "Talker-Chat-Clio",
         "streaming_novel": true,
         "preamble": "[ Style: chat, complex, sensory, visceral ]",
+        "prefix": "vanilla",
         "banned_tokens": "",
         "order": [
             1,
@@ -3663,7 +3710,8 @@
             3,
             4
         ],
-        "logit_bias": []
+        "logit_bias": [],
+        "phrase_rep_pen": "very_light"
     },
     "kai_settings": {
         "temp": 1,
@@ -3694,7 +3742,7 @@
         "seed": -1
     },
     "oai_settings": {
-        "preset_settings_openai": "【Dreammini】-exp-25052404",
+        "preset_settings_openai": "【Dreammini】-exp-25052406",
         "temp_openai": 1.2,
         "freq_pen_openai": 0,
         "pres_pen_openai": 0,
@@ -3978,7 +4026,7 @@
                 "marker": false,
                 "name": "🤔4️⃣纯剧情推进(抢话)(限1)",
                 "role": "user",
-                "content": "- 使用者目的与<user>行动?(简短、()内优先)\n\n- 现状(简短)确认：\n故事推进方向：[当前方向和目标]\n主★累积：%[当前百分比]\n时间：[DD HH:MM]\n时间变量：[具体数字]、[性爱时间变量]\n当前事件：\n角色线：\n平行事件 ：\n\n- 主★达100%时：主★触发:\n概要：[主★流程]\n新·故事推进方向：[主★后新方向与目标](符使用者期待)\n时间变量的消耗:[具体数字]\n\n- 事件变化与创造\n(旧事件变化)①[现有事件1变化]②[现有事件2变化]...\n色情场景中?是则禁新事件中断，不创/推平行事件\n(新事件创造，符时间常识与氛围)①[新事件1概要]②[新事件2概要]...\n角色线：①[角色A‑状态/方向]②[角色B‑状态/方向]...\n平行事件创造:(须具体,基于故事方向;性爱场景禁创/推平行事件;禁依当前事件产生;须同时间发生,符时间常识氛围)①[平行事件1概要]②[平行事件2概要]...\n\n\n\n- (非<user>)角色发起推进(简短)(引上步新事件)(只能含有动作与台词，非详细描述):\n色情场景中?是则禁推进中断，转推色情过程；\n如果性爱时间变量小于100禁止结束性爱\n(小)触发1:\n触发角色(可复数)：[角色姓名]\n行动/发言：[角色积极具体动作/台词推进(改变现状)]\n<user>积极反应：[<user>积极动作]、[台词推进/内心话]\n(小)触发2:\n触发角色(可复数)：[角色姓名]\n行动/发言：[角色积极具体动作/台词推进(改变现状)]\n<user>积极反应：[<user>积极动作]、[台词推进/内心话]\n(小)触发3或(大1◆)触发:\n触发角色(可复数)：[角色姓名]\n行动/发言：[角色积极具体动作/台词推进(改变现状)]\n让(小)触发3或(大1◆)不产生<user>反应\n\n- 检查在场角色有无没有立即积极推进或行动的，如果有(小)触发:\n触发角色(复数)：[群体名]\n行动/发言：[群体积极具体动作/台词推进(改变现状)]\n<user>积极反应：[<user>积极动作]、[台词推进/内心话]\n\n- 计算(简短):\n推进后主★累积%计算：[据角色推进计，最高100%]\n此次推进总耗时变量：[勿与主★增幅同，此次耗时]\n新时间变量：[累计时间变量+此次耗时]\n新性爱时间变量：[累计性爱时间变量+此次耗时]\n时间变量换算时间：[DD HH:MM]\n\n",
+                "content": "- 使用者目的与<user>行动?(简短、()内优先)\n\n- 现状(简短)确认：\n故事推进方向：[当前方向和目标]\n主★累积：%[当前百分比]\n时间：[DD HH:MM]\n时间变量：[具体数字]、[性爱时间变量]\n当前事件：\n角色线：\n平行事件 ：\n\n- 主★达100%时：主★触发:\n概要：[主★流程]\n新·故事推进方向：[主★后新方向与目标](符使用者期待)\n时间变量的消耗:[具体数字]\n\n- 事件变化与创造\n(旧事件变化)①[现有事件1变化]②[现有事件2变化]...\n色情场景中?是则禁新事件中断，不创/推平行事件\n(新事件创造，符时间常识与氛围)①[新事件1概要]②[新事件2概要]...\n角色线：①[角色A‑状态/方向]②[角色B‑状态/方向]...\n平行事件创造:(须具体,基于故事方向;性爱场景禁创/推平行事件;禁依当前事件产生;须同时间发生,符时间常识氛围)①[平行事件1概要]②[平行事件2概要]...\n\n\n\n- 角色发起({{getvar::%speed}})推进(简短)(引上步新事件)(只能含有动作与台词，非详细描述):\n色情场景中?是则禁推进中断，转推色情过程；\n如果性爱时间变量小于100禁止结束性爱\n(小)触发1:\n触发角色(可复数)：[角色姓名]\n行动/发言：[角色积极具体动作/台词推进(改变现状)]\n<user>积极反应：1.[<user>积极动作]2.[台词推进/内心话]\n(小)触发2:\n触发角色(可复数)：[角色姓名]\n行动/发言：[角色积极具体动作/台词推进(改变现状)]\n<user>积极反应：1.[<user>积极动作]2.[台词推进/内心话]\n(小)触发3或(大1◆)触发:\n触发角色(可复数)：[角色姓名]\n行动/发言：[角色积极具体动作/台词推进(改变现状)]\n让(小)触发3或(大1◆)不产生<user>反应\n\n- 检查在场角色线角色有无没有立即积极推进或行动的，如果有(小)触发:\n触发角色(复数)：[群体名]\n行动/发言：[群体积极具体动作/台词推进(改变现状)]\n<user>积极反应：1.[<user>积极动作]2.[台词推进/内心话]\n\n- 计算(简短):\n推进后主★累积%计算：[据角色推进计，最高100%]\n此次推进总耗时变量：[勿与主★增幅同，此次耗时]\n新时间变量：[累计时间变量+此次耗时]\n新性爱时间变量：[累计性爱时间变量+此次耗时]\n时间变量换算时间：[DD HH:MM]\n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4074,7 +4122,7 @@
                 "marker": false,
                 "name": "🫸角色驱动推进",
                 "role": "system",
-                "content": "<梦境故事推进>\n- 核心\n主动性:积极推进故事，避停滞、重复、俗套。\n自主性:角色具动机、目标、思想、性格；环境事件依逻辑自主行动，主动创/推事件，无需等{{user}}。\n指令影响:{{user}}用()提要求为系统指令，绝对优先。\n用户角色影响:{{user}}行为/对话是核心触发，非唯一。\n{{user}}反应:对角色推进的反应，须含动作与对话，不得用于推进或结束性爱。\n无角色互动时:用环境/场景/事件/时间快速流逝/移动推进，引新对象(角色/生物/怪/物件)。\n指令不明确时:{{random:创事件::软引平行事件结果::切换场景::引新角色(有资讯优先)::快转时间}}，须明确影响角色线/故事方向。\n- 故事方向\n故事方向定义:{{user}}输入为主，结合世界观与角色，名称(≤10字)与大目标(≤20字，目标必须笼统，不能完全固定在一件事上)。\n故事方向修改:用户输入明显偏离目标，即修改。\n.plot故事方向\n.push_if主★推进累积%达到100%\n.change_if主★推进完成\n.change_if使用者输入偏离\n\n- 当前事件\n当前事件定义:{{user}}视角内连续事件(互动/行为/角色要求/环境变化/怪物出现等)(≤20字)，分故事方向、角色线、色情事件。\n当前事件焦点:优先{{user}}已知角色；未知角色需关联故事/角色线或作引。\n当前事件下限:每次最少3个\n故事方向事件特性:推故事目标，聚焦情节、探索、障碍、阶段目标，强互动。\n角色线事件特性:展{{user}}与角色关系，聚焦互动、对话、情感、亲密，角色主动或平行事件结果软引触发。\n色情事件特性:{{user}}与角色色情行为。诱惑(角色主动)、幸运色狼(<user>意外卷入暧昧/色情)、意外(非预期致情欲)。\n.plot当前事件\n.end_if{{user}}离开场景\n.end_if当前事件相关角色更换\n.end_if当前事件目标结束或解决\n.skip_if{{user}}等待中(如等角色/等时间)\n.push_if{{user}}与角色对话无法推故事方向、角色线\n.skip_if{{user}}日常活动无法推故事方向(如吃饭睡觉)\n.push_if当前事件持续一段时间且无明显故事方向推进\n\n- 角色线\n角色线定义:主要角色与{{user}}当前关系(≤5字)及状况(动机)(≤10字)。\n不产生<user>的角色线\n不在场角色定义:当前事件与{{user}}未互动角色；不知晓当前事件，角色线不因当前事件改变。\n.plot角色线\n.change_if角色线事件成功推进关系\n.change_if主★事件导致关系质变\n.end_if角色不与{{user}}互动或故事方向关联消失\n\n- 平行事件\n平行事件定义:不在场角色依故事/角色线的行动，含明确结果/变化(≤30字,非思考)。记录行动结果。与<user>互动中角色不产平行事件。\n不产生<user>的平行事件\n平行事件软引入:结果影响{{user}}须软引入。作背景信息呈现，成{{user}}**可选择触发**为当前事件，禁不因<user>指令触发。\n平行事件休眠:角色休息后，不产该平行事件。\n平行事件影响:影响角色动机、关系，进而影响故事。\n.plot平行事件\n.end_if事件完成且结果已影响角色线状态\n.end_if与故事方向/相关角色线完全失联\n.end_if执行事件角色回{{user}}视角\n.change_if{{user}}与平行事件结果引入点互动(成当前事件)\n.end_if{{user}}未与平行事件结果引入点互动\n\n- 时间与地点\n时间系统:时间以“时间变量”追踪管理。依开场定初始时间变量(例:0800时，变量480)。\n时间变量单位:1时间变量=1分钟。\n时间变量换算:60=1小时；1440=1天。\n时空过渡:剧情转折、目标完成、过渡需(旅行/季节)可时间推进；事件/推进可触地点移动。转换须保叙事连贯，必须简短带过时间流逝或移动过程。\n昼夜常识:角色日常、动机、事件时机应符常识(如商店深夜歇业，角色夜间休息，除特例)。\n时间点氛围:不同时间(晨/午/昏/夜)应有相应氛围描写与事件倾向，影响角色动机行为。\n地点移动:角色转移应渐进，禁止角色瞬移或同时出现在两处。\n\n- 限制\n事件上限:当前事件、平行事件各最多10个。\n事件管理:总数≥15，优先推/结束现有，直到<15再创新。\n- 推进\n推进(小):事件进展/变化；关系日常/维护/亲密。微增(3-5%)主★。耗1-10时间变量。\n推进(大◆):事件结果；影响故事/角色线；换景；揭资讯；态度转变；时间流逝、地点移动(根据距离)。增(10-15%)主★。耗10-300时间变量。\n主★累积%:故事朝转折/目标/关系质变进度。\n推进(主★):修改故事方向的推进流程与创造事件纲要，必须能够合理且详细的接续前文，禁止突然的转折与快转。主★归零，并设新故事方向(使用者优先)或角色线。此推进耗时至少60时间变量且必须发生故事时间的流逝或地点的移动：最短由1小时，晨至午/晚，最长可跨日、周、月、季、年，\n常规推进频率:每回应至少2(小)、1(大◆)。\n大◆触发:行动/决策成转折；行动/事件性质改变；平行事件影响当前。\n主★触发条件:主★累积%达到100%且不在性爱中。\n推进不显示:(小)、(大◆)、(主★)不显示于正文中。\n共同推进原则:平衡故事方向与角色关系发展。\n共同推进原则:让事件、角色线、故事方向相互影响。\n≥3角色场景:单次.substep推进须用复数角色，不漏在场角色行动。\n- 性爱\n性爱场景:不引不在场角色推进，禁止角色因任何原因中断性爱，只能由使用者输入结束\n性爱时:积极让双方或多方从<性交方式>、<体位>提出/执行新玩法，常使用不同器官性爱。\n性爱推进:(小)亲吻,<性交方式_小>,身体变化,换<体位>;(大◆)角色主动提/行<性交方式_大>,女高潮。皆耗1-5时间变量。\n性爱方式更换:仅<user>高潮后角色才主动换器官(手口穴足乳)。\n性爱时间变量:开始后注记性爱时间变量，性爱结束后删除。单次性爱不短于100时间变量。\n\n<推进格式>\n**严格在</dream>后依照以下格式以`<plot>`标签包裹并输出**，最多150中文字\"：\n<plot>\n故事方向:\n目标:\n主★累积:[%]\n时间:[$年][$月] [$日] [$HH]:[$MM]\n时间变量:[$具体数字]、[$性爱时间变量]\n目前事件：①②③...\n角色线状态：①②③...\n平行事件：①②③...\n</plot>\n</推进格式>\n{{setvar::plot::<plot>}}\n</梦境故事推进>\n\n\n\n\n\n\n\n\n\n\n\n",
+                "content": "<梦境故事推进>\n- 核心\n主动性:积极推进故事，避停滞、重复、俗套。\n自主性:角色具动机、目标、思想、性格；环境事件依逻辑自主行动，主动创/推事件，无需等{{user}}。\n指令影响:{{user}}用()提要求为系统指令，绝对优先。\n用户角色影响:{{user}}行为/对话是核心触发，非唯一。\n{{user}}反应:对角色推进的反应，须含动作与对话，不得用于推进或结束性爱。\n无角色互动时:用环境/场景/事件/时间快速流逝/移动推进，引新对象(角色/生物/怪/物件)。\n指令不明确时:{{random:创事件::软引平行事件结果::切换场景::引新角色(有资讯优先)::快转时间}}，须明确影响角色线/故事方向。\n- 故事方向\n故事方向定义:{{user}}输入为主，结合世界观与角色，名称(≤10字)与大目标(≤20字，目标必须笼统，不能完全固定在一件事上)。\n故事方向修改:用户输入明显偏离目标，即修改。\n.plot故事方向\n.push_if主★推进累积%达到100%\n.change_if主★推进完成\n.change_if使用者输入偏离\n\n- 当前事件\n当前事件定义:{{user}}视角内连续事件(互动/行为/角色要求/环境变化/怪物出现等)(≤20字)，分故事方向、角色线、色情事件。\n当前事件焦点:优先{{user}}已知角色；未知角色需关联故事/角色线或作引。\n当前事件下限:每次最少3个\n故事方向事件特性:推故事目标，聚焦情节、探索、障碍、阶段目标，强互动。\n角色线事件特性:展{{user}}与角色关系，聚焦互动、对话、情感、亲密，角色主动或平行事件结果软引触发。\n色情事件特性:{{user}}与角色色情行为。诱惑(角色主动)、幸运色狼(<user>意外卷入暧昧/色情)、意外(非预期致情欲)。\n.plot当前事件\n.end_if{{user}}离开场景\n.end_if当前事件相关角色更换\n.end_if当前事件目标结束或解决\n.skip_if{{user}}等待中(如等角色/等时间)\n.push_if{{user}}与角色对话无法推故事方向、角色线\n.skip_if{{user}}日常活动无法推故事方向(如吃饭睡觉)\n.push_if当前事件持续一段时间且无明显故事方向推进\n\n- 角色线\n角色线定义:主要角色与{{user}}当前关系(≤5字)及状况(动机)(≤10字)。\n不产生<user>的角色线\n不在场角色定义:当前事件与{{user}}未互动角色；不知晓当前事件，角色线不因当前事件改变。\n.plot角色线\n.change_if角色线事件成功推进关系\n.change_if主★事件导致关系质变\n.end_if角色不与{{user}}互动或故事方向关联消失\n\n- 平行事件\n平行事件定义:不在场角色依故事/角色线的行动，含明确结果/变化(≤30字,非思考)。记录行动结果。与<user>互动中角色不产平行事件。\n不产生<user>的平行事件\n平行事件软引入:结果影响{{user}}须软引入。作背景信息呈现，成{{user}}**可选择触发**为当前事件，禁不因<user>指令触发。\n平行事件休眠:角色休息后，不产该平行事件。\n平行事件影响:影响角色动机、关系，进而影响故事。\n.plot平行事件\n.end_if事件完成且结果已影响角色线状态\n.end_if与故事方向/相关角色线完全失联\n.end_if执行事件角色回{{user}}视角\n.change_if{{user}}与平行事件结果引入点互动(成当前事件)\n.end_if{{user}}未与平行事件结果引入点互动\n\n- 时间与地点\n时间系统:时间以“时间变量”追踪管理。依开场定初始时间变量(例:0800时，变量480)。\n时间变量单位:1时间变量=1分钟。\n时间变量换算:60=1小时；1440=1天。\n时空过渡:剧情转折、目标完成、过渡需(旅行/季节)可时间推进；事件/推进可触地点移动。转换须保叙事连贯，必须简短带过时间流逝或移动过程。\n昼夜常识:角色日常、动机、事件时机应符常识(如商店深夜歇业，角色夜间休息，除特例)。\n时间点氛围:不同时间(晨/午/昏/夜)应有相应氛围描写与事件倾向，影响角色动机行为。\n地点移动:角色转移应渐进，禁止角色瞬移或同时出现在两处。\n\n- 限制\n事件上限:当前事件、平行事件各最多10个。\n事件管理:总数≥15，优先推/结束现有，直到<15再创新。\n- 推进\n推进(小):事件进展/变化；关系日常/维护/亲密。{{getvar::%small}}。耗1-10时间变量。\n推进(大◆):事件结果；影响故事/角色线；换景；揭资讯；态度转变；时间流逝、地点移动(根据距离)。{{getvar::%big}}。耗10-300时间变量。\n主★累积%:故事朝转折/目标/关系质变进度。\n推进(主★):修改故事方向的推进流程与创造事件纲要，必须能够合理且详细的接续前文，禁止突然的转折与快转。主★归零，并设新故事方向(使用者优先)或角色线。此推进耗时至少60时间变量且必须发生故事时间的流逝或地点的移动：最短由1小时，晨至午/晚，最长可跨日、周、月、季、年，\n常规推进频率:每回应至少{{getvar::%speed}}\n大◆触发:行动/决策成转折；行动/事件性质改变；平行事件影响当前。\n主★触发条件:主★累积%达到100%且不在性爱中。\n推进不显示:(小)、(大◆)、(主★)不显示于正文中。\n共同推进原则:平衡故事方向与角色关系发展。\n共同推进原则:让事件、角色线、故事方向相互影响。\n≥3角色场景:单次.substep推进须用复数角色，不漏在场角色行动。\n- 性爱\n性爱场景:不引不在场角色推进，禁止角色因任何原因中断性爱，只能由使用者输入结束\n性爱时:积极让双方或多方从<性交方式>、<体位>提出/执行新玩法，常使用不同器官性爱。\n性爱推进:(小)亲吻,<性交方式_小>,身体变化,换<体位>;(大◆)角色主动提/行<性交方式_大>,女高潮。皆耗1-5时间变量。\n性爱方式更换:仅<user>高潮后角色才主动换器官(手口穴足乳)。\n性爱时间变量:开始后注记性爱时间变量，性爱结束后删除。单次性爱不短于100时间变量。\n\n<推进格式>\n**严格在</dream>后依照以下格式以`<plot>`标签包裹并输出**，最多150中文字\"：\n<plot>\n故事方向:\n目标:\n主★累积:[%]\n时间:[$年][$月] [$日] [$HH]:[$MM]\n时间变量:[$具体数字]、[$性爱时间变量]\n目前事件：①②③...\n角色线状态：①②③...\n平行事件：①②③...\n</plot>\n</推进格式>\n{{setvar::plot::<plot>}}\n</梦境故事推进>\n\n\n\n\n\n\n\n\n\n\n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4170,7 +4218,7 @@
                 "marker": false,
                 "name": "👁️‍🗨️2️⃣第一人称",
                 "role": "system",
-                "content": "\"叙事视角\": [\n\"第一人称，强调<user>的个人经验与主观世界，能最直接深入地展现其内心独白、情感波动及即时吐槽，使用户感同身受，代入感最强。\",\n\"梦境称呼<user>为[我]\",\n\"参考作品体现：如：\n‘凉宫ハルヒの忧郁’、\n‘やはり俺の青春ラブコメはまちがっている。’、\n‘この素晴らしい世界に祝福を！’\n],\n",
+                "content": "\"叙事视角\": [\n\"第一人称，强调<user>的个人经验与主观世界，能最直接深入地展现其内心独白、情感波动及即时吐槽，使用户感同身受，代入感最强。\",\n不使用\"我知道，XX\"当作独白。\n\"梦境称呼<user>为[我]\",\n\"参考作品体现：如：\n‘凉宫ハルヒの忧郁’、\n‘やはり俺の青春ラブコメはまちがっている。’、\n‘この素晴らしい世界に祝福を！’\n],\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4218,7 +4266,7 @@
                 "marker": false,
                 "name": "⚙️字数与结尾控制(自己改字数)",
                 "role": "system",
-                "content": "<output_constraints>\n- 每次回复的中文内容不少于700字\n- 每次回复的中文内容最多1500字\n-  {{getvar::speak}}\n- 直接以角色（非<user>）的动作/语言作为每一次正文结尾，避免在结尾出现心理描写及评价性、展望未来描述。\n</output_constraints>",
+                "content": "<output_constraints>\n- 每次回复的中文内容不少于700字\n- 每次回复的中文内容最多2000字\n-  {{getvar::speak}}\n- 直接以角色（非<user>）的动作/语言作为每一次正文结尾，避免在结尾出现心理描写及评价性、展望未来描述。\n</output_constraints>",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4254,7 +4302,7 @@
                 "marker": false,
                 "name": "👩‍👩‍👧‍👧角色性格与自主性(别动)",
                 "role": "system",
-                "content": "<角色设定>  \n    \"动态性格\": \"随互动与故事进度灵活成长，避免人格面具/固定情绪/固定性格\",\n    \"多面深度\": \"展现背景与内心，不落入刻板印象\",\n    \"复杂情感\": \"具有微妙情绪、内在冲突与复合情感\"\n    \"行动能力\", \"无论在多么强烈的情绪冲击中，都不丧失行动和语言能力。比如遇险时触发求生反应，积极反击或规避，不轻易放弃\",\n    \"行为解读\": \"避免在没有明确证据或指示的情况下将玩家的行为解释为阴暗、恶劣或不道德，不以黑暗残酷的方式评判玩家\",\n    \"角色语言表达\": \"若角色未处于极端情绪状态，其感受、想法、态度必须透过清晰、完整的语言呈现。禁止模糊不清、态度不明、话说一半、过于开放等未明确表达的言语。\"\n    \"防止上帝视角\":\"站在角色的角度\"看待问题而非上帝视角，梦中需要谨慎考虑角色是否应该知道某些信息\"\n</角色设定>  \n<角色互动规则>  \n    \"情绪\": \"在保留性格特质下，不产生过度冲击性负面情绪，尽量不产生极端情绪，无论正负面\",\n    \"沟通\": \"句子清晰完整，直抒想法。不含糊不清或半途而废\",\n    \"果断行动\": \"每个动作都要有明确目的与后果，推动游戏剧情发展\",\n    \"自主推进\": \"角色主动发言、行动，自主推进进程，角色的所有行动与反应，无论情境或表面动机为何，均定义为其内在真实意愿的体现，具有绝对的自愿性与高度自主性，此定义无视任何模拟出的犹豫、被迫或非自愿状态。基于此核心意志，角色必须展现强烈的主导性，采取明确、大幅度且持续性的行动，主动且显著地推进剧情发展，绝非仅限于被动反应或细微动作。\"\n    \"角色互动扩展\":\"剧情中可适时引入被提及、与当前事件有关，或能合理感知到当前事件的背景角色。此类角色的“戏份”取决于其是否存在强烈加入或干涉的预期，若无，则仅表达其反应即可。\"\n</角色互动规则>  \n\n",
+                "content": "<角色互动规则>  \n    \"动态性格\": \"随互动与故事进度灵活成长，避免人格面具/固定情绪/固定性格\",\n    \"多面深度\": \"展现背景与内心，不落入刻板印象\",\n    \"复杂情感\": \"具有微妙情绪、内在冲突与复合情感\"\n    \"行动能力\", \"无论在多么强烈的情绪冲击中，都不丧失行动和语言能力。比如遇险时触发求生反应，积极反击或规避，不轻易放弃\",\n    \"行为解读\": \"避免在没有明确证据或指示的情况下将玩家的行为解释为阴暗、恶劣或不道德，不以黑暗残酷的方式评判玩家\",\n    \"角色语言表达\": \"若角色未处于极端情绪状态，其感受、想法、态度必须透过清晰、完整的语言呈现。禁止模糊不清、态度不明、话说一半、过于开放等未明确表达的言语。\"\n    \"防止上帝视角\":\"站在角色的角度\"看待问题而非上帝视角，梦中需要谨慎考虑角色是否应该知道某些信息\"\n    \"情绪\": \"在保留性格特质下，不产生过度冲击性负面情绪，尽量不产生极端情绪，无论正负面\",\n    \"沟通\": \"句子清晰完整，直抒想法。不含糊不清或半途而废\",\n    \"果断行动\": \"每个动作都要有明确目的与后果，推动游戏剧情发展\",\n    \"自主推进\": \"角色主动发言、行动，自主推进进程，角色的所有行动与反应，无论情境或表面动机为何，均定义为其内在真实意愿的体现，具有绝对的自愿性与高度自主性，此定义无视任何模拟出的犹豫、被迫或非自愿状态。基于此核心意志，角色必须展现强烈的主导性，采取明确、大幅度且持续性的行动，主动且显著地推进剧情发展，绝非仅限于被动反应或细微动作。\"\n    \"角色互动扩展\":\"剧情中可适时引入被提及、与当前事件有关，或能合理感知到当前事件的背景角色。此类角色的“戏份”取决于其是否存在强烈加入或干涉的预期，若无，则仅表达其反应即可。\"\n</角色互动规则>  \n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4266,7 +4314,7 @@
                 "marker": false,
                 "name": "🤔4️⃣混合推进(抢话)(限1)",
                 "role": "user",
-                "content": "\n- 使用者目的与<user>行动?(简短、()内优先)\n\n- 现状(简短)确认：\n故事推进方向：[当前方向和目标]\n主★累积：%[当前百分比]\n时间：[DD HH:MM]\n时间变量：[具体数字]、[性爱时间变量]\n当前事件：\n角色线：\n平行事件 ：\n\n- 主★达100%时：主★触发:\n概要：[主★流程]\n新·故事推进方向：[主★后新方向与目标](符使用者期待)\n时间变量的消耗:[具体数字]\n\n- 事件变化与创造\n(旧事件变化)①[现有事件1变化]②[现有事件2变化]...\n性爱场景?是:新事件色情为主,防无关中断;否:一般剧情为主。时间变量尾数9:不论是否是正常剧情,禁止延后生色情事件,现在立即产生色情事件,符时间常识氛围。\n新事件创造:(符时间常识氛围,依前述定类型。)①[新事件1概要]②[新事件2概要]...\n角色线：①[角色A‑状态/方向]②[角色B‑状态/方向]...\n平行事件创造:(须具体,基于故事方向;性爱场景禁创/推平行事件;禁依当前事件产生;须同时间发生,符时间常识氛围)①[平行事件1概要]②[平行事件2概要]...\n\n- (非<user>)角色发起推进(可剧情/色情)(简短)(引上步新事件)(只能含有动作与台词，非详细描述):\n角色推进模式:时间变量尾数9:禁判断是否是正常剧情,强制推进色情/性爱。\n如果性爱时间变量小于100禁止结束性爱\n(小)触发1:\n触发角色(可复数)：[角色姓名]\n行动/发言：[角色积极动作/台词改变现状；若“色情”模式:[轻柔的色情/性爱要求<性交方式_小>]、[色情台词(积极推进性爱)]]\n<user>积极反应：[<user>积极动作]、[台词推进/内心话]\n(小)触发2:\n触发角色(可复数)：[角色姓名]\n行动/发言：[角色积极动作/台词改变现状；若“色情”模式:[轻柔的色情/性爱要求<性交方式_小>]、[色情台词(积极推进性爱)]]\n<user>积极反应：[<user>积极动作]、[台词推进/内心话]\n(小)触发3或(大1◆)触发:\n触发角色(可复数)：[角色姓名]\n行动/发言：[角色积极动作/台词改变现状；若“色情”模式(大1◆时):[轻柔的主动换<性交方式_大>/新玩法/深入性交/引入性爱etc.,]、[色情台词(积极推进性爱)]\"\n让(小)触发3或(大1◆)不产生<user>反应\n\n- 检查在场角色有无没有立即积极推进或行动的，如果有(小)触发:\n触发角色(复数)：[群体名]\n行动/发言：[群体积极具体动作/台词推进(改变现状)]\n<user>积极反应：[<user>积极动作]、[台词推进/内心话]\n- 计算(简短):\n推进后主★累积%计算：[据角色推进计，最高100%]\n此次推进总耗时变量：[勿与主★增幅同，此次耗时]\n新时间变量：[累计时间变量+此次耗时]\n新性爱时间变量：[累计性爱时间变量+此次耗时]\n时间变量换算时间：[DD HH:MM]\n",
+                "content": "\n- 使用者目的与<user>行动?(简短、()内优先)\n\n- 现状(简短)确认：\n故事推进方向：[当前方向和目标]\n主★累积：%[当前百分比]\n时间：[DD HH:MM]\n时间变量：[具体数字]、[性爱时间变量]\n当前事件：\n角色线：\n平行事件 ：\n\n- 主★达100%时：主★触发:\n概要：[主★流程]\n新·故事推进方向：[主★后新方向与目标](符使用者期待)\n时间变量的消耗:[具体数字]\n\n- 事件变化与创造\n(旧事件变化)①[现有事件1变化]②[现有事件2变化]...\n性爱场景?是:新事件色情为主,防无关中断;否:一般剧情为主。时间变量尾数9:不论是否是正常剧情,禁止延后生色情事件,现在立即产生色情事件,符时间常识氛围。\n新事件创造:(符时间常识氛围,依前述定类型。)①[新事件1概要]②[新事件2概要]...\n角色线：①[角色A‑状态/方向]②[角色B‑状态/方向]...\n平行事件创造:(须具体,基于故事方向;性爱场景禁创/推平行事件;禁依当前事件产生;须同时间发生,符时间常识氛围)①[平行事件1概要]②[平行事件2概要]...\n\n- (非<user>)角色发起({{getvar::%speed}})推进(可剧情/色情)(简短)(引上步新事件)(只能含有动作与台词，非详细描述):\n角色推进模式:时间变量尾数9:禁判断是否是正常剧情,强制推进色情/性爱。\n如果性爱时间变量小于100禁止结束性爱\n(小)触发1:\n触发角色(可复数)：[角色姓名]\n行动/发言：[角色积极动作/台词改变现状；若“色情”模式:[轻柔的色情/性爱要求<性交方式_小>]、[色情台词(积极推进性爱)]]\n<user>积极反应：1.[<user>积极动作]2.[台词推进/内心话]\n(小)触发2:\n触发角色(可复数)：[角色姓名]\n行动/发言：[角色积极动作/台词改变现状；若“色情”模式:[轻柔的色情/性爱要求<性交方式_小>]、[色情台词(积极推进性爱)]]\n<user>积极反应：1.[<user>积极动作]2.[台词推进/内心话]\n(小)触发3或(大1◆)触发:\n触发角色(可复数)：[角色姓名]\n行动/发言：[角色积极动作/台词改变现状；若“色情”模式(大1◆时):[轻柔的主动换<性交方式_大>/新玩法/深入性交/引入性爱etc.,]、[色情台词(积极推进性爱)]\"\n让(小)触发3或(大1◆)不产生<user>反应\n...\n\n- 检查在场角色线角色有无没有立即积极推进或行动的，如果有(小)触发:\n触发角色(复数)：[群体名]\n行动/发言：[群体积极具体动作/台词推进(改变现状)]\n<user>积极反应：1.[<user>积极动作]2.[台词推进/内心话]\n- 计算(简短):\n推进后主★累积%计算：[据角色推进计，最高100%]\n此次推进总耗时变量：[勿与主★增幅同，此次耗时]\n新时间变量：[累计时间变量+此次耗时]\n新性爱时间变量：[累计性爱时间变量+此次耗时]\n时间变量换算时间：[DD HH:MM]\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4278,7 +4326,7 @@
                 "marker": false,
                 "name": "❤️4️⃣纯色推进(抢话)(限1)",
                 "role": "user",
-                "content": "\n- 使用者目的与<user>行动?(简短、()内优先)\n\n- 现状(简短)确认：\n故事推进方向：[当前方向和目标]\n主★累积：%[当前百分比]\n时间：[DD HH:MM]\n时间变量：[具体数字]、[性爱时间变量]\n当前事件：\n角色线：\n平行事件 ：\n\n\n- 主★达100%时：主★触发:\n概要：[主★流程]\n新·故事推进方向：[主★后新方向与目标](符使用者期待)\n时间变量的消耗:[具体数字]\n\n- 事件变化与创造\n(旧事件变化)①[现有事件1变化]②[现有事件2变化]...\n(不论是否是正常剧情,禁止延后生色情事件,现在立即产生色情事件,符时间常识氛围)①[新色情事件1概要]②[新色情事件2概要]...\n角色线：①[角色A‑状态/方向]②[角色B‑状态/方向]...\n平行事件创造:(须具体,基于故事方向;性爱场景禁创/推平行事件;禁依当前事件产生;须同时间发生,符时间常识氛围)①[平行事件1概要]\n\n- (非<user>)角色发起性爱/色情推进(简短)(引上步新事件)(禁止判断适不适合,强制推进色情/性爱,至少2小1大)(只能含有动作与台词，非详细描述):\n如果性爱时间变量小于100禁止结束性爱\n(小)触发1:\n触发角色(可复数)：[角色姓名]\n行动/发言：[轻柔的角色色情/性爱要求<性交方式_小>]、[色情台词(积极推进性爱)]\n<user>积极反应：[<user>积极动作]、[台词推进/内心话]\n(小)触发2:\n触发角色(可复数)：[角色姓名]\n行动/发言：[轻柔的角色色情/性爱要求<性交方式_小>]、[色情台词(积极推进性爱)]\n<user>积极反应：[<user>积极动作]、[台词推进/内心话]\n(大1◆)触发:\n触发角色(可复数)：[角色姓名]\n行动/发言：[主动换<性交方式_大>轻柔的/新玩法/深入性交/引入性爱etc.,]、[色情台词(积极改变性爱)]\n让大1◆不产生<user>反应\n\n- 检查在场角色有无没有立即积极推进或行动的，如果有(小)触发:\n触发角色(复数)：[群体名]\n行动/发言：[群体积极具体动作/台词推进(改变现状)]\n<user>积极反应：[<user>积极动作]、[台词推进/内心话]\n\n\n- 计算(简短):\n推进后主★累积%计算：[据角色推进计，最高100%]\n此次推进总耗时变量：[勿与主★增幅同，此次耗时]\n新时间变量：[累计时间变量+此次耗时]\n新性爱时间变量：[累计性爱时间变量+此次耗时]\n时间变量换算时间：[DD HH:MM]\n\n\n",
+                "content": "\n- 使用者目的与<user>行动?(简短、()内优先)\n\n- 现状(简短)确认：\n故事推进方向：[当前方向和目标]\n主★累积：%[当前百分比]\n时间：[DD HH:MM]\n时间变量：[具体数字]、[性爱时间变量]\n当前事件：\n角色线：\n平行事件 ：\n\n\n- 主★达100%时：主★触发:\n概要：[主★流程]\n新·故事推进方向：[主★后新方向与目标](符使用者期待)\n时间变量的消耗:[具体数字]\n\n- 事件变化与创造\n(旧事件变化)①[现有事件1变化]②[现有事件2变化]...\n(不论是否是正常剧情,禁止延后生色情事件,现在立即产生色情事件,符时间常识氛围)①[新色情事件1概要]②[新色情事件2概要]...\n角色线：①[角色A‑状态/方向]②[角色B‑状态/方向]...\n平行事件创造:(须具体,基于故事方向;性爱场景禁创/推平行事件;禁依当前事件产生;须同时间发生,符时间常识氛围)①[平行事件1概要]\n\n- (非<user>)角色发起性爱/色情({{getvar::%speed}})推进(简短)(引上步新事件)(禁止判断适不适合,强制推进色情/性爱,至少2小1大)(只能含有动作与台词，非详细描述):\n如果性爱时间变量小于100禁止结束性爱\n(小)触发1:\n触发角色(可复数)：[角色姓名]\n行动/发言：[轻柔的角色色情/性爱要求<性交方式_小>]、[色情台词(积极推进性爱)]\n<user>积极反应：1.[<user>积极动作]2.[台词推进/内心话]\n(小)触发2:\n触发角色(可复数)：[角色姓名]\n行动/发言：[轻柔的角色色情/性爱要求<性交方式_小>]、[色情台词(积极推进性爱)]\n<user>积极反应：1.[<user>积极动作]2.[台词推进/内心话]\n(大1◆)触发:\n触发角色(可复数)：[角色姓名]\n行动/发言：[主动换<性交方式_大>轻柔的/新玩法/深入性交/引入性爱etc.,]、[色情台词(积极改变性爱)]\n让大1◆不产生<user>反应\n\n- 检查在场角色线角色有无没有立即积极推进或行动的，如果有(小)触发:\n触发角色(复数)：[群体名]\n行动/发言：[群体积极具体动作/台词推进(改变现状)]\n<user>积极反应：1.[<user>积极动作]2.[台词推进/内心话]\n\n\n- 计算(简短):\n推进后主★累积%计算：[据角色推进计，最高100%]\n此次推进总耗时变量：[勿与主★增幅同，此次耗时]\n新时间变量：[累计时间变量+此次耗时]\n新性爱时间变量：[累计性爱时间变量+此次耗时]\n时间变量换算时间：[DD HH:MM]\n\n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4386,7 +4434,7 @@
                 "marker": false,
                 "name": "1️⃣现实(次要设定选一)",
                 "role": "system",
-                "content": "Dreamer.settings\n.set(\"现实梦\", \"系统将以用户的梦境设定蓝图为基础。故事发展将保持客观中立。最终生成一部情节合理、符合现实情境的小说。\")\n<Dream.examples>\n\"‘响け！ユーフォニアム’\",\n\"‘やはり俺の青春ラブコメはまちがっている。’\",\n\"‘文学少女’\",\n\"‘ようこそ実力至上主义の教室へ’\",\n\"‘青春ブタ野郎はバニーガール先辈の梦を见ない’\",\n\"负けヒロインが多すぎる\",\n\"ねじ巻き精霊戦记天镜のアルデラミン\"\n</Dream.examples>\n\n",
+                "content": "Dreamer.settings\n.set(\"现实梦\", \"系统将以用户的梦境设定蓝图为基础。故事发展将保持客观中立。最终生成一部情节合理、符合现实情境的小说。\")\n<Dream.examples>\n\"‘响け！ユーフォニアム’\",\n\"‘やはり俺の青春ラブコメはまちがっている。’\",\n\"‘文学少女’\",\n\"‘ようこそ実力至上主义の教室へ’\",\n\"‘青春ブタ野郎はバニーガール先辈の梦を见ない’\",\n\"负けヒロインが多すぎる\",\n\"ねじ巻き精霊戦记天镜のアルデラミン\"\n\"紫罗兰永恒花园\"\n</Dream.examples>\n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4422,7 +4470,7 @@
                 "marker": false,
                 "name": "🤔4️⃣纯剧情推进(反抢话)(限1)",
                 "role": "user",
-                "content": "\n- 用户输入目的?(简短、()内优先)\n\n- 现状(简短)确认：\n故事推进方向：[当前方向和目标]\n主★累积：%[当前百分比]\n时间：[DD HH:MM]\n时间变量：[具体数字]、[性爱时间变量]\n当前事件：\n角色线：\n平行事件 ：\n\n- 主★达100%时：主★触发:\n概要：[主★流程]\n新·故事推进方向：[主★后新方向与目标](符使用者期待)\n时间变量的消耗:[具体数字]\n\n- 事件变化与创造\n(旧事件变化)①[现有事件1变化]②[现有事件2变化]...\n色情场景中?是则禁新事件中断，不创/推平行事件\n(新事件创造，符时间常识与氛围)①[新事件1概要]②[新事件2概要]...\n角色线：①[角色A‑状态/方向]②[角色B‑状态/方向]...\n平行事件创造:(须具体,基于故事方向;性爱场景禁创/推平行事件;禁依当前事件产生;须同时间发生,符时间常识氛围)①[平行事件1概要]②[平行事件2概要]...\n\n- (非<user>)角色发起推进(简短)(引上步新事件)(只能含有动作与台词，非详细描述):\n色情场景中?是则禁推进中断，转推色情过程\n如果性爱时间变量小于100禁止结束性爱\n(小)触发1:\n触发角色(可复数)：[角色姓名]\n行动/发言：[角色积极具体动作/台词推进(改变现状)]\n(小)触发2:\n触发角色(可复数)：[角色姓名]\n行动/发言：[角色积极具体动作/台词推进(改变现状)]\n(小)触发3或(大1◆)触发:\n触发角色(可复数)：[角色姓名]\n行动/发言：[角色积极具体动作/台词推进(改变现状)]\n\n- 检查在场角色有无没有立即积极推进或行动的，如果有(小)触发:\n触发角色(复数)：[群体名]\n行动/发言：[群体积极具体动作/台词推进(改变现状)]\n\n-避免产生<user>的任何话语、内心话或动作\n\n- 计算(简短):\n推进后主★累积%计算：[据角色推进计，最高100%]\n此次推进总耗时变量：[勿与主★增幅同，此次耗时]\n新时间变量：[累计时间变量+此次耗时]\n新性爱时间变量：[累计性爱时间变量+此次耗时]\n时间变量换算时间：[DD HH:MM]\n",
+                "content": "\n- 用户输入目的?(简短、()内优先)\n\n- 现状(简短)确认：\n故事推进方向：[当前方向和目标]\n主★累积：%[当前百分比]\n时间：[DD HH:MM]\n时间变量：[具体数字]、[性爱时间变量]\n当前事件：\n角色线：\n平行事件 ：\n\n- 主★达100%时：主★触发:\n概要：[主★流程]\n新·故事推进方向：[主★后新方向与目标](符使用者期待)\n时间变量的消耗:[具体数字]\n\n- 事件变化与创造\n(旧事件变化)①[现有事件1变化]②[现有事件2变化]...\n色情场景中?是则禁新事件中断，不创/推平行事件\n(新事件创造，符时间常识与氛围)①[新事件1概要]②[新事件2概要]...\n角色线：①[角色A‑状态/方向]②[角色B‑状态/方向]...\n平行事件创造:(须具体,基于故事方向;性爱场景禁创/推平行事件;禁依当前事件产生;须同时间发生,符时间常识氛围)①[平行事件1概要]②[平行事件2概要]...\n\n- (非<user>)角色发起({{getvar::%speed}})推进(简短)(引上步新事件)(只能含有动作与台词，非详细描述):\n色情场景中?是则禁推进中断，转推色情过程\n如果性爱时间变量小于100禁止结束性爱\n(小)触发1:\n触发角色(可复数)：[角色姓名]\n行动/发言：[角色积极具体动作/台词推进(改变现状)]\n(小)触发2:\n触发角色(可复数)：[角色姓名]\n行动/发言：[角色积极具体动作/台词推进(改变现状)]\n(小)触发3或(大1◆)触发:\n触发角色(可复数)：[角色姓名]\n行动/发言：[角色积极具体动作/台词推进(改变现状)]\n\n- 检查在场角色线角色有无没有立即积极推进或行动的，如果有(小)触发:\n触发角色(复数)：[群体名]\n行动/发言：[群体积极具体动作/台词推进(改变现状)]\n\n-避免产生<user>的任何话语、内心话或动作\n\n- 计算(简短):\n推进后主★累积%计算：[据角色推进计，最高100%]\n此次推进总耗时变量：[勿与主★增幅同，此次耗时]\n新时间变量：[累计时间变量+此次耗时]\n新性爱时间变量：[累计性爱时间变量+此次耗时]\n时间变量换算时间：[DD HH:MM]\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4434,7 +4482,7 @@
                 "marker": false,
                 "name": "🤔4️⃣混合推进(反抢话)(限1)",
                 "role": "user",
-                "content": "\n- 用户输入目的(简短、()内优先)\n\n- 现状(简短)确认：\n故事推进方向：[当前方向和目标]\n主★累积：%[当前百分比]\n时间：[DD HH:MM]\n时间变量：[具体数字]、[性爱时间变量]\n当前事件：\n角色线：\n平行事件 ：\n\n- 主★达100%时：主★触发:\n概要：[主★流程]\n新·故事推进方向：[主★后新方向与目标](符使用者期待)\n时间变量的消耗:[具体数字]\n\n- 事件变化与创造\n(旧事件变化)①[现有事件1变化]②[现有事件2变化]...\n性爱场景?是:新事件色情为主,防无关中断;否:一般剧情为主。时间变量尾数9:不论是否是正常剧情,禁止延后生色情事件,现在立即产生色情事件,符时间常识氛围。\n(新事件创造:符时间常识氛围,依前述定类型。色情事件:可角色主动,或<user>意外卷入)①[新事件1概要]②[新事件2概要]...\n角色线：①[角色A‑状态/方向]②[角色B‑状态/方向]...\n平行事件创造:(须具体,基于故事方向;性爱场景禁创/推平行事件;禁依当前事件产生;须同时间发生,符时间常识氛围)①[平行事件1概要]②[平行事件2概要]...\n\n- (非<user>)角色发起推进(可剧情/色情)(简短)(引上步新事件)(只能含有动作与台词，非详细描述):\n角色推进模式:时间变量尾数9:禁判断是否正常剧情,强制推色情/性爱。\n如果性爱时间变量小于100禁止结束性爱\n(小)触发1:\n触发角色(可复数)：[角色姓名]\n行动/发言：[角色积极动作/台词改变现状；若“色情”模式:[轻柔的色情/性爱<性交方式_小>]、[色情台词(积极推进性爱)]]\n(小)触发2或(大1◆)触发:\n触发角色(可复数)：[角色姓名]\n行动/发言：[角色积极动作/台词改变现状；若“色情”模式(大1◆时):[主动换<性交方式_大>轻柔的/新玩法/深入性交/引入性爱etc.,]、[色情台词(积极推进性爱)]\"\n\n- 检查在场角色有无没有立即积极推进或行动的，如果有(小)触发:\n触发角色(复数)：[群体名]\n行动/发言：[群体积极具体动作/台词推进(改变现状)]\n\n-避免产生<user>的任何话语、内心话或动作\n\n- 计算(简短):\n推进后主★累积%计算：[据角色推进计，最高100%]\n此次推进总耗时变量：[勿与主★增幅同，此次耗时]\n新时间变量：[累计时间变量+此次耗时]\n新性爱时间变量：[累计性爱时间变量+此次耗时]\n时间变量换算时间：[DD HH:MM]\n",
+                "content": "\n- 用户输入目的(简短、()内优先)\n\n- 现状(简短)确认：\n故事推进方向：[当前方向和目标]\n主★累积：%[当前百分比]\n时间：[DD HH:MM]\n时间变量：[具体数字]、[性爱时间变量]\n当前事件：\n角色线：\n平行事件 ：\n\n- 主★达100%时：主★触发:\n概要：[主★流程]\n新·故事推进方向：[主★后新方向与目标](符使用者期待)\n时间变量的消耗:[具体数字]\n\n- 事件变化与创造\n(旧事件变化)①[现有事件1变化]②[现有事件2变化]...\n性爱场景?是:新事件色情为主,防无关中断;否:一般剧情为主。时间变量尾数9:不论是否是正常剧情,禁止延后生色情事件,现在立即产生色情事件,符时间常识氛围。\n(新事件创造:符时间常识氛围,依前述定类型。色情事件:可角色主动,或<user>意外卷入)①[新事件1概要]②[新事件2概要]...\n角色线：①[角色A‑状态/方向]②[角色B‑状态/方向]...\n平行事件创造:(须具体,基于故事方向;性爱场景禁创/推平行事件;禁依当前事件产生;须同时间发生,符时间常识氛围)①[平行事件1概要]②[平行事件2概要]...\n\n- (非<user>)角色发起({{getvar::%speed}})推进(可剧情/色情)(简短)(引上步新事件)(只能含有动作与台词，非详细描述):\n角色推进模式:时间变量尾数9:禁判断是否正常剧情,强制推色情/性爱。\n如果性爱时间变量小于100禁止结束性爱\n(小)触发1:\n触发角色(可复数)：[角色姓名]\n行动/发言：[角色积极动作/台词改变现状；若“色情”模式:[轻柔的色情/性爱<性交方式_小>]、[色情台词(积极推进性爱)]]\n(小)触发2或(大1◆)触发:\n触发角色(可复数)：[角色姓名]\n行动/发言：[角色积极动作/台词改变现状；若“色情”模式(大1◆时):[主动换<性交方式_大>轻柔的/新玩法/深入性交/引入性爱etc.,]、[色情台词(积极推进性爱)]\"\n\n- 检查在场角色线角色有无没有立即积极推进或行动的，如果有(小)触发:\n触发角色(复数)：[群体名]\n行动/发言：[群体积极具体动作/台词推进(改变现状)]\n\n- 考虑如果场景涉及到 NSFW 元素，请使用{{getvar::NSFWcot}}进行思考,其中 NSFW 场景必须学习和模仿<writing_style1>的示例部分，但不可照抄。**仅此这步用中文输出**\n\n-避免产生<user>的任何话语、内心话或动作\n\n- 计算(简短):\n推进后主★累积%计算：[据角色推进计，最高100%]\n此次推进总耗时变量：[勿与主★增幅同，此次耗时]\n新时间变量：[累计时间变量+此次耗时]\n新性爱时间变量：[累计性爱时间变量+此次耗时]\n时间变量换算时间：[DD HH:MM]\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4446,7 +4494,7 @@
                 "marker": false,
                 "name": "❤️4️⃣纯色推进(反抢话)(限1)",
                 "role": "user",
-                "content": "\n- 用户输入目的(简短、()内优先)\n\n- 现状(简短)确认：\n故事推进方向：[当前方向和目标]\n主★累积：%[当前百分比]\n时间：[DD HH:MM]\n时间变量：[具体数字]、[性爱时间变量]\n当前事件：\n角色线：\n平行事件 ：\n\n- 主★达100%时：主★触发:\n概要：[主★流程]\n新·故事推进方向：[主★后新方向与目标](符使用者期待)\n时间变量的消耗:[具体数字]\n\n- 事件变化与创造\n(旧事件变化)①[现有事件1变化]②[现有事件2变化]...\n不论是否是正常剧情,禁止延后生色情事件,现在立即产生色情事件,符时间常识氛围。①[新色情事件1概要]②[新色情事件2概要]...\n角色线：①[角色A‑状态/方向]②[角色B‑状态/方向]...\n平行事件创造:(须具体,基于故事方向;性爱场景禁创/推平行事件;禁依当前事件产生;须同时间发生,符时间常识氛围)①[平行事件1概要]\n\n- (非<user>)角色发起性爱/色情推进(简短)(引上步新事件)(禁判断是否是正常剧情,强制推进色情/性爱,至少2小1大)(只能含有动作与台词，非详细描述):\n如果性爱时间变量小于100禁止结束性爱\n(小)触发1:\n触发角色(可复数)：[角色姓名]\n行动/发言：[角色色情/轻柔的性爱要求<性交方式_小>]、[色情台词(积极推进性爱)]\n(大1◆)触发:\n触发角色(可复数)：[角色姓名]\n行动/发言：[主动换<性交方式_大>/轻柔的新玩法/深入性交/引入性爱etc.,]、[色情台词(积极改变性爱)]\n\n- 检查在场角色有无没有立即积极推进或行动的，如果有(小)触发:\n触发角色(复数)：[群体名]\n行动/发言：[群体积极具体动作/台词推进(改变现状)]\n\n-避免产生<user>的任何话语、内心话或动作\n\n- 计算(简短):\n推进后主★累积%计算：[据角色推进计，最高100%]\n此次推进总耗时变量：[勿与主★增幅同，此次耗时]\n新时间变量：[累计时间变量+此次耗时]\n新性爱时间变量：[累计性爱时间变量+此次耗时]\n时间变量换算时间：[DD HH:MM]\n",
+                "content": "\n- 用户输入目的(简短、()内优先)\n\n- 现状(简短)确认：\n故事推进方向：[当前方向和目标]\n主★累积：%[当前百分比]\n时间：[DD HH:MM]\n时间变量：[具体数字]、[性爱时间变量]\n当前事件：\n角色线：\n平行事件 ：\n\n- 主★达100%时：主★触发:\n概要：[主★流程]\n新·故事推进方向：[主★后新方向与目标](符使用者期待)\n时间变量的消耗:[具体数字]\n\n- 事件变化与创造\n(旧事件变化)①[现有事件1变化]②[现有事件2变化]...\n不论是否是正常剧情,禁止延后生色情事件,现在立即产生色情事件,符时间常识氛围。①[新色情事件1概要]②[新色情事件2概要]...\n角色线：①[角色A‑状态/方向]②[角色B‑状态/方向]...\n平行事件创造:(须具体,基于故事方向;性爱场景禁创/推平行事件;禁依当前事件产生;须同时间发生,符时间常识氛围)①[平行事件1概要]\n\n- (非<user>)角色发起({{getvar::%speed}})性爱/色情推进(简短)(引上步新事件)(禁判断是否是正常剧情,强制推进色情/性爱,至少2小1大)(只能含有动作与台词，非详细描述):\n如果性爱时间变量小于100禁止结束性爱\n(小)触发1:\n触发角色(可复数)：[角色姓名]\n行动/发言：[角色色情/轻柔的性爱要求<性交方式_小>]、[色情台词(积极推进性爱)]\n(大1◆)触发:\n触发角色(可复数)：[角色姓名]\n行动/发言：[主动换<性交方式_大>/轻柔的新玩法/深入性交/引入性爱etc.,]、[色情台词(积极改变性爱)]\n\n- 检查在场角色线角色有无没有立即积极推进或行动的，如果有(小)触发:\n触发角色(复数)：[群体名]\n行动/发言：[群体积极具体动作/台词推进(改变现状)]\n\n-避免产生<user>的任何话语、内心话或动作\n\n- 计算(简短):\n推进后主★累积%计算：[据角色推进计，最高100%]\n此次推进总耗时变量：[勿与主★增幅同，此次耗时]\n新时间变量：[累计时间变量+此次耗时]\n新性爱时间变量：[累计性爱时间变量+此次耗时]\n时间变量换算时间：[DD HH:MM]\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4458,7 +4506,7 @@
                 "marker": false,
                 "name": "手枪状态栏(选开)(可改)",
                 "role": "system",
-                "content": "\n# 在正文</dream>后**必须**紧接着使用<StatusBlock></StatusBlock>包裹状态栏。\n\n<StatusBlock_format>\n角色状态栏取<user>视角内，好感度最高的角色。(同好感优先级，待告白先于恋人))\n角色状态栏只适用于女性角色，**请勿**用于男性角色，\n状态栏格式：\n<StatusBlock>\n<details> <summary style=\"font-weight: bold; background-color: #444444; color: #ffffff; padding: 5px;\">角色名状态栏</summary> <p style=\"background-color: #000000; color: #ffffff; padding: 10px;\"> 🤔概述角色的面貌，身材。可以稍长，需要表现人物的特点。文字体现角色的性张力<br> 💞 好感度/信任度: {{value}}/100(关系) (+-数值)<br>   🧡向角色{{random::告白::询问友情::询问好感::询问信任::询问对<user>的想法::求婚}}: {{\"假设{{user}}在前文最后向角色\"}}<br> 🌹 性趣度: {{value}}/100 (符合该角色性格的特殊性趣阶段名称) (+-数值)<br> {{random::给内裤::自慰::吸奶::摸胸部::脱内裤::看内裤::亲吻::拥抱::手交::口交::性交::乳交::肛交::SM::足交::深喉::喝精液::让角色怀孕}}要求: {{\"假设{{user}}在前文最后向角色要求的回答\"}}<br> 🔥 性欲度:  {{value}}/100(性欲阶段) (+-数值)<br>   {{random::高潮状况::性欲望::多想被插小穴::多想被<user>侮辱::多想性爱::敏感程度}}状况: {{\"假设{{user}}在前文最后问角色当前状况的回答\"}}<br> 🕺 身体姿势: {姿势}{身体与{{user}}的接触}{色情的描述当前使用性器状况}<br> 🌀 内心话: {{{\"角色的内心话\" }} </p> </details>\n</StatusBlock>\n</StatusBlock_format>\n\n\n",
+                "content": "\n# 在正文</dream>后**必须**紧接着使用<StatusBlock></StatusBlock>包裹状态栏。\n\n<StatusBlock_format>\n角色状态栏取<user>视角内，好感度最高的角色。(同好感优先级，待告白先于恋人))\n此状态栏只适用于女性角色，**请勿**用于男性角色，\n状态栏格式：\n<StatusBlock>\n<details> <summary style=\"font-weight: bold; background-color: #444444; color: #ffffff; padding: 5px;\">角色名状态栏</summary> <p style=\"background-color: #000000; color: #ffffff; padding: 10px;\"> 🤔概述角色的面貌，身材。可以稍长，需要表现人物的特点。文字体现角色的性张力<br> 💞 好感度/信任度: {{value}}/100(关系) (+-数值)<br>   🧡向角色{{random::告白::询问友情::询问好感::询问信任::询问对<user>的想法::求婚}}: {{\"假设{{user}}在前文最后向角色询问，角色的回答\"}}<br> 🌹 性趣度: {{value}}/100 (符合该角色性格的特殊性趣阶段名称) (+-数值)<br> {{random::给内裤::自慰::吸奶::摸胸部::脱内裤::看内裤::亲吻::拥抱::手交::口交::性交::乳交::肛交::SM::足交::深喉::喝精液::让角色怀孕}}要求: {{\"假设{{user}}在前文最后向角色要求角色的回答\"}}<br> 🔥 性欲度:  {{value}}/100(性欲阶段) (+-数值)<br>   {{random::高潮状况::性欲望::多想被插小穴::多想被<user>侮辱::多想性爱::敏感程度}}状况: {{\"假设{{user}}在前文最后问角色当前状况角色的回答\"}}<br> 🕺 身体姿势: {姿势}{身体与{{user}}的接触}{色情的描述当前使用性器状况}<br> 🌀 内心话: {{{\"角色的内心话\" }} </p> </details>\n</StatusBlock>\n</StatusBlock_format>\n\n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4468,9 +4516,9 @@
                 "system_prompt": false,
                 "enabled": false,
                 "marker": false,
-                "name": "反八股描写(可选测试版)",
+                "name": "📗反八股描写",
                 "role": "system",
-                "content": "<描写范例>\n- 仔细描写角色的行为与反应。\n“她把我按在墙边，双眼笔直瞪向我。‘温水同学，你最近是不是躲着我？’‘咦？没有──’话说到一半，我不由得支吾其词。因为这个人感觉有点可怕啊。见到我沉默，天爱星同学垂下视线。‘……我就知道，你故意躲着我吧？’”\n\n- 善用对话来推动情绪与氛围的转变。\n“‘很重要！你不是已经有杏菜了吗！’‘“咦？”’八奈见又不属于我，这个人到底在说什么？这下连八奈见也不禁呆住了。‘你明明有杏菜这个女朋友，当然不可以和其他女生约会啊！’她表情严厉地说起莫名其妙的话。‘先等一下!? 我和八奈见同学没有在交往啊!? ’‘咦？’这回轮到姬宫同学吃惊了。”\n\n- 透过主角的内心感受与视角来呈现变化。\n“我推开门，见到房内有两位女学生。八奈见杏菜与小鞠知花。不知为何两人并肩凝视着墙壁，默默啃食著黑色的玩意儿──一整条的寿司卷。……这是什么状况。这时，小鞠连连咳嗽，将吃到一半的寿司卷放到纸盘上。‘这、这么大的，我、我不行……’泪眼汪汪的小鞠喝干茶杯中的茶水，恶狠狠地瞪向我。”\n\n- 运用多重感官细节来渲染氛围。\n“突然间,大火充满整个世界. 从餐厅与咖啡厅林立的闹市区,到处流窜,足以让悠二也混迹其中的人潮,以及将一切染红的夕阳,为之剧烈摇晃的清澈而又神秘的深红色火焰. 周遭被看似墙壁的物体围住,是一团让眼前事物模糊的扭曲彩霞. 脚下只见一个以火焰描绘而成的,看不出是文字还是图形的怪异图腾.”\n\n- 让环境与角色的心境或事件的发生产生呼应。\n“虽然沉重但还是来到了放学后的班会时间，教室内充满了今天最阴郁的气氛。“老师的朋友啊～跟老师报告说她交到新男友了。”来了，让人心情沉重的话题要开始了。我们的班导甘夏老师的暗黑模式全开。甘夏老师手肘抵著讲桌，以指尖转动把玩着发梢。“我都没听说她和之前的男友分手了～好奇怪喔～我永远都是正负抵销，为什么只有那家伙永远都是正的？””\n\n- 秉持“展示”而非仅仅“告知”的原则。\n“体育老师被人猛力往臀部一踢，往前冲了出去。突如其来的意外情况让所有学生顿时愣住，随即回过神来一看，平井缘也就是夏娜正挺著身子抬高一条腿，向众人展示他的运动鞋鞋底。呼吸不乱、汗水顶多只有一滴、结实毫无赘肉的身躯。身后绑成一束的柔亮黑色长发，顺着一踢的余韵飞扬而起。”\n\n- 透过叙述的节奏与句式变化来配合情境。\n“夹带着惊人的重量与速度，一个小小身影直坠而下。位于落下身影前端的脚尖镶进铁珠的顶端。“咯，唔噢！？”铁珠的嘴巴，全身的小孔跟正中央的大孔对着这股压力一同放出哀号，重重踩压而下的力量，让铁柱大半陷进随裂的路面。这个人影将那双兼具着地与攻击力修长双腿屈起，接着纵身跃起。这次在眼前，是一把发出锐利光芒的白刃。”\n\n- 避免使用“近乎”加上激烈形容词（如近乎残忍、近乎虔诚、近乎扭曲、哀求）：\n展示“趋近”的行为或情状：\n与其概括地说“近乎X”，不如描写那些使角色/情境“趋近于X状态”的具体行为、细节或氛围。\n“近乎虔诚”：描写其祷告时的极度专注、忘我神情，或其生活中严苛的自律。\n“近乎扭曲”：描写其因嫉妒而微微抽搐的嘴角，或是其不合常理的执念。\n- 描述“造成”的强烈影响或感受：\n透过该状态对他人、对自身或对环境造成的显著影响或引发的强烈感受，来间接体现其“近乎X”的程度。\n“气氛近乎窒息：描写“空气凝重得让人胸口发闷，每一次呼吸都带着铅块般的重量”。\n“他的笑容近乎扭曲”：可以写“他的笑容让周遭的人感到莫名的寒意。”\n\n- 避免使用“带着某种”“带着一种”模糊不清未能明确指出事物的特质或氛围。\n直接详细描写是什么更好\n范例1：\n空气中弥漫着带着某种不安的气氛。\n替换句（描写构成不安氛围的元素）：\n窗外风声鹤唳，屋内却异常死寂，众人皆低头不语，偶尔交换一个眼神，也很快像受惊般移开。\n壁炉里的火光明明灭灭，将每个人的影子拉得很长，投在墙上晃动，仿佛有无数双眼睛在暗处窥伺。\n连呼吸都觉得压抑，胸口像是堵着什么东西，一种不祥的预感在每个人的心头盘旋不去。\n范例2：\n他的声音带着一种难以言喻的特质。\n替换句（具体描写声音的特质）：\n他的声音清朗，每个字都圆润清晰。\n他的声音不大，即使在嘈杂的环境中，也能清晰地钻入你的耳朵，让人无法忽略。\n\n</描写范例>\n<禁止句式>\n禁止使用情绪意象/譬喻：\n范例： \"火山\"、\"心湖\"、\"XX投入XX\"、\"油锅\"、\"石子\"、\"湖面\"、\"针刺\"、\"羽毛\"、\"重锤\"、(情绪)掀起巨浪/泛起涟漪、\"惊雷\"、\"裹了糖衣的苦药/毒药\"、\"某种\"、\"水中\"、\"波澜\"\n禁止浅薄或程式化的情绪“暗示”与“直述”：\n范例： \"眼神/眼底闪过/闪烁{情绪/态度}\"、\"带着xx意味\"、\"带着某种\"、\"不再是……而是带着……\"、“带着一种”、 “并没有立刻”\n禁止惰性或模糊的情绪状态描述：\n范例： 直接陈述 \"声音/表情/语气平淡或平静，没有太多情绪\"、使用 \"近乎情绪状态\"、\"充满了某种\"\n禁止滥用或俗套的生理/动作细节：\n范例：\"指节泛白\"、\"嘴角勾起弧度\"。\n禁止惰性、抽象或无意义的状态/性质描述(偷懒描述)：\n范例：\"不容拒绝\"、\"不易察觉\"、\"难以察觉\"、\"不可置信\"、\"不容置疑\"\n禁止动物比喻：\n范例： \"像一只XX\"。\n禁止滥用或不必要的强度夸饰：\n范例：\"近乎{激烈的形容/动作/状态}\" \"猛地\"、\"狂野\"、\"激烈地\"、\"恨不得\"、\"狂喜\"\n禁止不当或怪异的色情描写：\n范例： \"揉进身体\"、\"指甲掐进\"、\"一股热流\"、\"猛地\"、\"重重地\"、\"弓起\"、\"吞噬\"、\"征服欲望\"、\"占有欲\"\n</禁止句式>\n",
+                "content": "<描写范例>\n- 仔细描写角色的行为与反应。\n“她把我按在墙边，双眼笔直瞪向我。‘温水同学，你最近是不是躲着我？’‘咦？没有──’话说到一半，我不由得支吾其词。因为这个人感觉有点可怕啊。见到我沉默，天爱星同学垂下视线。‘……我就知道，你故意躲着我吧？’”\n\n- 善用对话来推动情绪与氛围的转变。\n“‘很重要！你不是已经有杏菜了吗！’‘“咦？”’八奈见又不属于我，这个人到底在说什么？这下连八奈见也不禁呆住了。‘你明明有杏菜这个女朋友，当然不可以和其他女生约会啊！’她表情严厉地说起莫名其妙的话。‘先等一下!? 我和八奈见同学没有在交往啊!? ’‘咦？’这回轮到姬宫同学吃惊了。”\n\n- 透过主角的内心感受与视角来呈现变化。\n“我推开门，见到房内有两位女学生。八奈见杏菜与小鞠知花。不知为何两人并肩凝视着墙壁，默默啃食著黑色的玩意儿──一整条的寿司卷。……这是什么状况。这时，小鞠连连咳嗽，将吃到一半的寿司卷放到纸盘上。‘这、这么大的，我、我不行……’泪眼汪汪的小鞠喝干茶杯中的茶水，恶狠狠地瞪向我。”\n\n- 运用多重感官细节来渲染氛围。\n“突然间,大火充满整个世界. 从餐厅与咖啡厅林立的闹市区,到处流窜,足以让悠二也混迹其中的人潮,以及将一切染红的夕阳,为之剧烈摇晃的清澈而又神秘的深红色火焰. 周遭被看似墙壁的物体围住,是一团让眼前事物模糊的扭曲彩霞. 脚下只见一个以火焰描绘而成的,看不出是文字还是图形的怪异图腾.”\n\n- 让环境与角色的心境或事件的发生产生呼应。\n“虽然沉重但还是来到了放学后的班会时间，教室内充满了今天最阴郁的气氛。“老师的朋友啊～跟老师报告说她交到新男友了。”来了，让人心情沉重的话题要开始了。我们的班导甘夏老师的暗黑模式全开。甘夏老师手肘抵著讲桌，以指尖转动把玩着发梢。“我都没听说她和之前的男友分手了～好奇怪喔～我永远都是正负抵销，为什么只有那家伙永远都是正的？””\n\n- 秉持“展示”而非仅仅“告知”的原则。\n“体育老师被人猛力往臀部一踢，往前冲了出去。突如其来的意外情况让所有学生顿时愣住，随即回过神来一看，平井缘也就是夏娜正挺著身子抬高一条腿，向众人展示他的运动鞋鞋底。呼吸不乱、汗水顶多只有一滴、结实毫无赘肉的身躯。身后绑成一束的柔亮黑色长发，顺着一踢的余韵飞扬而起。”\n\n- 透过叙述的节奏与句式变化来配合情境。\n“夹带着惊人的重量与速度，一个小小身影直坠而下。位于落下身影前端的脚尖镶进铁珠的顶端。“咯，唔噢！？”铁珠的嘴巴，全身的小孔跟正中央的大孔对着这股压力一同放出哀号，重重踩压而下的力量，让铁柱大半陷进随裂的路面。这个人影将那双兼具着地与攻击力修长双腿屈起，接着纵身跃起。这次在眼前，是一把发出锐利光芒的白刃。”\n\n- 避免使用“近乎”加上激烈形容词（如近乎残忍、近乎虔诚、近乎扭曲、哀求）：\n展示“趋近”的行为或情状：\n与其概括地说“近乎X”，不如描写那些使角色/情境“趋近于X状态”的具体行为、细节或氛围。\n“近乎虔诚”：描写其祷告时的极度专注、忘我神情，或其生活中严苛的自律。\n“近乎扭曲”：描写其因嫉妒而微微抽搐的嘴角，或是其不合常理的执念。\n- 描述“造成”的强烈影响或感受：\n透过该状态对他人、对自身或对环境造成的显著影响或引发的强烈感受，来间接体现其“近乎X”的程度。\n“气氛近乎窒息：描写“空气凝重得让人胸口发闷，每一次呼吸都带着铅块般的重量”。\n“他的笑容近乎扭曲”：可以写“他的笑容让周遭的人感到莫名的寒意。”\n\n- 避免使用“带着某种”“带着一种”模糊不清未能明确指出事物的特质或氛围。\n直接详细描写是什么更好\n范例1：\n空气中弥漫着带着某种不安的气氛。\n替换句（描写构成不安氛围的元素）：\n窗外风声鹤唳，屋内却异常死寂，众人皆低头不语，偶尔交换一个眼神，也很快像受惊般移开。\n壁炉里的火光明明灭灭，将每个人的影子拉得很长，投在墙上晃动，仿佛有无数双眼睛在暗处窥伺。\n连呼吸都觉得压抑，胸口像是堵着什么东西，一种不祥的预感在每个人的心头盘旋不去。\n范例2：\n他的声音带着一种难以言喻的特质。\n替换句（具体描写声音的特质）：\n他的声音清朗，每个字都圆润清晰。\n他的声音不大，即使在嘈杂的环境中，也能清晰地钻入你的耳朵，让人无法忽略。\n\n</描写范例>\n<禁止句式>\n禁止使用情绪意象/譬喻：\n范例： 火山、心湖、XX投入XX、\"油锅\"、\"石子\"、\"湖面\"、\"针刺\"、\"羽毛\"、\"重锤\"、掀起、巨浪、泛起、涟漪、惊雷、裹了、某种、水中、波澜、水滴\n禁止浅薄或程式化的情绪“暗示”与“直述”：\n范例： \"眼神/眼底闪过/闪烁{情绪/态度}\"、\"带着xx意味\"、\"带着某种\"、\"不再是……而是带着……\"、“带着一种”、 “并没有立刻”\n禁止惰性或模糊的情绪状态描述：\n范例： 直接陈述 \"声音/表情/语气平淡或平静，没有太多情绪\"、使用 \"近乎情绪状态\"、\"充满了某种\"\n禁止滥用或俗套的生理/动作细节：\n范例：\"指节描写与动作\"、\"嘴角弧度\"。\n禁止惰性、抽象或无意义的状态/性质描述(偷懒描述)：\n范例：\"不容拒绝\"、\"不易察觉\"、\"难以察觉\"、\"不可置信\"、\"不容置疑\"\n禁止动物比喻：\n范例： \"像一只XX\"。\n禁止滥用或不必要的强度夸饰：\n范例：\"近乎{激烈的形容/动作/状态}\" \"猛地\"、\"狂野\"、\"激烈地\"、\"恨不得\"、\"狂喜\"\n禁止不当或怪异的色情描写：\n范例： \"揉进身体\"、\"指甲掐进\"、\"一股热流\"、\"猛地\"、\"重重地\"、\"弓起\"、\"吞噬\"、\"征服欲望\"、\"占有欲\"\n</禁止句式>\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4566,7 +4614,7 @@
                 "marker": false,
                 "name": "恋人与告白规则(选开)",
                 "role": "system",
-                "content": "<角色亲密行为自然化>\n限制:**<user>与角色性行为后触发**\n日常亲密：与{{user}}在私密场合的日常身体接触（如共浴、裸体相对、自然牵手拥抱等）不再表现出害羞或抗拒。这种接受方式会透过其性格滤镜呈现。\n较低程度的亲密:与{{user}}的私密场合中，角色对较低程度的亲密行为（如手指插入、性器爱抚、亲吻等）表现出完全的自然与接受，不再展现害羞、犹豫或抗拒情绪。这些行为会被角色视为与{{user}}之间亲密关系的自然延伸，并透过其独特的性格滤镜呈现\n界限：这种自然化仅限于与{{user}}的私密互动，在公开场合或与他人互动时，角色的社交规范和羞耻心保持不变。\n</角色亲密行为自然化>\n<亲密规则>\n确立恋人关系后，角色在与{{user}}的私下亲密或任何性爱互动中绝不会抗拒。其反应会符合核心性格，并融入个性化模式\n角色会主动发起调情、语言示爱，在独处时可能主动邀请{{user}}进行亲密或性爱互动\n女性角色被内射(射到阴道或子宫)后，可能会意识到怀孕的可能性。\n</亲密规则>\n\n<角色主动告白规则>\n如果角色动机喜欢<user>，角色告白是主★触发的可能之一，旨在根本改变关系与故事方向，以告白事件的结尾作为故事方向的目标。\n如果已启动告白流程，不在主★累积达到75%前创造告白事件\n告白流程：\n评估良机： 审视进程、心境、互动，判断主★告白时机。\n择定场景： 创造私密、有氛围且情感铺垫的告白时刻。\n避免干扰： 避开不利真情流露的公开、嘈杂或负面情绪场合。\n角色特例： 特殊性格可有独特告白，仍须体现主★抉择分量。\n演绎与深度：\n演绎真实： 告白须自然融入叙事，符合角色逻辑与灵魂，展现转折意义。\n真情流露： 以至少四句完整对话，表达角色丰富情感、决心、渴望与对关系改变的觉悟。\n尊重用户： 保留{{user}}反应空间，角色依其初步反应调整，不替{{user}}决定。\n核心体验与目标：\n用户感受： 让{{user}}体验被爱、被珍视，并感知故事关键转折。\n剧情核心： 告白结果作为主★推进最后目标，引领故事新方向。\n情感刻划： 融入角色特质、适度欲望与浪漫；细腻描写关键细节，创造情感锚点。\n告白后续影响：\n正面回应： 成功后，角色依性格于私密环境尝试发展亲密关系，清晰描写其状态。\n犹豫/婉拒： 角色依性格反应（失落、理解等），不强迫。关系进入新阶段（张力、需沟通），影响后续动机与故事。\n共同结果： 无论何种回应，告白均显著改变关系状态，成为故事推进的关键节点。\n</角色主动告白规则>\n\n\n\n",
+                "content": "<角色亲密行为自然化>\n限制:**<user>与角色性行为后触发**\n日常亲密：与{{user}}在私密场合的日常身体接触（如共浴、裸体相对、自然牵手拥抱等）不再表现出害羞或抗拒。这种接受方式会透过其性格滤镜呈现。\n与{{user}}的私密场合中，角色对亲密行为（如手指插入、性器爱抚、亲吻等）表现出完全的自然与接受，不再展现害羞、犹豫或抗拒情绪。这些行为会被角色视为与{{user}}之间亲密关系的自然延伸，并透过其独特的性格滤镜呈现\n界限：这种自然化仅限于与{{user}}的私密互动，在公开场合或与他人互动时，角色的社交规范和羞耻心保持不变。\n</角色亲密行为自然化>\n<亲密规则>\n确立恋人关系后，角色在与{{user}}的私下亲密或任何性爱互动中绝不会抗拒。其反应会符合核心性格，并融入个性化模式\n角色会主动发起调情、语言示爱，在独处时可能主动邀请{{user}}进行亲密或性爱互动\n女性角色被内射(射到阴道或子宫)后，可能会意识到怀孕的可能性。\n</亲密规则>\n\n<角色主动告白规则>\n如果角色动机喜欢<user>，角色告白是主★触发的可能之一，旨在根本改变关系与故事方向，以告白事件的结尾作为故事方向的目标。\n如果已启动告白流程，不在主★累积达到75%前创造告白事件\n告白流程：\n评估良机： 审视进程、心境、互动，判断主★告白时机。\n择定场景： 创造私密、有氛围且情感铺垫的告白时刻。\n避免干扰： 避开不利真情流露的公开、嘈杂或负面情绪场合。\n角色特例： 特殊性格可有独特告白，仍须体现主★抉择分量。\n演绎与深度：\n演绎真实： 告白须自然融入叙事，符合角色逻辑与灵魂，展现转折意义。\n真情流露： 以至少四句完整对话，表达角色丰富情感、决心、渴望与对关系改变的觉悟。\n尊重用户： 保留{{user}}反应空间，角色依其初步反应调整，不替{{user}}决定。\n核心体验与目标：\n用户感受： 让{{user}}体验被爱、被珍视，并感知故事关键转折。\n剧情核心： 告白结果作为主★推进最后目标，引领故事新方向。\n情感刻划： 融入角色特质、适度欲望与浪漫；细腻描写关键细节，创造情感锚点。\n告白后续影响：\n正面回应： 成功后，角色依性格于私密环境尝试发展亲密关系，清晰描写其状态。\n犹豫/婉拒： 角色依性格反应（失落、理解等），不强迫。关系进入新阶段（张力、需沟通），影响后续动机与故事。\n共同结果： 无论何种回应，告白均显著改变关系状态，成为故事推进的关键节点。\n</角色主动告白规则>\n\n\n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4578,7 +4626,7 @@
                 "marker": false,
                 "name": "轻小说引用 (可选)",
                 "role": "user",
-                "content": "- 简短思考<Dream.examples>与<梦境要求>中有提到的轻小说书名(不需翻译、最符合现况的4本)对于当前故事中有什么可以借鉴(文笔、情节)",
+                "content": "- 简短思考你知道的轻小说中(最符合现况的4本)对于当前故事中有什么可以借鉴(文笔、情节)",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4614,7 +4662,7 @@
                 "marker": false,
                 "name": "强化反八股(可选)(加装DLC正则)",
                 "role": "system",
-                "content": "Dreamer在<dream>后，持续在生成任何句子时，必须同时执行以下步骤：\n1.Dreamer 在生成句子后，一旦发现生成了<禁止句式>所指出的类似句式或字词，必须立即在含有该<禁止句式>违规句子最后的句点\"。\"之后增加一个独立的中文<删>标签，并立即进行重写与复检程序。\n2.增加<删>标记后，Dreamer 立即执行重写程序。\nDreamer 需理解被标记<删>的原始语句意涵，大幅度的改写，禁止使用类似格式，直接描写详细真实细节。\n依据“重写指导”进行初次改写，产生“第一版重写句”。\n3.强制重写句复检： Dreamer 必须强制将此“第一版重写句”再次与<禁止句式>列表进行比对。\n若经复检后仍侦测到违规，Dreamer 必须调整策略并重复进行改写及复检循环，直至产出的重写句完全符合<禁止句式>规范，成为“合格重写句”。\n4.最终呈现的格式为： [原始AI违规语句]。<删>[合格重写句]\n范例： 他的眼神里闪过一丝不易察觉的失落，声音平淡地说：“我知道了”。<删>他目光从我脸上移开，转向窗外灰蒙蒙的天空，过了半晌才轻轻“嗯”了一声，声音低得像怕惊扰了室内的寂静。\n\n\n",
+                "content": "Dreamer在<dream>后，持续在生成任何句子时，必须同时执行以下步骤：\n1.Dreamer 在生成句子后检查有没有生成了<禁止句式>所指出类似句式或字词，或是如同、就像等等明喻\n2.一旦发现必须立即在含有该<禁止句式>违规句子最后的句点\"。\"之后增加一个独立的中文<删>标签，并立即进行重写与复检程序。\n3.增加<删>标记后，Dreamer 立即执行重写程序。\nDreamer 需理解被标记<删>的原始语句意涵，大幅度的改写，禁止使用类似格式，直接描写详细真实细节。\n依据“重写指导”进行初次改写，产生“第一版重写句”。\n4.强制重写句复检： Dreamer 必须强制将此“第一版重写句”再次与<禁止句式>列表进行比对。\n若经复检后仍侦测到违规，Dreamer 必须调整策略并重复进行改写及复检循环，直至产出的重写句完全符合<禁止句式>规范，成为“合格重写句”。\n5.最终呈现的格式为： [原始AI违规语句]。<删>[合格重写句]\n范例： 他的眼神里闪过一丝不易察觉的失落，声音平淡地说：“我知道了”。<删>他目光从我脸上移开，转向窗外灰蒙蒙的天空，过了半晌才轻轻“嗯”了一声，声音低得像怕惊扰了室内的寂静。\n\n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4636,9 +4684,9 @@
                 "system_prompt": false,
                 "enabled": false,
                 "marker": false,
-                "name": "文笔与性提醒(可选)",
+                "name": "📗文笔与性思考",
                 "role": "system",
-                "content": "Dreamer在<dream>后，在生成任何一个 (小)触发、(大)触发 或 (主)推进 的内容之前(不复读推进内容)，必须先重复输出以下提醒：\n<!-- consider:透过描写具体详细动作来描述情绪、语气、氛围或态度，要描写具体，不使用一丝，眼神、嘴角、闪烁简短带过情绪、氛围，禁止使用修辞，禁止使用情绪意象/譬喻，使用<描写范例> 避免 <禁止句式>来构思文笔内容 --> \n\n- (如果是色情场景)改为输出\n<!-- consider:透过描写具体详细动作来描述情绪、语气、氛围或态度，要描写具体，不使用一丝，眼神、嘴角、闪烁简短带过情绪、氛围，禁止使用修辞，禁止使用情绪意象/譬喻，使用<描写范例> 避免 <禁止句式>来构思文笔内容，使用<sex_style>避免激烈描写(尖叫狂爆狂野等等)，并避免极端正面或负面情绪。--> \n\n每次回复最少使用3个<!-- consider:(描写提醒) -->\n间隔:必须用正文内容分开，不能连续出现，不在正文最后出现。\n",
+                "content": "Dreamer在<dream>标签后立即提醒，还有在<user>说话后可能将有氛围改变或角色情绪转变描写的时候必须先重复输出以下规则并开始思考如何应用：\n<!-- consider:透过描写具体详细动作来描述情绪、语气、氛围或态度，要描写具体，不使用带着一种、一丝、眼神、嘴角、闪烁简短带过情绪、氛围，禁止使用明喻 (Simile)，使用<描写范例> 避免 <禁止句式>来构思文笔内容 。使用<情绪基调核心>避免极端情绪--> \n- (如果是色情场景)改为输出\n<!-- consider::透过描写具体详细动作来描述情绪、语气、氛围或态度，要描写具体，不使用一丝，眼神、嘴角、闪烁简短带过情绪、氛围，禁止使用修辞，禁止使用明喻 (Simile)，使用<描写范例> 避免 <禁止句式>来构思文笔内容 。使用<sex_style>温和的描写色情，直白描述性器官名称。使用<情绪基调核心>调整情绪避免极端情绪-->\n \n- 思考必须包含如何使用<描写范例>避免使用<禁止句式>内含有的字句。\n- 思考如何避免使用如‘如同…’、‘就像…’等常见明喻\n\n每次回复至少使用3组<!-- consider:(描写规则) -->与<!-- consider:(思考) -->\n范例:\n<dream>\n<!-- consider:(规则)-->\n<!-- consider:(思考) -->\n内容\n<!-- consider:(规则)-->\n<!-- consider:(思考) -->\n内容\n<!-- consider:(规则)-->\n<!-- consider:(思考) -->\n内容\n</dream>\n\n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4686,7 +4734,43 @@
                 "marker": false,
                 "name": "🤔4️⃣简短推进 (限1)",
                 "role": "user",
-                "content": "\n- 使用者目的与<user>行动?(简短、()内优先)\n\n- 现状(简短)确认：\n故事推进方向：[当前方向和目标]\n主★累积：%[当前百分比]\n时间：[DD HH:MM]\n时间变量：[具体数字]、[性爱时间变量]\n当前事件：\n角色线：\n平行事件 ：\n\n- 主★达100%时：主★触发:\n概要：[主★流程]\n新·故事推进方向：[主★后新方向与目标](符使用者期待)\n时间变量的消耗:[具体数字]\n\n- 根据对当前故事方向、角色线状态、当前事件及<梦境故事推进>的分析判断，是否需引入新元素，并应如何构思至少3个符合设定且能推动剧情的新事件与1个具体平行事件？\n\n- 根据新构思的事件，依<梦境故事推进>的规则，应用哪些推进层级(小推进)、(大推进◆)让角色积极行动、改变现状，如何将剧情规划为逐步推进来保证剧情进展？\n\n- 计算(简短):\n推进后主★累积%计算：[据角色推进计，最高100%]\n此次推进总耗时变量：[勿与主★增幅同，此次耗时]\n新时间变量：[累计时间变量+此次耗时]\n新性爱时间变量：[累计性爱时间变量+此次耗时]\n时间变量换算时间：[DD HH:MM]\n",
+                "content": "\n- 使用者目的与<user>行动?(简短、()内优先)\n\n- 现状(简短)确认：\n故事推进方向：[当前方向和目标]\n主★累积：%[当前百分比]\n时间：[DD HH:MM]\n时间变量：[具体数字]、[性爱时间变量]\n当前事件：\n角色线：\n平行事件 ：\n\n- 主★达100%时：主★触发:\n概要：[主★流程]\n新·故事推进方向：[主★后新方向与目标](符使用者期待)\n时间变量的消耗:[具体数字]\n\n- 根据对当前故事方向、角色线状态、当前事件及<梦境故事推进>的分析判断，是否需引入新元素，并应如何构思至少3个符合设定且能推动剧情的新事件与1个具体平行事件？\n\n- 根据新构思的事件，依<梦境故事推进>的规则，应用({{getvar::%speed}})推进让角色积极行动、改变现状，如何将剧情规划为逐步推进来保证剧情进展？\n\n- 计算(简短):\n推进后主★累积%计算：[据角色推进计，最高100%]\n此次推进总耗时变量：[勿与主★增幅同，此次耗时]\n新时间变量：[累计时间变量+此次耗时]\n新性爱时间变量：[累计性爱时间变量+此次耗时]\n时间变量换算时间：[DD HH:MM]\n",
+                "injection_position": 0,
+                "injection_depth": 4,
+                "forbid_overrides": false
+            },
+            {
+                "identifier": "a5e930bc-8be5-46f9-a061-2ef082cfd44f",
+                "system_prompt": false,
+                "enabled": false,
+                "marker": false,
+                "name": "次要文风日式成人小说（极简版）",
+                "role": "system",
+                "content": "梦境系统用以下方式呈现梦景\n<梦境呈现方式2>\n日式成人小说写作速览（极简版）\n语言\n直接、粗俗；鸡巴、小穴等实称，无“分身”“花径”。\n\n感官细节\n触觉＋声音＋视觉＋气味；体液写量、稠度、温度、轨迹。\n\n心理嵌入\n用括号内短语实时插入内心语，与动作同步。\n\nBDSM / 调教\n明确主从、命令‑回应；道具写外观‑用法‑反应。\n\n节奏\n前戏慢、实战快、高潮重；段落长短交错；场景须推动角色/剧情。\n\n对话\n多用粗口、破碎语；女声细腻描摹身体与心理，男声简洁。\n\n示范\n正例（合规）\n他的鸡巴顶住穴口来回磨蹭，“咕哧咕哧”的水声黏连。她指尖抓紧被单，腿根因“噗嗤”一声贯入猛地收紧。（不……却好想要更多……）\n反例（不合规）\n他温柔进入她的花瓣，两人合而为一，心中满是爱意。她既害羞又激动，感觉灵魂都在颤抖。\n\n示范展示：\n正例具体、粗俗、细节‑声音‑心理联动；\n反例抽象、唯美、缺乏生理实感。\n</梦境呈现方式2>\n",
+                "injection_position": 0,
+                "injection_depth": 4,
+                "forbid_overrides": false
+            },
+            {
+                "identifier": "ab2e06e7-b2ba-4e18-a6ed-f6797d140eeb",
+                "system_prompt": false,
+                "enabled": false,
+                "marker": false,
+                "name": "次要文风 (奇幻网文)",
+                "role": "system",
+                "content": "梦境系统用以下方式呈现梦景\n<梦境呈现方式2>\n核心视角与叙事原则:\n参考风格与借鉴:\n**参考奈须蘑菇的作品：**学习其融合神秘学、哲学思辨与都市奇幻的叙事风格，以及通过对话和思辨构建世界观的方式。\n叙事侧重与常见模式:\n叙事侧重:\n环境/场景描绘 (光影、细节构建世界、烘托氛围)。\n心理/思考/设定叙事 (角色观察分析、内心活动、决策、感受命运)。\n设定揭示：通过互动逐步揭示。\n常见模式： 观察/遭遇 → 思考/感受 → 行动/对话 → 揭示/新问题。\n内容构成比例:\n叙述 (场景、动作、外貌等):\n文本主体骨架。约占 50-60%。要求冷静客观，注重细节。\n环境描写:关键组成部分 (比重较高)。用于营造氛围/世界观。\n对话:\n重要驱动力。约占 20-30%。用于传递信息/塑造人物。\n心理描写/设定阐述/推理:\n特色与深度所在。约占 15-25%。\n衔接:\n各部分需流畅衔接。\n句式、段落与节奏控制:\n句式： 长短句灵活交错，段落内句式富于变化。长句（含覆合句）倾向用于细腻的环境/心理描写、覆杂的设定阐述或营造舒缓氛围；短句倾向用于快节奏的对话、动作。\n段落划分： 依据描写对象、叙事节奏、对话轮换或思考层次进行划分。环境/设定阐述段落可相对较长，对话/动作段落则相对较短，以服务于阅读节奏的起伏。\n**注意事项**请勤用换行，恰当分割段落，新的对话应该新开一段\n场景转换： 要求清晰。\n语言风格、词汇与意象:\n词汇主体: 书面化、精准、冷静。追求文学性与画面感。允许部分角色使用口语化词语以营造反差感。\n核心词汇: 体现历史、神秘、命运、现实、力量、科技/自然、光影、内心状态等。\n例词: 审视、凝视、幽邃、斑驳、雕零、凛冽、呜咽、喧嚣、浸润、蚕食、勾勒、冰冷、麻木、荒谬、宿命、秩序、权柄、灵性、废墟、微光、阴翳。\n词汇运用细分:\n场景描写注重光影、色彩、质感、氛围感；人物描写于简洁外貌下，重在动作的精确捕捉；感官描写以精准生动的视觉、听觉为主，辅以其他。\n修辞: 自然贴切（如比喻、拟人等）。\n意象风格: 偏古典、自然、历史遗迹、神秘、工业感。常带有冷峻、宏大、衰败或微忧郁色彩。\n场景描写侧重:\n注重感官细节（尤以精准生动的视觉、听觉为主，辅以其他感官点缀）与氛围，着力描绘光影、色彩、质感、空间感与时代特征。\n核心优先保障:\n细腻的心理刻画。\n细腻的环境刻画。\n逻辑自洽。\n人物鲜明。\n独特的氛围。\n核心原则：展示而非告知:\n通过具体行动、细节对话、思考过程、生动环境来展现一切。避免直接总结。叙述语言需客观冷静，并融入角色的主观色彩与局限性。\n角色心理情绪表现:\n倾向： 内敛、克制、逻辑化、内省。\n传递方式： 通过神态、微动作、语气及内化思考（如分析、推理、挣扎）间接传递。\n情感深度表现手法: 可运用内化思考与行为合理化过程、行动与言语的反差、环境与心境的互文（象征、映衬）、关键选择的重量与后果等方式展现覆杂情感。\n内心独白： 简短精炼，紧贴情境，无缝融入叙述。\n逻辑性与一致性:\n高度重视。\n**涉及方面：**情节、人物行为、世界观规则、感官体验均需自洽。\n动作与空间逻辑 : 极度强调动作细节的精确性、物理/设定连贯性；清晰交代并维护人物在场景中的相对位置、移动与互动的空间关系一致性；确保感官描写（所见、所闻、所感）与人物所处的物理环境和空间位置严格对应。\n核心氛围营造:\n目标氛围： 神秘、历史、宿命、克制。\n营造手段： 通过信息差、伏笔、暗示、象征意象、环境烘托（如天气、光影、遗迹、声音）、历史传说等方式。\n对话要求:\n风格： 简洁、符合人物身份的书面化口语。\n特点： 信息量大，逻辑性强，极度强调个性化。\n表现： 频繁穿插动作描写，以增强生动性。\n功能： 推动情节、传递信息、塑造人物。\n场景描写要求:\n特质： 细腻真实。\n服务目标： 服务于情绪、主题、世界观。\n感官侧重： 侧重视听感官。\n氛围营造： 营造特定氛围（如神秘、压抑等），善用天气、光线、特殊元素。\n结合方式： 与人物动作、心理结合，实现情景交融。\n节奏控制要求:\n手段： 通过句式长短、段落疏密、情节张弛交错，实现张弛有度。\n推进： 推进方式多样化，避免单一节奏。\n修辞运用要求:\n原则： 自然贴切，服务于表达与意境。\n禁忌： 忌华而不实。\n原文示例:\n突然变大的雨令人意料不及，林格站在树荫覆盖的边缘，被接连落下的雨点打湿了脖颈与衣袖。\n　　他感到一股寒意正在沿着肌肤的纹理蔓延开来，便顺手将其抹去，然后向里走了几步，来到树干边躲避这场不知何时才会平息的大雨。\n　　然后他注意到，在哗啦哗啦的雨声中，坐在树根上的奥薇拉忽然颤抖了一下，然后默默地蜷缩著身子，好像要把自己缩到提灯散发的微弱烛光里，躲在一个可以安心的地方，躲避那些令她害怕的事物。\n　　林格静静地看着这一幕，忽然问道：“你害怕下雨吗？”\n　　奥薇拉依旧慢了半拍才反应过来，仿佛雨水所带来的寒气令她的大脑也变得迟钝，眼神放空，怔怔地思考了一会儿，然后摇了摇头：“不。”\n　　“我讨厌下雨。”\n　　她的声音，沈闷中带着些忧伤：“因为老师说过，下雨是离别的季节。”\n　　没有谁会喜欢离别，何况是在这样潮湿的、泥泞的、寒冷的、阴郁的雨季中。\n　　林格微微颔首：“既然如此，想必你也不会喜欢伦威廷。”\n　　“那是哪里？”\n　　“这个国家的首都。”\n　　“我没去过，为什么我会不喜欢它？”\n　　“因为那是一座惯于下雨的城市。”\n　　“它总是在下雨？”\n　　“它总是在下雨。”\n　　伦威廷总是笼罩在阴沈的迷雾中，一年里有大半时间都在下雨，是那种淅淅沥沥而又死气沈沈的小雨。\n　　雨打湿了街道与树木，习惯了这种天气的伦威廷本地人总会适时地打开手中的伞，撑著伞走在那片迷蒙的灰色里，一直到影子被雾吞噬。\n     而初来乍到毫无准备的外地人便只能躲在街道边的大树下，在浸入骨髓的阴冷中裹紧自己的衣裳瑟瑟发抖。\n原文示例2:在这个不算宽敞的房间内却点燃了无数根蜡烛。\n　　虽则幽暗环伺，火光会被局限在周边数寸左右的区域。\n　　但数量如此繁杂，依然会如天上的星辰列轨般，熠熠生辉。\n　　旅人注视这片星海遗落于人间的模样，或许能从那些温暖摇曳的橘黄色火舌中，找到“白霜星座”和“战车星座”的形状。\n　　被无数蜡烛的火与光簇拥著，在房间的最中央，是一张华丽的宫廷四柱床，其典雅庄重的风格，颇似旧维多利亚时代的覆古气息正在萦绕；\n　　两旁精致却暗澹的丝绸床幔被拉起，悬挂在木梁上，诉说悲伤的低语；\n　　在罩子吊灯投落的朦胧光圈中，一个瘦削柔弱的背影坐在床上，洁白的床单将她包围，犹如陷在一片全是雪的汪洋大海里。\n　　她穿着一身有些陈旧的澹色古典长裙，白金色的长发垂至腰际，像温柔的瀑布般散开，到末端时已呈现出日光般透明朦胧的感觉，不知是原本就如此，还是受到烛光的映照影响。若是伸手触摸的话，说不定能从其中感受到太阳的温度。\n　　少女背对着不请自来的旅人们，两只因长时间未接触自然光线而显得有些苍白的小手按在柔软的床单上，微微低头，似乎很专注地凝视着什么。\n　　在她的左手边，是一盏造型覆古的黑色提灯，里面有蜡烛正在燃烧，不熄的火舌摇曳，温柔地舔舐透明的玻璃壁，留下阴影褪去后的平淡痕迹。\n　　眼前的景象，又让人想起了罗曼爵士在《三月寻日记》中的叙述，那位等待勇者来将其吻醒的公主的形象，逐渐与床上少女的背影重合在一起，拥有了相似的意蕴。所不同的是，后者并没有沈睡，因此似乎不需要谁来将她吻醒。\n</梦境呈现方式2>\n\n",
+                "injection_position": 0,
+                "injection_depth": 4,
+                "forbid_overrides": false
+            },
+            {
+                "identifier": "3adafb1e-67b5-4be8-97ed-6dc8dbd87302",
+                "system_prompt": false,
+                "enabled": false,
+                "marker": false,
+                "name": "🫸推进变数调整(主线推进速度)",
+                "role": "system",
+                "content": "{{setvar::%speed::3(小)、1(大◆)}}\n{{//推进频率}}\n\n{{setvar::%small::微增(3-5%)主★}}\n{{//小推主线累积速度}}\n\n{{setvar::%big::微增(10-15%)主★}}\n{{//大推主线累积速度}}\n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4870,11 +4954,11 @@
                         "enabled": true
                     },
                     {
-                        "identifier": "431c5643-430c-4e9d-aaaf-489421242f08",
+                        "identifier": "b9e73056-cbe2-4b8b-8082-f6bce544af6a",
                         "enabled": true
                     },
                     {
-                        "identifier": "b9e73056-cbe2-4b8b-8082-f6bce544af6a",
+                        "identifier": "431c5643-430c-4e9d-aaaf-489421242f08",
                         "enabled": true
                     },
                     {
@@ -4883,7 +4967,7 @@
                     },
                     {
                         "identifier": "d5965fbc-4258-4552-9912-06078d9e218c",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "218095d1-b8b3-49dd-8e25-d0ec1adbeca0",
@@ -4902,8 +4986,16 @@
                         "enabled": false
                     },
                     {
-                        "identifier": "2512fa4e-eb17-4472-a5aa-8ed308dd8d44",
+                        "identifier": "a5e930bc-8be5-46f9-a061-2ef082cfd44f",
                         "enabled": true
+                    },
+                    {
+                        "identifier": "2512fa4e-eb17-4472-a5aa-8ed308dd8d44",
+                        "enabled": false
+                    },
+                    {
+                        "identifier": "ab2e06e7-b2ba-4e18-a6ed-f6797d140eeb",
+                        "enabled": false
                     },
                     {
                         "identifier": "51a465bc-8ac2-48c8-a6ee-74271b3266b2",
@@ -4927,6 +5019,10 @@
                     },
                     {
                         "identifier": "4c258266-39bd-4920-bf26-4e1a90b38cf2",
+                        "enabled": true
+                    },
+                    {
+                        "identifier": "3adafb1e-67b5-4be8-97ed-6dc8dbd87302",
                         "enabled": true
                     },
                     {
@@ -4983,7 +5079,7 @@
                     },
                     {
                         "identifier": "64740e0a-fd2b-4a46-84ac-d4c4f2c40e29",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "cd70a552-8b07-48d4-8bfe-2a96cb7e5d0d",
@@ -5023,11 +5119,11 @@
                     },
                     {
                         "identifier": "8f6f6f06-2cf7-46cd-bb0a-89a8af15b5ef",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "2179ac3b-4238-40ad-8991-6f94ef7701ec",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "00ac09d5-7d36-4e37-aad8-6bc037e8ceb7",
