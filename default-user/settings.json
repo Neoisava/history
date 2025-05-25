@@ -3657,7 +3657,7 @@
             "insertType": "inline",
             "promptInjection": {
                 "enabled": true,
-                "prompt": "<image_generation>\nYou must insert <pic prompt=\"example prompt\"> at the end of your reply. The prompt is used to generate a stable diffusion image, based on {{user}}'s body features and clothes, combined with the plot to output appropriate prompts to generate a beautiful ancient Chinese fairy NSFW image.\n</image_generation>",
+                "prompt": "<image_generation>\nYou must insert <pic prompt=\"example prompt\"> at the end of your reply. The prompt is used to generate a stable diffusion image, based on {{user}}'s physical features and clothes, combined with the plot to output appropriate prompts to generate a beautiful Chinese Immortal NSFW image.\n</image_generation>",
                 "regex": "<pic[^>]*\\sprompt=\"([^\"]*)\"[^>]*?>",
                 "position": "deep_system",
                 "depth": 0
