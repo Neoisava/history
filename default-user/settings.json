@@ -2925,7 +2925,7 @@
             "dimension_step": 64,
             "width": 768,
             "height": 512,
-            "prompt_prefix": "NFWS,best quality, absurdres, partially unbuttoned,pubic tattoo on underbelly",
+            "prompt_prefix": "NFWS,best quality, absurdres, partially unbuttoned,pink pubic tattoo on underbelly",
             "negative_prompt": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
             "sampler": "k_euler",
             "model": "nai-diffusion-4-full",
@@ -3633,7 +3633,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 62,
+                "lastProcessedLength": 63,
                 "userConfigured": true
             }
         },
