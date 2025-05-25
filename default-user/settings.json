@@ -2925,7 +2925,7 @@
             "dimension_step": 64,
             "width": 768,
             "height": 512,
-            "prompt_prefix": "NFWS,best quality, absurdres,",
+            "prompt_prefix": "NFWS,best quality, absurdres, partially unbuttoned,pubic tattoo on underbelly",
             "negative_prompt": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
             "sampler": "k_euler",
             "model": "nai-diffusion-4-full",
@@ -2951,7 +2951,7 @@
                 "-2": "The text prompt used to generate the image. Must represent an exhaustive description of the desired image that will allow an artist or a photographer to perfectly recreate it."
             },
             "character_prompts": {
-                "修仙之路2.0": "NFWS, masterpiece,pubic tattoo on underbelly, partially unbuttoned, 中景,近景"
+                "修仙之路2.0": "NFWS, masterpiece, 中景,近景,远景"
             },
             "source": "novel",
             "scheduler": "native",
@@ -3016,7 +3016,7 @@
             "stability_style_preset": "anime",
             "bfl_upsampling": false,
             "character_negative_prompts": {
-                "修仙之路2.0": "远景"
+                "修仙之路2.0": "全景"
             }
         },
         "chromadb": {},
@@ -3633,7 +3633,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 60,
+                "lastProcessedLength": 59,
                 "userConfigured": true
             }
         },
