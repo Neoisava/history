@@ -18,7 +18,9 @@
         "AlertWI_修仙之路2.0.png": "true",
         "AlertWI_1.png": "true",
         "AlertRegex_1.png": "true",
-        "AlertWI_修仙世界-[万界大陆].png": "true"
+        "AlertWI_修仙世界-[万界大陆].png": "true",
+        "AlertWI_(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png": "true",
+        "AlertRegex_(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png": "true"
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
@@ -98,6 +100,18 @@
                         "多维情感网络动态",
                         "女性本能世界书 by LULUZ",
                         "道德伦理(1)"
+                    ]
+                },
+                {
+                    "name": "(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲",
+                    "extraBooks": [
+                        "SSVGG 2.0",
+                        "人类本能世界书",
+                        "多维情感网络动态",
+                        "母性世界书",
+                        "渲染库模板",
+                        "道德伦理(1)",
+                        "针对2.5pro的瑟瑟场景"
                     ]
                 }
             ]
@@ -2875,7 +2889,8 @@
         "character_allowed_regex": [
             "凡人修仙传·凤起灵绝·大罗真魂都市修仙灵气复苏（地图互动RPG带系统版）.png",
             "修仙之路2.0.png",
-            "1.png"
+            "1.png",
+            "(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png"
         ],
         "tts": {
             "voiceMap": "",
@@ -3633,7 +3648,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 86,
+                "lastProcessedLength": 172,
                 "userConfigured": true
             }
         },
@@ -3657,7 +3672,7 @@
             "insertType": "inline",
             "promptInjection": {
                 "enabled": true,
-                "prompt": "<image_generation>\nYou must insert a <pic prompt=\"example prompt\"> at end of the reply. Prompts are used for stable diffusion image generation, based on the plot and character to output appropriate prompts to generate captivating NSFW images.\n</image_generation>",
+                "prompt": "<image_generation>\nYou must insert <pic prompt=\"example prompt\"> at the end of your reply. The prompt is used to generate a stable diffusion image, based on {{user}}'s physical features and clothes, combined with the plot to output appropriate prompts to generate a beautiful Chinese Immortal NSFW image.\n</image_generation>",
                 "regex": "<pic[^>]*\\sprompt=\"([^\"]*)\"[^>]*?>",
                 "position": "deep_system",
                 "depth": 0
@@ -3670,6 +3685,86 @@
             "name": "ST Default",
             "color": "rgba(108, 32, 32, 1)",
             "color2": ""
+        },
+        {
+            "id": "7860d013-91ed-4081-804a-6bf999080078",
+            "name": "修仙",
+            "folder_type": "NONE",
+            "filter_state": "UNDEFINED",
+            "sort_order": null,
+            "color": "",
+            "color2": "",
+            "create_date": 1748162195926
+        },
+        {
+            "id": "00e02610-a578-4b76-8f94-2bc4250f0194",
+            "name": "凡人修仙传",
+            "folder_type": "NONE",
+            "filter_state": "UNDEFINED",
+            "sort_order": null,
+            "color": "",
+            "color2": "",
+            "create_date": 1748162195926
+        },
+        {
+            "id": "b083a4d7-32ad-40c2-ba2a-f0cacabf1fd1",
+            "name": "凡人",
+            "folder_type": "NONE",
+            "filter_state": "UNDEFINED",
+            "sort_order": null,
+            "color": "",
+            "color2": "",
+            "create_date": 1748162195926
+        },
+        {
+            "id": "2a874dea-9419-425c-9382-38e789657ba8",
+            "name": "崛起",
+            "folder_type": "NONE",
+            "filter_state": "UNDEFINED",
+            "sort_order": null,
+            "color": "",
+            "color2": "",
+            "create_date": 1748162195926
+        },
+        {
+            "id": "b58fc9bf-2d01-462c-b274-e3ab6dfe69cc",
+            "name": "人生",
+            "folder_type": "NONE",
+            "filter_state": "UNDEFINED",
+            "sort_order": null,
+            "color": "",
+            "color2": "",
+            "create_date": 1748162195926
+        },
+        {
+            "id": "367c4c8e-f041-4a28-9f30-22f1dd97edc7",
+            "name": "妈妈",
+            "folder_type": "NONE",
+            "filter_state": "UNDEFINED",
+            "sort_order": null,
+            "color": "",
+            "color2": "",
+            "create_date": 1748162195926
+        },
+        {
+            "id": "985defd2-95f8-4152-9ff6-71c9b0a8b728",
+            "name": "母亲",
+            "folder_type": "NONE",
+            "filter_state": "UNDEFINED",
+            "sort_order": null,
+            "color": "",
+            "color2": "",
+            "create_date": 1748162195926
+        },
+        {
+            "id": "149ac21c-db86-48f9-a891-590161d603ab",
+            "name": "成长",
+            "folder_type": "NONE",
+            "filter_state": "UNDEFINED",
+            "sort_order": null,
+            "color": "",
+            "color2": "",
+            "create_date": 1748162195926
         }
     ],
     "tag_map": {
@@ -3677,7 +3772,17 @@
         "null": [],
         "修仙之路2.0.png": [],
         "1.png": [],
-        "修仙世界-[万界大陆].png": []
+        "修仙世界-[万界大陆].png": [],
+        "(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png": [
+            "7860d013-91ed-4081-804a-6bf999080078",
+            "00e02610-a578-4b76-8f94-2bc4250f0194",
+            "b083a4d7-32ad-40c2-ba2a-f0cacabf1fd1",
+            "2a874dea-9419-425c-9382-38e789657ba8",
+            "b58fc9bf-2d01-462c-b274-e3ab6dfe69cc",
+            "367c4c8e-f041-4a28-9f30-22f1dd97edc7",
+            "985defd2-95f8-4152-9ff6-71c9b0a8b728",
+            "149ac21c-db86-48f9-a891-590161d603ab"
+        ]
     },
     "nai_settings": {
         "temperature": 1.5,
