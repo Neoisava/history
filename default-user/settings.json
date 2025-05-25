@@ -3633,7 +3633,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 94,
+                "lastProcessedLength": 93,
                 "userConfigured": true
             }
         },
@@ -3657,7 +3657,7 @@
             "insertType": "inline",
             "promptInjection": {
                 "enabled": true,
-                "prompt": "<image_generation>\nYou must insert a <pic prompt=\"example prompt\"> at end of the reply. Prompts are used for stable diffusion image generation, based on the plot and character to output appropriate prompts to generate captivating NSFW images.\n</image_generation>",
+                "prompt": "<image_generation>\nYou must insert <pic prompt=\"example prompt\"> at the end of your reply. Prompts are used to generate stabilized diffusion images, and output appropriate prompts based on {{user}}'s physical features and clothing, combined with the plot, to generate beautiful NSFW images.  \n</image_generation>",
                 "regex": "<pic[^>]*\\sprompt=\"([^\"]*)\"[^>]*?>",
                 "position": "deep_system",
                 "depth": 0
