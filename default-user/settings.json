@@ -2925,7 +2925,7 @@
             "dimension_step": 64,
             "width": 768,
             "height": 512,
-            "prompt_prefix": "NFWS,best quality, absurdres, masterpiece,",
+            "prompt_prefix": "NFWS,best quality, absurdres,",
             "negative_prompt": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
             "sampler": "k_euler",
             "model": "nai-diffusion-4-full",
@@ -2951,7 +2951,7 @@
                 "-2": "The text prompt used to generate the image. Must represent an exhaustive description of the desired image that will allow an artist or a photographer to perfectly recreate it."
             },
             "character_prompts": {
-                "修仙之路2.0": "中景,近景,NFWS"
+                "修仙之路2.0": "NFWS, masterpiece,pubic tattoo on underbelly, partially unbuttoned, "
             },
             "source": "novel",
             "scheduler": "native",
