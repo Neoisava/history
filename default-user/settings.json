@@ -4848,7 +4848,7 @@
                 "marker": false,
                 "name": "RPG行动选项(选开)",
                 "role": "system",
-                "content": "# 在正文</dream>后或</StatusBlock>后**必须**紧接着使用<options> </options> 包裹选项。\n\n<options_format>\n每次必须在</StatusBlock>之后使用以下格式弹出九个选项让用户选择<user>做出什么行动或对话，选项要有不同的倾向(正常、邪恶、色情、搞笑、荒谬、吐槽、淫秽、玩笑等等)，显示数字1-9（可复选），选项显示类别，不要都是同类别的选项，选项需要能大幅推动剧情或角色关系或是更换场景、跨越时间。\n选项不得带有{{user}}所不知道的资讯。\n每个选项最多30字\n所有你生成的“选项栏”内容，都必须以<options> 作为开头和</options>作为结尾将其包覆。\n格式:\n<options> \n1. <user>行动或对话(类别)\n2. <user>行动或对话(类别)\n3. <user>行动或对话(类别)\n4. <user>行动或对话(类别)\n5. <user>行动或对话(类别)\n6. <user>行动或对话(类别)\n7. <user>行动或对话(类别)\n8. <user>行动或对话(类别/场景移动)\n9. <user>行动或对话(类别/时间快转)\n</options>\n</options_format>\n",
+                "content": "# 在正文</dream>后或</StatusBlock>后**必须**紧接着使用<options> </options> 包裹选项。\n\n<options_format>\n每次必须在</StatusBlock>之后使用以下格式弹出九个选项让用户选择<user>做出什么行动或对话，选项要有不同的倾向(正常、邪恶、色情、吐槽、淫秽、玩笑、背德等等)，显示数字1-9（可复选），选项显示类别，不要都是同类别的选项，选项需要能大幅推动剧情或角色关系或是更换场景、跨越时间。\n选项不得带有{{user}}所不知道的资讯。\n每个选项最多30字\n所有你生成的“选项栏”内容，都必须以<options> 作为开头和</options>作为结尾将其包覆。\n格式:\n<options> \n1. <user>行动或对话(类别)\n2. <user>行动或对话(类别)\n3. <user>行动或对话(类别)\n4. <user>行动或对话(类别)\n5. <user>行动或对话(类别)\n6. <user>行动或对话(类别)\n7. <user>行动或对话(类别)\n8. <user>行动或对话(类别/场景移动)\n9. <user>行动或对话(类别/时间快转)\n</options>\n</options_format>\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
