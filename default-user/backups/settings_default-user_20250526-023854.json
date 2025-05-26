@@ -30,7 +30,7 @@
     "preset_settings": "RecoveredRuins",
     "user_avatar": "1746440806294-.png",
     "amount_gen": 150,
-    "max_context": 7808,
+    "max_context": 8000,
     "main_api": "openai",
     "world_info_settings": {
         "world_info": {
@@ -2494,17 +2494,22 @@
                 },
                 {
                     "id": "4d09e37d-018b-4b60-9da2-0628a75f3aef",
-                    "mode": "cc",
+                    "mode": "tc",
                     "exclude": [],
-                    "api": "custom",
-                    "preset": "【Dreammini】-exp-25052404",
+                    "api": "novel",
+                    "preset": "Erato-Dragonfruit",
                     "api-url": "https://api.skyi.cc/v1",
-                    "model": "[正常]gemini-2.5-pro-preview-03-25",
-                    "proxy": "None",
+                    "model": "llama-3-erato-v1",
                     "stop-strings": "[]",
                     "start-reply-with": "",
                     "reasoning-template": "[Migrated] Custom",
-                    "name": "自己"
+                    "name": "自己",
+                    "sysprompt": "Roleplay - Detailed",
+                    "sysprompt-state": "true",
+                    "instruct": "Gemma 2",
+                    "context": "Gemma 2",
+                    "instruct-state": "true",
+                    "tokenizer": "best_match"
                 }
             ]
         },
@@ -2940,8 +2945,8 @@
             "dimension_step": 64,
             "width": 768,
             "height": 512,
-            "prompt_prefix": "NFWS,best quality, absurdres, partially unbuttoned,",
-            "negative_prompt": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
+            "prompt_prefix": "masterpiece, best quality, ultra-detailed, NSFW, solo, full body, beautiful female cultivator, icy aloof temperament, silver waist-length hair with faint violet lightning sheen, pale flawless snow-white skin, light icy blue eyes with sharp small pupils, long sharp eyebrows, cold pink lips, elegant and stunning, emotionless expression, small C-cup perky breasts, pink tiny areolae, smooth flat belly with glowing pink spiritual tattoo near the womb, tight firm hips, slim athletic waistline, no pubic hair, perfect tight and pink vulva, ethereal lighting, high fantasy style, Chinese immortal theme, delicate beauty, soft erotic aura, standing in soft mist, sensual yet distant",
+            "negative_prompt": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry,worst quality, low quality, normal quality, lowres, blurry, jpeg artifacts, watermark, text, signature, cropped, out of frame, duplicate, morbid, mutilated, deformed, disfigured, bad anatomy, wrong anatomy, extra limbs, extra fingers, fused fingers, missing fingers, malformed hands, long neck, bad proportions, glitch, grainy, noisy, overexposed, oversaturated, monochrome, censorship bars, (male genitalia), (futanari), (underage), (child), (loli), (shota), error",
             "sampler": "k_euler",
             "model": "nai-diffusion-4-full",
             "restore_faces": false,
@@ -3008,7 +3013,7 @@
             "novel_decrisper": false,
             "openai_style": "vivid",
             "openai_quality": "standard",
-            "style": "Default",
+            "style": "own",
             "styles": [
                 {
                     "name": "Default",
@@ -3648,7 +3653,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 112,
+                "lastProcessedLength": 194,
                 "userConfigured": true
             }
         },
@@ -3672,7 +3677,7 @@
             "insertType": "inline",
             "promptInjection": {
                 "enabled": true,
-                "prompt": "<image_generation>\nYou must insert <pic prompt=\"example prompt\"> at the end of your reply. The prompt is used to generate a stable diffusion image, based on {{user}}'s physical features and clothes, combined with the plot to output appropriate prompts to generate a beautiful Chinese Immortal NSFW image.\n</image_generation>",
+                "prompt": "<image_generation>\nPlease insert the <pic prompt=\"...\"> tag at the end of your reply. The system will generate a beautiful NSFW image in Chinese Immortal (Xianxia) style based on {{user}}'s physical appearance and clothing, combined with the plot. The prompt should accurately describe the character’s appearance, scene atmosphere, and emotional tension, ensuring the image conveys both artistic beauty and sensuality.\n</image_generation>",
                 "regex": "<pic[^>]*\\sprompt=\"([^\"]*)\"[^>]*?>",
                 "position": "deep_system",
                 "depth": 0
@@ -3785,38 +3790,39 @@
         ]
     },
     "nai_settings": {
-        "temperature": 1.5,
-        "repetition_penalty": 2.25,
-        "repetition_penalty_range": 8192,
-        "repetition_penalty_slope": 0.09,
+        "temperature": 1.37,
+        "repetition_penalty": 3.25,
+        "repetition_penalty_range": 6000,
+        "repetition_penalty_slope": 3.25,
         "repetition_penalty_frequency": 0,
-        "repetition_penalty_presence": 0.005,
-        "tail_free_sampling": 0.967,
-        "top_k": 10,
-        "top_p": 0.75,
-        "top_a": 0.08,
-        "typical_p": 0.975,
-        "min_p": 0,
-        "math1_temp": 1,
-        "math1_quad": 0,
-        "math1_quad_entropy_scale": 0,
+        "repetition_penalty_presence": 0,
+        "tail_free_sampling": 0.87,
+        "top_k": 0,
+        "top_p": 1,
+        "top_a": 0.1,
+        "typical_p": 0.875,
+        "min_p": 0.035,
+        "math1_temp": 0.9,
+        "math1_quad": 0.07,
+        "math1_quad_entropy_scale": -0.05,
         "min_length": 1,
-        "model_novel": "clio-v1",
-        "preset_settings_novel": "Talker-Chat-Clio",
+        "model_novel": "llama-3-erato-v1",
+        "preset_settings_novel": "Erato-Dragonfruit",
         "streaming_novel": true,
         "preamble": "[ Style: chat, complex, sensory, visceral ]",
-        "prefix": "vanilla",
         "banned_tokens": "",
         "order": [
-            1,
-            5,
             0,
-            2,
-            3,
+            5,
+            9,
+            10,
+            8,
             4
         ],
         "logit_bias": [],
-        "phrase_rep_pen": "very_light"
+        "phrase_rep_pen": "off",
+        "mirostat_lr": 0.2,
+        "mirostat_tau": 4
     },
     "kai_settings": {
         "temp": 1,
