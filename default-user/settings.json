@@ -2944,8 +2944,8 @@
             "dimension_step": 64,
             "width": 768,
             "height": 512,
-            "prompt_prefix": "masterpiece, best quality, (NSFW), solo, beautiful female cultivator, icy expression, silver long hair with violet sheen, snow-white flawless skin, icy blue eyes, sharp eyebrows, cold pink lips, elegant and distant, small perky breasts, tiny pink areolae, flat belly with glowing pink tattoo, firm hips, slim waist, hairless, ideal pink vulva, ethereal light, fantasy Chinese immortal style, soft erotic atmosphere",
-            "negative_prompt": "lowres, bad anatomy, bad hands, text, error, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
+            "prompt_prefix": "masterpiece, best quality, (NSFW), beautiful female cultivator, icy expression, silver long hair with violet sheen, snow-white flawless skin, icy blue eyes, sharp eyebrows, cold pink lips, elegant and distant, C-cup perky breasts, tiny pink areolae, flat belly with glowing pink tattoo, firm hips, slim waist, hairless, ideal pink vulva, ethereal light, fantasy Chinese immortal style, soft erotic atmosphere",
+            "negative_prompt": "lowres, bad anatomy, bad hands, text, error, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry,solo",
             "sampler": "k_euler",
             "model": "nai-diffusion-4-full",
             "restore_faces": false,
@@ -3652,7 +3652,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 197,
+                "lastProcessedLength": 198,
                 "userConfigured": true
             }
         },
