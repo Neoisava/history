@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "true",
-        "NavOpened": "true",
+        "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -2517,7 +2517,7 @@
             {
                 "id": "0d28134f-5b68-4619-8cc9-df6ce99d5eb3",
                 "scriptName": "【demini】专防省略号增殖正则",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/…/gi",
                 "replaceString": "",
@@ -2534,7 +2534,7 @@
             {
                 "id": "1a66b930-d2b1-44ac-934f-01fb9fbeba31",
                 "scriptName": "【demini】D1非插件式表格折叠",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<table>(.*?)</table>/gs",
                 "replaceString": "<details><summary>*<font color=#C0C0C0>非插件式表格<font>*</summary>\n> $1\n</details>",
@@ -2551,7 +2551,7 @@
             {
                 "id": "388b3c6b-bf9b-46eb-930d-0a19d10b2011",
                 "scriptName": "【demini】D1汇总记录折叠",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<Main_Quest>(.*?)</Main_Quest>/gs",
                 "replaceString": "<details><summary>*<font color=#87CEFA>汇总记录</font>*</summary>\n> $1\n</details>",
@@ -2568,7 +2568,7 @@
             {
                 "id": "249f095d-cc10-4ee7-9ed4-d34010e23421",
                 "scriptName": "【demini】D1替绝望羊折叠正则",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<air>(.*?)</air>/gs",
                 "replaceString": "<details><summary>*<font color=#F08080>替绝望羊</font>*</summary>\n> $1\n</details>",
@@ -2585,7 +2585,7 @@
             {
                 "id": "831e2743-fe02-4a94-ab38-97b224cd0d67",
                 "scriptName": "【demini】D1添加用户输入TAG",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "^([\\s\\S]*)$",
                 "replaceString": "<user_input>\n$1\n</user_input>",
@@ -2602,7 +2602,7 @@
             {
                 "id": "4f04edd9-790e-465a-93f7-68e18c0a6b06",
                 "scriptName": "【demini】D2缔改去除多余内容",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<content>|</content>|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(.*?<think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
                 "replaceString": "",
@@ -2619,7 +2619,7 @@
             {
                 "id": "bf595364-459a-4884-8bee-0b7c9cb6f350",
                 "scriptName": "【demini】D3略三楼前汇总",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
                 "replaceString": "",
@@ -2636,7 +2636,7 @@
             {
                 "id": "bd50397e-794d-4be1-8e60-afc69a6e7a28",
                 "scriptName": "【demini】D3前绝望羊补牢正则",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<air>[\\s\\S]*?</air>/g",
                 "replaceString": "",
@@ -2653,7 +2653,7 @@
             {
                 "id": "815ae822-e790-4458-828d-a06bbbf98065",
                 "scriptName": "【demini】D3隐藏前文用户消息",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "^([\\s\\S]*)$",
                 "replaceString": "",
@@ -2670,7 +2670,7 @@
             {
                 "id": "9fc31796-2f13-4085-a9cc-e10f5b5b4d1e",
                 "scriptName": "【demini】D4隐藏全部前文[22]",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/[\\s\\S]*/gm",
                 "replaceString": "",
@@ -2687,7 +2687,7 @@
             {
                 "id": "3c862189-7926-4d35-9e4e-8312abe1fec7",
                 "scriptName": "【DepressIon】剧情推进1 v2.5",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
                 "replaceString": "<details>\n<summary>剧情</summary>\n$1\n</details>",
@@ -2704,7 +2704,7 @@
             {
                 "id": "1057278c-9e09-47d6-99b0-52334587c69f",
                 "scriptName": "【DepressIon】剧情推进2 v2.5",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
                 "replaceString": "",
@@ -2721,7 +2721,7 @@
             {
                 "id": "eff6d6b6-4420-4954-b183-0e2362cd0dc8",
                 "scriptName": "【DepressIon】通用必备正则 v1.3",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/((<(guifan|safety_check)>(?:(?!<(guifan|safety_check)>)[\\s\\S])*?<\\/(guifan|safety_check)>)|(<reminder>(?:[\\s\\S])*?<\\/reminder>)|([\\s\\S]*<\\/(analysis|thinking|think)>)|([\\s\\S]*(?=<game>)))/g",
                 "replaceString": "",
@@ -2738,7 +2738,7 @@
             {
                 "id": "94c4f1a6-5593-4042-8773-fc0dc0cf89e2",
                 "scriptName": "【DepressIon】小总结1 v2.5",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/[\\s\\S]*?(?<!<details>\\s*)<summary>([\\s\\S]*)<\\/summary>[\\s\\S]*/g",
                 "replaceString": "<summary>\n$1\n</summary>",
@@ -2755,7 +2755,7 @@
             {
                 "id": "645c2d4d-92ae-4b32-bb55-b0c8de0bfa53",
                 "scriptName": "【DepressIon】小总结2 v2.5",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/(?<!<details>\\s*)<summary>(((?!<summary>)[\\s\\S])*?)<\\/summary>/g",
                 "replaceString": "<details>\n<summary>摘要</summary>\n$1\n</details>",
@@ -2772,7 +2772,7 @@
             {
                 "id": "5224e172-7bd4-473f-b98f-576e66e26484",
                 "scriptName": "【DepressIon】修改用户输入 1.2",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/([\\s\\S]*)/",
                 "replaceString": "// $1\n\ngame.loadAll(`",
@@ -2789,7 +2789,7 @@
             {
                 "id": "cec6431c-be29-4740-9e05-11edfe26a3b0",
                 "scriptName": "【DepressIon】修改AI回复 1.2",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/([\\s\\S]*)/",
                 "replaceString": "$1\n<system>\n存档加载完毕。\n</system>",
@@ -3771,7 +3771,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 220,
+                "lastProcessedLength": 219,
                 "userConfigured": true
             }
         },
