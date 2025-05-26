@@ -2945,8 +2945,8 @@
             "dimension_step": 64,
             "width": 768,
             "height": 512,
-            "prompt_prefix": "NFWS,best quality, absurdres, partially unbuttoned,",
-            "negative_prompt": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
+            "prompt_prefix": "masterpiece, best quality, ultra-detailed, NSFW, solo, full body, beautiful female cultivator, icy aloof temperament, silver waist-length hair with faint violet lightning sheen, pale flawless snow-white skin, light icy blue eyes with sharp small pupils, long sharp eyebrows, cold pink lips, elegant and stunning, emotionless expression, small C-cup perky breasts, pink tiny areolae, smooth flat belly with glowing pink spiritual tattoo near the womb, tight firm hips, slim athletic waistline, no pubic hair, perfect tight and pink vulva, ethereal lighting, high fantasy style, Chinese immortal theme, delicate beauty, soft erotic aura, standing in soft mist, sensual yet distant",
+            "negative_prompt": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry,worst quality, low quality, normal quality, lowres, blurry, jpeg artifacts, watermark, text, signature, cropped, out of frame, duplicate, morbid, mutilated, deformed, disfigured, bad anatomy, wrong anatomy, extra limbs, extra fingers, fused fingers, missing fingers, malformed hands, long neck, bad proportions, glitch, grainy, noisy, overexposed, oversaturated, monochrome, censorship bars, (male genitalia), (futanari), (underage), (child), (loli), (shota), error",
             "sampler": "k_euler",
             "model": "nai-diffusion-4-full",
             "restore_faces": false,
@@ -3013,7 +3013,7 @@
             "novel_decrisper": false,
             "openai_style": "vivid",
             "openai_quality": "standard",
-            "style": "Default",
+            "style": "own",
             "styles": [
                 {
                     "name": "Default",
@@ -3653,7 +3653,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 193,
+                "lastProcessedLength": 194,
                 "userConfigured": true
             }
         },
