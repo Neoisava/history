@@ -3094,7 +3094,7 @@
             "width": 768,
             "height": 512,
             "prompt_prefix": "masterpiece, best quality, NSFW, beautiful female cultivator, icy expression, silver long hair with violet sheen, snow-white skin, icy blue eyes, cold pink lips, elegant and distant, perky C-cup breasts, tiny pink areolae, flat belly with a glowing pink heart-shaped sigil fused with the womb, firm hips, slim waist, hairless, ideal pink vulva, Xianxia fantasy, soft erotic aura",
-            "negative_prompt": "lowres, bad anatomy, bad hands, text, error, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry,solo",
+            "negative_prompt": "lowres, bad anatomy, bad hands, text, error, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry,solo,Extreme close-up",
             "sampler": "k_euler",
             "model": "nai-diffusion-4-full",
             "restore_faces": false,
@@ -3184,7 +3184,7 @@
             "stability_style_preset": "anime",
             "bfl_upsampling": false,
             "character_negative_prompts": {
-                "修仙之路2.0": "全景"
+                "修仙之路2.0": "Extreme close-up"
             }
         },
         "chromadb": {},
@@ -3801,7 +3801,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 8,
+                "lastProcessedLength": 11,
                 "userConfigured": true
             }
         },
