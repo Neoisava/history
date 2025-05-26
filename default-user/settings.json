@@ -78,6 +78,7 @@
                         "_性爱世界书",
                         "SSVGG 2.0",
                         "人类本能世界书",
+                        "嚯嚯，还有这种可以看的吗？🤣",
                         "女性本能世界书 by LULUZ",
                         "文风世界书 (7)",
                         "母子世界2.0_1",
@@ -3800,7 +3801,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 10,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
@@ -4009,7 +4010,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": true,
+        "stream_openai": false,
         "openai_max_context": 1000000,
         "openai_max_tokens": 65500,
         "wrap_in_quotes": false,
@@ -5689,7 +5690,7 @@
                     },
                     {
                         "identifier": "e292498c-c42d-481c-af72-0d00ca74f099",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "f6742d0b-7e74-40c8-a145-6f930712a684",
