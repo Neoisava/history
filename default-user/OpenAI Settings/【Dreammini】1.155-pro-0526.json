@@ -49,7 +49,7 @@
     "scenario_format": "{{scenario}}",
     "personality_format": "{{personality}}",
     "group_nudge_prompt": "[Write the next reply only as {{char}}.]",
-    "stream_openai": false,
+    "stream_openai": true,
     "prompts": [
         {
             "name": "🛏️梦境系统(主要设定)",
@@ -1454,11 +1454,11 @@
                 },
                 {
                     "identifier": "1d789341-ce56-4dee-bbf0-ff7fda7dbc7a",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "1be7ab8c-c00d-47c4-883c-9c108d7d4c70",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "76fcd970-8ea4-40b0-8336-9504054b10bc",
@@ -1702,7 +1702,7 @@
                 },
                 {
                     "identifier": "4c258266-39bd-4920-bf26-4e1a90b38cf2",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "c9701159-a3fd-49df-9b5b-c6ee8ba9e7d4",
@@ -1742,7 +1742,7 @@
                 },
                 {
                     "identifier": "d81c2780-201d-4315-a116-f0e197f060a8",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ff7eb549-3dda-4325-b757-ebbed488badd",
