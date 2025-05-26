@@ -2,8 +2,8 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
-        "NavOpened": "false",
+        "LNavOpened": "true",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -30,7 +30,7 @@
     "preset_settings": "RecoveredRuins",
     "user_avatar": "1746440806294-.png",
     "amount_gen": 150,
-    "max_context": 7808,
+    "max_context": 8000,
     "main_api": "openai",
     "world_info_settings": {
         "world_info": {
@@ -81,7 +81,6 @@
                         "女性本能世界书 by LULUZ",
                         "文风世界书 (7)",
                         "母子世界2.0_1",
-                        "部位特写",
                         "针对2.5pro的瑟瑟场景"
                     ]
                 },
@@ -2494,17 +2493,22 @@
                 },
                 {
                     "id": "4d09e37d-018b-4b60-9da2-0628a75f3aef",
-                    "mode": "cc",
+                    "mode": "tc",
                     "exclude": [],
-                    "api": "custom",
-                    "preset": "【Dreammini】-exp-25052404",
+                    "api": "novel",
+                    "preset": "Erato-Dragonfruit",
                     "api-url": "https://api.skyi.cc/v1",
-                    "model": "[正常]gemini-2.5-pro-preview-03-25",
-                    "proxy": "None",
+                    "model": "llama-3-erato-v1",
                     "stop-strings": "[]",
                     "start-reply-with": "",
                     "reasoning-template": "[Migrated] Custom",
-                    "name": "自己"
+                    "name": "自己",
+                    "sysprompt": "Roleplay - Detailed",
+                    "sysprompt-state": "true",
+                    "instruct": "Gemma 2",
+                    "context": "Gemma 2",
+                    "instruct-state": "true",
+                    "tokenizer": "best_match"
                 }
             ]
         },
@@ -2877,7 +2881,7 @@
                     1,
                     2
                 ],
-                "disabled": false,
+                "disabled": true,
                 "markdownOnly": false,
                 "promptOnly": true,
                 "runOnEdit": true,
@@ -2940,8 +2944,8 @@
             "dimension_step": 64,
             "width": 768,
             "height": 512,
-            "prompt_prefix": "NFWS,best quality, absurdres, partially unbuttoned,",
-            "negative_prompt": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
+            "prompt_prefix": "masterpiece, best quality, (NSFW), beautiful female cultivator, icy expression, silver long hair with violet sheen, snow-white flawless skin, icy blue eyes, sharp eyebrows, cold pink lips, elegant and distant, C-cup perky breasts, tiny pink areolae, flat belly with glowing pink tattoo, firm hips, slim waist, hairless, ideal pink vulva, ethereal light, fantasy Chinese immortal style, soft erotic atmosphere",
+            "negative_prompt": "lowres, bad anatomy, bad hands, text, error, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry,solo",
             "sampler": "k_euler",
             "model": "nai-diffusion-4-full",
             "restore_faces": false,
@@ -2975,8 +2979,8 @@
             "adetailer_face": false,
             "horde_sanitize": true,
             "interactive_mode": true,
-            "multimodal_captioning": false,
-            "snap": false,
+            "multimodal_captioning": true,
+            "snap": true,
             "free_extend": false,
             "function_tool": true,
             "auto_url": "http://localhost:7860",
@@ -3017,8 +3021,8 @@
                 },
                 {
                     "name": "own",
-                    "prefix": "NFWS,best quality, absurdres, masterpiece,",
-                    "negative": "lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry"
+                    "prefix": "masterpiece, best quality, (NSFW), solo, beautiful female cultivator, icy expression, silver long hair with violet sheen, snow-white flawless skin, icy blue eyes, sharp eyebrows, cold pink lips, elegant and distant, small perky breasts, tiny pink areolae, flat belly with glowing pink tattoo, firm hips, slim waist, hairless, ideal pink vulva, ethereal light, fantasy Chinese immortal style, soft erotic atmosphere",
+                    "negative": "lowres, bad anatomy, bad hands, text, error, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry"
                 }
             ],
             "comfy_url": "https://xnlbof--8188.ap-shanghai.cloudstudio.work/",
@@ -3648,7 +3652,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 219,
                 "userConfigured": true
             }
         },
@@ -3672,7 +3676,7 @@
             "insertType": "inline",
             "promptInjection": {
                 "enabled": true,
-                "prompt": "<image_generation>\nYou must insert <pic prompt=\"example prompt\"> at the end of your reply. The prompt is used to generate a stable diffusion image, based on {{user}}'s physical features and clothes, combined with the plot to output appropriate prompts to generate a beautiful Chinese Immortal NSFW image.\n</image_generation>",
+                "prompt": "<image_generation>\nPlease insert the <pic prompt=\"...\"> tag at the end of your reply. The system will generate a beautiful NSFW image in Chinese Immortal (Xianxia) style based on {{user}}'s physical appearance and clothing, combined with the plot. The prompt should accurately describe the character’s appearance, scene atmosphere, and emotional tension, ensuring the image conveys both artistic beauty and sensuality.\n</image_generation>",
                 "regex": "<pic[^>]*\\sprompt=\"([^\"]*)\"[^>]*?>",
                 "position": "deep_system",
                 "depth": 0
@@ -3785,38 +3789,39 @@
         ]
     },
     "nai_settings": {
-        "temperature": 1.5,
-        "repetition_penalty": 2.25,
-        "repetition_penalty_range": 8192,
-        "repetition_penalty_slope": 0.09,
+        "temperature": 1.37,
+        "repetition_penalty": 3.25,
+        "repetition_penalty_range": 6000,
+        "repetition_penalty_slope": 3.25,
         "repetition_penalty_frequency": 0,
-        "repetition_penalty_presence": 0.005,
-        "tail_free_sampling": 0.967,
-        "top_k": 10,
-        "top_p": 0.75,
-        "top_a": 0.08,
-        "typical_p": 0.975,
-        "min_p": 0,
-        "math1_temp": 1,
-        "math1_quad": 0,
-        "math1_quad_entropy_scale": 0,
+        "repetition_penalty_presence": 0,
+        "tail_free_sampling": 0.87,
+        "top_k": 0,
+        "top_p": 1,
+        "top_a": 0.1,
+        "typical_p": 0.875,
+        "min_p": 0.035,
+        "math1_temp": 0.9,
+        "math1_quad": 0.07,
+        "math1_quad_entropy_scale": -0.05,
         "min_length": 1,
-        "model_novel": "clio-v1",
-        "preset_settings_novel": "Talker-Chat-Clio",
+        "model_novel": "llama-3-erato-v1",
+        "preset_settings_novel": "Erato-Dragonfruit",
         "streaming_novel": true,
         "preamble": "[ Style: chat, complex, sensory, visceral ]",
-        "prefix": "vanilla",
         "banned_tokens": "",
         "order": [
-            1,
-            5,
             0,
-            2,
-            3,
+            5,
+            9,
+            10,
+            8,
             4
         ],
         "logit_bias": [],
-        "phrase_rep_pen": "very_light"
+        "phrase_rep_pen": "off",
+        "mirostat_lr": 0.2,
+        "mirostat_tau": 4
     },
     "kai_settings": {
         "temp": 1,
@@ -5295,7 +5300,7 @@
         "personality_format": "{{personality}}",
         "openai_model": "gpt-4-turbo",
         "claude_model": "claude-3-5-sonnet-20240620",
-        "google_model": "gemini-2.0-pro-exp-02-05",
+        "google_model": "gemini-2.5-pro-preview-03-25",
         "ai21_model": "jamba-1.5-large",
         "mistralai_model": "mistral-large-latest",
         "cohere_model": "command-r-plus",
@@ -5305,7 +5310,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "[正常]gemini-2.5-pro-preview-03-25",
+        "custom_model": "[EXPRESS] gemini-2.5-pro-preview-03-25-auto",
         "custom_url": "https://api.skyi.cc/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
