@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -24,7 +24,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": null,
+    "active_character": "修仙之路2.0.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2512,7 +2512,7 @@
             {
                 "id": "0d28134f-5b68-4619-8cc9-df6ce99d5eb3",
                 "scriptName": "【demini】专防省略号增殖正则",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/…/gi",
                 "replaceString": "",
@@ -2529,7 +2529,7 @@
             {
                 "id": "1a66b930-d2b1-44ac-934f-01fb9fbeba31",
                 "scriptName": "【demini】D1非插件式表格折叠",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<table>(.*?)</table>/gs",
                 "replaceString": "<details><summary>*<font color=#C0C0C0>非插件式表格<font>*</summary>\n> $1\n</details>",
@@ -2546,7 +2546,7 @@
             {
                 "id": "249f095d-cc10-4ee7-9ed4-d34010e23421",
                 "scriptName": "【demini】D1替绝望羊折叠正则",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<air>(.*?)</air>/gs",
                 "replaceString": "<details><summary>*<font color=#F08080>替绝望羊</font>*</summary>\n> $1\n</details>",
@@ -2563,7 +2563,7 @@
             {
                 "id": "831e2743-fe02-4a94-ab38-97b224cd0d67",
                 "scriptName": "【demini】D1添加用户输入TAG",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "^([\\s\\S]*)$",
                 "replaceString": "<user_input>\n$1\n</user_input>",
@@ -2580,7 +2580,7 @@
             {
                 "id": "4f04edd9-790e-465a-93f7-68e18c0a6b06",
                 "scriptName": "【demini】D2缔改去除多余内容",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<content>|</content>|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(.*?<think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
                 "replaceString": "",
@@ -2597,7 +2597,7 @@
             {
                 "id": "bf595364-459a-4884-8bee-0b7c9cb6f350",
                 "scriptName": "【demini】D3略三楼前汇总",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
                 "replaceString": "",
@@ -2614,7 +2614,7 @@
             {
                 "id": "388b3c6b-bf9b-46eb-930d-0a19d10b2011",
                 "scriptName": "【demini】D1汇总记录折叠",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<Main_Quest>(.*?)</Main_Quest>/gs",
                 "replaceString": "<details><summary>*<font color=#87CEFA>汇总记录</font>*</summary>\n> $1\n</details>",
@@ -2631,7 +2631,7 @@
             {
                 "id": "bd50397e-794d-4be1-8e60-afc69a6e7a28",
                 "scriptName": "【demini】D3前绝望羊补牢正则",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<air>[\\s\\S]*?</air>/g",
                 "replaceString": "",
@@ -2648,7 +2648,7 @@
             {
                 "id": "815ae822-e790-4458-828d-a06bbbf98065",
                 "scriptName": "【demini】D3隐藏前文用户消息",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "^([\\s\\S]*)$",
                 "replaceString": "",
@@ -2665,7 +2665,7 @@
             {
                 "id": "9fc31796-2f13-4085-a9cc-e10f5b5b4d1e",
                 "scriptName": "【demini】D4隐藏全部前文[22]",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/[\\s\\S]*/gm",
                 "replaceString": "",
@@ -2801,7 +2801,7 @@
             {
                 "id": "c28179a9-f094-4df5-a8a9-29c6f46fdd8a",
                 "scriptName": "【Dreammini】舊选项移除",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "<options[^>]*>[\\s\\S]*?</options>",
                 "replaceString": "",
@@ -2818,7 +2818,7 @@
             {
                 "id": "7ec38092-1585-4dd5-a708-a42570c45082",
                 "scriptName": "【Dreammini】重写正则1-当前回复前台隐藏",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/[^<删\\n。．！？；.!?”]+[。．！？；.!?”)]<删>/g",
                 "replaceString": "",
@@ -2835,7 +2835,7 @@
             {
                 "id": "6c2749f3-98f8-444e-9382-a0cb664ea266",
                 "scriptName": "【Dreammini】重写正则2-过去记录删除",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/[^<删\\n。．！？；.!?”]+[。．！？；.!?”)]<删>/g",
                 "replaceString": "",
@@ -2852,7 +2852,7 @@
             {
                 "id": "18567ca7-b0c6-463a-b02b-183566b4ffd2",
                 "scriptName": "【Dreammini】DIE[推进(缩起)]",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
                 "replaceString": "<details>\n<summary>剧情</summary>\n$1\n</details>",
@@ -2869,7 +2869,7 @@
             {
                 "id": "21ed7ae3-8926-483e-ac46-3bd55a1d6530",
                 "scriptName": "【Dreammini】DIE[推进(移除)]",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
                 "replaceString": "",
@@ -2886,7 +2886,7 @@
             {
                 "id": "77052179-920e-4b83-87f5-3dc4cef4a0c6",
                 "scriptName": "【Dreammini】DIE小总结(格式)",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/(?<!<details>\\s*)<summary>(((?!<summary>)[\\s\\S])*?)<\\/summary>/g",
                 "replaceString": "<details>\n<summary>摘要</summary>\n$1\n</details>",
@@ -2903,7 +2903,7 @@
             {
                 "id": "18956466-025a-4e61-b88d-74e5d4088051",
                 "scriptName": "【Dreammini】DIE小总结(移除正文)",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/[\\s\\S]*?(?<!<details>\\s*)<summary>([\\s\\S]*)<\\/summary>[\\s\\S]*/g",
                 "replaceString": "<summary>\n$1\n</summary>",
@@ -2920,7 +2920,7 @@
             {
                 "id": "a9eef03a-b5d2-41ba-a3ff-984bd8b55367",
                 "scriptName": "【Dreammini】Kemini去除所有用户消息",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "^([\\s\\S]*)$",
                 "replaceString": "",
@@ -2937,7 +2937,7 @@
             {
                 "id": "6d9fbba5-cad1-433b-b029-2bede24458d3",
                 "scriptName": "【Dreammini】Kemini添加user输入tag",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "^([\\s\\S]*)$",
                 "replaceString": "<user_input>\n$1\n</user_input>",
@@ -2954,7 +2954,7 @@
             {
                 "id": "2688e9e7-81f0-40b9-8dd6-719ccead6391",
                 "scriptName": "【Dreammini】Kemini通用去除多余内容",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<dream>|</dream>|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
                 "replaceString": "",
@@ -3766,7 +3766,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 220,
                 "userConfigured": true
             }
         },
@@ -3975,7 +3975,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": true,
+        "stream_openai": false,
         "openai_max_context": 400000,
         "openai_max_tokens": 60000,
         "wrap_in_quotes": false,
@@ -7124,7 +7124,7 @@
                     },
                     {
                         "identifier": "d14628b9-671c-4eb8-8cf7-5cdf7e09a11d",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "5ac6c61e-42d0-4740-9e4c-cb540810aa9d",
@@ -7132,7 +7132,7 @@
                     },
                     {
                         "identifier": "e6f1cf0c-34fa-49b2-9cf6-2d0334655643",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "13b0a1c6-a8a8-4d08-995f-1acf97994ce0",
