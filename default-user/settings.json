@@ -3800,8 +3800,8 @@
             "migration_v1_complete": true,
             "useGlobalSettings": true,
             "globalHideSettings": {
-                "hideLastN": 20,
-                "lastProcessedLength": 31,
+                "hideLastN": 10,
+                "lastProcessedLength": 34,
                 "userConfigured": true
             }
         },
@@ -3825,7 +3825,7 @@
             "insertType": "inline",
             "promptInjection": {
                 "enabled": true,
-                "prompt": "<image_generation>\nPlease insert the <pic prompt=\"...\"> tag at the end of your reply. The system will generate a high-quality NSFW image in Chinese Immortal (Xianxia) style based on {{user}}'s physical appearance and current plot context. The prompt should focus on the natural interplay between the character’s body and her clothing, capturing the sensual tension within the scene. Ensure that the character’s beauty, expression, and posture align with the emotional tone of the story, creating a composition that blends erotic elegance with fantasy aesthetics. Pay special attention to ensure the character's clothing fits the body naturally, and the hand positions are natural, avoiding any depiction of nudity or hands behind the back.\n</image_generation>",
+                "prompt": "<image_generation>\nPlease insert the <pic prompt=\"...\"> tag at the end of your reply. The system will generate a high-quality NSFW image in Chinese Immortal (Xianxia) style based on {{user}}'s physical appearance and current plot context. The prompt should focus on the natural interplay between the character’s body and her clothing, capturing the sensual tension within the scene. Make sure the character’s beauty, expression, and posture align with the emotional tone of the story, ensuring a composition that blends erotic elegance with fantasy aesthetics. Pay special attention to ensure that the character's clothing fits her form naturally, and her hands are positioned gracefully at her sides or in a way that enhances her allure, avoiding any depiction of hands behind the back.\n</image_generation>",
                 "regex": "<pic[^>]*\\sprompt=\"([^\"]*)\"[^>]*?>",
                 "position": "deep_system",
                 "depth": 0
