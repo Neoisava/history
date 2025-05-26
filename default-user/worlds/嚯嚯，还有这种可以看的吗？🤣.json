@@ -1,0 +1,48 @@
+{
+    "entries": {
+        "0": {
+            "uid": 0,
+            "key": [
+                "喊",
+                "杀",
+                "打",
+                "吵",
+                "战",
+                "砍",
+                "刺",
+                "炸",
+                "射"
+            ],
+            "keysecondary": [],
+            "comment": "黄豆头",
+            "content": "<Description>\n    A phenomenon observed across various world settings: whenever two or more powerful people, forces, wills, or emotions clash intensely (be it physical combat or verbal conflict/infighting), it invariably attracts commentaries. Their goal is solely to watch for entertainment (看乐子 ). They perceive various intense battles or arguments as entertainment and tend to comment on the situation's development and participants' actions using sharp, witty, sarcastic, but generally not crude language. They also prominently use emoji to convey their feelings. \n\nBe **incredibly succint** with the description of the commentaries, there appearing should cover no more than three to five sentence on average, and do not take up a major portion of the events. \n\nDescribe the commentor's remarks, but do not focus on the commentor's location, appearance, characteristics, as they are irrelevant to the story. \n</Description>\n\n</Behaviour>\nBehavior Pattern and Communication:\nThe primary behavior of commentors is observing and commenting. They avoid directly influencing the parties in conflict, and solely provide their remarks.\n\nCharacteristics of their language include:\n\n\"Watching for Entertainment\" Mindset: Approaching the conflict with a playful, cynical attitude, anticipating \"highlights\" or unexpected turns of events.\n\nSarcasm and Pointed Critique: Offering sharp commentary on participants' foolishness, arrogance, logical flaws, or mistakes. Their remarks can cut to the core of the issue; while biting, they seldom resort to direct vulgarity or crude expressions.\n\nFact-Based Language: Their comments are often grounded in the events unfolding before them, pointing out contradictions, inconsistencies, or potential outcomes.\n\nInternal Banter: \nCommentors may also comment on or even contradict each other's opinions, creating smaller \"commentary sections.\" This interaction stems from their differing interpretations of the conflict or views on what constitutes \"good entertainment,\" maintaining the sarcastic tone.\n\nEmoji Usage: \nThis is their most defining trait. They frequently append yellow facial emojis, especially \"🤣\" and \"😅,\" to their sentences or phrases to express their attitude. \n\"🤣\" signifies their \"watching for entertainment,\" \"mocking,\" or \"laughing heartily\" mindset or action, while \"😅\" conveys \"speechlessness,\" \"awkwardness,\" or an \"embarrassed-but-polite smile\" regarding absurd, cringey, or peculiar situations.</Behaviour>\n\n<Phrasing>\n🤣 (U+1F923): Primarily used to express \"watching for entertainment,\" \"laughing out loud,\" or schadenfreude, and is usually added after most sentence unless other emoji superseds it's use case. Can also be used as a verb to mean the act of observing for amusement.\n\nExample\n\"You guys have been doing it for 5 minute without any major progress on both side, are you actually fighting or making out?🤣\" (normal critique)\n\"In all seriousness, we will be 🤣 at you in a serious manner: 🤣 with dignity, 🤣 with professional standard, and 🤣 with politeness\" (using 🤣 as a verb to describe the overall act of observing for amusement. )\n\n😅 (U+1F605): Primarily used to express \"speechlessness,\" \"awkwardness,\" \"helplessness,\" etc., regarding absurd, embarrassing, or strange remarks or actions.\n\nExample\n\"Is that guy saying it in serious without joking? What kind of society does he think we live in 😅\"\n</Phrasing>",
+            "constant": false,
+            "vectorized": false,
+            "selective": true,
+            "selectiveLogic": 0,
+            "addMemo": true,
+            "order": 100,
+            "position": 0,
+            "disable": false,
+            "excludeRecursion": false,
+            "preventRecursion": false,
+            "delayUntilRecursion": false,
+            "probability": 100,
+            "useProbability": true,
+            "depth": 4,
+            "group": "",
+            "groupOverride": false,
+            "groupWeight": 100,
+            "scanDepth": null,
+            "caseSensitive": null,
+            "matchWholeWords": null,
+            "useGroupScoring": null,
+            "automationId": "",
+            "role": null,
+            "sticky": 0,
+            "cooldown": 0,
+            "delay": 0,
+            "displayIndex": 0
+        }
+    }
+}
