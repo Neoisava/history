@@ -81,7 +81,6 @@
                         "女性本能世界书 by LULUZ",
                         "文风世界书 (7)",
                         "母子世界2.0_1",
-                        "部位特写",
                         "针对2.5pro的瑟瑟场景"
                     ]
                 },
@@ -2882,7 +2881,7 @@
                     1,
                     2
                 ],
-                "disabled": false,
+                "disabled": true,
                 "markdownOnly": false,
                 "promptOnly": true,
                 "runOnEdit": true,
@@ -2980,8 +2979,8 @@
             "adetailer_face": false,
             "horde_sanitize": true,
             "interactive_mode": true,
-            "multimodal_captioning": false,
-            "snap": false,
+            "multimodal_captioning": true,
+            "snap": true,
             "free_extend": false,
             "function_tool": true,
             "auto_url": "http://localhost:7860",
