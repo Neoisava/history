@@ -3800,7 +3800,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 3,
+                "lastProcessedLength": 5,
                 "userConfigured": true
             }
         },
@@ -5689,7 +5689,7 @@
                     },
                     {
                         "identifier": "e292498c-c42d-481c-af72-0d00ca74f099",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "f6742d0b-7e74-40c8-a145-6f930712a684",
