@@ -3092,7 +3092,7 @@
             "dimension_step": 64,
             "width": 768,
             "height": 512,
-            "prompt_prefix": "masterpiece, best quality, NSFW, beautiful female cultivator, icy expression, silver long hair with violet sheen, snow-white skin, icy blue eyes,  cold pink lips, elegant and distant, perky C-cup breasts, tiny pink areolae, flat belly with glowing pink tattoo, firm hips, slim waist, hairless, ideal pink vulva, ethereal lighting, Xianxia fantasy, soft erotic aura",
+            "prompt_prefix": "masterpiece, best quality, NSFW, beautiful female cultivator, icy expression, silver long hair with violet sheen, snow-white skin, icy blue eyes,  cold pink lips, elegant and distant, perky C-cup breasts, tiny pink areolae, flat belly with glowing pink tattoo, firm hips, slim waist, hairless, ideal pink vulva,Xianxia fantasy, soft erotic aura",
             "negative_prompt": "lowres, bad anatomy, bad hands, text, error, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry,solo",
             "sampler": "k_euler",
             "model": "nai-diffusion-4-full",
@@ -5417,11 +5417,11 @@
                     },
                     {
                         "identifier": "1d789341-ce56-4dee-bbf0-ff7fda7dbc7a",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "1be7ab8c-c00d-47c4-883c-9c108d7d4c70",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "76fcd970-8ea4-40b0-8336-9504054b10bc",
