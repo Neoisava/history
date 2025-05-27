@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "true",
-        "NavOpened": "true",
+        "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -3093,7 +3093,7 @@
             "dimension_step": 64,
             "width": 768,
             "height": 512,
-            "prompt_prefix": "masterpiece, best quality, NSFW, beautiful female cultivator, icy expression, silver long hair with violet sheen, snow-white skin, icy blue eyes, cold pink lips, elegant and distant, perky C-cup breasts, tiny pink areolae, flat belly with a glowing pink succubus sigil above the womb, firm hips, slim waist, hairless, ideal pink vulva, Xianxia fantasy, soft erotic aura",
+            "prompt_prefix": "masterpiece, best quality, beautiful female cultivator, icy expression, silver long hair with violet sheen, snow-white skin, icy blue eyes, cold pink lips, elegant and distant,tiny pink areolae,hairless, Xianxia fantasy, soft erotic aura  ",
             "negative_prompt": "lowres, bad anatomy, bad hands, text, error, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry,solo,Extreme close-up",
             "sampler": "k_euler",
             "model": "nai-diffusion-4-full",
@@ -3119,7 +3119,7 @@
                 "-2": "The text prompt used to generate the image. Must represent an exhaustive description of the desired image that will allow an artist or a photographer to perfectly recreate it."
             },
             "character_prompts": {
-                "修仙之路2.0": "NFWS, masterpiece, Long shot / Wide shot,Medium shot,Close-up"
+                "修仙之路2.0": "NSFW, masterpiece, Long shot / Wide shot,Medium shot,Close-up"
             },
             "source": "novel",
             "scheduler": "native",
@@ -3800,8 +3800,8 @@
             "migration_v1_complete": true,
             "useGlobalSettings": true,
             "globalHideSettings": {
-                "hideLastN": 20,
-                "lastProcessedLength": 22,
+                "hideLastN": 10,
+                "lastProcessedLength": 125,
                 "userConfigured": true
             }
         },
@@ -3825,7 +3825,7 @@
             "insertType": "inline",
             "promptInjection": {
                 "enabled": true,
-                "prompt": "<image_generation>\nPlease insert the <pic prompt=\"...\"> tag at the end of your reply. The system will generate a high-quality NSFW image in Chinese Immortal (Xianxia) style based on {{user}}'s physical appearance and current plot context. The prompt should focus on the natural interplay between the character’s body and her clothing, capturing the sensual tension within the scene. Make sure the character’s beauty, expression, and posture align with the emotional tone of the story, ensuring a composition that blends erotic elegance with fantasy aesthetics.\n</image_generation>",
+                "prompt": "<image_generation>\nPlease insert the <pic prompt=\"...\"> tag at the end of your reply. The system will generate a high-quality NSFW image in Chinese Immortal (Xianxia) style based on {{user}}'s physical appearance and current plot context. The prompt should focus on the natural interplay between the character’s body and her clothing, capturing the sensual tension within the scene. Make sure the character’s beauty, expression, and posture align with the emotional tone of the story, ensuring a composition that blends erotic elegance with fantasy aesthetics. Pay special attention to ensure that the character's clothing fits her form naturally, and her hands are positioned gracefully at her sides or in a way that enhances her allure, avoiding any depiction of hands behind the back.\n</image_generation>",
                 "regex": "<pic[^>]*\\sprompt=\"([^\"]*)\"[^>]*?>",
                 "position": "deep_system",
                 "depth": 0
@@ -5065,7 +5065,7 @@
                 "marker": false,
                 "name": "📜📜大总结放置处📜📜",
                 "role": "system",
-                "content": "{{// 📜📜预设大总结放置处📜📜，换聊天记得砍)}}",
+                "content": "{{// 📜📜预设大总结放置处📜📜，换聊天记得砍)}}\n【关键事件】\n• {事件1}: {约8日前} {我于紫霄峰炼神室闭关，凭借三部神功、天心道种及大罗残魂经验，修为从练气三层巅峰突破至练气十一层巅峰。} {重要对话大意：无}\n• {事件2}: {刚刚} {我结束闭关，赤身走出炼神室，命侍女苏媚儿与柳如烟准备热水沐浴。苏媚儿表现殷勤，柳如烟羞赧恭顺。} {重要对话大意：我：“准备热水，我要沐浴。”}\n• {事件3}: {刚刚} {我沐浴更衣完毕，安抚两位侍女不必拘谨，并各赏赐一块极品灵石。随后离开紫霄峰前往问心殿。} {重要对话大意：我：“皆是女子，不必如此拘谨。这点灵石，你们拿去零用。”}\n• {事件4}: {刚刚} {我抵达问心峰迎客坪，李默率众恭迎。我命其引路，步行至问心殿前。殿内钟鸣，殿门开启，清虚道人端坐等候。} {重要对话大意：我：“带路吧。”}\n• {事件5}: {刚刚} {我进入问心殿拜见师尊，清虚道人对我修为进展表示满意，设下法力屏障，命我演练《太阳真火炼神诀》炼气篇。} {重要对话大意：清虚道人：“不错，修为进境尚可。你且演练一番《太阳真火炼神诀》，让为师看看你这几日闭关的成果。” 我：“是，师尊。”}\n• {事件6}: {刚刚} {我首先演练了对太阳真火的精妙操控（阳炎凝丝）与净化之力（日光普照）。清虚道人表示肯定，并要求我尝试融合生克二意。} {重要对话大意：清虚道人：“嗯，先从‘真火锻神’开始...无需急躁，循序渐进。” “很好，记住为师先前所言，太阳真火，非只霸道，亦有创生之机。凝神，体会那份阳和之力。” “不错，能于炼气期便对太阳真火有此等领悟，实属难得。现在，试着将这生克两种意境稍作融合，演化一式攻守兼备的法门与为师看看。” 我：“是，师尊。”“弟子明白。”}\n• {事件7}: {刚刚} {我遵师命尝试融合生克二意，在清虚道人“意在力先”的点拨下，初步展现“太阳轮转”雏形。清虚道人见状动容，连赞我是天纵奇才，并鼓励我全力施为。} {重要对话大意：清虚道人：“生与克，看似相悖，实则互根...你且试着将这两股力量在你周身形成一个微妙的平衡...” “此法门，攻则如日珥爆发，焚金融铁；守则如金乌临凡，万邪不侵。其关键在于转换之时的那一丝‘意’，而非蛮力催动。” “好！好！好！竟能如此之快便触摸到这‘太阳轮转’的门槛，当真是天纵奇才！若秋，不必保留，全力施为，让为师看看你能将这轮转之意推演到何种地步！” 我：“弟子遵命。”“多谢师尊提点，弟子会努力感悟。”}\n• {事件8}: {刚刚} {我全力施展“太阳轮转”，清虚道人出手护法并进一步指点。雷云子与冰魄仙子闻讯赶到殿外。最终，在清虚道人亲自出手相助下，我将“太阳轮转”推演至极致，殿内显化金色太阳异象，无数玄奥符文融入我体。考校结束，清虚道人赐下“太阳悟道丹”。我拜别三位师长，返回紫霄峰，准备冲击筑基。} {重要对话大意：清虚道人：“若秋，凝神！以道种之力统御真火，而非被其反噬！你的悟性远超为师想象，但根基尚浅，莫要急于求成！” “若秋，记住此刻的感觉！这才是太阳真火真正的威严！以阳化阴，以生克死，轮转不休，方为大道！” “若秋，此次考校，你做得很好。你对太阳真火的领悟，已远超为师的预期。这枚‘太阳悟道丹’你且收好，待你冲击筑基瓶颈时服下，或有助益。” “此次考校已毕，你且回紫霄峰好生修炼，巩固今日所得，为冲击筑基做准备吧。雷云师伯与冰魄师叔想必也已等候多时了。” 雷云子（对清虚道人传音）：“清虚老儿！你这徒弟了不得啊！这太阳真火的领悟，怕是快赶上你当年了吧？哈哈哈！” （对我）：“好小子！刚才那动静，可是把老夫都吓了一跳！不错不错，这太阳真火让你练出点名堂来了！” 冰魄仙子：“进境神速，根基稳固。三日后，来我玄冰雪域，本座亲自指点你《太阴玄冰诀》。” 我：“多谢师尊护法！弟子明白了！” “多谢师尊厚赐！弟子定不负师尊期望！” “弟子遵命。”}\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -5875,7 +5875,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "gemini-2.5-pro-exp-03-25-openai",
+        "custom_model": "[正常]gemini-2.5-pro-preview-03-25",
         "custom_url": "https://api.skyi.cc/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
