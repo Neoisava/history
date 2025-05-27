@@ -2,8 +2,8 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
-        "NavOpened": "true",
+        "LNavOpened": "true",
+        "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -24,7 +24,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": "修仙之路2.0.png",
+    "active_character": null,
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -3093,7 +3093,7 @@
             "dimension_step": 64,
             "width": 768,
             "height": 512,
-            "prompt_prefix": "masterpiece, best quality, beautiful female cultivator, icy expression, silver long hair with violet sheen, snow-white skin, icy blue eyes, cold pink lips, elegant and distant,hairless, Xianxia fantasy, soft erotic aura  ",
+            "prompt_prefix": "masterpiece, best quality, beautiful female cultivator, icy expression, silver long hair with violet sheen, snow-white skin, icy blue eyes, cold pink lips, elegant and distant,tiny pink areolae,hairless, Xianxia fantasy, soft erotic aura  ",
             "negative_prompt": "lowres, bad anatomy, bad hands, text, error, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry,solo,Extreme close-up",
             "sampler": "k_euler",
             "model": "nai-diffusion-4-full",
@@ -3801,7 +3801,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 121,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
@@ -5822,7 +5822,7 @@
                     },
                     {
                         "identifier": "83be0196-53ef-4b5c-897c-c4cf1d2ae433",
-                        "enabled": false
+                        "enabled": true
                     }
                 ]
             }
