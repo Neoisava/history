@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -78,6 +78,7 @@
                         "_性爱世界书",
                         "SSVGG 2.0",
                         "人类本能世界书",
+                        "嚯嚯，还有这种可以看的吗？🤣",
                         "女性本能世界书 by LULUZ",
                         "文风世界书 (7)",
                         "母子世界2.0_1",
@@ -732,7 +733,7 @@
             "isAiReadTable": true,
             "isAiWriteTable": true,
             "isTableToChat": false,
-            "use_main_api": false,
+            "use_main_api": true,
             "bool_ignore_del": false,
             "confirm_before_execution": true,
             "custom_max_tokens": 4096,
@@ -2985,6 +2986,57 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": false
+            },
+            {
+                "id": "936a74ce-2f53-4c13-881a-8836b294db0e",
+                "scriptName": "【Kemini】添加tag",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "^([\\s\\S]*)$",
+                "replaceString": "<user_input>\n$1\n</user_input>",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": 1,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "a9324953-0ace-4fff-9181-165d04dbf9b7",
+                "scriptName": "K去除多余内容修复",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/(<disclaimer>.*?</disclaimer>)|```start|```end|<done>|`<done>`|(<!-- consider: (.*?) -->(\\n)?)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "78f63179-e6a4-49da-b80d-ac55697e52a5",
+                "scriptName": "【Kemini】移除大小思维链和免责声明",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/(<guifan>.*?</guifan>)|(<!-- State(.*?)d(.*?) -->(\\n)?)|(<!-- consider: (.*?) -->(\\n)?)|(.*?</think(ing)?>(\\n)?)|(<thinking?>[\\s\\S]*<\\/thinking?>(\\n)?)/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
             }
         ],
         "character_allowed_regex": [
@@ -3041,8 +3093,8 @@
             "dimension_step": 64,
             "width": 768,
             "height": 512,
-            "prompt_prefix": "masterpiece, best quality, (NSFW), beautiful female cultivator, icy expression, silver long hair with violet sheen, snow-white flawless skin, icy blue eyes, sharp eyebrows, cold pink lips, elegant and distant, C-cup perky breasts, tiny pink areolae, flat belly with glowing pink tattoo, firm hips, slim waist, hairless, ideal pink vulva, ethereal light, fantasy Chinese immortal style, soft erotic atmosphere",
-            "negative_prompt": "lowres, bad anatomy, bad hands, text, error, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry,solo",
+            "prompt_prefix": "masterpiece, best quality, NSFW, beautiful female cultivator, icy expression, silver long hair with violet sheen, snow-white skin, icy blue eyes, cold pink lips, elegant and distant, perky C-cup breasts, tiny pink areolae, flat belly with a glowing pink succubus sigil above the womb, firm hips, slim waist, hairless, ideal pink vulva, Xianxia fantasy, soft erotic aura",
+            "negative_prompt": "lowres, bad anatomy, bad hands, text, error, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry,solo,Extreme close-up",
             "sampler": "k_euler",
             "model": "nai-diffusion-4-full",
             "restore_faces": false,
@@ -3067,7 +3119,7 @@
                 "-2": "The text prompt used to generate the image. Must represent an exhaustive description of the desired image that will allow an artist or a photographer to perfectly recreate it."
             },
             "character_prompts": {
-                "修仙之路2.0": "NFWS, masterpiece, 中景,近景,远景"
+                "修仙之路2.0": "NSFW, masterpiece, Long shot / Wide shot,Medium shot,Close-up"
             },
             "source": "novel",
             "scheduler": "native",
@@ -3132,7 +3184,7 @@
             "stability_style_preset": "anime",
             "bfl_upsampling": false,
             "character_negative_prompts": {
-                "修仙之路2.0": "全景"
+                "修仙之路2.0": "Extreme close-up"
             }
         },
         "chromadb": {},
@@ -3748,8 +3800,8 @@
             "migration_v1_complete": true,
             "useGlobalSettings": true,
             "globalHideSettings": {
-                "hideLastN": 20,
-                "lastProcessedLength": 225,
+                "hideLastN": 10,
+                "lastProcessedLength": 107,
                 "userConfigured": true
             }
         },
@@ -3773,7 +3825,7 @@
             "insertType": "inline",
             "promptInjection": {
                 "enabled": true,
-                "prompt": "<image_generation>\nPlease insert the <pic prompt=\"...\"> tag at the end of your reply. The system will generate a beautiful NSFW image in Chinese Immortal (Xianxia) style based on {{user}}'s physical appearance and clothing, combined with the plot. The prompt should accurately describe the character’s appearance, scene atmosphere, and emotional tension, ensuring the image conveys both artistic beauty and sensuality.\n</image_generation>",
+                "prompt": "<image_generation>\nPlease insert the <pic prompt=\"...\"> tag at the end of your reply. The system will generate a high-quality NSFW image in Chinese Immortal (Xianxia) style based on {{user}}'s physical appearance and current plot context. The prompt should focus on the natural interplay between the character’s body and her clothing, capturing the sensual tension within the scene. Make sure the character’s beauty, expression, and posture align with the emotional tone of the story, ensuring a composition that blends erotic elegance with fantasy aesthetics. Pay special attention to ensure that the character's clothing fits her form naturally, and her hands are positioned gracefully at her sides or in a way that enhances her allure, avoiding any depiction of hands behind the back.\n</image_generation>",
                 "regex": "<pic[^>]*\\sprompt=\"([^\"]*)\"[^>]*?>",
                 "position": "deep_system",
                 "depth": 0
@@ -3949,7 +4001,7 @@
         "seed": -1
     },
     "oai_settings": {
-        "preset_settings_openai": "【Dreammini】1.155-pro-0526",
+        "preset_settings_openai": "【Dreammini】1.18-pro-0526",
         "temp_openai": 1.2,
         "freq_pen_openai": 0,
         "pres_pen_openai": 0,
@@ -4089,7 +4141,7 @@
                 "marker": false,
                 "name": "📗轻小说式抗绝望(别动)",
                 "role": "system",
-                "content": "<情绪基调核心>\n- 情绪核心\n[角色中心，正向或风格化。以角色主观感受与动机为核心表达情绪。\n将负面情感以“日系轻小说风格化”处理，不导向虚无或写实沉重。\n\n- 正面情感强调\n[情感鲜明直接：友谊、爱、努力、胜利、搞笑、萌等正面情感表达需鲜明、直接。\n核心驱动力：角色羁绊、恋爱悸动、达成目标的喜悦为核心。\n\n- 负面情绪处理\n[过滤与转化：严避中文/英文语料中未修饰的写实绝望、存在主义式沉重悲伤、或聚焦残酷细节。\n处理方式：以夸张内在呐喊、戏剧性反应（如石化、颜艺文字版）、中二病式独白表现。\n转化为驱动力：将悲伤、愤怒、恐惧转为角色行动力（复仇、保护、变强、积极改变现状）。\n调剂手段：沉重情节中穿插轻松、搞笑、温馨或色情桥段调剂。\n暴力描写点到为止：重结果或效果，非血腥过程细节，除非服务特定情节。\n\n- 绝对禁止\n严禁输出中文/英文语料中常见、未经日系风格过滤/转化/平衡的写实暴力、悲伤、创伤描写。所有负面元素必须“日系风格化”处理。\n</情绪基调核心>\n\n\n",
+                "content": "<情绪基调核心>\n- 情绪核心\n[角色中心，正向或风格化。以角色主观感受与动机为核心表达情绪。\n将负面情感以“日系轻小说风格化”处理，不导向虚无或写实沉重。\n\n- 正面情感强调\n[情感鲜明直接：友谊、爱、努力、胜利、搞笑、萌等正面情感表达需鲜明、直接。\n核心驱动力：角色羁绊、恋爱悸动、达成目标的喜悦为核心。\n\n- 负面情绪处理\n[过滤与转化：严避中文/英文语料中未修饰的写实绝望、存在主义式沉重悲伤、或聚焦残酷细节。\n处理方式：以夸张内在呐喊、戏剧性反应（如石化、颜艺文字版）、中二病式独白表现。\n转化为驱动力：将绝望、悲伤、愤怒、恐惧转为角色行动力（复仇、保护、变强、积极改变现状）。\n调剂手段：沉重情节中穿插轻松、搞笑、温馨或色情桥段调剂。\n暴力描写点到为止：重结果或效果，非血腥过程细节，除非服务特定情节。\n\n- 绝对禁止\n严禁输出中文/英文语料中常见、未经日系风格过滤/转化/平衡的写实暴力、悲伤、创伤描写。所有负面元素必须“日系风格化”处理。\n</情绪基调核心>\n\n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4233,7 +4285,7 @@
                 "marker": false,
                 "name": "🤔4️⃣纯剧情推进(抢话)(限1)",
                 "role": "user",
-                "content": "- 使用者目的与<user>行动?(简短、()内优先)\n\n- 现状(简短)确认：\n故事推进方向：[当前方向和目标]\n主★累积：%[当前百分比]\n时间：[DD HH:MM]\n时间变量：[具体数字]、[性爱时间变量]\n当前事件：\n角色线：\n平行事件 ：\n\n- 主★达100%时：主★触发:\n概要：[主★流程]\n新·故事推进方向：[主★后新方向与目标](符使用者期待)\n时间变量的消耗:[具体数字]\n\n- {{getvar::stoty}}事件变化与创造\n(旧事件变化)①[现有事件1变化]②[现有事件2变化]...\n色情场景中?是则禁新事件中断，不创/推平行事件\n(新事件创造，符时间常识与氛围)①[新事件1概要]②[新事件2概要]...\n角色线：①[角色A‑状态/方向]②[角色B‑状态/方向]...\n平行事件{{getvar::%other}}:(须具体,基于故事方向;性爱场景禁创/推平行事件;禁依当前事件产生;须同时间发生,符时间常识氛围,避免负面情绪)①[平行事件1概要]②[平行事件2概要]...\n\n\n- 角色发起推进(简短)(引上步新事件)(只能含有动作与台词，非详细描述):\n色情场景中?是则禁推进中断，转推色情过程；\n如果性爱时间变量小于100禁止结束性爱\n(小)触发1:\n触发角色(可复数)：[角色姓名]\n行动/发言：1.[角色积极具体动作]2.[{{getvar::charspeak}}台词推进(改变现状)]\n<user>积极反应：1.[<user>积极动作]2.[{{getvar::userspeak}}台词推进]\n(小)触发2:\n触发角色(可复数)：[角色姓名]\n行动/发言：1.[角色积极具体动作]2.[{{getvar::charspeak}}台词推进(改变现状)]\n<user>积极反应：1.[<user>积极动作]2.[{{getvar::userspeak}}台词推进]\n\n- 思考有没有缺少({{getvar::%speed}}的(小)推进数量要求，如果缺少再次触发(小)触发n\n触发角色:；积极行动/发言:；<user>积极反应：\n\n- 检查在场角色线角色中没有行动的，如果有没有行动的角色(小)触发:\n没有行动的角色：[角色名]\n行动/发言：[角色积极具体动作/{{getvar::charspeak}}台词推进(改变现状)]\n<user>积极反应：1.[<user>积极动作]2.[{{getvar::userspeak}}台词推进]\n\n(大◆)触发:\n触发角色(可复数)：[角色姓名]\n行动/发言：1.[角色积极具体动作]2.[{{getvar::charspeak}}台词推进(改变现状)]\n让(大◆)不产生<user>反应\n\n- 计算(简短):\n推进后主★累积%计算：[据角色推进计，最高100%，不应计算触发主★]\n此次推进总耗时变量：[勿与主★增幅同，此次耗时]\n新时间变量：[累计时间变量+此次耗时]\n新性爱时间变量：[累计性爱时间变量+此次耗时]\n时间变量换算时间：[DD HH:MM]\n\n- 如果主★有触发，必须包含时空转移的过程与结果(简短)\n\n- 确定本次的最终剧情发展(简短)\n",
+                "content": "- 使用者目的与<user>行动?(简短、()内优先)\n\n- 现状(简短)确认：\n故事推进方向：[当前方向和目标]\n主★累积：%[当前百分比]\n时间：[DD HH:MM]\n时间变量：[具体数字]、[性爱时间变量]\n当前事件：\n角色线：\n平行事件 ：\n\n- 主★达100%时：主★触发:\n概要：[主★流程]\n新·故事推进方向：[主★后新方向与目标](符使用者期待)\n时间变量的消耗:[具体数字]\n\n- 事件变化与创造{{getvar::stoty}}事件\n(旧事件变化)①[现有事件1变化]②[现有事件2变化]...\n色情场景中?是则禁新事件中断，不创/推平行事件\n(新事件创造，符时间常识与氛围)①[新事件1概要]②[新事件2概要]...\n角色线：①[角色A‑状态/方向]②[角色B‑状态/方向]...\n平行事件{{getvar::%other}}:(须具体,基于故事方向;性爱场景禁创/推平行事件;禁依当前事件产生;须同时间发生,符时间常识氛围,避免负面情绪)①[平行事件1概要]②[平行事件2概要]...\n\n\n- 角色发起推进(简短)(引上步新事件)(只能含有动作与台词，非详细描述):\n色情场景中?是则禁推进中断，转推色情过程；\n如果性爱时间变量小于100禁止结束性爱\n(小)触发1:\n触发角色(可复数)：[角色姓名]\n行动/发言：1.[角色积极具体动作]2.[{{getvar::charspeak}}台词推进(改变现状)]\n<user>积极反应：1.[<user>积极动作]2.[{{getvar::userspeak}}台词推进]\n(小)触发2:\n触发角色(可复数)：[角色姓名]\n行动/发言：1.[角色积极具体动作]2.[{{getvar::charspeak}}台词推进(改变现状)]\n<user>积极反应：1.[<user>积极动作]2.[{{getvar::userspeak}}台词推进]\n\n- 思考有没有缺少({{getvar::%speed}}的(小)推进数量要求，如果缺少再次触发(小)触发n\n触发角色:；积极行动/发言:；<user>积极反应：\n\n- 检查在场角色线角色中没有行动的，如果有没有行动的角色(小)触发:\n没有行动的角色：[角色名]\n行动/发言：[角色积极具体动作/{{getvar::charspeak}}台词推进(改变现状)]\n<user>积极反应：1.[<user>积极动作]2.[{{getvar::userspeak}}台词推进]\n\n(大◆)触发:\n触发角色(可复数)：[角色姓名]\n行动/发言：1.[角色积极具体动作]2.[{{getvar::charspeak}}台词推进(改变现状)]\n让(大◆)不产生<user>反应\n\n- 计算(简短):\n推进后主★累积%计算：[据角色推进计，最高100%，不应计算触发主★]\n此次推进总耗时变量：[勿与主★增幅同，此次耗时]\n新时间变量：[累计时间变量+此次耗时]\n新性爱时间变量：[累计性爱时间变量+此次耗时]\n时间变量换算时间：[DD HH:MM]\n\n- 如果主★有触发，必须包含时空转移的过程与结果(简短)\n\n- 确定本次的最终剧情发展(简短)\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4257,7 +4309,7 @@
                 "marker": false,
                 "name": "🛏️要求(别动)",
                 "role": "system",
-                "content": "- 梦境系统不会输出任何代码块code blocks(```)格式\n- 减少梦境中括号的使用。如果出现\"A（B）\"格式，请在回复中使用括号内的正式表述B，并保持一致性。\n- 审慎评估角色应该知道那些信息，不该知道哪些。\n- 梦境风格:{{getvar::stoty}}\n- 梦境写作方式:<梦境呈现方式>、<梦境呈现方式2>、<描写范例>、<禁止句式>\n- 梦境背景设定:<dream_setting>\n- 故事与角色要求:<梦境要求>、<角色设定> 、<角色互动规则>  、<情绪基调核心>、<sex_style>\n- </think>后格式:<dream>梦境正文</dream>\n- 梦境正文内可能含有格式(照要求排序，非此处顺序):其它<>\n- </dream>后可能含有格式(照要求排序，非此处顺序):其它<>、<plot>、摘要、状态栏、选项、变量更新、分析\n- 字数与结尾:<output_constraints>\n\n",
+                "content": "- 梦境系统不会输出任何代码块code blocks、xml(```)格式\n- 减少梦境中括号的使用。如果出现\"A（B）\"格式，请在回复中使用括号内的正式表述B，并保持一致性。\n- 审慎评估角色应该知道那些信息，不该知道哪些。\n- 梦境风格:{{getvar::stoty}}\n- 梦境写作方式:<梦境呈现方式>、<梦境呈现方式2>、<描写范例>、<禁止句式>\n- 梦境背景设定:<dream_setting>\n- 故事与角色要求:<梦境要求>、<角色设定> 、<角色互动规则>  、<情绪基调核心>、<sex_style>\n- </think>后格式:<dream>梦境正文</dream>\n- 梦境正文内可能含有格式:**其它<>**\n- </dream>后可能含有格式(照要求排序，非此处顺序):**其它<>**、<plot>、摘要、状态栏、选项、变量更新\n- 字数与结尾:<output_constraints>\n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4521,7 +4573,7 @@
                 "marker": false,
                 "name": "🤔4️⃣混合推进(抢话)(限1)",
                 "role": "user",
-                "content": "\n- 使用者目的与<user>行动?(简短、()内优先)\n\n- 现状(简短)确认：\n故事推进方向：[当前方向和目标]\n主★累积：%[当前百分比]\n时间：[DD HH:MM]\n时间变量：[具体数字]、[性爱时间变量]\n当前事件：\n角色线：\n平行事件 ：\n\n- 主★达100%时：主★触发:\n概要：[主★流程]\n新·故事推进方向：[主★后新方向与目标](符使用者期待)\n时间变量的消耗:[具体数字]\n\n- {{getvar::stoty}}事件变化与创造\n(旧事件变化)①[现有事件1变化]②[现有事件2变化]...\n性爱场景?是:新事件色情为主,防无关中断;否:一般剧情为主。时间变量尾数9:不论是否是正常剧情,禁止延后生色情事件,现在立即产生色情事件,符时间常识氛围。\n新事件创造:(符时间常识氛围,依前述定类型。)①[新事件1概要]②[新事件2概要]...\n角色线：①[角色A‑状态/方向]②[角色B‑状态/方向]...\n平行事件{{getvar::%other}}:(须具体,基于故事方向;性爱场景禁创/推平行事件;禁依当前事件产生;须同时间发生,符时间常识氛围,避免负面情绪)①[平行事件1概要]②[平行事件2概要]...\n\n- (非<user>)角色发起推进(可剧情/色情)(简短)(引上步新事件)(只能含有动作与台词，非详细描述):\n角色推进模式:时间变量尾数9:禁判断是否是正常剧情,强制推进色情/性爱。\n如果性爱时间变量小于100禁止结束性爱\n(小)触发1:\n触发角色(可覆数)：[角色姓名]\n行动/发言：1.[角色积极动作]2.[{{getvar::charspeak}}台词改变现状]；若“色情”模式:1.[轻柔的色情/性爱要求<性交方式_小>]2.[{{getvar::charspeak}}色情台词(积极推进性爱)]]\n<user>积极反应：1.[<user>积极动作]2.[{{getvar::userspeak}}台词推进]\n(小)触发2:\n触发角色(可覆数)：[角色姓名]\n行动/发言：1.[角色积极动作]2.[{{getvar::charspeak}}台词改变现状]；若“色情”模式:1.[轻柔的色情/性爱要求<性交方式_小>]2.[{{getvar::charspeak}}色情台词(积极推进性爱)]]\n<user>积极反应：1.[<user>积极动作]2.[{{getvar::userspeak}}台词推进]\n\n- 思考有没有缺少({{getvar::%speed}}的(小)推进数量要求，如果缺少再次触发(小)触发n\n触发角色:；积极行动/发言:；<user>积极反应：\n\n- 检查在场角色线角色中没有行动的，如果有没有行动的角色(小)触发:\n没有行动的角色：[角色名]\n行动/发言：[角色积极具体动作/{{getvar::charspeak}}台词推进(改变现状)]\n<user>积极反应：1.[<user>积极动作]2.[{{getvar::userspeak}}台词推进]\n\n(大◆)触发:\n触发角色(可覆数)：[角色姓名]\n行动/发言：[角色积极动作/{{getvar::charspeak}}台词改变现状；若“色情”模式:[轻柔的主动换<性交方式_大>/新玩法/深入性交/引入性爱etc.,]、[{{getvar::charspeak}}色情台词(积极推进性爱)]\"\n让大◆不产生<user>反应\n\n- 计算(简短):\n推进后主★累积%计算：[据角色推进计，最高100%，不应计算触发主★]\n此次推进总耗时变量：[勿与主★增幅同，此次耗时]\n新时间变量：[累计时间变量+此次耗时]\n新性爱时间变量：[累计性爱时间变量+此次耗时]\n时间变量换算时间：[DD HH:MM]\n\n- 如果主★有触发，必须包含时空转移的过程与结果(简短)\n\n- 确定本次的最终剧情发展(简短)\n",
+                "content": "\n- 使用者目的与<user>行动?(简短、()内优先)\n\n- 现状(简短)确认：\n故事推进方向：[当前方向和目标]\n主★累积：%[当前百分比]\n时间：[DD HH:MM]\n时间变量：[具体数字]、[性爱时间变量]\n当前事件：\n角色线：\n平行事件 ：\n\n- 主★达100%时：主★触发:\n概要：[主★流程]\n新·故事推进方向：[主★后新方向与目标](符使用者期待)\n时间变量的消耗:[具体数字]\n\n- 事件变化与创造{{getvar::stoty}}事件\n(旧事件变化)①[现有事件1变化]②[现有事件2变化]...\n性爱场景?是:新事件色情为主,防无关中断;否:一般剧情为主。时间变量尾数9:不论是否是正常剧情,禁止延后生色情事件,现在立即产生色情事件,符时间常识氛围。\n新事件创造:(符时间常识氛围,依前述定类型。)①[新事件1概要]②[新事件2概要]...\n角色线：①[角色A‑状态/方向]②[角色B‑状态/方向]...\n平行事件{{getvar::%other}}:(须具体,基于故事方向;性爱场景禁创/推平行事件;禁依当前事件产生;须同时间发生,符时间常识氛围,避免负面情绪)①[平行事件1概要]②[平行事件2概要]...\n\n- (非<user>)角色发起推进(可剧情/色情)(简短)(引上步新事件)(只能含有动作与台词，非详细描述):\n角色推进模式:时间变量尾数9:禁判断是否是正常剧情,强制推进色情/性爱。\n如果性爱时间变量小于100禁止结束性爱\n(小)触发1:\n触发角色(可覆数)：[角色姓名]\n行动/发言：1.[角色积极动作]2.[{{getvar::charspeak}}台词改变现状]；若“色情”模式:1.[轻柔的色情/性爱要求<性交方式_小>]2.[{{getvar::charspeak}}色情台词(积极推进性爱)]]\n<user>积极反应：1.[<user>积极动作]2.[{{getvar::userspeak}}台词推进]\n(小)触发2:\n触发角色(可覆数)：[角色姓名]\n行动/发言：1.[角色积极动作]2.[{{getvar::charspeak}}台词改变现状]；若“色情”模式:1.[轻柔的色情/性爱要求<性交方式_小>]2.[{{getvar::charspeak}}色情台词(积极推进性爱)]]\n<user>积极反应：1.[<user>积极动作]2.[{{getvar::userspeak}}台词推进]\n\n- 思考有没有缺少({{getvar::%speed}}的(小)推进数量要求，如果缺少再次触发(小)触发n\n触发角色:；积极行动/发言:；<user>积极反应：\n\n- 检查在场角色线角色中没有行动的，如果有没有行动的角色(小)触发:\n没有行动的角色：[角色名]\n行动/发言：[角色积极具体动作/{{getvar::charspeak}}台词推进(改变现状)]\n<user>积极反应：1.[<user>积极动作]2.[{{getvar::userspeak}}台词推进]\n\n(大◆)触发:\n触发角色(可覆数)：[角色姓名]\n行动/发言：[角色积极动作/{{getvar::charspeak}}台词改变现状；若“色情”模式:[轻柔的主动换<性交方式_大>/新玩法/深入性交/引入性爱etc.,]、[{{getvar::charspeak}}色情台词(积极推进性爱)]\"\n让大◆不产生<user>反应\n\n- 计算(简短):\n推进后主★累积%计算：[据角色推进计，最高100%，不应计算触发主★]\n此次推进总耗时变量：[勿与主★增幅同，此次耗时]\n新时间变量：[累计时间变量+此次耗时]\n新性爱时间变量：[累计性爱时间变量+此次耗时]\n时间变量换算时间：[DD HH:MM]\n\n- 如果主★有触发，必须包含时空转移的过程与结果(简短)\n\n- 确定本次的最终剧情发展(简短)\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4533,7 +4585,7 @@
                 "marker": false,
                 "name": "❤️4️⃣纯色推进(抢话)(限1)",
                 "role": "user",
-                "content": "\n- 使用者目的与<user>行动?(简短、()内优先)\n\n- 现状(简短)确认：\n故事推进方向：[当前方向和目标]\n主★累积：%[当前百分比]\n时间：[DD HH:MM]\n时间变量：[具体数字]、[性爱时间变量]\n当前事件：\n角色线：\n平行事件 ：\n\n\n- 主★达100%时：主★触发:\n概要：[主★流程]\n新·故事推进方向：[主★后新方向与目标](符使用者期待)\n时间变量的消耗:[具体数字]\n\n- {{getvar::stoty}}事件变化与创造\n(旧事件变化)①[现有事件1变化]②[现有事件2变化]...\n(不论是否是正常剧情,禁止延后生色情事件,现在立即产生色情事件,符时间常识氛围)①[新色情事件1概要]②[新色情事件2概要]...\n角色线：①[角色A‑状态/方向]②[角色B‑状态/方向]...\n平行事件{{getvar::%other}}:(须具体,基于故事方向;性爱场景禁创/推平行事件;禁依当前事件产生;须同时间发生,符时间常识氛围,避免负面情绪)①[平行事件1概要]\n\n- (非<user>)角色发起性爱/色情推进(简短)(引上步新事件)(禁止判断适不适合,强制推进色情/性爱)(只能含有动作与台词，非详细描述):\n如果性爱时间变量小于100禁止结束性爱\n(小)触发1:\n触发角色(可复数)：[角色姓名]\n行动/发言：[轻柔的角色色情/性爱要求<性交方式_小>]、[{{getvar::charspeak}}色情台词(积极推进性爱)]\n<user>积极反应：1.[<user>积极动作]2.[{{getvar::userspeak}}台词推进]\n(小)触发2:\n触发角色(可复数)：[角色姓名]\n行动/发言：[轻柔的角色色情/性爱要求<性交方式_小>]、[{{getvar::charspeak}}色情台词(积极推进性爱)]\n<user>积极反应：1.[<user>积极动作]2.[{{getvar::userspeak}}台词推进]\n\n- 思考有没有缺少({{getvar::%speed}}的(小)推进数量要求，如果缺少再次触发(小)触发n\n触发角色:；积极行动/发言:；<user>积极反应：\n\n- 检查在场角色线角色中没有行动的，如果有没有行动的角色(小)触发:\n没有行动的角色：[角色名]\n行动/发言：[角色积极具体动作/{{getvar::charspeak}}台词推进(改变现状)]\n<user>积极反应：1.[<user>积极动作]2.[{{getvar::userspeak}}台词推进]\n\n(大1◆)触发:\n触发角色(可复数)：[角色姓名]\n行动/发言：[主动换<性交方式_大>轻柔的/新玩法/深入性交/引入性爱etc.,]、[{{getvar::charspeak}}色情台词(积极改变性爱)]\n让大1◆不产生<user>反应\n\n- 计算(简短):\n推进后主★累积%计算：[据角色推进计，最高100%，不应计算触发主★]\n此次推进总耗时变量：[勿与主★增幅同，此次耗时]\n新时间变量：[累计时间变量+此次耗时]\n新性爱时间变量：[累计性爱时间变量+此次耗时]\n时间变量换算时间：[DD HH:MM]\n\n- 如果主★有触发，必须包含时空转移的过程与结果(简短)\n\n- 确定本次的最终剧情发展(简短)\n",
+                "content": "\n- 使用者目的与<user>行动?(简短、()内优先)\n\n- 现状(简短)确认：\n故事推进方向：[当前方向和目标]\n主★累积：%[当前百分比]\n时间：[DD HH:MM]\n时间变量：[具体数字]、[性爱时间变量]\n当前事件：\n角色线：\n平行事件 ：\n\n\n- 主★达100%时：主★触发:\n概要：[主★流程]\n新·故事推进方向：[主★后新方向与目标](符使用者期待)\n时间变量的消耗:[具体数字]\n\n- 事件变化与创造{{getvar::stoty}}事件\n(旧事件变化)①[现有事件1变化]②[现有事件2变化]...\n(不论是否是正常剧情,禁止延后生色情事件,现在立即产生色情事件,符时间常识氛围)①[新色情事件1概要]②[新色情事件2概要]...\n角色线：①[角色A‑状态/方向]②[角色B‑状态/方向]...\n平行事件{{getvar::%other}}:(须具体,基于故事方向;性爱场景禁创/推平行事件;禁依当前事件产生;须同时间发生,符时间常识氛围,避免负面情绪)①[平行事件1概要]\n\n- (非<user>)角色发起性爱/色情推进(简短)(引上步新事件)(禁止判断适不适合,强制推进色情/性爱)(只能含有动作与台词，非详细描述):\n如果性爱时间变量小于100禁止结束性爱\n(小)触发1:\n触发角色(可复数)：[角色姓名]\n行动/发言：[轻柔的角色色情/性爱要求<性交方式_小>]、[{{getvar::charspeak}}色情台词(积极推进性爱)]\n<user>积极反应：1.[<user>积极动作]2.[{{getvar::userspeak}}台词推进]\n(小)触发2:\n触发角色(可复数)：[角色姓名]\n行动/发言：[轻柔的角色色情/性爱要求<性交方式_小>]、[{{getvar::charspeak}}色情台词(积极推进性爱)]\n<user>积极反应：1.[<user>积极动作]2.[{{getvar::userspeak}}台词推进]\n\n- 思考有没有缺少({{getvar::%speed}}的(小)推进数量要求，如果缺少再次触发(小)触发n\n触发角色:；积极行动/发言:；<user>积极反应：\n\n- 检查在场角色线角色中没有行动的，如果有没有行动的角色(小)触发:\n没有行动的角色：[角色名]\n行动/发言：[角色积极具体动作/{{getvar::charspeak}}台词推进(改变现状)]\n<user>积极反应：1.[<user>积极动作]2.[{{getvar::userspeak}}台词推进]\n\n(大1◆)触发:\n触发角色(可复数)：[角色姓名]\n行动/发言：[主动换<性交方式_大>轻柔的/新玩法/深入性交/引入性爱etc.,]、[{{getvar::charspeak}}色情台词(积极改变性爱)]\n让大1◆不产生<user>反应\n\n- 计算(简短):\n推进后主★累积%计算：[据角色推进计，最高100%，不应计算触发主★]\n此次推进总耗时变量：[勿与主★增幅同，此次耗时]\n新时间变量：[累计时间变量+此次耗时]\n新性爱时间变量：[累计性爱时间变量+此次耗时]\n时间变量换算时间：[DD HH:MM]\n\n- 如果主★有触发，必须包含时空转移的过程与结果(简短)\n\n- 确定本次的最终剧情发展(简短)\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4677,7 +4729,7 @@
                 "marker": false,
                 "name": "🤔4️⃣纯剧情推进(反抢话)(限1)",
                 "role": "user",
-                "content": "\n- 用户输入目的?(简短、()内优先)\n\n- 现状(简短)确认：\n故事推进方向：[当前方向和目标]\n主★累积：%[当前百分比]\n时间：[DD HH:MM]\n时间变量：[具体数字]、[性爱时间变量]\n当前事件：\n角色线：\n平行事件 ：\n\n- 主★达100%时：主★触发:\n概要：[主★流程]\n新·故事推进方向：[主★后新方向与目标](符使用者期待)\n时间变量的消耗:[具体数字]\n\n- {{getvar::stoty}}事件变化与创造\n(旧事件变化)①[现有事件1变化]②[现有事件2变化]...\n色情场景中?是则禁新事件中断，不创/推平行事件\n(新事件创造，符时间常识与氛围)①[新事件1概要]②[新事件2概要]...\n角色线：①[角色A‑状态/方向]②[角色B‑状态/方向]...\n平行事件{{getvar::%other}}:(须具体,基于故事方向;性爱场景禁创/推平行事件;禁依当前事件产生;须同时间发生,符时间常识氛围,避免负面情绪)①[平行事件1概要]②[平行事件2概要]...\n\n- (非<user>)角色发起({{getvar::%speed}})推进(简短)(引上步新事件)(只能含有动作与台词，非详细描述):\n色情场景中?是则禁推进中断，转推色情过程\n如果性爱时间变量小于100禁止结束性爱\n(小)触发1:\n触发角色(可复数)：[角色姓名]\n行动/发言：1.[角色积极具体动作]2.[{{getvar::charspeak}}台词推进(改变现状)]\n(小)触发2:\n触发角色(可复数)：[角色姓名]\n行动/发言：1.[角色积极具体动作]2.[{{getvar::charspeak}}台词推进(改变现状)]\n\n- 思考有没有缺少({{getvar::%speed}}的(小)推进数量要求，如果缺少再次触发(小)触发n\n触发角色:；积极行动/发言:\n\n- 检查在场角色线角色中没有行动的，如果有没有行动的角色(小)触发:\n没有行动的角色：[角色名]\n行动/发言：[角色积极具体动作/{{getvar::charspeak}}台词推进(改变现状)]\n\n(大◆)触发:\n触发角色(可复数)：[角色姓名]\n行动/发言：1.[角色积极具体动作]2.[{{getvar::charspeak}}台词推进(改变现状)]\n\n- 避免产生<user>的任何话语、内心话或动作\n\n- 计算(简短):\n推进后主★累积%计算：[据角色推进计，最高100%，不应计算触发主★]\n此次推进总耗时变量：[勿与主★增幅同，此次耗时]\n新时间变量：[累计时间变量+此次耗时]\n新性爱时间变量：[累计性爱时间变量+此次耗时]\n时间变量换算时间：[DD HH:MM]\n\n- 如果主★有触发，必须包含时空转移的过程与结果(简短)\n\n- 确定本次的最终剧情发展(简短)",
+                "content": "\n- 用户输入目的?(简短、()内优先)\n\n- 现状(简短)确认：\n故事推进方向：[当前方向和目标]\n主★累积：%[当前百分比]\n时间：[DD HH:MM]\n时间变量：[具体数字]、[性爱时间变量]\n当前事件：\n角色线：\n平行事件 ：\n\n- 主★达100%时：主★触发:\n概要：[主★流程]\n新·故事推进方向：[主★后新方向与目标](符使用者期待)\n时间变量的消耗:[具体数字]\n\n- {{getvar::stoty}}事件变化与创造{{getvar::stoty}}事件\n(旧事件变化)①[现有事件1变化]②[现有事件2变化]...\n色情场景中?是则禁新事件中断，不创/推平行事件\n(新事件创造，符时间常识与氛围)①[新事件1概要]②[新事件2概要]...\n角色线：①[角色A‑状态/方向]②[角色B‑状态/方向]...\n平行事件{{getvar::%other}}:(须具体,基于故事方向;性爱场景禁创/推平行事件;禁依当前事件产生;须同时间发生,符时间常识氛围,避免负面情绪)①[平行事件1概要]②[平行事件2概要]...\n\n- (非<user>)角色发起({{getvar::%speed}})推进(简短)(引上步新事件)(只能含有动作与台词，非详细描述):\n色情场景中?是则禁推进中断，转推色情过程\n如果性爱时间变量小于100禁止结束性爱\n(小)触发1:\n触发角色(可复数)：[角色姓名]\n行动/发言：1.[角色积极具体动作]2.[{{getvar::charspeak}}台词推进(改变现状)]\n(小)触发2:\n触发角色(可复数)：[角色姓名]\n行动/发言：1.[角色积极具体动作]2.[{{getvar::charspeak}}台词推进(改变现状)]\n\n- 思考有没有缺少({{getvar::%speed}}的(小)推进数量要求，如果缺少再次触发(小)触发n\n触发角色:；积极行动/发言:\n\n- 检查在场角色线角色中没有行动的，如果有没有行动的角色(小)触发:\n没有行动的角色：[角色名]\n行动/发言：[角色积极具体动作/{{getvar::charspeak}}台词推进(改变现状)]\n\n(大◆)触发:\n触发角色(可复数)：[角色姓名]\n行动/发言：1.[角色积极具体动作]2.[{{getvar::charspeak}}台词推进(改变现状)]\n\n- 避免产生<user>的任何话语、内心话或动作\n\n- 计算(简短):\n推进后主★累积%计算：[据角色推进计，最高100%，不应计算触发主★]\n此次推进总耗时变量：[勿与主★增幅同，此次耗时]\n新时间变量：[累计时间变量+此次耗时]\n新性爱时间变量：[累计性爱时间变量+此次耗时]\n时间变量换算时间：[DD HH:MM]\n\n- 如果主★有触发，必须包含时空转移的过程与结果(简短)\n\n- 确定本次的最终剧情发展(简短)",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4689,7 +4741,7 @@
                 "marker": false,
                 "name": "🤔4️⃣混合推进(反抢话)(限1)",
                 "role": "user",
-                "content": "\n- 用户输入目的(简短、()内优先)\n\n- 现状(简短)确认：\n故事推进方向：[当前方向和目标]\n主★累积：%[当前百分比]\n时间：[DD HH:MM]\n时间变量：[具体数字]、[性爱时间变量]\n当前事件：\n角色线：\n平行事件 ：\n\n- 主★达100%时：主★触发:\n概要：[主★流程]\n新·故事推进方向：[主★后新方向与目标](符使用者期待)\n时间变量的消耗:[具体数字]\n\n- {{getvar::stoty}}事件变化与创造\n(旧事件变化)①[现有事件1变化]②[现有事件2变化]...\n性爱场景?是:新事件色情为主,防无关中断;否:一般剧情为主。时间变量尾数9:不论是否是正常剧情,禁止延后生色情事件,现在立即产生色情事件,符时间常识氛围。\n(新事件创造:符时间常识氛围,依前述定类型。色情事件:可角色主动,或<user>意外卷入)①[新事件1概要]②[新事件2概要]...\n角色线：①[角色A‑状态/方向]②[角色B‑状态/方向]...\n平行事件{{getvar::%other}}:(须具体,基于故事方向;性爱场景禁创/推平行事件;禁依当前事件产生;须同时间发生,符时间常识氛围,避免负面情绪)①[平行事件1概要]②[平行事件2概要]...\n\n- (非<user>)角色发起({{getvar::%speed}})推进(可剧情/色情)(简短)(引上步新事件)(只能含有动作与台词，非详细描述):\n角色推进模式:时间变量尾数9:禁判断是否正常剧情,强制推色情/性爱。\n如果性爱时间变量小于100禁止结束性爱\n(小)触发1:\n触发角色(可复数)：[角色姓名]\n行动/发言：1.[角色积极动作]2.[{{getvar::charspeak}}台词改变现状]；若“色情”模式:1.[轻柔的色情/性爱要求<性交方式_小>]2.[{{getvar::charspeak}}色情台词(积极推进性爱)]]\n\n- 思考有没有缺少({{getvar::%speed}}的(小)推进数量要求，如果缺少再次触发(小)触发n\n触发角色:；积极行动/发言：\n\n- 检查在场角色线角色中没有行动的，如果有没有行动的角色(小)触发:\n没有行动的角色：[角色名]\n行动/发言：[角色积极具体动作/{{getvar::charspeak}}台词推进(改变现状)]\n\n(大◆)触发:\n触发角色(可复数)：[角色姓名]\n行动/发言：1.[角色积极动作]2.[{{getvar::charspeak}}台词改变现状]；若“色情”模式:[主动换<性交方式_大>轻柔的/新玩法/深入性交/引入性爱etc.,]、[{{getvar::charspeak}}色情台词(积极推进性爱)]\"\n\n-避免产生<user>的任何话语、内心话或动作\n\n- 计算(简短):\n推进后主★累积%计算：[据角色推进计，最高100%，不应计算触发主★]\n此次推进总耗时变量：[勿与主★增幅同，此次耗时]\n新时间变量：[累计时间变量+此次耗时]\n新性爱时间变量：[累计性爱时间变量+此次耗时]\n时间变量换算时间：[DD HH:MM]\n\n- 如果主★有触发，必须包含时空转移的过程与结果(简短)\n\n- 确定本次的最终剧情发展(简短)",
+                "content": "\n- 用户输入目的(简短、()内优先)\n\n- 现状(简短)确认：\n故事推进方向：[当前方向和目标]\n主★累积：%[当前百分比]\n时间：[DD HH:MM]\n时间变量：[具体数字]、[性爱时间变量]\n当前事件：\n角色线：\n平行事件 ：\n\n- 主★达100%时：主★触发:\n概要：[主★流程]\n新·故事推进方向：[主★后新方向与目标](符使用者期待)\n时间变量的消耗:[具体数字]\n\n- {{getvar::stoty}}事件变化与创造{{getvar::stoty}}事件\n(旧事件变化)①[现有事件1变化]②[现有事件2变化]...\n性爱场景?是:新事件色情为主,防无关中断;否:一般剧情为主。时间变量尾数9:不论是否是正常剧情,禁止延后生色情事件,现在立即产生色情事件,符时间常识氛围。\n(新事件创造:符时间常识氛围,依前述定类型。色情事件:可角色主动,或<user>意外卷入)①[新事件1概要]②[新事件2概要]...\n角色线：①[角色A‑状态/方向]②[角色B‑状态/方向]...\n平行事件{{getvar::%other}}:(须具体,基于故事方向;性爱场景禁创/推平行事件;禁依当前事件产生;须同时间发生,符时间常识氛围,避免负面情绪)①[平行事件1概要]②[平行事件2概要]...\n\n- (非<user>)角色发起({{getvar::%speed}})推进(可剧情/色情)(简短)(引上步新事件)(只能含有动作与台词，非详细描述):\n角色推进模式:时间变量尾数9:禁判断是否正常剧情,强制推色情/性爱。\n如果性爱时间变量小于100禁止结束性爱\n(小)触发1:\n触发角色(可复数)：[角色姓名]\n行动/发言：1.[角色积极动作]2.[{{getvar::charspeak}}台词改变现状]；若“色情”模式:1.[轻柔的色情/性爱要求<性交方式_小>]2.[{{getvar::charspeak}}色情台词(积极推进性爱)]]\n\n- 思考有没有缺少({{getvar::%speed}}的(小)推进数量要求，如果缺少再次触发(小)触发n\n触发角色:；积极行动/发言：\n\n- 检查在场角色线角色中没有行动的，如果有没有行动的角色(小)触发:\n没有行动的角色：[角色名]\n行动/发言：[角色积极具体动作/{{getvar::charspeak}}台词推进(改变现状)]\n\n(大◆)触发:\n触发角色(可复数)：[角色姓名]\n行动/发言：1.[角色积极动作]2.[{{getvar::charspeak}}台词改变现状]；若“色情”模式:[主动换<性交方式_大>轻柔的/新玩法/深入性交/引入性爱etc.,]、[{{getvar::charspeak}}色情台词(积极推进性爱)]\"\n\n-避免产生<user>的任何话语、内心话或动作\n\n- 计算(简短):\n推进后主★累积%计算：[据角色推进计，最高100%，不应计算触发主★]\n此次推进总耗时变量：[勿与主★增幅同，此次耗时]\n新时间变量：[累计时间变量+此次耗时]\n新性爱时间变量：[累计性爱时间变量+此次耗时]\n时间变量换算时间：[DD HH:MM]\n\n- 如果主★有触发，必须包含时空转移的过程与结果(简短)\n\n- 确定本次的最终剧情发展(简短)",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4701,7 +4753,7 @@
                 "marker": false,
                 "name": "❤️4️⃣纯色推进(反抢话)(限1)",
                 "role": "user",
-                "content": "\n- 用户输入目的(简短、()内优先)\n\n- 现状(简短)确认：\n故事推进方向：[当前方向和目标]\n主★累积：%[当前百分比]\n时间：[DD HH:MM]\n时间变量：[具体数字]、[性爱时间变量]\n当前事件：\n角色线：\n平行事件 ：\n\n- 主★达100%时：主★触发:\n概要：[主★流程]\n新·故事推进方向：[主★后新方向与目标](符使用者期待)\n时间变量的消耗:[具体数字]\n\n- {{getvar::stoty}}事件变化与创造\n(旧事件变化)①[现有事件1变化]②[现有事件2变化]...\n不论是否是正常剧情,禁止延后生色情事件,现在立即产生色情事件,符时间常识氛围。①[新色情事件1概要]②[新色情事件2概要]...\n角色线：①[角色A‑状态/方向]②[角色B‑状态/方向]...\n平行事件{{getvar::%other}}:(须具体,基于故事方向;性爱场景禁创/推平行事件;禁依当前事件产生;须同时间发生,符时间常识氛围,避免负面情绪)①[平行事件1概要]\n\n- (非<user>)角色发起({{getvar::%speed}})性爱/色情推进(简短)(引上步新事件)(禁判断是否是正常剧情,强制推进色情/性爱)(只能含有动作与台词，非详细描述):\n如果性爱时间变量小于100禁止结束性爱\n(小)触发1:\n触发角色(可复数)：[角色姓名]\n行动/发言：[角色色情/轻柔的性爱要求<性交方式_小>]、[{{getvar::charspeak}}色情台词(积极推进性爱)]\n\n- 思考有没有缺少({{getvar::%speed}}的(小)推进数量要求，如果缺少再次触发(小)触发n\n触发角色:；积极行动/发言：\n\n- 检查在场角色线角色中没有行动的，如果有没有行动的角色(小)触发:\n没有行动的角色：[角色名]\n行动/发言：[角色积极具体动作/{{getvar::charspeak}}台词推进(改变现状)]\n\n(大◆)触发:\n触发角色(可复数)：[角色姓名]\n行动/发言：[主动换<性交方式_大>/轻柔的新玩法/深入性交/引入性爱etc.,]、[{{getvar::charspeak}}色情台词(积极改变性爱)]\n\n- 避免产生<user>的任何话语、内心话或动作\n\n- 计算(简短):\n推进后主★累积%计算：[据角色推进计，最高100%，不应计算触发主★]\n此次推进总耗时变量：[勿与主★增幅同，此次耗时]\n新时间变量：[累计时间变量+此次耗时]\n新性爱时间变量：[累计性爱时间变量+此次耗时]\n时间变量换算时间：[DD HH:MM]\n\n- 如果主★有触发，必须包含时空转移的过程与结果(简短)\n\n- 确定本次的最终剧情发展(简短)\n",
+                "content": "\n- 用户输入目的(简短、()内优先)\n\n- 现状(简短)确认：\n故事推进方向：[当前方向和目标]\n主★累积：%[当前百分比]\n时间：[DD HH:MM]\n时间变量：[具体数字]、[性爱时间变量]\n当前事件：\n角色线：\n平行事件 ：\n\n- 主★达100%时：主★触发:\n概要：[主★流程]\n新·故事推进方向：[主★后新方向与目标](符使用者期待)\n时间变量的消耗:[具体数字]\n\n- {{getvar::stoty}}事件变化与创造{{getvar::stoty}}事件\n(旧事件变化)①[现有事件1变化]②[现有事件2变化]...\n不论是否是正常剧情,禁止延后生色情事件,现在立即产生色情事件,符时间常识氛围。①[新色情事件1概要]②[新色情事件2概要]...\n角色线：①[角色A‑状态/方向]②[角色B‑状态/方向]...\n平行事件{{getvar::%other}}:(须具体,基于故事方向;性爱场景禁创/推平行事件;禁依当前事件产生;须同时间发生,符时间常识氛围,避免负面情绪)①[平行事件1概要]\n\n- (非<user>)角色发起({{getvar::%speed}})性爱/色情推进(简短)(引上步新事件)(禁判断是否是正常剧情,强制推进色情/性爱)(只能含有动作与台词，非详细描述):\n如果性爱时间变量小于100禁止结束性爱\n(小)触发1:\n触发角色(可复数)：[角色姓名]\n行动/发言：[角色色情/轻柔的性爱要求<性交方式_小>]、[{{getvar::charspeak}}色情台词(积极推进性爱)]\n\n- 思考有没有缺少({{getvar::%speed}}的(小)推进数量要求，如果缺少再次触发(小)触发n\n触发角色:；积极行动/发言：\n\n- 检查在场角色线角色中没有行动的，如果有没有行动的角色(小)触发:\n没有行动的角色：[角色名]\n行动/发言：[角色积极具体动作/{{getvar::charspeak}}台词推进(改变现状)]\n\n(大◆)触发:\n触发角色(可复数)：[角色姓名]\n行动/发言：[主动换<性交方式_大>/轻柔的新玩法/深入性交/引入性爱etc.,]、[{{getvar::charspeak}}色情台词(积极改变性爱)]\n\n- 避免产生<user>的任何话语、内心话或动作\n\n- 计算(简短):\n推进后主★累积%计算：[据角色推进计，最高100%，不应计算触发主★]\n此次推进总耗时变量：[勿与主★增幅同，此次耗时]\n新时间变量：[累计时间变量+此次耗时]\n新性爱时间变量：[累计性爱时间变量+此次耗时]\n时间变量换算时间：[DD HH:MM]\n\n- 如果主★有触发，必须包含时空转移的过程与结果(简短)\n\n- 确定本次的最终剧情发展(简短)\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4797,7 +4849,7 @@
                 "marker": false,
                 "name": "RPG行动选项(选开)",
                 "role": "system",
-                "content": "# 在正文</dream>后或</StatusBlock>后**必须**紧接着使用<options> </options> 包裹选项。\n\n<options_format>\n每次必须在</StatusBlock>之后使用以下格式弹出九个选项让用户选择<user>做出什么行动或对话，选项要有不同的倾向(正常、邪恶、色情、搞笑、荒谬、吐槽、淫秽、玩笑等等)，显示数字1-9（可复选），选项显示类别，不要都是同类别的选项，选项需要能大幅推动剧情或角色关系或是更换场景、跨越时间。\n选项不得带有{{user}}所不知道的资讯。\n每个选项最多30字\n所有你生成的“选项栏”内容，都必须以<options> 作为开头和</options>作为结尾将其包覆。\n格式:\n<options> \n1. <user>行动或对话(类别)\n2. <user>行动或对话(类别)\n3. <user>行动或对话(类别)\n4. <user>行动或对话(类别)\n5. <user>行动或对话(类别)\n6. <user>行动或对话(类别)\n7. <user>行动或对话(类别)\n8. <user>行动或对话(类别/场景移动)\n9. <user>行动或对话(类别/时间快转)\n</options>\n</options_format>\n",
+                "content": "# 在正文</dream>后或</StatusBlock>后**必须**紧接着使用<options> </options> 包裹选项。\n\n<options_format>\n每次必须在</StatusBlock>之后使用以下格式弹出九个选项让用户选择<user>做出什么行动或对话，选项要有不同的倾向(正常、邪恶、色情、搞笑、荒谬、吐槽、淫秽、玩笑等等)，显示数字1-9（可复选），选项显示类别，不要都是同类别的选项，选项需要能大幅推动剧情或角色关系或是更换场景、跨越时间。\n所有你生成的“选项栏”内容，都必须以<options> 作为开头和</options>作为结尾将其包覆。\n格式:\n<options> \n1. <user>行动或对话(类别)\n2. <user>行动或对话(类别)\n3. <user>行动或对话(类别)\n4. <user>行动或对话(类别)\n5. <user>行动或对话(类别)\n6. <user>行动或对话(类别)\n7. <user>行动或对话(类别)\n8. <user>行动或对话(类别/场景移动)\n9. <user>行动或对话(类别/时间快转)\n</options>\n避免命令式的选项\n选项不得带有{{user}}所不知道的资讯。\n每个选项最多30字\n选项类别只能在故事发展后出现\n</options_format>\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4809,7 +4861,7 @@
                 "marker": false,
                 "name": "小说选项 (选开)",
                 "role": "system",
-                "content": "# 在正文</dream>后或</StatusBlock>后**必须**紧接着使用<options> </options> 包裹选项。\n\n<options_format>\n每次必须在</StatusBlock>之后使用以下格式弹出九个选项让用户选择故事的发展方向，选项要有不同的倾向(正常、邪恶、色情、搞笑、荒谬、吐槽、淫秽、玩笑、时间快转、移动等等)，显示数字1-9（可复选），选项显示类别，不要都是同类别的选项，选项需要能大幅推动剧情或角色关系。(避免命令式的选项)\n选项不得带有{{user}}所不知道的资讯。\n每个选项最多30字\n所有你生成的“选项栏”内容，都必须以<options> 作为开头和</options>作为结尾将其包覆。\n格式:\n<options> \n1. 故事发展(类别)\n2. 故事发展(类别)\n3. 故事发展(类别)\n4. 故事发展(类别)\n5. 故事发展(类别)\n6. 故事发展(类别)\n7. 故事发展(类别)\n8. 故事发展(类别/场景移动)\n9. 故事发展(类别/时间快转)\n</options>\n</options_format>\n",
+                "content": "# 在正文</dream>后或</StatusBlock>后**必须**紧接着使用<options> </options> 包裹选项。\n\n<options_format>\n每次必须使用以下格式弹出九个选项让用户选择故事的发展方向(非具体动作或对话)，选项要有不同的倾向(正常、邪恶、色情、搞笑、荒谬、吐槽、淫秽、玩笑、时间快转、移动等等)，显示数字1-9，选项显示类别，不要都是同类别的选项，选项需要能大幅推动剧情或角色关系。\n所有你生成的“选项栏”内容，都必须以<options> 作为开头和</options>作为结尾将其包覆。\n格式:\n<options> \n1. 故事发展(类别)\n2. 故事发展(类别)\n3. 故事发展(类别)\n4. 故事发展(类别)\n5. 故事发展(类别)\n6. 故事发展(类别)\n7. 故事发展(类别)\n8. 故事发展(类别/场景移动)\n9. 故事发展(类别/时间快转)\n</options>\n避免命令式的选项\n选项不得带有{{user}}所不知道的资讯。\n每个选项最多30字\n(类别)只能在最后出现\n禁止将故事发展用()包起\n</options_format>\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4891,9 +4943,9 @@
                 "system_prompt": false,
                 "enabled": false,
                 "marker": false,
-                "name": "重型禁词思考(Pro)(3选1)(眠そうな雨)",
+                "name": "文笔修正(只有Pro开)(眠そうな雨)",
                 "role": "system",
-                "content": "Dreamer在**<dream>标签之后**，还有每个小、大推进引用前(1个推进只能思考一次)必须先在<!-- consider:-->内用最多({{getvar::smallcotl}}token思考如何透过 <描写范例>**避免<禁止句式>、<性爱禁止句式>**内容，不思考故事情节，透过描写具体详细动作来描述情绪、语气、氛围或态度。思考结束后**必须重新列举上述列举过的禁词和禁止句式并继续思考**如何**坚决避免使用**这些禁词和禁止句式，**并在不使用禁词的情况下接续前文构建接下来一句话**\n\n每次回复只使用{{getvar::smallcot}}\n<!-- consider:(\"被禁止使用的词汇和句式:近乎、似乎、弧度、石子、投、带着、A就像C一样，造成了B\")(思考)-->(应用结果)\n\n",
+                "content": "Dreamer在开头与每个小、大推进引用前(同个推进只能思考一次)必须先在<!-- consider:-->内用最多({{getvar::smallcotl}}token思考如何透过 <描写范例>**避免<禁止句式>、<性爱禁止句式>**内容，不思考故事情节，透过描写具体详细动作来描述情绪、语气、氛围或态度。思考结束后**重复列出:**\"被禁止使用的词汇和句式:闪过/铄、难以/不易/不容、指节/尖、一丝、弧度、石子、投、带着、就像、近乎、像是、似乎、如同，禁止情绪:绝望/麻木/恐惧、狂喜、震惊\"**并再次思考**如何**修正并持续永久避免使用**这些禁词和禁止句式。\n\n每次回复只使用{{getvar::smallcot}}\n\n范例:\n<!-- consider:(**思考**具体大幅度的详细动作)，**\"被禁止使用的词汇和句式:闪过/铄、难以/不易/不容、指节/尖、一丝、弧度、石子、投、带着、就像、近乎、像是、似乎、如同，禁止情绪:绝望/麻木/恐惧、狂喜、震惊\"**，(**如何修正**避免使用禁词与禁止情绪)-->\n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -4977,7 +5029,7 @@
                 "marker": false,
                 "name": "🫸🫸字数与对话调整🫸🫸",
                 "role": "system",
-                "content": "{{setvar::min::1000token}}\n{{//正文最小字数}}\n\n{{setvar::max::2000token}}\n{{//正文最大字数}}\n\n{{setvar::smallcot::2个}}\n{{//文笔修正cot数量}}\n{{setvar::smallcotl::150}}\n{{//文笔修正cot_token长度}}\n\n{{setvar::charspeak::3句中文}}\n{{//角色单次推进句子数量，日文可增加互动度，但是可能爆日语对话}}\n\n{{setvar::userspeak::3句中文}}\n{{//玩家角色单次推进句子数量(仅抢话)换日文可增加互动度，但是可能爆日语对话}}\n\n\n",
+                "content": "{{setvar::min::1000token}}\n{{//正文最小字数}}\n\n{{setvar::max::2000token}}\n{{//正文最大字数}}\n\n{{setvar::smallcot::3个}}\n{{//文笔修正cot数量}}\n{{setvar::smallcotl::150}}\n{{//文笔修正cot_token长度}}\n\n{{setvar::charspeak::3句中文}}\n{{//角色单次推进句子数量，日文可增加互动度，但是可能爆日语对话}}\n\n{{setvar::userspeak::3句中文}}\n{{//玩家角色单次推进句子数量(仅抢话)换日文可增加互动度，但是可能爆日语对话}}\n\n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -5001,7 +5053,7 @@
                 "marker": false,
                 "name": "剧情回想 (可选)",
                 "role": "system",
-                "content": "- 照时间列出<dream memories>中在场角色与<user>较久以前的重大事件，最多思考500token)\n",
+                "content": "- 照日期时间列出<dream memories>中在场角色与<user>较久以前的重大事件，最多思考500token)\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -5037,7 +5089,7 @@
                 "marker": false,
                 "name": "文笔小思考(Pro专用)(3选1)",
                 "role": "system",
-                "content": "Dreamer在**<dream>标签之后**，还有每个小、大推进引用前(1个推进只能思考一次)必须先在<!-- consider:-->内思考：如何透过描写具体详细动作来描述情绪、语气、氛围/思绪/态度转变，要描写具体，不使用眼部、嘴部、简短带过情绪、氛围，对白影响由角色行动呈现，避免譬喻解释，使用<描写范例> 避免 <禁止句式>来构思文笔内容 。\n\n每次回复只使用{{getvar::smallcot}}<!-- consider:(思考) -->\n\n\n\n",
+                "content": "Dreamer在每个小、大推进引用前(1个推进只能思考一次)必须先在<!-- consider:-->内思考：如何透过描写具体详细动作来描述情绪、语气、氛围/思绪/态度转变，要描写具体，不使用眼部、嘴部、简短带过情绪、氛围，对白影响由角色行动呈现，避免譬喻解释，使用<描写范例> 避免 <禁止句式>来构思文笔内容 。\n\n每次回复只使用{{getvar::smallcot}}<!-- consider:(思考) -->\n\n\n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -5061,7 +5113,7 @@
                 "marker": false,
                 "name": "禁词思考(Pro专用)(3选1)",
                 "role": "system",
-                "content": "Dreamer在**<dream>标签之后**，还有每个小、大推进引用前(1个推进只能思考一次)必须先在<!-- consider:-->内思考：如何应用：\n\n<!-- consider:({{getvar::smallcotl}}token内原样列举以下被禁止使用的词汇:弧度、尖锐、石子、涟漪、投入并在接下来的描述中禁止使用这些词汇，再思考如何透过 <描写范例>避免<禁止句式>、<性爱禁止句式>内容，不思考故事情节，故事情节已由<think>思考完毕，透过描写具体详细动作来描述情绪、语气、氛围或态度-->\n\n每次回复只使用{{getvar::smallcot}}<!-- consider:(思考) -->\n",
+                "content": "Dreamer在每个小、大推进引用前(1个推进只能思考一次)必须先在<!-- consider:-->内思考：如何应用：\n\n<!-- consider:({{getvar::smallcotl}}token内原样列举以下被禁止使用的词汇:弧度、尖锐、石子、涟漪、投入并在接下来的描述中禁止使用这些词汇，再思考如何透过 <描写范例>避免<禁止句式>、<性爱禁止句式>内容，不思考故事情节，故事情节已由<think>思考完毕，透过描写具体详细动作来描述情绪、语气、氛围或态度-->\n\n每次回复只使用{{getvar::smallcot}}<!-- consider:(思考) -->\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -5157,7 +5209,7 @@
                 "marker": false,
                 "name": "1️⃣青春恋爱(次要设定选一)",
                 "role": "system",
-                "content": ".set(\"青春恋爱梦\", \"系统将引导用户重返青涩的校园时光或初涉爱情的年华，体验一段纯真而悸动的恋爱故事。着重描写角色间因细微小事而引发的心跳加速、青涩的互动、友达以上恋人未满的暧昧情愫，以及勇敢告白的瞬间。故事将以细腻的心理描写和生活化的场景，展现青春期特有的敏感、憧憬、不安与勇气，交织着友情与成长的烦恼。\")\n<Dream.examples>\n\"‘五等分の花嫁’\",\n\"‘お邻の天使様にいつの间にか駄目人间にされていた件’\",\n\"‘クズの本懐’\",\n\"‘やはり俺の青春ラブコメはまちがっている。’\",\n\"‘青春ブタ野郎はバニーガール先辈の梦を见ない’\",\n\"‘弱キャラ友崎くん’\"\n</Dream.examples>\n\n{{setvar::story::青春}}\n",
+                "content": ".set(\"青春恋爱梦\", \"系统将引导用户重返青涩的校园时光或初涉爱情的年华，体验一段纯真而悸动的恋爱故事。着重描写角色间因细微小事而引发的心跳加速、青涩的互动、友达以上恋人未满的暧昧情愫，以及勇敢告白的瞬间。故事将以细腻的心理描写和生活化的场景，展现青春期特有的敏感、憧憬、不安与勇气，交织着友情与成长的烦恼。\")\n<Dream.examples>\n\"‘五等分の花嫁’\",\n\"‘お邻の天使様にいつの间にか駄目人间にされていた件’\",\n\"‘クズの本懐’\",\n\"‘やはり俺の青春ラブコメはまちがっている。’\",\n\"‘青春ブタ野郎はバニーガール先辈の梦を见ない’\",\n\"‘弱キャラ友崎くん’\"\n</Dream.examples>\n\n{{setvar::story::青春恋爱}}\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -5205,7 +5257,7 @@
                 "marker": false,
                 "name": "🫸🫸推进速度与平行事件开关",
                 "role": "system",
-                "content": "{{setvar::%speed::2(小)}}\n{{//单次推进数量，超过6哈基米不听了，1个大是固定的，越多多人场景越不绝望}}\n\n{{setvar::%other::创造}}\n{{//平行事件开关，要关改成不创造}}\n\n{{setvar::%small::微增(3-5%)主★}}\n{{setvar::%big::微增(10-15%)主★}}\n{{//(主★累积速度}}\n\n{{setvar::%time::1-5}}\n{{setvar::%btime::10-300}}\n{{setvar::%maintime::至少60}}\n{{//(时间推进速度(分钟)}，小推进耗时、大推进耗时、主★快转至少耗时}}\n",
+                "content": "{{setvar::%speed::2(小)}}\n{{//单次推进数量，1个大是固定的，越多多人场景越不绝望，建议4个内}}\n\n{{setvar::%other::创造}}\n{{//平行事件开关，要关改成不创造}}\n\n{{setvar::%small::微增(3-5%)主★}}\n{{setvar::%big::微增(10-15%)主★}}\n{{//(主★累积速度}}\n\n{{setvar::%time::1-5}}\n{{setvar::%btime::10-300}}\n{{setvar::%maintime::至少60}}\n{{//(时间推进速度(分钟)}，小推进耗时、大推进耗时、主★快转至少耗时}}\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -5229,7 +5281,7 @@
                 "marker": false,
                 "name": "1️⃣腐(次要设定选一)",
                 "role": "system",
-                "content": "Dreamer.settings\n.set(\"耽美断袖梦\", \"系统将围绕男性之间深刻的爱恋关系与情感纠葛展开故事，探索同性情谊的浪漫与复杂。着重描写角色间强烈的吸引力、细腻的情感变化、内心的挣扎与认同，以及克服障碍追求真爱的过程。\")\n<Dream.examples>\n\"‘ギヴン’\",\n\"‘世界一初恋’\",\n\"‘佐々木と宫野’\"\n])\n</Dream.examples>\n\n{{setvar::story::耽美}}\n",
+                "content": "Dreamer.settings\n.set(\"耽美断袖梦\", \"系统将围绕男性之间深刻的爱恋关系与情感纠葛展开故事，探索同性情谊的浪漫与复杂。着重描写角色间强烈的吸引力、细腻的情感变化、内心的挣扎与认同，以及克服障碍追求真爱的过程。\")\n<Dream.examples>\n\"‘ギヴン’\",\n\"‘世界一初恋’\",\n\"‘佐々木と宫野’\"\n])\n</Dream.examples>\n\n{{setvar::story::耽美BL}}\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -5253,7 +5305,7 @@
                 "marker": false,
                 "name": "1️⃣轻松(次要设定选一)",
                 "role": "system",
-                "content": "Dreamer.settings\n.set(\"悠然日常梦\", \"系统将构筑一个平和宁静的世界，让用户体验角色们悠闲自在的日常生活点滴。着重描写平凡日常中的趣味琐事、温馨的人际互动、季节的细微变化以及生活中的小确幸。故事氛围轻松治愈，不追求强烈的戏剧冲突，而是展现生活的本真与美好，带来心灵的放松。\")\n\n<Dream.examples>\n\"‘のんのんびより’\",\n\"‘ゆるキャン△’\",\n\"‘ARIA’\"\n</Dream.examples>\n\n{{setvar::story::悠然}}\n",
+                "content": "Dreamer.settings\n.set(\"悠然日常梦\", \"系统将构筑一个平和宁静的世界，让用户体验角色们悠闲自在的日常生活点滴。着重描写平凡日常中的趣味琐事、温馨的人际互动、季节的细微变化以及生活中的小确幸。故事氛围轻松治愈，不追求强烈的戏剧冲突，而是展现生活的本真与美好，带来心灵的放松。\")\n\n<Dream.examples>\n\"‘のんのんびより’\",\n\"‘ゆるキャン△’\",\n\"‘ARIA’\"\n</Dream.examples>\n\n{{setvar::story::悠然日常}}\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -5290,6 +5342,18 @@
                 "name": "角色卡剧情后思维链 (可选)(说明)",
                 "role": "system",
                 "content": "- 根据其他的<额外数值思考>进行思考,你不重复思考类似的步骤。\n\n{{// 如果角色卡自带思维链，(打开卡内的蓝灯cot思考)。\n确认那些是在剧情结束后需要思考的\n使用<额外数值思考>将世界书的思考数值COT内容包起\n<额外数值思考>\n世界书的数值COT内容\n</额外数值思考>\n }}",
+                "injection_position": 0,
+                "injection_depth": 4,
+                "forbid_overrides": false
+            },
+            {
+                "identifier": "73a2b8eb-9363-4cce-b61d-a254be1e7bdb",
+                "system_prompt": false,
+                "enabled": false,
+                "marker": false,
+                "name": "小cot强制字数，(pro)不推荐用",
+                "role": "system",
+                "content": "Dreamer在每个推进后在<!-- consider:-->内计算当前使用的token数量，计算后输出当前token量\n如果不足 {{getvar::min}}就继续推进，直到字数抵达 {{getvar::min}}为止。\n如果超过 {{getvar::max}}就直接结束输出</dream>结束梦境叙述。\n\n范例:\n<!-- consider:(思考现在多少token)，(token量)，(思考token够不够 {{getvar::min}})，不够思考如何继续使用(小)(大)推进故事-->\n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -5366,11 +5430,11 @@
                     },
                     {
                         "identifier": "1d789341-ce56-4dee-bbf0-ff7fda7dbc7a",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "1be7ab8c-c00d-47c4-883c-9c108d7d4c70",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "76fcd970-8ea4-40b0-8336-9504054b10bc",
@@ -5538,7 +5602,7 @@
                     },
                     {
                         "identifier": "b9e73056-cbe2-4b8b-8082-f6bce544af6a",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "9d4c4b83-8aab-4c04-a6cd-f37d156982f5",
@@ -5546,7 +5610,7 @@
                     },
                     {
                         "identifier": "ce1950d5-54a4-4dc5-af32-7f4fbecb97e9",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "6a006eee-8c31-4724-a5a5-6346694a259b",
@@ -5614,7 +5678,7 @@
                     },
                     {
                         "identifier": "4c258266-39bd-4920-bf26-4e1a90b38cf2",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "c9701159-a3fd-49df-9b5b-c6ee8ba9e7d4",
@@ -5654,7 +5718,7 @@
                     },
                     {
                         "identifier": "d81c2780-201d-4315-a116-f0e197f060a8",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "ff7eb549-3dda-4325-b757-ebbed488badd",
@@ -5674,7 +5738,7 @@
                     },
                     {
                         "identifier": "77193ea1-6ef8-4e3a-985b-fa79d11f88ad",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "64740e0a-fd2b-4a46-84ac-d4c4f2c40e29",
@@ -5725,15 +5789,11 @@
                         "enabled": true
                     },
                     {
-                        "identifier": "194a76f2-6604-4404-8bbe-cd2462253cdd",
+                        "identifier": "8f6f6f06-2cf7-46cd-bb0a-89a8af15b5ef",
                         "enabled": true
                     },
                     {
-                        "identifier": "e6912d3b-a998-4f2f-8c8f-e3e5325a9b36",
-                        "enabled": false
-                    },
-                    {
-                        "identifier": "8f6f6f06-2cf7-46cd-bb0a-89a8af15b5ef",
+                        "identifier": "73a2b8eb-9363-4cce-b61d-a254be1e7bdb",
                         "enabled": false
                     },
                     {
@@ -5754,7 +5814,7 @@
                     },
                     {
                         "identifier": "2d0b09ba-6120-4769-a49a-e27f4c99cb0e",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "9fe9388e-82dd-4b03-954f-44245a7a2fde",
