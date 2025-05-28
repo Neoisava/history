@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -24,7 +24,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": null,
+    "active_character": "修仙之路2.0.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -3800,7 +3800,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 244,
                 "userConfigured": true
             }
         },
@@ -5617,7 +5617,7 @@
                     },
                     {
                         "identifier": "42aa2161-78d2-44b8-b807-895cc7bb3f7c",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "8335c30d-24ee-4a98-a622-d158c1e9325a",
@@ -5645,7 +5645,7 @@
                     },
                     {
                         "identifier": "7775a027-c11c-44e6-915d-aea1897dfd1f",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "a7c40be7-317f-45ee-afc9-f2736dbc3c7c",
@@ -5813,11 +5813,11 @@
                     },
                     {
                         "identifier": "218095d1-b8b3-49dd-8e25-d0ec1adbeca0",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "7ad4c8b2-3a08-48da-90bb-bbea73515502",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "e5d85924-82e1-4f26-bf1c-8f7dce07a687",
@@ -5833,7 +5833,7 @@
                     },
                     {
                         "identifier": "ab2e06e7-b2ba-4e18-a6ed-f6797d140eeb",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "a5e930bc-8be5-46f9-a061-2ef082cfd44f",
@@ -5861,7 +5861,7 @@
                     },
                     {
                         "identifier": "4c258266-39bd-4920-bf26-4e1a90b38cf2",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "c9701159-a3fd-49df-9b5b-c6ee8ba9e7d4",
@@ -5905,7 +5905,7 @@
                     },
                     {
                         "identifier": "d81c2780-201d-4315-a116-f0e197f060a8",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "ff7eb549-3dda-4325-b757-ebbed488badd",
@@ -5929,15 +5929,15 @@
                     },
                     {
                         "identifier": "8d63f52c-f895-4547-b7c0-38edfcd298db",
-                        "enabled": true
-                    },
-                    {
-                        "identifier": "64740e0a-fd2b-4a46-84ac-d4c4f2c40e29",
                         "enabled": false
                     },
                     {
-                        "identifier": "77193ea1-6ef8-4e3a-985b-fa79d11f88ad",
+                        "identifier": "64740e0a-fd2b-4a46-84ac-d4c4f2c40e29",
                         "enabled": true
+                    },
+                    {
+                        "identifier": "77193ea1-6ef8-4e3a-985b-fa79d11f88ad",
+                        "enabled": false
                     },
                     {
                         "identifier": "331d8458-3423-48b5-b6d5-b8a2e05251a5",
@@ -5989,7 +5989,7 @@
                     },
                     {
                         "identifier": "cc228202-a296-4618-afc4-d9aff3bf4021",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "c7d0194e-5335-4d3a-9b05-5e6a1cdd59e3",
@@ -6001,7 +6001,7 @@
                     },
                     {
                         "identifier": "e6912d3b-a998-4f2f-8c8f-e3e5325a9b36",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "73a2b8eb-9363-4cce-b61d-a254be1e7bdb",
