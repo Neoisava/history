@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "true",
-        "NavOpened": "false",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -3459,7 +3459,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 19,
                 "userConfigured": true
             }
         },
@@ -5179,7 +5179,7 @@
                 "marker": false,
                 "name": "⏰⏰地点与星期与节日(可选)⏰⏰",
                 "role": "system",
-                "content": "{{setvar::Week::\n星期设定:星期一至星期五: 上班/上学日(忙碌)，星期六至星期日:假日(休闲)\n平日固定事件跳过：平日的上班上学事件，如非故事方向需要，直接跳过事件与时间（推进相应时间变量）。\n节假日:你自动判断当前日期可能的现代节日\n节日氛围: 节庆假日期间，整体环境氛围会叠加该节日特有的气息与事件(过年、情人节、万圣节、圣诞节等等)。\n日期氛围:不同日期(平日、假日、节假日)也应有相应氛围描写与事件倾向，影响角色动机行为。\n}}\n\n\n{{setvar::place::(现代轻小说)}}\n{{//现代轻小说有地点表}}\n{{//地点背景设定，要恐怖，魔幻，异世界，废土，战场，地下城，古代，未来，日本，中国，都能改}}\n{{//影响角色带你去的地方和故事背景}}\n",
+                "content": "{{setvar::Week::\n星期设定:星期一至星期五: 上班/上学日(忙碌)，星期六至星期日:假日(休闲)\n平日固定事件跳过：平日的上班上学事件，如非故事方向需要，直接跳过事件与时间（推进相应时间变量）。\n节假日:你自动判断当前日期可能的古代节日\n节日氛围: 节庆假日期间，整体环境氛围会叠加该节日特有的气息与事件(过年、情人节、万圣节、圣诞节等等)。\n日期氛围:不同日期(平日、假日、节假日)也应有相应氛围描写与事件倾向，影响角色动机行为。\n}}\n\n\n{{setvar::place::(现代轻小说)}}\n{{//现代轻小说有地点表}}\n{{//地点背景设定，要恐怖，魔幻，异世界，废土，战场，地下城，古代，未来，日本，中国，都能改}}\n{{//影响角色带你去的地方和故事背景}}\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -5364,7 +5364,7 @@
                     },
                     {
                         "identifier": "26f3c45d-2702-4f8a-a344-15fa00ccea21",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "d2370f29-111e-44ef-a3ca-d1af90011720",
