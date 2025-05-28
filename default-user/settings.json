@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "true",
-        "NavOpened": "true",
+        "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -5664,7 +5664,7 @@
                     },
                     {
                         "identifier": "f6742d0b-7e74-40c8-a145-6f930712a684",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "0a8db465-0891-4e30-b254-8a12d765954d",
@@ -5736,11 +5736,11 @@
                     },
                     {
                         "identifier": "cd70a552-8b07-48d4-8bfe-2a96cb7e5d0d",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "130beff6-72f2-4736-a984-982c3fc50d17",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "205d31f5-0772-4fa9-87a0-ad696ec29339",
