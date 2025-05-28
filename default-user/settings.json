@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
+        "LNavOpened": "true",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -20,8 +20,7 @@
         "AlertRegex_1.png": "true",
         "AlertWI_修仙世界-[万界大陆].png": "true",
         "AlertWI_(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png": "true",
-        "AlertRegex_(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png": "true",
-        "AlertRegex_修仙之路2.01.png": "true"
+        "AlertRegex_(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png": "true"
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
@@ -276,7 +275,7 @@
         "trusted_workers_only": false
     },
     "power_user": {
-        "charListGrid": false,
+        "charListGrid": true,
         "tokenizer": 99,
         "token_padding": 64,
         "collapse_newlines": true,
@@ -2702,8 +2701,7 @@
             "凡人修仙传·凤起灵绝·大罗真魂都市修仙灵气复苏（地图互动RPG带系统版）.png",
             "修仙之路2.0.png",
             "1.png",
-            "(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png",
-            "修仙之路2.01.png"
+            "(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png"
         ],
         "tts": {
             "voiceMap": "",
@@ -3461,7 +3459,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 245,
+                "lastProcessedLength": 244,
                 "userConfigured": true
             }
         },
@@ -3595,8 +3593,7 @@
             "367c4c8e-f041-4a28-9f30-22f1dd97edc7",
             "985defd2-95f8-4152-9ff6-71c9b0a8b728",
             "149ac21c-db86-48f9-a891-590161d603ab"
-        ],
-        "修仙之路2.01.png": []
+        ]
     },
     "nai_settings": {
         "temperature": 1.37,
@@ -5303,7 +5300,7 @@
                     },
                     {
                         "identifier": "42aa2161-78d2-44b8-b807-895cc7bb3f7c",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "8335c30d-24ee-4a98-a622-d158c1e9325a",
@@ -5331,7 +5328,7 @@
                     },
                     {
                         "identifier": "7775a027-c11c-44e6-915d-aea1897dfd1f",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "a7c40be7-317f-45ee-afc9-f2736dbc3c7c",
@@ -5695,7 +5692,7 @@
                     },
                     {
                         "identifier": "e6912d3b-a998-4f2f-8c8f-e3e5325a9b36",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "73a2b8eb-9363-4cce-b61d-a254be1e7bdb",
