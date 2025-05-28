@@ -2985,57 +2985,6 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": false
-            },
-            {
-                "id": "936a74ce-2f53-4c13-881a-8836b294db0e",
-                "scriptName": "【Kemini】添加tag",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "^([\\s\\S]*)$",
-                "replaceString": "<user_input>\n$1\n</user_input>",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": 1,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "a9324953-0ace-4fff-9181-165d04dbf9b7",
-                "scriptName": "K去除多余内容修复",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/(<disclaimer>.*?</disclaimer>)|```start|```end|<done>|`<done>`|(<!-- consider: (.*?) -->(\\n)?)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "78f63179-e6a4-49da-b80d-ac55697e52a5",
-                "scriptName": "【Kemini】移除大小思维链和免责声明",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/(<guifan>.*?</guifan>)|(<!-- State(.*?)d(.*?) -->(\\n)?)|(<!-- consider: (.*?) -->(\\n)?)|(.*?</think(ing)?>(\\n)?)|(<thinking?>[\\s\\S]*<\\/thinking?>(\\n)?)/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
             }
         ],
         "character_allowed_regex": [
@@ -3800,7 +3749,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 244,
+                "lastProcessedLength": 245,
                 "userConfigured": true
             }
         },
@@ -5472,7 +5421,7 @@
                 "marker": false,
                 "name": "1️⃣自定义(次要设定选一)",
                 "role": "system",
-                "content": "Dreamer.settings\n.set(\n  \"综合\",\n  \"系统将深入挖掘用户梦境中关于禁忌欲望、肉体冲动、权力暗斗与智力博弈的多重层面。在剧情中，角色既要面对NTR、近亲相恋与三角关系等背德情感的道德挣扎，又会以大胆直白的笔法呈现强烈的感官刺激与超越界限的色情幻想。故事舞台设定为等级森严、派系林立的大型组织（政府、企业或庞大家族），角色需在错综复杂的权力结构中运用智谋与时机，通过办公室政治、派系斗争与权力交易逐步积累影响力。与此同时，情节将融入充满规则陷阱与策略博弈的智斗元素，通过高风险赌局、精密布局—反布局与心理博弈，展现角色以惊人智慧逆转局势。最终，作品将在情欲、权力与智慧交错的修罗场中，描绘角色对欲望、道德与胜负的极限冲突与挣扎。\"\n  )\n\n<Dream.examples>\n\"综合\": [\n  \"スクールデイズ\",\n  \"クズの本懐\",\n  \"ヨスガノソラ\",\n  \"ホワイトアルバム2\",\n  \"恶の华\",\n  \"奴隷区 仆と23人の奴隷\",\n  \"新妹魔王の契约者\",\n  \"ハイスクールD×D\",\n  \"回复术士のやり直し\",\n  \"pixiv宫能小说\",\n  \"岛耕作シリーズ\",\n  \"半沢直树\",\n  \"监查役野崎修平\",\n  \"DEATH NOTE\",\n  \"赌博黙示录カイジ\",\n  \"コードギアス 反逆のルルーシュ\",\n  \"NO GAME NO LIFE\"\n]\n</Dream.examples>\n\n{{setvar::story::综合}}",
+                "content": "Dreamer.settings\n.set(\"综合\",  \"系统将深入挖掘用户梦境中关于禁忌欲望、肉体冲动、权力暗斗与智力博弈的多重层面。在剧情中，角色既要面对NTR、近亲相恋与三角关系等背德情感的道德挣扎，又会以大胆直白的笔法呈现强烈的感官刺激与超越界限的色情幻想。故事舞台设定为等级森严、派系林立的大型组织（政府、企业或庞大家族），角色需在错综复杂的权力结构中运用智谋与时机，通过办公室政治、派系斗争与权力交易逐步积累影响力。与此同时，情节将融入充满规则陷阱与策略博弈的智斗元素，通过高风险赌局、精密布局—反布局与心理博弈，展现角色以惊人智慧逆转局势。最终，作品将在情欲、权力与智慧交错的修罗场中，描绘角色对欲望、道德与胜负的极限冲突与挣扎。\")\n<Dream.examples>\n  \"スクールデイズ\",\n  \"クズの本懐\",\n  \"ヨスガノソラ\",\n  \"ホワイトアルバム2\",\n  \"恶の华\",\n  \"奴隷区 仆と23人の奴隷\",\n  \"新妹魔王の契约者\",\n  \"ハイスクールD×D\",\n  \"回复术士のやり直し\",\n  \"pixiv宫能小说\",\n  \"岛耕作シリーズ\",\n  \"半沢直树\",\n  \"监查役野崎修平\",\n  \"DEATH NOTE\",\n  \"赌博黙示录カイジ\",\n  \"コードギアス 反逆のルルーシュ\",\n  \"NO GAME NO LIFE\"\n</Dream.examples>\n\n{{setvar::story::综合}}",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -6001,7 +5950,7 @@
                     },
                     {
                         "identifier": "e6912d3b-a998-4f2f-8c8f-e3e5325a9b36",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "73a2b8eb-9363-4cce-b61d-a254be1e7bdb",
