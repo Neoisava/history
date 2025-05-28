@@ -2510,295 +2510,6 @@
         "dice": {},
         "regex": [
             {
-                "id": "0d28134f-5b68-4619-8cc9-df6ce99d5eb3",
-                "scriptName": "【demini】专防省略号增殖正则",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/…/gi",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "1a66b930-d2b1-44ac-934f-01fb9fbeba31",
-                "scriptName": "【demini】D1非插件式表格折叠",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<table>(.*?)</table>/gs",
-                "replaceString": "<details><summary>*<font color=#C0C0C0>非插件式表格<font>*</summary>\n> $1\n</details>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
-                "id": "249f095d-cc10-4ee7-9ed4-d34010e23421",
-                "scriptName": "【demini】D1替绝望羊折叠正则",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<air>(.*?)</air>/gs",
-                "replaceString": "<details><summary>*<font color=#F08080>替绝望羊</font>*</summary>\n> $1\n</details>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
-                "id": "831e2743-fe02-4a94-ab38-97b224cd0d67",
-                "scriptName": "【demini】D1添加用户输入TAG",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "^([\\s\\S]*)$",
-                "replaceString": "<user_input>\n$1\n</user_input>",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": 1,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "4f04edd9-790e-465a-93f7-68e18c0a6b06",
-                "scriptName": "【demini】D2缔改去除多余内容",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<content>|</content>|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(.*?<think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "bf595364-459a-4884-8bee-0b7c9cb6f350",
-                "scriptName": "【demini】D3略三楼前汇总",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 3,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "388b3c6b-bf9b-46eb-930d-0a19d10b2011",
-                "scriptName": "【demini】D1汇总记录折叠",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<Main_Quest>(.*?)</Main_Quest>/gs",
-                "replaceString": "<details><summary>*<font color=#87CEFA>汇总记录</font>*</summary>\n> $1\n</details>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
-                "id": "bd50397e-794d-4be1-8e60-afc69a6e7a28",
-                "scriptName": "【demini】D3前绝望羊补牢正则",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<air>[\\s\\S]*?</air>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "815ae822-e790-4458-828d-a06bbbf98065",
-                "scriptName": "【demini】D3隐藏前文用户消息",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "^([\\s\\S]*)$",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "substituteRegex": 0,
-                "minDepth": 1,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "9fc31796-2f13-4085-a9cc-e10f5b5b4d1e",
-                "scriptName": "【demini】D4隐藏全部前文[22]",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/[\\s\\S]*/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 22,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "3c862189-7926-4d35-9e4e-8312abe1fec7",
-                "scriptName": "【DepressIon】剧情推进1 v2.5",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
-                "replaceString": "<details>\n<summary>剧情</summary>\n$1\n</details>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
-                "id": "1057278c-9e09-47d6-99b0-52334587c69f",
-                "scriptName": "【DepressIon】剧情推进2 v2.5",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 12,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "eff6d6b6-4420-4954-b183-0e2362cd0dc8",
-                "scriptName": "【DepressIon】通用必备正则 v1.3",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/((<(guifan|safety_check)>(?:(?!<(guifan|safety_check)>)[\\s\\S])*?<\\/(guifan|safety_check)>)|(<reminder>(?:[\\s\\S])*?<\\/reminder>)|([\\s\\S]*<\\/(analysis|thinking|think)>)|([\\s\\S]*(?=<game>)))/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "94c4f1a6-5593-4042-8773-fc0dc0cf89e2",
-                "scriptName": "【DepressIon】小总结1 v2.5",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/[\\s\\S]*?(?<!<details>\\s*)<summary>([\\s\\S]*)<\\/summary>[\\s\\S]*/g",
-                "replaceString": "<summary>\n$1\n</summary>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 12,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "645c2d4d-92ae-4b32-bb55-b0c8de0bfa53",
-                "scriptName": "【DepressIon】小总结2 v2.5",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/(?<!<details>\\s*)<summary>(((?!<summary>)[\\s\\S])*?)<\\/summary>/g",
-                "replaceString": "<details>\n<summary>摘要</summary>\n$1\n</details>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
-                "id": "5224e172-7bd4-473f-b98f-576e66e26484",
-                "scriptName": "【DepressIon】修改用户输入 1.2",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/([\\s\\S]*)/",
-                "replaceString": "// $1\n\ngame.loadAll(`",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": 1,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "cec6431c-be29-4740-9e05-11edfe26a3b0",
-                "scriptName": "【DepressIon】修改AI回复 1.2",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/([\\s\\S]*)/",
-                "replaceString": "$1\n<system>\n存档加载完毕。\n</system>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": 1,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
                 "id": "6d3b436c-6d0a-478f-9b72-99d17c2c5fa5",
                 "scriptName": "部位特写",
                 "disabled": true,
@@ -2851,140 +2562,140 @@
                 "promptOnly": true
             },
             {
-                "id": "a9eef03a-b5d2-41ba-a3ff-984bd8b55367",
+                "id": "fbf24cfa-8b3a-404a-91d2-082ccda1dd07",
                 "scriptName": "【Dreammini】Kemini去除所有用户消息",
-                "disabled": false,
-                "runOnEdit": true,
                 "findRegex": "^([\\s\\S]*)$",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     1
                 ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": 1,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
+                "maxDepth": null
             },
             {
-                "id": "2688e9e7-81f0-40b9-8dd6-719ccead6391",
+                "id": "fc1cf978-1e1e-41ab-a291-bacf8f21fca8",
                 "scriptName": "【Dreammini】Kemini通用去除多余内容",
-                "disabled": false,
-                "runOnEdit": true,
                 "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<dream>|</dream>|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
+                "maxDepth": null
             },
             {
-                "id": "18567ca7-b0c6-463a-b02b-183566b4ffd2",
+                "id": "400bb1b5-b318-4fc6-863a-d592ee16cff0",
                 "scriptName": "【Dreammini】DIE[推进(缩起)]",
-                "disabled": false,
-                "runOnEdit": true,
                 "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
                 "replaceString": "<details>\n<summary>剧情</summary>\n$1\n</details>",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
+                "maxDepth": null
             },
             {
-                "id": "21ed7ae3-8926-483e-ac46-3bd55a1d6530",
+                "id": "fef8421e-906c-4028-9872-a3a55ce54b87",
                 "scriptName": "【Dreammini】DIE[推进(移除)]",
-                "disabled": false,
-                "runOnEdit": true,
                 "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": 4,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
+                "maxDepth": null
             },
             {
-                "id": "77052179-920e-4b83-87f5-3dc4cef4a0c6",
+                "id": "34c20d3a-2bff-42ec-800d-59ae1d6d8ce5",
                 "scriptName": "【Dreammini】DIE小总结(格式)",
-                "disabled": false,
-                "runOnEdit": true,
                 "findRegex": "/(?<!<details>\\s*)<summary>(((?!<summary>)[\\s\\S])*?)<\\/summary>/g",
                 "replaceString": "<details>\n<summary>摘要</summary>\n$1\n</details>",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
+                "maxDepth": null
             },
             {
-                "id": "18956466-025a-4e61-b88d-74e5d4088051",
+                "id": "f2cdf310-21c3-47aa-9dc3-02a638254eda",
                 "scriptName": "【Dreammini】DIE小总结(移除正文)",
-                "disabled": false,
-                "runOnEdit": true,
                 "findRegex": "/[\\s\\S]*?(?<!<details>\\s*)<summary>([\\s\\S]*)<\\/summary>[\\s\\S]*/g",
                 "replaceString": "<summary>\n$1\n</summary>",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": 7,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
+                "maxDepth": null
             },
             {
-                "id": "c28179a9-f094-4df5-a8a9-29c6f46fdd8a",
+                "id": "ce486fad-ddb5-4c78-acdc-c5b02289b789",
                 "scriptName": "【Dreammini】舊选项移除",
-                "disabled": false,
-                "runOnEdit": true,
                 "findRegex": "<options[^>]*>[\\s\\S]*?</options>",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": 3,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
+                "maxDepth": null
             },
             {
-                "id": "277f3d4e-a9ae-4326-b466-04d27ddb00c0",
+                "id": "97d0feb4-6b86-452f-b0ed-1bb7258431ef",
                 "scriptName": "【Dreammini】9.选项格式",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "<options>\\s*(1\\.\\s*[^(\\n]+?\\([^)]+\\))\\s*(2\\.\\s*[^(\\n]+?\\([^)]+\\))\\s*(3\\.\\s*[^(\\n]+?\\([^)]+\\))\\s*(4\\.\\s*[^(\\n]+?\\([^)]+\\))\\s*(5\\.\\s*[^(\\n]+?\\([^)]+\\))\\s*(6\\.\\s*[^(\\n]+?\\([^)]+\\))\\s*(7\\.\\s*[^(\\n]+?\\([^)]+\\))\\s*(8\\.\\s*[^(\\n]+?\\([^)]+\\))\\s*(9\\.\\s*[^(\\n]+?\\([^)]+\\))\\s*</options>",
-                "replaceString": "<options><details><summary style=\"background-color: #000000; color: #ffffff; padding: 5px; font-weight: bold; border-radius: 5px;\">故事選項</summary><div style=\"background-color: #000000; color: #ffffff; padding: 15px; border-radius: 0 0 5px 5px;\"><p style=\"margin: 5px 0;\">以下為當前場景下的可選行動，選擇數字1-9（可複選），或使用10自行輸入：</p><ul style=\"list-style-type: none; padding-left: 0;\"><li>\"$1\" <br> </li><li>\"$2\"<br> </li><li>\"$3\"<br></li><li>\"$4\"<br></li><li>\"$5\"<br></li><li>\"$6\"<br> </li><li> \"$7\"<br></li><li>\"$8\"<br></li><li>\"$9\" </li></ul></div></details></options>",
+                "findRegex": "<options>\\s*(1\\.[^\\n]*)\\s*(2\\.[^\\n]*)\\s*(3\\.[^\\n]*)\\s*(4\\.[^\\n]*)\\s*(5\\.[^\\n]*)\\s*(6\\.[^\\n]*)\\s*(7\\.[^\\n]*)\\s*(8\\.[^\\n]*)\\s*(9\\.[^\\n]*)\\s*<\\/options>",
+                "replaceString": "<options><details><summary style=\"background-color: #000000; color: #ffffff; padding: 5px; font-weight: bold; border-radius: 5px;\">故事选项</summary><div style=\"background-color: #000000; color: #ffffff; padding: 15px; border-radius: 0 0 5px 5px;\"><p style=\"margin: 5px 0;\">以下为当前场景下的可选行动，选择数字1-9（可複选），或使用10自行输入：</p><ul style=\"list-style-type: none; padding-left: 0;\"><li>\"$1\" <br> </li><li>\"$2\"<br> </li><li>\"$3\"<br></li><li>\"$4\"<br></li><li>\"$5\"<br></li><li>\"$6\"<br> </li><li>\"$7\"<br></li><li>\"$8\"<br></li><li>\"$9\" </li></ul></div></details></options>",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -3749,7 +3460,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 244,
+                "lastProcessedLength": 245,
                 "userConfigured": true
             }
         },
