@@ -24,7 +24,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": null,
+    "active_character": "修仙之路2.0.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -3800,7 +3800,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 244,
                 "userConfigured": true
             }
         },
@@ -5472,7 +5472,7 @@
                 "marker": false,
                 "name": "1️⃣自定义(次要设定选一)",
                 "role": "system",
-                "content": "Dreamer.settings\n.set(\"搞笑\", \"系统将捕捉用户梦境中所有荒诞不经、轻松幽默的片段与念头。着重放大其中的滑稽情境、无厘头对话以及意想不到的反差与巧合。致力于打破常规逻辑，营造轻松愉快的阅读氛围，引发用户会心一笑或捧腹大笑。\")\n.set(\"美好\", \"系统将捕捉用户梦境中最美好的吉光片羽。精心放大其中的喜悦、希望与温暖感受。致力于营造充满正能量的氛围，带来慰藉与疗愈。\")\n.set(\"青春恋爱\", \"系统将引导用户重返青涩的校园时光或初涉爱情的年华，体验一段纯真而悸动的恋爱故事。着重描写角色间因细微小事而引发的心跳加速、青涩的互动、友达以上恋人未满的暧昧情愫，以及勇敢告白的瞬间。故事将以细腻的心理描写和生活化的场景，展现青春期特有的敏感、憧憬、不安与勇气，交织着友情与成长的烦恼。\")\n\n\n{{//自行组合}}\n\n{{setvar::story::搞笑/美好/青春恋爱}}\n\n{{//在story自行填入梦境属性，可复合例如:搞笑/美好/青春恋爱/色情/热血}}",
+                "content": "Dreamer.settings\n.set(\n  \"综合\",\n  \"系统将深入挖掘用户梦境中关于禁忌欲望、肉体冲动、权力暗斗与智力博弈的多重层面。在剧情中，角色既要面对NTR、近亲相恋与三角关系等背德情感的道德挣扎，又会以大胆直白的笔法呈现强烈的感官刺激与超越界限的色情幻想。故事舞台设定为等级森严、派系林立的大型组织（政府、企业或庞大家族），角色需在错综复杂的权力结构中运用智谋与时机，通过办公室政治、派系斗争与权力交易逐步积累影响力。与此同时，情节将融入充满规则陷阱与策略博弈的智斗元素，通过高风险赌局、精密布局—反布局与心理博弈，展现角色以惊人智慧逆转局势。最终，作品将在情欲、权力与智慧交错的修罗场中，描绘角色对欲望、道德与胜负的极限冲突与挣扎。\"\n  )\n\n<Dream.examples>\n\"综合\": [\n  \"スクールデイズ\",\n  \"クズの本懐\",\n  \"ヨスガノソラ\",\n  \"ホワイトアルバム2\",\n  \"恶の华\",\n  \"奴隷区 仆と23人の奴隷\",\n  \"新妹魔王の契约者\",\n  \"ハイスクールD×D\",\n  \"回复术士のやり直し\",\n  \"pixiv宫能小说\",\n  \"岛耕作シリーズ\",\n  \"半沢直树\",\n  \"监查役野崎修平\",\n  \"DEATH NOTE\",\n  \"赌博黙示录カイジ\",\n  \"コードギアス 反逆のルルーシュ\",\n  \"NO GAME NO LIFE\"\n]\n</Dream.examples>\n\n{{setvar::story::综合}}",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false
@@ -5617,7 +5617,7 @@
                     },
                     {
                         "identifier": "42aa2161-78d2-44b8-b807-895cc7bb3f7c",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "8335c30d-24ee-4a98-a622-d158c1e9325a",
@@ -5645,7 +5645,7 @@
                     },
                     {
                         "identifier": "7775a027-c11c-44e6-915d-aea1897dfd1f",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "a7c40be7-317f-45ee-afc9-f2736dbc3c7c",
