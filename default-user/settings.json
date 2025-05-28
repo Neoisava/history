@@ -2,8 +2,8 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
-        "NavOpened": "true",
+        "LNavOpened": "false",
+        "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -3458,7 +3458,7 @@
             "migration_v1_complete": true,
             "useGlobalSettings": true,
             "globalHideSettings": {
-                "hideLastN": 20,
+                "hideLastN": 10,
                 "lastProcessedLength": 19,
                 "userConfigured": true
             }
@@ -3668,7 +3668,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": false,
+        "stream_openai": true,
         "openai_max_context": 1000000,
         "openai_max_tokens": 65500,
         "wrap_in_quotes": false,
@@ -5300,7 +5300,7 @@
                     },
                     {
                         "identifier": "42aa2161-78d2-44b8-b807-895cc7bb3f7c",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "8335c30d-24ee-4a98-a622-d158c1e9325a",
@@ -5692,7 +5692,7 @@
                     },
                     {
                         "identifier": "e6912d3b-a998-4f2f-8c8f-e3e5325a9b36",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "73a2b8eb-9363-4cce-b61d-a254be1e7bdb",
@@ -5777,7 +5777,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "[正常]gemini-2.5-pro-preview-05-06",
+        "custom_model": "[正常]gemini-2.5-pro-preview-03-25",
         "custom_url": "https://api.skyi.cc/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
