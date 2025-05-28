@@ -2,8 +2,8 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
-        "NavOpened": "true",
+        "LNavOpened": "false",
+        "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -3459,7 +3459,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 18,
                 "userConfigured": true
             }
         },
@@ -5800,7 +5800,7 @@
                     },
                     {
                         "identifier": "717cc325-058b-4fe2-aed2-0f2c7619e1ef",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "a6f5ca1d-a246-4a9d-926a-a7716855e65a",
@@ -5869,7 +5869,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "gemini-2.5-pro-exp-03-25",
+        "custom_model": "[正常]gemini-2.5-pro-preview-05-06",
         "custom_url": "https://api.skyi.cc/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
