@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "true",
-        "NavOpened": "false",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -2495,9 +2495,9 @@
                     "mode": "cc",
                     "exclude": [],
                     "api": "custom",
-                    "preset": "【demini】0506高级态",
-                    "api-url": "https://api.skyi.cc/v1",
-                    "model": "[正常]gemini-2.5-pro-preview-03-25",
+                    "preset": "【Dreammini】1.41-pro-0528",
+                    "api-url": "https://new.api-kk.shop/v1",
+                    "model": "[vh]gemini-2.5-pro-preview-03-25",
                     "stop-strings": "[]",
                     "start-reply-with": "",
                     "reasoning-template": "[Migrated] Custom",
@@ -3459,7 +3459,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 244,
                 "userConfigured": true
             }
         },
@@ -5777,8 +5777,8 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "[EXPRESS] gemini-2.5-pro-preview-03-25-auto",
-        "custom_url": "https://api.skyi.cc/v1",
+        "custom_model": "[vh]gemini-2.5-pro-preview-03-25",
+        "custom_url": "https://new.api-kk.shop/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
         "custom_include_headers": "",
