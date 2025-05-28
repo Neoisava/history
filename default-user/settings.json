@@ -4010,7 +4010,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": false,
+        "stream_openai": true,
         "openai_max_context": 1000000,
         "openai_max_tokens": 65500,
         "wrap_in_quotes": false,
@@ -5850,7 +5850,7 @@
                     },
                     {
                         "identifier": "1c2736b4-0370-42aa-990b-b5b33100ae6a",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "675ccf79-08f9-4310-a7aa-f160dea3fc33",
