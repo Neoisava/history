@@ -3668,7 +3668,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": false,
+        "stream_openai": true,
         "openai_max_context": 1000000,
         "openai_max_tokens": 65500,
         "wrap_in_quotes": false,
@@ -5300,7 +5300,7 @@
                     },
                     {
                         "identifier": "42aa2161-78d2-44b8-b807-895cc7bb3f7c",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "8335c30d-24ee-4a98-a622-d158c1e9325a",
@@ -5328,7 +5328,7 @@
                     },
                     {
                         "identifier": "7775a027-c11c-44e6-915d-aea1897dfd1f",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "a7c40be7-317f-45ee-afc9-f2736dbc3c7c",
