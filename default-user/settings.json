@@ -275,7 +275,7 @@
         "trusted_workers_only": false
     },
     "power_user": {
-        "charListGrid": true,
+        "charListGrid": false,
         "tokenizer": 99,
         "token_padding": 64,
         "collapse_newlines": true,
@@ -5328,7 +5328,7 @@
                     },
                     {
                         "identifier": "7775a027-c11c-44e6-915d-aea1897dfd1f",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "a7c40be7-317f-45ee-afc9-f2736dbc3c7c",
