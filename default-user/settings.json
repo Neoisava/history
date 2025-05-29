@@ -2595,6 +2595,23 @@
                 "maxDepth": null
             },
             {
+                "id": "720e7fe5-daa0-4dcf-b744-14a3faf54ab2",
+                "scriptName": "删除反和谐",
+                "findRegex": "[（\\(【〔]?和谐[）\\)】〕]?",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
                 "id": "400bb1b5-b318-4fc6-863a-d592ee16cff0",
                 "scriptName": "【Dreammini】DIE[推进(缩起)]",
                 "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
@@ -3466,7 +3483,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 85,
+                "lastProcessedLength": 86,
                 "userConfigured": true
             }
         },
