@@ -3501,7 +3501,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 173,
+                "lastProcessedLength": 174,
                 "userConfigured": true
             }
         },
@@ -5827,7 +5827,7 @@
                     },
                     {
                         "identifier": "ff7eb549-3dda-4325-b757-ebbed488badd",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "725ace11-5549-4045-a569-4bf8e0336797",
@@ -6020,7 +6020,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "[正常]gemini-2.5-pro-preview-03-25",
+        "custom_model": "[正常]gemini-2.5-pro-preview-05-06",
         "custom_url": "https://api.skyi.cc/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
