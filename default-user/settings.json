@@ -3483,7 +3483,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 87,
+                "lastProcessedLength": 85,
                 "userConfigured": true
             }
         },
@@ -4959,7 +4959,7 @@
                 "marker": false,
                 "name": "🫸推进速度/未知角色🫸",
                 "role": "system",
-                "content": "{{setvar::%speed::2(小)}}\n{{//单次推进数量，1个大是固定的，越多多人场景越不绝望，建议4个内}}\n\n{{setvar::%small::微增(1-5%)主★}}\n{{setvar::%big::微增(5-15%)主★}}\n{{//(主★累积速度}}\n\n\n{{setvar::character::优先已知角色}}\n{{//事件角色设定}}{{//可以改成\"只有已知角色\"、\"减少已知角色\"}}\n\n{{setvar::Unknown_character::未知角色需关联故事/角色线或作引}}\n{{//可以改成\"禁止未知角色\"、\"产生大量未知角色\"}}\n\n{{setvar::event::分故事方向60%、角色线30%、色情事件10%。}}\n{{//事件比例}}\n",
+                "content": "{{setvar::%speed::4(小)}}\n{{//单次推进数量，1个大是固定的，越多多人场景越不绝望，建议4个内}}\n\n{{setvar::%small::微增(1-5%)主★}}\n{{setvar::%big::微增(5-15%)主★}}\n{{//(主★累积速度}}\n\n\n{{setvar::character::优先已知角色}}\n{{//事件角色设定}}{{//可以改成\"只有已知角色\"、\"减少已知角色\"}}\n\n{{setvar::Unknown_character::未知角色需关联故事/角色线或作引}}\n{{//可以改成\"禁止未知角色\"、\"产生大量未知角色\"}}\n\n{{setvar::event::分故事方向60%、角色线30%、色情事件10%。}}\n{{//事件比例}}\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false,
@@ -6002,7 +6002,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "[正常]gemini-2.5-pro-preview-03-25",
+        "custom_model": "[正常]gemini-2.5-pro-preview-05-06",
         "custom_url": "https://api.skyi.cc/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
