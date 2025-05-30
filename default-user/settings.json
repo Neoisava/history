@@ -2,8 +2,8 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
-        "NavOpened": "false",
+        "LNavOpened": "true",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -71,7 +71,6 @@
                 {
                     "name": "修仙之路2.0",
                     "extraBooks": [
-                        "_tp的状态栏v4",
                         "_性爱世界书",
                         "SSVGG 2.0",
                         "人类本能世界书",
@@ -2722,7 +2721,7 @@
                 "placement": [
                     2
                 ],
-                "disabled": false,
+                "disabled": true,
                 "markdownOnly": true,
                 "promptOnly": false,
                 "runOnEdit": true,
