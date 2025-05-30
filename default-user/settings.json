@@ -3023,7 +3023,7 @@
             "config": {
                 "setList": [
                     {
-                        "set": "AutoContinue",
+                        "set": "性爱选项整合_68_emoji_set_整合版",
                         "isVisible": true
                     }
                 ]
@@ -3485,8 +3485,9 @@
                 "bookQuotes3": false,
                 "newline": false,
                 "user": true,
-                "char": true,
-                "custom_1": false
+                "char": false,
+                "custom_1": true,
+                "custom_0": true
             },
             "shortcuts": {
                 "asterisk": "",
@@ -3498,7 +3499,8 @@
                 "newline": "",
                 "user": "Alt+1",
                 "char": "Alt+2",
-                "custom_1": ""
+                "custom_1": "",
+                "custom_0": ""
             },
             "buttonOrder": [
                 "bookQuotes1",
@@ -3510,9 +3512,23 @@
                 "user",
                 "char",
                 "newline",
-                "custom_1"
+                "custom_1",
+                "custom_0"
             ],
-            "customSymbols": []
+            "customSymbols": [
+                {
+                    "name": "清芷",
+                    "symbol": "清芷",
+                    "display": "清芷",
+                    "cursorPos": "end"
+                },
+                {
+                    "name": "灵溪",
+                    "symbol": "灵溪",
+                    "display": "灵溪",
+                    "cursorPos": "end"
+                }
+            ]
         },
         "hide_4": {
             "enabled": true,
@@ -3527,7 +3543,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 251,
+                "lastProcessedLength": 253,
                 "userConfigured": true
             }
         },
