@@ -2712,23 +2712,6 @@
                 "maxDepth": null
             },
             {
-                "id": "ea1a6208-08f1-44dd-adb7-dfa1c25263e1",
-                "scriptName": "【tp的状态栏】美化正则",
-                "findRegex": "/<details>\\s*<summary>{{user}}状态栏<\\/summary>\\s*<pre>\\s*<code>([\\s\\S]*?)<\\/code>\\s*<\\/pre>\\s*<\\/details>/g",
-                "replaceString": "<details id=\"tp_status_bar\"><summary><span class=\"left\">STATUS</span><span class=\"right\">{{user}}</span></summary><pre><code>$1</code></pre></details>\n\n<style>\n\n#tp_status_bar {\n  padding: 8px;\n  background: linear-gradient(to bottom right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0) 100%);\n  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* 添加阴影 */\n  color: white;\n}\n/* 基本样式 */\n\n#tp_status_bar > summary {\n  display: flex;\n  justify-content: space-between;\n}\n/* summary左右对齐 */\n\n#tp_status_bar pre,\n#tp_status_bar code {\n  padding: 0 !important;\n  margin: 0 !important;\n  background: transparent !important;\n  border: none !important;\n  overflow: hidden;\n}\n/* pre, code格式化 */\n\n#tp_status_bar i.code-copy {\n  display: none !important;\n}\n/* 去除copy button */\n\n</style>\n",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": true,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
-                "substituteRegex": 1,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
                 "id": "114672ce-16d5-4834-813a-651e26e1faac",
                 "scriptName": "上下文限制[30]",
                 "findRegex": "/[\\s\\S]*/gm",
@@ -2973,10 +2956,10 @@
         "variables": {
             "global": {
                 "content": "\\(不要重复前文，继续输出新剧情！)",
-                "LAST_RECEIVE_TOKENS": 43118,
-                "LAST_RECEIVE_CHARS": 108002,
-                "LAST_SEND_TOKENS": 238303,
-                "LAST_SEND_CHARS": 385445
+                "LAST_RECEIVE_TOKENS": 2380,
+                "LAST_RECEIVE_CHARS": 3019,
+                "LAST_SEND_TOKENS": 145216,
+                "LAST_SEND_CHARS": 241850
             }
         },
         "attachments": [],
@@ -3614,7 +3597,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 315,
+                "lastProcessedLength": 316,
                 "userConfigured": true
             }
         },
