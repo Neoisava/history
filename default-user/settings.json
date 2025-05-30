@@ -78,6 +78,7 @@
                         "文风世界书 (7)",
                         "母子世界2.0_1",
                         "角色推进世界书DLC",
+                        "贝露的情绪世界书2.5gemini_(1)",
                         "针对2.5pro的瑟瑟场景"
                     ]
                 },
@@ -2729,6 +2730,25 @@
                 "substituteRegex": 0,
                 "minDepth": 40,
                 "maxDepth": null
+            },
+            {
+                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2,
+                    6
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -3430,7 +3450,9 @@
                         "enabled": true
                     }
                 ],
-                "characters_with_scripts": []
+                "characters_with_scripts": [
+                    "修仙之路2.0.png"
+                ]
             },
             "audio": {
                 "audio_enabled": false,
@@ -3597,7 +3619,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 316,
+                "lastProcessedLength": 315,
                 "userConfigured": true
             }
         },
