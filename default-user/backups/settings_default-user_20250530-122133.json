@@ -71,6 +71,7 @@
                 {
                     "name": "修仙之路2.0",
                     "extraBooks": [
+                        "_tp的状态栏v4",
                         "_性爱世界书",
                         "SSVGG 2.0",
                         "人类本能世界书",
@@ -2721,12 +2722,31 @@
                 "placement": [
                     2
                 ],
-                "disabled": true,
+                "disabled": false,
                 "markdownOnly": true,
                 "promptOnly": false,
                 "runOnEdit": true,
                 "substituteRegex": 1,
                 "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "114672ce-16d5-4834-813a-651e26e1faac",
+                "scriptName": "上下文限制[30]",
+                "findRegex": "/[\\s\\S]*/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2,
+                    6
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 40,
                 "maxDepth": null
             }
         ],
@@ -2996,10 +3016,10 @@
             "chatBubbleLightness": 0.15
         },
         "quickReplyV2": {
-            "isEnabled": true,
+            "isEnabled": false,
             "isCombined": true,
             "isPopout": false,
-            "showPopoutButton": true,
+            "showPopoutButton": false,
             "config": {
                 "setList": [
                     {
@@ -3465,8 +3485,17 @@
                 "bookQuotes3": false,
                 "newline": false,
                 "user": true,
-                "char": true,
-                "custom_1": false
+                "char": false,
+                "custom_1": true,
+                "custom_0": true,
+                "custom_2": true,
+                "custom_3": true,
+                "custom_4": true,
+                "custom_5": true,
+                "custom_6": true,
+                "custom_7": true,
+                "custom_8": true,
+                "custom_9": true
             },
             "shortcuts": {
                 "asterisk": "",
@@ -3478,7 +3507,17 @@
                 "newline": "",
                 "user": "Alt+1",
                 "char": "Alt+2",
-                "custom_1": ""
+                "custom_1": "",
+                "custom_0": "",
+                "custom_2": "",
+                "custom_3": "",
+                "custom_4": "",
+                "custom_5": "",
+                "custom_6": "",
+                "book_quotes1": "",
+                "custom_7": "",
+                "custom_8": "",
+                "custom_9": ""
             },
             "buttonOrder": [
                 "bookQuotes1",
@@ -3490,9 +3529,79 @@
                 "user",
                 "char",
                 "newline",
-                "custom_1"
+                "custom_1",
+                "custom_0",
+                "custom_2",
+                "custom_3",
+                "custom_4",
+                "custom_5",
+                "custom_6",
+                "custom_7",
+                "custom_8",
+                "custom_9"
             ],
-            "customSymbols": []
+            "customSymbols": [
+                {
+                    "name": "清芷",
+                    "symbol": "清芷",
+                    "display": "清芷",
+                    "cursorPos": "end"
+                },
+                {
+                    "name": "灵溪",
+                    "symbol": "灵溪",
+                    "display": "灵溪",
+                    "cursorPos": "end"
+                },
+                {
+                    "name": "柳莺",
+                    "symbol": "柳莺",
+                    "display": "柳莺-侍女",
+                    "cursorPos": "end"
+                },
+                {
+                    "name": "韩厉",
+                    "symbol": "韩厉",
+                    "display": "韩厉-暗杀追踪",
+                    "cursorPos": "end"
+                },
+                {
+                    "name": "冷月",
+                    "symbol": "冷月",
+                    "display": "冷月-生擒灭口",
+                    "cursorPos": "end"
+                },
+                {
+                    "name": "红袖",
+                    "symbol": "红袖",
+                    "display": "红袖-幻术",
+                    "cursorPos": "end"
+                },
+                {
+                    "name": "苏媚娘",
+                    "symbol": "苏媚娘",
+                    "display": "苏媚娘",
+                    "cursorPos": "end"
+                },
+                {
+                    "name": "王铁",
+                    "symbol": "王铁",
+                    "display": "王铁-保安",
+                    "cursorPos": "end"
+                },
+                {
+                    "name": "陈默",
+                    "symbol": "陈默",
+                    "display": "陈默-阵法追踪",
+                    "cursorPos": "middle"
+                },
+                {
+                    "name": "李四",
+                    "symbol": "李四",
+                    "display": "李四-花匠",
+                    "cursorPos": "end"
+                }
+            ]
         },
         "hide_4": {
             "enabled": true,
@@ -3507,7 +3616,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 194,
+                "lastProcessedLength": 292,
                 "userConfigured": true
             }
         },
@@ -5937,7 +6046,7 @@
                     },
                     {
                         "identifier": "e6912d3b-a998-4f2f-8c8f-e3e5325a9b36",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "73a2b8eb-9363-4cce-b61d-a254be1e7bdb",
