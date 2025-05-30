@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -2497,9 +2497,9 @@
                     "mode": "cc",
                     "exclude": [],
                     "api": "custom",
-                    "preset": "【Dreammini】1.41-pro-0528",
-                    "api-url": "https://new.api-kk.shop/v1",
-                    "model": "[vh]gemini-2.5-pro-preview-03-25",
+                    "preset": "【Dreammini】1.600-pro-0531",
+                    "api-url": "https://api.huaapi.asia/v1",
+                    "model": "gemini-2.5-pro-preview-03-25",
                     "stop-strings": "[]",
                     "start-reply-with": "",
                     "reasoning-template": "[Migrated] Custom",
@@ -2733,6 +2733,25 @@
                 "substituteRegex": 0,
                 "minDepth": 40,
                 "maxDepth": null
+            },
+            {
+                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2,
+                    6
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -2961,10 +2980,10 @@
         "variables": {
             "global": {
                 "content": "\\(不要重复前文，继续输出新剧情！)",
-                "LAST_RECEIVE_TOKENS": 41988,
-                "LAST_RECEIVE_CHARS": 106170,
-                "LAST_SEND_TOKENS": 173308,
-                "LAST_SEND_CHARS": 295302
+                "LAST_RECEIVE_TOKENS": 42355,
+                "LAST_RECEIVE_CHARS": 106935,
+                "LAST_SEND_TOKENS": 157049,
+                "LAST_SEND_CHARS": 259930
             }
         },
         "attachments": [],
@@ -3007,12 +3026,7 @@
             "isPopout": false,
             "showPopoutButton": false,
             "config": {
-                "setList": [
-                    {
-                        "set": "芭絲特系統QR",
-                        "isVisible": true
-                    }
-                ]
+                "setList": []
             }
         },
         "muyoo_dataTable": {
@@ -3813,7 +3827,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": false,
+        "stream_openai": true,
         "openai_max_context": 1000000,
         "openai_max_tokens": 65500,
         "wrap_in_quotes": false,
@@ -6326,8 +6340,8 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "[正常]gemini-2.5-pro-preview-03-25",
-        "custom_url": "https://api.skyi.cc/v1",
+        "custom_model": "gemini-2.5-pro-preview-03-25",
+        "custom_url": "https://api.huaapi.asia/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
         "custom_include_headers": "",
