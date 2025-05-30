@@ -2728,6 +2728,25 @@
                 "substituteRegex": 1,
                 "minDepth": null,
                 "maxDepth": null
+            },
+            {
+                "id": "114672ce-16d5-4834-813a-651e26e1faac",
+                "scriptName": "上下文限制[30]",
+                "findRegex": "/[\\s\\S]*/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2,
+                    6
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 40,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -3507,7 +3526,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 197,
+                "lastProcessedLength": 199,
                 "userConfigured": true
             }
         },
