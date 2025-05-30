@@ -3016,10 +3016,10 @@
             "chatBubbleLightness": 0.15
         },
         "quickReplyV2": {
-            "isEnabled": true,
+            "isEnabled": false,
             "isCombined": true,
             "isPopout": false,
-            "showPopoutButton": true,
+            "showPopoutButton": false,
             "config": {
                 "setList": [
                     {
@@ -3616,7 +3616,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 10,
-                "lastProcessedLength": 271,
+                "lastProcessedLength": 270,
                 "userConfigured": true
             }
         },
