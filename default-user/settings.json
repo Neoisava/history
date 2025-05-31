@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -3427,7 +3427,7 @@
                         "content": "async function e(e){const s=getChatMessages(e)[0];console.log(\"收到新消息:\",{消息ID:e,发送者:s.name,角色:s.role,内容:s.message,内容长度:s.message.length});const o=s.message.trim();if(\"\"===o){console.log(`检测到空消息 (ID: ${e})，正在删除并重新生成...`),toastr.warning(\"检测到空回复，正在删除并重新生成...\",\"自动重新生成\");try{await deleteChatMessages([e]),console.log(`已删除空消息 (ID: ${e})`),await new Promise((e=>setTimeout(e,100)));const s=await triggerSlash(\"/trigger\");console.log(\"已触发生成新消息，结果:\",s),toastr.success(\"重新生成已开始\",\"自动重新生成\")}catch(e){console.error(\"重新生成过程出错:\",e),toastr.error(\"重新生成失败，请手动重试\",\"自动重新生成\")}}else console.log(`消息内容不为空 (长度: ${o.length})，无需重新生成`)}$((()=>{toastr.success(\"空回自动重新生成脚本已加载!\",\"脚本启动\"),eventOn(tavern_events.MESSAGE_RECEIVED,e),console.log(\"空回自动重新生成监听器已设置，正在监控空消息...\")})),$(window).on(\"unload\",(()=>{toastr.info(\"空回自动重新生成脚本已卸载!\",\"脚本停止\"),eventClearEvent(tavern_events.MESSAGE_RECEIVED)}));",
                         "info": "@司马咩咩\n\n收到空消息（字面意义上的空消息，不是那种报错）会自动删掉空消息重新发送",
                         "buttons": [],
-                        "enabled": true
+                        "enabled": false
                     }
                 ],
                 "characters_with_scripts": []
@@ -3597,7 +3597,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 367,
+                "lastProcessedLength": 305,
                 "userConfigured": true
             }
         },
