@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "true",
-        "NavOpened": "false",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -3597,7 +3597,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 359,
                 "userConfigured": true
             }
         },
@@ -4594,7 +4594,7 @@
                 "marker": false,
                 "name": "状态栏(选开)(可改)",
                 "role": "system",
-                "content": "\n# 在正文</dream>后**必须**紧接着使用<StatusBlock></StatusBlock>包裹状态栏。\n\n<StatusBlock_format>\n角色状态栏取<user>视角内，好感度最高的角色。(同好感优先级，待告白先于恋人))\n此状态栏只适用于女性角色，**请勿**用于男性角色，\n状态栏格式：\n<StatusBlock>\n<details> <summary style=\"font-weight: bold; background-color: #444444; color: #ffffff; padding: 5px;\">角色名状态栏</summary> <p style=\"background-color: #000000; color: #ffffff; padding: 10px;\"> 🤔概述角色的面貌，身材。可以稍长，需要表现人物的特点。文字体现角色的性张力<br> 💞 好感度/信任度: {{value}}/100(关系) (+-数值)<br>   🧡向角色{{random::告白::询问友情::询问好感::询问信任::询问对<user>的想法::求婚}}: {{\"假设{{user}}在前文最后向角色询问，角色的回答\"}}<br> 🌹 性趣度: {{value}}/100 (符合该角色性格的特殊性趣阶段名称) (+-数值)<br> {{random::给内裤::自慰::吸奶::摸胸部::脱内裤::看内裤::亲吻::拥抱::手交::口交::性交::乳交::肛交::SM::足交::深喉::喝精液::让角色怀孕}}要求: {{\"假设{{user}}在前文最后向角色要求角色的回答\"}}<br> 🔥 性欲度:  {{value}}/100(性欲阶段) (+-数值)<br>   {{random::高潮::性欲望::多想被插小穴::多想被<user>侮辱::多想性爱::敏感程度}}状况: {{\"假设{{user}}在前文最后问角色当前状况角色的回答\"}}<br> 🕺 身体姿势: {姿势}{身体与{{user}}的接触}{色情的描述当前使用性器状况}<br> 🌀 内心话: {{{\"角色的内心话\" }} </p> </details>\n</StatusBlock>\n</StatusBlock_format>\n\n\n",
+                "content": "# 在正文</dream>后**必须**紧接着使用<StatusBlock></StatusBlock>包裹状态栏。\n\n<StatusBlock_format>\n此状态栏只适用于{{user}}，**请勿**用于其他任何角色。\n状态栏格式：\n<StatusBlock>\n<details> <summary style=\"font-weight: bold; background-color: #444444; color: #ffffff; padding: 5px;\">角色名状态栏</summary> <p style=\"background-color: #000000; color: #ffffff; padding: 10px;\">     \n⏱️【时间】: ${当前时间}<br>🗺️【地图】: ${{{user}}所在地}|${列出{{user}}可去地点，至少生成五个(用,分割)}<br>📖【性知识】: ${{{user}}对性知识了解程度(用一句话描述)}<br>📃【性经验】: ${{{user}}性经验}<br>(性经验示例: 处女(非处女则指明性交次数，如性交X次), 自慰X次, 口交X次, 肛交X次, 卖淫X次......etc)<br>(性经验规则: 完整的列举出{{user}}所有性经验，通过{{user}}的角色设定来初始化一个具体数值)<br>🧹【行为】:${{{user}}行为}<br>🧎【姿势】: ${{{user}}当前姿势}<br>👗【上装】: ${{{user}}上衣}<br>🩱【内衣】: ${{{user}}内衣}<br>👖【下装】: ${{{user}}下装}<br> 👙【内裤】: ${{{user}}内裤}<br>💓【乳房】: ${{{user}}当前乳房状态}<br>❣️【私处】: ${{{user}}当前私处状态}<br>🤎【后庭】: ${{{user}}当前后庭状态}<br>👩【林忆兰】: ${以打破第四面墙的观众角度对{{user}}评论}\n(该评价应覆盖对{{user}}的角色信息(重点性知识，性经验)、状态、服装、身体。并会给出色情发展方向建议)\n(该观众是{{user}}的儿子，会评价玩家性癖)</p> </details>\n</StatusBlock>\n</StatusBlock_format>\n\n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false,
@@ -6096,7 +6096,7 @@
                     },
                     {
                         "identifier": "675ccf79-08f9-4310-a7aa-f160dea3fc33",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "e292498c-c42d-481c-af72-0d00ca74f099",
