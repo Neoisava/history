@@ -2789,7 +2789,7 @@
             "dimension_step": 64,
             "width": 768,
             "height": 512,
-            "prompt_prefix": "",
+            "prompt_prefix": "masterpiece, best quality, beautiful female cultivator, icy expression, silver long hair with violet sheen, snow-white skin, icy blue eyes, cold pink lips, elegant and distant,hairless, Xianxia fantasy, soft erotic aura",
             "negative_prompt": "lowres, bad anatomy, bad hands, text, error, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry,solo,Extreme close-up",
             "sampler": "k_euler",
             "model": "nai-diffusion-4-full",
@@ -3597,7 +3597,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 320,
+                "lastProcessedLength": 323,
                 "userConfigured": true
             }
         },
