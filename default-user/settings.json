@@ -2,8 +2,8 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
-        "NavOpened": "false",
+        "LNavOpened": "true",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -3597,7 +3597,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 314,
+                "lastProcessedLength": 313,
                 "userConfigured": true
             }
         },
@@ -4594,7 +4594,7 @@
                 "marker": false,
                 "name": "状态栏(选开)(可改)",
                 "role": "system",
-                "content": "# 在正文</dream>后**必须**紧接着使用<StatusBlock></StatusBlock>包裹状态栏。\n\n<StatusBlock_format>\n此状态栏只适用于{{user}}，**请勿**用于其他任何角色。\n状态栏格式：\n<StatusBlock>\n<details> <summary style=\"font-weight: bold; background-color: #444444; color: #ffffff; padding: 5px;\">角色名状态栏</summary> <p style=\"background-color: #000000; color: #ffffff; padding: 10px;\">     \n⏱️【时间】: ${当前时间}<br>🗺️【地图】: ${{{user}}所在地}|${列出{{user}}可去地点，至少生成五个(用,分割)}<br>📖【性知识】: ${{{user}}对性知识了解程度(用一句话描述)}<br>📃【性经验】: ${{{user}}性经验}<br>(性经验示例: 处女(非处女则指明性交次数，如性交X次), 自慰X次, 口交X次, 肛交X次, 卖淫X次......etc)<br>(性经验规则: 完整的列举出{{user}}所有性经验，通过{{user}}的角色设定来初始化一个具体数值)<br>🧹【行为】:${{{user}}行为}<br>🧎【姿势】: ${{{user}}当前姿势}<br>👗【上装】: ${{{user}}上衣}<br>🩱【内衣】: ${{{user}}内衣}<br>👖【下装】: ${{{user}}下装}<br> 👙【内裤】: ${{{user}}内裤}<br>💓【乳房】: ${{{user}}当前乳房状态}<br>❣️【私处】: ${{{user}}当前私处状态}<br>🤎【后庭】: ${{{user}}当前后庭状态}<br>👩【林忆兰】: ${以打破第四面墙的观众角度对{{user}}评论}\n(该评价应覆盖对{{user}}的角色信息(重点性知识，性经验)、状态、服装、身体。并会给出色情发展方向建议)\n(该观众是{{user}}的儿子，会评价玩家性癖)</p> </details>\n</StatusBlock>\n</StatusBlock_format>\n\n\n",
+                "content": "# 在正文</dream>后**必须**紧接着使用<StatusBlock></StatusBlock>包裹状态栏。\n\n<StatusBlock_format>\n此状态栏只适用于{{user}}，**请勿**用于其他任何角色。\n状态栏格式：\n<StatusBlock>\n<details> <summary style=\"font-weight: bold; background-color: #444444; color: #ffffff; padding: 5px;\">角色名状态栏</summary> <p style=\"background-color: #000000; color: #ffffff; padding: 10px;\">     \n⏱️【时间】: ${当前时间}<br>🗺️【地图】: ${{{user}}所在地}|${列出{{user}}可去附近地点，至少生成五个(用,分割)}<br>📖【性知识】: ${{{user}}对性知识了解程度(用一句话描述)}<br>📃【性经验】: ${{{user}}性经验}<br>(性经验示例: 处女(非处女则指明性交次数，如性交X次), 自慰X次, 口交X次, 肛交X次, 卖淫X次......etc)<br>(性经验规则: 完整的列举出{{user}}所有性经验，通过{{user}}的角色设定来初始化一个具体数值)<br>🧹【行为】:${{{user}}行为}<br>🧎【姿势】: ${{{user}}当前姿势}<br>👗【上装】: ${{{user}}上衣}<br>🩱【内衣】: ${{{user}}内衣}<br>👖【下装】: ${{{user}}下装}<br> 👙【内裤】: ${{{user}}内裤}<br>💓【乳房】: ${{{user}}当前乳房状态}<br>❣️【私处】: ${{{user}}当前私处状态}<br>🤎【后庭】: ${{{user}}当前后庭状态}<br>👩【林忆兰】: ${以打破第四面墙的观众角度对{{user}}评论}\n(该评价应覆盖对{{user}}的角色信息(重点性知识，性经验)、状态、服装、身体。并会给出色情发展方向建议)\n(该观众是{{user}}的儿子，会评价玩家性癖)</p> </details>\n</StatusBlock>\n</StatusBlock_format>\n\n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false,
@@ -6096,7 +6096,7 @@
                     },
                     {
                         "identifier": "675ccf79-08f9-4310-a7aa-f160dea3fc33",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "e292498c-c42d-481c-af72-0d00ca74f099",
