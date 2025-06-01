@@ -16,7 +16,7 @@
     "perplexity_model": "llama-3.1-70b-instruct",
     "groq_model": "llama-3.1-70b-versatile",
     "zerooneai_model": "yi-large",
-    "custom_model": "[正常]gemini-2.5-pro-preview-05-06",
+    "custom_model": "[正常]gemini-2.5-pro-preview-03-25",
     "custom_url": "https://api.skyi.cc/v1",
     "custom_include_body": "",
     "custom_exclude_body": "",
@@ -32,7 +32,7 @@
     "min_p": 0,
     "repetition_penalty": 1,
     "openai_max_context": 400000,
-    "openai_max_tokens": 85000,
+    "openai_max_tokens": 65000,
     "wrap_in_quotes": false,
     "names_behavior": 0,
     "send_if_empty": "",
@@ -49,7 +49,7 @@
     "scenario_format": "{{scenario}}",
     "personality_format": "{{personality}}",
     "group_nudge_prompt": "[Write the next reply only as {{char}}.]",
-    "stream_openai": false,
+    "stream_openai": true,
     "prompts": [
         {
             "name": "Main Prompt",
@@ -2747,7 +2747,7 @@
                 },
                 {
                     "identifier": "b6b4ff93-8511-4ddc-b866-9e3bca759b84",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "d4994bbf-8c62-4baa-a790-4e734264275b",
@@ -2759,7 +2759,7 @@
                 },
                 {
                     "identifier": "1a254cbe-ed65-44a1-8c19-8d5a0a800838",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "b83f1d4d-689f-4aba-8d4e-360d572bf03a",

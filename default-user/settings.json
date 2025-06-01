@@ -3622,7 +3622,7 @@
                         "content": "function lock_inputs(enable) {\n    $('#range_block_openai :input').prop('disabled', enable);\n    $('#openai_settings > div:first-child :input').prop('disabled', enable);\n    $('#stream_toggle').prop('disabled', false);\n    $('#openai_show_thoughts').prop('disabled', false);\n}\n$(() => {\n    lock_inputs(true);\n});\n$(window).on('unload', () => lock_inputs(false));\nexport {};\n",
                         "info": "# 预设防误触\n\n**作者:** 青空莉想做舞台少女的狗\n**版本:** 2025/04/29\n**源文件:** [点此跳转](https://gitgud.io/StageDog/tavern_resource/-/tree/main/酒馆助手/预设防误触/源文件?ref_type=heads)\n**说明:** 启用后将锁定预设除了 '流式传输'、'请求思维链' 和 '具体条目' 以外的选项, 不能通过界面来修改\n",
                         "buttons": [],
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "id": "70c0bab7-c2a2-46f1-a0b9-21835bc4566e",
@@ -3850,7 +3850,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 345,
+                "lastProcessedLength": 346,
                 "userConfigured": true
             }
         },
@@ -4083,9 +4083,9 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": false,
+        "stream_openai": true,
         "openai_max_context": 400000,
-        "openai_max_tokens": 85000,
+        "openai_max_tokens": 65000,
         "wrap_in_quotes": false,
         "prompts": [
             {
@@ -6784,7 +6784,7 @@
                     },
                     {
                         "identifier": "b6b4ff93-8511-4ddc-b866-9e3bca759b84",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "d4994bbf-8c62-4baa-a790-4e734264275b",
@@ -6796,7 +6796,7 @@
                     },
                     {
                         "identifier": "1a254cbe-ed65-44a1-8c19-8d5a0a800838",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "b83f1d4d-689f-4aba-8d4e-360d572bf03a",
@@ -6848,7 +6848,7 @@
                     },
                     {
                         "identifier": "7800937b-8af6-4cbd-b563-02983e65e1be",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "25cd1c61-3ed7-4a0b-9922-b5d38de4b7ff",
@@ -7622,7 +7622,7 @@
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
         "custom_model": "[正常]gemini-2.5-pro-preview-05-06",
-        "custom_url": "https://api.skyi.cc/v1",
+        "custom_url": "sk-qSRYdQUdlXFBdhnQzic3PocYZrFZJeEsWPYitnjUz8GourHp",
         "custom_include_body": "",
         "custom_exclude_body": "",
         "custom_include_headers": "",
