@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "true",
-        "NavOpened": "false",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -22,7 +22,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": null,
+    "active_character": "修仙之路2.0.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2803,7 +2803,7 @@
             {
                 "id": "0d28134f-5b68-4619-8cc9-df6ce99d5eb3",
                 "scriptName": "【demini】专防省略号增殖正则",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/…/gi",
                 "replaceString": "",
@@ -7128,7 +7128,7 @@
                     },
                     {
                         "identifier": "efe3d9b7-3f85-4c30-bbbc-2960e3aa508f",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "ac8a963f-9017-41b7-8dad-97a98b284a12",
