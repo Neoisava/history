@@ -3702,18 +3702,17 @@
                 "newline": false,
                 "user": true,
                 "char": false,
-                "custom_1": true,
-                "custom_0": true,
-                "custom_2": true,
-                "custom_3": true,
-                "custom_4": true,
-                "custom_5": true,
                 "custom_6": true,
                 "custom_7": true,
                 "custom_8": true,
                 "custom_9": true,
                 "custom_10": true,
-                "custom_11": true
+                "custom_11": true,
+                "custom_3": true,
+                "custom_4": true,
+                "custom_5": true,
+                "custom_2": true,
+                "custom_1": true
             },
             "shortcuts": {
                 "asterisk": "",
@@ -3725,19 +3724,18 @@
                 "newline": "",
                 "user": "Alt+1",
                 "char": "Alt+2",
-                "custom_1": "",
-                "custom_0": "",
-                "custom_2": "",
-                "custom_3": "",
-                "custom_4": "",
-                "custom_5": "",
                 "custom_6": "",
                 "book_quotes1": "",
                 "custom_7": "",
                 "custom_8": "",
                 "custom_9": "",
                 "custom_10": "",
-                "custom_11": ""
+                "custom_11": "",
+                "custom_3": "",
+                "custom_4": "",
+                "custom_5": "",
+                "custom_2": "",
+                "custom_1": ""
             },
             "buttonOrder": [
                 "bookQuotes1",
@@ -3749,93 +3747,19 @@
                 "user",
                 "char",
                 "newline",
-                "custom_1",
-                "custom_0",
-                "custom_2",
-                "custom_3",
-                "custom_4",
-                "custom_5",
                 "custom_6",
                 "custom_7",
                 "custom_8",
                 "custom_9",
                 "custom_10",
-                "custom_11"
+                "custom_11",
+                "custom_3",
+                "custom_4",
+                "custom_5",
+                "custom_2",
+                "custom_1"
             ],
-            "customSymbols": [
-                {
-                    "name": "清芷",
-                    "symbol": "清芷",
-                    "display": "清芷",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "灵溪",
-                    "symbol": "灵溪",
-                    "display": "灵溪",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "柳莺",
-                    "symbol": "柳莺",
-                    "display": "柳莺-侍女",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "韩厉",
-                    "symbol": "韩厉",
-                    "display": "韩厉-暗杀追踪",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "冷月",
-                    "symbol": "冷月",
-                    "display": "冷月-生擒灭口",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "红袖",
-                    "symbol": "红袖",
-                    "display": "红袖-幻术",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "苏媚娘",
-                    "symbol": "苏媚娘",
-                    "display": "苏媚娘",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "王铁",
-                    "symbol": "王铁",
-                    "display": "王铁-保安",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "陈默",
-                    "symbol": "陈默",
-                    "display": "陈默-阵法追踪",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "李四",
-                    "symbol": "李四",
-                    "display": "李四-花匠",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "血罗刹",
-                    "symbol": "血罗刹",
-                    "display": "血罗刹",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "林忆兰",
-                    "symbol": "林忆兰",
-                    "display": "林忆兰",
-                    "cursorPos": "end"
-                }
-            ]
+            "customSymbols": []
         },
         "hide_4": {
             "enabled": true,
@@ -3850,7 +3774,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 7,
+                "lastProcessedLength": 9,
                 "userConfigured": true
             }
         },
