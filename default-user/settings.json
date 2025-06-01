@@ -2732,6 +2732,24 @@
                 "promptOnly": true
             },
             {
+                "id": "a1bf2397-7c4a-4580-9daa-b9d916390865",
+                "scriptName": "部位特写",
+                "findRegex": "/<font[^>]*>(.|\\n)*<\\/font>/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": false,
+                "minDepth": 2,
+                "maxDepth": null
+            },
+            {
                 "id": "831e2743-fe02-4a94-ab38-97b224cd0d67",
                 "scriptName": "【demini】D1添加用户输入TAG",
                 "disabled": true,
