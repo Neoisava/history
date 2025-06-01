@@ -25,7 +25,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": "修仙之路2.0.png",
+    "active_character": "地图导航模块3.0.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -277,7 +277,7 @@
         "trusted_workers_only": false
     },
     "power_user": {
-        "charListGrid": false,
+        "charListGrid": true,
         "tokenizer": 99,
         "token_padding": 64,
         "collapse_newlines": true,
@@ -6330,7 +6330,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "gemini-2.5-pro-exp-03-25",
+        "custom_model": "gemini-2.5-pro-preview-05-06",
         "custom_url": "https://api.huaapi.asia/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
