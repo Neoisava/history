@@ -2578,23 +2578,6 @@
                 "promptOnly": true
             },
             {
-                "id": "fbf24cfa-8b3a-404a-91d2-082ccda1dd07",
-                "scriptName": "【Dreammini】Kemini去除所有用户消息",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "^([\\s\\S]*)$",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "substituteRegex": 0,
-                "minDepth": 1,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
                 "id": "fc1cf978-1e1e-41ab-a291-bacf8f21fca8",
                 "scriptName": "【Dreammini】Kemini通用去除多余内容",
                 "disabled": false,
@@ -2609,6 +2592,23 @@
                 "minDepth": null,
                 "maxDepth": null,
                 "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "fbf24cfa-8b3a-404a-91d2-082ccda1dd07",
+                "scriptName": "【Dreammini】Kemini去除所有用户消息",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "^([\\s\\S]*)$",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "substituteRegex": 0,
+                "minDepth": 1,
+                "maxDepth": null,
+                "markdownOnly": false,
                 "promptOnly": true
             },
             {
@@ -3850,7 +3850,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 346,
+                "lastProcessedLength": 345,
                 "userConfigured": true
             }
         },
@@ -4083,7 +4083,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": true,
+        "stream_openai": false,
         "openai_max_context": 1000000,
         "openai_max_tokens": 65500,
         "wrap_in_quotes": false,
