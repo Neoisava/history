@@ -361,7 +361,7 @@
         "world_import_dialog": true,
         "enable_auto_select_input": false,
         "enable_md_hotkeys": false,
-        "tag_import_setting": 1,
+        "tag_import_setting": 3,
         "disable_group_trimming": false,
         "single_line": false,
         "instruct": {
@@ -3729,6 +3729,26 @@
             "color": "",
             "color2": "",
             "create_date": 1748162195926
+        },
+        {
+            "id": "8c8ef590-3874-4b98-9e3b-d90d524525a0",
+            "name": "武侠",
+            "folder_type": "NONE",
+            "filter_state": "UNDEFINED",
+            "sort_order": null,
+            "color": "",
+            "color2": "",
+            "create_date": 1748759335022
+        },
+        {
+            "id": "920223dc-f8b9-4fcc-8a18-650bfdc21db6",
+            "name": "系统",
+            "folder_type": "NONE",
+            "filter_state": "UNDEFINED",
+            "sort_order": null,
+            "color": "",
+            "color2": "",
+            "create_date": 1748759335022
         }
     ],
     "tag_map": {
@@ -3745,6 +3765,10 @@
             "367c4c8e-f041-4a28-9f30-22f1dd97edc7",
             "985defd2-95f8-4152-9ff6-71c9b0a8b728",
             "149ac21c-db86-48f9-a891-590161d603ab"
+        ],
+        "世界调制模式·古代篇（0.6）.png": [
+            "8c8ef590-3874-4b98-9e3b-d90d524525a0",
+            "920223dc-f8b9-4fcc-8a18-650bfdc21db6"
         ]
     },
     "nai_settings": {
