@@ -3473,7 +3473,8 @@
                 "custom_7": true,
                 "custom_8": true,
                 "custom_9": true,
-                "custom_10": true
+                "custom_10": true,
+                "custom_11": true
             },
             "shortcuts": {
                 "asterisk": "",
@@ -3496,7 +3497,8 @@
                 "custom_7": "",
                 "custom_8": "",
                 "custom_9": "",
-                "custom_10": ""
+                "custom_10": "",
+                "custom_11": ""
             },
             "buttonOrder": [
                 "bookQuotes1",
@@ -3518,7 +3520,8 @@
                 "custom_7",
                 "custom_8",
                 "custom_9",
-                "custom_10"
+                "custom_10",
+                "custom_11"
             ],
             "customSymbols": [
                 {
@@ -3585,6 +3588,12 @@
                     "name": "血罗刹",
                     "symbol": "血罗刹",
                     "display": "血罗刹",
+                    "cursorPos": "end"
+                },
+                {
+                    "name": "林忆兰",
+                    "symbol": "林忆兰",
+                    "display": "林忆兰",
                     "cursorPos": "end"
                 }
             ]
