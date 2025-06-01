@@ -378,7 +378,7 @@
             "marker": false,
             "name": "自己调字数(三选一)",
             "role": "system",
-            "content": "<output_constraints>\n- 每次回复的中文内容多于700字，少于1800字\n- 直接以角色（非<user>）的行为/语言作为每一次正文结尾，避免在结尾出现心理描写及评价性描述\n</output_constraints>",
+            "content": "<output_constraints>\n- 每次回复的中文内容多于1000字，少于2500字\n- 直接以角色（非<user>）的行为/语言作为每一次正文结尾，避免在结尾出现心理描写及评价性描述\n</output_constraints>",
             "injection_position": 0,
             "injection_depth": 4,
             "forbid_overrides": false
@@ -2959,11 +2959,11 @@
                 },
                 {
                     "identifier": "2353ad09-a181-4c99-8ce9-839b0c16f08a",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "932e5f24-bb7c-4b83-9da8-767cfaabe670",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "de9a5223-d6e8-4d72-ae0e-65733a2d282f",
