@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -2648,7 +2648,7 @@
             {
                 "id": "34c20d3a-2bff-42ec-800d-59ae1d6d8ce5",
                 "scriptName": "【Dreammini】DIE小总结(格式)",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/(?<!<details>\\s*)<summary>(((?!<summary>)[\\s\\S])*?)<\\/summary>/g",
                 "replaceString": "<details>\n<summary>摘要</summary>\n$1\n</details>",
@@ -2665,7 +2665,7 @@
             {
                 "id": "f2cdf310-21c3-47aa-9dc3-02a638254eda",
                 "scriptName": "【Dreammini】DIE小总结(移除正文)",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/[\\s\\S]*?(?<!<details>\\s*)<summary>([\\s\\S]*)<\\/summary>[\\s\\S]*/g",
                 "replaceString": "<summary>\n$1\n</summary>",
@@ -2820,7 +2820,7 @@
             {
                 "id": "36d8430f-f0b2-474b-89cc-4a651f82851d",
                 "scriptName": "【demini】D1汇总记录折叠",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<Main_Quest>(.*?)</Main_Quest>/gs",
                 "replaceString": "<details><summary>*<font color=#87CEFA>汇总记录</font>*</summary>\n> $1\n</details>",
@@ -2854,7 +2854,7 @@
             {
                 "id": "d0d3841f-e8a8-4663-af2b-f0f69262b2c9",
                 "scriptName": "【demini】D3略三楼前汇总",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
                 "replaceString": "",
@@ -2871,7 +2871,7 @@
             {
                 "id": "94e82fcd-eb50-44d9-9ebc-286e2c3aed20",
                 "scriptName": "【demini】D1非插件式表格折叠",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<table>(.*?)</table>/gs",
                 "replaceString": "<details><summary>*<font color=#C0C0C0>非插件式表格<font>*</summary>\n> $1\n</details>",
@@ -2905,7 +2905,7 @@
             {
                 "id": "7d16a960-4995-4207-bd04-651fc5670dea",
                 "scriptName": "【demini】D4隐藏全部前文[22]",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/[\\s\\S]*/gm",
                 "replaceString": "",
@@ -2939,7 +2939,7 @@
             {
                 "id": "d166df24-d6b7-49d7-b5c6-1ea8deb5bb5f",
                 "scriptName": "【demini】D2替绝望羊隐藏正则",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<air>[\\s\\S]*?</air>/g",
                 "replaceString": "",
@@ -2956,7 +2956,7 @@
             {
                 "id": "0554bfce-3b2e-46a4-b417-9aa7a6e986ee",
                 "scriptName": "【demini】D3前绝望羊补牢正则",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<air>[\\s\\S]*?</air>/g",
                 "replaceString": "",
