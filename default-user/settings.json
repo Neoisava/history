@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -2391,8 +2391,8 @@
         "spoiler_free_mode": true
     },
     "extension_settings": {
-        "apiUrl": "https://sllt.uk/v1",
-        "apiKey": "sk-QLbg5uEqZmuYYsag1K4XZTXtX0LvhJWtxMiBuVvebLEWyuTm",
+        "apiUrl": "https://api.skyi.cc/v1",
+        "apiKey": "sk-BPmkfIyj7ieteLFZnLatO5hWExcRT4OyTJ3l4ix6rhUTpvt7",
         "autoConnect": false,
         "notifyUpdates": false,
         "disabledExtensions": [],
@@ -3850,7 +3850,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 344,
+                "lastProcessedLength": 345,
                 "userConfigured": true
             }
         },
@@ -4083,7 +4083,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": true,
+        "stream_openai": false,
         "openai_max_context": 400000,
         "openai_max_tokens": 60000,
         "wrap_in_quotes": false,
@@ -7621,8 +7621,8 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "gemini-2.5-pro-preview-03-25",
-        "custom_url": "https://api.huaapi.asia/v1",
+        "custom_model": "[正常]gemini-2.5-pro-preview-05-06",
+        "custom_url": "https://api.skyi.cc/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
         "custom_include_headers": "",
