@@ -18,14 +18,11 @@
         "AlertWI_修仙之路2.0.png": "true",
         "AlertWI_修仙世界-[万界大陆].png": "true",
         "AlertWI_(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png": "true",
-        "AlertRegex_(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png": "true",
-        "AlertWI_地图导航模块3.0.png": "true",
-        "AlertWI_论nfsw文风的十种用法.png": "true",
-        "AlertRegex_论nfsw文风的十种用法.png": "true"
+        "AlertRegex_(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png": "true"
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": "地图导航模块3.0.png",
+    "active_character": "修仙之路2.0.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -277,7 +274,7 @@
         "trusted_workers_only": false
     },
     "power_user": {
-        "charListGrid": true,
+        "charListGrid": false,
         "tokenizer": 99,
         "token_padding": 64,
         "collapse_newlines": true,
@@ -2738,8 +2735,7 @@
         "character_allowed_regex": [
             "凡人修仙传·凤起灵绝·大罗真魂都市修仙灵气复苏（地图互动RPG带系统版）.png",
             "修仙之路2.0.png",
-            "(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png",
-            "论nfsw文风的十种用法.png"
+            "(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png"
         ],
         "tts": {
             "voiceMap": "",
@@ -3740,9 +3736,7 @@
             "367c4c8e-f041-4a28-9f30-22f1dd97edc7",
             "985defd2-95f8-4152-9ff6-71c9b0a8b728",
             "149ac21c-db86-48f9-a891-590161d603ab"
-        ],
-        "地图导航模块3.0.png": [],
-        "论nfsw文风的十种用法.png": []
+        ]
     },
     "nai_settings": {
         "temperature": 1.37,
