@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
+        "LNavOpened": "true",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -2499,7 +2499,7 @@
                     "api": "custom",
                     "preset": "【Dreammini】1.600-pro-0531",
                     "api-url": "https://api.huaapi.asia/v1",
-                    "model": "gemini-2.5-pro-preview-03-25",
+                    "model": "gemini-2.5-flash-preview-05-20",
                     "stop-strings": "[]",
                     "start-reply-with": "",
                     "reasoning-template": "[Migrated] Custom",
@@ -2789,7 +2789,7 @@
             "dimension_step": 64,
             "width": 768,
             "height": 512,
-            "prompt_prefix": "masterpiece, best quality, beautiful female cultivator, icy expression, silver long hair with violet sheen, snow-white skin, icy blue eyes, cold pink lips, elegant and distant,hairless, Xianxia fantasy, soft erotic aura  ",
+            "prompt_prefix": "masterpiece, best quality, beautiful female cultivator, icy expression, silver long hair with violet sheen, snow-white skin, icy blue eyes, cold pink lips, elegant and distant,hairless, Xianxia fantasy, soft erotic aura",
             "negative_prompt": "lowres, bad anatomy, bad hands, text, error, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry,solo,Extreme close-up",
             "sampler": "k_euler",
             "model": "nai-diffusion-4-full",
@@ -3476,7 +3476,8 @@
                 "custom_6": true,
                 "custom_7": true,
                 "custom_8": true,
-                "custom_9": true
+                "custom_9": true,
+                "custom_10": true
             },
             "shortcuts": {
                 "asterisk": "",
@@ -3498,7 +3499,8 @@
                 "book_quotes1": "",
                 "custom_7": "",
                 "custom_8": "",
-                "custom_9": ""
+                "custom_9": "",
+                "custom_10": ""
             },
             "buttonOrder": [
                 "bookQuotes1",
@@ -3519,7 +3521,8 @@
                 "custom_6",
                 "custom_7",
                 "custom_8",
-                "custom_9"
+                "custom_9",
+                "custom_10"
             ],
             "customSymbols": [
                 {
@@ -3574,12 +3577,18 @@
                     "name": "陈默",
                     "symbol": "陈默",
                     "display": "陈默-阵法追踪",
-                    "cursorPos": "middle"
+                    "cursorPos": "end"
                 },
                 {
                     "name": "李四",
                     "symbol": "李四",
                     "display": "李四-花匠",
+                    "cursorPos": "end"
+                },
+                {
+                    "name": "血罗刹",
+                    "symbol": "血罗刹",
+                    "display": "血罗刹",
                     "cursorPos": "end"
                 }
             ]
@@ -3597,7 +3606,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 306,
+                "lastProcessedLength": 339,
                 "userConfigured": true
             }
         },
@@ -3808,7 +3817,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": true,
+        "stream_openai": false,
         "openai_max_context": 1000000,
         "openai_max_tokens": 65500,
         "wrap_in_quotes": false,
@@ -3843,7 +3852,7 @@
                 "name": "用户身份、性别、字数调整🎃🎃",
                 "system_prompt": true,
                 "role": "system",
-                "content": "{{setvar::userConfirm::<user>}}\n{{//注解:用户身份，重要，可改摄影机、上帝、旁观者或<user>、其他角色}}\n\n{{setvar::gender::女}}\n{{//注解:用户性别，仅影响色情强化}}\n\n{{setvar::min::1500token}}\n{{//注解:正文最小字数}}\n\n{{setvar::max::2500token}}\n{{//注解:正文最大字数}}\n\n{{setvar::smallcot::3个}}\n{{setvar::smallcotl::150}}\n{{//注解:文笔修正数量与使用token长度}}\n\n\n\n",
+                "content": "{{setvar::userConfirm::<user>}}\n{{//注解:用户身份，重要，可改摄影机、上帝、旁观者或<user>、其他角色}}\n\n{{setvar::gender::女}}\n{{//注解:用户性别，仅影响色情强化}}\n\n{{setvar::min::1000token}}\n{{//注解:正文最小字数}}\n\n{{setvar::max::2000token}}\n{{//注解:正文最大字数}}\n\n{{setvar::smallcot::3个}}\n{{setvar::smallcotl::150}}\n{{//注解:文笔修正数量与使用token长度}}\n\n\n\n",
                 "identifier": "jailbreak",
                 "injection_position": 0,
                 "injection_depth": 4,
@@ -4594,7 +4603,7 @@
                 "marker": false,
                 "name": "状态栏(选开)(可改)",
                 "role": "system",
-                "content": "# 在正文</dream>后**必须**紧接着使用<StatusBlock></StatusBlock>包裹状态栏。\n\n<StatusBlock_format>\n此状态栏只适用于{{user}}，**请勿**用于其他任何角色。\n状态栏格式：\n<StatusBlock>\n<details> <summary style=\"font-weight: bold; background-color: #444444; color: #ffffff; padding: 5px;\">角色名状态栏</summary> <p style=\"background-color: #000000; color: #ffffff; padding: 10px;\">     \n⏱️【时间】: ${当前时间}<br>🗺️【地图】: ${{{user}}所在地}|${列出{{user}}可去地点，至少生成五个(用,分割)}<br>📖【性知识】: ${{{user}}对性知识了解程度(用一句话描述)}<br>📃【性经验】: ${{{user}}性经验}<br>(性经验示例: 处女(非处女则指明性交次数，如性交X次), 自慰X次, 口交X次, 肛交X次, 卖淫X次......etc)<br>(性经验规则: 完整的列举出{{user}}所有性经验，通过{{user}}的角色设定来初始化一个具体数值)<br>🧹【行为】:${{{user}}行为}<br>🧎【姿势】: ${{{user}}当前姿势}<br>👗【上装】: ${{{user}}上衣}<br>🩱【内衣】: ${{{user}}内衣}<br>👖【下装】: ${{{user}}下装}<br> 👙【内裤】: ${{{user}}内裤}<br>💓【乳房】: ${{{user}}当前乳房状态}<br>❣️【私处】: ${{{user}}当前私处状态}<br>🤎【后庭】: ${{{user}}当前后庭状态}<br>👩【林忆兰】: ${以打破第四面墙的观众角度对{{user}}评论}\n(该评价应覆盖对{{user}}的角色信息(重点性知识，性经验)、状态、服装、身体。并会给出色情发展方向建议)\n(该观众是{{user}}的儿子，会评价玩家性癖)</p> </details>\n</StatusBlock>\n</StatusBlock_format>\n\n\n",
+                "content": "# 在正文</dream>后**必须**紧接着使用<StatusBlock></StatusBlock>包裹状态栏。\n\n<StatusBlock_format>\n此状态栏只适用于{{user}}，**请勿**用于其他任何角色。\n状态栏格式：\n<StatusBlock>\n<details> <summary style=\"font-weight: bold; background-color: #444444; color: #ffffff; padding: 5px;\">角色名状态栏</summary> <p style=\"background-color: #000000; color: #ffffff; padding: 10px;\">     \n⏱️【时间】: ${当前时间}<br>🗺️【地图】: ${{{user}}所在地}|${列出{{user}}可去附近地点，至少生成五个(用,分割)}<br>📖【性知识】: ${{{user}}对性知识了解程度(用一句话描述)}<br>📃【性经验】: ${{{user}}性经验}<br>(性经验示例: 处女(非处女则指明性交次数，如性交X次), 自慰X次, 口交X次, 肛交X次, 卖淫X次......etc)<br>(性经验规则: 完整的列举出{{user}}所有性经验，通过{{user}}的角色设定来初始化一个具体数值)<br>🧹【行为】:${{{user}}行为}<br>🧎【姿势】: ${{{user}}当前姿势}<br>👗【上装】: ${{{user}}上衣}<br>🩱【内衣】: ${{{user}}内衣}<br>👖【下装】: ${{{user}}下装}<br> 👙【内裤】: ${{{user}}内裤}<br>💓【乳房】: ${{{user}}当前乳房状态}<br>❣️【私处】: ${{{user}}当前私处状态}<br>🤎【后庭】: ${{{user}}当前后庭状态}<br>👩【林忆兰】: ${以打破第四面墙的观众角度对{{user}}评论}\n(该评价应覆盖对{{user}}的角色信息(重点性知识，性经验)、状态、服装、身体。并会给出色情发展方向建议)\n(该观众是{{user}}的儿子，会评价玩家性癖)</p> </details>\n</StatusBlock>\n</StatusBlock_format>\n\n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false,
@@ -6124,11 +6133,11 @@
                     },
                     {
                         "identifier": "ff7eb549-3dda-4325-b757-ebbed488badd",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "725ace11-5549-4045-a569-4bf8e0336797",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "b30e6b7e-13ff-4467-8ae2-ba243ced739c",
@@ -6321,8 +6330,8 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "[正常]gemini-2.5-pro-preview-05-06",
-        "custom_url": "https://api.skyi.cc/v1",
+        "custom_model": "gemini-2.5-pro-preview-05-06",
+        "custom_url": "https://api.huaapi.asia/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
         "custom_include_headers": "",
