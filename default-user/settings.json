@@ -3850,7 +3850,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 348,
+                "lastProcessedLength": 347,
                 "userConfigured": true
             }
         },
@@ -4083,7 +4083,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": true,
+        "stream_openai": false,
         "openai_max_context": 1000000,
         "openai_max_tokens": 65500,
         "wrap_in_quotes": false,
@@ -6399,11 +6399,11 @@
                     },
                     {
                         "identifier": "ff7eb549-3dda-4325-b757-ebbed488badd",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "725ace11-5549-4045-a569-4bf8e0336797",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "b30e6b7e-13ff-4467-8ae2-ba243ced739c",
