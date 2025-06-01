@@ -18,10 +18,7 @@
         "AlertWI_修仙之路2.0.png": "true",
         "AlertWI_修仙世界-[万界大陆].png": "true",
         "AlertWI_(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png": "true",
-        "AlertRegex_(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png": "true",
-        "AlertWI_地图导航模块3.0.png": "true",
-        "AlertWI_论nfsw文风的十种用法.png": "true",
-        "AlertRegex_论nfsw文风的十种用法.png": "true"
+        "AlertRegex_(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png": "true"
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
@@ -82,6 +79,7 @@
                         "文风世界书 (7)",
                         "母子世界2.0_1",
                         "角色推进世界书DLC",
+                        "部位特写",
                         "针对2.5pro的瑟瑟场景"
                     ]
                 },
@@ -364,7 +362,7 @@
         "world_import_dialog": true,
         "enable_auto_select_input": false,
         "enable_md_hotkeys": false,
-        "tag_import_setting": 1,
+        "tag_import_setting": 3,
         "disable_group_trimming": false,
         "single_line": false,
         "instruct": {
@@ -2393,8 +2391,8 @@
         "spoiler_free_mode": true
     },
     "extension_settings": {
-        "apiUrl": "https://sllt.uk/v1",
-        "apiKey": "sk-QLbg5uEqZmuYYsag1K4XZTXtX0LvhJWtxMiBuVvebLEWyuTm",
+        "apiUrl": "https://api.huaapi.asia/v1",
+        "apiKey": "sk-qSRYdQUdlXFBdhnQzic3PocYZrFZJeEsWPYitnjUz8GourHp",
         "autoConnect": false,
         "notifyUpdates": false,
         "disabledExtensions": [],
@@ -2497,7 +2495,7 @@
                     "mode": "cc",
                     "exclude": [],
                     "api": "custom",
-                    "preset": "【Dreammini】1.600-pro-0531",
+                    "preset": "【demini】0506高级态",
                     "api-url": "https://api.huaapi.asia/v1",
                     "model": "gemini-2.5-pro-preview-03-25",
                     "stop-strings": "[]",
@@ -2548,24 +2546,24 @@
             {
                 "id": "720e7fe5-daa0-4dcf-b744-14a3faf54ab2",
                 "scriptName": "删除反和谐",
+                "disabled": false,
+                "runOnEdit": true,
                 "findRegex": "(?<=[\\u4e00-\\u9fa5])[\\s（\\(【〔]?和谐[\\s）\\)】〕]?(?=[\\u4e00-\\u9fa5])",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
             },
             {
                 "id": "6d9fbba5-cad1-433b-b029-2bede24458d3",
                 "scriptName": "【Dreammini】Kemini添加user输入tag",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "^([\\s\\S]*)$",
                 "replaceString": "<user_input>\n$1\n</user_input>",
@@ -2582,164 +2580,401 @@
             {
                 "id": "fbf24cfa-8b3a-404a-91d2-082ccda1dd07",
                 "scriptName": "【Dreammini】Kemini去除所有用户消息",
+                "disabled": true,
+                "runOnEdit": true,
                 "findRegex": "^([\\s\\S]*)$",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     1
                 ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": 1,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
             },
             {
                 "id": "fc1cf978-1e1e-41ab-a291-bacf8f21fca8",
                 "scriptName": "【Dreammini】Kemini通用去除多余内容",
+                "disabled": true,
+                "runOnEdit": true,
                 "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<dream>|</dream>|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
             },
             {
                 "id": "400bb1b5-b318-4fc6-863a-d592ee16cff0",
                 "scriptName": "【Dreammini】DIE[推进(缩起)]",
+                "disabled": false,
+                "runOnEdit": true,
                 "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
                 "replaceString": "<details>\n<summary>剧情</summary>\n$1\n</details>",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
             },
             {
                 "id": "fef8421e-906c-4028-9872-a3a55ce54b87",
                 "scriptName": "【Dreammini】DIE[推进(移除)]",
+                "disabled": true,
+                "runOnEdit": true,
                 "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": 4,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
             },
             {
                 "id": "34c20d3a-2bff-42ec-800d-59ae1d6d8ce5",
                 "scriptName": "【Dreammini】DIE小总结(格式)",
+                "disabled": true,
+                "runOnEdit": true,
                 "findRegex": "/(?<!<details>\\s*)<summary>(((?!<summary>)[\\s\\S])*?)<\\/summary>/g",
                 "replaceString": "<details>\n<summary>摘要</summary>\n$1\n</details>",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
             },
             {
                 "id": "f2cdf310-21c3-47aa-9dc3-02a638254eda",
                 "scriptName": "【Dreammini】DIE小总结(移除正文)",
+                "disabled": true,
+                "runOnEdit": true,
                 "findRegex": "/[\\s\\S]*?(?<!<details>\\s*)<summary>([\\s\\S]*)<\\/summary>[\\s\\S]*/g",
                 "replaceString": "<summary>\n$1\n</summary>",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": 7,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
             },
             {
                 "id": "ce486fad-ddb5-4c78-acdc-c5b02289b789",
                 "scriptName": "【Dreammini】舊选项移除",
+                "disabled": true,
+                "runOnEdit": true,
                 "findRegex": "<options[^>]*>[\\s\\S]*?</options>",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": 3,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
             },
             {
                 "id": "97d0feb4-6b86-452f-b0ed-1bb7258431ef",
                 "scriptName": "【Dreammini】9.选项格式",
+                "disabled": true,
+                "runOnEdit": true,
                 "findRegex": "<options>\\s*(1\\.[^\\n]*)\\s*(2\\.[^\\n]*)\\s*(3\\.[^\\n]*)\\s*(4\\.[^\\n]*)\\s*(5\\.[^\\n]*)\\s*(6\\.[^\\n]*)\\s*(7\\.[^\\n]*)\\s*(8\\.[^\\n]*)\\s*(9\\.[^\\n]*)\\s*<\\/options>",
                 "replaceString": "<options><details><summary style=\"background-color: #000000; color: #ffffff; padding: 5px; font-weight: bold; border-radius: 5px;\">故事选项</summary><div style=\"background-color: #000000; color: #ffffff; padding: 15px; border-radius: 0 0 5px 5px;\"><p style=\"margin: 5px 0;\">以下为当前场景下的可选行动，选择数字1-9（可複选），或使用10自行输入：</p><ul style=\"list-style-type: none; padding-left: 0;\"><li>\"$1\" <br> </li><li>\"$2\"<br> </li><li>\"$3\"<br></li><li>\"$4\"<br></li><li>\"$5\"<br></li><li>\"$6\"<br> </li><li>\"$7\"<br></li><li>\"$8\"<br></li><li>\"$9\" </li></ul></div></details></options>",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
             },
             {
                 "id": "114672ce-16d5-4834-813a-651e26e1faac",
                 "scriptName": "上下文限制[30]",
+                "disabled": false,
+                "runOnEdit": true,
                 "findRegex": "/[\\s\\S]*/gm",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     1,
-                    2,
-                    6
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 40,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "a1bf2397-7c4a-4580-9daa-b9d916390865",
+                "scriptName": "部位特写",
+                "findRegex": "/<font[^>]*>(.|\\n)*<\\/font>/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2
                 ],
                 "disabled": false,
                 "markdownOnly": false,
                 "promptOnly": true,
                 "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": 40,
+                "substituteRegex": false,
+                "minDepth": 2,
                 "maxDepth": null
+            },
+            {
+                "id": "831e2743-fe02-4a94-ab38-97b224cd0d67",
+                "scriptName": "【demini】D1添加用户输入TAG",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "^([\\s\\S]*)$",
+                "replaceString": "<user_input>\n$1\n</user_input>",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": 1,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "4f04edd9-790e-465a-93f7-68e18c0a6b06",
+                "scriptName": "【demini】D2缔改去除多余内容",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<content>|</content>|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(.*?<think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "815ae822-e790-4458-828d-a06bbbf98065",
+                "scriptName": "【demini】D3隐藏前文用户消息",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "^([\\s\\S]*)$",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "substituteRegex": 0,
+                "minDepth": 1,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "0d28134f-5b68-4619-8cc9-df6ce99d5eb3",
+                "scriptName": "【demini】专防省略号增殖正则",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/…/gi",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "36d8430f-f0b2-474b-89cc-4a651f82851d",
+                "scriptName": "【demini】D1汇总记录折叠",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<Main_Quest>(.*?)</Main_Quest>/gs",
+                "replaceString": "<details><summary>*<font color=#87CEFA>汇总记录</font>*</summary>\n> $1\n</details>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "a1539cab-3cdc-4053-bbc5-457284c40df8",
+                "scriptName": "【demini】D2汇总记录隐藏",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "d0d3841f-e8a8-4663-af2b-f0f69262b2c9",
+                "scriptName": "【demini】D3略三楼前汇总",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 3,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "94e82fcd-eb50-44d9-9ebc-286e2c3aed20",
+                "scriptName": "【demini】D1非插件式表格折叠",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<table>(.*?)</table>/gs",
+                "replaceString": "<details><summary>*<font color=#C0C0C0>非插件式表格<font>*</summary>\n> $1\n</details>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "ae3752f6-f9af-4d55-a239-553e8bb2cc49",
+                "scriptName": "【demini】D2非插件式表格隐藏",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/<tableThink>[\\s\\S]*?</tableThink>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 22,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "7d16a960-4995-4207-bd04-651fc5670dea",
+                "scriptName": "【demini】D4隐藏全部前文[22]",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/[\\s\\S]*/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 22,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "8cdb3e34-1f33-4f42-97b6-a1ac1e7c22d8",
+                "scriptName": "【demini】D1替绝望羊折叠正则",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/<air>(.*?)</air>/gs",
+                "replaceString": "<details><summary>*<font color=#F08080>替绝望羊</font>*</summary>\n> $1\n</details>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "d166df24-d6b7-49d7-b5c6-1ea8deb5bb5f",
+                "scriptName": "【demini】D2替绝望羊隐藏正则",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<air>[\\s\\S]*?</air>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "0554bfce-3b2e-46a4-b417-9aa7a6e986ee",
+                "scriptName": "【demini】D3前绝望羊补牢正则",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<air>[\\s\\S]*?</air>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
             }
         ],
         "character_allowed_regex": [
             "凡人修仙传·凤起灵绝·大罗真魂都市修仙灵气复苏（地图互动RPG带系统版）.png",
             "修仙之路2.0.png",
-            "(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png",
-            "论nfsw文风的十种用法.png"
+            "(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png"
         ],
         "tts": {
             "voiceMap": "",
@@ -3387,7 +3622,7 @@
                         "content": "function lock_inputs(enable) {\n    $('#range_block_openai :input').prop('disabled', enable);\n    $('#openai_settings > div:first-child :input').prop('disabled', enable);\n    $('#stream_toggle').prop('disabled', false);\n    $('#openai_show_thoughts').prop('disabled', false);\n}\n$(() => {\n    lock_inputs(true);\n});\n$(window).on('unload', () => lock_inputs(false));\nexport {};\n",
                         "info": "# 预设防误触\n\n**作者:** 青空莉想做舞台少女的狗\n**版本:** 2025/04/29\n**源文件:** [点此跳转](https://gitgud.io/StageDog/tavern_resource/-/tree/main/酒馆助手/预设防误触/源文件?ref_type=heads)\n**说明:** 启用后将锁定预设除了 '流式传输'、'请求思维链' 和 '具体条目' 以外的选项, 不能通过界面来修改\n",
                         "buttons": [],
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "id": "70c0bab7-c2a2-46f1-a0b9-21835bc4566e",
@@ -3476,7 +3711,9 @@
                 "custom_6": true,
                 "custom_7": true,
                 "custom_8": true,
-                "custom_9": true
+                "custom_9": true,
+                "custom_10": true,
+                "custom_11": true
             },
             "shortcuts": {
                 "asterisk": "",
@@ -3498,7 +3735,9 @@
                 "book_quotes1": "",
                 "custom_7": "",
                 "custom_8": "",
-                "custom_9": ""
+                "custom_9": "",
+                "custom_10": "",
+                "custom_11": ""
             },
             "buttonOrder": [
                 "bookQuotes1",
@@ -3519,7 +3758,9 @@
                 "custom_6",
                 "custom_7",
                 "custom_8",
-                "custom_9"
+                "custom_9",
+                "custom_10",
+                "custom_11"
             ],
             "customSymbols": [
                 {
@@ -3581,6 +3822,18 @@
                     "symbol": "李四",
                     "display": "李四-花匠",
                     "cursorPos": "end"
+                },
+                {
+                    "name": "血罗刹",
+                    "symbol": "血罗刹",
+                    "display": "血罗刹",
+                    "cursorPos": "end"
+                },
+                {
+                    "name": "林忆兰",
+                    "symbol": "林忆兰",
+                    "display": "林忆兰",
+                    "cursorPos": "end"
                 }
             ]
         },
@@ -3597,7 +3850,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 324,
+                "lastProcessedLength": 346,
                 "userConfigured": true
             }
         },
@@ -3715,6 +3968,26 @@
             "color": "",
             "color2": "",
             "create_date": 1748162195926
+        },
+        {
+            "id": "8c8ef590-3874-4b98-9e3b-d90d524525a0",
+            "name": "武侠",
+            "folder_type": "NONE",
+            "filter_state": "UNDEFINED",
+            "sort_order": null,
+            "color": "",
+            "color2": "",
+            "create_date": 1748759335022
+        },
+        {
+            "id": "920223dc-f8b9-4fcc-8a18-650bfdc21db6",
+            "name": "系统",
+            "folder_type": "NONE",
+            "filter_state": "UNDEFINED",
+            "sort_order": null,
+            "color": "",
+            "color2": "",
+            "create_date": 1748759335022
         }
     ],
     "tag_map": {
@@ -3732,8 +4005,10 @@
             "985defd2-95f8-4152-9ff6-71c9b0a8b728",
             "149ac21c-db86-48f9-a891-590161d603ab"
         ],
-        "地图导航模块3.0.png": [],
-        "论nfsw文风的十种用法.png": []
+        "世界调制模式·古代篇（0.6）.png": [
+            "8c8ef590-3874-4b98-9e3b-d90d524525a0",
+            "920223dc-f8b9-4fcc-8a18-650bfdc21db6"
+        ]
     },
     "nai_settings": {
         "temperature": 1.37,
