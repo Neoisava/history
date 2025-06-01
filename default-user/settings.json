@@ -3611,7 +3611,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 344,
+                "lastProcessedLength": 345,
                 "userConfigured": true
             }
         },
@@ -3844,7 +3844,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": false,
+        "stream_openai": true,
         "openai_max_context": 1000000,
         "openai_max_tokens": 65500,
         "wrap_in_quotes": false,
@@ -6160,7 +6160,7 @@
                     },
                     {
                         "identifier": "ff7eb549-3dda-4325-b757-ebbed488badd",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "725ace11-5549-4045-a569-4bf8e0336797",
@@ -6357,8 +6357,8 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "gemini-2.5-pro-preview-03-25",
-        "custom_url": "https://api.huaapi.asia/v1",
+        "custom_model": "[正常]gemini-2.5-pro-preview-05-06",
+        "custom_url": "https://api.skyi.cc/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
         "custom_include_headers": "",
