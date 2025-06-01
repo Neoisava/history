@@ -3477,7 +3477,8 @@
                 "custom_6": true,
                 "custom_7": true,
                 "custom_8": true,
-                "custom_9": true
+                "custom_9": true,
+                "custom_10": true
             },
             "shortcuts": {
                 "asterisk": "",
@@ -3499,7 +3500,8 @@
                 "book_quotes1": "",
                 "custom_7": "",
                 "custom_8": "",
-                "custom_9": ""
+                "custom_9": "",
+                "custom_10": ""
             },
             "buttonOrder": [
                 "bookQuotes1",
@@ -3520,7 +3522,8 @@
                 "custom_6",
                 "custom_7",
                 "custom_8",
-                "custom_9"
+                "custom_9",
+                "custom_10"
             ],
             "customSymbols": [
                 {
@@ -3581,6 +3584,12 @@
                     "name": "李四",
                     "symbol": "李四",
                     "display": "李四-花匠",
+                    "cursorPos": "end"
+                },
+                {
+                    "name": "血罗刹",
+                    "symbol": "血罗刹",
+                    "display": "血罗刹",
                     "cursorPos": "end"
                 }
             ]
