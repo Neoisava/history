@@ -2496,8 +2496,8 @@
                     "exclude": [],
                     "api": "custom",
                     "preset": "【Dreammini】1.663-pro-0531",
-                    "api-url": "https://api.skyi.cc/v1",
-                    "model": "[正常]gemini-2.5-pro-preview-03-25",
+                    "api-url": "https://api.huaapi.asia/v1",
+                    "model": "gemini-2.5-pro-preview-03-25",
                     "stop-strings": "[]",
                     "start-reply-with": "",
                     "reasoning-template": "[Migrated] Custom",
@@ -3774,7 +3774,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 22,
+                "lastProcessedLength": 120,
                 "userConfigured": true
             }
         },
@@ -5839,7 +5839,7 @@
                 "marker": false,
                 "name": "⏰慢速推进速度(可改选一)⏰",
                 "role": "system",
-                "content": "{{setvar::%speed::1(小)}}\n{{//注解:单次推进数量，1个大是固定的，越多多人场景越不绝望，建议4个内}}\n\n{{setvar::%small::增(1-3%)主★}}\n{{setvar::%big::增(1-5%)主★}}\n{{//注解:(主线推进累积速度}}\n\n{{setvar::event::分故事方向60%、角色线35%、色情事件5%。}}\n{{//注解:事件比例}}\n\n{{setvar::%time::1-5}}\n{{setvar::%btime::5-15}}\n{{setvar::%maintime::至少1最多60}}\n{{//\n注解:\n(时间推进速度(分钟)}，\n%time小推进耗时、\n%btime大推进耗时、\n%maintime主★快转至少耗时、可改\"至少1最多60\"限制快转时间长度}}\n",
+                "content": "{{setvar::%speed::4(小)}}\n{{//注解:单次推进数量，1个大是固定的，越多多人场景越不绝望，建议4个内}}\n\n{{setvar::%small::增(1-3%)主★}}\n{{setvar::%big::增(0-3%)主★}}\n{{//注解:(主线推进累积速度}}\n\n{{setvar::event::分故事方向60%、角色线35%、色情事件5%。}}\n{{//注解:事件比例}}\n\n{{setvar::%time::1-5}}\n{{setvar::%btime::5-15}}\n{{setvar::%maintime::至少1最多60}}\n{{//\n注解:\n(时间推进速度(分钟)}，\n%time小推进耗时、\n%btime大推进耗时、\n%maintime主★快转至少耗时、可改\"至少1最多60\"限制快转时间长度}}\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "injection_order": 100,

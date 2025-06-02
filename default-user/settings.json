@@ -3712,7 +3712,8 @@
                 "custom_4": true,
                 "custom_5": true,
                 "custom_2": true,
-                "custom_1": true
+                "custom_1": true,
+                "custom_0": true
             },
             "shortcuts": {
                 "asterisk": "",
@@ -3735,7 +3736,8 @@
                 "custom_4": "",
                 "custom_5": "",
                 "custom_2": "",
-                "custom_1": ""
+                "custom_1": "",
+                "custom_0": ""
             },
             "buttonOrder": [
                 "bookQuotes1",
@@ -3757,9 +3759,17 @@
                 "custom_4",
                 "custom_5",
                 "custom_2",
-                "custom_1"
+                "custom_1",
+                "custom_0"
             ],
-            "customSymbols": []
+            "customSymbols": [
+                {
+                    "name": "前进",
+                    "symbol": " (不要重复前文，直接输出新剧情！)",
+                    "display": "前进",
+                    "cursorPos": "end"
+                }
+            ]
         },
         "hide_4": {
             "enabled": true,
@@ -3774,7 +3784,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 120,
+                "lastProcessedLength": 121,
                 "userConfigured": true
             }
         },
