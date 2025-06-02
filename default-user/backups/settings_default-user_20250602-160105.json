@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "false",
-        "NavOpened": "true",
+        "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -2496,8 +2496,8 @@
                     "exclude": [],
                     "api": "custom",
                     "preset": "【Dreammini】1.663-pro-0531",
-                    "api-url": "https://api.skyi.cc/v1",
-                    "model": "[正常]gemini-2.5-pro-preview-03-25",
+                    "api-url": "https://api.huaapi.asia/v1",
+                    "model": "gemini-2.5-pro-preview-03-25",
                     "stop-strings": "[]",
                     "start-reply-with": "",
                     "reasoning-template": "[Migrated] Custom",
@@ -3712,7 +3712,8 @@
                 "custom_4": true,
                 "custom_5": true,
                 "custom_2": true,
-                "custom_1": true
+                "custom_1": true,
+                "custom_0": true
             },
             "shortcuts": {
                 "asterisk": "",
@@ -3735,7 +3736,8 @@
                 "custom_4": "",
                 "custom_5": "",
                 "custom_2": "",
-                "custom_1": ""
+                "custom_1": "",
+                "custom_0": ""
             },
             "buttonOrder": [
                 "bookQuotes1",
@@ -3757,9 +3759,17 @@
                 "custom_4",
                 "custom_5",
                 "custom_2",
-                "custom_1"
+                "custom_1",
+                "custom_0"
             ],
-            "customSymbols": []
+            "customSymbols": [
+                {
+                    "name": "前进",
+                    "symbol": " (不要重复前文，直接输出新剧情！)",
+                    "display": "前进",
+                    "cursorPos": "end"
+                }
+            ]
         },
         "hide_4": {
             "enabled": true,
@@ -3774,7 +3784,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 78,
+                "lastProcessedLength": 148,
                 "userConfigured": true
             }
         },
