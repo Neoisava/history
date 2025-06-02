@@ -2,8 +2,8 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
-        "NavOpened": "true",
+        "LNavOpened": "false",
+        "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -2495,8 +2495,8 @@
                     "mode": "cc",
                     "exclude": [],
                     "api": "custom",
-                    "preset": "【demini】0506高级态",
-                    "api-url": "https://chaxun.huaapi.asia/",
+                    "preset": "【Dreammini】1.663-pro-0531",
+                    "api-url": "https://api.skyi.cc/v1",
                     "model": "[正常]gemini-2.5-pro-preview-03-25",
                     "stop-strings": "[]",
                     "start-reply-with": "",
@@ -3702,18 +3702,17 @@
                 "newline": false,
                 "user": true,
                 "char": false,
-                "custom_1": true,
-                "custom_0": true,
-                "custom_2": true,
-                "custom_3": true,
-                "custom_4": true,
-                "custom_5": true,
                 "custom_6": true,
                 "custom_7": true,
                 "custom_8": true,
                 "custom_9": true,
                 "custom_10": true,
-                "custom_11": true
+                "custom_11": true,
+                "custom_3": true,
+                "custom_4": true,
+                "custom_5": true,
+                "custom_2": true,
+                "custom_1": true
             },
             "shortcuts": {
                 "asterisk": "",
@@ -3725,19 +3724,18 @@
                 "newline": "",
                 "user": "Alt+1",
                 "char": "Alt+2",
-                "custom_1": "",
-                "custom_0": "",
-                "custom_2": "",
-                "custom_3": "",
-                "custom_4": "",
-                "custom_5": "",
                 "custom_6": "",
                 "book_quotes1": "",
                 "custom_7": "",
                 "custom_8": "",
                 "custom_9": "",
                 "custom_10": "",
-                "custom_11": ""
+                "custom_11": "",
+                "custom_3": "",
+                "custom_4": "",
+                "custom_5": "",
+                "custom_2": "",
+                "custom_1": ""
             },
             "buttonOrder": [
                 "bookQuotes1",
@@ -3749,93 +3747,19 @@
                 "user",
                 "char",
                 "newline",
-                "custom_1",
-                "custom_0",
-                "custom_2",
-                "custom_3",
-                "custom_4",
-                "custom_5",
                 "custom_6",
                 "custom_7",
                 "custom_8",
                 "custom_9",
                 "custom_10",
-                "custom_11"
+                "custom_11",
+                "custom_3",
+                "custom_4",
+                "custom_5",
+                "custom_2",
+                "custom_1"
             ],
-            "customSymbols": [
-                {
-                    "name": "清芷",
-                    "symbol": "清芷",
-                    "display": "清芷",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "灵溪",
-                    "symbol": "灵溪",
-                    "display": "灵溪",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "柳莺",
-                    "symbol": "柳莺",
-                    "display": "柳莺-侍女",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "韩厉",
-                    "symbol": "韩厉",
-                    "display": "韩厉-暗杀追踪",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "冷月",
-                    "symbol": "冷月",
-                    "display": "冷月-生擒灭口",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "红袖",
-                    "symbol": "红袖",
-                    "display": "红袖-幻术",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "苏媚娘",
-                    "symbol": "苏媚娘",
-                    "display": "苏媚娘",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "王铁",
-                    "symbol": "王铁",
-                    "display": "王铁-保安",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "陈默",
-                    "symbol": "陈默",
-                    "display": "陈默-阵法追踪",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "李四",
-                    "symbol": "李四",
-                    "display": "李四-花匠",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "血罗刹",
-                    "symbol": "血罗刹",
-                    "display": "血罗刹",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "林忆兰",
-                    "symbol": "林忆兰",
-                    "display": "林忆兰",
-                    "cursorPos": "end"
-                }
-            ]
+            "customSymbols": []
         },
         "hide_4": {
             "enabled": true,
@@ -3850,7 +3774,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 3,
+                "lastProcessedLength": 104,
                 "userConfigured": true
             }
         },
@@ -5915,7 +5839,7 @@
                 "marker": false,
                 "name": "⏰慢速推进速度(可改选一)⏰",
                 "role": "system",
-                "content": "{{setvar::%speed::1(小)}}\n{{//注解:单次推进数量，1个大是固定的，越多多人场景越不绝望，建议4个内}}\n\n{{setvar::%small::增(1-3%)主★}}\n{{setvar::%big::增(1-5%)主★}}\n{{//注解:(主线推进累积速度}}\n\n{{setvar::event::分故事方向60%、角色线35%、色情事件5%。}}\n{{//注解:事件比例}}\n\n{{setvar::%time::1-5}}\n{{setvar::%btime::5-15}}\n{{setvar::%maintime::至少1最多60}}\n{{//\n注解:\n(时间推进速度(分钟)}，\n%time小推进耗时、\n%btime大推进耗时、\n%maintime主★快转至少耗时、可改\"至少1最多60\"限制快转时间长度}}\n",
+                "content": "{{setvar::%speed::4(小)}}\n{{//注解:单次推进数量，1个大是固定的，越多多人场景越不绝望，建议4个内}}\n\n{{setvar::%small::增(1-3%)主★}}\n{{setvar::%big::增(0-3%)主★}}\n{{//注解:(主线推进累积速度}}\n\n{{setvar::event::分故事方向60%、角色线35%、色情事件5%。}}\n{{//注解:事件比例}}\n\n{{setvar::%time::1-5}}\n{{setvar::%btime::5-15}}\n{{setvar::%maintime::至少1最多60}}\n{{//\n注解:\n(时间推进速度(分钟)}，\n%time小推进耗时、\n%btime大推进耗时、\n%maintime主★快转至少耗时、可改\"至少1最多60\"限制快转时间长度}}\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "injection_order": 100,
@@ -6139,7 +6063,7 @@
                     },
                     {
                         "identifier": "26f3c45d-2702-4f8a-a344-15fa00ccea21",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "eb92b407-3b8e-4e9a-9e89-83ca82acf618",
@@ -6680,8 +6604,8 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "gemini-2.5-pro-exp-03-25",
-        "custom_url": "https://api.huaapi.asia/v1",
+        "custom_model": "[正常]gemini-2.5-pro-preview-03-25",
+        "custom_url": "https://api.skyi.cc/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
         "custom_include_headers": "",
