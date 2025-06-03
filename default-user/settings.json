@@ -3771,6 +3771,12 @@
                     "symbol": " (不要重复前文，直接输出后续剧情！)",
                     "display": "前进",
                     "cursorPos": "end"
+                },
+                {
+                    "name": "月奴",
+                    "symbol": "月奴",
+                    "display": "月奴",
+                    "cursorPos": "end"
                 }
             ]
         },
@@ -3787,7 +3793,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 47,
+                "lastProcessedLength": 49,
                 "userConfigured": true
             }
         },
