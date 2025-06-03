@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "true",
-        "NavOpened": "true",
+        "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -3752,17 +3752,12 @@
                 "user",
                 "char",
                 "newline",
+                "custom_1",
+                "custom_2",
                 "custom_6",
-                "custom_7",
-                "custom_8",
-                "custom_9",
-                "custom_10",
-                "custom_11",
                 "custom_3",
                 "custom_4",
                 "custom_5",
-                "custom_2",
-                "custom_1",
                 "custom_0"
             ],
             "customSymbols": [
@@ -3770,6 +3765,42 @@
                     "name": "前进",
                     "symbol": " (不要重复前文，直接输出后续剧情！)",
                     "display": "前进",
+                    "cursorPos": "end"
+                },
+                {
+                    "name": "月奴",
+                    "symbol": "月奴",
+                    "display": "月奴",
+                    "cursorPos": "end"
+                },
+                {
+                    "name": "芸香",
+                    "symbol": "芸香",
+                    "display": "芸香",
+                    "cursorPos": "end"
+                },
+                {
+                    "name": "药灵儿",
+                    "symbol": "药灵儿",
+                    "display": "药灵儿",
+                    "cursorPos": "end"
+                },
+                {
+                    "name": "张猛",
+                    "symbol": "张猛",
+                    "display": "张猛",
+                    "cursorPos": "end"
+                },
+                {
+                    "name": "玲珑",
+                    "symbol": "玲珑",
+                    "display": "玲珑",
+                    "cursorPos": "end"
+                },
+                {
+                    "name": "翠儿",
+                    "symbol": "翠儿",
+                    "display": "翠儿",
                     "cursorPos": "end"
                 }
             ]
@@ -3787,7 +3818,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 5,
+                "lastProcessedLength": 122,
                 "userConfigured": true
             }
         },
@@ -4809,7 +4840,7 @@
                 "marker": false,
                 "name": "状态栏(选开)(可改)",
                 "role": "system",
-                "content": "\n# 在正文</dream>后**必须**紧接着使用<StatusBlock></StatusBlock>包裹状态栏。\n\n<StatusBlock_format>\n角色状态栏取<user>视角内，好感度最高的角色。(同好感优先级，待告白先于恋人))\n此状态栏只适用于女性角色，**请勿**用于男性角色，\n状态栏格式：\n<StatusBlock>\n<details> <summary style=\"font-weight: bold; background-color: #444444; color: #ffffff; padding: 5px;\">角色名状态栏</summary> <p style=\"background-color: #000000; color: #ffffff; padding: 10px;\"> 🤔概述角色的面貌，身材。可以稍长，需要表现人物的特点。文字体现角色的性张力<br> 💞 好感度/信任度: {{value}}/100(关系) (+-数值)<br>   🧡向角色{{random::告白::询问友情::询问好感::询问信任::询问对<user>的想法::求婚}}: {{\"假设{{user}}在前文最后向角色询问，角色的回答\"}}<br> 🌹 性趣度: {{value}}/100 (符合该角色性格的特殊性趣阶段名称) (+-数值)<br> {{random::给内裤::自慰::吸奶::摸胸部::脱内裤::看内裤::亲吻::拥抱::手交::口交::性交::乳交::肛交::SM::足交::深喉::喝精液::让角色怀孕}}要求: {{\"假设{{user}}在前文最后向角色要求角色的回答\"}}<br> 🔥 性欲度:  {{value}}/100(性欲阶段) (+-数值)<br>   {{random::高潮::性欲望::多想被插小穴::多想被<user>侮辱::多想性爱::敏感程度}}状况: {{\"假设{{user}}在前文最后问角色当前状况角色的回答\"}}<br> 🕺 身体姿势: {姿势}{身体与{{user}}的接触}{色情的描述当前使用性器状况}<br> 🌀 内心话: {{{\"角色的内心话\" }} </p> </details>\n</StatusBlock>\n</StatusBlock_format>\n\n\n",
+                "content": "\n# 在正文</dream>后**必须**紧接着使用<StatusBlock></StatusBlock>包裹状态栏。\n\n<StatusBlock_format>\n根据剧情显示主角所在地附近可以移动的多个地点和该地点内可以互动的NPC角色，用︱分割\n状态栏格式：\n<StatusBlock>\n<details>\n【地点︱人物】；【地点︱人物】；【地点︱人物】\n</details>\n</StatusBlock>\n</StatusBlock_format>\n\n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false,
@@ -6380,7 +6411,7 @@
                     },
                     {
                         "identifier": "675ccf79-08f9-4310-a7aa-f160dea3fc33",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "e292498c-c42d-481c-af72-0d00ca74f099",
