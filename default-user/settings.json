@@ -2544,212 +2544,6 @@
                 "promptOnly": true
             },
             {
-                "id": "720e7fe5-daa0-4dcf-b744-14a3faf54ab2",
-                "scriptName": "删除反和谐",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "(?<=[\\u4e00-\\u9fa5])[\\s（\\(【〔]?和谐[\\s）\\)】〕]?(?=[\\u4e00-\\u9fa5])",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
-                "id": "6d9fbba5-cad1-433b-b029-2bede24458d3",
-                "scriptName": "【Dreammini】Kemini添加user输入tag",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "^([\\s\\S]*)$",
-                "replaceString": "<user_input>\n$1\n</user_input>",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": 1,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "fc1cf978-1e1e-41ab-a291-bacf8f21fca8",
-                "scriptName": "【Dreammini】Kemini通用去除多余内容",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<dream>|</dream>|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "fbf24cfa-8b3a-404a-91d2-082ccda1dd07",
-                "scriptName": "【Dreammini】Kemini去除所有用户消息",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "^([\\s\\S]*)$",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "substituteRegex": 0,
-                "minDepth": 1,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "400bb1b5-b318-4fc6-863a-d592ee16cff0",
-                "scriptName": "【Dreammini】DIE[推进(缩起)]",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
-                "replaceString": "<details>\n<summary>剧情</summary>\n$1\n</details>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
-                "id": "fef8421e-906c-4028-9872-a3a55ce54b87",
-                "scriptName": "【Dreammini】DIE[推进(移除)]",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 4,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "34c20d3a-2bff-42ec-800d-59ae1d6d8ce5",
-                "scriptName": "【Dreammini】DIE小总结(格式)",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/(?<!<details>\\s*)<summary>(((?!<summary>)[\\s\\S])*?)<\\/summary>/g",
-                "replaceString": "<details>\n<summary>摘要</summary>\n$1\n</details>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
-                "id": "f2cdf310-21c3-47aa-9dc3-02a638254eda",
-                "scriptName": "【Dreammini】DIE小总结(移除正文)",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/[\\s\\S]*?(?<!<details>\\s*)<summary>([\\s\\S]*)<\\/summary>[\\s\\S]*/g",
-                "replaceString": "<summary>\n$1\n</summary>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 7,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "ce486fad-ddb5-4c78-acdc-c5b02289b789",
-                "scriptName": "【Dreammini】舊选项移除",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "<options[^>]*>[\\s\\S]*?</options>",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 3,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "97d0feb4-6b86-452f-b0ed-1bb7258431ef",
-                "scriptName": "【Dreammini】9.选项格式",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "<options>\\s*(1\\.[^\\n]*)\\s*(2\\.[^\\n]*)\\s*(3\\.[^\\n]*)\\s*(4\\.[^\\n]*)\\s*(5\\.[^\\n]*)\\s*(6\\.[^\\n]*)\\s*(7\\.[^\\n]*)\\s*(8\\.[^\\n]*)\\s*(9\\.[^\\n]*)\\s*<\\/options>",
-                "replaceString": "<options><details><summary style=\"background-color: #000000; color: #ffffff; padding: 5px; font-weight: bold; border-radius: 5px;\">故事选项</summary><div style=\"background-color: #000000; color: #ffffff; padding: 15px; border-radius: 0 0 5px 5px;\"><p style=\"margin: 5px 0;\">以下为当前场景下的可选行动，选择数字1-9（可複选），或使用10自行输入：</p><ul style=\"list-style-type: none; padding-left: 0;\"><li>\"$1\" <br> </li><li>\"$2\"<br> </li><li>\"$3\"<br></li><li>\"$4\"<br></li><li>\"$5\"<br></li><li>\"$6\"<br> </li><li>\"$7\"<br></li><li>\"$8\"<br></li><li>\"$9\" </li></ul></div></details></options>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
-                "id": "114672ce-16d5-4834-813a-651e26e1faac",
-                "scriptName": "上下文限制[30]",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/[\\s\\S]*/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 40,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "a1bf2397-7c4a-4580-9daa-b9d916390865",
-                "scriptName": "部位特写",
-                "findRegex": "/<font[^>]*>(.|\\n)*<\\/font>/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": false,
-                "minDepth": 2,
-                "maxDepth": null
-            },
-            {
                 "id": "831e2743-fe02-4a94-ab38-97b224cd0d67",
                 "scriptName": "【demini】D1添加用户输入TAG",
                 "disabled": true,
@@ -2969,6 +2763,246 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": true
+            },
+            {
+                "id": "dd994ad4-8957-4a56-9cc9-e4afa85acb2e",
+                "scriptName": "【Dreammini】 11.DIE移除最近总结",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/(?<!<details>\\s*)<summary>(((?!<summary>)[\\s\\S])*?)<\\/summary>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": 8,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "adcfb751-2ac5-4228-be5f-a78dafd121ff",
+                "scriptName": "【Dreammini】1.删除主线",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/(?<=<dream>[\\s\\S]*?)((?:[\\(（].{1,2}[\\)）])触发(?:[1-5])?|((?:\\(.{0,2}\\)|（.{0,2}）)?触发[1-5]))(?=[\\s\\S]*?</dream>)/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": 30,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "4c4f6a63-0ee7-404a-b31e-1e61232f0c7b",
+                "scriptName": "【Dreammini】10.选项格式",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "<options>\\s*(1\\.[^\\n]*)\\s*(2\\.[^\\n]*)\\s*(3\\.[^\\n]*)\\s*(4\\.[^\\n]*)\\s*(5\\.[^\\n]*)\\s*(6\\.[^\\n]*)\\s*(7\\.[^\\n]*)\\s*(8\\.[^\\n]*)\\s*(9\\.[^\\n]*)\\s*<\\/options>",
+                "replaceString": "<options><details><summary style=\"background-color: #000000; color: #ffffff; padding: 5px; font-weight: bold; border-radius: 5px;\">故事选项</summary><div style=\"background-color: #000000; color: #ffffff; padding: 15px; border-radius: 0 0 5px 5px;\"><p style=\"margin: 5px 0;\">以下为当前场景下的可选行动，选择数字1-9（可複选），或使用10自行输入：</p><ul style=\"list-style-type: none; padding-left: 0;\"><li>\"$1\" <br> </li><li>\"$2\"<br> </li><li>\"$3\"<br></li><li>\"$4\"<br></li><li>\"$5\"<br></li><li>\"$6\"<br> </li><li>\"$7\"<br></li><li>\"$8\"<br></li><li>\"$9\" </li></ul></div></details></options>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "a9eef03a-b5d2-41ba-a3ff-984bd8b55367",
+                "scriptName": "【Dreammini】2.Kemini去除所有用户消息",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "^([\\s\\S]*)$",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "substituteRegex": 0,
+                "minDepth": 1,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "6d9fbba5-cad1-433b-b029-2bede24458d3",
+                "scriptName": "【Dreammini】3.Kemini添加user输入tag",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "^([\\s\\S]*)$",
+                "replaceString": "<user_input>\n$1\n</user_input>",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": 1,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "2688e9e7-81f0-40b9-8dd6-719ccead6391",
+                "scriptName": "【Dreammini】4.Kemini通用去除多余内容",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<dream>|</dream>|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "18567ca7-b0c6-463a-b02b-183566b4ffd2",
+                "scriptName": "【Dreammini】5.DIE[推进(缩起)]",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
+                "replaceString": "<details>\n<summary>剧情</summary>\n$1\n</details>\n\n",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "21ed7ae3-8926-483e-ac46-3bd55a1d6530",
+                "scriptName": "【Dreammini】6.DIE[推进(移除)]",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 3,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "77052179-920e-4b83-87f5-3dc4cef4a0c6",
+                "scriptName": "【Dreammini】7.DIE小总结(格式)",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/(?<!<details>\\s*)<summary>(((?!<summary>)[\\s\\S])*?)<\\/summary>/g",
+                "replaceString": "<details>\n<summary>摘要</summary>\n$1\n</details>\n\n",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "18956466-025a-4e61-b88d-74e5d4088051",
+                "scriptName": "【Dreammini】8.DIE小总结(移除正文)",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/[\\s\\S]*?(?<!<details>\\s*)<summary>([\\s\\S]*)<\\/summary>[\\s\\S]*/g",
+                "replaceString": "<summary>\n$1\n</summary>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 9,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "c28179a9-f094-4df5-a8a9-29c6f46fdd8a",
+                "scriptName": "【Dreammini】9.舊选项移除",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "<options[^>]*>[\\s\\S]*?</options>",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 3,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "114672ce-16d5-4834-813a-651e26e1faac",
+                "scriptName": "上下文限制[30]",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/[\\s\\S]*/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 40,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "a1bf2397-7c4a-4580-9daa-b9d916390865",
+                "scriptName": "部位特写",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<font[^>]*>(.|\\n)*<\\/font>/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 2,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "720e7fe5-daa0-4dcf-b744-14a3faf54ab2",
+                "scriptName": "删除反和谐",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "(?<=[\\u4e00-\\u9fa5])[\\s（\\(【〔]?和谐[\\s）\\)】〕]?(?=[\\u4e00-\\u9fa5])",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
             }
         ],
         "character_allowed_regex": [
@@ -3784,7 +3818,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 147,
                 "userConfigured": true
             }
         },
