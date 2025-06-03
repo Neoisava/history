@@ -4840,7 +4840,7 @@
                 "marker": false,
                 "name": "状态栏(选开)(可改)",
                 "role": "system",
-                "content": "\n# 在正文</dream>后**必须**紧接着使用<StatusBlock></StatusBlock>包裹状态栏。\n\n<StatusBlock_format>\n根据剧情显示主角所在地附近可以移动的多个地点和该地点内可以互动的NPC角色，用︱分割\n状态栏格式：\n<StatusBlock>\n<details>\n地点︱人物；地点︱人物；地点︱人物\n</details>\n</StatusBlock>\n</StatusBlock_format>\n\n\n",
+                "content": "\n# 在正文</dream>后**必须**紧接着使用<StatusBlock></StatusBlock>包裹状态栏。\n\n<StatusBlock_format>\n根据剧情显示主角所在地附近可以移动的多个地点和该地点内可以互动的NPC角色，用︱分割\n状态栏格式：\n<StatusBlock>\n<details>\n【地点︱人物】；【地点︱人物】；【地点︱人物】\n</details>\n</StatusBlock>\n</StatusBlock_format>\n\n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false,
