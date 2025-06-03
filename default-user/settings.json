@@ -18,11 +18,13 @@
         "AlertWI_修仙之路2.0.png": "true",
         "AlertWI_修仙世界-[万界大陆].png": "true",
         "AlertWI_(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png": "true",
-        "AlertRegex_(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png": "true"
+        "AlertRegex_(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png": "true",
+        "AlertWI_世界调制模式·古代篇（0.6）.png": "true",
+        "AlertRegex_世界调制模式·古代篇（0.6）.png": "true"
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": "修仙之路2.0.png",
+    "active_character": "世界调制模式·古代篇（0.6）.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -311,7 +313,7 @@
         "font_scale": 1,
         "blur_strength": 10,
         "shadow_width": 2,
-        "main_text_color": "rgba(192, 180, 161, 1)",
+        "main_text_color": "rgba(0, 0, 0, 1)",
         "italics_text_color": "rgba(145, 145, 145, 1)",
         "underline_text_color": "rgba(161, 143, 98, 1)",
         "quote_text_color": "rgba(209, 203, 194, 1)",
@@ -2974,7 +2976,8 @@
         "character_allowed_regex": [
             "凡人修仙传·凤起灵绝·大罗真魂都市修仙灵气复苏（地图互动RPG带系统版）.png",
             "修仙之路2.0.png",
-            "(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png"
+            "(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png",
+            "世界调制模式·古代篇（0.6）.png"
         ],
         "tts": {
             "voiceMap": "",
@@ -3784,7 +3787,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 355,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
