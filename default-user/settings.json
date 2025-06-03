@@ -3765,7 +3765,7 @@
             "customSymbols": [
                 {
                     "name": "前进",
-                    "symbol": " (不要重复前文，直接输出新剧情！)",
+                    "symbol": " (不要重复前文，直接输出后续剧情！)",
                     "display": "前进",
                     "cursorPos": "end"
                 }
@@ -3784,7 +3784,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 346,
+                "lastProcessedLength": 348,
                 "userConfigured": true
             }
         },
