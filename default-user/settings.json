@@ -3752,17 +3752,12 @@
                 "user",
                 "char",
                 "newline",
+                "custom_1",
+                "custom_2",
                 "custom_6",
-                "custom_7",
-                "custom_8",
-                "custom_9",
-                "custom_10",
-                "custom_11",
                 "custom_3",
                 "custom_4",
                 "custom_5",
-                "custom_2",
-                "custom_1",
                 "custom_0"
             ],
             "customSymbols": [
@@ -3801,6 +3796,12 @@
                     "symbol": "玲珑",
                     "display": "玲珑",
                     "cursorPos": "end"
+                },
+                {
+                    "name": "翠儿",
+                    "symbol": "翠儿",
+                    "display": "翠儿",
+                    "cursorPos": "end"
                 }
             ]
         },
@@ -3817,7 +3818,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 58,
+                "lastProcessedLength": 59,
                 "userConfigured": true
             }
         },
