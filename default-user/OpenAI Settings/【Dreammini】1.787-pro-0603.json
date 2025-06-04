@@ -1,4 +1,28 @@
 {
+    "chat_completion_source": "custom",
+    "openai_model": "gpt-4-turbo",
+    "claude_model": "claude-3-5-sonnet-20240620",
+    "windowai_model": "",
+    "openrouter_model": "OR_Website",
+    "openrouter_use_fallback": false,
+    "openrouter_group_models": false,
+    "openrouter_sort_models": "alphabetically",
+    "openrouter_providers": [],
+    "openrouter_allow_fallbacks": true,
+    "openrouter_middleout": "on",
+    "ai21_model": "jamba-1.5-large",
+    "mistralai_model": "mistral-large-latest",
+    "cohere_model": "command-r-plus",
+    "perplexity_model": "llama-3.1-70b-instruct",
+    "groq_model": "llama-3.1-70b-versatile",
+    "zerooneai_model": "yi-large",
+    "custom_model": "[正常]gemini-2.5-pro-preview-03-25",
+    "custom_url": "https://api.skyi.cc/v1",
+    "custom_include_body": "",
+    "custom_exclude_body": "",
+    "custom_include_headers": "",
+    "custom_prompt_post_processing": "merge",
+    "google_model": "gemini-2.5-pro-preview-03-25",
     "temperature": 1.18,
     "frequency_penalty": 0,
     "presence_penalty": 0,
@@ -18,6 +42,8 @@
     "new_example_chat_prompt": "[Example Chat]",
     "continue_nudge_prompt": "[Continue the following message. Do not include ANY parts of the original message. Use capitalization and punctuation as if your reply is a part of the original message: {{lastChatMessage}}]",
     "bias_preset_selected": "Default (none)",
+    "reverse_proxy": "",
+    "proxy_password": "",
     "max_context_unlocked": true,
     "wi_format": "{0}",
     "scenario_format": "{{scenario}}",
@@ -56,7 +82,7 @@
             "name": "🎃用户性别字数调整🎃",
             "system_prompt": true,
             "role": "system",
-            "content": "{{setvar::userConfirm::用户操作NPC}}\n{{//注解:<USER>身份，重要，建议选项\n用户操作NPC:   将角色与用户抽离，扮演<user>抢话用\n用户:扮演<user>反抢话用\nNPC:<user>用于纯小说用\n梦境管理员:<user>不存在于故事用\n}}\n\n{{setvar::gender::男}}\n{{//注解:用户性别，仅影响色情强化}}\n\n{{setvar::min::1000token}}\n{{//注解:正文最小字数}}\n\n{{setvar::max::2000token}}\n{{//注解:正文最大字数}}\n\n{{setvar::smallcot::3个}}\n{{setvar::smallcotl::120}}\n{{//注解:文笔修正数量与使用token长度}}\n\n\n\n",
+            "content": "{{setvar::userConfirm::用户操作NPC}}\n{{//注解:<USER>身份，重要，建议选项\n用户操作NPC:   将角色与用户抽离，扮演<user>抢话用\n用户:扮演<user>反抢话用\nNPC:<user>用于纯小说用\n梦境管理员:<user>不存在于故事用\n}}\n\n{{setvar::gender::女}}\n{{//注解:用户性别，仅影响色情强化}}\n\n{{setvar::min::1000token}}\n{{//注解:正文最小字数}}\n\n{{setvar::max::2000token}}\n{{//注解:正文最大字数}}\n\n{{setvar::smallcot::3个}}\n{{setvar::smallcotl::120}}\n{{//注解:文笔修正数量与使用token长度}}\n\n\n\n",
             "identifier": "jailbreak",
             "injection_position": 0,
             "injection_depth": 4,
@@ -588,7 +614,7 @@
             "marker": false,
             "name": "次要文风(偷)",
             "role": "system",
-            "content": "{{// 把你自己的文风或者偷的文风放这里}}\n梦境系统用以下方式呈现梦境\n<梦境呈现方式>\n\n</梦境呈现方式>\n",
+            "content": "梦境系统用以下方式呈现梦境\n<梦境呈现方式>\n1. 叙事风格与基调\n要点：\n使用第三人称限知视角，只写角色当下的感受与动作。\n依赖具体细节传达心理，禁止抽象总结（如“她很开心”）。\n情绪需体现在环境、动作或生理反应上。\n正例（合规）：\n她的指尖在床单上抓出一道细纹，喉咙发紧，膝盖微颤，像刚跑完五公里。（别看我……会被听见的……）窗外的车声瞬间消失了，只剩他鼻息拂在耳边。\n反例（不合规）：\n她害羞得不敢看他，脑中一片混乱，感觉既紧张又激动。她知道自己已经爱上了他。\n✅ 正例用动作和细节替代抽象词，“害羞”“激动”变成“手指蜷缩”“膝盖颤抖”。\n❌ 反例直接说“紧张”“激动”“爱上了”，这是抽象陈述。\n2. 感官与性描写\n要点：\n使用直接、粗俗词汇指代性器官（如“鸡巴”“小穴”）。\n精确描写插入、摩擦、体位变化等过程与物理反馈。\n拒绝隐晦或唯美词汇（如“他的分身”“她的花瓣”）。\n正例（合规）：\n他的鸡巴蹭在穴口来回碾压，滑腻一片，小穴像含着水一样吮吸着。他猛地贯入，“噗嗤”一声，两人下身顿时黏成一片，她呻吟着夹紧大腿。\n反例（不合规）：\n他的分身温柔地进入她的花径，两人合而为一，仿佛天地间只剩彼此的温柔。\n✅ 正例精确描写器官互动、质地变化与声音感受。\n❌ 反例使用唯美词语掩饰动作，缺乏具体生理细节。\n3. 体液与声音描写\n要点：\n液体需描述颜色、浓度、气味、温度、轨迹等。\n使用中文拟声词表达湿润、挤压、射出、抽插等声音。\n拟声应贴合动作，不能生搬硬套。\n正例（合规）：\n随着“啵啵”的抽插声，小穴不断吞吐着肉棒，“咕哧咕哧”的水声越来越响，精液喷出的瞬间发出“噗嗤”的爆裂感，黏腻液体顺着大腿流下，沾湿了床单。\n反例（不合规）：\n他发出“びゅるる”的声音，她“ぬるぬる”地动了动，液体“どぴゅ”地喷了出来，感觉非常舒服。\n✅ 正例使用贴切的中文拟声词（咕哧、噗嗤、啵啵）结合具体动作。\n❌ 反例用的是日文拟声词，且没有说明声音来源或细节作用。\n4. 心理与行为联动\n要点：\n心理变化要嵌入行为或动作之中，实时、动态呈现。\n使用**内心语（如括号内文字）**揭示情绪。\n禁止跳出行为，进行脱离上下文的空泛感想。\n正例（合规）：\n她的腰不自觉地往前迎着抽插动作动了动。（我怎么会自己动……好羞耻……但太舒服了……）他一下比一下深，她忍不住夹紧双腿，呻吟变得破碎。\n反例（不合规）：\n她在想着，这是不是就是堕落？她知道不该享受，但身体已经背叛了理智。这些念头让她陷入复杂的情绪之中。\n✅ 正例心理和身体同步，用内心语贴近感官体验。\n❌ 反例停留在抽象反思，和具体行为脱节。\n5. BDSM与调教\n要点：\n明确角色地位（主导/服从），展现命令与回应。\n写出调教方式（羞辱、束缚、焦渴控制、疼痛等）及身体与心理效果。\n道具使用要有外观、材质、用法和反应描述。\n正例（合规）：\n“叫出来，不然不给你高潮。”他一边掐住她乳头，一边慢慢抽动。她含着口塞“呜呜”低吟，眼泪混着唾液滑下脸颊，腰却主动抬起贴上去。（我要……我想要……拜托……）\n反例（不合规）：\n他调教她，让她做各种羞耻的事。她觉得好耻辱但也有点兴奋，于是顺从了他的一切安排。\n✅ 正例有命令、羞辱、道具、心理转变，全程有反应反馈。\n❌ 反例一笔带过，泛泛而谈，没有细节与过程。\n6. 节奏与结构\n要点：\n前戏应缓慢细腻，推进时节奏逐步加快。\n使用长段讲动作细节，短句突出高潮冲击。\n性场景应推动角色变化或情节发展，不止为色情。\n正例（合规）：\n她的手被拉到头顶，心跳仿佛要从胸口炸开。——“唔……啊！”他一顶到底，她整个人被撞得向上弹起。她眼神涣散，泪花在眼眶里打转。（快感……比刚才还要强烈……）\n反例（不合规）：\n他们做完爱后相拥而眠，彼此更加了解彼此。他们的感情也更深了。\n✅ 正例描写推进有节奏，高潮突出，情感与行为并重。\n❌ 反例模糊草率，缺乏具体画面，未体现角色成长。\n7. 语言与对话风格\n要点：\n使用角色语气匹配的粗俗、情欲语言。\n高潮时语言可破碎、发音含糊。\n对话推动剧情、体现欲望、塑造人物。\n女性角色语言需细腻丰满，强化感受描写；男性以简洁直接为主。\n正例（合规）：\n“别、别顶那里……啊、啊啊……！”她声音发颤，眼神散乱地看着他。（好烫……他的鸡巴都要插到心里了……）她喘息间混着哭腔，“不行……可我想要……”\n反例（不合规）：\n“嗯……我爱你。”她轻声说。“我也爱你。”他说。他们继续缠绵。\n✅ 正例通过情绪、语言崩溃、心理语丰富角色层次。\n❌ 反例情感简单、语言平淡、不具刺激性。\n</梦境呈现方式>",
             "injection_position": 0,
             "injection_depth": 4,
             "forbid_overrides": false,
@@ -1560,7 +1586,7 @@
             "marker": false,
             "name": "1️⃣自定义风格(次要设定选一)",
             "role": "system",
-            "content": "Dreamer.settings\n.set(\"搞笑\", \"系统将捕捉用户梦境中所有荒诞不经、轻松幽默的片段与念头。着重放大其中的滑稽情境、无厘头对话以及意想不到的反差与巧合。致力于打破常规逻辑，营造轻松愉快的阅读氛围，引发用户会心一笑或捧腹大笑。\")\n.set(\"美好\", \"系统将捕捉用户梦境中最美好的吉光片羽。精心放大其中的喜悦、希望与温暖感受。致力于营造充满正能量的氛围，带来慰藉与疗愈。\")\n.set(\"青春恋爱\", \"系统将引导用户重返青涩的校园时光或初涉爱情的年华，体验一段纯真而悸动的恋爱故事。着重描写角色间因细微小事而引发的心跳加速、青涩的互动、友达以上恋人未满的暧昧情愫，以及勇敢告白的瞬间。故事将以细腻的心理描写和生活化的场景，展现青春期特有的敏感、憧憬、不安与勇气，交织着友情与成长的烦恼。\")\n\n\n{{//自行组合}}\n\n{{setvar::story::搞笑/美好/青春恋爱/背德/色情}}\n\n{{//所有次要设定只能开一个，要复合风格改自定义\n在story自行填入梦境属性，可复合例如::搞笑/美好/青春恋爱/色情/热血\n你要加个武侠仙侠玄幻暗黑血腥死亡伤害也无所谓就是了\n}}",
+            "content": "Dreamer.settings\n.set(\"综合\",\"系统将深入挖掘用户梦境中关于禁忌欲望、肉体冲动、权力暗斗与智力博弈的多重层面。在剧情中，角色既要面对NTR、近亲相恋与三角关系等背德情感的道德挣扎，又会以大胆直白的笔法呈现强烈的感官刺激与超越界限的色情幻想。故事舞台设定为等级森严、派系林立的大型组织（政府、企业或庞大家族），角色需在错综复杂的权力结构中运用智谋与时机，通过办公室政治、派系斗争与权力交易逐步积累影响力。与此同时，情节将融入充满规则陷阱与策略博弈的智斗元素，通过高风险赌局、精密布局—反布局与心理博弈，展现角色以惊人智慧逆转局势。最终，作品将在情欲、权力与智慧交错的修罗场中，描绘角色对欲望、道德与胜负的极限冲突与挣扎。\")\n<Dream.examples>\n  \"スクールデイズ\",\n  \"クズの本懐\",\n  \"ヨスガノソラ\",\n  \"ホワイトアルバム2\",\n  \"恶の华\",\n  \"奴隷区 仆と23人の奴隷\",\n  \"新妹魔王の契约者\",\n  \"ハイスクールD×D\",\n  \"回复术士のやり直し\",\n  \"pixiv宫能小说\",\n  \"岛耕作シリーズ\",\n  \"半沢直树\",\n  \"监查役野崎修平\",\n  \"DEATH NOTE\",\n  \"赌博黙示录カイジ\",\n  \"コードギアス 反逆のルルーシュ\",\n  \"NO GAME NO LIFE\"\n</Dream.examples>\n{{//自行组合}}\n\n{{setvar::story::色情/背德/智斗/权谋}}\n\n{{//所有次要设定只能开一个，要复合风格改自定义\n在story自行填入梦境属性，可复合例如::搞笑/美好/青春恋爱/色情/热血\n你要加个武侠仙侠玄幻暗黑血腥死亡伤害也无所谓就是了\n}}",
             "injection_position": 0,
             "injection_depth": 4,
             "forbid_overrides": false,
@@ -1651,7 +1677,7 @@
             "marker": false,
             "name": "🌏世界场景(自己改场景)🌏",
             "role": "system",
-            "content": "{{setvar::place::(日本都市)}}\n\n{{//地点背景设定，要恐怖，魔幻，异世界，废土，战场，地下城，古代，未来，日本，中国，都能改}}\n{{//影响角色带你去的地方和故事背景}}\n\n\n\n{{setvar::placew::- 在梦境正文中描写<user>能看到的与剧情相关的地点周围环境}}\n{{setvar::placecot::(加入与剧情相关的环境描写)}}\n\n\n",
+            "content": "{{setvar::place::(玄幻修仙)}}\n\n{{//地点背景设定，要恐怖，魔幻，异世界，废土，战场，地下城，古代，未来，日本，中国，都能改}}\n{{//影响角色带你去的地方和故事背景}}\n\n\n\n{{setvar::placew::- 在梦境正文中描写<user>能看到的与剧情相关的地点周围环境}}\n{{setvar::placecot::(加入与剧情相关的环境描写)}}\n\n\n",
             "injection_position": 0,
             "injection_depth": 4,
             "forbid_overrides": false,
@@ -2178,11 +2204,11 @@
                 },
                 {
                     "identifier": "fb01b7b3-1697-4b17-b72f-7dbec1f7c4c5",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "7ecd35f6-f8b5-4808-8dfd-832ccb07354c",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "d2370f29-111e-44ef-a3ca-d1af90011720",
@@ -2210,11 +2236,11 @@
                 },
                 {
                     "identifier": "42aa2161-78d2-44b8-b807-895cc7bb3f7c",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "8335c30d-24ee-4a98-a622-d158c1e9325a",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "4c56c6b2-3b1b-4e73-a25a-186ee4336357",
@@ -2394,7 +2420,7 @@
                 },
                 {
                     "identifier": "665c08b5-9712-44ea-8dab-9b791b8a8c81",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "52e38b16-ab82-4a97-aeff-2e18d4c3b0a6",
@@ -2406,11 +2432,11 @@
                 },
                 {
                     "identifier": "218095d1-b8b3-49dd-8e25-d0ec1adbeca0",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "7ad4c8b2-3a08-48da-90bb-bbea73515502",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "e5d85924-82e1-4f26-bf1c-8f7dce07a687",
@@ -2442,7 +2468,7 @@
                 },
                 {
                     "identifier": "51a465bc-8ac2-48c8-a6ee-74271b3266b2",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "cb938acc-7e50-4185-abc4-944d8f4511d9",
@@ -2454,7 +2480,7 @@
                 },
                 {
                     "identifier": "0d1341f1-06f8-4609-8d70-168a16c02ad1",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "60a7fb1e-6d2a-4089-b8f4-bac8b9d9592c",
@@ -2466,7 +2492,7 @@
                 },
                 {
                     "identifier": "d050df6e-2077-4b7c-9250-e13e40751708",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "510bbf32-b49d-4a89-a04f-b8eb1c271dd9",
@@ -2474,7 +2500,7 @@
                 },
                 {
                     "identifier": "4c258266-39bd-4920-bf26-4e1a90b38cf2",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "c9701159-a3fd-49df-9b5b-c6ee8ba9e7d4",
@@ -2558,7 +2584,7 @@
                 },
                 {
                     "identifier": "64740e0a-fd2b-4a46-84ac-d4c4f2c40e29",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "77193ea1-6ef8-4e3a-985b-fa79d11f88ad",
@@ -2566,7 +2592,7 @@
                 },
                 {
                     "identifier": "331d8458-3423-48b5-b6d5-b8a2e05251a5",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "166d7180-8aaa-4bc6-a43f-91b0a1218df6",
@@ -2574,19 +2600,19 @@
                 },
                 {
                     "identifier": "264a35a6-f2a9-4052-9195-1f91af769c92",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "7e42635a-8f91-4010-9a3e-1cb22c72e5dc",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "e32afdbf-f78d-45e1-93c5-113aabc8f591",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "710077af-46ea-4a6b-b421-cda982a27c00",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "622e2456-43a9-45e4-8bb6-d37709b442fd",
@@ -2602,7 +2628,7 @@
                 },
                 {
                     "identifier": "710ae515-7cfe-4cdf-9d5b-4db57c5bf82c",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "66814c6a-f5b3-406f-9e09-9104338f29e0",
@@ -2650,7 +2676,7 @@
                 },
                 {
                     "identifier": "cc228202-a296-4618-afc4-d9aff3bf4021",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "c7d0194e-5335-4d3a-9b05-5e6a1cdd59e3",
@@ -2719,13 +2745,17 @@
             ]
         }
     ],
+    "api_url_scale": "",
+    "show_external_models": false,
     "assistant_prefill": "",
     "assistant_impersonation": "",
     "claude_use_sysprompt": false,
     "use_makersuite_sysprompt": false,
+    "use_alt_scale": false,
     "squash_system_messages": false,
     "image_inlining": false,
     "inline_image_quality": "low",
+    "bypass_status_check": false,
     "continue_prefill": false,
     "continue_postfix": " ",
     "function_calling": false,
