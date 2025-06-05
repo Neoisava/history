@@ -3415,8 +3415,8 @@
                 "content": "\\(不要重复前文，继续输出新剧情！)",
                 "LAST_RECEIVE_TOKENS": 32478,
                 "LAST_RECEIVE_CHARS": 94236,
-                "LAST_SEND_TOKENS": 131734,
-                "LAST_SEND_CHARS": 228288
+                "LAST_SEND_TOKENS": 127082,
+                "LAST_SEND_CHARS": 215414
             }
         },
         "attachments": [],
@@ -4053,7 +4053,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 3,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
