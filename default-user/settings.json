@@ -3434,8 +3434,8 @@
                 "content": "\\(不要重复前文，继续输出新剧情！)",
                 "LAST_RECEIVE_TOKENS": 32478,
                 "LAST_RECEIVE_CHARS": 94236,
-                "LAST_SEND_TOKENS": 127082,
-                "LAST_SEND_CHARS": 215414
+                "LAST_SEND_TOKENS": 131721,
+                "LAST_SEND_CHARS": 227653
             }
         },
         "attachments": [],
@@ -7107,8 +7107,8 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "[正常]gemini-2.5-pro-preview-05-06",
-        "custom_url": "https://api.skyi.cc/v1",
+        "custom_model": "gemini-2.5-pro-preview-05-06",
+        "custom_url": "https://api.huaapi.asia/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
         "custom_include_headers": "",
