@@ -20,11 +20,12 @@
         "AlertWI_(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png": "true",
         "AlertRegex_(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png": "true",
         "AlertWI_世界调制模式·古代篇（0.6）.png": "true",
-        "AlertRegex_世界调制模式·古代篇（0.6）.png": "true"
+        "AlertRegex_世界调制模式·古代篇（0.6）.png": "true",
+        "AlertWI_《完美世界》.png": "true"
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": null,
+    "active_character": "《完美世界》.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -4010,7 +4011,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 3,
                 "userConfigured": true
             }
         },
@@ -4168,7 +4169,9 @@
         "世界调制模式·古代篇（0.6）.png": [
             "8c8ef590-3874-4b98-9e3b-d90d524525a0",
             "920223dc-f8b9-4fcc-8a18-650bfdc21db6"
-        ]
+        ],
+        "交换爱妻的盛宴v1.0.png": [],
+        "《完美世界》.png": []
     },
     "nai_settings": {
         "temperature": 1.37,
