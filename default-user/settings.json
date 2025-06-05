@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -6412,11 +6412,11 @@
                     },
                     {
                         "identifier": "4d8250c1-21b9-4695-a84a-11844c3b6c0a",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "c9969cc0-7dde-402d-b267-9d6f1280718f",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "main",
@@ -6624,7 +6624,7 @@
                     },
                     {
                         "identifier": "7ad4c8b2-3a08-48da-90bb-bbea73515502",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "e5d85924-82e1-4f26-bf1c-8f7dce07a687",
@@ -6720,11 +6720,11 @@
                     },
                     {
                         "identifier": "0a8db465-0891-4e30-b254-8a12d765954d",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "86bd7761-d6a7-443e-b6f0-9ad2d8941e9d",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "30aa6d6d-e782-4951-8de6-a8ee68aebf1d",
@@ -6796,11 +6796,11 @@
                     },
                     {
                         "identifier": "e32afdbf-f78d-45e1-93c5-113aabc8f591",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "710077af-46ea-4a6b-b421-cda982a27c00",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "622e2456-43a9-45e4-8bb6-d37709b442fd",
@@ -6816,7 +6816,7 @@
                     },
                     {
                         "identifier": "710ae515-7cfe-4cdf-9d5b-4db57c5bf82c",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "66814c6a-f5b3-406f-9e09-9104338f29e0",
@@ -6832,7 +6832,7 @@
                     },
                     {
                         "identifier": "130beff6-72f2-4736-a984-982c3fc50d17",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "205d31f5-0772-4fa9-87a0-ad696ec29339",
