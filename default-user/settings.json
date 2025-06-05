@@ -36,6 +36,8 @@
     "world_info_settings": {
         "world_info": {
             "globalSelect": [
+                "__性爱世界书",
+                "[Dreammini]预设世界书DLC1.6",
                 "献媚文风加强版"
             ],
             "charLore": [
@@ -2501,9 +2503,9 @@
                     "mode": "cc",
                     "exclude": [],
                     "api": "custom",
-                    "preset": "【Dreammini】1.663-pro-0531",
+                    "preset": "【Dreammini】1.8-pro-0605",
                     "api-url": "https://api.huaapi.asia/v1",
-                    "model": "gemini-2.5-pro-preview-03-25",
+                    "model": "[正常]gemini-2.5-pro-preview-05-06",
                     "stop-strings": "[]",
                     "start-reply-with": "",
                     "reasoning-template": "[Migrated] Custom",
@@ -4030,7 +4032,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 4,
                 "userConfigured": true
             }
         },
@@ -7065,8 +7067,8 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "[正常]gemini-2.5-pro-preview-05-06",
-        "custom_url": "https://api.skyi.cc/v1",
+        "custom_model": "gemini-2.5-pro-exp-03-25",
+        "custom_url": "https://api.huaapi.asia/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
         "custom_include_headers": "",
