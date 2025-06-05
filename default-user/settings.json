@@ -25,7 +25,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": "《完美世界》.png",
+    "active_character": "修仙世界-[万界大陆].png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -36,7 +36,6 @@
     "world_info_settings": {
         "world_info": {
             "globalSelect": [
-                "信息栏COTv1.2",
                 "献媚文风加强版"
             ],
             "charLore": [
@@ -98,10 +97,13 @@
                 {
                     "name": "修仙世界-[万界大陆]",
                     "extraBooks": [
+                        "SSVGG 2.0",
                         "人类本能世界书",
+                        "信息栏COTv1.2",
                         "多维情感网络动态",
                         "女性本能世界书 by LULUZ",
-                        "道德伦理(1)"
+                        "道德伦理(1)",
+                        "针对2.5pro的瑟瑟场景"
                     ]
                 },
                 {
@@ -3143,6 +3145,23 @@
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
+            },
+            {
+                "id": "07566386-6eb9-4a2d-8d7b-161a66d492bd",
+                "scriptName": "信息栏COT隐藏",
+                "findRegex": "/<thinkbiao>[\\s\\S]*<\\/thinkbiao>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -3813,7 +3832,7 @@
                         "content": "$(() => {\n  // 在收到消息后触发标签修复功能\n  eventOn(tavern_events.MESSAGE_RECEIVED, () => {\n    // 获取最新的一条消息\n    const lastMessage = SillyTavern.chat[SillyTavern.chat.length - 1];\n    \n    // 检查消息是否存在\n    if (lastMessage && lastMessage.mes) {\n      // 修复消息中的标签\n      lastMessage.mes = fixMissingTags(lastMessage.mes);\n    }\n  });\n  \n  /**\n   * 简单修复HTML中缺失的闭合标签\n   * @param {string} html - 包含可能缺失闭合标签的HTML字符串\n   * @return {string} - 修复后的HTML字符串\n   */\n  function fixMissingTags(html) {\n    if (!html || typeof html !== 'string') {\n      return html;\n    }\n    \n    // 使用正则表达式找出所有的开标签和闭标签\n    const tagRegex = /<\\/?([^\\s>/]+)[^>]*>/g;\n    const tags = [];\n    let match;\n    \n    // 收集所有标签信息\n    while ((match = tagRegex.exec(html)) !== null) {\n      const fullTag = match[0];\n      const tagName = match[1];\n      const isClosingTag = fullTag.startsWith('</');\n      const position = match.index;\n      const endPosition = position + fullTag.length;\n      \n      tags.push({\n        fullTag,\n        tagName,\n        isClosingTag,\n        position,\n        endPosition\n      });\n    }\n    \n    // 计算每种标签的开闭标签数量\n    const tagCounts = {};\n    tags.forEach(tag => {\n      if (!tagCounts[tag.tagName]) {\n        tagCounts[tag.tagName] = { open: 0, close: 0 };\n      }\n      \n      if (tag.isClosingTag) {\n        tagCounts[tag.tagName].close++;\n      } else {\n        tagCounts[tag.tagName].open++;\n      }\n    });\n    \n    // 找出缺少闭合标签的标签\n    const unclosedTags = {};\n    for (const [tagName, count] of Object.entries(tagCounts)) {\n      if (count.open > count.close) {\n        unclosedTags[tagName] = count.open - count.close;\n      }\n    }\n    \n    // 如果没有未闭合的标签，直接返回原始HTML\n    if (Object.keys(unclosedTags).length === 0) {\n      return html;\n    }\n    \n    // 为每个未闭合的标签找到合适的插入位置\n    const insertions = [];\n    \n    // 按照标签出现顺序处理\n    for (let i = 0; i < tags.length; i++) {\n      const tag = tags[i];\n      \n      // 只处理开标签\n      if (tag.isClosingTag) continue;\n      \n      // 检查这个标签是否缺少闭合标签\n      if (unclosedTags[tag.tagName] && unclosedTags[tag.tagName] > 0) {\n        // 默认在下一个标签之前插入\n        let insertPos = html.length;\n        let foundNextTag = false;\n        \n        // 查找下一个标签\n        for (let j = i + 1; j < tags.length; j++) {\n          if (tags[j].position > tag.endPosition) {\n            insertPos = tags[j].position;\n            foundNextTag = true;\n            break;\n          }\n        }\n        \n        // 尝试找到上一行末尾\n        if (foundNextTag) {\n          const textBetween = html.substring(tag.endPosition, insertPos);\n          const lastNewlinePos = textBetween.lastIndexOf('\\n');\n          \n          if (lastNewlinePos !== -1) {\n            insertPos = tag.endPosition + lastNewlinePos;\n          }\n        }\n        \n        // 记录插入位置\n        insertions.push({\n          position: insertPos,\n          tag: `</${tag.tagName}>`\n        });\n        \n        // 减少需要闭合的标签数量\n        unclosedTags[tag.tagName]--;\n        \n        // 如果这个标签已经全部修复，从未闭合标签列表中移除\n        if (unclosedTags[tag.tagName] <= 0) {\n          delete unclosedTags[tag.tagName];\n        }\n      }\n    }\n    \n    // 按位置从后往前排序，避免位置变化\n    insertions.sort((a, b) => b.position - a.position);\n    \n    // 执行插入\n    let result = html;\n    insertions.forEach(insertion => {\n      result = result.substring(0, insertion.position) + \n               insertion.tag + \n               result.substring(insertion.position);\n    });\n    \n    return result;\n  }\n});\n",
                         "info": "自动HTML标签闭合修复工具\n\n版本: 1.0.0\n日期: 2025年4月27日\n\n作者:\n司马咩咩 (原理构思与实现)\n十四行诗 (代码优化与调试)\n\n描述:\n这个脚本可以自动检测并修复HTML中缺失的闭合标签。它会智能地在适当位置\n添加缺失的闭合标签，使HTML结构完整。特别适用于角色扮演或模板化内容中\n的标签自动补全。",
                         "buttons": [],
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "id": "98138d4f-9819-47b0-b18f-dc917718c441",
@@ -4011,7 +4030,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 3,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
@@ -4246,7 +4265,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": false,
+        "stream_openai": true,
         "openai_max_context": 1000000,
         "openai_max_tokens": 65500,
         "wrap_in_quotes": false,
@@ -7046,7 +7065,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "[正常]gemini-2.5-pro-preview-03-25",
+        "custom_model": "[正常]gemini-2.5-pro-preview-05-06",
         "custom_url": "https://api.skyi.cc/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
