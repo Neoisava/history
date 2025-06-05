@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
+        "LNavOpened": "true",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -4027,7 +4027,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 3,
                 "userConfigured": true
             }
         },
@@ -4262,7 +4262,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": true,
+        "stream_openai": false,
         "openai_max_context": 1000000,
         "openai_max_tokens": 65500,
         "wrap_in_quotes": false,
@@ -6801,11 +6801,11 @@
                     },
                     {
                         "identifier": "0a8db465-0891-4e30-b254-8a12d765954d",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "86bd7761-d6a7-443e-b6f0-9ad2d8941e9d",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "30aa6d6d-e782-4951-8de6-a8ee68aebf1d",
@@ -6829,7 +6829,7 @@
                     },
                     {
                         "identifier": "d81c2780-201d-4315-a116-f0e197f060a8",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "b30e6b7e-13ff-4467-8ae2-ba243ced739c",
