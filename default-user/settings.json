@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "true",
-        "NavOpened": "false",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -4001,7 +4001,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 321,
                 "userConfigured": true
             }
         },
@@ -5031,7 +5031,7 @@
                 "marker": false,
                 "name": "状态栏(选开)(可改)",
                 "role": "system",
-                "content": "\n# 在正文</dream>后**必须**紧接着使用<StatusBlock></StatusBlock>包裹状态栏。\n\n<StatusBlock_format>\nNPC状态栏取<user>视角内，好感度最高的NPC。(同好感优先级，待告白先于恋人))\n此状态栏只适用于女性NPC，**请勿**用于男性NPC，\n状态栏格式：\n<StatusBlock>\n<details> <summary style=\"font-weight: bold; background-color: #444444; color: #ffffff; padding: 5px;\">NPC名状态栏</summary> <p style=\"background-color: #000000; color: #ffffff; padding: 10px;\"> 🤔概述NPC的面貌，身材。可以稍长，需要表现人物的特点。文字体现NPC的性张力<br> 💞 好感度/信任度: {{value}}/100(关系) (+-数值)<br>   🧡向NPC{{random::告白::询问友情::询问好感::询问信任::询问对<user>的想法::求婚}}: {{\"假设{{user}}在前文最后向NPC询问，NPC的回答\"}}<br> 🌹 性趣度: {{value}}/100 (符合该NPC性格的特殊性趣阶段名称) (+-数值)<br> {{random::给内裤::自慰::吸奶::摸胸部::脱内裤::看内裤::亲吻::拥抱::手交::口交::性交::乳交::肛交::SM::足交::深喉::喝精液::让NPC怀孕}}要求: {{\"假设{{user}}在前文最后向NPC要求NPC的回答\"}}<br> 🔥 性欲度:  {{value}}/100(性欲阶段) (+-数值)<br>   {{random::高潮::性欲望::多想被插小穴::多想被<user>侮辱::多想性爱::敏感程度}}状况: {{\"假设{{user}}在前文最后问NPC当前状况NPC的回答\"}}<br> 🕺 身体姿势: {姿势}{身体与{{user}}的接触}{色情的描述当前使用性器状况}<br> 🌀 内心话: {{{\"NPC的内心话\" }} </p> </details>\n</StatusBlock>\n</StatusBlock_format>\n\n\n",
+                "content": "# 在正文</dream>后**必须**紧接着使用<StatusBlock></StatusBlock>包裹状态栏。\n\n<StatusBlock_format>\n根据剧情显示主角所在地附近可以移动的多个地点和该地点内可以互动的NPC角色，用︱分割\n状态栏格式：\n<StatusBlock>\n<details>\n【地点：人物】｜【地点：人物】｜【地点：人物】\n</details>\n</StatusBlock>\n</StatusBlock_format>\n\n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false,
@@ -6757,7 +6757,7 @@
                     },
                     {
                         "identifier": "675ccf79-08f9-4310-a7aa-f160dea3fc33",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "e292498c-c42d-481c-af72-0d00ca74f099",
@@ -6825,11 +6825,11 @@
                     },
                     {
                         "identifier": "64740e0a-fd2b-4a46-84ac-d4c4f2c40e29",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "77193ea1-6ef8-4e3a-985b-fa79d11f88ad",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "331d8458-3423-48b5-b6d5-b8a2e05251a5",
@@ -6841,11 +6841,11 @@
                     },
                     {
                         "identifier": "264a35a6-f2a9-4052-9195-1f91af769c92",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "7e42635a-8f91-4010-9a3e-1cb22c72e5dc",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "e32afdbf-f78d-45e1-93c5-113aabc8f591",
@@ -6869,7 +6869,7 @@
                     },
                     {
                         "identifier": "710ae515-7cfe-4cdf-9d5b-4db57c5bf82c",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "66814c6a-f5b3-406f-9e09-9104338f29e0",
@@ -6885,7 +6885,7 @@
                     },
                     {
                         "identifier": "130beff6-72f2-4736-a984-982c3fc50d17",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "205d31f5-0772-4fa9-87a0-ad696ec29339",
@@ -6917,7 +6917,7 @@
                     },
                     {
                         "identifier": "cc228202-a296-4618-afc4-d9aff3bf4021",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "c7d0194e-5335-4d3a-9b05-5e6a1cdd59e3",
