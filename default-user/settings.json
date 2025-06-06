@@ -11,7 +11,7 @@
         "world_info_sort_order": "6",
         "NavLockOn": "false",
         "Assets_SkipConfirm_2502775700152061": "true",
-        "LNavLockOn": "false",
+        "LNavLockOn": "true",
         "WINavLockOn": "false",
         "WI_PerPage": "100",
         "AlertRegex_修仙之路2.0.png": "true",
@@ -3433,10 +3433,10 @@
         "variables": {
             "global": {
                 "content": "\\(不要重复前文，继续输出新剧情！)",
-                "LAST_RECEIVE_TOKENS": 12,
-                "LAST_RECEIVE_CHARS": 17,
-                "LAST_SEND_TOKENS": 96428,
-                "LAST_SEND_CHARS": 195134
+                "LAST_RECEIVE_TOKENS": 50,
+                "LAST_RECEIVE_CHARS": 60,
+                "LAST_SEND_TOKENS": 94349,
+                "LAST_SEND_CHARS": 192743
             }
         },
         "attachments": [],
@@ -4037,7 +4037,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 46,
+                "lastProcessedLength": 48,
                 "userConfigured": true
             }
         },
