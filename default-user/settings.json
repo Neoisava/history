@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -2952,7 +2952,7 @@
             {
                 "id": "adcfb751-2ac5-4228-be5f-a78dafd121ff",
                 "scriptName": "【Dreammini】1.删除主线",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": false,
                 "findRegex": "/(?<=<dream>[\\s\\S]*?)((?:[\\(（].{1,2}[\\)）])触发(?:[1-5])?|((?:\\(.{0,2}\\)|（.{0,2}）)?触发[1-5]))(?=[\\s\\S]*?</dream>)/gm",
                 "replaceString": "",
@@ -2969,7 +2969,7 @@
             {
                 "id": "a9eef03a-b5d2-41ba-a3ff-984bd8b55367",
                 "scriptName": "【Dreammini】2.Kemini去除所有用户消息",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "^([\\s\\S]*)$",
                 "replaceString": "",
@@ -2986,7 +2986,7 @@
             {
                 "id": "2688e9e7-81f0-40b9-8dd6-719ccead6391",
                 "scriptName": "【Dreammini】4.Kemini通用去除多余内容",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<dream>|</dream>|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
                 "replaceString": "",
@@ -3003,7 +3003,7 @@
             {
                 "id": "18567ca7-b0c6-463a-b02b-183566b4ffd2",
                 "scriptName": "【Dreammini】5.DIE[推进(缩起)]",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
                 "replaceString": "<details>\n<summary>剧情</summary>\n$1\n</details>\n\n",
@@ -3020,7 +3020,7 @@
             {
                 "id": "21ed7ae3-8926-483e-ac46-3bd55a1d6530",
                 "scriptName": "【Dreammini】6.DIE[推进(移除)]",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
                 "replaceString": "",
@@ -3037,7 +3037,7 @@
             {
                 "id": "77052179-920e-4b83-87f5-3dc4cef4a0c6",
                 "scriptName": "【Dreammini】7.DIE小总结(格式)",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/(?<!<details>\\s*)<summary>(((?!<summary>)[\\s\\S])*?)<\\/summary>/g",
                 "replaceString": "<details>\n<summary>摘要</summary>\n$1\n</details>\n\n",
@@ -3054,7 +3054,7 @@
             {
                 "id": "18956466-025a-4e61-b88d-74e5d4088051",
                 "scriptName": "【Dreammini】8.DIE小总结(移除正文)",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/[\\s\\S]*?(?<!<details>\\s*)<summary>([\\s\\S]*)<\\/summary>[\\s\\S]*/g",
                 "replaceString": "<summary>\n$1\n</summary>",
@@ -3071,7 +3071,7 @@
             {
                 "id": "c28179a9-f094-4df5-a8a9-29c6f46fdd8a",
                 "scriptName": "【Dreammini】9.舊选项移除",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "<options[^>]*>[\\s\\S]*?</options>",
                 "replaceString": "",
@@ -3088,7 +3088,7 @@
             {
                 "id": "4c4f6a63-0ee7-404a-b31e-1e61232f0c7b",
                 "scriptName": "【Dreammini】10.选项格式",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "<options>\\s*(1\\.[^\\n]*)\\s*(2\\.[^\\n]*)\\s*(3\\.[^\\n]*)\\s*(4\\.[^\\n]*)\\s*(5\\.[^\\n]*)\\s*(6\\.[^\\n]*)\\s*(7\\.[^\\n]*)\\s*(8\\.[^\\n]*)\\s*(9\\.[^\\n]*)\\s*<\\/options>",
                 "replaceString": "<options><details><summary style=\"background-color: #000000; color: #ffffff; padding: 5px; font-weight: bold; border-radius: 5px;\">故事选项</summary><div style=\"background-color: #000000; color: #ffffff; padding: 15px; border-radius: 0 0 5px 5px;\"><p style=\"margin: 5px 0;\">以下为当前场景下的可选行动，选择数字1-9（可複选），或使用10自行输入：</p><ul style=\"list-style-type: none; padding-left: 0;\"><li>\"$1\" <br> </li><li>\"$2\"<br> </li><li>\"$3\"<br></li><li>\"$4\"<br></li><li>\"$5\"<br></li><li>\"$6\"<br> </li><li>\"$7\"<br></li><li>\"$8\"<br></li><li>\"$9\" </li></ul></div></details></options>",
@@ -3105,7 +3105,7 @@
             {
                 "id": "dd994ad4-8957-4a56-9cc9-e4afa85acb2e",
                 "scriptName": "【Dreammini】 11.DIE移除最近总结",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/(?<!<details>\\s*)<summary>(((?!<summary>)[\\s\\S])*?)<\\/summary>/g",
                 "replaceString": "",
@@ -3140,53 +3140,53 @@
             {
                 "id": "5d44f7d8-d1fd-4467-bccd-0fa39285ec3c",
                 "scriptName": "信息栏COT隐藏",
+                "disabled": false,
+                "runOnEdit": true,
                 "findRegex": "/<thinkbiao>[\\s\\S]*<\\/thinkbiao>/g",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
             },
             {
                 "id": "0ca90bcc-00d6-42c9-92db-6c3639b91806",
                 "scriptName": "归纳数据v2",
+                "disabled": false,
+                "runOnEdit": true,
                 "findRegex": "/<thinkbiao>[\\s\\S]*<\\/thinkbiao>/g",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
             },
             {
                 "id": "0944104e-abf3-46c1-882c-f929c497263b",
                 "scriptName": "隐藏思考",
+                "disabled": false,
+                "runOnEdit": true,
                 "findRegex": "<aiThinkProcess>[\\s\\S]*?<\\/aiThinkProcess>",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
             }
         ],
         "character_allowed_regex": [
@@ -3416,10 +3416,10 @@
         "variables": {
             "global": {
                 "content": "\\(不要重复前文，继续输出新剧情！)",
-                "LAST_RECEIVE_TOKENS": 2730,
-                "LAST_RECEIVE_CHARS": 3484,
-                "LAST_SEND_TOKENS": 103311,
-                "LAST_SEND_CHARS": 204011
+                "LAST_RECEIVE_TOKENS": 932,
+                "LAST_RECEIVE_CHARS": 1201,
+                "LAST_SEND_TOKENS": 102884,
+                "LAST_SEND_CHARS": 205693
             }
         },
         "attachments": [],
@@ -3826,7 +3826,7 @@
                         "content": "function extract_tags_from(name){return[...name.matchAll(/【(.*?)】/g)].map((match=>match[1].toLowerCase()))}function extract_control_tags(){return function sortUnique(array){return _.sortedUniq(_.sortBy(array))}([...extract_tags_from($(\"#settings_preset_openai\").find(\":selected\").text()),...$(\"#world_info\").find(\":selected\").toArray().map((node=>$(node).text())).flatMap(extract_tags_from),...extract_tags_from($(\"#connection_profiles\").find(\":checked\").text())])}function check_should_enable(title,tags){return[...title.matchAll(/【(.*?)】/g)].map((match=>match[1])).some((tag_list=>tag_list.split(\"&\").map((tag=>tag.toLowerCase())).every((expected=>tags.includes(expected)))))}const toggle_tags_throttled=_.throttle((async function toggle_tags(){const tags=extract_control_tags();!async function toggle_tagged_preset_prompts(tags){const prompt_identifiers_to_be_toggled=$(\"#completion_prompt_manager\").find(\"a[title]\").filter((function(){return null!==$(this).text().match(/【.*?】/)})).toArray().map((prompt_anchor=>{const $anchor=$(prompt_anchor),$li=$anchor.closest(\"li\");return{identifier:$li.attr(\"data-pm-identifier\"),should_toggle:check_should_enable($anchor.attr(\"title\"),tags)!==$li.find(\".prompt-manager-toggle-action\").hasClass(\"fa-toggle-on\")}})).filter((({should_toggle:should_toggle})=>should_toggle)).map((({identifier:identifier})=>`identifier=${identifier}`));0!==prompt_identifiers_to_be_toggled.length&&await triggerSlash(`/setpromptentry ${prompt_identifiers_to_be_toggled.join(\" \")}`)}(tags),async function toggle_tagged_regexes(tags){const regexes=getTavernRegexes({scope:\"all\"}),new_regexes=structuredClone(regexes);new_regexes.filter((regex=>null!==regex.script_name.match(/【.*?】/))).forEach((regex=>{regex.enabled=check_should_enable(regex.script_name,tags)})),_.isEqual(regexes,new_regexes)||await replaceTavernRegexes(new_regexes,{scope:\"all\"})}(tags),async function toggle_tagged_scripts(tags){const scripts_to_be_toggled=$(\"#script-settings-content\").find(\".script-item\").filter((function(){return null!==$(this).find(\".script-item-name\").text().match(/【.*?】/)})).toArray().map((script=>{const $div=$(script),should_enabled=check_should_enable($div.find(\".script-item-name\").text(),tags),is_enabled=$div.find(\".toggle-script\").prop(\"checked\");return{button:$div.find(\".script-toggle-\"+(is_enabled?\"on\":\"off\")),should_toggle:should_enabled!==is_enabled}})).filter((({should_toggle:should_toggle})=>should_toggle)).map((({button:button})=>button));for(const script of scripts_to_be_toggled)script.trigger(\"click\")}(tags)}),1e3,{trailing:!1});$((()=>{toggle_tags_throttled(),eventMakeFirst(tavern_events.SETTINGS_UPDATED,toggle_tags_throttled)}));\n",
                         "info": "# 标签化: 根据预设自动开关正则、根据模型自动切换破限\n\n**作者:** 青空莉想做舞台少女的狗\n**版本:** 2025/04/22\n**原帖:** [点此跳转](https://discord.com/channels/1291925535324110879/1344362686900605043)\n**源文件:** [点此跳转](https://gitgud.io/StageDog/tavern_resource/-/tree/main/酒馆助手/标签化/源文件?ref_type=heads)\n**说明:** 将酒馆标签化, 允许你根据预设自动开关正则、根据模型自动切换破限等\n\n## 演示视频\n\n- [标签化正则演示](https://gitgud.io/StageDog/tavern_resource/-/raw/main/酒馆助手/标签化/正则.mp4)\n- [标签化预设提示词演示](https://gitgud.io/StageDog/tavern_resource/-/raw/main/酒馆助手/标签化/预设提示词.mp4)\n\n## 使用说明\n\n- 在\"正则\"/\"预设提示词\"/\"酒馆助手脚本\"名称中添加它所属于的一个或多个`【标签】`\n- 在\"预设\"/\"世界书\"/\"API连接配置\"名称中添加对于它你想要启用的一个或多个`【标签】`\n\n这样一来，在使用\"预设\"/\"世界书\"/\"API连接配置\"时，脚本将会\n\n- 自动开启其对应的`【标签】`\"正则\"/\"预设提示词\"/\"酒馆助手脚本\"\n- 自动关闭没有被对应上的`【标签】`\"正则\"/\"预设提示词\"/\"酒馆助手脚本\"\n- 其他没有`【标签】`的\"正则\"/\"预设提示词\"/\"酒馆助手脚本\"不受任何影响\n\n### 当正则、预设提示词、酒馆助手脚本有多个标签\n\n- `【标签1】【标签2】` 表示\"或者\"，只要\"预设\"/\"世界书\"/\"API连接配置\"名称中有`【标签1】`或`【标签2】`就会启用\n- `【标签1&标签2】`表示\"并且\"，只有\"预设\"/\"世界书\"/\"API连接配置\"名称中同时有`【标签1】`和`【标签2】`才会启用\n",
                         "buttons": [],
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "id": "自动开启角色卡局部正则",
@@ -4020,7 +4020,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 62,
+                "lastProcessedLength": 63,
                 "userConfigured": true
             }
         },
@@ -6795,11 +6795,11 @@
                     },
                     {
                         "identifier": "0a8db465-0891-4e30-b254-8a12d765954d",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "86bd7761-d6a7-443e-b6f0-9ad2d8941e9d",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "30aa6d6d-e782-4951-8de6-a8ee68aebf1d",
