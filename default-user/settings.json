@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "false",
-        "NavOpened": "true",
+        "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -3416,10 +3416,10 @@
         "variables": {
             "global": {
                 "content": "\\(不要重复前文，继续输出新剧情！)",
-                "LAST_RECEIVE_TOKENS": 58,
-                "LAST_RECEIVE_CHARS": 70,
-                "LAST_SEND_TOKENS": 88607,
-                "LAST_SEND_CHARS": 185238
+                "LAST_RECEIVE_TOKENS": 5960,
+                "LAST_RECEIVE_CHARS": 7927,
+                "LAST_SEND_TOKENS": 88683,
+                "LAST_SEND_CHARS": 185309
             }
         },
         "attachments": [],
@@ -4020,7 +4020,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 28,
+                "lastProcessedLength": 30,
                 "userConfigured": true
             }
         },
