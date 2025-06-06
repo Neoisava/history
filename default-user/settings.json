@@ -4050,6 +4050,30 @@
                 "position": "deep_system",
                 "depth": 0
             }
+        },
+        "NoAss": {
+            "noass_is_enabled": true,
+            "active_set": "Default",
+            "active_set_idx": 0,
+            "sets": [
+                {
+                    "name": "Default",
+                    "enable_stop_string": true,
+                    "stop_string": "**{{user}}:**",
+                    "max_symbols": 999999,
+                    "messages_separator": "double_newline",
+                    "user_prefix": "**{{user}}:** ",
+                    "user_suffix": "",
+                    "char_prefix": "",
+                    "char_suffix": "",
+                    "zero_prefill": "",
+                    "enable_zero_prefill": false,
+                    "separate_chat_history": false,
+                    "squash_role": "assistant",
+                    "client_stop_string": false,
+                    "client_stop_regex": false
+                }
+            ]
         }
     },
     "tags": [
