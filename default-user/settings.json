@@ -3416,10 +3416,10 @@
         "variables": {
             "global": {
                 "content": "\\(不要重复前文，继续输出新剧情！)",
-                "LAST_RECEIVE_TOKENS": 2569,
-                "LAST_RECEIVE_CHARS": 3386,
-                "LAST_SEND_TOKENS": 93920,
-                "LAST_SEND_CHARS": 192110
+                "LAST_RECEIVE_TOKENS": 2554,
+                "LAST_RECEIVE_CHARS": 3373,
+                "LAST_SEND_TOKENS": 92232,
+                "LAST_SEND_CHARS": 185881
             }
         },
         "attachments": [],
@@ -4020,7 +4020,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 34,
+                "lastProcessedLength": 36,
                 "userConfigured": true
             }
         },
