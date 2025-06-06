@@ -3204,6 +3204,25 @@
                 "substituteRegex": 0,
                 "minDepth": null,
                 "maxDepth": null
+            },
+            {
+                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2,
+                    6
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -3433,8 +3452,8 @@
         "variables": {
             "global": {
                 "content": "\\(不要重复前文，继续输出新剧情！)",
-                "LAST_RECEIVE_TOKENS": 2879,
-                "LAST_RECEIVE_CHARS": 3717,
+                "LAST_RECEIVE_TOKENS": 46,
+                "LAST_RECEIVE_CHARS": 54,
                 "LAST_SEND_TOKENS": 94135,
                 "LAST_SEND_CHARS": 192248
             }
@@ -4037,7 +4056,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 57,
+                "lastProcessedLength": 58,
                 "userConfigured": true
             }
         },
