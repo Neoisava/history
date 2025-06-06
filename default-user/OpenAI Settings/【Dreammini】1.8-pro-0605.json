@@ -16,8 +16,8 @@
     "perplexity_model": "llama-3.1-70b-instruct",
     "groq_model": "llama-3.1-70b-versatile",
     "zerooneai_model": "yi-large",
-    "custom_model": "gemini-2.5-pro-exp-03-25",
-    "custom_url": "https://api.huaapi.asia/v1",
+    "custom_model": "[正常]gemini-2.5-pro-preview-05-06",
+    "custom_url": "https://api.skyi.cc/v1",
     "custom_include_body": "",
     "custom_exclude_body": "",
     "custom_include_headers": "",
@@ -49,7 +49,7 @@
     "scenario_format": "{{scenario}}",
     "personality_format": "{{personality}}",
     "group_nudge_prompt": "[Write the next reply only as {{char}}.]",
-    "stream_openai": true,
+    "stream_openai": false,
     "prompts": [
         {
             "name": "🛏️梦境系统(必开)",
@@ -2481,7 +2481,7 @@
                 },
                 {
                     "identifier": "e5d85924-82e1-4f26-bf1c-8f7dce07a687",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "2512fa4e-eb17-4472-a5aa-8ed308dd8d44",
@@ -2497,7 +2497,7 @@
                 },
                 {
                     "identifier": "b3ead074-20a8-42a2-bbe9-ada7cec9a8c3",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "1c209371-7841-4553-a1aa-5e986ec41cb3",
@@ -2569,7 +2569,7 @@
                 },
                 {
                     "identifier": "675ccf79-08f9-4310-a7aa-f160dea3fc33",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "e292498c-c42d-481c-af72-0d00ca74f099",
@@ -2665,7 +2665,7 @@
                 },
                 {
                     "identifier": "710077af-46ea-4a6b-b421-cda982a27c00",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "622e2456-43a9-45e4-8bb6-d37709b442fd",
