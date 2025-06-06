@@ -26,7 +26,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": null,
+    "active_character": "地球异闻录.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -3189,6 +3189,23 @@
                 "promptOnly": true
             },
             {
+                "id": "0b8a0192-ef30-4b5d-a857-3ffe578cdd1b",
+                "scriptName": "【DepressIon】通用必备正则 v1.3",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/((<(guifan|safety_check)>(?:(?!<(guifan|safety_check)>)[\\s\\S])*?<\\/(guifan|safety_check)>)|(<reminder>(?:[\\s\\S])*?<\\/reminder>)|([\\s\\S]*<\\/(analysis|thinking|think)>)|([\\s\\S]*(?=<game>)))/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
                 "id": "05198484-0f5f-422c-ab2b-47d5538bb392",
                 "scriptName": "【DepressIon】剧情推进1 v2.5",
                 "disabled": false,
@@ -3220,23 +3237,6 @@
                 "minDepth": 12,
                 "maxDepth": null,
                 "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "0b8a0192-ef30-4b5d-a857-3ffe578cdd1b",
-                "scriptName": "【DepressIon】通用必备正则 v1.3",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/((<(guifan|safety_check)>(?:(?!<(guifan|safety_check)>)[\\s\\S])*?<\\/(guifan|safety_check)>)|(<reminder>(?:[\\s\\S])*?<\\/reminder>)|([\\s\\S]*<\\/(analysis|thinking|think)>)|([\\s\\S]*(?=<game>)))/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
                 "promptOnly": true
             },
             {
@@ -3518,10 +3518,10 @@
         "variables": {
             "global": {
                 "content": "\\(不要重复前文，继续输出新剧情！)",
-                "LAST_RECEIVE_TOKENS": 10315,
-                "LAST_RECEIVE_CHARS": 30247,
-                "LAST_SEND_TOKENS": 197703,
-                "LAST_SEND_CHARS": 378564
+                "LAST_RECEIVE_TOKENS": 2573,
+                "LAST_RECEIVE_CHARS": 5179,
+                "LAST_SEND_TOKENS": 127063,
+                "LAST_SEND_CHARS": 270403
             }
         },
         "attachments": [],
@@ -4122,7 +4122,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 1,
+                "lastProcessedLength": 74,
                 "userConfigured": true
             }
         },
@@ -4399,7 +4399,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": true,
+        "stream_openai": false,
         "openai_max_context": 345678,
         "openai_max_tokens": 65535,
         "wrap_in_quotes": false,
