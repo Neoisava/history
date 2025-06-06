@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -321,7 +321,7 @@
         "movingUIState": {},
         "movingUIPreset": "Default",
         "noShadows": true,
-        "theme": "深色简约卡片",
+        "theme": "地球异闻录",
         "gestures": true,
         "auto_swipe": false,
         "auto_swipe_minimum_length": 0,
@@ -3416,10 +3416,10 @@
         "variables": {
             "global": {
                 "content": "\\(不要重复前文，继续输出新剧情！)",
-                "LAST_RECEIVE_TOKENS": 34599,
-                "LAST_RECEIVE_CHARS": 124744,
-                "LAST_SEND_TOKENS": 57229,
-                "LAST_SEND_CHARS": 129352
+                "LAST_RECEIVE_TOKENS": 3123,
+                "LAST_RECEIVE_CHARS": 4064,
+                "LAST_SEND_TOKENS": 56526,
+                "LAST_SEND_CHARS": 128690
             }
         },
         "attachments": [],
