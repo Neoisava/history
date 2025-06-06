@@ -3187,6 +3187,25 @@
                 "substituteRegex": 0,
                 "minDepth": null,
                 "maxDepth": null
+            },
+            {
+                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2,
+                    6
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -3416,10 +3435,10 @@
         "variables": {
             "global": {
                 "content": "\\(不要重复前文，继续输出新剧情！)",
-                "LAST_RECEIVE_TOKENS": 5960,
-                "LAST_RECEIVE_CHARS": 7927,
-                "LAST_SEND_TOKENS": 88683,
-                "LAST_SEND_CHARS": 185309
+                "LAST_RECEIVE_TOKENS": 46,
+                "LAST_RECEIVE_CHARS": 54,
+                "LAST_SEND_TOKENS": 96358,
+                "LAST_SEND_CHARS": 193567
             }
         },
         "attachments": [],
@@ -3837,18 +3856,18 @@
                         "enabled": true
                     },
                     {
-                        "id": "预设防误触",
-                        "name": "预设防误触",
-                        "content": "function lock_inputs(enable) {\n    $('#range_block_openai :input').prop('disabled', enable);\n    $('#openai_settings > div:first-child :input').prop('disabled', enable);\n    $('#stream_toggle').prop('disabled', false);\n    $('#openai_show_thoughts').prop('disabled', false);\n}\n$(() => {\n    lock_inputs(true);\n});\n$(window).on('unload', () => lock_inputs(false));\nexport {};\n",
-                        "info": "# 预设防误触\n\n**作者:** 青空莉想做舞台少女的狗\n**版本:** 2025/04/29\n**源文件:** [点此跳转](https://gitgud.io/StageDog/tavern_resource/-/tree/main/酒馆助手/预设防误触/源文件?ref_type=heads)\n**说明:** 启用后将锁定预设除了 '流式传输'、'请求思维链' 和 '具体条目' 以外的选项, 不能通过界面来修改\n",
-                        "buttons": [],
-                        "enabled": true
-                    },
-                    {
                         "id": "70c0bab7-c2a2-46f1-a0b9-21835bc4566e",
                         "name": "一种批量更新覆盖支持压缩包的上传正则方式",
                         "content": "const e=window.getTavernRegexes,n=window.replaceTavernRegexes,o=window.toastr,t=\"upload-regex-button\";let r=null;const i=\"https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js\";function s(e){const n=(e||\"\").toLowerCase();return n.startsWith(\"替换\")?2:n.startsWith(\"删除\")?3:n.startsWith(\"消除\")?4:1}async function c(e){const n=[],t=[];if(Array.from(e).some((e=>e.name.toLowerCase().endsWith(\".zip\"))))try{await async function(){return\"function\"==typeof JSZip?(console.log(\"JSZip 已加载。\"),Promise.resolve()):r?(console.log(\"JSZip 正在加载中...\"),r):(console.log(`尝试从 CDN 加载 JSZip: ${i}`),o&&\"function\"==typeof o.info&&o.info(\"首次上传ZIP，正在尝试加载 JSZip 库...\",\"请稍候\",{timeOut:3e3}),r=new Promise(((e,n)=>{const t=document.createElement(\"script\");t.src=i,t.async=!0,t.onload=()=>{\"function\"==typeof JSZip?(console.log(\"JSZip 从 CDN 加载成功。\"),o&&\"function\"==typeof o.success&&o.success(\"JSZip 库加载成功！\",\"成功\",{timeOut:2e3}),e()):(console.error(\"JSZip CDN 脚本已加载，但 JSZip 对象未定义。\"),o&&\"function\"==typeof o.error&&o.error(\"JSZip 库加载异常。\",\"错误\"),n(new Error(\"JSZip loaded but not defined.\")))},t.onerror=e=>{console.error(\"从 CDN 加载 JSZip 失败:\",e),o&&\"function\"==typeof o.error&&o.error(\"JSZip 库加载失败，无法处理ZIP文件。请检查网络连接或浏览器控制台。\",\"错误\"),r=null,n(e)},document.head.appendChild(t)})),r)}()}catch(e){console.error(\"JSZip 加载失败，部分ZIP文件可能无法处理。\",e)}for(const r of Array.from(e)){const e=r.name.toLowerCase();if(e.endsWith(\".json\"))try{const e=await r.text();n.push({originalFileName:r.name,content:e})}catch(e){t.push(`读取JSON文件 ${r.name} 失败: ${e.message}`)}else if(e.endsWith(\".zip\")){if(\"function\"!=typeof JSZip){const e=`JSZip 库未能加载或不可用，无法处理 ZIP 文件: ${r.name}。`;o&&\"function\"==typeof o.error?o.error(e.replace(/\\n/g,\"<br>\")):alert(e),console.error(e),t.push(`跳过ZIP ${r.name}: JSZip 未加载/不可用。`);continue}try{const e=new JSZip,o=await e.loadAsync(r),i=[];o.forEach(((e,o)=>{o.name.toLowerCase().endsWith(\".json\")&&!o.dir&&i.push(o.async(\"string\").then((e=>{n.push({originalFileName:o.name,content:e,sourceArchiveName:r.name})})).catch((e=>{t.push(`从ZIP ${r.name} 提取 ${o.name} 失败: ${e.message}`)})))})),await Promise.all(i)}catch(e){t.push(`处理 ZIP 文件 ${r.name} 失败: ${e.message}`)}}else t.push(`跳过不支持的文件类型: ${r.name}`)}return{jsonDataSources:n,processingErrors:t}}function a(e,n,o,t){let r=0,i=0,s=0;const c=e.filter((e=>n.some((n=>n.scope===e.scope&&(n.script_name===e.script_name||n.id===e.id)))));let a;c.length>0&&(a=c.map((e=>{let o=`脚本 \"${e.script_name}\" (ID: ${e.id}, 来自: ${e._sourceFile}`;e._sourceArchive&&(o+=` [ZIP: ${e._sourceArchive}]`),o+=\") 与现有正则冲突原因: \";const t=new Set;return n.forEach((n=>{if(n.scope===e.scope){const o=n.id===e.id,r=n.script_name===e.script_name;o&&r?t.add(`名称与ID均匹配现有 \"${n.script_name}\" (ID: ${n.id})`):o?t.add(`ID匹配现有 \"${n.script_name}\" (ID: ${n.id})`):r&&t.add(`名称匹配现有 \"${n.script_name}\" (ID: ${n.id})`)}})),o+=t.size>0?Array.from(t).join(\"; \"):\"未知冲突\",o})).join(\"\\n\"));let l=[...n];const p=[];for(const n of e){const{_sourceFile:e,_sourceArchive:o,...a}=n,u=c.some((e=>e.id===n.id&&e.script_name===n.script_name&&e.scope===n.scope));if(u&&!t){s++;continue}let f=!1;l.length;l=l.filter((e=>e.id!==a.id||e.scope!==a.scope||(f=!0,!1))),l=l.filter((e=>{if(e.script_name===a.script_name&&e.scope===a.scope&&e.id!==a.id){if(c.some((e=>e.script_name===a.script_name&&e.scope===a.scope&&e.id!==a.id&&(e.id===n.id||e.script_name===n.script_name)))||u&&t)return f=!0,!1}return!0})),p.push(a),f?i++:u&&t||r++}return l.push(...p),{finalRegexList:l,addedCount:r,overwrittenCount:i,skippedDueToDuplicateCount:s,conflictDetailsForPrompt:a}}$((()=>{const r=window.parent.document;console.log(\"上传正则扩展: 初始化中...\");const i=$(\"#extensionsMenu\",r);if(i.length)if(0===$(`#${t}`,r).length){const l=`\\n                <div id=\"${t}\" class=\"list-group-item flex-container flexGap5 interactable\" title=\"上传正则JSON文件或包含JSON的ZIP包(可多选)\" tabIndex=\"0\">\\n                    <i class=\"fa-solid fa-upload\"></i>\\n                    <span>上传正则</span>\\n            </div>\\n        `;try{i.append(l),console.log(\"上传正则扩展: 按钮已成功添加到扩展菜单。\");$(`#${t}`,r).on(\"click\",(()=>{if(console.log('\"上传正则\"按钮被点击。'),\"function\"!=typeof e||\"function\"!=typeof n){const e=\"SillyTavern 正则管理功能不可用。\";return o&&\"function\"==typeof o.error?o.error(e):alert(e),void console.error(\"getTavernRegexes or replaceTavernRegexes is not a function.\")}\"object\"==typeof o&&\"function\"==typeof o.error||console.warn(\"Toastr 通知系统不完全可用，某些消息将回退到使用 alert。\");const t=document.createElement(\"input\");t.type=\"file\",t.accept=\".json,.zip\",t.multiple=!0,t.style.display=\"none\",t.onchange=async r=>{const i=r.target.files;let l=t;if(!i||0===i.length)return o&&\"function\"==typeof o.warning?o.warning(\"没有选择文件。\"):alert(\"没有选择文件。\"),void(l.parentNode&&l.parentNode.removeChild(l));const{jsonDataSources:p,processingErrors:u}=await c(i);if(l.parentNode&&l.parentNode.removeChild(l),u.length>0){const e=`在文件读取/ZIP提取阶段出现以下问题:\\n${u.join(\"\\n\")}`;o&&\"function\"==typeof o.warning?o.warning(e.replace(/\\n/g,\"<br>\"),\"文件处理问题\",{timeOut:15e3,extendedTimeOut:7e3,escapeHtml:!1}):alert(e),console.warn(\"文件处理问题:\",u)}if(0===p.length){const e=\"未找到可供处理的 JSON 内容。\";return void(o&&\"function\"==typeof o.info?o.info(e):alert(e))}let f=null;if(window.confirm(`要将提取到的 ${p.length} 个正则条目全部上传为【全局】正则吗？\\n(点击\"取消\"将询问是否设为【局部】正则)`)?f=\"global\":window.confirm(`要将提取到的 ${p.length} 个正则条目全部上传为【局部】正则 (当前角色) 吗？`)&&(f=\"character\"),!f)return void(o&&\"function\"==typeof o.info?o.info(\"批量上传已取消：未选择作用域。\"):alert(\"批量上传已取消：未选择作用域。\"));console.log(`批量上传作用域选定为: ${f}`);const{tavernRegexObjects:d,parsingErrors:m}=function(e,n){const o=[],t=[];return e.forEach((e=>{try{const r=JSON.parse(e.content);if(!r.scriptName||!r.findRegex)return void t.push(`${e.originalFileName}${e.sourceArchiveName?` (来自ZIP: ${e.sourceArchiveName})`:\"\"}: 文件格式无效 (缺少 scriptName 或 findRegex)。`);const i={user_input:!1,ai_output:!1,slash_command:!1,world_info:!1},s=Array.isArray(r.placement)?r.placement:[];s.includes(1)&&(i.user_input=!0),s.includes(2)&&(i.ai_output=!0),s.includes(3)&&(i.slash_command=!0),s.includes(5)&&(i.world_info=!0);const c={display:\"boolean\"==typeof r.markdownOnly&&r.markdownOnly,prompt:\"boolean\"==typeof r.promptOnly&&r.promptOnly};o.push({id:r.id||window.crypto.randomUUID(),script_name:r.scriptName,find_regex:r.findRegex,replace_string:r.replaceString||\"\",enabled:\"boolean\"!=typeof r.disabled||!r.disabled,run_on_edit:\"boolean\"==typeof r.runOnEdit&&r.runOnEdit,scope:n,source:i,destination:c,min_depth:void 0===r.minDepth||null===r.minDepth?null:Number(r.minDepth),max_depth:void 0===r.maxDepth||null===r.maxDepth?null:Number(r.maxDepth),_sourceFile:e.originalFileName,_sourceArchive:e.sourceArchiveName})}catch(n){t.push(`${e.originalFileName}${e.sourceArchiveName?` (来自ZIP: ${e.sourceArchiveName})`:\"\"}: 解析JSON失败 (${n.message})。`)}})),o.sort(((e,n)=>{const o=s(e.script_name),t=s(n.script_name);if(o!==t)return o-t;const r=e.script_name||\"\",i=n.script_name||\"\";return r.localeCompare(i)})),{tavernRegexObjects:o,parsingErrors:t}}(p,f);if(m.length>0){const e=`在JSON内容解析/验证阶段出现以下问题:\\n${m.join(\"\\n\")}`;o&&\"function\"==typeof o.warning?o.warning(e.replace(/\\n/g,\"<br>\"),\"JSON 处理警告\",{timeOut:15e3,extendedTimeOut:7e3,escapeHtml:!1}):alert(e),console.warn(\"JSON 内容解析/验证问题:\",m)}if(0!==d.length)try{const t=await e({scope:\"all\"})||[],r=a(d,t,0,!0);let i=!0;r.conflictDetailsForPrompt&&(i=window.confirm(`以下 ${r.conflictDetailsForPrompt.split(\"\\n\").length} 个待上传正则与系统中现有正则 (作用域 \"${f}\") 存在名称或ID冲突：\\n${r.conflictDetailsForPrompt}\\n\\n是否要覆盖它们？\\n(点击\"取消\"将跳过这些冲突的正则)`));const{finalRegexList:c,addedCount:l,overwrittenCount:p,skippedDueToDuplicateCount:h}=a(d,t,0,i);let g=l>0||p>0;if(g){await n(c,{scope:\"all\"});let e=`批量上传完成 (作用域: ${f}):\\n`;l>0&&(e+=`- ${l} 个新正则已添加。\\n`),p>0&&(e+=`- ${p} 个正则已覆盖。\\n`),h>0&&(e+=`- ${h} 个冲突正则已跳过。\\n`);const t=u.length+m.length;t>0&&(e+=`\\n(注意: 有 ${t} 个文件/条目在处理早期阶段失败)`),o&&\"function\"==typeof o.success?o.success(e.replace(/\\n/g,\"<br>\"),\"批量上传结果\",{timeOut:15e3,extendedTimeOut:7e3,escapeHtml:!1}):alert(e),console.log(\"批量上传成功:\",{addedCount:l,overwrittenCount:p,skippedDueToDuplicateCount:h})}else{let e=\"没有正则被添加或更新。\";h>0?e=`${h} 个冲突正则均被跳过。`:d.length>0&&(e=\"所有待上传正则均无变化或被跳过。\");(0===u.length+m.length||e&&d.length>0)&&(o&&\"function\"==typeof o.info?o.info(e):alert(e))}if(g||h>0||d.length>0){const t=g?c:await e({scope:\"all\"})||[];if(window.confirm(`导入操作完成。\\n是否需要对当前所有的正则 (共 ${t.length} 个) 进行一次整体自定义排序？`))try{let t=await e({scope:\"all\"})||[];t.sort(((e,n)=>{const o=s(e.script_name),t=s(n.script_name);if(o!==t)return o-t;const r=e.script_name||\"\",i=n.script_name||\"\";return r.localeCompare(i)})),await n(t,{scope:\"all\"}),o&&\"function\"==typeof o.success?o.success(\"所有正则已按自定义优先级重新排序！\"):alert(\"所有正则已按自定义优先级重新排序！\"),console.log(\"全局正则自定义排序完成。\")}catch(e){const n=`全局自定义排序时发生错误: ${e.message}`;o&&\"function\"==typeof o.error?o.error(n):alert(n),console.error(\"全局自定义排序错误:\",e)}}}catch(e){const n=`处理或保存正则时发生严重错误: ${e.message}`;o&&\"function\"==typeof o.error?o.error(n):alert(n),console.error(\"批量上传正则处理/保存错误:\",e)}else{const e=\"没有有效的正则数据可供上传。\";o&&\"function\"==typeof o.info?o.info(e):alert(e)}},document.body.appendChild(t),t.click()}))}catch(e){console.error(\"上传正则扩展: 添加按钮到扩展菜单失败。\",e)}}else console.log(\"上传正则扩展: 按钮已经存在，无需重复添加。\");else console.warn(\"上传正则扩展: 未找到扩展菜单 (#extensionsMenu)。按钮无法添加。\");console.log(\"上传正则扩展: 初始化完成。\")}));",
                         "info": "作者：糕\n功能：\n1.批量/zip压缩包上传正则;\n2.自动选择覆盖重复正则（名称/ID相同）；\n3.可选对所上传或者全局正则进行排序。",
+                        "buttons": [],
+                        "enabled": true
+                    },
+                    {
+                        "id": "预设防误触",
+                        "name": "预设防误触",
+                        "content": "function lock_inputs(enable) {\n    $('#range_block_openai :input').prop('disabled', enable);\n    $('#openai_settings > div:first-child :input').prop('disabled', enable);\n    $('#stream_toggle').prop('disabled', false);\n    $('#openai_show_thoughts').prop('disabled', false);\n}\n$(() => {\n    lock_inputs(true);\n});\n$(window).on('unload', () => lock_inputs(false));\nexport {};\n",
+                        "info": "# 预设防误触\n\n**作者:** 青空莉想做舞台少女的狗\n**版本:** 2025/04/29\n**源文件:** [点此跳转](https://gitgud.io/StageDog/tavern_resource/-/tree/main/酒馆助手/预设防误触/源文件?ref_type=heads)\n**说明:** 启用后将锁定预设除了 '流式传输'、'请求思维链' 和 '具体条目' 以外的选项, 不能通过界面来修改\n",
                         "buttons": [],
                         "enabled": true
                     },
@@ -4020,7 +4039,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 30,
+                "lastProcessedLength": 33,
                 "userConfigured": true
             }
         },
