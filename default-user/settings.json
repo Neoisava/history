@@ -3416,10 +3416,10 @@
         "variables": {
             "global": {
                 "content": "\\(不要重复前文，继续输出新剧情！)",
-                "LAST_RECEIVE_TOKENS": 932,
-                "LAST_RECEIVE_CHARS": 1201,
-                "LAST_SEND_TOKENS": 102884,
-                "LAST_SEND_CHARS": 205693
+                "LAST_RECEIVE_TOKENS": 3145,
+                "LAST_RECEIVE_CHARS": 4077,
+                "LAST_SEND_TOKENS": 102193,
+                "LAST_SEND_CHARS": 205142
             }
         },
         "attachments": [],
@@ -4020,7 +4020,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 63,
+                "lastProcessedLength": 64,
                 "userConfigured": true
             }
         },
@@ -7056,7 +7056,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "[正常]gemini-2.5-pro-preview-03-25",
+        "custom_model": "[正常]gemini-2.5-pro-preview-05-06",
         "custom_url": "https://api.skyi.cc/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
