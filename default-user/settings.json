@@ -3187,25 +3187,6 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": true
-            },
-            {
-                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2,
-                    6
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": false,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -3435,10 +3416,10 @@
         "variables": {
             "global": {
                 "content": "\\(不要重复前文，继续输出新剧情！)",
-                "LAST_RECEIVE_TOKENS": 168,
-                "LAST_RECEIVE_CHARS": 230,
-                "LAST_SEND_TOKENS": 107732,
-                "LAST_SEND_CHARS": 211954
+                "LAST_RECEIVE_TOKENS": 5362,
+                "LAST_RECEIVE_CHARS": 6963,
+                "LAST_SEND_TOKENS": 108235,
+                "LAST_SEND_CHARS": 214054
             }
         },
         "attachments": [],
@@ -4039,7 +4020,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 69,
+                "lastProcessedLength": 70,
                 "userConfigured": true
             }
         },
@@ -4275,7 +4256,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": true,
+        "stream_openai": false,
         "openai_max_context": 1000000,
         "openai_max_tokens": 65500,
         "wrap_in_quotes": false,
@@ -7075,7 +7056,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "[正常]gemini-2.5-pro-preview-03-25",
+        "custom_model": "gemini-2.5-flash-preview-05-20",
         "custom_url": "https://api.skyi.cc/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
