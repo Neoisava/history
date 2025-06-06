@@ -20,13 +20,11 @@
         "AlertRegex_(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png": "true",
         "AlertWI_世界调制模式·古代篇（0.6）.png": "true",
         "AlertRegex_世界调制模式·古代篇（0.6）.png": "true",
-        "AlertWI_修仙世界-[万界大陆].png": "true",
-        "AlertWI_地球异闻录.png": "true",
-        "AlertRegex_地球异闻录.png": "true"
+        "AlertWI_修仙世界-[万界大陆].png": "true"
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": "地球异闻录.png",
+    "active_character": null,
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2729,23 +2727,6 @@
                 "promptOnly": true
             },
             {
-                "id": "a1539cab-3cdc-4053-bbc5-457284c40df8",
-                "scriptName": "【demini】D2汇总记录隐藏",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<Main_Quest>[\\s\\S]*?</Main_Quest>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
                 "id": "8cdb3e34-1f33-4f42-97b6-a1ac1e7c22d8",
                 "scriptName": "【demini】D1替绝望羊折叠正则",
                 "disabled": false,
@@ -3157,19 +3138,19 @@
             {
                 "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
                 "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "disabled": true,
+                "runOnEdit": false,
                 "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": true,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": false,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
             }
         ],
         "character_allowed_regex": [
@@ -4003,7 +3984,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 1,
                 "userConfigured": true
             }
         },
@@ -6977,7 +6958,7 @@
                     },
                     {
                         "identifier": "a2e11435-ef82-46ce-9555-712f8ead6da0",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "b6b4ff93-8511-4ddc-b866-9e3bca759b84",
@@ -6989,7 +6970,7 @@
                     },
                     {
                         "identifier": "ea203a4a-c3ac-442b-bbb4-107f1b223ca0",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "1a254cbe-ed65-44a1-8c19-8d5a0a800838",
