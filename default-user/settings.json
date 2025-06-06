@@ -3416,10 +3416,10 @@
         "variables": {
             "global": {
                 "content": "\\(不要重复前文，继续输出新剧情！)",
-                "LAST_RECEIVE_TOKENS": 207,
-                "LAST_RECEIVE_CHARS": 282,
-                "LAST_SEND_TOKENS": 109123,
-                "LAST_SEND_CHARS": 218066
+                "LAST_RECEIVE_TOKENS": 3231,
+                "LAST_RECEIVE_CHARS": 4286,
+                "LAST_SEND_TOKENS": 108175,
+                "LAST_SEND_CHARS": 214281
             }
         },
         "attachments": [],
@@ -4020,7 +4020,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 69,
+                "lastProcessedLength": 70,
                 "userConfigured": true
             }
         },
@@ -6851,7 +6851,7 @@
                     },
                     {
                         "identifier": "77193ea1-6ef8-4e3a-985b-fa79d11f88ad",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "331d8458-3423-48b5-b6d5-b8a2e05251a5",
@@ -7056,7 +7056,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "[vh]gemini-2.5-pro-preview-06-05",
+        "custom_model": "[vh]gemini-2.5-pro-exp-03-25",
         "custom_url": "https://new.api-kk.shop/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
