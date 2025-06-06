@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
+        "LNavOpened": "true",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -3187,25 +3187,6 @@
                 "substituteRegex": 0,
                 "minDepth": null,
                 "maxDepth": null
-            },
-            {
-                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2,
-                    6
-                ],
-                "disabled": false,
-                "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": false,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -3435,10 +3416,10 @@
         "variables": {
             "global": {
                 "content": "\\(不要重复前文，继续输出新剧情！)",
-                "LAST_RECEIVE_TOKENS": 39,
-                "LAST_RECEIVE_CHARS": 54,
-                "LAST_SEND_TOKENS": 106322,
-                "LAST_SEND_CHARS": 210902
+                "LAST_RECEIVE_TOKENS": 2730,
+                "LAST_RECEIVE_CHARS": 3484,
+                "LAST_SEND_TOKENS": 103311,
+                "LAST_SEND_CHARS": 204011
             }
         },
         "attachments": [],
@@ -4039,7 +4020,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 61,
+                "lastProcessedLength": 62,
                 "userConfigured": true
             }
         },
@@ -6870,7 +6851,7 @@
                     },
                     {
                         "identifier": "77193ea1-6ef8-4e3a-985b-fa79d11f88ad",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "331d8458-3423-48b5-b6d5-b8a2e05251a5",
