@@ -1,5 +1,5 @@
 {
-    "chat_completion_source": "makersuite",
+    "chat_completion_source": "custom",
     "openai_model": "gpt-4-turbo",
     "claude_model": "claude-3-5-sonnet-20240620",
     "windowai_model": "",
@@ -16,12 +16,13 @@
     "perplexity_model": "llama-3.1-70b-instruct",
     "groq_model": "llama-3.1-70b-versatile",
     "zerooneai_model": "yi-large",
-    "xai_model": "grok-3-beta",
-    "pollinations_model": "openai",
-    "custom_model": "gemini-2.5-flash-preview-04-17",
+    "custom_model": "[vh]gemini-2.5-pro-exp-03-25",
+    "custom_url": "https://new.api-kk.shop/v1",
+    "custom_include_body": "",
+    "custom_exclude_body": "",
+    "custom_include_headers": "",
     "custom_prompt_post_processing": "merge",
-    "google_model": "gemini-2.5-flash-preview-05-20",
-    "vertexai_model": "gemini-2.0-flash-001",
+    "google_model": "",
     "temperature": 1.17,
     "frequency_penalty": 0,
     "presence_penalty": 0,
@@ -41,6 +42,8 @@
     "new_example_chat_prompt": "[Example]",
     "continue_nudge_prompt": "[Continue the following message. Do not include ANY parts of the original message. Use capitalization and punctuation as if your reply is a part of the original message: {{lastChatMessage}}]",
     "bias_preset_selected": "Default (none)",
+    "reverse_proxy": "",
+    "proxy_password": "",
     "max_context_unlocked": true,
     "wi_format": "{0}",
     "scenario_format": "{{scenario}}",
@@ -1272,7 +1275,7 @@
                 },
                 {
                     "identifier": "373cb849-d75c-4238-94be-8885d3a56c32",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ce8d6dbe-d6d3-49e7-9f9d-df42da519a72",
@@ -1292,11 +1295,11 @@
                 },
                 {
                     "identifier": "57373f63-ad20-41e4-a394-2601f414bb19",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "77525186-eb06-40c3-9294-cad2829c0662",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "5691ca9e-51bb-4d57-922c-abc8deb3238a",
@@ -1316,11 +1319,11 @@
                 },
                 {
                     "identifier": "496ae724-3342-4e88-a340-7ca0a53d24ac",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "ab53ce47-16da-4e2e-ad7e-8069dd44292e",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "4d3cee55-99cb-4b18-bc48-4cec0776b17d",
@@ -1336,11 +1339,11 @@
                 },
                 {
                     "identifier": "3f393090-a677-4a43-a9e4-ba78f0db21b5",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "325e1b64-abab-4490-bbba-8bc2901470df",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "5d7c37c4-f9f7-40b0-9aa7-0ce65e0a6500",
@@ -1348,15 +1351,15 @@
                 },
                 {
                     "identifier": "d94598e3-8f43-4eed-abb6-8f80f5061236",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "86fb7259-ab57-4ba2-8703-eca079e28494",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "310567a1-e50b-466e-88ac-5481e2ce207a",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "801feeb1-5546-4bd7-b4e4-c92fe4ccfd58",
@@ -1384,11 +1387,11 @@
                 },
                 {
                     "identifier": "3eaa701a-319f-4749-a952-571d1387e055",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "fd67730d-0211-44a5-8071-edeaeca51339",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "fdcc5b43-40ee-4ca8-844a-70c1a37d81e6",
@@ -1400,11 +1403,11 @@
                 },
                 {
                     "identifier": "d9e6eb68-cd1f-405f-89f1-e0f56071ec2c",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "5cc5bd45-8ba9-47c2-bdc3-7c930f18b029",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "51e5fe9a-2c44-4d91-acca-f18f63fe77eb",
@@ -1436,19 +1439,19 @@
                 },
                 {
                     "identifier": "91f13c6c-07f8-43b6-b189-4e15e66fc348",
-                    "enabled": false
-                },
-                {
-                    "identifier": "c9bacb4d-340a-4cc6-8bf4-551f36f7ef87",
-                    "enabled": false
-                },
-                {
-                    "identifier": "e9704a06-f3e5-4055-af10-4e68771e4c3e",
                     "enabled": true
                 },
                 {
-                    "identifier": "10dcb71f-3c82-4fdb-9cbb-d91096c63698",
+                    "identifier": "c9bacb4d-340a-4cc6-8bf4-551f36f7ef87",
+                    "enabled": true
+                },
+                {
+                    "identifier": "e9704a06-f3e5-4055-af10-4e68771e4c3e",
                     "enabled": false
+                },
+                {
+                    "identifier": "10dcb71f-3c82-4fdb-9cbb-d91096c63698",
+                    "enabled": true
                 },
                 {
                     "identifier": "2bfc56d5-afc4-4386-8c21-4fdd036f727a",
@@ -1475,7 +1478,6 @@
     "assistant_impersonation": "",
     "claude_use_sysprompt": false,
     "use_makersuite_sysprompt": true,
-    "vertexai_auth_mode": "express",
     "use_alt_scale": false,
     "squash_system_messages": false,
     "image_inlining": false,

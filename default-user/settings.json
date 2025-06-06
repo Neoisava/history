@@ -26,7 +26,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": null,
+    "active_character": "地球异闻录.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -3187,6 +3187,179 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": true
+            },
+            {
+                "id": "068fe50f-66fe-4cfb-a2fa-91c57be3a958",
+                "scriptName": "0x增殖",
+                "disabled": true,
+                "runOnEdit": false,
+                "findRegex": "/(<0x?[A-Z0-9?]*>)*/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "0186cbf0-70ea-48c7-914d-6a578be55a92",
+                "scriptName": "波浪号转义",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/~/g",
+                "replaceString": "\\~",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "c8df8dd8-47cb-49ce-b4d1-97dd06f85973",
+                "scriptName": "极其增殖",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/(极其)(极其)*/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "aebf5c8c-98dc-4651-8d7f-98b618bfbee4",
+                "scriptName": "省略号增殖1",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/(\\.\\.\\.)(\\.)*/gs",
+                "replaceString": "…",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "ac9a219c-aab0-4e05-a06d-3ef3092cabf5",
+                "scriptName": "省略号增殖2",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/(\\S+)(……|…)\\1/g",
+                "replaceString": "$1，$1",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "745d00dd-7952-429d-b3b1-dd5676f46426",
+                "scriptName": "省略号增殖3",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/(最终|然后|地|的|以及|有些|和|似乎|已经|是|去|或许|更加|那个|一[\\u4e00-\\u9fa5])(……|…)(?!\\s)/g",
+                "replaceString": "$1",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "266ecb87-235c-42e5-93fb-556de116cab8",
+                "scriptName": "叹号换行增殖",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/！(！)*\\n/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "cfb15ab7-0f03-49cc-b2cc-df81a6ef5c85",
+                "scriptName": "尊贵vertex专用流式隐藏思维链",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<analysis>(?![\\s\\S]*<\\/analysis>)[\\s\\S]*$/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "1bc83a88-0f24-437c-9ead-571b7d183b93",
+                "scriptName": "DepressIon-analysis不闭合",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/(?:(?<=[.\\s])|^)(?<!<\\/analysis>\\s*)<content>/g",
+                "replaceString": "</analysis><content>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2,
+                    6
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -4020,7 +4193,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 73,
                 "userConfigured": true
             }
         },
