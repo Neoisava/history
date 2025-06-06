@@ -26,7 +26,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": "地球异闻录.png",
+    "active_character": null,
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -3189,29 +3189,12 @@
                 "promptOnly": true
             },
             {
-                "id": "068fe50f-66fe-4cfb-a2fa-91c57be3a958",
-                "scriptName": "0x增殖",
-                "disabled": true,
-                "runOnEdit": false,
-                "findRegex": "/(<0x?[A-Z0-9?]*>)*/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "0186cbf0-70ea-48c7-914d-6a578be55a92",
-                "scriptName": "波浪号转义",
+                "id": "05198484-0f5f-422c-ab2b-47d5538bb392",
+                "scriptName": "【DepressIon】剧情推进1 v2.5",
                 "disabled": false,
-                "runOnEdit": false,
-                "findRegex": "/~/g",
-                "replaceString": "\\~",
+                "runOnEdit": true,
+                "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
+                "replaceString": "<details>\n<summary>剧情</summary>\n$1\n</details>",
                 "trimStrings": [],
                 "placement": [
                     2
@@ -3223,143 +3206,89 @@
                 "promptOnly": false
             },
             {
-                "id": "c8df8dd8-47cb-49ce-b4d1-97dd06f85973",
-                "scriptName": "极其增殖",
+                "id": "827ffebf-44b3-4128-be9b-494fccef0066",
+                "scriptName": "【DepressIon】剧情推进2 v2.5",
                 "disabled": false,
                 "runOnEdit": true,
-                "findRegex": "/(极其)(极其)*/g",
+                "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
                 "substituteRegex": 0,
-                "minDepth": null,
+                "minDepth": 12,
                 "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "aebf5c8c-98dc-4651-8d7f-98b618bfbee4",
-                "scriptName": "省略号增殖1",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/(\\.\\.\\.)(\\.)*/gs",
-                "replaceString": "…",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "ac9a219c-aab0-4e05-a06d-3ef3092cabf5",
-                "scriptName": "省略号增殖2",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/(\\S+)(……|…)\\1/g",
-                "replaceString": "$1，$1",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "745d00dd-7952-429d-b3b1-dd5676f46426",
-                "scriptName": "省略号增殖3",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/(最终|然后|地|的|以及|有些|和|似乎|已经|是|去|或许|更加|那个|一[\\u4e00-\\u9fa5])(……|…)(?!\\s)/g",
-                "replaceString": "$1",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "266ecb87-235c-42e5-93fb-556de116cab8",
-                "scriptName": "叹号换行增殖",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/！(！)*\\n/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "cfb15ab7-0f03-49cc-b2cc-df81a6ef5c85",
-                "scriptName": "尊贵vertex专用流式隐藏思维链",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/<analysis>(?![\\s\\S]*<\\/analysis>)[\\s\\S]*$/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
-                "id": "1bc83a88-0f24-437c-9ead-571b7d183b93",
-                "scriptName": "DepressIon-analysis不闭合",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/(?:(?<=[.\\s])|^)(?<!<\\/analysis>\\s*)<content>/g",
-                "replaceString": "</analysis><content>",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
-                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2,
-                    6
-                ],
-                "disabled": false,
                 "markdownOnly": false,
-                "promptOnly": true,
-                "runOnEdit": false,
+                "promptOnly": true
+            },
+            {
+                "id": "0b8a0192-ef30-4b5d-a857-3ffe578cdd1b",
+                "scriptName": "【DepressIon】通用必备正则 v1.3",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/((<(guifan|safety_check)>(?:(?!<(guifan|safety_check)>)[\\s\\S])*?<\\/(guifan|safety_check)>)|(<reminder>(?:[\\s\\S])*?<\\/reminder>)|([\\s\\S]*<\\/(analysis|thinking|think)>)|([\\s\\S]*(?=<game>)))/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "4c41ba9c-d551-409b-913e-db6e19c73104",
+                "scriptName": "【DepressIon】小总结1 v2.5",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/[\\s\\S]*?(?<!<details>\\s*)<summary>([\\s\\S]*)<\\/summary>[\\s\\S]*/g",
+                "replaceString": "<summary>\n$1\n</summary>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 12,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "866b36c8-f98c-4d66-a4c2-57205ab591c7",
+                "scriptName": "【DepressIon】小总结2 v2.5",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/(?<!<details>\\s*)<summary>(((?!<summary>)[\\s\\S])*?)<\\/summary>/g",
+                "replaceString": "<details>\n<summary>摘要</summary>\n$1\n</details>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "a40d77d8-e0ab-4034-9674-2713f8032220",
+                "scriptName": "【DepressIon】修改用户输入 2.0",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/([\\s\\S]*)/",
+                "replaceString": "$1\n\"},\n  {\"role\": \"system\", \"content\": \"\ngame.loadAll(`",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": 1,
+                "markdownOnly": false,
+                "promptOnly": true
             }
         ],
         "character_allowed_regex": [
@@ -3589,10 +3518,10 @@
         "variables": {
             "global": {
                 "content": "\\(不要重复前文，继续输出新剧情！)",
-                "LAST_RECEIVE_TOKENS": 1759,
-                "LAST_RECEIVE_CHARS": 2357,
-                "LAST_SEND_TOKENS": 99757,
-                "LAST_SEND_CHARS": 198461
+                "LAST_RECEIVE_TOKENS": 10315,
+                "LAST_RECEIVE_CHARS": 30247,
+                "LAST_SEND_TOKENS": 197703,
+                "LAST_SEND_CHARS": 378564
             }
         },
         "attachments": [],
@@ -4193,7 +4122,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 73,
+                "lastProcessedLength": 1,
                 "userConfigured": true
             }
         },
@@ -4470,7 +4399,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": false,
+        "stream_openai": true,
         "openai_max_context": 345678,
         "openai_max_tokens": 65535,
         "wrap_in_quotes": false,
@@ -5944,8 +5873,8 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "[vh]gemini-2.5-pro-exp-03-25",
-        "custom_url": "https://new.api-kk.shop/v1",
+        "custom_model": "gemini-2.5-pro-preview-03-25",
+        "custom_url": "https://api.huaapi.asia/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
         "custom_include_headers": "",
