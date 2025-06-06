@@ -2475,9 +2475,9 @@
                     "mode": "cc",
                     "exclude": [],
                     "api": "custom",
-                    "preset": "【DepressIon】Astro 2.0",
-                    "api-url": "https://new.api-kk.shop/v1",
-                    "model": "[vh]gemini-2.5-pro-exp-03-25",
+                    "preset": "【Dreammini】1.8-pro-0605",
+                    "api-url": "https://api.skyi.cc/v1",
+                    "model": "gemini-2.5-flash-preview-05-20",
                     "stop-strings": "[]",
                     "start-reply-with": "",
                     "reasoning-template": "[Migrated] Custom",
@@ -3382,10 +3382,10 @@
         "variables": {
             "global": {
                 "content": "\\(不要重复前文，继续输出新剧情！)",
-                "LAST_RECEIVE_TOKENS": 8427,
-                "LAST_RECEIVE_CHARS": 25514,
-                "LAST_SEND_TOKENS": 71642,
-                "LAST_SEND_CHARS": 136274
+                "LAST_RECEIVE_TOKENS": 2217,
+                "LAST_RECEIVE_CHARS": 2917,
+                "LAST_SEND_TOKENS": 102030,
+                "LAST_SEND_CHARS": 204110
             }
         },
         "attachments": [],
@@ -3986,7 +3986,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 73,
+                "lastProcessedLength": 74,
                 "userConfigured": true
             }
         },
@@ -4018,7 +4018,7 @@
             }
         },
         "NoAss": {
-            "noass_is_enabled": true,
+            "noass_is_enabled": false,
             "active_set": "DIE R",
             "active_set_idx": 1,
             "sets": [
@@ -7063,7 +7063,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "[正常]gemini-2.5-pro-preview-03-25",
+        "custom_model": "gemini-2.5-flash-preview-05-20",
         "custom_url": "https://api.skyi.cc/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
