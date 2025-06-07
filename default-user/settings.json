@@ -3872,7 +3872,9 @@
                         "enabled": true
                     }
                 ],
-                "characters_with_scripts": []
+                "characters_with_scripts": [
+                    "地球异闻录.png"
+                ]
             },
             "audio": {
                 "audio_enabled": false,
@@ -3986,7 +3988,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 98,
+                "lastProcessedLength": 101,
                 "userConfigured": true
             }
         },
