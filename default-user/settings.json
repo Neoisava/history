@@ -3988,7 +3988,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 120,
+                "lastProcessedLength": 123,
                 "userConfigured": true
             }
         },
@@ -6105,7 +6105,7 @@
                 "marker": false,
                 "name": "⏰正常推进速度(可改选一)⏰",
                 "role": "system",
-                "content": "{{setvar::%speed::2(小)}}\n{{//注解:单次推进数量，1个大是固定的，越多单次回复越长，建议4个内}}\n\n{{setvar::%small::增(1-5%)主★}}\n{{setvar::%big::增(5-15%)主★}}\n{{//注解:(主线推进累积速度}}\n\n{{setvar::event::分故事方向60%、角色线30%、色情事件10%。}}\n{{//注解:事件比例}}\n\n{{setvar::%time::1-5}}\n{{setvar::%btime::1-300}}\n{{setvar::%maintime::至少60}}\n{{//\n注解:\n(时间推进速度(分钟)}，\n%time小推进耗时、\n%btime大推进耗时、\n%maintime主★快转至少耗时、可改\"至少60最多XXX\"限制快转时间长度}}\n{{setvar::%push::大}}",
+                "content": "{{setvar::%speed::3(小)}}\n{{//注解:单次推进数量，1个大是固定的，越多单次回复越长，建议4个内}}\n\n{{setvar::%small::增(1-5%)主★}}\n{{setvar::%big::增(5-15%)主★}}\n{{//注解:(主线推进累积速度}}\n\n{{setvar::event::分故事方向60%、角色线30%、色情事件10%。}}\n{{//注解:事件比例}}\n\n{{setvar::%time::1-5}}\n{{setvar::%btime::1-300}}\n{{setvar::%maintime::至少60}}\n{{//\n注解:\n(时间推进速度(分钟)}，\n%time小推进耗时、\n%btime大推进耗时、\n%maintime主★快转至少耗时、可改\"至少60最多XXX\"限制快转时间长度}}\n{{setvar::%push::大}}",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "injection_order": 100,
