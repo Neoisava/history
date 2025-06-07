@@ -6381,6 +6381,18 @@
                 "injection_depth": 4,
                 "injection_order": 100,
                 "forbid_overrides": false
+            },
+            {
+                "identifier": "bcc26b17-c4f7-49a9-acff-40c9aeab65cf",
+                "system_prompt": false,
+                "enabled": false,
+                "marker": false,
+                "name": "🤔数据面板1.2",
+                "role": "system",
+                "content": "",
+                "injection_position": 0,
+                "injection_depth": 4,
+                "forbid_overrides": false
             }
         ],
         "prompt_order": [
@@ -6782,6 +6794,10 @@
                     },
                     {
                         "identifier": "1c2736b4-0370-42aa-990b-b5b33100ae6a",
+                        "enabled": false
+                    },
+                    {
+                        "identifier": "bcc26b17-c4f7-49a9-acff-40c9aeab65cf",
                         "enabled": false
                     },
                     {
