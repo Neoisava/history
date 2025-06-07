@@ -2916,40 +2916,6 @@
                 "promptOnly": true
             },
             {
-                "id": "21409e45-efce-4205-af6a-40c8fdb34695",
-                "scriptName": "隐藏COT信息栏",
-                "findRegex": "/<aiThinkProcess>[\\s\\S]*?<\\/aiThinkProcess>|<thinkbiao>[\\s\\S]*?<\\/thinkbiao>/gi",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null
-            },
-            {
-                "id": "0944104e-abf3-46c1-882c-f929c497263b",
-                "scriptName": "隐藏思考",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "<aiThinkProcess>[\\s\\S]*?<\\/aiThinkProcess>",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
                 "id": "adcfb751-2ac5-4228-be5f-a78dafd121ff",
                 "scriptName": "【Dreammini】1.删除主线",
                 "disabled": false,
@@ -3135,6 +3101,23 @@
                 "maxDepth": 8,
                 "markdownOnly": false,
                 "promptOnly": true
+            },
+            {
+                "id": "66b61974-bb6c-47ae-84b0-c59ad7dfec52",
+                "scriptName": "隐藏COT信息栏",
+                "findRegex": "/<aiThinkProcess>[\\s\\S]*?<\\/aiThinkProcess>|<thinkbiao>[\\s\\S]*?<\\/thinkbiao>/gi",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
