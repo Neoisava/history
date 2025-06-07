@@ -2935,7 +2935,7 @@
             {
                 "id": "0944104e-abf3-46c1-882c-f929c497263b",
                 "scriptName": "隐藏思考",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "<aiThinkProcess>[\\s\\S]*?<\\/aiThinkProcess>",
                 "replaceString": "",
@@ -4235,7 +4235,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 147,
+                "lastProcessedLength": 146,
                 "userConfigured": true
             }
         },
@@ -7098,7 +7098,7 @@
                     },
                     {
                         "identifier": "bcc26b17-c4f7-49a9-acff-40c9aeab65cf",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "fa248233-63f8-4867-b3dc-f2d2d1c26ec6",
@@ -7327,7 +7327,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "[正常]gemini-2.5-pro-preview-03-25",
+        "custom_model": "[正常]gemini-2.5-pro-preview-05-06",
         "custom_url": "https://api.skyi.cc/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
