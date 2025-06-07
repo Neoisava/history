@@ -11,7 +11,7 @@
         "world_info_sort_order": "6",
         "NavLockOn": "false",
         "Assets_SkipConfirm_2502775700152061": "true",
-        "LNavLockOn": "false",
+        "LNavLockOn": "true",
         "WINavLockOn": "false",
         "WI_PerPage": "100",
         "AlertRegex_修仙之路2.0.png": "true",
@@ -4166,7 +4166,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 147,
+                "lastProcessedLength": 146,
                 "userConfigured": true
             }
         },
@@ -6709,11 +6709,11 @@
                     },
                     {
                         "identifier": "8335c30d-24ee-4a98-a622-d158c1e9325a",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "4c56c6b2-3b1b-4e73-a25a-186ee4336357",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "273341aa-f4f5-4733-801e-323598c52171",
@@ -6889,7 +6889,7 @@
                     },
                     {
                         "identifier": "665c08b5-9712-44ea-8dab-9b791b8a8c81",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "52e38b16-ab82-4a97-aeff-2e18d4c3b0a6",
@@ -6901,7 +6901,7 @@
                     },
                     {
                         "identifier": "218095d1-b8b3-49dd-8e25-d0ec1adbeca0",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "7ad4c8b2-3a08-48da-90bb-bbea73515502",
@@ -6925,7 +6925,7 @@
                     },
                     {
                         "identifier": "b3ead074-20a8-42a2-bbe9-ada7cec9a8c3",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "1c209371-7841-4553-a1aa-5e986ec41cb3",
@@ -6941,11 +6941,11 @@
                     },
                     {
                         "identifier": "86440db5-1bd2-486d-9b59-7d6e4a11b142",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "6658c06d-fc40-45ea-9181-44fe3082c7cd",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "16de6456-a626-45df-92ff-c6b07fb7e136",
@@ -6981,7 +6981,7 @@
                     },
                     {
                         "identifier": "4c258266-39bd-4920-bf26-4e1a90b38cf2",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "c9701159-a3fd-49df-9b5b-c6ee8ba9e7d4",
@@ -7005,7 +7005,7 @@
                     },
                     {
                         "identifier": "f6742d0b-7e74-40c8-a145-6f930712a684",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "ac7c2595-48e4-4840-9b7c-620641fb4d85",
@@ -7069,7 +7069,7 @@
                     },
                     {
                         "identifier": "64740e0a-fd2b-4a46-84ac-d4c4f2c40e29",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "77193ea1-6ef8-4e3a-985b-fa79d11f88ad",
@@ -7085,15 +7085,15 @@
                     },
                     {
                         "identifier": "264a35a6-f2a9-4052-9195-1f91af769c92",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "7e42635a-8f91-4010-9a3e-1cb22c72e5dc",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "e32afdbf-f78d-45e1-93c5-113aabc8f591",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "710077af-46ea-4a6b-b421-cda982a27c00",
@@ -7113,7 +7113,7 @@
                     },
                     {
                         "identifier": "710ae515-7cfe-4cdf-9d5b-4db57c5bf82c",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "66814c6a-f5b3-406f-9e09-9104338f29e0",
@@ -7129,7 +7129,7 @@
                     },
                     {
                         "identifier": "130beff6-72f2-4736-a984-982c3fc50d17",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "205d31f5-0772-4fa9-87a0-ad696ec29339",
@@ -7161,7 +7161,7 @@
                     },
                     {
                         "identifier": "cc228202-a296-4618-afc4-d9aff3bf4021",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "c7d0194e-5335-4d3a-9b05-5e6a1cdd59e3",
