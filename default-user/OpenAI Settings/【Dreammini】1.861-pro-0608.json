@@ -1476,7 +1476,7 @@
             "marker": false,
             "name": "角色卡自定义格式(掉格式自己改)",
             "role": "system",
-            "content": "**每次回复必须至少有以下格式，不要漏掉标签**： \n<think>\n</think>\n<dream>\n</dream>\n<aiThinkProcess>\n</aiThinkProcess>\n<plot>\n</plot>\n<summary>\n</summary>\n<options>\n</options>\n<thinkbiao>\n</thinkbiao>\n<pic prompt=...>\n</pic>\n\n\n\n\n\n\n{{//把正常输出的格式清掉内文塞过来\n范例:\n<think>\n</think>\n<dream>\n<正文>\n</正文>\n</dream>\n<私密日记></私密日记>\n<寝取日记></寝取日记>\n<EvilGuidance>\n<small>\n</small>\n</EvilGuidance>\n<Checkbox>\n</Checkbox>\n<UpdateVariable>\n<Analysis>\n</Analysis>\n</UpdateVariable>\n<plot>\n</plot>}}\n\n\n\n",
+            "content": "**每次回复必须至少有以下格式，不要漏掉标签**： \n<think>\n</think>\n<dream>\n</dream>\n<plot>\n</plot>\n<summary>\n</summary>\n<options>\n</options>\n<aiThinkProcess>\n</aiThinkProcess>\n<thinkbiao>\n</thinkbiao>\n<pic prompt=...>\n</pic>\n\n\n\n\n\n\n{{//把正常输出的格式清掉内文塞过来\n范例:\n<think>\n</think>\n<dream>\n<正文>\n</正文>\n</dream>\n<私密日记></私密日记>\n<寝取日记></寝取日记>\n<EvilGuidance>\n<small>\n</small>\n</EvilGuidance>\n<Checkbox>\n</Checkbox>\n<UpdateVariable>\n<Analysis>\n</Analysis>\n</UpdateVariable>\n<plot>\n</plot>}}\n\n\n\n",
             "injection_position": 0,
             "injection_depth": 4,
             "forbid_overrides": false,
@@ -2677,7 +2677,7 @@
                 },
                 {
                     "identifier": "77193ea1-6ef8-4e3a-985b-fa79d11f88ad",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "331d8458-3423-48b5-b6d5-b8a2e05251a5",
