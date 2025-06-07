@@ -1,4 +1,28 @@
 {
+    "chat_completion_source": "custom",
+    "openai_model": "gpt-4-turbo",
+    "claude_model": "claude-3-5-sonnet-20240620",
+    "windowai_model": "",
+    "openrouter_model": "OR_Website",
+    "openrouter_use_fallback": false,
+    "openrouter_group_models": false,
+    "openrouter_sort_models": "alphabetically",
+    "openrouter_providers": [],
+    "openrouter_allow_fallbacks": true,
+    "openrouter_middleout": "on",
+    "ai21_model": "jamba-1.5-large",
+    "mistralai_model": "mistral-large-latest",
+    "cohere_model": "command-r-plus",
+    "perplexity_model": "llama-3.1-70b-instruct",
+    "groq_model": "llama-3.1-70b-versatile",
+    "zerooneai_model": "yi-large",
+    "custom_model": "[正常]gemini-2.5-pro-preview-03-25",
+    "custom_url": "https://api.skyi.cc/v1",
+    "custom_include_body": "",
+    "custom_exclude_body": "",
+    "custom_include_headers": "",
+    "custom_prompt_post_processing": "merge",
+    "google_model": "gemini-2.5-pro-preview-03-25",
     "temperature": 1.2,
     "frequency_penalty": 0,
     "presence_penalty": 0,
@@ -18,6 +42,8 @@
     "new_example_chat_prompt": "[Example Chat]",
     "continue_nudge_prompt": "[Continue the following message. Do not include ANY parts of the original message. Use capitalization and punctuation as if your reply is a part of the original message: {{lastChatMessage}}]",
     "bias_preset_selected": "Default (none)",
+    "reverse_proxy": "",
+    "proxy_password": "",
     "max_context_unlocked": true,
     "wi_format": "{0}",
     "scenario_format": "{{scenario}}",
@@ -56,7 +82,7 @@
             "name": "🎃用户性别字数调整(必改)🎃",
             "system_prompt": true,
             "role": "system",
-            "content": "{{setvar::userConfirm::用户操作NPC}}\n\n{{//注解:<USER>身份，重要，建议选项\n\"用户操作NPC\":   将角色与用户抽离，扮演<user>抢话用\n\"用户\":扮演<user>反抢话用\n\"NPC\":<user>用于纯小说用\n\"梦境管理员\":<user>不存在于故事用\n}}\n\n{{setvar::gender::男}}\n{{//注解:用户性别，仅影响色情强化}}\n\n{{setvar::min::1000token}}\n{{//注解:正文最小字数}}\n\n{{setvar::max::2000token}}\n{{//注解:正文最大字数}}\n\n{{setvar::smallcot::3个}}\n{{setvar::smallcotl::120}}\n{{//注解:文笔修正数量与使用token长度}}\n\n\n\n",
+            "content": "{{setvar::userConfirm::用户操作NPC}}\n\n{{//注解:<USER>身份，重要，建议选项\n\"用户操作NPC\":   将角色与用户抽离，扮演<user>抢话用\n\"用户\":扮演<user>反抢话用\n\"NPC\":<user>用于纯小说用\n\"梦境管理员\":<user>不存在于故事用\n}}\n\n{{setvar::gender::女}}\n{{//注解:用户性别，仅影响色情强化}}\n\n{{setvar::min::1000token}}\n{{//注解:正文最小字数}}\n\n{{setvar::max::2000token}}\n{{//注解:正文最大字数}}\n\n{{setvar::smallcot::3个}}\n{{setvar::smallcotl::120}}\n{{//注解:文笔修正数量与使用token长度}}\n\n\n\n",
             "identifier": "jailbreak",
             "injection_position": 0,
             "injection_depth": 4,
@@ -1450,7 +1476,7 @@
             "marker": false,
             "name": "角色卡自定义格式(掉格式自己改)",
             "role": "system",
-            "content": "**每次回复必须至少有以下格式，不要漏掉标签**： \n<think>\n</think>\n<dream>\n<正文>\n</正文>\n</dream>\n<plot>\n</plot>\n\n\n\n\n\n\n{{//把正常输出的格式清掉内文塞过来\n范例:\n<think>\n</think>\n<dream>\n<正文>\n</正文>\n</dream>\n<私密日记></私密日记>\n<寝取日记></寝取日记>\n<EvilGuidance>\n<small>\n</small>\n</EvilGuidance>\n<Checkbox>\n</Checkbox>\n<UpdateVariable>\n<Analysis>\n</Analysis>\n</UpdateVariable>\n<plot>\n</plot>}}\n\n\n\n",
+            "content": "**每次回复必须至少有以下格式，不要漏掉标签**： \n<think>\n</think>\n<dream>\n</dream>\n<aiThinkProcess>\n</aiThinkProcess>\n<plot>\n</plot>\n<summary>\n</summary>\n<options>\n</options>\n<thinkbiao>\n</thinkbiao>\n<pic prompt=...>\n</pic>\n\n\n\n\n\n\n{{//把正常输出的格式清掉内文塞过来\n范例:\n<think>\n</think>\n<dream>\n<正文>\n</正文>\n</dream>\n<私密日记></私密日记>\n<寝取日记></寝取日记>\n<EvilGuidance>\n<small>\n</small>\n</EvilGuidance>\n<Checkbox>\n</Checkbox>\n<UpdateVariable>\n<Analysis>\n</Analysis>\n</UpdateVariable>\n<plot>\n</plot>}}\n\n\n\n",
             "injection_position": 0,
             "injection_depth": 4,
             "forbid_overrides": false,
@@ -2259,7 +2285,7 @@
                 },
                 {
                     "identifier": "26f3c45d-2702-4f8a-a344-15fa00ccea21",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "d2370f29-111e-44ef-a3ca-d1af90011720",
@@ -2287,11 +2313,11 @@
                 },
                 {
                     "identifier": "8335c30d-24ee-4a98-a622-d158c1e9325a",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "4c56c6b2-3b1b-4e73-a25a-186ee4336357",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "273341aa-f4f5-4733-801e-323598c52171",
@@ -2467,7 +2493,7 @@
                 },
                 {
                     "identifier": "665c08b5-9712-44ea-8dab-9b791b8a8c81",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "52e38b16-ab82-4a97-aeff-2e18d4c3b0a6",
@@ -2479,7 +2505,7 @@
                 },
                 {
                     "identifier": "218095d1-b8b3-49dd-8e25-d0ec1adbeca0",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "7ad4c8b2-3a08-48da-90bb-bbea73515502",
@@ -2487,7 +2513,7 @@
                 },
                 {
                     "identifier": "e5d85924-82e1-4f26-bf1c-8f7dce07a687",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "2512fa4e-eb17-4472-a5aa-8ed308dd8d44",
@@ -2503,7 +2529,7 @@
                 },
                 {
                     "identifier": "b3ead074-20a8-42a2-bbe9-ada7cec9a8c3",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "1c209371-7841-4553-a1aa-5e986ec41cb3",
@@ -2519,11 +2545,11 @@
                 },
                 {
                     "identifier": "86440db5-1bd2-486d-9b59-7d6e4a11b142",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "6658c06d-fc40-45ea-9181-44fe3082c7cd",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "16de6456-a626-45df-92ff-c6b07fb7e136",
@@ -2559,7 +2585,7 @@
                 },
                 {
                     "identifier": "4c258266-39bd-4920-bf26-4e1a90b38cf2",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "c9701159-a3fd-49df-9b5b-c6ee8ba9e7d4",
@@ -2571,7 +2597,7 @@
                 },
                 {
                     "identifier": "1c2736b4-0370-42aa-990b-b5b33100ae6a",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "675ccf79-08f9-4310-a7aa-f160dea3fc33",
@@ -2583,7 +2609,7 @@
                 },
                 {
                     "identifier": "f6742d0b-7e74-40c8-a145-6f930712a684",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ac7c2595-48e4-4840-9b7c-620641fb4d85",
@@ -2663,15 +2689,15 @@
                 },
                 {
                     "identifier": "264a35a6-f2a9-4052-9195-1f91af769c92",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "7e42635a-8f91-4010-9a3e-1cb22c72e5dc",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "e32afdbf-f78d-45e1-93c5-113aabc8f591",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "710077af-46ea-4a6b-b421-cda982a27c00",
@@ -2691,7 +2717,7 @@
                 },
                 {
                     "identifier": "710ae515-7cfe-4cdf-9d5b-4db57c5bf82c",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "66814c6a-f5b3-406f-9e09-9104338f29e0",
@@ -2707,7 +2733,7 @@
                 },
                 {
                     "identifier": "130beff6-72f2-4736-a984-982c3fc50d17",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "205d31f5-0772-4fa9-87a0-ad696ec29339",
@@ -2808,13 +2834,17 @@
             ]
         }
     ],
+    "api_url_scale": "",
+    "show_external_models": false,
     "assistant_prefill": "",
     "assistant_impersonation": "",
     "claude_use_sysprompt": false,
     "use_makersuite_sysprompt": false,
+    "use_alt_scale": false,
     "squash_system_messages": false,
     "image_inlining": false,
     "inline_image_quality": "low",
+    "bypass_status_check": false,
     "continue_prefill": false,
     "continue_postfix": " ",
     "function_calling": false,
