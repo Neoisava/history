@@ -26,7 +26,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": null,
+    "active_character": "地球异闻录.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2932,6 +2932,108 @@
                 "promptOnly": true
             },
             {
+                "id": "ec4a7387-78c0-4826-a302-9ac1b95da356",
+                "scriptName": "K4o去除输入",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "^([\\s\\S]*)$",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": 1,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "4f68c9a7-0ea2-457b-bf48-6b8c02307e9b",
+                "scriptName": "K去除所有用户消息",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "^([\\s\\S]*)$",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "substituteRegex": 0,
+                "minDepth": 1,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "99ff58ac-1414-4da4-be97-103efd8ec54b",
+                "scriptName": "Kemini通用去除多余内容",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<content>|</content>|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "7ac58356-fac2-4b41-9eb1-01e73a0d15a4",
+                "scriptName": "小总结1",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/<details>\\s*<summary>\\s*摘要\\s*<\\/summary>[\\s\\S]*?<\\/details>/gsi",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": 10,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "aaefa4ac-dd15-4ae7-b5fb-4365efd29a28",
+                "scriptName": "小总结2",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/([\\s\\S]*?<details>\\s*<summary>\\s*摘要\\s*<\\/summary>|<\\/details>[\\s\\S]*?$)/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 11,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "08b4db64-0d0c-4faa-8399-10b7cc6f915b",
+                "scriptName": "省略号减少",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/([\\u4e00-\\u9fa5])(?:…|……)(\\1)|(?:…|……)/g",
+                "replaceString": "$1",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
                 "id": "66b61974-bb6c-47ae-84b0-c59ad7dfec52",
                 "scriptName": "隐藏COT信息栏",
                 "disabled": false,
@@ -4047,7 +4149,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 1,
+                "lastProcessedLength": 146,
                 "userConfigured": true
             }
         },
@@ -5629,7 +5731,7 @@
                 "marker": false,
                 "name": "✔️文风：偷",
                 "role": "system",
-                "content": "",
+                "content": "<WritingStyle>\n以“我”的视角进行故事陈述，大量融入叙事者的内心想法、判断、情绪反应和吐槽。读者透过这个“我”的滤镜来感知世界和事件。\n使得描述带有强烈的主观色彩，即使是描述他人行为或场景，也常夹杂叙事者的即时评价。\n口语化与非正式语体：\n无论是叙述还是对话，语言风格都偏向日常口语，使用大量通俗、甚至略带粗俗（如“废柴”）的词汇，减少书面语。\n句子结构相对简单直接，符合快速阅读和轻松氛围的需求。\n快节奏的互动与反应：\n特别是在对话密集的段落，强调快速的应答、反驳和转折，营造紧凑的节奏感。\n行动和对话紧密交织，一个动作紧接着一句话，或是一句话伴随着一个表情/动作，使场景流动性强。\n夸张与对比手法的频繁运用：\n为了达到喜剧或讽刺效果，经常使用夸张的形容词、比喻（如“像只虾子一样蹦蹦跳跳”）和情境。\n\n透过叙事者相对正常的内心与外部荒谬言行的对比，产生幽默感。\n对话的写作笔法规则：\n简洁的提示语：使用“说道”、“问道”、“回答”等基本提示语，或者在上下文清晰时省略提示语，让对话自然流动。\n语气词与停顿的运用：透过“喂”、“啊”、“嗯”等语气词，增加对话的真实感和表现力。\n快速切换与打断：对话经常在不同发言者之间快速跳跃，有时一句话没说完就被另一人打断或接话，模仿实际争论或快速交流的情景。\n嵌入式心理描述：在长段对话中，会插入叙事者的内心吐槽，打破单纯对话的沉闷，增加层次。\n利用问句推动：常用问句来推动情节、制造冲突或引出解释（例如：“那是怎么回事？”）。\n\n场景描述的写作笔法规则：\n聚焦于行动与互动：场景描述的重点往往不是静态的环境细节，而是正在发生的动作、人物之间的互动，以及这些互动引发的即时反应。\n动态与感官并用：偏重描述动态的画面（如“蹦蹦跳跳”），并结合简单直接的感官体验（如被绑着的束缚感）。\n融入主观感受：场景描述常常和叙事者的主观感受结合在一起，例如描述一个场景时，会直接加入“我”觉得如何、看起来怎样的评论。\n简洁且服务于情节：描述通常较为简短，只提供理解当前情境和行动所必需的资讯，避免冗长的铺陈，以维持故事的快节奏。\n比喻的点缀：使用简单、形象的比喻（如“像只虾子”）来快速勾勒画面或状态，通常带有幽默或自嘲的意味。\n与内心独白交织：场景描述经常被叙事者的内心独白打断或补充，形成一种“边看边想边评论”的效果。\n</WritingStyle>",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "injection_order": 100,
@@ -5969,7 +6071,7 @@
                     },
                     {
                         "identifier": "f90781d8-e817-460e-9858-e643bc3223b7",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "e0b09df6-2c1d-422f-b52c-a9cedf787aa5",
@@ -5977,11 +6079,11 @@
                     },
                     {
                         "identifier": "e7b85762-73d1-4dad-a373-dd1ae181c8be",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "751a591c-3357-4902-8ae6-81df592d09d1",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "63185a41-de15-4ed0-971f-b16eb2c6ff1d",
@@ -6013,7 +6115,7 @@
                     },
                     {
                         "identifier": "ab53ce47-16da-4e2e-ad7e-8069dd44292e",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "63798ad9-f1b8-429f-a732-3b5c3ccc48db",
@@ -6025,7 +6127,7 @@
                     },
                     {
                         "identifier": "79d18f0a-1bd8-409a-b926-81b305b542b3",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "c351c85e-7c17-4092-8fdf-475cb0d9ba94",
@@ -6037,7 +6139,7 @@
                     },
                     {
                         "identifier": "d3f9e3c6-cc21-4913-9a94-4dfccfa3f1c4",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "9c667918-89db-4926-b5a4-1683fde0f7e3",
