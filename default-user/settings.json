@@ -3869,7 +3869,7 @@
                                 "visible": true
                             }
                         ],
-                        "enabled": true
+                        "enabled": false
                     }
                 ],
                 "characters_with_scripts": [
@@ -3988,7 +3988,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 103,
+                "lastProcessedLength": 105,
                 "userConfigured": true
             }
         },
