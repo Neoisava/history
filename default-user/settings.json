@@ -2505,6 +2505,41 @@
         "dice": {},
         "regex": [
             {
+                "id": "720e7fe5-daa0-4dcf-b744-14a3faf54ab2",
+                "scriptName": "删除反和谐",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "(?<=[\\u4e00-\\u9fa5])[\\s（\\(【〔]?和谐[\\s）\\)】〕]?(?=[\\u4e00-\\u9fa5])",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "114672ce-16d5-4834-813a-651e26e1faac",
+                "scriptName": "上下文限制[30]",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/[\\s\\S]*/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 40,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
                 "id": "6d3b436c-6d0a-478f-9b72-99d17c2c5fa5",
                 "scriptName": "部位特写",
                 "disabled": true,
@@ -2535,41 +2570,6 @@
                 ],
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "720e7fe5-daa0-4dcf-b744-14a3faf54ab2",
-                "scriptName": "删除反和谐",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "(?<=[\\u4e00-\\u9fa5])[\\s（\\(【〔]?和谐[\\s）\\)】〕]?(?=[\\u4e00-\\u9fa5])",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
-            },
-            {
-                "id": "a1bf2397-7c4a-4580-9daa-b9d916390865",
-                "scriptName": "部位特写",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<font[^>]*>(.|\\n)*<\\/font>/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 2,
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
@@ -2796,23 +2796,6 @@
                 "promptOnly": true
             },
             {
-                "id": "0b8a0192-ef30-4b5d-a857-3ffe578cdd1b",
-                "scriptName": "【DepressIon】通用必备正则 v1.3",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/((<(guifan|safety_check)>(?:(?!<(guifan|safety_check)>)[\\s\\S])*?<\\/(guifan|safety_check)>)|(<reminder>(?:[\\s\\S])*?<\\/reminder>)|([\\s\\S]*<\\/(analysis|thinking|think)>)|([\\s\\S]*(?=<game>)))/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
                 "id": "05198484-0f5f-422c-ab2b-47d5538bb392",
                 "scriptName": "【DepressIon】剧情推进1 v2.5",
                 "disabled": true,
@@ -2894,24 +2877,6 @@
                 "substituteRegex": 0,
                 "minDepth": null,
                 "maxDepth": 1,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "114672ce-16d5-4834-813a-651e26e1faac",
-                "scriptName": "上下文限制[30]",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "/[\\s\\S]*/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 40,
-                "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
             },
@@ -7310,7 +7275,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "gemini-2.5-pro-exp-03-25",
+        "custom_model": "gemini-2.5-pro-preview-03-25",
         "custom_url": "https://api.huaapi.asia/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
