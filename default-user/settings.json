@@ -26,7 +26,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": "地球异闻录.png",
+    "active_character": null,
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -4149,7 +4149,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 147,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
@@ -5927,7 +5927,7 @@
                     },
                     {
                         "identifier": "d6d24653-584c-45e5-85a8-f43ec457af29",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "main",
@@ -5939,11 +5939,11 @@
                     },
                     {
                         "identifier": "0c4f1d5f-c14b-42c4-b676-d396beafcd90",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "2fc1f156-6c03-41ce-97ff-4fb5dc63bf2f",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "e7b03ce5-4105-4407-a30b-5a8197a20e33",
@@ -5951,7 +5951,7 @@
                     },
                     {
                         "identifier": "db89a6ea-adb6-411f-bead-ae75312d75a7",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "23f755cb-dd84-4510-b104-22cc97a16712",
@@ -6183,7 +6183,7 @@
                     },
                     {
                         "identifier": "d219981f-4a6b-4e40-b38d-2e941e8529be",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "4726256a-fb25-421d-9109-48b475170af8",
@@ -6300,7 +6300,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "gemini-2.5-pro-preview-05-06",
+        "custom_model": "gemini-2.5-pro-preview-03-25",
         "custom_url": "https://api.huaapi.asia/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
