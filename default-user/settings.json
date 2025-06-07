@@ -3055,7 +3055,7 @@
             {
                 "id": "66b61974-bb6c-47ae-84b0-c59ad7dfec52",
                 "scriptName": "隐藏COT信息栏",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<aiThinkProcess>[\\s\\S]*?<\\/aiThinkProcess>|<thinkbiao>[\\s\\S]*?<\\/thinkbiao>/gi",
                 "replaceString": "",
@@ -7085,7 +7085,7 @@
                     },
                     {
                         "identifier": "77193ea1-6ef8-4e3a-985b-fa79d11f88ad",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "331d8458-3423-48b5-b6d5-b8a2e05251a5",
