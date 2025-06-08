@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "false",
-        "NavOpened": "false",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -24,7 +24,9 @@
         "AlertWI_地球异闻录.png": "true",
         "AlertRegex_地球异闻录.png": "true",
         "AlertWI_带着女儿返乡.png": "true",
-        "AlertRegex_带着女儿返乡.png": "true"
+        "AlertRegex_带着女儿返乡.png": "true",
+        "AlertWI_Metamorphosis.png": "true",
+        "AlertRegex_Metamorphosis.png": "true"
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
@@ -3112,7 +3114,8 @@
             "(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png",
             "世界调制模式·古代篇（0.6）.png",
             "地球异闻录.png",
-            "带着女儿返乡.png"
+            "带着女儿返乡.png",
+            "Metamorphosis.png"
         ],
         "tts": {
             "voiceMap": "",
@@ -4213,7 +4216,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 91,
+                "lastProcessedLength": 93,
                 "userConfigured": true
             }
         },
