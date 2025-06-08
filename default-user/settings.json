@@ -11,7 +11,7 @@
         "world_info_sort_order": "6",
         "NavLockOn": "false",
         "Assets_SkipConfirm_2502775700152061": "true",
-        "LNavLockOn": "false",
+        "LNavLockOn": "true",
         "WINavLockOn": "false",
         "WI_PerPage": "100",
         "AlertRegex_修仙之路2.0.png": "true",
@@ -4217,7 +4217,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 120,
+                "lastProcessedLength": 122,
                 "userConfigured": true
             }
         },
@@ -6667,6 +6667,18 @@
                 "injection_position": 0,
                 "injection_depth": 4,
                 "injection_order": 100,
+                "forbid_overrides": false
+            },
+            {
+                "identifier": "de335c2f-8309-4750-99ea-95ca82d1579b",
+                "system_prompt": false,
+                "enabled": false,
+                "marker": false,
+                "name": "迪斯科行动栏",
+                "role": "system",
+                "content": "# 在正文后或</StatusBlock>后**必须**紧接着使用<options> </options> 包裹选项。\n\n<options_format>\n每次必须在</StatusBlock>之后使用以下格式弹出5个进行Skills检定的选项让用户可以选择<user>做出什么行动，不要都是同类别的选项，选项需要能推动剧情或角色关系或是更换场景、跨越时间，检定成功将成功达成行动，失败则相反。\n难度取决于{{user}}的能力和这件事本身难度的差距,例如让一个正常人爬上普通的楼梯难度是极为简单的,但让一个坐在轮椅上的瘸子爬楼梯是极为困难的\n选项内容不要给出直接的言语，而是笼统的行为概述\n格式是<font color=[颜色代码]>*[ SKILLS名称]*</font> [难度等级] - \\`[ 需要进行的行为]\\`\n       example:\n                       <font color=e3b734>鬼祟玲珑</font> [难度:中等] - 悄悄溜走\n                       <font color=5cc1d7>故弄玄虚</font> [难度:中等] - 让他们相信你没搞丢枪\n所有你生成的“选项栏”内容，都必须以<options> 作为开头和</options>作为结尾将其包覆。\n       选项栏example:\n<options> \n1. 选项\n2. 选项\n3. 选项\n4. 选项\n5. 选项\n</options>\n</options_format>\n",
+                "injection_position": 0,
+                "injection_depth": 4,
                 "forbid_overrides": false
             }
         ],
