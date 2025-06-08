@@ -11,7 +11,7 @@
         "world_info_sort_order": "6",
         "NavLockOn": "false",
         "Assets_SkipConfirm_2502775700152061": "true",
-        "LNavLockOn": "true",
+        "LNavLockOn": "false",
         "WINavLockOn": "false",
         "WI_PerPage": "100",
         "AlertRegex_修仙之路2.0.png": "true",
@@ -4217,7 +4217,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 122,
+                "lastProcessedLength": 123,
                 "userConfigured": true
             }
         },
@@ -7110,6 +7110,10 @@
                     {
                         "identifier": "f6742d0b-7e74-40c8-a145-6f930712a684",
                         "enabled": false
+                    },
+                    {
+                        "identifier": "de335c2f-8309-4750-99ea-95ca82d1579b",
+                        "enabled": true
                     },
                     {
                         "identifier": "ac7c2595-48e4-4840-9b7c-620641fb4d85",
