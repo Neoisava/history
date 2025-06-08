@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "true",
-        "NavOpened": "false",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -4212,7 +4212,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 10,
+                "lastProcessedLength": 8,
                 "userConfigured": true
             }
         },
@@ -7053,11 +7053,11 @@
                     },
                     {
                         "identifier": "e292498c-c42d-481c-af72-0d00ca74f099",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "f6742d0b-7e74-40c8-a145-6f930712a684",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "ac7c2595-48e4-4840-9b7c-620641fb4d85",

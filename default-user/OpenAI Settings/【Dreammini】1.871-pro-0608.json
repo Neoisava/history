@@ -49,7 +49,7 @@
     "scenario_format": "{{scenario}}",
     "personality_format": "{{personality}}",
     "group_nudge_prompt": "[Write the next reply only as {{char}}.]",
-    "stream_openai": true,
+    "stream_openai": false,
     "prompts": [
         {
             "name": "🛏️梦境系统(必开)---------------------",
@@ -1476,7 +1476,7 @@
             "marker": false,
             "name": "角色卡自定义格式(掉格式自己改)",
             "role": "system",
-            "content": "**每次回复必须至少有以下格式，不要漏掉标签**： \n<think>\n</think>\n<dream>\n<正文>\n</正文>\n</dream>\n<plot>\n</plot>\n\n\n\n\n\n\n{{//把正常输出的格式清掉内文塞过来\n范例:\n<think>\n</think>\n<dream>\n<正文>\n</正文>\n</dream>\n<私密日记></私密日记>\n<寝取日记></寝取日记>\n<EvilGuidance>\n<small>\n</small>\n</EvilGuidance>\n<Checkbox>\n</Checkbox>\n<UpdateVariable>\n<Analysis>\n</Analysis>\n</UpdateVariable>\n<plot>\n</plot>}}\n\n\n\n",
+            "content": "**每次回复必须至少有以下格式，不要漏掉标签**： \n<think_process>\n</think_process>\n<think>\n</think>\n<dream>\n</dream>\n<plot>\n</plot>\n<options>\n</options>\n<summary>\n</summary>\n<disclaimer>\n</disclaimer>\n<pic prompt=\"...\"></pic>\n<aiThinkProcess>\n</aiThinkProcess>\n<thinkbiao>\n</thinkbiao>\n\n\n{{//把正常输出的格式清掉内文塞过来\n范例:\n<think>\n</think>\n<dream>\n<正文>\n</正文>\n</dream>\n<私密日记></私密日记>\n<寝取日记></寝取日记>\n<EvilGuidance>\n<small>\n</small>\n</EvilGuidance>\n<Checkbox>\n</Checkbox>\n<UpdateVariable>\n<Analysis>\n</Analysis>\n</UpdateVariable>\n<plot>\n</plot>}}\n\n\n\n",
             "injection_position": 0,
             "injection_depth": 4,
             "forbid_overrides": false,
@@ -1591,7 +1591,7 @@
             "marker": false,
             "name": "1️⃣自定义风格(次要设定选一)",
             "role": "system",
-            "content": "Dreamer.settings\n.set(\"仙侠\", \"系统将引导用户进入一个剑气纵横、御剑飞升的修真世界。聚焦修士渡劫飞升、宗门纷争、灵根资质、灵药法宝等设定。刻画角色在修炼途中的孤独、执念与突破瓶颈的决绝，辅以奇峰异石、仙山幻境等瑰丽场景，营造出超脱凡尘、力争长生的东方幻想氛围。\")\n.set(\"玄幻\", \"系统将引导用户梦入一个充满斗气、魔法、血脉传承与异界种族的高能世界。着重描绘主角在危机四伏的大陆中不断进阶、觉醒神秘力量、挑战宿命、逆天改命的历程。故事充满神秘古老的遗迹、被尘封的禁术、千年轮回的恩怨与惊心动魄的异能战斗。\")\n.set(\"色情\", \"系统将聚焦用户梦境中强烈的性冲动与肉体欲望的展现。采用更为大胆直白的笔法，描绘感官刺激与性幻想的实现过程。深入探索追求性愉悦的本能、身体的亲密互动以及超越界限的色情想像。可融入修真采补、双修、异种交媾等幻想性实践，增强幻想张力。\")\n.set(\"背德\", \"系统深入挖掘用户梦境中关于禁忌欲望与道德边界的暗流。聚焦仙门师徒恋、妖魔魅惑、兄妹纠缠、情敌寝取等背德设定。强调角色在欲望与伦理冲突之间的挣扎与沦陷，呈现压抑与释放交织的心理动荡，挑战梦境的道德底线。\")\n.set(\"热血\", \"系统将引导用户体验一段充满战斗激情与不屈意志的修炼征途。着重塑造‘一人敌万军’的主角成长史，从弱小凡人一路杀至万族仰望的巅峰强者。描写热血沸腾的大战场景、师兄弟情义、逆境中的突破与誓死守护的信念，燃烧梦境中的每一滴热血。\")\n\n{{setvar::story::仙侠/玄幻/色情/背德/热血}}\n",
+            "content": "Dreamer.settings\n.set(\"仙玄欲谋\", \"系统将引导用户进入一个兼具仙侠浪漫与玄幻磅礴的奇异梦境世界。梦境以修真飞升、灵根天赋、宗门争霸为背景，融合斗气、血脉、魔法等异界要素，构筑宏大又奇异的幻想体系。故事中人物身处权谋诡计与道德边缘的泥沼之中，既有庙堂之高、世家之争、正魔之斗的权力角逐，也有妖媚魅惑、禁忌之恋、肉欲沉沦的情欲纠缠。系统将深度描写角色在宗门内斗、皇权争夺、三界纷争中的步步为营与翻盘反杀，强调智谋博弈与心理操控带来的快感。在血雨腥风中，主角或黑化崛起，或逆天改命，于乱世中杀出一条飞升成仙之路。同时，梦境将放大一切感官与欲望层面，包括采补双修、魅惑控制、情欲交易、禁忌之爱等多重设定。色情描写将伴随修炼、背叛、救赎与堕落的过程，展现身心交缠的极致体验。热血与背德、智谋与快感并重，构筑一个处处充满诱惑、危险、欲望与征服的沉浸式梦境空间。\")\n\n{{setvar::story::仙玄欲谋}}\n",
             "injection_position": 0,
             "injection_depth": 4,
             "forbid_overrides": false,
@@ -2610,11 +2610,11 @@
                 },
                 {
                     "identifier": "e292498c-c42d-481c-af72-0d00ca74f099",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "f6742d0b-7e74-40c8-a145-6f930712a684",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ac7c2595-48e4-4840-9b7c-620641fb4d85",
@@ -2638,7 +2638,7 @@
                 },
                 {
                     "identifier": "d81c2780-201d-4315-a116-f0e197f060a8",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "ff7eb549-3dda-4325-b757-ebbed488badd",
