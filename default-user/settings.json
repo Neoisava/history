@@ -4203,8 +4203,8 @@
                     "cursorPos": "end"
                 },
                 {
-                    "name": "(显示资讯和背包面板)",
-                    "symbol": "(显示资讯和背包面板)",
+                    "name": "(显示资讯、能力和背包面板)",
+                    "symbol": "(显示资讯、能力和背包面板)",
                     "display": "面板",
                     "cursorPos": "end"
                 }
@@ -4223,7 +4223,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 196,
+                "lastProcessedLength": 198,
                 "userConfigured": true
             }
         },
