@@ -4201,6 +4201,12 @@
                     "symbol": "(不要重复前文，直接输出后续剧情！)",
                     "display": "推进",
                     "cursorPos": "end"
+                },
+                {
+                    "name": "(显示资讯和背包面板)",
+                    "symbol": "(显示资讯和背包面板)",
+                    "display": "面板",
+                    "cursorPos": "end"
                 }
             ]
         },
@@ -4217,7 +4223,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 187,
+                "lastProcessedLength": 188,
                 "userConfigured": true
             }
         },
