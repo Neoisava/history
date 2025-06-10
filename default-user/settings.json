@@ -28,7 +28,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": "地球异闻录.png",
+    "active_character": null,
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -45,7 +45,6 @@
                 "信息栏COTv1.3",
                 "十九大名器v1.9",
                 "嚯嚯，还有这种可以看的吗？🤣",
-                "地图导航模块",
                 "多维情感网络动态",
                 "献媚文风加强版"
             ],
@@ -3115,7 +3114,7 @@
                 "placement": [
                     2
                 ],
-                "disabled": false,
+                "disabled": true,
                 "markdownOnly": true,
                 "promptOnly": false,
                 "runOnEdit": true,
@@ -4237,7 +4236,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 339,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
