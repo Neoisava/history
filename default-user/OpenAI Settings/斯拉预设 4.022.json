@@ -1,4 +1,28 @@
 {
+    "chat_completion_source": "custom",
+    "openai_model": "gpt-4-turbo",
+    "claude_model": "claude-3-5-sonnet-20240620",
+    "windowai_model": "",
+    "openrouter_model": "OR_Website",
+    "openrouter_use_fallback": false,
+    "openrouter_group_models": false,
+    "openrouter_sort_models": "alphabetically",
+    "openrouter_providers": [],
+    "openrouter_allow_fallbacks": true,
+    "openrouter_middleout": "on",
+    "ai21_model": "jamba-1.5-large",
+    "mistralai_model": "mistral-large-latest",
+    "cohere_model": "command-r-plus",
+    "perplexity_model": "llama-3.1-70b-instruct",
+    "groq_model": "llama-3.1-70b-versatile",
+    "zerooneai_model": "yi-large",
+    "custom_model": "[正常]gemini-2.5-pro-preview-03-25",
+    "custom_url": "https://api.skyi.cc/v1",
+    "custom_include_body": "",
+    "custom_exclude_body": "",
+    "custom_include_headers": "",
+    "custom_prompt_post_processing": "merge",
+    "google_model": "gemini-2.5-pro-preview-03-25",
     "temperature": 1,
     "frequency_penalty": 0,
     "presence_penalty": 0,
@@ -18,12 +42,14 @@
     "new_example_chat_prompt": "[Example Chat]",
     "continue_nudge_prompt": "[Continue the following message. Do not include ANY parts of the original message. Use capitalization and punctuation as if your reply is a part of the original message: {{lastChatMessage}}]",
     "bias_preset_selected": "Default (none)",
+    "reverse_proxy": "",
+    "proxy_password": "",
     "max_context_unlocked": true,
     "wi_format": "{0}",
     "scenario_format": "[Circumstances and context of the dialogue: {{scenario}}]",
     "personality_format": "[{{char}}'s personality: {{personality}}]",
     "group_nudge_prompt": "[Write the next reply only as the group members.]",
-    "stream_openai": true,
+    "stream_openai": false,
     "prompts": [
         {
             "name": "🔵设置(语言)",
@@ -483,7 +509,7 @@
             "marker": false,
             "name": "☑️设置字数",
             "role": "system",
-            "content": "{{setvar::字数::<WordCount>must no less than 800 words, and maximum 1000 words</WordCount>}}\n\n",
+            "content": "{{setvar::字数::<WordCount>must no less than 1000 words, and maximum 2500 words</WordCount>}}\n\n",
             "injection_position": 0,
             "injection_depth": 0,
             "forbid_overrides": false,
@@ -2412,7 +2438,7 @@
                 },
                 {
                     "identifier": "c92b0d5d-4910-4d97-a98a-fb82910027a1",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "60ce7330-21a5-48de-a626-fcedc5c1f0b1",
@@ -2500,15 +2526,15 @@
                 },
                 {
                     "identifier": "9a95c63d-f0b4-4998-88d5-d6ecc948d0aa",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "2d84b7ee-7121-44fa-a3d3-44696e46f06f",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "92d0eb0a-d5e5-49cd-84e0-1d428d94590f",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ca0d801a-784e-49a4-b105-41ece06defdf",
@@ -2564,11 +2590,11 @@
                 },
                 {
                     "identifier": "cda0278c-e5d2-4486-93c0-2b04768cf234",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "abf0a0a9-3f1d-4d3b-a1d6-e869dd6ebea8",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "d6aecf09-9f85-4b82-b60a-4df13f1edcb6",
@@ -2580,7 +2606,7 @@
                 },
                 {
                     "identifier": "8203021f-b95d-4cfd-896b-912a0dcef828",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "6e6b840e-27aa-4f77-ada6-a55919beb26d",
@@ -2588,11 +2614,11 @@
                 },
                 {
                     "identifier": "7fec9273-1649-4139-ac58-ee22c6a361ad",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "98521bbc-0d5e-466a-a79d-73593534774a",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "67e70710-d5c8-4aea-a1a2-cccd796d7ebf",
@@ -2600,7 +2626,7 @@
                 },
                 {
                     "identifier": "7362f407-83c1-4377-adde-1ca57d9ba357",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "fa9b585f-396d-43c4-80fe-31df5f37ee99",
@@ -2656,11 +2682,11 @@
                 },
                 {
                     "identifier": "07bdc27b-23f7-4cf5-af17-d4b3300a3b2b",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "80cdee4e-bdc7-4055-aab6-0971a27d9dbb",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "0609d048-dc40-4305-99d4-1c7ef803bd4a",
@@ -2689,17 +2715,21 @@
             ]
         }
     ],
+    "api_url_scale": "",
+    "show_external_models": false,
     "assistant_prefill": "",
     "assistant_impersonation": "",
     "claude_use_sysprompt": false,
     "use_makersuite_sysprompt": false,
+    "use_alt_scale": false,
     "squash_system_messages": false,
     "image_inlining": false,
     "inline_image_quality": "low",
+    "bypass_status_check": false,
     "continue_prefill": false,
     "continue_postfix": "",
     "function_calling": false,
-    "show_thoughts": true,
+    "show_thoughts": false,
     "reasoning_effort": "medium",
     "enable_web_search": false,
     "request_images": false,
