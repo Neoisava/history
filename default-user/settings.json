@@ -18,19 +18,15 @@
         "AlertWI_修仙之路2.0.png": "true",
         "AlertWI_(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png": "true",
         "AlertRegex_(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png": "true",
-        "AlertWI_世界调制模式·古代篇（0.6）.png": "true",
-        "AlertRegex_世界调制模式·古代篇（0.6）.png": "true",
-        "AlertWI_修仙世界-[万界大陆].png": "true",
         "AlertWI_地球异闻录.png": "true",
         "AlertRegex_地球异闻录.png": "true",
-        "AlertWI_带着女儿返乡.png": "true",
-        "AlertRegex_带着女儿返乡.png": "true",
         "AlertWI_Metamorphosis.png": "true",
-        "AlertRegex_Metamorphosis.png": "true"
+        "AlertRegex_Metamorphosis.png": "true",
+        "AlertWI_-画师配种-.png": "true"
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": "地球异闻录.png",
+    "active_character": "-画师配种-.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -3113,9 +3109,7 @@
             "凡人修仙传·凤起灵绝·大罗真魂都市修仙灵气复苏（地图互动RPG带系统版）.png",
             "修仙之路2.0.png",
             "(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png",
-            "世界调制模式·古代篇（0.6）.png",
             "地球异闻录.png",
-            "带着女儿返乡.png",
             "Metamorphosis.png"
         ],
         "tts": {
@@ -4231,7 +4225,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 323,
+                "lastProcessedLength": 1,
                 "userConfigured": true
             }
         },
@@ -4426,15 +4420,10 @@
             "985defd2-95f8-4152-9ff6-71c9b0a8b728",
             "149ac21c-db86-48f9-a891-590161d603ab"
         ],
-        "世界调制模式·古代篇（0.6）.png": [
-            "8c8ef590-3874-4b98-9e3b-d90d524525a0",
-            "920223dc-f8b9-4fcc-8a18-650bfdc21db6"
-        ],
         "《完美世界》.png": [],
-        "修仙世界-[万界大陆].png": [],
         "地球异闻录.png": [],
-        "带着女儿返乡.png": [],
-        "Metamorphosis.png": []
+        "Metamorphosis.png": [],
+        "-画师配种-.png": []
     },
     "nai_settings": {
         "temperature": 1.37,
