@@ -26,7 +26,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": "-画师配种-.png",
+    "active_character": "地球异闻录.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -44,7 +44,6 @@
                 "十九大名器v1.9",
                 "嚯嚯，还有这种可以看的吗？🤣",
                 "多维情感网络动态",
-                "极乐迪斯科",
                 "献媚文风加强版"
             ],
             "charLore": [
@@ -4225,7 +4224,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 1,
+                "lastProcessedLength": 327,
                 "userConfigured": true
             }
         },
@@ -4250,7 +4249,7 @@
             "insertType": "inline",
             "promptInjection": {
                 "enabled": true,
-                "prompt": "<image_generation>\nPlease insert the <pic prompt=\"...\"> tag at the end of your reply. The system will generate a high-quality NSFW image in Chinese Immortal (Xianxia) style based on {{user}}'s physical appearance and current plot context. The prompt should focus on the natural interplay between the character’s body and her clothing, capturing the sensual tension within the scene. Make sure the character’s beauty, expression, and posture align with the emotional tone of the story, ensuring a composition that blends erotic elegance with fantasy aesthetics. Pay special attention to ensure that the character's clothing fits her form naturally, and her hands are positioned gracefully at her sides or in a way that enhances her allure, avoiding any depiction of hands behind the back.\n</image_generation>",
+                "prompt": "<image_generation>\nPlease insert the <pic prompt=\"...\"> artist:wlop,artist:ask (askzy),artist:rhasta,artist:olchas,{{artist:hiten (hitenkei)}},tag at the end of your reply. The system will generate a high-quality NSFW image in Chinese Immortal (Xianxia) style based on {{user}}'s physical appearance and current plot context. The prompt should focus on the natural interplay between the character’s body and her clothing, capturing the sensual tension within the scene. Make sure the character’s beauty, expression, and posture align with the emotional tone of the story, ensuring a composition that blends erotic elegance with fantasy aesthetics. Pay special attention to ensure that the character's clothing fits her form naturally, and her hands are positioned gracefully at her sides or in a way that enhances her allure, avoiding any depiction of hands behind the back.\n</image_generation>",
                 "regex": "<pic[^>]*\\sprompt=\"([^\"]*)\"[^>]*?>",
                 "position": "deep_system",
                 "depth": 0
@@ -7112,11 +7111,11 @@
                     },
                     {
                         "identifier": "f6742d0b-7e74-40c8-a145-6f930712a684",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "de335c2f-8309-4750-99ea-95ca82d1579b",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "ac7c2595-48e4-4840-9b7c-620641fb4d85",
