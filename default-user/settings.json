@@ -3067,7 +3067,7 @@
             {
                 "id": "66b61974-bb6c-47ae-84b0-c59ad7dfec52",
                 "scriptName": "隐藏COT信息栏",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<aiThinkProcess>[\\s\\S]*?<\\/aiThinkProcess>|<thinkbiao>[\\s\\S]*?<\\/thinkbiao>/gi",
                 "replaceString": "",
@@ -3131,6 +3131,177 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": false
+            },
+            {
+                "id": "a8c896fc-52fc-4311-b6fc-09077ed1ed1b",
+                "scriptName": "部分仅保留总结",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/[\\s\\S]*?<This_round_events>([\\s\\S]*?)<\\/This_round_events>([\\s\\S]*)/gm",
+                "replaceString": "<This_round_events>$1</This_round_events>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 2,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "a8c896fc-52fc-4311-b6fc-09077ed1ed1b",
+                "scriptName": "仅保留总结2",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/[\\s\\S]*?<This_round_events>([\\s\\S]*?)<\\/This_round_events>([\\s\\S]*)/gm",
+                "replaceString": "<!--\n<This_round_events>$1</This_round_events>\n-->",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "4f24bc46-b7a5-40c8-8f18-db8659254d07",
+                "scriptName": "输入加密",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "([^\\n]+)",
+                "replaceString": "{{reverse: $1}}",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "212b3625-be98-49a8-a953-483b99345e35",
+                "scriptName": "置空70楼之前楼层",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/[\\s\\S]*/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 70,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "3411875e-ab85-4ba5-b54a-d06d9b35d63e",
+                "scriptName": "con",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/<content>[\\s\\S]*?</content>/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "09a7dda2-d64c-4880-9ccf-794b90f92f5f",
+                "scriptName": "删除<thinking>",
+                "disabled": false,
+                "runOnEdit": false,
+                "findRegex": "/<thinking>[\\s\\S]*?</thinking>/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "df8752ef-2c5a-4e7c-825b-5675f079dcc8",
+                "scriptName": "删除多余内容1",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "7f32740e-3f51-4fcb-97e8-3a25a2206e55",
+                "scriptName": "删除多余recent_event",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<recent_event>[\\s\\S]*<\\/recent_event>/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 3,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "f418f84f-8c59-4946-a2c0-b5d0f39691d8",
+                "scriptName": "删除声明",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<disclaimer>[\\s\\S]*</disclaimer>/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "0c8ad1ac-03dc-4c60-b787-03bd3e7b5c0a",
+                "scriptName": "删除think",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<think>[\\s\\S]*</think>/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
             }
         ],
         "character_allowed_regex": [
@@ -4983,7 +5154,7 @@
                 "marker": false,
                 "name": "☑️设置字数",
                 "role": "system",
-                "content": "{{setvar::字数::<WordCount>must no less than 800 words, and maximum 1000 words</WordCount>}}\n\n",
+                "content": "{{setvar::字数::<WordCount>must no less than 1000 words, and maximum 2500 words</WordCount>}}\n\n",
                 "injection_position": 0,
                 "injection_depth": 0,
                 "forbid_overrides": false,
@@ -6912,7 +7083,7 @@
                     },
                     {
                         "identifier": "c92b0d5d-4910-4d97-a98a-fb82910027a1",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "60ce7330-21a5-48de-a626-fcedc5c1f0b1",
@@ -7000,15 +7171,15 @@
                     },
                     {
                         "identifier": "9a95c63d-f0b4-4998-88d5-d6ecc948d0aa",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "2d84b7ee-7121-44fa-a3d3-44696e46f06f",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "92d0eb0a-d5e5-49cd-84e0-1d428d94590f",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "ca0d801a-784e-49a4-b105-41ece06defdf",
@@ -7064,11 +7235,11 @@
                     },
                     {
                         "identifier": "cda0278c-e5d2-4486-93c0-2b04768cf234",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "abf0a0a9-3f1d-4d3b-a1d6-e869dd6ebea8",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "d6aecf09-9f85-4b82-b60a-4df13f1edcb6",
@@ -7080,7 +7251,7 @@
                     },
                     {
                         "identifier": "8203021f-b95d-4cfd-896b-912a0dcef828",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "6e6b840e-27aa-4f77-ada6-a55919beb26d",
@@ -7088,11 +7259,11 @@
                     },
                     {
                         "identifier": "7fec9273-1649-4139-ac58-ee22c6a361ad",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "98521bbc-0d5e-466a-a79d-73593534774a",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "67e70710-d5c8-4aea-a1a2-cccd796d7ebf",
@@ -7156,11 +7327,11 @@
                     },
                     {
                         "identifier": "07bdc27b-23f7-4cf5-af17-d4b3300a3b2b",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "80cdee4e-bdc7-4055-aab6-0971a27d9dbb",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "0609d048-dc40-4305-99d4-1c7ef803bd4a",
