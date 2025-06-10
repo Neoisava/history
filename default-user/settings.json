@@ -28,7 +28,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": null,
+    "active_character": "破碎摇篮-重制版-3.5-Sonnet.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -4236,7 +4236,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 1,
                 "userConfigured": true
             }
         },
@@ -6816,7 +6816,7 @@
                     },
                     {
                         "identifier": "42aa2161-78d2-44b8-b807-895cc7bb3f7c",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "8335c30d-24ee-4a98-a622-d158c1e9325a",
@@ -6908,7 +6908,7 @@
                     },
                     {
                         "identifier": "01a619c3-b95c-40df-bdde-67bc4e033b52",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "d026ae62-b6b7-4309-87d0-e8e803b45ccd",
@@ -7044,7 +7044,7 @@
                     },
                     {
                         "identifier": "b3ead074-20a8-42a2-bbe9-ada7cec9a8c3",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "1c209371-7841-4553-a1aa-5e986ec41cb3",
@@ -7056,7 +7056,7 @@
                     },
                     {
                         "identifier": "51a465bc-8ac2-48c8-a6ee-74271b3266b2",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "86440db5-1bd2-486d-9b59-7d6e4a11b142",
@@ -7124,7 +7124,7 @@
                     },
                     {
                         "identifier": "f6742d0b-7e74-40c8-a145-6f930712a684",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "de335c2f-8309-4750-99ea-95ca82d1579b",
@@ -7172,19 +7172,19 @@
                     },
                     {
                         "identifier": "b30e6b7e-13ff-4467-8ae2-ba243ced739c",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "fa248233-63f8-4867-b3dc-f2d2d1c26ec6",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "36e7b1b9-8119-4571-97f0-cc83b67fd148",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "e6ada9fa-a865-40c2-aa8a-035d354e35ae",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "8d63f52c-f895-4547-b7c0-38edfcd298db",
@@ -7196,11 +7196,11 @@
                     },
                     {
                         "identifier": "77193ea1-6ef8-4e3a-985b-fa79d11f88ad",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "331d8458-3423-48b5-b6d5-b8a2e05251a5",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "166d7180-8aaa-4bc6-a43f-91b0a1218df6",
@@ -7208,19 +7208,19 @@
                     },
                     {
                         "identifier": "a96c52e7-0b85-4323-af18-eb766b5ee5d3",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "264a35a6-f2a9-4052-9195-1f91af769c92",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "7e42635a-8f91-4010-9a3e-1cb22c72e5dc",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "e32afdbf-f78d-45e1-93c5-113aabc8f591",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "710077af-46ea-4a6b-b421-cda982a27c00",
@@ -7228,7 +7228,7 @@
                     },
                     {
                         "identifier": "622e2456-43a9-45e4-8bb6-d37709b442fd",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "c9d12e15-9585-4378-b89a-f183581685a9",
@@ -7256,7 +7256,7 @@
                     },
                     {
                         "identifier": "130beff6-72f2-4736-a984-982c3fc50d17",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "205d31f5-0772-4fa9-87a0-ad696ec29339",
@@ -7292,7 +7292,7 @@
                     },
                     {
                         "identifier": "c7d0194e-5335-4d3a-9b05-5e6a1cdd59e3",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "e3c7b19d-57bc-4a74-933e-2bc0bd76927d",
