@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -24,11 +24,12 @@
         "AlertRegex_Metamorphosis.png": "true",
         "AlertWI_-画师配种-.png": "true",
         "AlertWI_地图导航模块.png": "true",
-        "AlertRegex_地图导航模块.png": "true"
+        "AlertRegex_地图导航模块.png": "true",
+        "AlertWI_世界调制模式·重制版.png": "true"
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": null,
+    "active_character": "世界调制模式·重制版.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -4236,7 +4237,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 1,
                 "userConfigured": true
             }
         },
@@ -4435,7 +4436,8 @@
         "地球异闻录.png": [],
         "Metamorphosis.png": [],
         "-画师配种-.png": [],
-        "地图导航模块.png": []
+        "地图导航模块.png": [],
+        "世界调制模式·重制版.png": []
     },
     "nai_settings": {
         "temperature": 1.37,
