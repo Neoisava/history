@@ -2554,24 +2554,6 @@
                 "promptOnly": true
             },
             {
-                "id": "6d3b436c-6d0a-478f-9b72-99d17c2c5fa5",
-                "scriptName": "部位特写",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<font[^>]*>(.|\\n)*<\\/font>/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 2,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
                 "id": "603909c4-e6e7-49fc-a7f8-f5dbb5db5fc2",
                 "scriptName": "昆仑图片",
                 "disabled": true,
@@ -3181,109 +3163,6 @@
                 "minDepth": null,
                 "maxDepth": null,
                 "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "212b3625-be98-49a8-a953-483b99345e35",
-                "scriptName": "置空70楼之前楼层",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/[\\s\\S]*/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    1,
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 70,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "0c8ad1ac-03dc-4c60-b787-03bd3e7b5c0a",
-                "scriptName": "删除think",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<think>[\\s\\S]*</think>/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "09a7dda2-d64c-4880-9ccf-794b90f92f5f",
-                "scriptName": "删除<thinking>",
-                "disabled": true,
-                "runOnEdit": false,
-                "findRegex": "/<thinking>[\\s\\S]*?</thinking>/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "7f32740e-3f51-4fcb-97e8-3a25a2206e55",
-                "scriptName": "删除多余recent_event",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<recent_event>[\\s\\S]*<\\/recent_event>/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": 3,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "f418f84f-8c59-4946-a2c0-b5d0f39691d8",
-                "scriptName": "删除声明",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<disclaimer>[\\s\\S]*</disclaimer>/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "df8752ef-2c5a-4e7c-825b-5675f079dcc8",
-                "scriptName": "删除多余内容1",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
                 "promptOnly": true
             }
         ],
@@ -4400,7 +4279,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 62,
+                "lastProcessedLength": 65,
                 "userConfigured": true
             }
         },
@@ -4674,7 +4553,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": false,
+        "stream_openai": true,
         "openai_max_context": 1000000,
         "openai_max_tokens": 65500,
         "wrap_in_quotes": false,
