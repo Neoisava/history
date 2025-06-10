@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -30,7 +30,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": null,
+    "active_character": "地球异闻录.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -4231,7 +4231,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 283,
                 "userConfigured": true
             }
         },
@@ -7251,11 +7251,11 @@
                     },
                     {
                         "identifier": "fe125442-b72f-4c69-b6d0-fe2275ee56bb",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "130beff6-72f2-4736-a984-982c3fc50d17",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "205d31f5-0772-4fa9-87a0-ad696ec29339",
