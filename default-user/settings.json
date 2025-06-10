@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
+        "LNavOpened": "true",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -4246,7 +4246,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 14,
+                "lastProcessedLength": 15,
                 "userConfigured": true
             }
         },
@@ -6156,7 +6156,7 @@
                 "marker": false,
                 "name": "🌏世界场景(必改)🌏",
                 "role": "system",
-                "content": "{{setvar::place::(中式仙侠)}}\n\n{{//地点背景设定，要恐怖，魔幻，异世界，废土，战场，地下城，古代，未来，日本，中国，特定同人小说，仙侠，武林都能改}}\n{{//影响角色带你去的地方和故事背景}}\n\n\n\n\n\n\n\n{{setvar::placew::- 在梦境正文中描写<user>能看到的与剧情相关的地点周围环境}}\n{{setvar::placecot::(加入与剧情相关的环境描写)}}\n\n\n",
+                "content": "{{setvar::place::(废土)}}\n\n{{//地点背景设定，要恐怖，魔幻，异世界，废土，战场，地下城，古代，未来，日本，中国，特定同人小说，仙侠，武林都能改}}\n{{//影响角色带你去的地方和故事背景}}\n\n\n\n\n\n\n\n{{setvar::placew::- 在梦境正文中描写<user>能看到的与剧情相关的地点周围环境}}\n{{setvar::placecot::(加入与剧情相关的环境描写)}}\n\n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false,
