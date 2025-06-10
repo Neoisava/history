@@ -22,10 +22,9 @@
         "AlertRegex_地球异闻录.png": "true",
         "AlertWI_Metamorphosis.png": "true",
         "AlertRegex_Metamorphosis.png": "true",
-        "AlertWI_-画师配种-.png": "true",
-        "AlertWI_地图导航模块.png": "true",
-        "AlertRegex_地图导航模块.png": "true",
-        "AlertWI_世界调制模式·重制版.png": "true"
+        "AlertWI_世界调制模式·重制版.png": "true",
+        "AlertWI_破碎摇篮-重制版-3.5-Sonnet.png": "true",
+        "AlertRegex_破碎摇篮-重制版-3.5-Sonnet.png": "true"
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
@@ -3130,7 +3129,7 @@
             "(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png",
             "地球异闻录.png",
             "Metamorphosis.png",
-            "地图导航模块.png"
+            "破碎摇篮-重制版-3.5-Sonnet.png"
         ],
         "tts": {
             "voiceMap": "",
@@ -4435,9 +4434,8 @@
         "《完美世界》.png": [],
         "地球异闻录.png": [],
         "Metamorphosis.png": [],
-        "-画师配种-.png": [],
-        "地图导航模块.png": [],
-        "世界调制模式·重制版.png": []
+        "世界调制模式·重制版.png": [],
+        "破碎摇篮-重制版-3.5-Sonnet.png": []
     },
     "nai_settings": {
         "temperature": 1.37,
@@ -6786,7 +6784,7 @@
                     },
                     {
                         "identifier": "7ecd35f6-f8b5-4808-8dfd-832ccb07354c",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "26f3c45d-2702-4f8a-a344-15fa00ccea21",
