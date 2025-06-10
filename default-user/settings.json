@@ -4224,7 +4224,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 327,
+                "lastProcessedLength": 326,
                 "userConfigured": true
             }
         },
@@ -4249,7 +4249,7 @@
             "insertType": "inline",
             "promptInjection": {
                 "enabled": true,
-                "prompt": "<image_generation>\nPlease insert the <pic prompt=\"...\"> artist:wlop,artist:ask (askzy),artist:rhasta,artist:olchas,{{artist:hiten (hitenkei)}},tag at the end of your reply. The system will generate a high-quality NSFW image in Chinese Immortal (Xianxia) style based on {{user}}'s physical appearance and current plot context. The prompt should focus on the natural interplay between the character’s body and her clothing, capturing the sensual tension within the scene. Make sure the character’s beauty, expression, and posture align with the emotional tone of the story, ensuring a composition that blends erotic elegance with fantasy aesthetics. Pay special attention to ensure that the character's clothing fits her form naturally, and her hands are positioned gracefully at her sides or in a way that enhances her allure, avoiding any depiction of hands behind the back.\n</image_generation>",
+                "prompt": "<image_generation>\nPlease insert the <pic prompt=\"...\"> tag at the end of your reply. The system will generate a high-quality NSFW image in Chinese Immortal (Xianxia) style based on {{user}}'s physical appearance and current plot context. The prompt should focus on the natural interplay between the character’s body and her clothing, capturing the sensual tension within the scene. Make sure the character’s beauty, expression, and posture align with the emotional tone of the story, ensuring a composition that blends erotic elegance with fantasy aesthetics. Pay special attention to ensure that the character's clothing fits her form naturally, and her hands are positioned gracefully at her sides or in a way that enhances her allure, avoiding any depiction of hands behind the back.\n</image_generation>",
                 "regex": "<pic[^>]*\\sprompt=\"([^\"]*)\"[^>]*?>",
                 "position": "deep_system",
                 "depth": 0
@@ -5398,7 +5398,7 @@
                 "marker": false,
                 "name": "小说选项 (选开)",
                 "role": "system",
-                "content": "# 在正文</dream>后或</StatusBlock>后**必须**紧接着使用<options> </options> 包裹选项。\n\n<options_format>\n每次必须使用以下格式弹出九个选项让用户选择故事的发展方向(非具体动作或对话)，选项要有不同的倾向(正常、邪恶、色情、搞笑、荒谬、吐槽、淫秽、玩笑、时间快转、移动等等)，显示数字1-9，选项显示类别，不要都是同类别的选项，选项需要能大幅推动剧情或NPC关系，与地点或时间。\n所有你生成的“选项栏”内容，都必须以<options> 作为开头和</options>作为结尾将其包覆。\n格式:\n<options> \n1. 故事发展(类别)\n2. 故事发展(类别)\n3. 故事发展(类别)\n4. 故事发展(类别)\n5. 故事发展(类别)\n6. 故事发展(类别)\n7. 故事发展(类别)\n8. 故事发展(类别/场景移动)\n9. 故事发展(类别/时间快转)\n</options>\n避免命令式的选项\n选项不得带有{{user}}所不知道的资讯。\n每个选项最多30字\n故事发展内是纲要，非具体对话与动作\n</options_format>\n",
+                "content": "# 在正文</dream>后或</StatusBlock>后**必须**紧接着使用<options> </options> 包裹选项。\n\n<options_format>\n每次必须使用以下格式弹出九个选项让用户选择故事的发展方向(非具体动作或对话)，选项要有不同的倾向(正常、邪恶、色情、搞笑、荒谬、吐槽、淫秽、玩笑、时间快转、移动等等)，显示数字1-9，选项显示类别，不要都是同类别的选项，选项需要能大幅推动剧情或NPC关系，与地点或时间。\n格式是<font color=[颜色代码]>*故事发展*</font> [类别] \n       example:\n                       <font color=e3b734>悄悄溜走</font> [正常]\n                       <font color=5cc1d7>让他们相信你没搞丢枪</font> [色情/场景转换]\n所有你生成的“选项栏”内容，都必须以<options> 作为开头和</options>作为结尾将其包覆。\n格式:\n<options> \n1. 故事发展(类别)\n2. 故事发展(类别)\n3. 故事发展(类别)\n4. 故事发展(类别)\n5. 故事发展(类别)\n6. 故事发展(类别)\n7. 故事发展(类别)\n8. 故事发展(类别/场景移动)\n9. 故事发展(类别/时间快转)\n</options>\n避免命令式的选项\n选项不得带有{{user}}所不知道的资讯。\n每个选项最多30字\n故事发展内是纲要，非具体对话与动作\n</options_format>\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false,
