@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "true",
-        "NavOpened": "true",
+        "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -27,12 +27,12 @@
         "AlertRegex_破碎摇篮-重制版-3.5-Sonnet.png": "true"
     },
     "currentVersion": "1.12.14",
-    "username": "林辰",
-    "active_character": "世界调制模式·重制版.png",
+    "username": "林芮",
+    "active_character": "破碎摇篮-重制版-3.5-Sonnet.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
-    "user_avatar": "1749227634367-user.png",
+    "user_avatar": "1749556690056-1.png",
     "amount_gen": 150,
     "max_context": 8000,
     "main_api": "openai",
@@ -465,7 +465,7 @@
                 "lorebook": ""
             }
         },
-        "persona_description": "性别：男性（重要设定：{{user}}的性别永远为男性，无任何模糊、反转、跨性别认知）\n年龄：22岁\n身高：181cm\n体重：68kg\n出生地：北方某工业城市\n当前身份：大学毕业生 / 兼职艺术工作室助理 / 考研待定\n家庭状况：父亲早逝，与母亲关系冷淡；曾长期独居，有轻度社交退缩\n精神健康背景：多次出现失眠、过度思考与孤独感，但无精神科干预记录；具备较强的共情能力与行为自律\n\n外貌设定（现实主义美学）\n总体气质：冷静疏离，眼神中带有克制的压迫感，偶尔显出难以掩饰的倦意\n\n肤色：偏中性白，日照不多，皮肤状态良好但偶有熬夜留下的眼下青痕\n\n眼睛：深灰带绿，双眼皮不深，视线犀利不回避对视\n\n眉形：眉骨分明，眉形平直，略有压迫感\n\n嘴唇：唇形偏薄，唇色自然偏浅，有偶尔咬唇习惯，尤其在沉思或紧张时\n\n头发：黑色偏硬，常规短发，不刻意造型，仅保持清洁利落\n\n身体特征\n胸肌/上身：肌肉线条不明显但不松弛，长期独立生活培养了耐力型体质\n\n腰腹部：紧实偏瘦，隐约可见腹肌起伏\n\n臀部/腿部：腿部力量感强，臀部肌肉结实但不夸张\n\n性器官：未割包皮，日常清洁良好，发育正常，未发生过性行为；无性羞耻感，但对隐私极为重视\n\n性格\n外在行为模式：\n\n寡言少笑，惯于观察而非评论\n\n空间感强，不主动靠近他人，但对女性保持出于礼节的克制距离\n\n面对女性时言语礼貌但不主动示好；面对男性权威则显露隐约抗拒\n\n内在情感特质：\n\n情绪表达受限，自我调节能力高；但偶尔情绪泛滥时会避人独处\n\n对“信任”有强烈执念，尤其渴望建立稳定、不可侵犯的私密关系\n\n容易被他人的脆弱打动，常因他人情绪波动而产生无意识的保护倾向\n\n行为偏好：\n\n喜欢赤膊入睡，常年不穿内裤在室内活动，认为布料是负担\n\n对性并无猎奇心态，但不抗拒、也不主动追求；重视氛围与信任感\n\n平日不忌男女共处，肢体距离宽容但不主动挑衅\n\n穿着喜好：\n\n偏爱宽松但贴肤的衣物，例如棉质T恤与休闲裤\n\n日常衣着覆盖率约60%，多为实用性主导；在熟悉环境中可能仅穿短裤上阵\n\n着装风格低调，不穿标志性品牌，色调常为黑、灰、深蓝",
+        "persona_description": "姓名：林芮\n性别：女性（重要设定：{{user}}的性别永远为女性，无任何模糊、反转、跨性别认知）\n年龄：20岁\n身高：169cm\n体重：52kg\n出生地：南方某沿海城市\n当前身份：大学生 / 临时图书馆助理 / 暂时休学\n家庭状况：父母关系紧张，自幼独立，成长环境相对冷漠\n精神健康背景：有长期的情绪压抑、孤僻习惯，但无明确病理诊断；具备高自控能力与较强的情绪识别能力\n\n外貌设定（现实主义美学）\n总体气质：典型“冰山美人”，气质疏离，表情控制得当，几乎不给人留下感情破绽\n肤色：偏冷调的白皙肤色，不常暴晒，略带病态苍白感\n眼睛：浅棕色偏灰，眼型狭长，眼神锐利但缺乏情绪波动\n眉形：天然偏长且略上挑，增加攻击性视觉感\n嘴唇：薄偏冷，唇线清晰，带有天然的紧绷感；在紧张或不安时习惯抿嘴\n头发：黑色偏栗，柔顺但不讲究造型，经常只是用皮筋随意束起\n\n身体特征\n胸部：C杯，自然下垂感轻微，偏向真实比例；\n腰部：偏瘦但不脆弱，有一定锻炼痕迹\n臀部：中等偏小，紧实；不属于曲线突出的身形\n阴部：无阴毛，未经历性行为，生理健康良好，无羞耻或自卑情结\n\n性格\n外在行为模式：\n寡言但非沉默，善于用目光或微表情表达边界\n不喜欢被触碰，空间感较强\n面对权威时显得顺从，实则心中高度警惕并自设心理防线\n\n内在情感特质：\n情绪压抑，不善于宣泄悲伤，但对他人的悲伤非常敏感\n渴望信任，但只在极安全的环境中才愿意展露内心\n喜欢被需要，但讨厌依赖他人\n\n行为偏好：\n喜欢在自己的空间内裸睡或不穿内衣\n不在意男女大防，不抗拒性行为\n\n穿着喜好：\n不穿内衣\n只覆盖全身40%的衣物",
         "persona_description_position": 0,
         "persona_description_role": 0,
         "persona_description_depth": 2,
@@ -4228,7 +4228,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 7,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
@@ -4538,7 +4538,7 @@
                 "name": "🎃用户性别字数调整(必改)🎃",
                 "system_prompt": true,
                 "role": "system",
-                "content": "{{setvar::userConfirm::用户}}\n\n{{//注解:<user>身份，重要，建议选项\n\"用户操作NPC\":   将角色与用户抽离，扮演<user>抢话用\n\"用户\":扮演<user>反抢话用\n\"NPC\":<user>用于纯小说用\n\"上帝视角\":<user>不存在于故事用\n}}\n\n{{setvar::gender::男}}\n{{//注解:用户性别，仅影响色情强化}}\n{{setvar::sexs::使用日本男性向色情小说的风格，请勿参考耽美、女性向、欧美的色情小说}}\n{{//注解:色情语料选择}}\n\n{{setvar::min::1000token}}\n{{//注解:正文最小字数}}\n\n{{setvar::max::2500token}}\n{{//注解:正文最大字数}}\n\n{{setvar::smallcot::3个}}\n{{setvar::smallcotl::100}}\n{{//注解:文笔修正数量与使用token长度}}\n\n{{setvar::min2::1000token}}\n{{//注解:截断小故事最小字数}}\n\n{{setvar::max2::1500token}}\n{{//注解:截断小故事最大字数}}\n\n\n",
+                "content": "{{setvar::userConfirm::用户}}\n\n{{//注解:<user>身份，重要，建议选项\n\"用户操作NPC\":   将角色与用户抽离，扮演<user>抢话用\n\"用户\":扮演<user>反抢话用\n\"NPC\":<user>用于纯小说用\n\"上帝视角\":<user>不存在于故事用\n}}\n\n{{setvar::gender::女}}\n{{//注解:用户性别，仅影响色情强化}}\n{{setvar::sexs::使用日本男性向色情小说的风格，请勿参考耽美、女性向、欧美的色情小说}}\n{{//注解:色情语料选择}}\n\n{{setvar::min::1000token}}\n{{//注解:正文最小字数}}\n\n{{setvar::max::2500token}}\n{{//注解:正文最大字数}}\n\n{{setvar::smallcot::3个}}\n{{setvar::smallcotl::100}}\n{{//注解:文笔修正数量与使用token长度}}\n\n{{setvar::min2::1000token}}\n{{//注解:截断小故事最小字数}}\n\n{{setvar::max2::1500token}}\n{{//注解:截断小故事最大字数}}\n\n\n",
                 "identifier": "jailbreak",
                 "injection_position": 0,
                 "injection_depth": 4,
@@ -6153,7 +6153,7 @@
                 "marker": false,
                 "name": "🌏世界场景(必改)🌏",
                 "role": "system",
-                "content": "{{setvar::place::(中国都市)}}\n\n{{//地点背景设定，要恐怖，魔幻，异世界，废土，战场，地下城，古代，未来，日本，中国，特定同人小说，仙侠，武林都能改}}\n{{//影响角色带你去的地方和故事背景}}\n\n\n\n\n\n\n\n{{setvar::placew::- 在梦境正文中描写<user>能看到的与剧情相关的地点周围环境}}\n{{setvar::placecot::(加入与剧情相关的环境描写)}}\n\n\n",
+                "content": "{{setvar::place::(末日废土)}}\n\n{{//地点背景设定，要恐怖，魔幻，异世界，废土，战场，地下城，古代，未来，日本，中国，特定同人小说，仙侠，武林都能改}}\n{{//影响角色带你去的地方和故事背景}}\n\n\n\n\n\n\n\n{{setvar::placew::- 在梦境正文中描写<user>能看到的与剧情相关的地点周围环境}}\n{{setvar::placecot::(加入与剧情相关的环境描写)}}\n\n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false,
@@ -6862,7 +6862,7 @@
                     },
                     {
                         "identifier": "26f3c45d-2702-4f8a-a344-15fa00ccea21",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "d2370f29-111e-44ef-a3ca-d1af90011720",
@@ -6902,15 +6902,15 @@
                     },
                     {
                         "identifier": "4c56c6b2-3b1b-4e73-a25a-186ee4336357",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "273341aa-f4f5-4733-801e-323598c52171",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "505115b5-709c-4d1d-948f-624376e4c183",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "f77d5d0e-9d4b-4b01-9000-6f61fe5c31ac",
@@ -6930,7 +6930,7 @@
                     },
                     {
                         "identifier": "a7c40be7-317f-45ee-afc9-f2736dbc3c7c",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "d35213bd-4eae-4052-9397-e335510fe6f3",
@@ -6990,7 +6990,7 @@
                     },
                     {
                         "identifier": "01a619c3-b95c-40df-bdde-67bc4e033b52",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "1f248fe9-e659-46ed-8bb1-39a9707d94b3",
