@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
+        "LNavOpened": "true",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -4246,7 +4246,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 29,
+                "lastProcessedLength": 30,
                 "userConfigured": true
             }
         },
@@ -4520,7 +4520,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": false,
+        "stream_openai": true,
         "openai_max_context": 1000000,
         "openai_max_tokens": 65500,
         "wrap_in_quotes": false,
@@ -6852,7 +6852,7 @@
                     },
                     {
                         "identifier": "f13388f6-345d-4891-8518-3ce94eed665e",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "76fcd970-8ea4-40b0-8336-9504054b10bc",
@@ -6860,7 +6860,7 @@
                     },
                     {
                         "identifier": "1d789341-ce56-4dee-bbf0-ff7fda7dbc7a",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "jailbreak",
@@ -7372,7 +7372,7 @@
                     },
                     {
                         "identifier": "2d0b09ba-6120-4769-a49a-e27f4c99cb0e",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "83be0196-53ef-4b5c-897c-c4cf1d2ae433",
@@ -7437,8 +7437,8 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "[正常]gemini-2.5-pro-preview-03-25",
-        "custom_url": "https://api.skyi.cc/v1",
+        "custom_model": "goldmane-ab-test",
+        "custom_url": "https://newapi.aicohere.org/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
         "custom_include_headers": "",
