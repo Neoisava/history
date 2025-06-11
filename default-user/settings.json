@@ -2,8 +2,8 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
-        "NavOpened": "false",
+        "LNavOpened": "true",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -28,7 +28,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林芮",
-    "active_character": "破碎摇篮-重制版-3.5-Sonnet.png",
+    "active_character": null,
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -4279,7 +4279,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 102,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
@@ -6827,11 +6827,11 @@
                     },
                     {
                         "identifier": "7ecd35f6-f8b5-4808-8dfd-832ccb07354c",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "26f3c45d-2702-4f8a-a344-15fa00ccea21",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "d2370f29-111e-44ef-a3ca-d1af90011720",
