@@ -2,8 +2,8 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
-        "NavOpened": "false",
+        "LNavOpened": "true",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -3049,7 +3049,7 @@
             {
                 "id": "66b61974-bb6c-47ae-84b0-c59ad7dfec52",
                 "scriptName": "隐藏COT信息栏",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<aiThinkProcess>[\\s\\S]*?<\\/aiThinkProcess>|<thinkbiao>[\\s\\S]*?<\\/thinkbiao>/gi",
                 "replaceString": "",
@@ -3066,7 +3066,7 @@
             {
                 "id": "ce13c0c2-254d-4fef-97b4-a4f8985aab6b",
                 "scriptName": "思考隐藏v1",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<aiThinkProcess>[\\s\\S]*<\\/aiThinkProcess>/g",
                 "replaceString": "",
@@ -3083,7 +3083,7 @@
             {
                 "id": "15e946fd-7d84-4bd1-abc6-2d1908461667",
                 "scriptName": "归纳数据v2",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<thinkbiao>[\\s\\S]*<\\/thinkbiao>/g",
                 "replaceString": "",
@@ -3113,57 +3113,6 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": false
-            },
-            {
-                "id": "3411875e-ab85-4ba5-b54a-d06d9b35d63e",
-                "scriptName": "con",
-                "disabled": true,
-                "runOnEdit": false,
-                "findRegex": "/<content>[\\s\\S]*?</content>/gm",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "6fa6095c-4981-4d3b-969a-b3f240ac7461",
-                "scriptName": "仅保留总结2",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/[\\s\\S]*?<This_round_events>([\\s\\S]*?)<\\/This_round_events>([\\s\\S]*)/gm",
-                "replaceString": "<!--\n<This_round_events>$1</This_round_events>\n-->",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
-                "id": "4f24bc46-b7a5-40c8-8f18-db8659254d07",
-                "scriptName": "输入加密",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "([^\\n]+)",
-                "replaceString": "{{reverse: $1}}",
-                "trimStrings": [],
-                "placement": [
-                    1
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
             }
         ],
         "character_allowed_regex": [
@@ -3708,7 +3657,7 @@
             "chatBubbleLightness": 0.15
         },
         "quickReplyV2": {
-            "isEnabled": true,
+            "isEnabled": false,
             "isCombined": true,
             "isPopout": false,
             "showPopoutButton": true,
@@ -4279,7 +4228,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 6,
+                "lastProcessedLength": 4,
                 "userConfigured": true
             }
         },
@@ -6412,7 +6361,7 @@
                 "marker": false,
                 "name": "⏰推进与时间速度(可改)⏰",
                 "role": "system",
-                "content": "{{setvar::%speed::1}}\n{{//注解:单次小推进数量，越多单次回复越长，建议4个内}}\n{{setvar::%push::大}}\n{{//注解:强制大推进，可改小}}\n\n{{setvar::%small::增(1-5%)主★}}\n{{setvar::%big::增(5-15%)主★}}\n{{//注解:(主线推进累积速度}}\n\n{{setvar::event::分故事方向60%、角色线30%、色情事件10%。}}\n{{//注解:事件比例}}\n\n{{setvar::%time::1-5}}\n{{setvar::%btime::5-15}}\n{{setvar::%maintime::至少60}}\n{{//\n注解:\n(时间推进速度(分钟)}，\n%time小推进耗时、\n%btime大推进耗时、\n%maintime主★快转至少耗时、可改\"至少60最多XXX\"限制快转时间长度}}\n",
+                "content": "{{setvar::%speed::2}}\n{{//注解:单次小推进数量，越多单次回复越长，建议4个内}}\n{{setvar::%push::大}}\n{{//注解:强制大推进，可改小}}\n\n{{setvar::%small::增(1-5%)主★}}\n{{setvar::%big::增(5-15%)主★}}\n{{//注解:(主线推进累积速度}}\n\n{{setvar::event::分故事方向60%、角色线30%、色情事件10%。}}\n{{//注解:事件比例}}\n\n{{setvar::%time::1-5}}\n{{setvar::%btime::5-15}}\n{{setvar::%maintime::至少60}}\n{{//\n注解:\n(时间推进速度(分钟)}，\n%time小推进耗时、\n%btime大推进耗时、\n%maintime主★快转至少耗时、可改\"至少60最多XXX\"限制快转时间长度}}\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "injection_order": 100,
