@@ -16,7 +16,7 @@
     "perplexity_model": "llama-3.1-70b-instruct",
     "groq_model": "llama-3.1-70b-versatile",
     "zerooneai_model": "yi-large",
-    "custom_model": "[正常]gemini-2.5-pro-preview-03-25",
+    "custom_model": "gemini-2.5-flash-preview-05-20",
     "custom_url": "https://api.skyi.cc/v1",
     "custom_include_body": "",
     "custom_exclude_body": "",
@@ -2378,11 +2378,11 @@
                 },
                 {
                     "identifier": "f13388f6-345d-4891-8518-3ce94eed665e",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "76fcd970-8ea4-40b0-8336-9504054b10bc",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "1d789341-ce56-4dee-bbf0-ff7fda7dbc7a",
@@ -2598,7 +2598,7 @@
                 },
                 {
                     "identifier": "7d6acb75-087b-49b3-a0d2-68cefa6ab269",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "chatHistory",
@@ -2630,7 +2630,7 @@
                 },
                 {
                     "identifier": "d5965fbc-4258-4552-9912-06078d9e218c",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "e5d85924-82e1-4f26-bf1c-8f7dce07a687",
@@ -2682,7 +2682,7 @@
                 },
                 {
                     "identifier": "218095d1-b8b3-49dd-8e25-d0ec1adbeca0",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "0d1341f1-06f8-4609-8d70-168a16c02ad1",
@@ -2750,7 +2750,7 @@
                 },
                 {
                     "identifier": "d81c2780-201d-4315-a116-f0e197f060a8",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "30aa6d6d-e782-4951-8de6-a8ee68aebf1d",
@@ -2898,7 +2898,7 @@
                 },
                 {
                     "identifier": "2d0b09ba-6120-4769-a49a-e27f4c99cb0e",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "83be0196-53ef-4b5c-897c-c4cf1d2ae433",
