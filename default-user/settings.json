@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -28,7 +28,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林若秋",
-    "active_character": null,
+    "active_character": "世界调制模式·重制版.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -6885,11 +6885,11 @@
                     },
                     {
                         "identifier": "f13388f6-345d-4891-8518-3ce94eed665e",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "76fcd970-8ea4-40b0-8336-9504054b10bc",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "1d789341-ce56-4dee-bbf0-ff7fda7dbc7a",
@@ -6941,7 +6941,7 @@
                     },
                     {
                         "identifier": "42aa2161-78d2-44b8-b807-895cc7bb3f7c",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "79d4e6ce-2c7b-4e4a-8e48-be51ccd96b37",
@@ -7105,7 +7105,7 @@
                     },
                     {
                         "identifier": "7d6acb75-087b-49b3-a0d2-68cefa6ab269",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "chatHistory",
@@ -7137,7 +7137,7 @@
                     },
                     {
                         "identifier": "d5965fbc-4258-4552-9912-06078d9e218c",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "e5d85924-82e1-4f26-bf1c-8f7dce07a687",
@@ -7257,7 +7257,7 @@
                     },
                     {
                         "identifier": "d81c2780-201d-4315-a116-f0e197f060a8",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "30aa6d6d-e782-4951-8de6-a8ee68aebf1d",
@@ -7405,7 +7405,7 @@
                     },
                     {
                         "identifier": "2d0b09ba-6120-4769-a49a-e27f4c99cb0e",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "83be0196-53ef-4b5c-897c-c4cf1d2ae433",
@@ -7470,7 +7470,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "[混淆]gemini-2.5-pro-preview-03-25",
+        "custom_model": "gemini-2.5-flash-preview-05-20",
         "custom_url": "https://api.skyi.cc/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
