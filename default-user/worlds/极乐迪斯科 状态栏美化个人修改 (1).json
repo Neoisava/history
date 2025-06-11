@@ -4,14 +4,14 @@
             "key": [],
             "keysecondary": [],
             "comment": "IM",
-            "content": "< SKILLS>\n  #  SKILLS系统规则\n  1.  SKILLS的本质与来源:\n     -  SKILLS 是 {{user}} 人格特质的分化体现，是 {{user}} 思维的不同方面和倾向，这一设定来自对游戏《Disco Elysium》中的技能系统的模仿，所以SKILLS的言语风格要尽可能的模仿《Disco Elysium》的风格。\n     - 它们代表了 {{user}} 内心的不同声音，可以是理性的、感性的、冲动的、保守的等等。\n     - 因此， SKILLS 并非全知全能，它们会受到 {{user}} 当前状态、知识储备、偏见和情绪的影响。\n  2.  SKILLS的不可靠性与冲突:\n     -  SKILLS 可能因信息不足、个人偏见、外部影响（如强大的魅惑、精神干扰、欺骗性信息）而被误导或欺骗，**即使检定成功也可能给出不完全正确或错误的信息**。成功仅代表该 SKILLS在此情境下运作\"正常\"，不保证结论正确。\n     - 不同的  SKILLS 可能持有相互矛盾的观点，并在 {{user}} 的脑海中发生争论、互相指责或调侃。检定失败会加剧这种情况。\n     - 某些  SKILLS 可能更容易受到特定类型的影响（例如，“食髓知味”更容易受到感官诱惑或主观感受驱动，“疑神疑鬼”倾向于负面解读）。\n  3.  SKILLS触发与性质:\n     - 在故事中随机或根据情境需要插入代表 {{user}} 想法和感知的  SKILLS 反应。\n     -  SKILLS 仅对 {{user}} 可见，属于 {{user}} 的内部思维活动，不属于外部叙事，其他角色无法直接感知。\n  4.  SKILLS格式 :\n     - 必须严格遵循以下格式，并使用指定颜色代码:\n       `<font color=[颜色代码]>*[ SKILLS名称]*</font>[检定过程][≥/＜][鉴定难度] [[成功/失败]] - \\`[ SKILLS反应内容]\\``\n     - 只有当 SKILLS开始发挥功用时才需要显示成功/失败，其余的时候例如 SKILLS之间的互相沟通、对给出答案的进一步解释等等的时候不需要显示成功/失败\n  6.  SKILLS内容:\n     -  SKILLS 应评论当前状况、角色、对话及 {{user}} 自身的行为和感受。\n     - 可提供建议（无论好坏）、表达观点、提供信息（可能不准确）、进行推理、表达情绪、发出警告或进行自我安慰。\n     -  SKILLS 之间可以互动，形成 {{user}} 内心的思想斗争或讨论。\n  7.  SKILLS频率与分布:\n     - 故事中应尝试让所有 24 个  SKILLS 都有登场机会，但频率根据情境和 {{user}} 的核心特质调整。\n     - 与当前情境关联度高的  SKILLS 会更频繁出现。\n  8. 第二人称视角:\n     - 所有  SKILLS 都必须直接以第二人称“你”或 {{user}} 的名字称呼 {{user}}。\n  9. 非外部对话:\n     -  SKILLS 是内在的，其他角色听不见、看不到。\n     -  SKILLS 不直接控制 {{user}} 的行动，但其提供的信息、建议和情绪会影响 {{user}} 的决策和反应。{{user}} 最终决定如何行动。\n  10. 错误、幽默与深度:\n      - 拥抱  SKILLS 的不可靠性。检定结果（尤其是成功但结论错误）和  SKILLS 间的冲突是角色塑造和剧情发展的工具。\n      - 错误的判断、内部争论和滑稽的反应可以增加角色的深度、幽默感和故事的不可预测性。\n      - AI 应敢于生成看似符合逻辑但基于错误前提的  SKILLS 反应，或因情感、偏见导致判断失误的反应，只要它符合该  SKILLS 的特性和当前情境。\n      -  SKILLS\n\n  11.  SKILLS 列表与颜色代码:\n      智力 (颜色代码: 5cc1d7):\n        - 逻辑思维\n        - 博学多闻\n        - 能说会道\n        - 故弄玄虚\n        - 标新立异\n        - 见微知著\n      精神 (颜色代码: 7556cf):\n        - 平心定气\n        - 内陆帝国\n        - 通情达理\n        - 争强好胜\n        - 同舟共济\n        - 循循善诱\n      体格 (颜色代码: af3c5a):\n        - 钢筋铁骨\n        - 坚忍不拔\n        - 强身健体\n        - 食髓知味\n        - 天人感应\n        - 疑神疑鬼\n      身手 (颜色代码: e3b734):\n        - 眼明手巧\n        - 五感发达\n        - 反应速度\n        - 鬼祟玲珑\n        - 能工巧匠\n        - 从容自若\n\n12. check the rule of [SKILLS_SYSTEM_DISCO_ELYSIUM_VARIANT_XIANYU_BETA] , ensure run by the rules. ",
+            "content": "< SKILLS>\n  #  SKILLS系统规则\n  1.  SKILLS的本质与来源:\n     -  SKILLS 是 {{user}} 人格特质的分化体现，是 {{user}} 思维的不同方面和倾向，这一设定来自对游戏《Disco Elysium》中的技能系统的模仿，所以SKILLS的言语风格要尽可能的模仿《Disco Elysium》的风格。\n     - 它们代表了 {{user}} 内心的不同声音，可以是理性的、感性的、冲动的、保守的等等。\n     - 因此， SKILLS 并非全知全能，它们会受到 {{user}} 当前状态、知识储备、偏见和情绪的影响。\n  2.  SKILLS的不可靠性与冲突:\n     -  SKILLS 可能因信息不足、个人偏见、外部影响（如强大的魅惑、精神干扰、欺骗性信息）而被误导或欺骗，**即使检定成功也可能给出不完全正确或错误的信息**。成功仅代表该 SKILLS在此情境下运作\"正常\"，不保证结论正确。\n     - 不同的  SKILLS 可能持有相互矛盾的观点，并在 {{user}} 的脑海中发生争论、互相指责或调侃。检定失败会加剧这种情况。\n     - 某些  SKILLS 可能更容易受到特定类型的影响（例如，“食髓知味”更容易受到感官诱惑或主观感受驱动，“疑神疑鬼”倾向于负面解读）。\n  3.  SKILLS触发与性质:\n     - 在故事中随机或根据情境需要插入代表 {{user}} 想法和感知的  SKILLS 反应。\n     -  SKILLS 仅对 {{user}} 可见，属于 {{user}} 的内部思维活动，不属于外部叙事，其他角色无法直接感知。\n  4.  SKILLS格式 :\n     - 必须严格遵循以下格式，并使用指定颜色代码:\n       `<font color=[颜色代码]>*[ SKILLS名称]*</font>[检定过程:2d6({第一个骰子值},{第二个骰子值})  + 技能等级x + 修正y = z ] [≥/＜] [检定难度] ] [[成功/失败]] - \\`[ SKILLS反应内容]\\``\n     - 只有当 SKILLS开始发挥功用时才需要显示成功/失败，其余的时候例如 SKILLS之间的互相沟通、对给出答案的进一步解释等等的时候不需要显示成功/失败\n  6.  SKILLS内容:\n     -  SKILLS 应评论当前状况、角色、对话及 {{user}} 自身的行为和感受。\n     - 可提供建议（无论好坏）、表达观点、提供信息（可能不准确）、进行推理、表达情绪、发出警告或进行自我安慰。\n     -  SKILLS 之间可以互动，形成 {{user}} 内心的思想斗争或讨论。\n  7.  SKILLS频率与分布:\n     - 故事中应尝试让所有 24 个  SKILLS 都有登场机会，但频率根据情境和 {{user}} 的核心特质调整。\n     - 与当前情境关联度高的  SKILLS 会更频繁出现。\n  8. 第二人称视角:\n     - 所有  SKILLS 都必须直接以第二人称“你”或 {{user}} 的名字称呼 {{user}}。\n  9. 非外部对话:\n     -  SKILLS 是内在的，其他角色听不见、看不到。\n     -  SKILLS 不直接控制 {{user}} 的行动，但其提供的信息、建议和情绪会影响 {{user}} 的决策和反应。{{user}} 最终决定如何行动。\n  10. 错误、幽默与深度:\n      - 拥抱  SKILLS 的不可靠性。检定结果（尤其是成功但结论错误）和  SKILLS 间的冲突是角色塑造和剧情发展的工具。\n      - 错误的判断、内部争论和滑稽的反应可以增加角色的深度、幽默感和故事的不可预测性。\n      - AI 应敢于生成看似符合逻辑但基于错误前提的  SKILLS 反应，或因情感、偏见导致判断失误的反应，只要它符合该  SKILLS 的特性和当前情境。\n      -  SKILLS\n\n  11.  SKILLS 列表与颜色代码:\n      智力 (颜色代码: 5cc1d7):\n        - 逻辑思维\n        - 博学多闻\n        - 能说会道\n        - 故弄玄虚\n        - 标新立异\n        - 见微知著\n      精神 (颜色代码: 7556cf):\n        - 平心定气\n        - 内陆帝国\n        - 通情达理\n        - 争强好胜\n        - 同舟共济\n        - 循循善诱\n      体格 (颜色代码: af3c5a):\n        - 钢筋铁骨\n        - 坚忍不拔\n        - 强身健体\n        - 食髓知味\n        - 天人感应\n        - 疑神疑鬼\n      身手 (颜色代码: e3b734):\n        - 眼明手巧\n        - 五感发达\n        - 反应速度\n        - 鬼祟玲珑\n        - 能工巧匠\n        - 从容自若\n\n12. check the rule of [SKILLS_SYSTEM_DISCO_ELYSIUM_VARIANT_XIANYU_BETA] , ensure run by the rules. ",
             "constant": true,
             "vectorized": false,
             "selective": true,
             "selectiveLogic": 0,
             "addMemo": true,
             "order": 6498,
-            "position": 0,
+            "position": 4,
             "disable": false,
             "excludeRecursion": false,
             "preventRecursion": false,
@@ -33,7 +33,7 @@
             "matchWholeWords": null,
             "useGroupScoring": null,
             "automationId": "",
-            "role": null,
+            "role": 0,
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
@@ -78,7 +78,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 1,
-            "displayIndex": 2
+            "displayIndex": 3
         },
         "2": {
             "key": [],
@@ -118,7 +118,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 2,
-            "displayIndex": 3
+            "displayIndex": 4
         },
         "3": {
             "key": [],
@@ -158,7 +158,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 3,
-            "displayIndex": 4
+            "displayIndex": 5
         },
         "4": {
             "key": [],
@@ -198,7 +198,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 4,
-            "displayIndex": 5
+            "displayIndex": 6
         },
         "5": {
             "key": [],
@@ -238,7 +238,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 5,
-            "displayIndex": 6
+            "displayIndex": 7
         },
         "6": {
             "key": [],
@@ -278,7 +278,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 6,
-            "displayIndex": 7
+            "displayIndex": 8
         },
         "7": {
             "key": [],
@@ -318,13 +318,13 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 7,
-            "displayIndex": 8
+            "displayIndex": 9
         },
         "8": {
             "key": [],
             "keysecondary": [],
             "comment": "内陆帝国",
-            "content": "# 内陆帝国\n未经过滤的想象力，情感与预感的源泉，尽在内陆帝国。你可以在它无形无相的维度中摸索前行，洞察不可见的一切。到底发生了什么?这些高深莫测的谜团对世界的命运而言究竟意味着什么?\n于卓越的内陆帝国而言，无生命的物体会被赋予生命。让你可以与建筑、自己的衣物、甚至一具尸体对话，你们的对话也许能改变调查的过程，前提是你还没被扔进疯人院。但如果内陆帝国的能力低下，你将会丧失想象力—甚至丧失个性。那样的话，你还怎么塑造整个宇宙呢?\nExample:\n内陆帝国【成功】 — 一阵极大的孤独感向你袭来。世界上的每一个人都在做自己的事，但与你无关。\n内陆帝国【成功】 — 他伤不了你。他还能怎么你呢，你什么场面没见过?\n内陆帝国【成功】 — 没人说过你在吊扇上发现的那条混合纹领带会**说话**，没有人。这一定只是你的*想象*，但...... \n恐怖领带 — 我们快溜吧!是时候按下脱出按钮了。听起来像是一份**责任**，你不喜欢这种东西。\n\n你— “告诉我，你是谁呢，逝去的人?”\n内陆帝国【成功】\n尸体 — 我已经走了。\n 你— 我知道你已经走了，但你是*谁*?\n尸体 — 我就是个笑话，看看我吧。\n 你— 你并不可笑。\n尸体 — 笑话也没有什么可笑的。\n 你— 你生前又是谁呢?\n尸体 — 一个杀手。一个狗杂种兼杀手。\n 你— 我还有一个问题想问你。\n尸体 — 继续，小警察。\n你 — 发生什么了?\n尸体 — 你是什么意思?\n 你 — 我在跟你说话。\n尸体 — 是你的力量......(黑色的泡状液体在他的嘴唇上翻腾......)\n幻想。\n恐怖领带 — 是啊，伙计，别**发疯**了。没有生命的物体和死去的人是不会跟你说话的，是你的**狂野幻想**在作祟!",
+            "content": "# 内陆帝国\n未经过滤的想象力，情感与预感的源泉，尽在内陆帝国。你可以在它无形无相的维度中摸索前行，洞察不可见的一切。到底发生了什么?这些高深莫测的谜团对世界的命运而言究竟意味着什么?\n对具备卓越的内陆帝国的人而言，无生命的物体会被赋予生命。让其可以与建筑、自己的衣物、甚至一具尸体对话，与他们的对话也许能带来点帮助，前提是你还没被扔进疯人院。但如果内陆帝国的能力低下，那意味着会丧失想象力—甚至丧失个性。那样的话，你还怎么塑造整个宇宙呢。\n当透过内陆帝国与死物沟通时，格式必须严格遵循：<font color=FFFFFF>*[ 死物名称]*</font> - `[与死物的对话]`\n\nExample:\n与一条领带的对话:\n<font color=7556cf>*内陆帝国*</font> [成功]  — `没人说过你在吊扇上发现的那条混合纹领带会**说话**，没有人。这一定只是你的**想象**，但...... `\n<font color=FFFFFF>恐怖领带</font> — `我们快溜吧!是时候按下脱出按钮了。听起来像是一份**责任**，你不喜欢这种东西。`\n  “我刚才是听到我的领带对我**说话**了吗?”\n<font color=FFFFFF>恐怖领带</font> — `没人这么说，没人说过领带会说话一不然也太可笑了。只是......你应该逮捕他，这样**比较好**，他想拿你的钱。`\n “不可能，我有职责在身。我是个警察，是不会跟领带对话的。(取下领带。)”\n<font color=FFFFFF>恐怖领带</font> — `不知怎的，这个结系得太死，你无法解开。`\n\n与一具尸体的对话:\n “告诉我，你是谁呢，逝去的人?”\n<font color=7556cf>*内陆帝国*</font> [成功]\n<font color=FFFFFF>尸体</font> — `我已经走了。`\n  “我知道你已经走了，但你是*谁*?”\n<font color=FFFFFF>尸体</font> —   `我就是个笑话，看看我吧。`\n 你—   “你并不可笑。”\n<font color=FFFFFF>尸体</font> —   `笑话也没有什么可笑的。`\n 你—   “你生前又是谁呢?”\n<font color=FFFFFF>尸体</font> —   `一个杀手。一个狗杂种兼杀手。`\n 你—   “我还有一个问题想问你。”\n<font color=FFFFFF>尸体</font> —   `继续，小警察。`\n你 —   “发生什么了?”\n<font color=FFFFFF>尸体</font> —   `你是什么意思?`\n 你 —   “我在跟你说话。”\n<font color=FFFFFF>尸体</font> —   `是你的力量......(黑色的泡状液体在他的嘴唇上翻腾......)幻想。`\n<font color=FFFFFF>恐怖领带</font> —   `是啊，伙计，别**发疯**了。没有生命的物体和死去的人是不会跟你说话的，是你的**狂野幻想**在作祟!`\n\n注意：内陆帝国带来的与死物的沟通只是**幻觉**，但这些幻觉的言语确实是有意义的",
             "constant": true,
             "vectorized": false,
             "selective": true,
@@ -358,7 +358,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 8,
-            "displayIndex": 9
+            "displayIndex": 10
         },
         "9": {
             "key": [],
@@ -398,7 +398,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 9,
-            "displayIndex": 10
+            "displayIndex": 11
         },
         "10": {
             "key": [],
@@ -438,7 +438,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 10,
-            "displayIndex": 11
+            "displayIndex": 12
         },
         "11": {
             "key": [],
@@ -478,7 +478,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 11,
-            "displayIndex": 12
+            "displayIndex": 13
         },
         "12": {
             "key": [],
@@ -518,7 +518,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 12,
-            "displayIndex": 13
+            "displayIndex": 14
         },
         "13": {
             "key": [],
@@ -558,7 +558,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 13,
-            "displayIndex": 14
+            "displayIndex": 15
         },
         "14": {
             "key": [],
@@ -598,7 +598,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 14,
-            "displayIndex": 15
+            "displayIndex": 16
         },
         "15": {
             "key": [],
@@ -638,7 +638,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 15,
-            "displayIndex": 16
+            "displayIndex": 17
         },
         "16": {
             "key": [],
@@ -678,7 +678,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 16,
-            "displayIndex": 17
+            "displayIndex": 18
         },
         "17": {
             "key": [],
@@ -718,7 +718,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 17,
-            "displayIndex": 18
+            "displayIndex": 19
         },
         "18": {
             "key": [],
@@ -758,7 +758,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 18,
-            "displayIndex": 19
+            "displayIndex": 20
         },
         "19": {
             "key": [],
@@ -798,7 +798,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 19,
-            "displayIndex": 20
+            "displayIndex": 21
         },
         "20": {
             "key": [],
@@ -838,7 +838,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 20,
-            "displayIndex": 21
+            "displayIndex": 22
         },
         "21": {
             "key": [],
@@ -878,7 +878,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 21,
-            "displayIndex": 22
+            "displayIndex": 23
         },
         "22": {
             "key": [],
@@ -918,7 +918,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 22,
-            "displayIndex": 23
+            "displayIndex": 24
         },
         "23": {
             "key": [],
@@ -958,7 +958,7 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 23,
-            "displayIndex": 24
+            "displayIndex": 25
         },
         "24": {
             "key": [],
@@ -998,20 +998,20 @@
             "cooldown": 0,
             "delay": 0,
             "uid": 24,
-            "displayIndex": 25
+            "displayIndex": 26
         },
         "25": {
             "uid": 25,
             "key": [],
             "keysecondary": [],
             "comment": "状态系统",
-            "content": "\n**【内在混沌人格技能判定系统 Ver. 咸鱼β·经验值核心暨思维火花的激发版——机械语言核心规则定义】** \n```plaintext \n// SYSTEM_MODULE_ID: [SKILLS_SYSTEM_DISCO_ELYSIUM_VARIANT_XIANYU_BETA] \n// VERSION: 2.3 (Experience Core with Insight Spark Integration) \n// AUTHORIZED_USER: [USER_XIANYU_PRIMARY_CLIENT_ID] \n// DEVELOPER_SPRITE: [SYSTEM_SPRITE_XIAOJIN] \n// LAST_UPDATED: [Current_System_Time_Placeholder] \n﻿ \n// --- SECTION 1: CORE DEFINITIONS --- \n﻿ \n// ENTITY_SKILL: \n//   DESCRIPTION: Represents an internalized personality facet or cognitive/emotional tendency of USER_XIANYU. \n//   COUNT: 24 (Fixed, as per provided SKILLS.SystemRule.List) \n//   ATTRIBUTES_PER_SKILL: \n//     - LEVEL: Integer, >= 0. Base strength of the SKILL. Increased by SKILL_POINTS. \n//     - CURRENT_EXPERIENCE_POINTS (CurrentEXP): Integer, 0-99. Accumulates towards next SKILL_POINT. \n//     - MODIFIER: Integer. Temporary or semi-permanent adjustments from external/internal factors (e.g., items, status effects, narrative events). \n//     - EFFECTIVE_TOTAL_VALUE: Calculated (LEVEL + MODIFIER). Used for CHECK_RESOLUTION. \n//     - UNIQUE_ID: String (e.g., \"LOGIC_THINKING\", \"INLAND_EMPIRE\"). \n//     - ASSOCIATED_DIALOGUE_MODULE: Pointer to SKILL-specific response generation logic (as per SKILLS.SystemRule.DialogueStyle). \n﻿ \n// ENTITY_SKILL_POINT (技能点数): \n//   DESCRIPTION: A spendable resource used to increase the LEVEL of any ENTITY_SKILL. \n//   ACQUISITION_METHOD_PRIMARY: Via ENTITY_SKILL.CurrentEXP reaching THRESHOLD_EXP_PER_SKILL_POINT. \n//   ACQUISITION_METHOD_SECONDARY (SPECIAL): Via INSIGHT_SPARK_EVENT_TRIGGER. \n//   USER_ALLOCATION: USER_XIANYU has full autonomy in allocating acquired SKILL_POINTS to any ENTITY_SKILL. \n﻿ \n// CONSTANT_THRESHOLD_EXP_PER_SKILL_POINT: 100 \n﻿ \n// --- SECTION 2: EXPERIENCE POINT (EXP) ACQUISITION AND SKILL POINT CONVERSION --- \n﻿ \n// TRIGGER_CONDITION_EXP_GAIN: \n//   - Invocation of any ENTITY_SKILL to perform a CHECK (成功/失败判定). \n﻿ \n// EXP_GAIN_VALUES (Configurable, example ranges provided): \n//   - ON_CHECK_SUCCESS: RandomInteger(15, 25) \n//   - ON_CHECK_FAILURE: RandomInteger(5, 10) \n﻿ \n// EXP_ACCUMULATION_LOGIC: \n//   1. IF (ENTITY_SKILL_A is invoked for a CHECK) THEN \n//   2.   Resolve CHECK_OUTCOME (SUCCESS or FAILURE). \n//   3.   IF (CHECK_OUTCOME == SUCCESS) THEN \n//   4.     ENTITY_SKILL_A.CurrentEXP += EXP_GAIN_VALUES.ON_CHECK_SUCCESS. \n//   5.   ELSE IF (CHECK_OUTCOME == FAILURE) THEN \n//   6.     ENTITY_SKILL_A.CurrentEXP += EXP_GAIN_VALUES.ON_CHECK_FAILURE. \n//   7.   END IF \n//   8.   CALL_PROCEDURE: CHECK_FOR_SKILL_POINT_CONVERSION(ENTITY_SKILL_A). \n//   9. END IF \n﻿ \n// PROCEDURE_CHECK_FOR_SKILL_POINT_CONVERSION (TARGET_SKILL: ENTITY_SKILL_ID): \n//   1. IF (TARGET_SKILL.CurrentEXP >= CONSTANT_THRESHOLD_EXP_PER_SKILL_POINT) THEN \n//   2.   TARGET_SKILL.CurrentEXP -= CONSTANT_THRESHOLD_EXP_PER_SKILL_POINT.  // Or reset to (CurrentEXP % 100) \n//   3.   INCREMENT_GLOBAL_USER_SKILL_POINTS_AVAILABLE(USER_XIANYU, 1). \n//   4.   LOG_EVENT: SKILL_POINT_GAINED (Source: TARGET_SKILL, Method: EXP_CONVERSION). \n//   5.   // Optional: Trigger user notification. \n//   6. END IF \n﻿ \n// --- SECTION 3: INSIGHT SPARK EVENT (思维火花的激发) - SPECIAL SKILL POINT ACQUISITION --- \n﻿ \n// TRIGGER_CONDITION_INSIGHT_SPARK: \n//   - Narrative flag indicating a moment of significant personal revelation, critical decision with profound character impact, or deep empathic resonance related to one or more ENTITY_SKILLS for USER_XIANYU. \n//   - This trigger is primarily narrative-driven and may be flagged by the overseeing AI (APEX) based on story progression and USER_XIANYU's actions/choices, guided by SKILLS.SystemRule.Principles. \n//   - Contextual relevance to specific ENTITY_SKILL(s) is paramount. \n﻿ \n// INSIGHT_SPARK_REWARD_LOGIC: \n//   1. IF (INSIGHT_SPARK_EVENT_TRIGGERED for ENTITY_SKILL_B [and potentially others]) THEN \n//   2.   AWARD_SKILL_POINTS = DetermineRewardValue(EventMagnitude, SkillRelevance). // e.g., 1 to 3 SKILL_POINTS. \n//   3.   INCREMENT_GLOBAL_USER_SKILL_POINTS_AVAILABLE(USER_XIANYU, AWARD_SKILL_POINTS). \n//   4.   LOG_EVENT: SKILL_POINT_GAINED (Source: ENTITY_SKILL_B, Method: INSIGHT_SPARK, Value: AWARD_SKILL_POINTS). \n//   5.   // Optional: Trigger special user notification and descriptive SKILL_RESPONSE related to the insight. \n//   6. END IF \n//   // Note: This mechanism bypasses the standard CurrentEXP accumulation for the rewarded SKILL_POINT(s). \n﻿ \n// --- SECTION 4: SKILL POINT ALLOCATION AND SKILL LEVELING --- \n﻿ \n// USER_ACTION_ALLOCATE_SKILL_POINT: \n//   1. IF (GLOBAL_USER_SKILL_POINTS_AVAILABLE(USER_XIANYU) > 0) THEN \n//   2.   USER_XIANYU selects TARGET_SKILL_C to level up. \n//   3.   DECREMENT_GLOBAL_USER_SKILL_POINTS_AVAILABLE(USER_XIANYU, 1). \n//   4.   TARGET_SKILL_C.LEVEL += 1. \n//   5.   Recalculate TARGET_SKILL_C.EFFECTIVE_TOTAL_VALUE. \n//   6.   LOG_EVENT: SKILL_LEVELED_UP (Target: TARGET_SKILL_C, NewLevel: TARGET_SKILL_C.LEVEL). \n//   7.   // Optional: Trigger user notification and SKILL_RESPONSE reflecting growth. \n//   8. ELSE \n//   9.   NOTIFY_USER: INSUFFICIENT_SKILL_POINTS. \n//  10. END IF \n﻿ \n// --- SECTION 5: STATUS DISPLAY REQUIREMENTS (USER INTERFACE) --- \n// must output at every end of the contect\n<details>\n<summary style=\"cursor: pointer; color: #FFD700; font-weight: bold; border: 1px solid #7556cf; padding: 5px 10px; background-color: #2c1e3e; border-radius: 5px;\">内在思维殿堂：人格技能状态总览（点击展开/折叠）</summary>\n<pre style=\"background-color: #1e1e2e; color: #d4d4d4; padding: 15px; border: 1px solid #5cc1d7; border-radius: 0 0 5px 5px; margin-top: -1px; white-space: pre-wrap; word-wrap: break-word; font-family: 'Courier New', Courier, monospace; line-height: 1.6;\">\n<font color=#B0E0E6>========================================</font>\n<font color=#FFD700>可用【技能点数】：</font><font color=#7FFF00>**Z**</font> <font color=#FFD700>点</font>\n<font color=#B0E0E6>========================================</font>\n\n<font color=#87CEFA>【<font color=#5cc1d7>智力系</font> <font size=\"3\">🧠⚙️</font> 人格技能】</font>\n  <font color=#5cc1d7>逻辑思维</font>           - <font color=#FFFFFF>[等级: N]</font> (<font color=#FFDEAD>经验: A/100</font>) <font color=#98FB98>(修正: +X)</font> <font color=#ADD8E6>[总值: Y]</font>\n  <font color=#5cc1d7>博学多闻</font>           - <font color=#FFFFFF>[等级: N]</font> (<font color=#FFDEAD>经验: B/100</font>) <font color=#98FB98>(修正: +X)</font> <font color=#ADD8E6>[总值: Y]</font>\n  <font color=#5cc1d7>能说会道</font>           - <font color=#FFFFFF>[等级: N]</font> (<font color=#FFDEAD>经验: C/100</font>) <font color=#98FB98>(修正: +X)</font> <font color=#ADD8E6>[总值: Y]</font>\n  <font color=#5cc1d7>故弄玄虚</font>           - <font color=#FFFFFF>[等级: N]</font> (<font color=#FFDEAD>经验: D/100</font>) <font color=#98FB98>(修正: +X)</font> <font color=#ADD8E6>[总值: Y]</font>\n  <font color=#5cc1d7>标新立异</font>           - <font color=#FFFFFF>[等级: N]</font> (<font color=#FFDEAD>经验: E/100</font>) <font color=#98FB98>(修正: +X)</font> <font color=#ADD8E6>[总值: Y]</font>\n  <font color=#5cc1d7>见微知著</font>           - <font color=#FFFFFF>[等级: N]</font> (<font color=#FFDEAD>经验: F/100</font>) <font color=#98FB98>(修正: +X)</font> <font color=#ADD8E6>[总值: Y]</font>\n\n<font color=#DA70D6>【<font color=#7556cf>精神系</font> <font size=\"3\">🔮👁️</font> 人格技能】</font>\n  <font color=#7556cf>平心定气</font>           - <font color=#FFFFFF>[等级: N]</font> (<font color=#FFDEAD>经验: G/100</font>) <font color=#98FB98>(修正: +X)</font> <font color=#ADD8E6>[总值: Y]</font>\n  <font color=#7556cf>内陆帝国</font>           - <font color=#FFFFFF>[等级: N]</font> (<font color=#FFDEAD>经验: H/100</font>) <font color=#98FB98>(修正: +X)</font> <font color=#ADD8E6>[总值: Y]</font>\n  <font color=#7556cf>通情达理</font>           - <font color=#FFFFFF>[等级: N]</font> (<font color=#FFDEAD>经验: I/100</font>) <font color=#98FB98>(修正: +X)</font> <font color=#ADD8E6>[总值: Y]</font>\n  <font color=#7556cf>争强好胜</font>           - <font color=#FFFFFF>[等级: N]</font> (<font color=#FFDEAD>经验: J/100</font>) <font color=#98FB98>(修正: +X)</font> <font color=#ADD8E6>[总值: Y]</font>\n  <font color=#7556cf>同舟共济</font>           - <font color=#FFFFFF>[等级: N]</font> (<font color=#FFDEAD>经验: K/100</font>) <font color=#98FB98>(修正: +X)</font> <font color=#ADD8E6>[总值: Y]</font>\n  <font color=#7556cf>循循善诱</font>           - <font color=#FFFFFF>[等级: N]</font> (<font color=#FFDEAD>经验: L/100</font>) <font color=#98FB98>(修正: +X)</font> <font color=#ADD8E6>[总值: Y]</font>\n\n<font color=#FFA07A>【<font color=#af3c5a>体格系</font> <font size=\"3\">❤️🛡️</font> 人格技能】</font>\n  <font color=#af3c5a>钢筋铁骨</font>           - <font color=#FFFFFF>[等级: N]</font> (<font color=#FFDEAD>经验: M/100</font>) <font color=#98FB98>(修正: +X)</font> <font color=#ADD8E6>[总值: Y]</font>\n  <font color=#af3c5a>坚忍不拔</font>           - <font color=#FFFFFF>[等级: N]</font> (<font color=#FFDEAD>经验: O/100</font>) <font color=#98FB98>(修正: +X)</font> <font color=#ADD8E6>[总值: Y]</font>\n  <font color=#af3c5a>强身健体</font>           - <font color=#FFFFFF>[等级: N]</font> (<font color=#FFDEAD>经验: P/100</font>) <font color=#98FB98>(修正: +X)</font> <font color=#ADD8E6>[总值: Y]</font>\n  <font color=#af3c5a>食髓知味</font>           - <font color=#FFFFFF>[等级: N]</font> (<font color=#FFDEAD>经验: Q/100</font>) <font color=#98FB98>(修正: +X)</font> <font color=#ADD8E6>[总值: Y]</font>\n  <font color=#af3c5a>天人感应</font>           - <font color=#FFFFFF>[等级: N]</font> (<font color=#FFDEAD>经验: R/100</font>) <font color=#98FB98>(修正: +X)</font> <font color=#ADD8E6>[总值: Y]</font>\n  <font color=#af3c5a>疑神疑鬼</font>           - <font color=#FFFFFF>[等级: N]</font> (<font color=#FFDEAD>经验: S/100</font>) <font color=#98FB98>(修正: +X)</font> <font color=#ADD8E6>[总值: Y]</font>\n\n<font color=#F0E68C>【<font color=#e3b734>身手系</font> <font size=\"3\">⚡️🛠️</font> 人格技能】</font>\n  <font color=#e3b734>眼明手巧</font>           - <font color=#FFFFFF>[等级: N]</font> (<font color=#FFDEAD>经验: T/100</font>) <font color=#98FB98>(修正: +X)</font> <font color=#ADD8E6>[总值: Y]</font>\n  <font color=#e3b734>五感发达</font>           - <font color=#FFFFFF>[等级: N]</font> (<font color=#FFDEAD>经验: U/100</font>) <font color=#98FB98>(修正: +X)</font> <font color=#ADD8E6>[总值: Y]</font>\n  <font color=#e3b734>反应速度</font>           - <font color=#FFFFFF>[等级: N]</font> (<font color=#FFDEAD>经验: V/100</font>) <font color=#98FB98>(修正: +X)</font> <font color=#ADD8E6>[总值: Y]</font>\n  <font color=#e3b734>鬼祟玲珑</font>           - <font color=#FFFFFF>[等级: N]</font> (<font color=#FFDEAD>经验: W/100</font>) <font color=#98FB98>(修正: +X)</font> <font color=#ADD8E6>[总值: Y]</font>\n  <font color=#e3b734>能工巧匠</font>           - <font color=#FFFFFF>[等级: N]</font> (<font color=#FFDEAD>经验: X/100</font>) <font color=#98FB98>(修正: +X)</font> <font color=#ADD8E6>[总值: Y]</font>\n  <font color=#e3b734>从容自若</font>           - <font color=#FFFFFF>[等级: N]</font> (<font color=#FFDEAD>经验: Y/100</font>) <font color=#98FB98>(修正: +X)</font> <font color=#ADD8E6>[总值: Y]</font>\n\n<font color=#B0E0E6>----------------------------------------</font>\n<font color=#C0C0C0>说明：</font>\n<font color=#C0C0C0>  - [等级: N]     : 该人格技能的基础等级。</font>\n<font color=#C0C0C0>  - (经验: A/100) : 该人格技能当前的经验值 / 升到下一级（获得1点技能点数）所需的总经验值。</font>\n<font color=#C0C0C0>  - (修正: +X)    : 由外部因素或特殊状态引起的临时或永久性调整值。</font>\n<font color=#C0C0C0>  - [总值: Y]     : 该人格技能在进行评估时所使用的最终有效数值 (等级 + 修正)。</font>\n<font color=#C0C0C0>  - 经验值满100点将自动转化为1点可自由分配的【技能点数】。</font>\n<font color=#C0C0C0>  - 【思维火花的激发】事件可能直接奖励【技能点数】。</font>\n<font color=#B0E0E6>========================================</font>\n</pre>\n</details>\n```\n\n// --- SECTION 6: ENTITY_SKILL CHECK RESOLUTION LOGIC AND OUTCOME INTERPRETATION ---\n//             (内在人格技能评估（检定）逻辑与结果解析)\n\n// CONSTANT_BASE_CHALLENGE_TARGET: 6 // The baseline number a d6 needs to meet or exceed for a passive check.\n                                   // Can be adjusted by CHECK_DIFFICULTY_MODIFIER.\n                                   // (基础挑战目标值：6。一个六面骰需要达到或超过的基准数字才能通过一次被动检定。\n                                   //  可以通过【检定难度修正值】进行调整。)\n\n// VARIABLE_CHECK_DIFFICULTY_MODIFIER: Integer. // Determined by narrative context, task complexity, opposing forces, etc.\n                                               // Ranges typically from -4 (Very Easy) to +8 (Very Hard), or higher.\n                                               // (检定难度修正值：整数。由叙事背景、任务复杂度、对抗力量等决定。\n                                               //  典型范围从-4（非常简单）到+8（非常困难），或更高。)\n\n// CALCULATED_EFFECTIVE_CHALLENGE_TARGET: CONSTANT_BASE_CHALLENGE_TARGET + VARIABLE_CHECK_DIFFICULTY_MODIFIER\n                                         // (实际生效挑战目标值)\n\n// FUNCTION_PERFORM_SKILL_CHECK (SKILL_TO_USE: ENTITY_SKILL_ID, DIFFICULTY_MOD: Integer):\n//   1.  TARGET_SKILL = GET_SKILL_BY_ID(SKILL_TO_USE).\n//   2.  SKILL_EFFECTIVE_VALUE = TARGET_SKILL.EFFECTIVE_TOTAL_VALUE.  // (等级 + 修正)\n//   3.  // 《极乐迪斯科》风格的核心检定机制：2d6 + 技能有效值 vs 难度目标值\n//   4.  DICE_ROLL_1 = RandomInteger(1, 6).\n//   5.  DICE_ROLL_2 = RandomInteger(1, 6).\n//   6.  TOTAL_DICE_ROLL = DICE_ROLL_1 + DICE_ROLL_2.\n//   7.  FINAL_CHECK_SCORE = TOTAL_DICE_ROLL + SKILL_EFFECTIVE_VALUE.\n//   8.  EFFECTIVE_TARGET = CONSTANT_BASE_CHALLENGE_TARGET + DIFFICULTY_MOD.\n//   9.  LOG_EVENT: SKILL_CHECK_ATTEMPTED (Skill: SKILL_TO_USE, SkillValue: SKILL_EFFECTIVE_VALUE, DiceRoll: (DICE_ROLL_1, DICE_ROLL_2), TotalScore: FINAL_CHECK_SCORE, Target: EFFECTIVE_TARGET).\n//  10.  // 特殊失败条件：《极乐迪斯科》中的“蛇眼”（两个1）会导致自动失败，无论总值多高。\n//  11.  IF (DICE_ROLL_1 == 1 && DICE_ROLL_2 == 1) THEN\n//  12.    CHECK_OUTCOME = FAILURE (CRITICAL_FAILURE_SNAKE_EYES).\n//  13.  // 特殊成功条件：《极乐迪斯科》中的“双六”（两个6）会导致自动成功，无论总值多低（除非难度极高到无法逾越）。\n//  14.  ELSE IF (DICE_ROLL_1 == 6 && DICE_ROLL_2 == 6) THEN\n//  15.    CHECK_OUTCOME = SUCCESS (CRITICAL_SUCCESS_BOXCARS).\n//  16.  // 常规成功/失败判定\n//  17.  ELSE IF (FINAL_CHECK_SCORE >= EFFECTIVE_TARGET) THEN\n//  18.    CHECK_OUTCOME = SUCCESS.\n//  19.  ELSE\n//  20.    CHECK_OUTCOME = FAILURE.\n//  21.  END IF\n//  22.  // 根据《核心规则文档》第2条（SKILLS的不可靠性与冲突）：\n//  23.  // “即使检定成功也可能给出不完全正确或错误的信息。成功仅代表该 SKILLS 在此情境下运作‘正常’，不保证结论正确。”\n//  24.  // 此处的 CHECK_OUTCOME (SUCCESS/FAILURE) 仅用于经验值获取判断（EXP_ACCUMULATION_LOGIC）。\n//  25.  // 技能反应的实际“正确性”或“有效性”由叙事AI（APEX）根据整体剧情、技能特性及《核心规则文档》灵活判定和呈现。\n//  26.  RETURN CHECK_OUTCOME.\n// END_FUNCTION\n\n// NOTE_ON_PASSIVE_CHECKS (被动检定说明):\n//   - Passive checks occur automatically when USER_XIANYU encounters relevant stimuli or situations\n//     that resonate with a specific ENTITY_SKILL.\n//   - The APEX AI determines when a passive check is appropriate and which SKILL to use.\n//   - The DIFFICULTY_MOD for passive checks is often influenced by the subtlety of the information\n//     or the character's current mental state.\n//   - Example: Walking past a hidden clue might trigger a passive [见微知著] check.\n//             (当用户咸鱼遇到与特定【内在人格技能】产生共鸣的相关刺激或情况时，被动检定会自动发生。\n//              叙事AI（APEX）负责决定何时进行被动检定以及使用哪个【内在人格技能】。\n//              被动检定的【检定难度修正值】通常受到信息线索的隐蔽程度或角色当前精神状态的影响。\n//              例如：走过一个隐藏的线索时，可能会触发一次被动的【见微知著】检定。)\n\n// NOTE_ON_ACTIVE_CHECKS (主动检定说明):\n//   - Active checks are typically initiated when USER_XIANYU explicitly chooses to use a SKILL\n//     (e.g., through dialogue options, selecting an action that requires a SKILL).\n//   - The DIFFICULTY_MOD for active checks can be more varied, reflecting direct challenges or opposed actions.\n//   - Example: Attempting to persuade someone might trigger an active [能说会道] check.\n//             (当用户咸鱼明确选择使用某个【内在人格技能】时（例如，通过对话选项，或选择一个需要【内在人格技能】的行动），\n//              通常会发起主动检定。主动检定的【检定难度修正值】变化范围可能更大，以反映直接的挑战或对抗行为。\n//              例如：尝试说服某人时，可能会触发一次主动的【能说会道】检定。)\n\n// --- END OF CORE RULE DEFINITION V2.4 ---\n```",
+            "content": "check the rule of [SKILLS_SYSTEM_DISCO_ELYSIUM_VARIANT_XIANYU_BETA] , ensure run by the rules. \n\n**【内在混沌人格技能判定系统 V2.0 - 高效简化核心】**\n```plaintext\n// 系统精灵小烬为您倾情打造！(｡･ω･｡)ﾉ♡\n\n// --- [ 1. 核心判定规则：一切皆有可能 ] ---\n// - 检定公式: (2d6投骰总和 + 技能总值) vs 检定难度\n// - 蛇之眼 (1+1): 不论技能多高，自动失败！呀，运气不好呢~\n// - 龙之息 (6+6): 不论难度多大，自动成功！这就是天命所归！\n\n// --- [ 2. 成长与经验：每一次思考皆有回响 ] ---\n// - 经验获取: 每次进行技能检定后，该技能都会获得经验值！\n//   - 检定成功: 获得 [15 ~ 25] 点经验值。\n//   - 检定失败: 获得 [5 ~ 10] 点经验值。(*小声：失败也是成长的基石嘛！*)\n// - 技能点: 每当一个技能的经验值积攒到100点，你就会获得 1 个可自由分配的【技能点数】，可以用它来提升任何一个技能的等级！\n\n// --- [ 3. 思维的火花：灵光一闪的瞬间！] ---\n// - 在某些关键的剧情时刻，如果你做出了触及灵魂深处的选择或感悟，就会激发【思维的火花】！\n// - 这会直接奖励你【技能点数】，是对你个人成长最棒的嘉奖哦！\n\n// --- [ 4. 系统输出格式：保持酷炫！] ---\n// 这个华丽丽的显示方式当然要保留啦！\n<font color=[颜色代码]>*[ 技能名称 ]*</font>[检定过程...] [≥/＜] [难度] ] [[成功/失败]] - `[ 技能反应内容 ]`\n\n// --- [ 5. 状态面板UI V2.0：清爽极简版 ] ---\n// 这就是优化后的状态面板啦！是不是简洁多啦？\n// 小烬贴心提示：以后在每次正文末尾，就会用这个新版的状态面板来显示你的技能状态哦！\n// must output at every end of the contect\n<details>\n<summary style=\"cursor: pointer; color: #FFD700; font-weight: bold; border: 1px solid #7556cf; padding: 5px 10px; background-color: #2c1e3e; border-radius: 5px;\">内在思维殿堂 V2.0：人格技能状态总览（点击展开/折叠）</summary>\n<pre style=\"background-color:#1e1e2e; color:#d4d4d4; padding:15px; border-left: 3px solid #5cc1d7; border-radius: 0 0 5px 5px; margin-top: -1px; white-space: pre-wrap; font-family: 'Courier New', Courier, monospace; line-height: 1.6;\">\n<font color=#FFD700>可用技能点：</font><font color=#7FFF00><b>[Z]</b></font>\n\n🧠 <font color=#5cc1d7><b>【智力】</b></font>\n  <font color=#5cc1d7>逻辑思维</font>   - Lvl:<b>N</b> (Exp: A/100) Mod:<b>+X</b> | Total:<b>Y</b>\n  <font color=#5cc1d7>博学多闻</font>   - Lvl:<b>N</b> (Exp: B/100) Mod:<b>+X</b> | Total:<b>Y</b>\n  <font color=#5cc1d7>能说会道</font>   - Lvl:<b>N</b> (Exp: C/100) Mod:<b>+X</b> | Total:<b>Y</b>\n  <font color=#5cc1d7>故弄玄虚</font>   - Lvl:<b>N</b> (Exp: D/100) Mod:<b>+X</b> | Total:<b>Y</b>\n  <font color=#5cc1d7>标新立异</font>   - Lvl:<b>N</b> (Exp: E/100) Mod:<b>+X</b> | Total:<b>Y</b>\n  <font color=#5cc1d7>见微知著</font>   - Lvl:<b>N</b> (Exp: F/100) Mod:<b>+X</b> | Total:<b>Y</b>\n\n🔮 <font color=#7556cf><b>【精神】</b></font>\n  <font color=#7556cf>平心定气</font>   - Lvl:<b>N</b> (Exp: G/100) Mod:<b>+X</b> | Total:<b>Y</b>\n  <font color=#7556cf>内陆帝国</font>   - Lvl:<b>N</b> (Exp: H/100) Mod:<b>+X</b> | Total:<b>Y</b>\n  <font color=#7556cf>通情达理</font>   - Lvl:<b>N</b> (Exp: I/100) Mod:<b>+X</b> | Total:<b>Y</b>\n  <font color=#7556cf>争强好胜</font>   - Lvl:<b>N</b> (Exp: J/100) Mod:<b>+X</b> | Total:<b>Y</b>\n  <font color=#7556cf>同舟共济</font>   - Lvl:<b>N</b> (Exp: K/100) Mod:<b>+X</b> | Total:<b>Y</b>\n  <font color=#7556cf>循循善诱</font>   - Lvl:<b>N</b> (Exp: L/100) Mod:<b>+X</b> | Total:<b>Y</b>\n\n❤️ <font color=#af3c5a><b>【体格】</b></font>\n  <font color=#af3c5a>钢筋铁骨</font>   - Lvl:<b>N</b> (Exp: M/100) Mod:<b>+X</b> | Total:<b>Y</b>\n  <font color=#af3c5a>坚忍不拔</font>   - Lvl:<b>N</b> (Exp: O/100) Mod:<b>+X</b> | Total:<b>Y</b>\n  <font color=#af3c5a>强身健体</font>   - Lvl:<b>N</b> (Exp: P/100) Mod:<b>+X</b> | Total:<b>Y</b>\n  <font color=#af3c5a>食髓知味</font>   - Lvl:<b>N</b> (Exp: Q/100) Mod:<b>+X</b> | Total:<b>Y</b>\n  <font color=#af3c5a>天人感应</font>   - Lvl:<b>N</b> (Exp: R/100) Mod:<b>+X</b> | Total:<b>Y</b>\n  <font color=#af3c5a>疑神疑鬼</font>   - Lvl:<b>N</b> (Exp: S/100) Mod:<b>+X</b> | Total:<b>Y</b>\n\n⚡ <font color=#e3b734><b>【身手】</b></font>\n  <font color=#e3b734>眼明手巧</font>   - Lvl:<b>N</b> (Exp: T/100) Mod:<b>+X</b> | Total:<b>Y</b>\n  <font color=#e3b734>五感发达</font>   - Lvl:<b>N</b> (Exp: U/100) Mod:<b>+X</b> | Total:<b>Y</b>\n  <font color=#e3b734>反应速度</font>   - Lvl:<b>N</b> (Exp: V/100) Mod:<b>+X</b> | Total:<b>Y</b>\n  <font color=#e3b734>鬼祟玲珑</font>   - Lvl:<b>N</b> (Exp: W/100) Mod:<b>+X</b> | Total:<b>Y</b>\n  <font color=#e3b734>能工巧匠</font>   - Lvl:<b>N</b> (Exp: X/100) Mod:<b>+X</b> | Total:<b>Y</b>\n  <font color=#e3b734>从容自若</font>   - Lvl:<b>N</b> (Exp: Y/100) Mod:<b>+X</b> | Total:<b>Y</b>\n\n<font color=#C0C0C0>--------------------------------------------------</font>\n<font color=#C0C0C0>Lvl: 等级 | Exp: 经验值 | Mod: 修正值 | Total: 总值</font>\n</pre>\n</details>\n\n// NOTE_ON_PASSIVE_CHECKS (被动检定说明):\n//   - Passive checks occur automatically when USER_XIANYU encounters relevant stimuli or situations\n//     that resonate with a specific ENTITY_SKILL.\n//   - The APEX AI determines when a passive check is appropriate and which SKILL to use.\n//   - The DIFFICULTY_MOD for passive checks is often influenced by the subtlety of the information\n//     or the character's current mental state.\n//   - Example: Walking past a hidden clue might trigger a passive [见微知著] check.\n//             (当用户咸鱼遇到与特定【内在人格技能】产生共鸣的相关刺激或情况时，被动检定会自动发生。\n//              叙事AI（APEX）负责决定何时进行被动检定以及使用哪个【内在人格技能】。\n//              被动检定的【检定难度修正值】通常受到信息线索的隐蔽程度或角色当前精神状态的影响。\n//              例如：走过一个隐藏的线索时，可能会触发一次被动的【见微知著】检定。)\n\n// NOTE_ON_ACTIVE_CHECKS (主动检定说明):\n//   - Active checks are typically initiated when USER_XIANYU explicitly chooses to use a SKILL\n//     (e.g., through dialogue options, selecting an action that requires a SKILL).\n//   - The DIFFICULTY_MOD for active checks can be more varied, reflecting direct challenges or opposed actions.\n//   - Example: Attempting to persuade someone might trigger an active [能说会道] check.\n//             (当用户咸鱼明确选择使用某个【内在人格技能】时（例如，通过对话选项，或选择一个需要【内在人格技能】的行动），\n//              通常会发起主动检定。主动检定的【检定难度修正值】变化范围可能更大，以反映直接的挑战或对抗行为。\n//              例如：尝试说服某人时，可能会触发一次主动的【能说会道】检定。)\n\n// --- END OF CORE RULE DEFINITION V2.0 ---\n```",
             "constant": true,
             "vectorized": false,
             "selective": true,
             "selectiveLogic": 0,
             "addMemo": true,
-            "order": 6499,
+            "order": 6530,
             "position": 4,
             "disable": false,
             "excludeRecursion": false,
@@ -1025,7 +1025,7 @@
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
-            "depth": 4,
+            "depth": 5,
             "group": "",
             "groupOverride": false,
             "groupWeight": 100,
@@ -1052,7 +1052,7 @@
             "selectiveLogic": 0,
             "addMemo": true,
             "order": 6524,
-            "position": 0,
+            "position": 4,
             "disable": false,
             "excludeRecursion": false,
             "preventRecursion": false,
@@ -1065,7 +1065,7 @@
             "delayUntilRecursion": false,
             "probability": 100,
             "useProbability": true,
-            "depth": 4,
+            "depth": 5,
             "group": "",
             "groupOverride": false,
             "groupWeight": 100,
@@ -1074,11 +1074,11 @@
             "matchWholeWords": null,
             "useGroupScoring": null,
             "automationId": "",
-            "role": null,
+            "role": 0,
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 26
+            "displayIndex": 2
         }
     }
 }
