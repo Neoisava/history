@@ -3177,7 +3177,7 @@
         "tts": {
             "voiceMap": "",
             "ttsEnabled": false,
-            "currentProvider": "CosyVoice (Unofficial)",
+            "currentProvider": "VITS",
             "auto_generation": false,
             "ElevenLabs": {},
             "System": {
@@ -4279,7 +4279,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 3,
                 "userConfigured": true
             }
         },
@@ -7470,7 +7470,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "gemini-2.5-pro-preview-06-05",
+        "custom_model": "gemini-2.5-pro-preview-03-25",
         "custom_url": "https://www.chataiapi.com/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
