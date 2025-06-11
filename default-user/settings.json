@@ -6852,7 +6852,7 @@
                     },
                     {
                         "identifier": "f13388f6-345d-4891-8518-3ce94eed665e",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "76fcd970-8ea4-40b0-8336-9504054b10bc",
@@ -6860,7 +6860,7 @@
                     },
                     {
                         "identifier": "1d789341-ce56-4dee-bbf0-ff7fda7dbc7a",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "jailbreak",
@@ -7236,7 +7236,7 @@
                     },
                     {
                         "identifier": "ebf5f21d-9989-40d3-bd55-7e406c22e6c2",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "63b4e2b9-ce5c-4691-b1df-5fabcbff5547",
@@ -7372,7 +7372,7 @@
                     },
                     {
                         "identifier": "2d0b09ba-6120-4769-a49a-e27f4c99cb0e",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "83be0196-53ef-4b5c-897c-c4cf1d2ae433",
@@ -7437,7 +7437,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "claude-4-sonnet-20250514-thinking",
+        "custom_model": "gemini-2.5-pro-preview-06-05",
         "custom_url": "https://newapi.aicohere.org/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
