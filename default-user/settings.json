@@ -2591,6 +2591,23 @@
                 "maxDepth": null
             },
             {
+                "id": "a01dd048-6c4f-48a5-a74d-187780228dd6",
+                "scriptName": "image",
+                "findRegex": "/<image>[\\s\\S]*?</image>/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
                 "id": "65d16b93-25df-424a-acce-172691d3c814",
                 "scriptName": "前端兼容模式。去除所有<image>标签正则导入",
                 "findRegex": "<image>([\\s\\S]*)</image>",
@@ -4462,7 +4479,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 7,
+                "lastProcessedLength": 6,
                 "userConfigured": true
             }
         },
