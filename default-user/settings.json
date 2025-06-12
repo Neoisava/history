@@ -4435,7 +4435,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 31,
                 "userConfigured": true
             }
         },
@@ -4711,7 +4711,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": true,
+        "stream_openai": false,
         "openai_max_context": 1000000,
         "openai_max_tokens": 65500,
         "wrap_in_quotes": false,
