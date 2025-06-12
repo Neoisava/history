@@ -2595,13 +2595,13 @@
             {
                 "id": "a01dd048-6c4f-48a5-a74d-187780228dd6",
                 "scriptName": "image",
-                "findRegex": "/<image>[\\s\\S]*?</image>/gm",
+                "findRegex": "<image>.*?</image>",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": true,
+                "disabled": false,
                 "markdownOnly": false,
                 "promptOnly": true,
                 "runOnEdit": false,
