@@ -2585,7 +2585,7 @@
                     2
                 ],
                 "disabled": false,
-                "markdownOnly": false,
+                "markdownOnly": true,
                 "promptOnly": true,
                 "runOnEdit": true,
                 "substituteRegex": 0,
@@ -4481,7 +4481,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 3,
                 "userConfigured": true
             }
         },
