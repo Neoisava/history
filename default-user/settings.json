@@ -2578,7 +2578,7 @@
             {
                 "id": "23107647-eda2-4960-8322-4345fb54c9bf",
                 "scriptName": "昆仑图片",
-                "findRegex": "/<image>([\\s\\S]*?)</image>/g",
+                "findRegex": "/<image>([\\s\\S]*?)</image>/gm",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
@@ -2588,7 +2588,7 @@
                 "markdownOnly": false,
                 "promptOnly": true,
                 "runOnEdit": true,
-                "substituteRegex": false,
+                "substituteRegex": 0,
                 "minDepth": null,
                 "maxDepth": null
             },
@@ -2601,7 +2601,7 @@
                 "placement": [
                     2
                 ],
-                "disabled": false,
+                "disabled": true,
                 "markdownOnly": false,
                 "promptOnly": true,
                 "runOnEdit": false,
