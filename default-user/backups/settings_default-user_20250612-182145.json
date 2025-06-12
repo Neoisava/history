@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "true",
-        "NavOpened": "true",
+        "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -41,6 +41,8 @@
         "world_info": {
             "globalSelect": [
                 "__性爱世界书",
+                "--油猴世界书nai4(2)",
+                "-提示词大全",
                 "[Dreammini]预设世界书DLC1.6",
                 "【地图导航】",
                 "信息栏 aplon",
@@ -2405,7 +2407,9 @@
         "apiKey": "sk-qSRYdQUdlXFBdhnQzic3PocYZrFZJeEsWPYitnjUz8GourHp",
         "autoConnect": false,
         "notifyUpdates": false,
-        "disabledExtensions": [],
+        "disabledExtensions": [
+            "third-party/st-image-auto-generation"
+        ],
         "expressionOverrides": [],
         "memory": {
             "minLongMemory": 16,
@@ -2505,7 +2509,7 @@
                     "mode": "cc",
                     "exclude": [],
                     "api": "custom",
-                    "preset": "斯拉预设 4.022",
+                    "preset": "【Dreammini】1.14-ultra-0611",
                     "api-url": "https://api.skyi.cc/v1",
                     "model": "[正常]gemini-2.5-pro-preview-03-25",
                     "stop-strings": "[]",
@@ -2572,6 +2576,57 @@
                 "maxDepth": null
             },
             {
+                "id": "23107647-eda2-4960-8322-4345fb54c9bf",
+                "scriptName": "昆仑图片",
+                "findRegex": "/<image>([\\s\\S]*?)</image>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "a01dd048-6c4f-48a5-a74d-187780228dd6",
+                "scriptName": "image",
+                "findRegex": "<image>.*?<\\/image>",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "65d16b93-25df-424a-acce-172691d3c814",
+                "scriptName": "前端兼容模式。去除所有<image>标签正则导入",
+                "findRegex": "<image>([\\s\\S]*)</image>",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": true,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 0,
+                "maxDepth": null
+            },
+            {
                 "id": "699330b6-61fa-488b-96e7-c9e00a0eb553",
                 "scriptName": "[低饱和莫兰迪风格]脚本-导航模块",
                 "disabled": true,
@@ -2587,23 +2642,6 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": false
-            },
-            {
-                "id": "603909c4-e6e7-49fc-a7f8-f5dbb5db5fc2",
-                "scriptName": "昆仑图片",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<image>([\\s\\S]*?)</image>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
             },
             {
                 "id": "831e2743-fe02-4a94-ab38-97b224cd0d67",
@@ -4311,6 +4349,14 @@
                         "info": "",
                         "buttons": [],
                         "enabled": true
+                    },
+                    {
+                        "id": "65da73c4-67ed-4429-b9dd-3b8c6c00068e",
+                        "name": "酒馆前端兼容生图",
+                        "content": "import 'https://fastly.jsdelivr.net/gh/damoshen123/jiuguanzhushou/st.js'",
+                        "info": "\n会提取 消息内的<image></image> 并显示在消息条目的下方。使用油猴生图的前端兼容模式。可以生图。\n\n\n2.\n你可以自己 写前端。这里开放了生图端口。\n\n发送 generate_image_request  事件  生图\n\n\n接着使用 eventOn  监听事件  generate_image_response  事件   接受\n\n主要简单的通过 前端助手的事件来沟通\neventEmit 发送事件 \neventOn  监听事件 \n\n\n\n        const EventType = {\n            GENERATE_IMAGE_REQUEST: 'generate_image_request',\n            GENERATE_IMAGE_RESPONSE: 'generate_image_response'\n        };\n\n发送 generate_image_request  事件\n\n参数\n\n                const requestData = {\n                    id: currentRequestId,//自定义的id用于自己识别是否同一个请求\n                    prompt: prompt,//提示词\n                    width: width,//宽度\n                    height: height,//高度\n                    type: 1  // 1就是生图、2会获取缓存，如果存在的话，不存在也是生图\n                };\n\n接着使用 eventOn  监听事件  generate_image_response  事件\n\n如果id 相同 则就成功。\n\n返回的是 base64 数据 可以直接  src 使用。\n",
+                        "buttons": [],
+                        "enabled": true
                     }
                 ],
                 "characters_with_scripts": [
@@ -4435,7 +4481,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 18,
+                "lastProcessedLength": 44,
                 "userConfigured": true
             }
         },
@@ -4635,7 +4681,8 @@
         "Metamorphosis.png": [],
         "世界调制模式·重制版.png": [],
         "破碎摇篮-重制版-3.5-Sonnet.png": [],
-        "云天心NTRS版本.png": []
+        "云天心NTRS版本.png": [],
+        "天渺大陆.png": []
     },
     "nai_settings": {
         "temperature": 1.37,
@@ -4746,7 +4793,7 @@
                 "name": "🎃用户性别字数调整(必改)🎃",
                 "system_prompt": true,
                 "role": "system",
-                "content": "{{setvar::userConfirm::用户}}\n\n{{//注解:<user>身份，重要，建议选项\n\"用户操作NPC\":   将角色与用户抽离，扮演<user>抢话用\n\"用户\":扮演<user>反抢话用\n\"NPC\":<user>用于纯小说用\n\"上帝视角\":<user>不存在于故事用\n}}\n\n{{setvar::gender::女}}\n{{//注解:用户性别，仅影响色情强化}}\n{{setvar::sexs::使用日本男性向色情小说的风格，请勿参考耽美、女性向、欧美的色情小说}}\n{{//注解:色情语料选择}}\n\n{{setvar::min::1000token}}\n{{//注解:正文最小字数}}\n\n{{setvar::max::2500token}}\n{{//注解:正文最大字数}}\n\n{{setvar::smallcot::3个}}\n{{setvar::smallcotl::100}}\n{{//注解:文笔修正数量与使用token长度}}\n\n{{setvar::min2::1000token}}\n{{//注解:截断小故事最小字数}}\n\n{{setvar::max2::1500token}}\n{{//注解:截断小故事最大字数}}\n\n\n",
+                "content": "{{setvar::userConfirm::用户}}\n\n{{//注解:<user>身份，重要，建议选项\n\"用户操作NPC\":   将角色与用户抽离，扮演<user>抢话用\n\"用户\":扮演<user>反抢话用\n\"NPC\":<user>用于纯小说用\n\"上帝视角\":<user>不存在于故事用\n}}\n\n{{setvar::gender::男}}\n{{//注解:用户性别，仅影响色情强化}}\n{{setvar::sexs::使用日本男性向色情小说的风格，请勿参考耽美、女性向、欧美的色情小说}}\n{{//注解:色情语料选择}}\n\n{{setvar::min::1000token}}\n{{//注解:正文最小字数}}\n\n{{setvar::max::2500token}}\n{{//注解:正文最大字数}}\n\n{{setvar::smallcot::3个}}\n{{setvar::smallcotl::100}}\n{{//注解:文笔修正数量与使用token长度}}\n\n{{setvar::min2::1000token}}\n{{//注解:截断小故事最小字数}}\n\n{{setvar::max2::1500token}}\n{{//注解:截断小故事最大字数}}\n\n\n",
                 "identifier": "jailbreak",
                 "injection_position": 0,
                 "injection_depth": 4,
@@ -7102,7 +7149,7 @@
                     },
                     {
                         "identifier": "79d4e6ce-2c7b-4e4a-8e48-be51ccd96b37",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "8335c30d-24ee-4a98-a622-d158c1e9325a",
@@ -7150,7 +7197,7 @@
                     },
                     {
                         "identifier": "a6d6a373-4ee0-478c-a78f-204f22ee4ca7",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "fc9ca00a-f765-4be7-b22f-da5536e2fa04",
@@ -7198,7 +7245,7 @@
                     },
                     {
                         "identifier": "01a619c3-b95c-40df-bdde-67bc4e033b52",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "1f248fe9-e659-46ed-8bb1-39a9707d94b3",
@@ -7294,7 +7341,7 @@
                     },
                     {
                         "identifier": "d5965fbc-4258-4552-9912-06078d9e218c",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "e5d85924-82e1-4f26-bf1c-8f7dce07a687",
