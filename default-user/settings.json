@@ -41,13 +41,14 @@
         "world_info": {
             "globalSelect": [
                 "__性爱世界书",
+                "--油猴世界书nai4(2)",
+                "-提示词大全",
                 "[Dreammini]预设世界书DLC1.6",
                 "【地图导航】",
                 "信息栏 aplon",
                 "嚯嚯，还有这种可以看的吗？🤣",
                 "多维情感网络动态",
                 "极乐迪斯科 状态栏美化个人修改 (1)",
-                "油猴世界书nai4 (1)",
                 "献媚文风加强版",
                 "部位特写"
             ],
@@ -2598,7 +2599,7 @@
                 "placement": [
                     2
                 ],
-                "disabled": false,
+                "disabled": true,
                 "markdownOnly": true,
                 "promptOnly": true,
                 "runOnEdit": true,
@@ -4461,7 +4462,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 6,
+                "lastProcessedLength": 7,
                 "userConfigured": true
             }
         },
