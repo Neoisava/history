@@ -2407,7 +2407,9 @@
         "apiKey": "sk-qSRYdQUdlXFBdhnQzic3PocYZrFZJeEsWPYitnjUz8GourHp",
         "autoConnect": false,
         "notifyUpdates": false,
-        "disabledExtensions": [],
+        "disabledExtensions": [
+            "third-party/st-image-auto-generation"
+        ],
         "expressionOverrides": [],
         "memory": {
             "minLongMemory": 16,
@@ -4479,7 +4481,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 6,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
