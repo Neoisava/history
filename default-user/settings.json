@@ -47,6 +47,7 @@
                 "嚯嚯，还有这种可以看的吗？🤣",
                 "多维情感网络动态",
                 "极乐迪斯科 状态栏美化个人修改 (1)",
+                "油猴世界书nai4 (1)",
                 "献媚文风加强版",
                 "部位特写"
             ],
@@ -2572,6 +2573,40 @@
                 "maxDepth": null
             },
             {
+                "id": "23107647-eda2-4960-8322-4345fb54c9bf",
+                "scriptName": "昆仑图片",
+                "findRegex": "/<image>([\\s\\S]*?)</image>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": false,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "65d16b93-25df-424a-acce-172691d3c814",
+                "scriptName": "前端兼容模式。去除所有<image>标签正则导入",
+                "findRegex": "<image>([\\s\\S]*)</image>",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 0,
+                "maxDepth": null
+            },
+            {
                 "id": "699330b6-61fa-488b-96e7-c9e00a0eb553",
                 "scriptName": "[低饱和莫兰迪风格]脚本-导航模块",
                 "disabled": true,
@@ -2995,23 +3030,6 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": true
-            },
-            {
-                "id": "65d16b93-25df-424a-acce-172691d3c814",
-                "scriptName": "前端兼容模式。去除所有<image>标签正则导入",
-                "findRegex": "<image>([\\s\\S]*)</image>",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": true,
-                "runOnEdit": true,
-                "substituteRegex": 0,
-                "minDepth": 0,
-                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
