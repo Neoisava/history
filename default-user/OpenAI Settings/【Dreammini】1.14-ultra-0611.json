@@ -16,8 +16,8 @@
     "perplexity_model": "llama-3.1-70b-instruct",
     "groq_model": "llama-3.1-70b-versatile",
     "zerooneai_model": "yi-large",
-    "custom_model": "gemini-2.5-pro-preview-03-25",
-    "custom_url": "https://www.chataiapi.com/v1",
+    "custom_model": "[正常]gemini-2.5-pro-preview-03-25",
+    "custom_url": "https://api.skyi.cc/v1",
     "custom_include_body": "",
     "custom_exclude_body": "",
     "custom_include_headers": "",
@@ -82,7 +82,7 @@
             "name": "🎃用户性别字数调整(必改)🎃",
             "system_prompt": true,
             "role": "system",
-            "content": "{{setvar::userConfirm::用户}}\n\n{{//注解:<user>身份，重要，建议选项\n\"用户操作NPC\":   将角色与用户抽离，扮演<user>抢话用\n\"用户\":扮演<user>反抢话用\n\"NPC\":<user>用于纯小说用\n\"上帝视角\":<user>不存在于故事用\n}}\n\n{{setvar::gender::男}}\n{{//注解:用户性别，仅影响色情强化}}\n{{setvar::sexs::使用日本男性向色情小说的风格，请勿参考耽美、女性向、欧美的色情小说}}\n{{//注解:色情语料选择}}\n\n{{setvar::min::1000token}}\n{{//注解:正文最小字数}}\n\n{{setvar::max::2500token}}\n{{//注解:正文最大字数}}\n\n{{setvar::smallcot::3个}}\n{{setvar::smallcotl::100}}\n{{//注解:文笔修正数量与使用token长度}}\n\n{{setvar::min2::1000token}}\n{{//注解:截断小故事最小字数}}\n\n{{setvar::max2::1500token}}\n{{//注解:截断小故事最大字数}}\n\n\n",
+            "content": "{{setvar::userConfirm::用户}}\n\n{{//注解:<user>身份，重要，建议选项\n\"用户操作NPC\":   将角色与用户抽离，扮演<user>抢话用\n\"用户\":扮演<user>反抢话用\n\"NPC\":<user>用于纯小说用\n\"上帝视角\":<user>不存在于故事用\n}}\n\n{{setvar::gender::女}}\n{{//注解:用户性别，仅影响色情强化}}\n{{setvar::sexs::使用日本男性向色情小说的风格，请勿参考耽美、女性向、欧美的色情小说}}\n{{//注解:色情语料选择}}\n\n{{setvar::min::1000token}}\n{{//注解:正文最小字数}}\n\n{{setvar::max::2500token}}\n{{//注解:正文最大字数}}\n\n{{setvar::smallcot::3个}}\n{{setvar::smallcotl::100}}\n{{//注解:文笔修正数量与使用token长度}}\n\n{{setvar::min2::1000token}}\n{{//注解:截断小故事最小字数}}\n\n{{setvar::max2::1500token}}\n{{//注解:截断小故事最大字数}}\n\n\n",
             "identifier": "jailbreak",
             "injection_position": 0,
             "injection_depth": 4,
@@ -1697,7 +1697,7 @@
             "marker": false,
             "name": "🌏世界场景(必改)🌏",
             "role": "system",
-            "content": "{{setvar::place::(中国都市)}}\n\n{{//地点背景设定，要恐怖，魔幻，异世界，废土，战场，地下城，古代，未来，日本，中国，特定同人小说，仙侠，武林都能改}}\n{{//影响角色带你去的地方和故事背景}}\n\n\n\n\n\n\n\n{{setvar::placew::- 在梦境正文中描写<user>能看到的与剧情相关的地点周围环境}}\n{{setvar::placecot::(加入与剧情相关的环境描写)}}\n\n\n",
+            "content": "{{setvar::place::(末日废土)}}\n\n{{//地点背景设定，要恐怖，魔幻，异世界，废土，战场，地下城，古代，未来，日本，中国，特定同人小说，仙侠，武林都能改}}\n{{//影响角色带你去的地方和故事背景}}\n\n\n\n\n\n\n\n{{setvar::placew::- 在梦境正文中描写<user>能看到的与剧情相关的地点周围环境}}\n{{setvar::placecot::(加入与剧情相关的环境描写)}}\n\n\n",
             "injection_position": 0,
             "injection_depth": 4,
             "forbid_overrides": false,
@@ -1905,7 +1905,7 @@
             "marker": false,
             "name": "⏰推进与时间速度(可改)⏰",
             "role": "system",
-            "content": "{{setvar::%speed::1}}\n{{//注解:单次小推进数量，越多单次回复越长，建议4个内}}\n{{setvar::%push::大}}\n{{//注解:强制大推进，可改小}}\n\n{{setvar::%small::增(1-5%)主★}}\n{{setvar::%big::增(5-15%)主★}}\n{{//注解:(主线推进累积速度}}\n\n{{setvar::event::分故事方向60%、角色线30%、色情事件10%。}}\n{{//注解:事件比例}}\n\n{{setvar::%time::1-5}}\n{{setvar::%btime::5-15}}\n{{setvar::%maintime::至少60}}\n{{//\n注解:\n(时间推进速度(分钟)}，\n%time小推进耗时、\n%btime大推进耗时、\n%maintime主★快转至少耗时、可改\"至少60最多XXX\"限制快转时间长度}}\n",
+            "content": "{{setvar::%speed::2}}\n{{//注解:单次小推进数量，越多单次回复越长，建议4个内}}\n{{setvar::%push::大}}\n{{//注解:强制大推进，可改小}}\n\n{{setvar::%small::增(1-5%)主★}}\n{{setvar::%big::增(5-15%)主★}}\n{{//注解:(主线推进累积速度}}\n\n{{setvar::event::分故事方向60%、角色线30%、色情事件10%。}}\n{{//注解:事件比例}}\n\n{{setvar::%time::1-5}}\n{{setvar::%btime::5-15}}\n{{setvar::%maintime::至少60}}\n{{//\n注解:\n(时间推进速度(分钟)}，\n%time小推进耗时、\n%btime大推进耗时、\n%maintime主★快转至少耗时、可改\"至少60最多XXX\"限制快转时间长度}}\n",
             "injection_position": 0,
             "injection_depth": 4,
             "injection_order": 100,
@@ -2406,7 +2406,7 @@
                 },
                 {
                     "identifier": "26f3c45d-2702-4f8a-a344-15fa00ccea21",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "d2370f29-111e-44ef-a3ca-d1af90011720",
@@ -2450,11 +2450,11 @@
                 },
                 {
                     "identifier": "273341aa-f4f5-4733-801e-323598c52171",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "505115b5-709c-4d1d-948f-624376e4c183",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "f77d5d0e-9d4b-4b01-9000-6f61fe5c31ac",
@@ -2474,7 +2474,7 @@
                 },
                 {
                     "identifier": "a7c40be7-317f-45ee-afc9-f2736dbc3c7c",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "d35213bd-4eae-4052-9397-e335510fe6f3",
@@ -2534,7 +2534,7 @@
                 },
                 {
                     "identifier": "01a619c3-b95c-40df-bdde-67bc4e033b52",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "1f248fe9-e659-46ed-8bb1-39a9707d94b3",
@@ -2798,7 +2798,7 @@
                 },
                 {
                     "identifier": "64740e0a-fd2b-4a46-84ac-d4c4f2c40e29",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "e32afdbf-f78d-45e1-93c5-113aabc8f591",
@@ -2810,7 +2810,7 @@
                 },
                 {
                     "identifier": "a96c52e7-0b85-4323-af18-eb766b5ee5d3",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "264a35a6-f2a9-4052-9195-1f91af769c92",
@@ -2854,11 +2854,11 @@
                 },
                 {
                     "identifier": "cc228202-a296-4618-afc4-d9aff3bf4021",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "c6fd3183-02ef-4ffd-8bf3-fb6167ccc866",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "c7d0194e-5335-4d3a-9b05-5e6a1cdd59e3",
@@ -2882,11 +2882,11 @@
                 },
                 {
                     "identifier": "02459900-75fe-4445-b9f1-2eba9119fb51",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "6a25ae5a-35d3-4c5f-ba8c-8e55315e9d41",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "717cc325-058b-4fe2-aed2-0f2c7619e1ef",
