@@ -2589,23 +2589,6 @@
                 "promptOnly": false
             },
             {
-                "id": "603909c4-e6e7-49fc-a7f8-f5dbb5db5fc2",
-                "scriptName": "昆仑图片",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<image>([\\s\\S]*?)</image>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
-            },
-            {
                 "id": "831e2743-fe02-4a94-ab38-97b224cd0d67",
                 "scriptName": "【demini】D1添加用户输入TAG",
                 "disabled": true,
@@ -4435,7 +4418,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 44,
+                "lastProcessedLength": 1,
                 "userConfigured": true
             }
         },
