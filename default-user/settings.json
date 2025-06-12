@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "true",
-        "NavOpened": "true",
+        "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -29,7 +29,7 @@
     },
     "currentVersion": "1.12.14",
     "username": "林辰",
-    "active_character": "世界调制模式·重制版.png",
+    "active_character": "破碎摇篮-重制版-3.5-Sonnet.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2578,7 +2578,7 @@
             {
                 "id": "23107647-eda2-4960-8322-4345fb54c9bf",
                 "scriptName": "昆仑图片",
-                "findRegex": "/<image>([\\s\\S]*?)</image>/gm",
+                "findRegex": "/<image>([\\s\\S]*?)</image>/g",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
@@ -2595,7 +2595,7 @@
             {
                 "id": "a01dd048-6c4f-48a5-a74d-187780228dd6",
                 "scriptName": "image",
-                "findRegex": "<image>.*?</image>",
+                "findRegex": "<image>.*?<\\/image>",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
@@ -4481,7 +4481,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 3,
+                "lastProcessedLength": 45,
                 "userConfigured": true
             }
         },
