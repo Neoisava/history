@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "true",
-        "NavOpened": "false",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -24,8 +24,7 @@
         "AlertRegex_Metamorphosis.png": "true",
         "AlertWI_世界调制模式·重制版.png": "true",
         "AlertWI_破碎摇篮-重制版-3.5-Sonnet.png": "true",
-        "AlertRegex_破碎摇篮-重制版-3.5-Sonnet.png": "true",
-        "AlertWI_云天心NTRS版本.png": "true"
+        "AlertRegex_破碎摇篮-重制版-3.5-Sonnet.png": "true"
     },
     "currentVersion": "1.12.14",
     "username": "林辰",
@@ -4486,7 +4485,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 54,
+                "lastProcessedLength": 57,
                 "userConfigured": true
             }
         },
@@ -4686,8 +4685,8 @@
         "Metamorphosis.png": [],
         "世界调制模式·重制版.png": [],
         "破碎摇篮-重制版-3.5-Sonnet.png": [],
-        "云天心NTRS版本.png": [],
-        "天渺大陆.png": []
+        "天渺大陆.png": [],
+        "云天心NTRS版本1.png": []
     },
     "nai_settings": {
         "temperature": 1.37,
