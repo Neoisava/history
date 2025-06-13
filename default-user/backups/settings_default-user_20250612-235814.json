@@ -2,8 +2,8 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
-        "NavOpened": "true",
+        "LNavOpened": "false",
+        "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -41,6 +41,8 @@
         "world_info": {
             "globalSelect": [
                 "__性爱世界书",
+                "--油猴世界书nai4(2)",
+                "-提示词大全",
                 "[Dreammini]预设世界书DLC1.6",
                 "【地图导航】",
                 "信息栏 aplon",
@@ -2405,7 +2407,9 @@
         "apiKey": "sk-qSRYdQUdlXFBdhnQzic3PocYZrFZJeEsWPYitnjUz8GourHp",
         "autoConnect": false,
         "notifyUpdates": false,
-        "disabledExtensions": [],
+        "disabledExtensions": [
+            "third-party/st-image-auto-generation"
+        ],
         "expressionOverrides": [],
         "memory": {
             "minLongMemory": 16,
@@ -2505,7 +2509,7 @@
                     "mode": "cc",
                     "exclude": [],
                     "api": "custom",
-                    "preset": "斯拉预设 4.022",
+                    "preset": "【Dreammini】1.14-ultra-0611",
                     "api-url": "https://api.skyi.cc/v1",
                     "model": "[正常]gemini-2.5-pro-preview-03-25",
                     "stop-strings": "[]",
@@ -2572,6 +2576,57 @@
                 "maxDepth": null
             },
             {
+                "id": "23107647-eda2-4960-8322-4345fb54c9bf",
+                "scriptName": "昆仑图片",
+                "findRegex": "/<image>([\\s\\S]*?)</image>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "a01dd048-6c4f-48a5-a74d-187780228dd6",
+                "scriptName": "image",
+                "findRegex": "<image>.*?<\\/image>",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
+                "id": "65d16b93-25df-424a-acce-172691d3c814",
+                "scriptName": "前端兼容模式。去除所有<image>标签正则导入",
+                "findRegex": "<image>([\\s\\S]*)</image>",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": true,
+                "markdownOnly": true,
+                "promptOnly": true,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": 0,
+                "maxDepth": null
+            },
+            {
                 "id": "699330b6-61fa-488b-96e7-c9e00a0eb553",
                 "scriptName": "[低饱和莫兰迪风格]脚本-导航模块",
                 "disabled": true,
@@ -2587,23 +2642,6 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": false
-            },
-            {
-                "id": "603909c4-e6e7-49fc-a7f8-f5dbb5db5fc2",
-                "scriptName": "昆仑图片",
-                "disabled": true,
-                "runOnEdit": true,
-                "findRegex": "/<image>([\\s\\S]*?)</image>/g",
-                "replaceString": "",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": false,
-                "promptOnly": true
             },
             {
                 "id": "831e2743-fe02-4a94-ab38-97b224cd0d67",
@@ -3524,10 +3562,10 @@
                         "general": {
                             "enabled": true,
                             "items": {
-                                "renderInfoBarInChat": true,
+                                "renderInfoBarInChat": false,
                                 "enableDataTable": true,
                                 "memoryAssistEnabled": true,
-                                "defaultCollapsed": true,
+                                "defaultCollapsed": false,
                                 "theme": "现代深色",
                                 "fontFamily": "系统默认",
                                 "autoRenderCheckEnabled": true
@@ -3536,51 +3574,51 @@
                         "personal": {
                             "enabled": true,
                             "items": {
-                                "name": false,
-                                "age": false,
-                                "gender": false,
-                                "race": false,
-                                "occupation": false,
+                                "name": true,
+                                "age": true,
+                                "gender": true,
+                                "race": true,
+                                "occupation": true,
                                 "currentLocation": true,
                                 "residence": true,
                                 "thoughts": true,
                                 "status": true,
                                 "mood": true,
                                 "funds": true,
-                                "points": false,
+                                "points": true,
                                 "appearance": true,
-                                "personality": false,
-                                "health": true,
+                                "personality": true,
+                                "health": false,
                                 "background": false,
                                 "bloodType": false,
                                 "nativeLanguage": false,
                                 "accent": false,
                                 "allergies": false,
-                                "addictions": true,
-                                "arousalLevel": true,
-                                "intimacyStatus": true,
-                                "bodyTemperature": true,
-                                "sensitiveAreas": true,
-                                "clothingState": true,
-                                "physicalReaction": true,
-                                "intimateRelations": true,
-                                "desireLevel": true,
-                                "sensitivityLevel": true,
-                                "intimatePreferences": true
+                                "addictions": false,
+                                "arousalLevel": false,
+                                "intimacyStatus": false,
+                                "bodyTemperature": false,
+                                "sensitiveAreas": false,
+                                "clothingState": false,
+                                "physicalReaction": false,
+                                "intimateRelations": false,
+                                "desireLevel": false,
+                                "sensitivityLevel": false,
+                                "intimatePreferences": false
                             }
                         },
                         "interaction": {
                             "enabled": true,
                             "items": {
                                 "name": true,
-                                "age": true,
+                                "age": false,
                                 "gender": true,
                                 "isPresent": true,
                                 "identity": true,
                                 "mood": true,
                                 "currentState": true,
-                                "currentPosture": true,
-                                "gazeDirection": true,
+                                "currentPosture": false,
+                                "gazeDirection": false,
                                 "affection": true,
                                 "relationship": true,
                                 "loyalty": true,
@@ -3593,27 +3631,27 @@
                                 "underwear": true,
                                 "underpants": true,
                                 "footwear": true,
-                                "overallClothing": true,
+                                "overallClothing": false,
                                 "physicalFeatures": true,
-                                "specialMarkings": true,
-                                "bodyScent": true,
-                                "skinTexture": true,
+                                "specialMarkings": false,
+                                "bodyScent": false,
+                                "skinTexture": false,
                                 "hobbies": true,
                                 "shameLevel": true,
                                 "angerLevel": true,
-                                "pleasureLevel": true,
-                                "corruptionLevel": true,
-                                "reputation": true,
-                                "arousalLevel": true,
-                                "intimacyStatus": true,
-                                "bodyTemperature": true,
-                                "sensitiveAreas": true,
-                                "clothingState": true,
-                                "physicalReaction": true,
-                                "intimateRelations": true,
-                                "desireLevel": true,
-                                "sensitivityLevel": true,
-                                "intimatePreferences": true
+                                "pleasureLevel": false,
+                                "corruptionLevel": false,
+                                "reputation": false,
+                                "arousalLevel": false,
+                                "intimacyStatus": false,
+                                "bodyTemperature": false,
+                                "sensitiveAreas": false,
+                                "clothingState": false,
+                                "physicalReaction": false,
+                                "intimateRelations": false,
+                                "desireLevel": false,
+                                "sensitivityLevel": false,
+                                "intimatePreferences": false
                             }
                         },
                         "inventory": {
@@ -3621,18 +3659,18 @@
                             "items": {
                                 "inventoryItems": true,
                                 "equipment": true,
-                                "questItems": true,
-                                "keychain": true,
+                                "questItems": false,
+                                "keychain": false,
                                 "resources": true,
                                 "currency": true,
-                                "weightLimit": true,
-                                "rarityItems": true,
+                                "weightLimit": false,
+                                "rarityItems": false,
                                 "consumables": true,
-                                "craftingMaterials": true
+                                "craftingMaterials": false
                             }
                         },
                         "company": {
-                            "enabled": false,
+                            "enabled": true,
                             "items": {
                                 "name": true,
                                 "type": true,
@@ -3674,30 +3712,30 @@
                             "items": {
                                 "specialAbilities": true,
                                 "learnedSkills": true,
-                                "passiveSkills": true,
-                                "auraEffects": true,
-                                "skillLevels": true,
-                                "skillProficiency": true,
-                                "experiencePoints": true,
-                                "talentTree": true,
-                                "cooldowns": true
+                                "passiveSkills": false,
+                                "auraEffects": false,
+                                "skillLevels": false,
+                                "skillProficiency": false,
+                                "experiencePoints": false,
+                                "talentTree": false,
+                                "cooldowns": false
                             }
                         },
                         "internet": {
-                            "enabled": true,
+                            "enabled": false,
                             "items": {
                                 "socialMediaFeed": true,
                                 "forumPosts": true,
                                 "jiuzhouExpress": false,
                                 "localGossip": false,
-                                "newsHeadlines": true,
-                                "trendingTopics": true,
-                                "onlineStatus": true,
-                                "notifications": true
+                                "newsHeadlines": false,
+                                "trendingTopics": false,
+                                "onlineStatus": false,
+                                "notifications": false
                             }
                         },
                         "apocalypse": {
-                            "enabled": true,
+                            "enabled": false,
                             "items": {
                                 "health": true,
                                 "hunger": true,
@@ -3707,26 +3745,26 @@
                                 "statusEffects": true,
                                 "radiationLevel": true,
                                 "shelterStatus": true,
-                                "shelterDefense": true,
-                                "mutationLevel": true,
+                                "shelterDefense": false,
+                                "mutationLevel": false,
                                 "infectionStatus": true,
                                 "morale": true,
-                                "fatigue": true,
+                                "fatigue": false,
                                 "carryingCapacity": true,
                                 "ammoSupplies": true,
                                 "foodSupplies": true,
                                 "waterSupplies": true,
                                 "medicalSupplies": true,
-                                "craftingMaterialsApoc": true,
+                                "craftingMaterialsApoc": false,
                                 "hazardProtection": true,
                                 "environmentThreats": true,
-                                "timeSinceLastRest": true,
-                                "hopeLevel": true,
-                                "daysSurvived": true,
-                                "factionReputationApoc": true,
-                                "availablePower": true,
-                                "transportation": true,
-                                "communicationDevice": true
+                                "timeSinceLastRest": false,
+                                "hopeLevel": false,
+                                "daysSurvived": false,
+                                "factionReputationApoc": false,
+                                "availablePower": false,
+                                "transportation": false,
+                                "communicationDevice": false
                             }
                         },
                         "ancientHistory": {
@@ -3807,39 +3845,39 @@
                                 "mainQuest": true,
                                 "keyEvents": true,
                                 "storyArcs": true,
-                                "clues": true,
+                                "clues": false,
                                 "storySummary": true,
-                                "factionRelations": true,
-                                "plotTwists": true,
+                                "factionRelations": false,
+                                "plotTwists": false,
                                 "characterArcs": false,
-                                "unresolvedMysteries": true,
+                                "unresolvedMysteries": false,
                                 "themesAndMotifs": false,
-                                "foreshadowing": true,
+                                "foreshadowing": false,
                                 "timelineSummary": false
                             }
                         },
                         "world": {
                             "enabled": true,
                             "items": {
-                                "time": false,
-                                "location": false,
-                                "weather": false,
+                                "time": true,
+                                "location": true,
+                                "weather": true,
                                 "worldMap": true,
                                 "factions": true,
                                 "worldHistory": false,
                                 "culture": false,
                                 "localLaws": false,
-                                "localBeliefs": true,
+                                "localBeliefs": false,
                                 "gravity": false,
                                 "airComposition": false,
-                                "resources": true,
+                                "resources": false,
                                 "worldEvents": true,
                                 "worldRules": true,
                                 "geography": false,
                                 "climate": false,
                                 "keyLocationsDetails": false,
-                                "creaturesAndRaces": true,
-                                "organizationsAndPowers": true,
+                                "creaturesAndRaces": false,
+                                "organizationsAndPowers": false,
                                 "economyAndTrade": false,
                                 "magicTechSystem": false,
                                 "legendsAndMythology": false
@@ -4311,6 +4349,14 @@
                         "info": "",
                         "buttons": [],
                         "enabled": true
+                    },
+                    {
+                        "id": "65da73c4-67ed-4429-b9dd-3b8c6c00068e",
+                        "name": "酒馆前端兼容生图",
+                        "content": "import 'https://fastly.jsdelivr.net/gh/damoshen123/jiuguanzhushou/st.js'",
+                        "info": "\n会提取 消息内的<image></image> 并显示在消息条目的下方。使用油猴生图的前端兼容模式。可以生图。\n\n\n2.\n你可以自己 写前端。这里开放了生图端口。\n\n发送 generate_image_request  事件  生图\n\n\n接着使用 eventOn  监听事件  generate_image_response  事件   接受\n\n主要简单的通过 前端助手的事件来沟通\neventEmit 发送事件 \neventOn  监听事件 \n\n\n\n        const EventType = {\n            GENERATE_IMAGE_REQUEST: 'generate_image_request',\n            GENERATE_IMAGE_RESPONSE: 'generate_image_response'\n        };\n\n发送 generate_image_request  事件\n\n参数\n\n                const requestData = {\n                    id: currentRequestId,//自定义的id用于自己识别是否同一个请求\n                    prompt: prompt,//提示词\n                    width: width,//宽度\n                    height: height,//高度\n                    type: 1  // 1就是生图、2会获取缓存，如果存在的话，不存在也是生图\n                };\n\n接着使用 eventOn  监听事件  generate_image_response  事件\n\n如果id 相同 则就成功。\n\n返回的是 base64 数据 可以直接  src 使用。\n",
+                        "buttons": [],
+                        "enabled": true
                     }
                 ],
                 "characters_with_scripts": [
@@ -4435,7 +4481,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 26,
+                "lastProcessedLength": 1,
                 "userConfigured": true
             }
         },
@@ -7043,11 +7089,11 @@
                     },
                     {
                         "identifier": "f13388f6-345d-4891-8518-3ce94eed665e",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "76fcd970-8ea4-40b0-8336-9504054b10bc",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "1d789341-ce56-4dee-bbf0-ff7fda7dbc7a",
@@ -7415,7 +7461,7 @@
                     },
                     {
                         "identifier": "d81c2780-201d-4315-a116-f0e197f060a8",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "30aa6d6d-e782-4951-8de6-a8ee68aebf1d",
@@ -7427,7 +7473,7 @@
                     },
                     {
                         "identifier": "ebf5f21d-9989-40d3-bd55-7e406c22e6c2",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "63b4e2b9-ce5c-4691-b1df-5fabcbff5547",
@@ -7563,7 +7609,7 @@
                     },
                     {
                         "identifier": "2d0b09ba-6120-4769-a49a-e27f4c99cb0e",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "83be0196-53ef-4b5c-897c-c4cf1d2ae433",
