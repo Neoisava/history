@@ -44,11 +44,9 @@
                 "--油猴世界书nai4(2)",
                 "-提示词大全",
                 "[Dreammini]预设世界书DLC1.6",
-                "【地图导航】",
                 "信息栏 aplon",
                 "嚯嚯，还有这种可以看的吗？🤣",
-                "多维情感网络动态",
-                "极乐迪斯科 状态栏美化个人修改 (1)",
+                "极乐迪斯科",
                 "献媚文风加强版",
                 "部位特写"
             ],
@@ -4481,7 +4479,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 4,
+                "lastProcessedLength": 6,
                 "userConfigured": true
             }
         },
@@ -7674,8 +7672,8 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
-        "custom_model": "[EXPRESS] gemini-2.5-pro-preview-03-25-auto",
-        "custom_url": "https://api.skyi.cc/v1",
+        "custom_model": "gemini-2.5-pro-preview-06-05-thinking",
+        "custom_url": "https://newapi.aicohere.org/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
         "custom_include_headers": "",
