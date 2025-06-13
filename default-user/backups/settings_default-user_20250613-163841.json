@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -43,8 +43,6 @@
                 "--油猴世界书nai4(2)",
                 "-提示词大全",
                 "[Dreammini]预设世界书DLC1.6",
-                "信息栏 aplon",
-                "嚯嚯，还有这种可以看的吗？🤣",
                 "极乐迪斯科",
                 "献媚文风加强版",
                 "部位特写"
@@ -2564,7 +2562,7 @@
                     1,
                     2
                 ],
-                "disabled": false,
+                "disabled": true,
                 "markdownOnly": false,
                 "promptOnly": true,
                 "runOnEdit": true,
@@ -3017,7 +3015,7 @@
             {
                 "id": "ce13c0c2-254d-4fef-97b4-a4f8985aab6b",
                 "scriptName": "思考隐藏v1",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<aiThinkProcess>[\\s\\S]*<\\/aiThinkProcess>/g",
                 "replaceString": "",
@@ -3034,7 +3032,7 @@
             {
                 "id": "15e946fd-7d84-4bd1-abc6-2d1908461667",
                 "scriptName": "归纳数据v2",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<thinkbiao>[\\s\\S]*<\\/thinkbiao>/g",
                 "replaceString": "",
@@ -4353,10 +4351,10 @@
                         "enabled": false
                     },
                     {
-                        "id": "65da73c4-67ed-4429-b9dd-3b8c6c00068e",
-                        "name": "酒馆前端兼容生图",
-                        "content": "import 'https://fastly.jsdelivr.net/gh/damoshen123/jiuguanzhushou/st.js'",
-                        "info": "\n会提取 消息内的<image></image> 并显示在消息条目的下方。使用油猴生图的前端兼容模式。可以生图。\n\n\n2.\n你可以自己 写前端。这里开放了生图端口。\n\n发送 generate_image_request  事件  生图\n\n\n接着使用 eventOn  监听事件  generate_image_response  事件   接受\n\n主要简单的通过 前端助手的事件来沟通\neventEmit 发送事件 \neventOn  监听事件 \n\n\n\n        const EventType = {\n            GENERATE_IMAGE_REQUEST: 'generate_image_request',\n            GENERATE_IMAGE_RESPONSE: 'generate_image_response'\n        };\n\n发送 generate_image_request  事件\n\n参数\n\n                const requestData = {\n                    id: currentRequestId,//自定义的id用于自己识别是否同一个请求\n                    prompt: prompt,//提示词\n                    width: width,//宽度\n                    height: height,//高度\n                    type: 1  // 1就是生图、2会获取缓存，如果存在的话，不存在也是生图\n                };\n\n接着使用 eventOn  监听事件  generate_image_response  事件\n\n如果id 相同 则就成功。\n\n返回的是 base64 数据 可以直接  src 使用。\n",
+                        "id": "2d1c4951-6eb1-4321-96be-9b55b999de40",
+                        "name": "酒馆前端兼容生图-轻量级内插",
+                        "content": "// ==UserScript==\n// @name         油猴文生图 - 酒馆助手 - 轻量级前端兼容生图脚本\n// @version      2.1\n// @description  与油猴文生图脚本对接，在SillyTavern中提供生图按钮和交互。使用原子DOM操作，避免UI卡死。双击图片可重新生成。\n// @author       KeilAnt\n// ==/UserScript==\n\n// 这个脚本应在SillyTavern的“扩展”->“酒馆助手”中作为用户脚本加载。\n// 它依赖SillyTavern环境中的jQuery($)和lodash(_)库。\n\n(function () {\n    'use strict';\n\n    // ----------------- 配置和状态管理 -----------------\n    const state = {\n        scanColding: false,    // 扫描节流阀\n        pendingRequests: new Map(), // 存储待处理的生图请求\n    };\n\n    /**\n     * 生成一个唯一的ID\n     * @returns {string}\n     */\n    function generateUniqueId() {\n        return Date.now().toString(36) + Math.random().toString(36).substring(2);\n    }\n\n    // ----------------- 与油猴脚本的通信层 (与之前相同) -----------------\n\n    /**\n     * 向油猴脚本发送一个请求（通过localStorage）\n     * @param {object} payload - 请求的数据体 { id, prompt, ... }\n     */\n    function sendRequestToTampermonkey(payload) {\n        try {\n            localStorage.setItem(`generate_image_request_${payload.id}`, JSON.stringify(payload));\n        } catch (error) {\n            console.error('[文生图助手] 发送请求到油猴脚本失败:', error);\n        }\n    }\n\n    /**\n     * 发送生图请求，并等待响应\n     * @param {string} prompt - 提示词\n     * @param {number} type - 请求类型 (1: 生成新图, 3: 仅查缓存)\n     * @returns {Promise<string|null>} - 返回图像的Base64数据或null\n     */\n    function requestImage(prompt, type) {\n        return new Promise((resolve) => {\n            const requestId = generateUniqueId();\n            state.pendingRequests.set(requestId, resolve);\n\n            sendRequestToTampermonkey({\n                id: requestId,\n                prompt: prompt,\n                width: 0,  // 使用油猴侧的默认设置\n                height: 0, // 使用油猴侧的默认设置\n                type: type,\n            });\n\n            // 设置超时，防止请求永远不返回\n            setTimeout(() => {\n                if (state.pendingRequests.has(requestId)) {\n                    console.error(`[文生图助手] 请求 ${requestId} 超时。`);\n                    state.pendingRequests.delete(requestId);\n                    resolve(null);\n                }\n            }, 60000); // 1分钟超时\n        });\n    }\n\n    // ----------------- UI创建和管理 (新版，更简洁) -----------------\n\n    /**\n     * 创建交互UI的通用容器\n     * @param {string} prompt \n     * @returns {jQuery}\n     */\n    function createUiWrapper(prompt) {\n        const uniqueId = `tm-assistant-ui-${generateUniqueId()}`;\n        return $(`<div class=\"tm-assistant-wrapper\" id=\"${uniqueId}\" data-prompt=\"${_.escape(prompt)}\"></div>`);\n    }\n\n    /**\n     * [修改后] 创建图片显示UI，并绑定双击重新生成事件\n     * @param {string} prompt - 提示词\n     * @param {string} imageData - Base64格式的图片数据\n     * @returns {jQuery}\n     */\n    function createImageDisplayUI(prompt, imageData) {\n        const $wrapper = createUiWrapper(prompt);\n        const $imageContainer = $('<div class=\"tm-image-container\"></div>');\n        const $img = $('<img>')\n            .attr('src', imageData)\n            .attr('title', '双击重新生成'); // 添加提示文字\n\n        // 为图片容器绑定双击事件\n        $imageContainer.on('dblclick', async function() {\n            const $container = $(this);\n            const $currentWrapper = $container.closest('.tm-assistant-wrapper');\n\n            // 使用data属性防止重复触发\n            if ($currentWrapper.data('is-generating')) return;\n            $currentWrapper.data('is-generating', true);\n\n            // 显示“生成中”的遮罩层\n            const $overlay = $('<div class=\"tm-image-overlay\"><div class=\"tm-overlay-text\">生成中...</div></div>');\n            $container.append($overlay);\n\n            // 发起新的图片生成请求\n            const newImageData = await requestImage(prompt, 1); // type 1: 生成新图\n\n            if (newImageData) {\n                // 成功后，用新的图片UI完整替换旧的UI\n                const $newUI = createImageDisplayUI(prompt, newImageData);\n                $currentWrapper.replaceWith($newUI);\n            } else {\n                // 失败后，在遮罩层上显示错误信息，并在短暂延迟后移除\n                $overlay.find('.tm-overlay-text').text('生成失败');\n                setTimeout(() => {\n                    $overlay.remove();\n                    $currentWrapper.data('is-generating', false); // 重置状态，允许重试\n                }, 2500);\n            }\n        });\n\n        $imageContainer.append($img);\n        // 不再创建和添加重新生成按钮\n        $wrapper.append($imageContainer);\n        return $wrapper;\n    }\n\n\n    /**\n     * 创建初始的“生成图片”按钮UI\n     * @param {string} prompt - 提示词\n     * @returns {jQuery}\n     */\n    function createGenerateButtonUI(prompt) {\n        const $wrapper = createUiWrapper(prompt);\n        const $button = $('<button class=\"tm-image-button\">生成图片</button>');\n\n        $button.on('click', async function() {\n            const $btn = $(this);\n            const $currentWrapper = $btn.closest('.tm-assistant-wrapper');\n            if ($btn.text() === '生成中...') return;\n            \n            $btn.text('生成中...');\n            const imageData = await requestImage(prompt, 1); // type 1: 生成新图\n\n            if (imageData) {\n                const $newUI = createImageDisplayUI(prompt, imageData);\n                $currentWrapper.replaceWith($newUI);\n            } else {\n                $btn.text('生成失败, 点击重试');\n            }\n        });\n\n        $wrapper.append($button);\n\n        // -- 立即查询缓存 --\n        (async () => {\n            const cachedData = await requestImage(prompt, 3); // type 3: 仅查缓存\n            if (cachedData && $wrapper.closest('body').length) { // 检查UI是否还在DOM中\n                const $newUI = createImageDisplayUI(prompt, cachedData);\n                $wrapper.replaceWith($newUI);\n            }\n        })();\n\n        return $wrapper;\n    }\n\n    // ----------------- 正文扫描与替换逻辑 (核心重写部分) -----------------\n    \n    /**\n     * 扫描所有可见消息，并将<image_tag>替换为按钮。\n     * 每次调用只替换一个，实现平滑加载。\n     */\n    async function processAllVisibleMessages() {\n        if (state.scanColding) return;\n        state.scanColding = true;\n\n        try {\n            // 获取所有非用户的可见消息\n            const $messages = $(\"#chat\").children(\".mes[is_user='false']\");\n\n            for (const messageElement of $messages) {\n                const messageId = Number(messageElement.getAttribute(\"mesid\"));\n                if (!messageId && messageId !== 0) continue;\n\n                // 使用酒馆API安全地获取DOM对象，并查找包含<image_tag>的<pre>元素\n                // 这是避免UI卡死的关键：我们只找尚未被处理的原始标签\n                const $preTag = retrieveDisplayedMessage(messageId).find('pre:contains(\"<image_tag>\")').first();\n                \n                // 如果找到了原始的<pre>标签\n                if ($preTag.length > 0) {\n                    const fullText = $preTag.text();\n                    const match = fullText.match(/<image_tag>([\\s\\S]*?)<\\/image_tag>/);\n                    \n                    if (match && match[1]) {\n                        const prompt = match[1].trim();\n                        \n                        // 创建新的UI（初始为“生成图片”按钮）\n                        const $newUI = createGenerateButtonUI(prompt);\n                        \n                        // [原子替换] 用我们的UI替换掉原始的<pre>标签\n                        // 这是最安全、最高效的方式\n                        $preTag.replaceWith($newUI);\n                        \n                        // [关键] 本次扫描只处理一个，然后退出循环\n                        break; \n                    }\n                }\n            }\n        } catch (error) {\n            console.error(\"[文生图助手] 处理消息时发生错误:\", error);\n        } finally {\n            state.scanColding = false;\n        }\n    }\n\n\n    // ----------------- 脚本主入口和事件监听 -----------------\n    $(document).ready(function () {\n        // --- 注入样式 ---\n        $('head').append(`\n            <style id=\"tm-assistant-styles\">\n                .tm-assistant-wrapper { \n                    display: inline-block; \n                    vertical-align: middle; \n                    margin: 5px 0; \n                    text-align: center;\n                }\n                .tm-image-button {\n                    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);\n                    border-radius: 4px; border: none; box-shadow: 0 2px 4px rgba(99, 102, 241, .2);\n                    color: #fff; cursor: pointer; font-size: 13px; font-weight: 600;\n                    padding: 4px 10px; transition: all .3s ease;\n                }\n                .tm-image-button:hover {\n                    transform: translateY(-1px);\n                    box-shadow: 0 4px 8px rgba(99, 102, 241, .3);\n                }\n                /* [修改] 样式调整以适应双击交互 */\n                .tm-image-container { \n                    max-width: 256px; \n                    line-height: 0; \n                    cursor: pointer;\n                    position: relative; /* 为遮罩层定位 */\n                    border-radius: 4px; /* 容器也加圆角，确保遮罩层匹配 */\n                    overflow: hidden; /* 隐藏溢出的遮罩层圆角 */\n                }\n                .tm-image-container img { \n                    max-width: 100%; \n                    height: auto; \n                    display: block; /* 修复图片底部可能的空白间隙 */\n                }\n                /* [新增] 遮罩层样式 */\n                .tm-image-overlay {\n                    position: absolute;\n                    top: 0; left: 0; right: 0; bottom: 0;\n                    background: rgba(0, 0, 0, 0.65);\n                    color: white;\n                    display: flex;\n                    justify-content: center;\n                    align-items: center;\n                    pointer-events: none; /* 遮罩层不拦截鼠标事件 */\n                }\n                .tm-overlay-text {\n                    padding: 6px 12px;\n                    background: rgba(0,0,0,0.4);\n                    border-radius: 5px;\n                    font-size: 14px;\n                    font-weight: 600;\n                    text-shadow: 1px 1px 2px black;\n                }\n            </style>\n        `);\n        \n        // --- 监听来自油猴脚本的响应 ---\n        window.addEventListener('storage', (event) => {\n            if (event.key && event.key.startsWith('generate_image_response_')) {\n                const requestId = event.key.replace('generate_image_response_', '');\n                if (state.pendingRequests.has(requestId)) {\n                    let imageData = null;\n                    try {\n                        const data = JSON.parse(event.newValue);\n                        const resolve = state.pendingRequests.get(requestId);\n                        resolve(data.imageData);// 返回Base64数据或null\n                    } catch (e) {\n                        console.error('[文生图助手] 解析油猴响应失败:', e);\n                        const resolve = state.pendingRequests.get(requestId);\n                        resolve(null);\n                    } finally {\n                        localStorage.removeItem(event.key);\n                        state.pendingRequests.delete(requestId);\n                    }\n                }\n            }\n        });\n\n        // --- 启动后台扫描 ---\n        // 使用 setInterval 实现2秒的节流扫描\n        setInterval(processAllVisibleMessages, 2000);\n\n        console.log('油猴文生图 - 酒馆前端助手 (修复版) 已加载。');\n    });\n\n})();",
+                        "info": "与油猴文生图脚本对接，在SillyTavern中提供生图按钮和交互。使用原子DOM操作，避免UI卡死。\n\n开始运行后每2秒匹配并替换一个<image_tag>,自动从油猴拉取缓存，手动点击按钮生成新图，双击图片可重新生成。\n\n油猴文生图脚本打开前端兼容模式，把这个脚本导入进酒馆助手运行，然后修改文生图世界书生成如下格式的prompt(必须用代码段的3个`包裹首尾)：\n```\n<image_tag>\nprompt内容\n</image_tag>\n```\n\n生图prompt格式是写死的\n因为要利用自定义xml标签元素的<pre>这个特性，所以首尾必须是xml的尖括号标签，包裹的代码段也不能省略\n\n和油猴文生图脚本的接口写了一个自定义的type3请求：只拉取缓存不生成，长0宽0让油猴使用设置里保存的分辨率，油猴那边主要是这2处修改",
                         "buttons": [],
                         "enabled": true
                     }
@@ -4485,7 +4483,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 59,
+                "lastProcessedLength": 120,
                 "userConfigured": true
             }
         },
@@ -4686,7 +4684,8 @@
         "世界调制模式·重制版.png": [],
         "破碎摇篮-重制版-3.5-Sonnet.png": [],
         "天渺大陆.png": [],
-        "云天心NTRS版本1.png": []
+        "云天心NTRS版本1.png": [],
+        "主持人！.png": []
     },
     "nai_settings": {
         "temperature": 1.37,
@@ -7513,7 +7512,7 @@
                     },
                     {
                         "identifier": "64740e0a-fd2b-4a46-84ac-d4c4f2c40e29",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "e32afdbf-f78d-45e1-93c5-113aabc8f591",
@@ -7569,7 +7568,7 @@
                     },
                     {
                         "identifier": "cc228202-a296-4618-afc4-d9aff3bf4021",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "c6fd3183-02ef-4ffd-8bf3-fb6167ccc866",
