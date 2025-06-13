@@ -3929,7 +3929,12 @@
             "isPopout": false,
             "showPopoutButton": true,
             "config": {
-                "setList": []
+                "setList": [
+                    {
+                        "set": "AutoContinue",
+                        "isVisible": true
+                    }
+                ]
             }
         },
         "muyoo_dataTable": {
@@ -4385,7 +4390,7 @@
             }
         },
         "st-input-helper": {
-            "enabled": true,
+            "enabled": false,
             "buttons": {
                 "asterisk": false,
                 "quotes": true,
@@ -4479,7 +4484,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 3,
+                "lastProcessedLength": 4,
                 "userConfigured": true
             }
         },
