@@ -2,8 +2,8 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
-        "NavOpened": "false",
+        "LNavOpened": "false",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -24,8 +24,7 @@
         "AlertRegex_Metamorphosis.png": "true",
         "AlertWI_世界调制模式·重制版.png": "true",
         "AlertWI_破碎摇篮-重制版-3.5-Sonnet.png": "true",
-        "AlertRegex_破碎摇篮-重制版-3.5-Sonnet.png": "true",
-        "AlertWI_云天心NTRS版本.png": "true"
+        "AlertRegex_破碎摇篮-重制版-3.5-Sonnet.png": "true"
     },
     "currentVersion": "1.12.14",
     "username": "林辰",
@@ -44,8 +43,6 @@
                 "--油猴世界书nai4(2)",
                 "-提示词大全",
                 "[Dreammini]预设世界书DLC1.6",
-                "信息栏 aplon",
-                "嚯嚯，还有这种可以看的吗？🤣",
                 "极乐迪斯科",
                 "献媚文风加强版",
                 "部位特写"
@@ -2565,7 +2562,7 @@
                     1,
                     2
                 ],
-                "disabled": false,
+                "disabled": true,
                 "markdownOnly": false,
                 "promptOnly": true,
                 "runOnEdit": true,
@@ -3018,7 +3015,7 @@
             {
                 "id": "ce13c0c2-254d-4fef-97b4-a4f8985aab6b",
                 "scriptName": "思考隐藏v1",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<aiThinkProcess>[\\s\\S]*<\\/aiThinkProcess>/g",
                 "replaceString": "",
@@ -3035,7 +3032,7 @@
             {
                 "id": "15e946fd-7d84-4bd1-abc6-2d1908461667",
                 "scriptName": "归纳数据v2",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<thinkbiao>[\\s\\S]*<\\/thinkbiao>/g",
                 "replaceString": "",
@@ -4486,7 +4483,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 39,
+                "lastProcessedLength": 112,
                 "userConfigured": true
             }
         },
@@ -4686,8 +4683,9 @@
         "Metamorphosis.png": [],
         "世界调制模式·重制版.png": [],
         "破碎摇篮-重制版-3.5-Sonnet.png": [],
-        "云天心NTRS版本.png": [],
-        "天渺大陆.png": []
+        "天渺大陆.png": [],
+        "云天心NTRS版本1.png": [],
+        "主持人！.png": []
     },
     "nai_settings": {
         "temperature": 1.37,
@@ -7514,7 +7512,7 @@
                     },
                     {
                         "identifier": "64740e0a-fd2b-4a46-84ac-d4c4f2c40e29",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "e32afdbf-f78d-45e1-93c5-113aabc8f591",
@@ -7570,7 +7568,7 @@
                     },
                     {
                         "identifier": "cc228202-a296-4618-afc4-d9aff3bf4021",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "c6fd3183-02ef-4ffd-8bf3-fb6167ccc866",
