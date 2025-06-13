@@ -4448,13 +4448,9 @@
                 "user",
                 "char",
                 "newline",
-                "custom_6",
-                "custom_4",
-                "custom_5",
-                "custom_2",
-                "custom_3",
                 "custom_1",
-                "custom_0"
+                "custom_0",
+                "custom_2"
             ],
             "customSymbols": [
                 {
@@ -4467,6 +4463,12 @@
                     "name": "(显示资讯、能力和背包面板)",
                     "symbol": "(显示资讯、能力和背包面板)",
                     "display": "面板",
+                    "cursorPos": "end"
+                },
+                {
+                    "name": "李若曦",
+                    "symbol": "李若曦",
+                    "display": "李若曦",
                     "cursorPos": "end"
                 }
             ]
