@@ -4815,7 +4815,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 162,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
@@ -8022,7 +8022,7 @@
         "openrouter_providers": [],
         "openrouter_allow_fallbacks": true,
         "openrouter_middleout": "on",
-        "reverse_proxy": "http://5.144.179.107:80",
+        "reverse_proxy": "",
         "chat_completion_source": "makersuite",
         "max_context_unlocked": true,
         "api_url_scale": "",
