@@ -4787,7 +4787,8 @@
                 "newline",
                 "custom_1",
                 "custom_0",
-                "custom_2"
+                "custom_2",
+                "custom_3"
             ],
             "customSymbols": [
                 {
@@ -4807,6 +4808,12 @@
                     "symbol": "李若曦",
                     "display": "李若曦",
                     "cursorPos": "end"
+                },
+                {
+                    "name": "艾莉",
+                    "symbol": "艾莉",
+                    "display": "艾莉",
+                    "cursorPos": "end"
                 }
             ]
         },
@@ -4823,7 +4830,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 180,
+                "lastProcessedLength": 181,
                 "userConfigured": true
             }
         },
