@@ -16,8 +16,6 @@
         "WI_PerPage": "100",
         "AlertRegex_修仙之路2.0.png": "true",
         "AlertWI_修仙之路2.0.png": "true",
-        "AlertWI_(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png": "true",
-        "AlertRegex_(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png": "true",
         "AlertWI_地球异闻录.png": "true",
         "AlertRegex_地球异闻录.png": "true",
         "AlertWI_Metamorphosis.png": "true",
@@ -3060,7 +3058,6 @@
         "character_allowed_regex": [
             "凡人修仙传·凤起灵绝·大罗真魂都市修仙灵气复苏（地图互动RPG带系统版）.png",
             "修仙之路2.0.png",
-            "(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png",
             "地球异闻录.png",
             "Metamorphosis.png",
             "破碎摇篮-重制版-3.5-Sonnet.png"
@@ -4830,7 +4827,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 183,
+                "lastProcessedLength": 184,
                 "userConfigured": true
             }
         },
@@ -5031,16 +5028,6 @@
         "undefined": [],
         "null": [],
         "修仙之路2.0.png": [],
-        "(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png": [
-            "7860d013-91ed-4081-804a-6bf999080078",
-            "00e02610-a578-4b76-8f94-2bc4250f0194",
-            "b083a4d7-32ad-40c2-ba2a-f0cacabf1fd1",
-            "2a874dea-9419-425c-9382-38e789657ba8",
-            "b58fc9bf-2d01-462c-b274-e3ab6dfe69cc",
-            "367c4c8e-f041-4a28-9f30-22f1dd97edc7",
-            "985defd2-95f8-4152-9ff6-71c9b0a8b728",
-            "149ac21c-db86-48f9-a891-590161d603ab"
-        ],
         "《完美世界》.png": [],
         "地球异闻录.png": [],
         "Metamorphosis.png": [],
@@ -5048,7 +5035,8 @@
         "破碎摇篮-重制版-3.5-Sonnet.png": [],
         "天渺大陆.png": [],
         "云天心NTRS版本1.png": [],
-        "主持人！.png": []
+        "主持人！.png": [],
+        "《万法盗天录》.png": []
     },
     "nai_settings": {
         "temperature": 1.37,
