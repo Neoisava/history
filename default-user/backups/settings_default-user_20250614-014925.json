@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "true",
-        "NavOpened": "false",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -2563,7 +2563,7 @@
                     1,
                     2
                 ],
-                "disabled": false,
+                "disabled": true,
                 "markdownOnly": false,
                 "promptOnly": true,
                 "runOnEdit": true,
@@ -3016,7 +3016,7 @@
             {
                 "id": "ce13c0c2-254d-4fef-97b4-a4f8985aab6b",
                 "scriptName": "思考隐藏v1",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<aiThinkProcess>[\\s\\S]*<\\/aiThinkProcess>/g",
                 "replaceString": "",
@@ -3033,7 +3033,7 @@
             {
                 "id": "15e946fd-7d84-4bd1-abc6-2d1908461667",
                 "scriptName": "归纳数据v2",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<thinkbiao>[\\s\\S]*<\\/thinkbiao>/g",
                 "replaceString": "",
@@ -3883,6 +3883,336 @@
                             "enabled": true,
                             "items": {}
                         }
+                    },
+                    "2": {
+                        "general": {
+                            "enabled": true,
+                            "items": {
+                                "renderInfoBarInChat": true,
+                                "enableDataTable": true,
+                                "memoryAssistEnabled": true,
+                                "defaultCollapsed": true,
+                                "theme": "现代深色",
+                                "fontFamily": "系统默认",
+                                "autoRenderCheckEnabled": true
+                            }
+                        },
+                        "personal": {
+                            "enabled": true,
+                            "items": {
+                                "name": false,
+                                "age": false,
+                                "gender": false,
+                                "race": false,
+                                "occupation": true,
+                                "currentLocation": true,
+                                "residence": true,
+                                "thoughts": true,
+                                "status": true,
+                                "mood": true,
+                                "funds": true,
+                                "points": false,
+                                "appearance": true,
+                                "personality": true,
+                                "health": true,
+                                "background": false,
+                                "bloodType": false,
+                                "nativeLanguage": false,
+                                "accent": false,
+                                "allergies": false,
+                                "addictions": true,
+                                "arousalLevel": true,
+                                "intimacyStatus": true,
+                                "bodyTemperature": true,
+                                "sensitiveAreas": true,
+                                "clothingState": true,
+                                "physicalReaction": true,
+                                "intimateRelations": true,
+                                "desireLevel": true,
+                                "sensitivityLevel": true,
+                                "intimatePreferences": true
+                            }
+                        },
+                        "interaction": {
+                            "enabled": true,
+                            "items": {
+                                "name": true,
+                                "age": true,
+                                "gender": true,
+                                "isPresent": true,
+                                "identity": true,
+                                "mood": true,
+                                "currentState": true,
+                                "currentPosture": true,
+                                "gazeDirection": true,
+                                "affection": true,
+                                "relationship": true,
+                                "loyalty": true,
+                                "thoughts": true,
+                                "residence": true,
+                                "emotionalStatus": true,
+                                "bodyShape": true,
+                                "upperBody": true,
+                                "lowerBody": true,
+                                "underwear": true,
+                                "underpants": true,
+                                "footwear": true,
+                                "overallClothing": true,
+                                "physicalFeatures": true,
+                                "specialMarkings": true,
+                                "bodyScent": true,
+                                "skinTexture": true,
+                                "hobbies": true,
+                                "shameLevel": true,
+                                "angerLevel": true,
+                                "pleasureLevel": true,
+                                "corruptionLevel": true,
+                                "reputation": true,
+                                "arousalLevel": true,
+                                "intimacyStatus": true,
+                                "bodyTemperature": true,
+                                "sensitiveAreas": true,
+                                "clothingState": true,
+                                "physicalReaction": true,
+                                "intimateRelations": true,
+                                "desireLevel": true,
+                                "sensitivityLevel": true,
+                                "intimatePreferences": true
+                            }
+                        },
+                        "inventory": {
+                            "enabled": true,
+                            "items": {
+                                "inventoryItems": true,
+                                "equipment": true,
+                                "questItems": true,
+                                "keychain": false,
+                                "resources": true,
+                                "currency": false,
+                                "weightLimit": true,
+                                "rarityItems": true,
+                                "consumables": true,
+                                "craftingMaterials": true
+                            }
+                        },
+                        "company": {
+                            "enabled": false,
+                            "items": {
+                                "name": true,
+                                "type": true,
+                                "status": true,
+                                "mainBusiness": true,
+                                "employeeCount": false,
+                                "hqLocation": false,
+                                "valuation": true,
+                                "funds": true,
+                                "reputation": true,
+                                "shareholders": true,
+                                "projects": true,
+                                "recentEvents": true,
+                                "rivals": false,
+                                "marketShare": false,
+                                "corporateCulture": false,
+                                "coreTechnology": false,
+                                "legalDisputes": false,
+                                "mediaCoverage": false,
+                                "stockSymbol": false
+                            }
+                        },
+                        "tasks": {
+                            "enabled": true,
+                            "items": {
+                                "showTaskType": true,
+                                "showTaskStatus": true,
+                                "showTaskDescription": true,
+                                "showTaskProgress": true,
+                                "showTaskRewards": true,
+                                "mainQuest": true,
+                                "sideQuests": true,
+                                "dailyTasks": false,
+                                "achievements": false
+                            }
+                        },
+                        "abilities": {
+                            "enabled": true,
+                            "items": {
+                                "specialAbilities": true,
+                                "learnedSkills": true,
+                                "passiveSkills": true,
+                                "auraEffects": true,
+                                "skillLevels": true,
+                                "skillProficiency": true,
+                                "experiencePoints": true,
+                                "talentTree": false,
+                                "cooldowns": false
+                            }
+                        },
+                        "internet": {
+                            "enabled": true,
+                            "items": {
+                                "socialMediaFeed": true,
+                                "forumPosts": true,
+                                "jiuzhouExpress": false,
+                                "localGossip": false,
+                                "newsHeadlines": true,
+                                "trendingTopics": true,
+                                "onlineStatus": true,
+                                "notifications": true
+                            }
+                        },
+                        "apocalypse": {
+                            "enabled": true,
+                            "items": {
+                                "health": true,
+                                "hunger": true,
+                                "thirst": true,
+                                "stamina": true,
+                                "sanity": true,
+                                "statusEffects": true,
+                                "radiationLevel": true,
+                                "shelterStatus": true,
+                                "shelterDefense": true,
+                                "mutationLevel": true,
+                                "infectionStatus": true,
+                                "morale": true,
+                                "fatigue": true,
+                                "carryingCapacity": true,
+                                "ammoSupplies": true,
+                                "foodSupplies": true,
+                                "waterSupplies": true,
+                                "medicalSupplies": true,
+                                "craftingMaterialsApoc": true,
+                                "hazardProtection": true,
+                                "environmentThreats": true,
+                                "timeSinceLastRest": true,
+                                "hopeLevel": true,
+                                "daysSurvived": true,
+                                "factionReputationApoc": true,
+                                "availablePower": true,
+                                "transportation": true,
+                                "communicationDevice": true
+                            }
+                        },
+                        "ancientHistory": {
+                            "enabled": false,
+                            "items": {
+                                "dynasty": true,
+                                "ruler": true,
+                                "socialRank": true,
+                                "officialPosition": false,
+                                "sectSchool": false,
+                                "jianghuAffiliation": false,
+                                "martialArtsStyle": false,
+                                "internalEnergy": false,
+                                "historicalEvents": true,
+                                "currencyAncient": true,
+                                "etiquetteCustoms": false,
+                                "importantBooks": false,
+                                "legendaryWeapons": false,
+                                "philosophy": false,
+                                "artForms": false
+                            }
+                        },
+                        "cultivation": {
+                            "enabled": false,
+                            "items": {
+                                "cultivationLevel": true,
+                                "spiritualPower": true,
+                                "techniques": true,
+                                "artifacts": true,
+                                "sect": false,
+                                "karma": false,
+                                "tribulation": false,
+                                "spiritualRoots": false
+                            }
+                        },
+                        "urban": {
+                            "enabled": false,
+                            "items": {
+                                "socialStatus": true,
+                                "bankAccount": true,
+                                "creditScore": false,
+                                "properties": false,
+                                "vehicles": false,
+                                "contacts": true,
+                                "schedule": false,
+                                "socialNetwork": false
+                            }
+                        },
+                        "fantasy": {
+                            "enabled": false,
+                            "items": {
+                                "magicPower": true,
+                                "spells": true,
+                                "magicItems": true,
+                                "guild": false,
+                                "reputation": false,
+                                "blessings": false,
+                                "familiars": false,
+                                "manaRegeneration": false
+                            }
+                        },
+                        "scifi": {
+                            "enabled": false,
+                            "items": {
+                                "cybernetics": true,
+                                "netrunning": false,
+                                "reputation": false,
+                                "augmentations": true,
+                                "aiCompanion": false,
+                                "spaceTravel": false,
+                                "techLevel": false,
+                                "cyberwareStatus": false
+                            }
+                        },
+                        "story": {
+                            "enabled": true,
+                            "items": {
+                                "mainQuest": true,
+                                "keyEvents": true,
+                                "storyArcs": true,
+                                "clues": true,
+                                "storySummary": false,
+                                "factionRelations": true,
+                                "plotTwists": true,
+                                "characterArcs": false,
+                                "unresolvedMysteries": true,
+                                "themesAndMotifs": false,
+                                "foreshadowing": true,
+                                "timelineSummary": false
+                            }
+                        },
+                        "world": {
+                            "enabled": true,
+                            "items": {
+                                "time": false,
+                                "location": false,
+                                "weather": false,
+                                "worldMap": true,
+                                "factions": true,
+                                "worldHistory": false,
+                                "culture": false,
+                                "localLaws": true,
+                                "localBeliefs": true,
+                                "gravity": false,
+                                "airComposition": false,
+                                "resources": false,
+                                "worldEvents": true,
+                                "worldRules": false,
+                                "geography": false,
+                                "climate": false,
+                                "keyLocationsDetails": true,
+                                "creaturesAndRaces": false,
+                                "organizationsAndPowers": false,
+                                "economyAndTrade": false,
+                                "magicTechSystem": false,
+                                "legendsAndMythology": false
+                            }
+                        },
+                        "dataManagement": {
+                            "enabled": true,
+                            "items": {}
+                        }
                     }
                 }
             }
@@ -4484,7 +4814,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 84,
+                "lastProcessedLength": 153,
                 "userConfigured": true
             }
         },
