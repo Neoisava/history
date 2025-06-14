@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
+        "LNavOpened": "true",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -16,8 +16,6 @@
         "WI_PerPage": "100",
         "AlertRegex_修仙之路2.0.png": "true",
         "AlertWI_修仙之路2.0.png": "true",
-        "AlertWI_(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png": "true",
-        "AlertRegex_(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png": "true",
         "AlertWI_地球异闻录.png": "true",
         "AlertRegex_地球异闻录.png": "true",
         "AlertWI_Metamorphosis.png": "true",
@@ -27,7 +25,7 @@
         "AlertRegex_破碎摇篮-重制版-3.5-Sonnet.png": "true",
         "Proxy_SkipConfirm_3014900888422102": "true"
     },
-    "currentVersion": "1.12.14",
+    "currentVersion": "1.13.0",
     "username": "林辰",
     "active_character": "破碎摇篮-重制版-3.5-Sonnet.png",
     "active_group": null,
@@ -46,7 +44,7 @@
                 "[Dreammini]预设世界书DLC1.6",
                 "信息栏 aplon",
                 "极乐迪斯科",
-                "献媚文风加强版",
+                "献媚文风加强版 (1)",
                 "部位特写"
             ],
             "charLore": [
@@ -205,8 +203,11 @@
             "no_repeat_ngram"
         ],
         "samplers": [
+            "penalties",
             "dry",
+            "top_n_sigma",
             "top_k",
+            "typ_p",
             "tfs_z",
             "typical_p",
             "top_p",
@@ -262,6 +263,7 @@
         "xtc_threshold": 0.1,
         "xtc_probability": 0,
         "nsigma": 0,
+        "min_keep": 0,
         "featherless_model": "",
         "generic_model": "",
         "rep_pen_size": 0
@@ -297,6 +299,7 @@
         "fast_ui_mode": true,
         "avatar_style": 2,
         "chat_display": 1,
+        "toastr_position": "toast-top-center",
         "chat_width": 50,
         "never_resize_avatars": true,
         "show_card_avatar_urls": false,
@@ -326,7 +329,7 @@
         "movingUIState": {},
         "movingUIPreset": "Default",
         "noShadows": true,
-        "theme": "地球异闻录",
+        "theme": "深色简约卡片",
         "gestures": true,
         "auto_swipe": false,
         "auto_swipe_minimum_length": 0,
@@ -515,6 +518,8 @@
         "forbid_external_media": false,
         "external_media_allowed_overrides": [],
         "external_media_forbidden_overrides": [],
+        "pin_styles": true,
+        "click_to_edit": false,
         "ui_mode": 1,
         "auto_sort_tags": false,
         "selectSamplers": {
@@ -2405,7 +2410,8 @@
         "autoConnect": false,
         "notifyUpdates": false,
         "disabledExtensions": [
-            "third-party/st-image-auto-generation"
+            "third-party/st-image-auto-generation",
+            "third-party/lorebook_update_listener"
         ],
         "expressionOverrides": [],
         "memory": {
@@ -2505,10 +2511,10 @@
                     "id": "4d09e37d-018b-4b60-9da2-0628a75f3aef",
                     "mode": "cc",
                     "exclude": [],
-                    "api": "custom",
+                    "api": "google",
                     "preset": "【Dreammini】1.14-ultra-0611",
                     "api-url": "https://api.skyi.cc/v1",
-                    "model": "[正常]gemini-2.5-pro-preview-03-25",
+                    "model": "gemini-2.5-pro-preview-06-05",
                     "stop-strings": "[]",
                     "start-reply-with": "",
                     "reasoning-template": "[Migrated] Custom",
@@ -2564,7 +2570,7 @@
                     1,
                     2
                 ],
-                "disabled": true,
+                "disabled": false,
                 "markdownOnly": false,
                 "promptOnly": true,
                 "runOnEdit": true,
@@ -3052,7 +3058,6 @@
         "character_allowed_regex": [
             "凡人修仙传·凤起灵绝·大罗真魂都市修仙灵气复苏（地图互动RPG带系统版）.png",
             "修仙之路2.0.png",
-            "(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png",
             "地球异闻录.png",
             "Metamorphosis.png",
             "破碎摇篮-重制版-3.5-Sonnet.png"
@@ -4611,7 +4616,7 @@
                         "content": "function extract_tags_from(name){return[...name.matchAll(/【(.*?)】/g)].map((match=>match[1].toLowerCase()))}function extract_control_tags(){return function sortUnique(array){return _.sortedUniq(_.sortBy(array))}([...extract_tags_from($(\"#settings_preset_openai\").find(\":selected\").text()),...$(\"#world_info\").find(\":selected\").toArray().map((node=>$(node).text())).flatMap(extract_tags_from),...extract_tags_from($(\"#connection_profiles\").find(\":checked\").text())])}function check_should_enable(title,tags){return[...title.matchAll(/【(.*?)】/g)].map((match=>match[1])).some((tag_list=>tag_list.split(\"&\").map((tag=>tag.toLowerCase())).every((expected=>tags.includes(expected)))))}const toggle_tags_throttled=_.throttle((async function toggle_tags(){const tags=extract_control_tags();!async function toggle_tagged_preset_prompts(tags){const prompt_identifiers_to_be_toggled=$(\"#completion_prompt_manager\").find(\"a[title]\").filter((function(){return null!==$(this).text().match(/【.*?】/)})).toArray().map((prompt_anchor=>{const $anchor=$(prompt_anchor),$li=$anchor.closest(\"li\");return{identifier:$li.attr(\"data-pm-identifier\"),should_toggle:check_should_enable($anchor.attr(\"title\"),tags)!==$li.find(\".prompt-manager-toggle-action\").hasClass(\"fa-toggle-on\")}})).filter((({should_toggle:should_toggle})=>should_toggle)).map((({identifier:identifier})=>`identifier=${identifier}`));0!==prompt_identifiers_to_be_toggled.length&&await triggerSlash(`/setpromptentry ${prompt_identifiers_to_be_toggled.join(\" \")}`)}(tags),async function toggle_tagged_regexes(tags){const regexes=getTavernRegexes({scope:\"all\"}),new_regexes=structuredClone(regexes);new_regexes.filter((regex=>null!==regex.script_name.match(/【.*?】/))).forEach((regex=>{regex.enabled=check_should_enable(regex.script_name,tags)})),_.isEqual(regexes,new_regexes)||await replaceTavernRegexes(new_regexes,{scope:\"all\"})}(tags),async function toggle_tagged_scripts(tags){const scripts_to_be_toggled=$(\"#script-settings-content\").find(\".script-item\").filter((function(){return null!==$(this).find(\".script-item-name\").text().match(/【.*?】/)})).toArray().map((script=>{const $div=$(script),should_enabled=check_should_enable($div.find(\".script-item-name\").text(),tags),is_enabled=$div.find(\".toggle-script\").prop(\"checked\");return{button:$div.find(\".script-toggle-\"+(is_enabled?\"on\":\"off\")),should_toggle:should_enabled!==is_enabled}})).filter((({should_toggle:should_toggle})=>should_toggle)).map((({button:button})=>button));for(const script of scripts_to_be_toggled)script.trigger(\"click\")}(tags)}),1e3,{trailing:!1});$((()=>{toggle_tags_throttled(),eventMakeFirst(tavern_events.SETTINGS_UPDATED,toggle_tags_throttled)}));\n",
                         "info": "# 标签化: 根据预设自动开关正则、根据模型自动切换破限\n\n**作者:** 青空莉想做舞台少女的狗\n**版本:** 2025/04/22\n**原帖:** [点此跳转](https://discord.com/channels/1291925535324110879/1344362686900605043)\n**源文件:** [点此跳转](https://gitgud.io/StageDog/tavern_resource/-/tree/main/酒馆助手/标签化/源文件?ref_type=heads)\n**说明:** 将酒馆标签化, 允许你根据预设自动开关正则、根据模型自动切换破限等\n\n## 演示视频\n\n- [标签化正则演示](https://gitgud.io/StageDog/tavern_resource/-/raw/main/酒馆助手/标签化/正则.mp4)\n- [标签化预设提示词演示](https://gitgud.io/StageDog/tavern_resource/-/raw/main/酒馆助手/标签化/预设提示词.mp4)\n\n## 使用说明\n\n- 在\"正则\"/\"预设提示词\"/\"酒馆助手脚本\"名称中添加它所属于的一个或多个`【标签】`\n- 在\"预设\"/\"世界书\"/\"API连接配置\"名称中添加对于它你想要启用的一个或多个`【标签】`\n\n这样一来，在使用\"预设\"/\"世界书\"/\"API连接配置\"时，脚本将会\n\n- 自动开启其对应的`【标签】`\"正则\"/\"预设提示词\"/\"酒馆助手脚本\"\n- 自动关闭没有被对应上的`【标签】`\"正则\"/\"预设提示词\"/\"酒馆助手脚本\"\n- 其他没有`【标签】`的\"正则\"/\"预设提示词\"/\"酒馆助手脚本\"不受任何影响\n\n### 当正则、预设提示词、酒馆助手脚本有多个标签\n\n- `【标签1】【标签2】` 表示\"或者\"，只要\"预设\"/\"世界书\"/\"API连接配置\"名称中有`【标签1】`或`【标签2】`就会启用\n- `【标签1&标签2】`表示\"并且\"，只有\"预设\"/\"世界书\"/\"API连接配置\"名称中同时有`【标签1】`和`【标签2】`才会启用\n",
                         "buttons": [],
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "id": "自动开启角色卡局部正则",
@@ -4779,7 +4784,8 @@
                 "newline",
                 "custom_1",
                 "custom_0",
-                "custom_2"
+                "custom_2",
+                "custom_3"
             ],
             "customSymbols": [
                 {
@@ -4799,6 +4805,12 @@
                     "symbol": "李若曦",
                     "display": "李若曦",
                     "cursorPos": "end"
+                },
+                {
+                    "name": "艾莉",
+                    "symbol": "艾莉",
+                    "display": "艾莉",
+                    "cursorPos": "end"
                 }
             ]
         },
@@ -4815,7 +4827,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 162,
+                "lastProcessedLength": 188,
                 "userConfigured": true
             }
         },
@@ -4886,6 +4898,22 @@
                     "client_stop_regex": false
                 }
             ]
+        },
+        "lorebook_update_listener": {
+            "enabled": true,
+            "url": "http://localhost:6620",
+            "duration": 100,
+            "enable_echo": true
+        },
+        "customModels": {
+            "provider": {
+                "claude": [],
+                "openai": [],
+                "google": [
+                    "gemini-2.5-pro-preview-06-05"
+                ]
+            },
+            "google_model": "gemini-2.5-pro-preview-05-06"
         }
     },
     "tags": [
@@ -5000,16 +5028,6 @@
         "undefined": [],
         "null": [],
         "修仙之路2.0.png": [],
-        "(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲.png": [
-            "7860d013-91ed-4081-804a-6bf999080078",
-            "00e02610-a578-4b76-8f94-2bc4250f0194",
-            "b083a4d7-32ad-40c2-ba2a-f0cacabf1fd1",
-            "2a874dea-9419-425c-9382-38e789657ba8",
-            "b58fc9bf-2d01-462c-b274-e3ab6dfe69cc",
-            "367c4c8e-f041-4a28-9f30-22f1dd97edc7",
-            "985defd2-95f8-4152-9ff6-71c9b0a8b728",
-            "149ac21c-db86-48f9-a891-590161d603ab"
-        ],
         "《完美世界》.png": [],
         "地球异闻录.png": [],
         "Metamorphosis.png": [],
@@ -5017,7 +5035,8 @@
         "破碎摇篮-重制版-3.5-Sonnet.png": [],
         "天渺大陆.png": [],
         "云天心NTRS版本1.png": [],
-        "主持人！.png": []
+        "主持人！.png": [],
+        "《万法盗天录》.png": []
     },
     "nai_settings": {
         "temperature": 1.37,
@@ -5128,7 +5147,7 @@
                 "name": "🎃用户性别字数调整(必改)🎃",
                 "system_prompt": true,
                 "role": "system",
-                "content": "{{setvar::userConfirm::用户}}\n\n{{//注解:<user>身份，重要，建议选项\n\"用户操作NPC\":   将角色与用户抽离，扮演<user>抢话用\n\"用户\":扮演<user>反抢话用\n\"NPC\":<user>用于纯小说用\n\"上帝视角\":<user>不存在于故事用\n}}\n\n{{setvar::gender::男}}\n{{//注解:用户性别，仅影响色情强化}}\n{{setvar::sexs::使用日本男性向色情小说的风格，请勿参考耽美、女性向、欧美的色情小说}}\n{{//注解:色情语料选择}}\n\n{{setvar::min::1000token}}\n{{//注解:正文最小字数}}\n\n{{setvar::max::2500token}}\n{{//注解:正文最大字数}}\n\n{{setvar::smallcot::3个}}\n{{setvar::smallcotl::100}}\n{{//注解:文笔修正数量与使用token长度}}\n\n{{setvar::min2::1000token}}\n{{//注解:截断小故事最小字数}}\n\n{{setvar::max2::1500token}}\n{{//注解:截断小故事最大字数}}\n\n\n",
+                "content": "{{setvar::userConfirm::用户}}\n\n{{//注解:<user>身份，重要，建议选项\n\"用户操作NPC\":   将角色与用户抽离，扮演<user>抢话用\n\"用户\":扮演<user>反抢话用\n\"NPC\":<user>用于纯小说用\n\"上帝视角\":<user>不存在于故事用\n}}\n\n{{setvar::gender::男}}\n{{//注解:用户性别，仅影响色情强化}}\n{{setvar::sexs::使用日本男性向色情小说的风格，请勿参考耽美、女性向、欧美的色情小说}}\n{{//注解:色情语料选择}}\n\n{{setvar::min::1000token}}\n{{//注解:正文最小字数}}\n\n{{setvar::max::3500token}}\n{{//注解:正文最大字数}}\n\n{{setvar::smallcot::3个}}\n{{setvar::smallcotl::100}}\n{{//注解:文笔修正数量与使用token长度}}\n\n{{setvar::min2::1000token}}\n{{//注解:截断小故事最小字数}}\n\n{{setvar::max2::1500token}}\n{{//注解:截断小故事最大字数}}\n\n\n",
                 "identifier": "jailbreak",
                 "injection_position": 0,
                 "injection_depth": 4,
@@ -7999,7 +8018,8 @@
         "personality_format": "{{personality}}",
         "openai_model": "gpt-4-turbo",
         "claude_model": "claude-3-5-sonnet-20240620",
-        "google_model": "gemini-2.5-pro-preview-03-25",
+        "google_model": "gemini-2.5-pro-preview-05-06",
+        "vertexai_model": "gemini-2.0-flash-001",
         "ai21_model": "jamba-1.5-large",
         "mistralai_model": "mistral-large-latest",
         "cohere_model": "command-r-plus",
@@ -8009,6 +8029,7 @@
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
+        "pollinations_model": "openai",
         "custom_model": "[正常]gemini-2.5-pro-preview-03-25",
         "custom_url": "https://api.skyi.cc/v1",
         "custom_include_body": "",
@@ -8047,7 +8068,8 @@
         "enable_web_search": false,
         "request_images": false,
         "seed": -1,
-        "n": 1
+        "n": 1,
+        "bind_preset_to_connection": true
     },
     "background": {
         "name": "_black.jpg",
@@ -8057,13 +8079,13 @@
     "proxies": [
         {
             "name": "None",
-            "url": "",
+            "url": "http://5.144.179.107:80",
             "password": ""
         }
     ],
     "selected_proxy": {
         "name": "None",
-        "url": "",
+        "url": "http://5.144.179.107:80",
         "password": ""
     }
 }
