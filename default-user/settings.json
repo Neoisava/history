@@ -4827,7 +4827,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 211,
+                "lastProcessedLength": 212,
                 "userConfigured": true
             }
         },
@@ -4913,7 +4913,7 @@
                     "gemini-2.5-pro-preview-06-05"
                 ]
             },
-            "google_model": "gemini-2.5-pro-preview-05-06"
+            "google_model": "gemini-2.5-pro-preview-06-05"
         }
     },
     "tags": [
@@ -8018,7 +8018,7 @@
         "personality_format": "{{personality}}",
         "openai_model": "gpt-4-turbo",
         "claude_model": "claude-3-5-sonnet-20240620",
-        "google_model": "gemini-2.5-pro-preview-05-06",
+        "google_model": "gemini-2.5-pro-preview-06-05",
         "vertexai_model": "gemini-2.0-flash-001",
         "ai21_model": "jamba-1.5-large",
         "mistralai_model": "mistral-large-latest",
