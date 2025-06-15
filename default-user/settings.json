@@ -2513,7 +2513,7 @@
                     "mode": "cc",
                     "exclude": [],
                     "api": "google",
-                    "preset": "【Dreammini】1.14-ultra-0611",
+                    "preset": "【Dreammini】1.2-ultra-0613",
                     "api-url": "https://api.skyi.cc/v1",
                     "model": "gemini-2.5-pro-preview-06-05",
                     "stop-strings": "[]",
@@ -4795,7 +4795,7 @@
                     "gemini-2.5-pro-preview-06-05"
                 ]
             },
-            "google_model": "gemini-2.5-pro-preview-05-06"
+            "google_model": "gemini-2.5-pro-preview-06-05"
         }
     },
     "tags": [
@@ -8006,7 +8006,7 @@
         "personality_format": "{{personality}}",
         "openai_model": "gpt-4-turbo",
         "claude_model": "claude-3-5-sonnet-20240620",
-        "google_model": "gemini-2.5-pro-preview-03-25",
+        "google_model": "gemini-2.5-pro-preview-06-05",
         "vertexai_model": "gemini-2.0-flash-001",
         "ai21_model": "jamba-1.5-large",
         "mistralai_model": "mistral-large-latest",
@@ -8032,7 +8032,7 @@
         "openrouter_allow_fallbacks": true,
         "openrouter_middleout": "on",
         "reverse_proxy": "http://5.144.179.107:80",
-        "chat_completion_source": "custom",
+        "chat_completion_source": "makersuite",
         "max_context_unlocked": true,
         "api_url_scale": "",
         "show_external_models": false,

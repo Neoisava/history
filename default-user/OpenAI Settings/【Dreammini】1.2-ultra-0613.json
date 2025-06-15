@@ -45,7 +45,7 @@
     "new_example_chat_prompt": "[Example Chat]",
     "continue_nudge_prompt": "[Continue the following message. Do not include ANY parts of the original message. Use capitalization and punctuation as if your reply is a part of the original message: {{lastChatMessage}}]",
     "bias_preset_selected": "Default (none)",
-    "reverse_proxy": "",
+    "reverse_proxy": "http://5.144.179.107:80",
     "proxy_password": "",
     "max_context_unlocked": true,
     "wi_format": "{0}",
@@ -2911,7 +2911,7 @@
                 },
                 {
                     "identifier": "64740e0a-fd2b-4a46-84ac-d4c4f2c40e29",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "b9e73056-cbe2-4b8b-8082-f6bce544af6a",
@@ -2959,7 +2959,7 @@
                 },
                 {
                     "identifier": "cc228202-a296-4618-afc4-d9aff3bf4021",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "c6fd3183-02ef-4ffd-8bf3-fb6167ccc866",
