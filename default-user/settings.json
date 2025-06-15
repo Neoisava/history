@@ -4694,7 +4694,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 3,
+                "lastProcessedLength": 4,
                 "userConfigured": true
             }
         },
@@ -7836,7 +7836,7 @@
                     },
                     {
                         "identifier": "331d8458-3423-48b5-b6d5-b8a2e05251a5",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "64740e0a-fd2b-4a46-84ac-d4c4f2c40e29",
