@@ -2411,7 +2411,8 @@
         "autoConnect": false,
         "notifyUpdates": false,
         "disabledExtensions": [
-            "third-party/st-image-auto-generation"
+            "third-party/st-image-auto-generation",
+            "third-party/lorebook_update_listener"
         ],
         "expressionOverrides": [],
         "memory": {
