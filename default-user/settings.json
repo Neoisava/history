@@ -4606,7 +4606,7 @@
             }
         },
         "st-input-helper": {
-            "enabled": false,
+            "enabled": true,
             "buttons": {
                 "asterisk": false,
                 "quotes": true,
@@ -4694,7 +4694,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 12,
+                "lastProcessedLength": 14,
                 "userConfigured": true
             }
         },
