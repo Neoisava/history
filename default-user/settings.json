@@ -2836,7 +2836,7 @@
             {
                 "id": "45fafe75-b142-4d26-bf70-f00eab6077b5",
                 "scriptName": "隐藏COT信息栏",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<aiThinkProcess>[\\s\\S]*?<\\/aiThinkProcess>|<infobar_data>[\\s\\S]*?<\\/infobar_data>/gi",
                 "replaceString": "",
@@ -2853,7 +2853,7 @@
             {
                 "id": "ce13c0c2-254d-4fef-97b4-a4f8985aab6b",
                 "scriptName": "思考隐藏v1",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<aiThinkProcess>[\\s\\S]*<\\/aiThinkProcess>/g",
                 "replaceString": "",
@@ -2870,7 +2870,7 @@
             {
                 "id": "15e946fd-7d84-4bd1-abc6-2d1908461667",
                 "scriptName": "归纳数据v2",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<thinkbiao>[\\s\\S]*<\\/thinkbiao>/g",
                 "replaceString": "",
