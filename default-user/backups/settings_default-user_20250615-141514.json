@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "true",
-        "NavOpened": "false",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -20,10 +20,13 @@
         "AlertRegex_地球异闻录.png": "true",
         "AlertWI_Metamorphosis.png": "true",
         "AlertRegex_Metamorphosis.png": "true",
-        "AlertWI_世界调制模式·重制版.png": "true",
         "AlertWI_破碎摇篮-重制版-3.5-Sonnet.png": "true",
         "AlertRegex_破碎摇篮-重制版-3.5-Sonnet.png": "true",
-        "Proxy_SkipConfirm_3014900888422102": "true"
+        "Proxy_SkipConfirm_3014900888422102": "true",
+        "AlertWI_《万法盗天录》.png": "true",
+        "AlertWI_世界调制模式·重制版.png": "true",
+        "AlertWI_主持人！.png": "true",
+        "AlertRegex_主持人！.png": "true"
     },
     "currentVersion": "1.13.0",
     "username": "林辰",
@@ -42,7 +45,6 @@
                 "--油猴世界书nai4(2)",
                 "-提示词大全",
                 "[Dreammini]预设世界书DLC1.6",
-                "信息栏 aplon",
                 "极乐迪斯科",
                 "献媚文风加强版 (1)",
                 "部位特写"
@@ -2512,7 +2514,7 @@
                     "mode": "cc",
                     "exclude": [],
                     "api": "google",
-                    "preset": "【Dreammini】1.14-ultra-0611",
+                    "preset": "【Dreammini】1.2-ultra-0613",
                     "api-url": "https://api.skyi.cc/v1",
                     "model": "gemini-2.5-pro-preview-06-05",
                     "stop-strings": "[]",
@@ -2836,7 +2838,7 @@
             {
                 "id": "45fafe75-b142-4d26-bf70-f00eab6077b5",
                 "scriptName": "隐藏COT信息栏",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<aiThinkProcess>[\\s\\S]*?<\\/aiThinkProcess>|<infobar_data>[\\s\\S]*?<\\/infobar_data>/gi",
                 "replaceString": "",
@@ -2853,7 +2855,7 @@
             {
                 "id": "ce13c0c2-254d-4fef-97b4-a4f8985aab6b",
                 "scriptName": "思考隐藏v1",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<aiThinkProcess>[\\s\\S]*<\\/aiThinkProcess>/g",
                 "replaceString": "",
@@ -2870,7 +2872,7 @@
             {
                 "id": "15e946fd-7d84-4bd1-abc6-2d1908461667",
                 "scriptName": "归纳数据v2",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<thinkbiao>[\\s\\S]*<\\/thinkbiao>/g",
                 "replaceString": "",
@@ -2941,7 +2943,8 @@
             "修仙之路2.0.png",
             "地球异闻录.png",
             "Metamorphosis.png",
-            "破碎摇篮-重制版-3.5-Sonnet.png"
+            "破碎摇篮-重制版-3.5-Sonnet.png",
+            "主持人！.png"
         ],
         "tts": {
             "voiceMap": "",
@@ -4624,7 +4627,6 @@
                 "custom_11": true,
                 "custom_4": true,
                 "custom_5": true,
-                "custom_2": true,
                 "custom_3": true,
                 "custom_1": true,
                 "custom_0": true
@@ -4648,7 +4650,6 @@
                 "custom_11": "",
                 "custom_4": "",
                 "custom_5": "",
-                "custom_2": "",
                 "custom_3": "",
                 "custom_1": "",
                 "custom_0": ""
@@ -4665,7 +4666,6 @@
                 "newline",
                 "custom_1",
                 "custom_0",
-                "custom_2",
                 "custom_3"
             ],
             "customSymbols": [
@@ -4679,18 +4679,6 @@
                     "name": "(显示资讯、能力和背包面板)",
                     "symbol": "(显示资讯、能力和背包面板)",
                     "display": "面板",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "李若曦",
-                    "symbol": "李若曦",
-                    "display": "李若曦",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "艾莉",
-                    "symbol": "艾莉",
-                    "display": "艾莉",
                     "cursorPos": "end"
                 }
             ]
@@ -4708,7 +4696,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 239,
+                "lastProcessedLength": 7,
                 "userConfigured": true
             }
         },
@@ -4912,12 +4900,12 @@
         "《完美世界》.png": [],
         "地球异闻录.png": [],
         "Metamorphosis.png": [],
-        "世界调制模式·重制版.png": [],
         "破碎摇篮-重制版-3.5-Sonnet.png": [],
         "天渺大陆.png": [],
         "云天心NTRS版本1.png": [],
         "主持人！.png": [],
-        "《万法盗天录》.png": []
+        "《万法盗天录》.png": [],
+        "世界调制模式·重制版.png": []
     },
     "nai_settings": {
         "temperature": 1.37,
@@ -4992,7 +4980,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": false,
+        "stream_openai": true,
         "openai_max_context": 1000000,
         "openai_max_tokens": 65500,
         "wrap_in_quotes": false,
@@ -7850,11 +7838,11 @@
                     },
                     {
                         "identifier": "331d8458-3423-48b5-b6d5-b8a2e05251a5",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "64740e0a-fd2b-4a46-84ac-d4c4f2c40e29",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "b9e73056-cbe2-4b8b-8082-f6bce544af6a",
@@ -7902,7 +7890,7 @@
                     },
                     {
                         "identifier": "cc228202-a296-4618-afc4-d9aff3bf4021",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "c6fd3183-02ef-4ffd-8bf3-fb6167ccc866",
@@ -8005,7 +7993,7 @@
         "personality_format": "{{personality}}",
         "openai_model": "gpt-4-turbo",
         "claude_model": "claude-3-5-sonnet-20240620",
-        "google_model": "gemini-2.5-pro-preview-03-25",
+        "google_model": "gemini-2.5-pro-preview-05-06",
         "vertexai_model": "gemini-2.0-flash-001",
         "ai21_model": "jamba-1.5-large",
         "mistralai_model": "mistral-large-latest",
@@ -8030,8 +8018,8 @@
         "openrouter_providers": [],
         "openrouter_allow_fallbacks": true,
         "openrouter_middleout": "on",
-        "reverse_proxy": "",
-        "chat_completion_source": "custom",
+        "reverse_proxy": "http://5.144.179.107:80",
+        "chat_completion_source": "makersuite",
         "max_context_unlocked": true,
         "api_url_scale": "",
         "show_external_models": false,
