@@ -4694,7 +4694,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 8,
+                "lastProcessedLength": 9,
                 "userConfigured": true
             }
         },
@@ -4936,9 +4936,9 @@
             4
         ],
         "logit_bias": [],
-        "phrase_rep_pen": "off",
         "mirostat_lr": 0.2,
-        "mirostat_tau": 4
+        "mirostat_tau": 4,
+        "phrase_rep_pen": "off"
     },
     "kai_settings": {
         "temp": 1,
