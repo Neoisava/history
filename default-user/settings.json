@@ -18,8 +18,6 @@
         "AlertWI_修仙之路2.0.png": "true",
         "AlertWI_地球异闻录.png": "true",
         "AlertRegex_地球异闻录.png": "true",
-        "AlertWI_Metamorphosis.png": "true",
-        "AlertRegex_Metamorphosis.png": "true",
         "AlertWI_破碎摇篮-重制版-3.5-Sonnet.png": "true",
         "AlertRegex_破碎摇篮-重制版-3.5-Sonnet.png": "true",
         "Proxy_SkipConfirm_3014900888422102": "true",
@@ -30,7 +28,7 @@
     },
     "currentVersion": "1.13.0",
     "username": "林辰",
-    "active_character": "破碎摇篮-重制版-3.5-Sonnet.png",
+    "active_character": null,
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2942,7 +2940,6 @@
             "凡人修仙传·凤起灵绝·大罗真魂都市修仙灵气复苏（地图互动RPG带系统版）.png",
             "修仙之路2.0.png",
             "地球异闻录.png",
-            "Metamorphosis.png",
             "破碎摇篮-重制版-3.5-Sonnet.png",
             "主持人！.png"
         ],
@@ -4696,7 +4693,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 80,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
@@ -4899,10 +4896,8 @@
         "修仙之路2.0.png": [],
         "《完美世界》.png": [],
         "地球异闻录.png": [],
-        "Metamorphosis.png": [],
         "破碎摇篮-重制版-3.5-Sonnet.png": [],
         "天渺大陆.png": [],
-        "云天心NTRS版本1.png": [],
         "主持人！.png": [],
         "《万法盗天录》.png": [],
         "世界调制模式·重制版.png": []
