@@ -18,8 +18,6 @@
         "AlertWI_修仙之路2.0.png": "true",
         "AlertWI_地球异闻录.png": "true",
         "AlertRegex_地球异闻录.png": "true",
-        "AlertWI_Metamorphosis.png": "true",
-        "AlertRegex_Metamorphosis.png": "true",
         "AlertWI_破碎摇篮-重制版-3.5-Sonnet.png": "true",
         "AlertRegex_破碎摇篮-重制版-3.5-Sonnet.png": "true",
         "Proxy_SkipConfirm_3014900888422102": "true",
@@ -30,7 +28,7 @@
     },
     "currentVersion": "1.13.0",
     "username": "林辰",
-    "active_character": "破碎摇篮-重制版-3.5-Sonnet.png",
+    "active_character": null,
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2942,7 +2940,6 @@
             "凡人修仙传·凤起灵绝·大罗真魂都市修仙灵气复苏（地图互动RPG带系统版）.png",
             "修仙之路2.0.png",
             "地球异闻录.png",
-            "Metamorphosis.png",
             "破碎摇篮-重制版-3.5-Sonnet.png",
             "主持人！.png"
         ],
@@ -4577,7 +4574,7 @@
                         "content": "import 'https://fastly.jsdelivr.net/gh/damoshen123/jiuguanzhushou/st.js'",
                         "info": "\n会提取 消息内的<image></image> 并显示在消息条目的下方。使用油猴生图的前端兼容模式。可以生图。\n\n\n2.\n你可以自己 写前端。这里开放了生图端口。\n\n发送 generate_image_request  事件  生图\n\n\n接着使用 eventOn  监听事件  generate_image_response  事件   接受\n\n主要简单的通过 前端助手的事件来沟通\neventEmit 发送事件 \neventOn  监听事件 \n\n\n\n        const EventType = {\n            GENERATE_IMAGE_REQUEST: 'generate_image_request',\n            GENERATE_IMAGE_RESPONSE: 'generate_image_response'\n        };\n\n发送 generate_image_request  事件\n\n参数\n\n                const requestData = {\n                    id: currentRequestId,//自定义的id用于自己识别是否同一个请求\n                    prompt: prompt,//提示词\n                    width: width,//宽度\n                    height: height,//高度\n                    type: 1  // 1就是生图、2会获取缓存，如果存在的话，不存在也是生图\n                };\n\n接着使用 eventOn  监听事件  generate_image_response  事件\n\n如果id 相同 则就成功。\n\n返回的是 base64 数据 可以直接  src 使用。\n",
                         "buttons": [],
-                        "enabled": true
+                        "enabled": false
                     }
                 ],
                 "characters_with_scripts": [
@@ -4696,7 +4693,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 7,
+                "lastProcessedLength": 85,
                 "userConfigured": true
             }
         },
@@ -4782,7 +4779,7 @@
                     "gemini-2.5-pro-preview-06-05"
                 ]
             },
-            "google_model": "gemini-2.5-pro-preview-05-06"
+            "google_model": "gemini-2.5-pro-preview-06-05"
         }
     },
     "tags": [
@@ -4899,13 +4896,12 @@
         "修仙之路2.0.png": [],
         "《完美世界》.png": [],
         "地球异闻录.png": [],
-        "Metamorphosis.png": [],
         "破碎摇篮-重制版-3.5-Sonnet.png": [],
         "天渺大陆.png": [],
-        "云天心NTRS版本1.png": [],
         "主持人！.png": [],
         "《万法盗天录》.png": [],
-        "世界调制模式·重制版.png": []
+        "世界调制模式·重制版.png": [],
+        "云无心最终版v2.png": []
     },
     "nai_settings": {
         "temperature": 1.37,
@@ -7318,7 +7314,7 @@
                 "system_prompt": false,
                 "enabled": false,
                 "marker": false,
-                "name": "废土",
+                "name": "1️⃣废土(事件风格)",
                 "role": "system",
                 "content": ".set(\"废土抗争\", \"系统将描绘一个文明毁灭后，被遗弃或变异的荒凉世界，强调资源的极度贫瘠与生存的艰辛。着重展现颓败的都市遗迹、恶劣的自然环境、异化的生物以及残存人类社群的挣扎与变异。故事将围绕在废土中的探索、资源的争夺、残酷的生存法则以及人性的拷问与坚守。\")\n<Dream.examples>\n\"‘北斗の拳’\",\n\"‘风の谷のナウシカ\",\n\"‘BLAME!’\"\n</Dream.examples>\n{{setvar::story25::废土抗争/}}\n",
                 "injection_position": 0,
@@ -7993,7 +7989,7 @@
         "personality_format": "{{personality}}",
         "openai_model": "gpt-4-turbo",
         "claude_model": "claude-3-5-sonnet-20240620",
-        "google_model": "gemini-2.5-pro-preview-05-06",
+        "google_model": "gemini-2.5-pro-preview-06-05",
         "vertexai_model": "gemini-2.0-flash-001",
         "ai21_model": "jamba-1.5-large",
         "mistralai_model": "mistral-large-latest",
