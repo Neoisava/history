@@ -24,7 +24,9 @@
         "AlertRegex_破碎摇篮-重制版-3.5-Sonnet.png": "true",
         "Proxy_SkipConfirm_3014900888422102": "true",
         "AlertWI_《万法盗天录》.png": "true",
-        "AlertWI_世界调制模式·重制版.png": "true"
+        "AlertWI_世界调制模式·重制版.png": "true",
+        "AlertWI_主持人！.png": "true",
+        "AlertRegex_主持人！.png": "true"
     },
     "currentVersion": "1.13.0",
     "username": "林辰",
@@ -43,7 +45,6 @@
                 "--油猴世界书nai4(2)",
                 "-提示词大全",
                 "[Dreammini]预设世界书DLC1.6",
-                "信息栏 aplon",
                 "极乐迪斯科",
                 "献媚文风加强版 (1)",
                 "部位特写"
@@ -2942,7 +2943,8 @@
             "修仙之路2.0.png",
             "地球异闻录.png",
             "Metamorphosis.png",
-            "破碎摇篮-重制版-3.5-Sonnet.png"
+            "破碎摇篮-重制版-3.5-Sonnet.png",
+            "主持人！.png"
         ],
         "tts": {
             "voiceMap": "",
@@ -4694,7 +4696,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 20,
+                "lastProcessedLength": 52,
                 "userConfigured": true
             }
         },
@@ -4780,7 +4782,7 @@
                     "gemini-2.5-pro-preview-06-05"
                 ]
             },
-            "google_model": "gemini-2.5-pro-preview-05-06"
+            "google_model": "gemini-2.5-pro-preview-06-05"
         }
     },
     "tags": [
@@ -7991,7 +7993,7 @@
         "personality_format": "{{personality}}",
         "openai_model": "gpt-4-turbo",
         "claude_model": "claude-3-5-sonnet-20240620",
-        "google_model": "gemini-2.5-pro-preview-05-06",
+        "google_model": "gemini-2.5-pro-preview-06-05",
         "vertexai_model": "gemini-2.0-flash-001",
         "ai21_model": "jamba-1.5-large",
         "mistralai_model": "mistral-large-latest",
