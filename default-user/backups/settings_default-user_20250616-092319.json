@@ -18,8 +18,6 @@
         "AlertWI_修仙之路2.0.png": "true",
         "AlertWI_地球异闻录.png": "true",
         "AlertRegex_地球异闻录.png": "true",
-        "AlertWI_Metamorphosis.png": "true",
-        "AlertRegex_Metamorphosis.png": "true",
         "AlertWI_破碎摇篮-重制版-3.5-Sonnet.png": "true",
         "AlertRegex_破碎摇篮-重制版-3.5-Sonnet.png": "true",
         "Proxy_SkipConfirm_3014900888422102": "true",
@@ -30,7 +28,7 @@
     },
     "currentVersion": "1.13.0",
     "username": "林辰",
-    "active_character": "破碎摇篮-重制版-3.5-Sonnet.png",
+    "active_character": null,
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2942,7 +2940,6 @@
             "凡人修仙传·凤起灵绝·大罗真魂都市修仙灵气复苏（地图互动RPG带系统版）.png",
             "修仙之路2.0.png",
             "地球异闻录.png",
-            "Metamorphosis.png",
             "破碎摇篮-重制版-3.5-Sonnet.png",
             "主持人！.png"
         ],
@@ -4696,7 +4693,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 15,
+                "lastProcessedLength": 86,
                 "userConfigured": true
             }
         },
@@ -4782,7 +4779,7 @@
                     "gemini-2.5-pro-preview-06-05"
                 ]
             },
-            "google_model": "gemini-2.5-pro-preview-05-06"
+            "google_model": "gemini-2.5-pro-preview-06-05"
         }
     },
     "tags": [
@@ -4899,13 +4896,12 @@
         "修仙之路2.0.png": [],
         "《完美世界》.png": [],
         "地球异闻录.png": [],
-        "Metamorphosis.png": [],
         "破碎摇篮-重制版-3.5-Sonnet.png": [],
         "天渺大陆.png": [],
-        "云天心NTRS版本1.png": [],
         "主持人！.png": [],
         "《万法盗天录》.png": [],
-        "世界调制模式·重制版.png": []
+        "世界调制模式·重制版.png": [],
+        "云无心最终版v2.png": []
     },
     "nai_settings": {
         "temperature": 1.37,
@@ -7318,7 +7314,7 @@
                 "system_prompt": false,
                 "enabled": false,
                 "marker": false,
-                "name": "废土",
+                "name": "1️⃣废土(事件风格)",
                 "role": "system",
                 "content": ".set(\"废土抗争\", \"系统将描绘一个文明毁灭后，被遗弃或变异的荒凉世界，强调资源的极度贫瘠与生存的艰辛。着重展现颓败的都市遗迹、恶劣的自然环境、异化的生物以及残存人类社群的挣扎与变异。故事将围绕在废土中的探索、资源的争夺、残酷的生存法则以及人性的拷问与坚守。\")\n<Dream.examples>\n\"‘北斗の拳’\",\n\"‘风の谷のナウシカ\",\n\"‘BLAME!’\"\n</Dream.examples>\n{{setvar::story25::废土抗争/}}\n",
                 "injection_position": 0,
@@ -7993,7 +7989,7 @@
         "personality_format": "{{personality}}",
         "openai_model": "gpt-4-turbo",
         "claude_model": "claude-3-5-sonnet-20240620",
-        "google_model": "gemini-2.5-pro-preview-05-06",
+        "google_model": "gemini-2.5-pro-preview-06-05",
         "vertexai_model": "gemini-2.0-flash-001",
         "ai21_model": "jamba-1.5-large",
         "mistralai_model": "mistral-large-latest",
