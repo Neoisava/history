@@ -2887,7 +2887,7 @@
             {
                 "id": "947b831f-faad-40fb-942c-00c5220b6c9e",
                 "scriptName": "替换-戏谑(可选)",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": false,
                 "findRegex": "/(戏谑)/g",
                 "replaceString": "{{random:玩味}}",
@@ -2904,7 +2904,7 @@
             {
                 "id": "021e005c-a493-4c7c-9a3a-cbf429bf68bf",
                 "scriptName": "删除-投石系",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": false,
                 "findRegex": "/(?:[,，]\\s*)?(?:(?:如同|仿佛|犹如|像)\\s+)?[^.。！？>:：”\\n]*?(?:掉落|掉入|掉进|抛入|抛进|抛落|落入|投进|投入|丢进|丢入|放入|投下)[^,，.。！？>:：”\\n]*?(?:(?:风|铁块|种子|铜块|金块|冰块|石头|石子|大石|巨石|炸弹|鹅卵石|清油|糖果|滴水|海绵|浓墨|闪电|催化剂|冷水|钥匙|水滴|冰水|冰山)[^,，.。！？>:：”\\n]*?[,，.。！？>:：”\\n][^,，.。！？>:：”\\n]*?涟漪[)）]?|(?:风|铁块|种子|铜块|金块|冰块|石头|石子|大石|巨石|炸弹|鹅卵石|清油|糖果|滴水|海绵|浓墨|闪电|催化剂|冷水|钥匙|水滴|冰水|冰山)[)）]?|[,，.。！？>:：”\\n][^,，.。！？>:：”\\n]*?涟漪[)）]?|[,，.。！？>:：”\\n])/g",
                 "replaceString": "",
@@ -2921,7 +2921,7 @@
             {
                 "id": "20e02fa0-7b63-4dc3-9e61-e5557c20b8fe",
                 "scriptName": "消除-指尖发白系（可选）",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": false,
                 "findRegex": "/[，,](?:[^。.!?！？]*?(?:手指|指尖|指节)[^。.!?！？]*?(?:泛白|发白)[^。.!?！？]*?)(?=[。.!?！？，,])/g",
                 "replaceString": "",
@@ -4693,7 +4693,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 98,
+                "lastProcessedLength": 99,
                 "userConfigured": true
             }
         },
