@@ -4574,7 +4574,7 @@
                         "content": "import 'https://fastly.jsdelivr.net/gh/damoshen123/jiuguanzhushou/st.js'",
                         "info": "\n会提取 消息内的<image></image> 并显示在消息条目的下方。使用油猴生图的前端兼容模式。可以生图。\n\n\n2.\n你可以自己 写前端。这里开放了生图端口。\n\n发送 generate_image_request  事件  生图\n\n\n接着使用 eventOn  监听事件  generate_image_response  事件   接受\n\n主要简单的通过 前端助手的事件来沟通\neventEmit 发送事件 \neventOn  监听事件 \n\n\n\n        const EventType = {\n            GENERATE_IMAGE_REQUEST: 'generate_image_request',\n            GENERATE_IMAGE_RESPONSE: 'generate_image_response'\n        };\n\n发送 generate_image_request  事件\n\n参数\n\n                const requestData = {\n                    id: currentRequestId,//自定义的id用于自己识别是否同一个请求\n                    prompt: prompt,//提示词\n                    width: width,//宽度\n                    height: height,//高度\n                    type: 1  // 1就是生图、2会获取缓存，如果存在的话，不存在也是生图\n                };\n\n接着使用 eventOn  监听事件  generate_image_response  事件\n\n如果id 相同 则就成功。\n\n返回的是 base64 数据 可以直接  src 使用。\n",
                         "buttons": [],
-                        "enabled": false
+                        "enabled": true
                     }
                 ],
                 "characters_with_scripts": [
@@ -4693,7 +4693,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 84,
+                "lastProcessedLength": 85,
                 "userConfigured": true
             }
         },
