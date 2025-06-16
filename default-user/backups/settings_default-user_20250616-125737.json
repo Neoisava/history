@@ -18,8 +18,6 @@
         "AlertWI_修仙之路2.0.png": "true",
         "AlertWI_地球异闻录.png": "true",
         "AlertRegex_地球异闻录.png": "true",
-        "AlertWI_Metamorphosis.png": "true",
-        "AlertRegex_Metamorphosis.png": "true",
         "AlertWI_破碎摇篮-重制版-3.5-Sonnet.png": "true",
         "AlertRegex_破碎摇篮-重制版-3.5-Sonnet.png": "true",
         "Proxy_SkipConfirm_3014900888422102": "true",
@@ -42,7 +40,7 @@
         "world_info": {
             "globalSelect": [
                 "__性爱世界书",
-                "--油猴世界书nai4(2)",
+                "--油猴世界书nai4改(6)",
                 "-提示词大全",
                 "[Dreammini]预设世界书DLC1.6",
                 "极乐迪斯科",
@@ -2889,7 +2887,7 @@
             {
                 "id": "947b831f-faad-40fb-942c-00c5220b6c9e",
                 "scriptName": "替换-戏谑(可选)",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": false,
                 "findRegex": "/(戏谑)/g",
                 "replaceString": "{{random:玩味}}",
@@ -2906,7 +2904,7 @@
             {
                 "id": "021e005c-a493-4c7c-9a3a-cbf429bf68bf",
                 "scriptName": "删除-投石系",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": false,
                 "findRegex": "/(?:[,，]\\s*)?(?:(?:如同|仿佛|犹如|像)\\s+)?[^.。！？>:：”\\n]*?(?:掉落|掉入|掉进|抛入|抛进|抛落|落入|投进|投入|丢进|丢入|放入|投下)[^,，.。！？>:：”\\n]*?(?:(?:风|铁块|种子|铜块|金块|冰块|石头|石子|大石|巨石|炸弹|鹅卵石|清油|糖果|滴水|海绵|浓墨|闪电|催化剂|冷水|钥匙|水滴|冰水|冰山)[^,，.。！？>:：”\\n]*?[,，.。！？>:：”\\n][^,，.。！？>:：”\\n]*?涟漪[)）]?|(?:风|铁块|种子|铜块|金块|冰块|石头|石子|大石|巨石|炸弹|鹅卵石|清油|糖果|滴水|海绵|浓墨|闪电|催化剂|冷水|钥匙|水滴|冰水|冰山)[)）]?|[,，.。！？>:：”\\n][^,，.。！？>:：”\\n]*?涟漪[)）]?|[,，.。！？>:：”\\n])/g",
                 "replaceString": "",
@@ -2923,7 +2921,7 @@
             {
                 "id": "20e02fa0-7b63-4dc3-9e61-e5557c20b8fe",
                 "scriptName": "消除-指尖发白系（可选）",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": false,
                 "findRegex": "/[，,](?:[^。.!?！？]*?(?:手指|指尖|指节)[^。.!?！？]*?(?:泛白|发白)[^。.!?！？]*?)(?=[。.!?！？，,])/g",
                 "replaceString": "",
@@ -2942,7 +2940,6 @@
             "凡人修仙传·凤起灵绝·大罗真魂都市修仙灵气复苏（地图互动RPG带系统版）.png",
             "修仙之路2.0.png",
             "地球异闻录.png",
-            "Metamorphosis.png",
             "破碎摇篮-重制版-3.5-Sonnet.png",
             "主持人！.png"
         ],
@@ -4696,7 +4693,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 30,
-                "lastProcessedLength": 32,
+                "lastProcessedLength": 107,
                 "userConfigured": true
             }
         },
@@ -4899,13 +4896,12 @@
         "修仙之路2.0.png": [],
         "《完美世界》.png": [],
         "地球异闻录.png": [],
-        "Metamorphosis.png": [],
         "破碎摇篮-重制版-3.5-Sonnet.png": [],
         "天渺大陆.png": [],
-        "云天心NTRS版本1.png": [],
         "主持人！.png": [],
         "《万法盗天录》.png": [],
-        "世界调制模式·重制版.png": []
+        "世界调制模式·重制版.png": [],
+        "云无心最终版v2.png": []
     },
     "nai_settings": {
         "temperature": 1.37,
@@ -7318,7 +7314,7 @@
                 "system_prompt": false,
                 "enabled": false,
                 "marker": false,
-                "name": "废土",
+                "name": "1️⃣废土(事件风格)",
                 "role": "system",
                 "content": ".set(\"废土抗争\", \"系统将描绘一个文明毁灭后，被遗弃或变异的荒凉世界，强调资源的极度贫瘠与生存的艰辛。着重展现颓败的都市遗迹、恶劣的自然环境、异化的生物以及残存人类社群的挣扎与变异。故事将围绕在废土中的探索、资源的争夺、残酷的生存法则以及人性的拷问与坚守。\")\n<Dream.examples>\n\"‘北斗の拳’\",\n\"‘风の谷のナウシカ\",\n\"‘BLAME!’\"\n</Dream.examples>\n{{setvar::story25::废土抗争/}}\n",
                 "injection_position": 0,
