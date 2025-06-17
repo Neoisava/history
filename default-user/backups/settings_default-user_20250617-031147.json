@@ -2,8 +2,8 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
-        "NavOpened": "true",
+        "LNavOpened": "false",
+        "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -28,7 +28,7 @@
     },
     "currentVersion": "1.13.0",
     "username": "林辰",
-    "active_character": "破碎摇篮-重制版-3.5-Sonnet.png",
+    "active_character": null,
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -43,6 +43,8 @@
                 "--油猴世界书nai4改(6)",
                 "-提示词大全",
                 "[Dreammini]预设世界书DLC1.6",
+                "【姿势】宝典（SSVGG知识库）",
+                "【神话】SSVGG4.0（世界书本体）",
                 "极乐迪斯科",
                 "献媚文风加强版 (1)",
                 "部位特写"
@@ -76,8 +78,7 @@
                         "新二次元性格对话",
                         "母性世界书",
                         "渲染库模板",
-                        "道德伦理(1)",
-                        "针对2.5pro的瑟瑟场景"
+                        "道德伦理(1)"
                     ]
                 },
                 {
@@ -100,13 +101,11 @@
                 {
                     "name": "(完全整张卡重置)(地图优化游戏交互版)凡人修仙传之又起天南·我的内门弟子母亲",
                     "extraBooks": [
-                        "SSVGG 2.0",
                         "人类本能世界书",
                         "多维情感网络动态",
                         "母性世界书",
                         "渲染库模板",
-                        "道德伦理(1)",
-                        "针对2.5pro的瑟瑟场景"
+                        "道德伦理(1)"
                     ]
                 }
             ]
@@ -4692,8 +4691,8 @@
             "migration_v1_complete": true,
             "useGlobalSettings": true,
             "globalHideSettings": {
-                "hideLastN": 30,
-                "lastProcessedLength": 105,
+                "hideLastN": 20,
+                "lastProcessedLength": 201,
                 "userConfigured": true
             }
         },
