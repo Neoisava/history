@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "false",
-        "NavOpened": "false",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -4692,7 +4692,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 193,
+                "lastProcessedLength": 228,
                 "userConfigured": true
             }
         },
@@ -6600,7 +6600,7 @@
                 "marker": false,
                 "name": "🤔强化色情描述(可选)",
                 "role": "user",
-                "content": "- Dreamer 最后的创作，将会基于色情描写的动作详细性，体位多样性，肢体物理准确性而评分\n\n- 如何使用<sex_sytle>让描写调动 {{getvar::gender}}性用户性欲(简短)\n\n\n",
+                "content": "- Dreamer 最后的创作，将会基于色情描写的动作详细性，体位多样性，肢体物理准确性而评分\n\n- 如何使用<sex_sytle>和<writing_style1>让描写调动 {{getvar::gender}}性用户性欲(简短)\n\n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false,
@@ -7385,11 +7385,11 @@
                     },
                     {
                         "identifier": "f13388f6-345d-4891-8518-3ce94eed665e",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "76fcd970-8ea4-40b0-8336-9504054b10bc",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "0fa44cb3-b628-4064-9a60-39f20bd8e471",
@@ -7417,7 +7417,7 @@
                     },
                     {
                         "identifier": "26f3c45d-2702-4f8a-a344-15fa00ccea21",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "d2370f29-111e-44ef-a3ca-d1af90011720",
@@ -7933,7 +7933,7 @@
                     },
                     {
                         "identifier": "2d0b09ba-6120-4769-a49a-e27f4c99cb0e",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "83be0196-53ef-4b5c-897c-c4cf1d2ae433",
