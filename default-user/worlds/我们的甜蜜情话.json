@@ -32,7 +32,13 @@
             "sticky": 0,
             "cooldown": 0,
             "delay": 0,
-            "displayIndex": 0
+            "displayIndex": 0,
+            "matchPersonaDescription": false,
+            "matchCharacterDescription": false,
+            "matchCharacterPersonality": false,
+            "matchCharacterDepthPrompt": false,
+            "matchScenario": false,
+            "matchCreatorNotes": false
         }
     }
 }
