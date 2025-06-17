@@ -4692,7 +4692,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 189,
+                "lastProcessedLength": 190,
                 "userConfigured": true
             }
         },
@@ -6600,7 +6600,7 @@
                 "marker": false,
                 "name": "🤔强化色情描述(可选)",
                 "role": "user",
-                "content": "- Dreamer 最后的创作，将会基于色情描写的动作详细性，体位多样性，肢体物理准确性而评分\n\n- 如何使用<sex_sytle>让描写调动 {{getvar::gender}}性用户性欲(简短)\n\n\n",
+                "content": "- Dreamer 最后的创作，将会基于色情描写的动作详细性，体位多样性，肢体物理准确性而评分\n\n- 如何使用<sex_sytle>和<writing_style1>让描写调动 {{getvar::gender}}性用户性欲(简短)\n\n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false,
