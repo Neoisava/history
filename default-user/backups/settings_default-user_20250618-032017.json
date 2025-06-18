@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -24,11 +24,12 @@
         "AlertWI_《万法盗天录》.png": "true",
         "AlertWI_世界调制模式·重制版.png": "true",
         "AlertWI_主持人！.png": "true",
-        "AlertRegex_主持人！.png": "true"
+        "AlertRegex_主持人！.png": "true",
+        "WelcomePage_RecentChatsHidden": "true"
     },
     "currentVersion": "1.13.0",
     "username": "林辰",
-    "active_character": null,
+    "active_character": "破碎摇篮-重制版-3.5-Sonnet.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2513,7 +2514,7 @@
                     "api": "google",
                     "preset": "【Dreammini】1.2-ultra-0613",
                     "api-url": "https://api.skyi.cc/v1",
-                    "model": "gemini-2.5-pro-preview-06-05",
+                    "model": "gemini-2.5-pro",
                     "stop-strings": "[]",
                     "start-reply-with": "",
                     "reasoning-template": "[Migrated] Custom",
@@ -4692,7 +4693,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 191,
+                "lastProcessedLength": 204,
                 "userConfigured": true
             }
         },
@@ -4775,10 +4776,10 @@
                 "claude": [],
                 "openai": [],
                 "google": [
-                    "gemini-2.5-pro-preview-06-05"
+                    "gemini-2.5-pro"
                 ]
             },
-            "google_model": "gemini-2.5-pro-preview-06-05"
+            "google_model": "gemini-2.5-pro"
         }
     },
     "tags": [
@@ -7988,7 +7989,7 @@
         "personality_format": "{{personality}}",
         "openai_model": "gpt-4-turbo",
         "claude_model": "claude-3-5-sonnet-20240620",
-        "google_model": "gemini-2.5-pro-preview-06-05",
+        "google_model": "gemini-2.5-pro",
         "vertexai_model": "gemini-2.0-flash-001",
         "ai21_model": "jamba-1.5-large",
         "mistralai_model": "mistral-large-latest",
@@ -8000,8 +8001,8 @@
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
         "pollinations_model": "openai",
-        "custom_model": "[正常]gemini-2.5-pro-preview-03-25",
-        "custom_url": "https://api.skyi.cc/v1",
+        "custom_model": "[vc]gemini-2.5-pro",
+        "custom_url": "https://new.api-kk.shop/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
         "custom_include_headers": "",
