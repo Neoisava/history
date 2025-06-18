@@ -24,7 +24,8 @@
         "AlertWI_《万法盗天录》.png": "true",
         "AlertWI_世界调制模式·重制版.png": "true",
         "AlertWI_主持人！.png": "true",
-        "AlertRegex_主持人！.png": "true"
+        "AlertRegex_主持人！.png": "true",
+        "WelcomePage_RecentChatsHidden": "true"
     },
     "currentVersion": "1.13.0",
     "username": "林辰",
@@ -4692,7 +4693,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 205,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
@@ -4775,11 +4776,10 @@
                 "claude": [],
                 "openai": [],
                 "google": [
-                    "gemini-2.5-pro-preview-06-05",
                     "gemini-2.5-pro"
                 ]
             },
-            "google_model": "gemini-2.5-pro-preview-06-05"
+            "google_model": "gemini-2.5-pro"
         }
     },
     "tags": [
@@ -4976,7 +4976,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": false,
+        "stream_openai": true,
         "openai_max_context": 1000000,
         "openai_max_tokens": 65500,
         "wrap_in_quotes": false,
@@ -7989,7 +7989,7 @@
         "personality_format": "{{personality}}",
         "openai_model": "gpt-4-turbo",
         "claude_model": "claude-3-5-sonnet-20240620",
-        "google_model": "gemini-2.5-pro-preview-06-05",
+        "google_model": "gemini-2.5-pro",
         "vertexai_model": "gemini-2.0-flash-001",
         "ai21_model": "jamba-1.5-large",
         "mistralai_model": "mistral-large-latest",
