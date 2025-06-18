@@ -2,8 +2,8 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
-        "NavOpened": "true",
+        "LNavOpened": "false",
+        "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -29,7 +29,7 @@
     },
     "currentVersion": "1.13.0",
     "username": "林辰",
-    "active_character": null,
+    "active_character": "破碎摇篮-重制版-3.5-Sonnet.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -4693,7 +4693,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 205,
                 "userConfigured": true
             }
         },
@@ -8001,7 +8001,7 @@
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
         "pollinations_model": "openai",
-        "custom_model": "[ch]gemini-2.5-pro-preview-06-05",
+        "custom_model": "[vc]gemini-2.5-pro",
         "custom_url": "https://new.api-kk.shop/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
@@ -8015,7 +8015,7 @@
         "openrouter_allow_fallbacks": true,
         "openrouter_middleout": "on",
         "reverse_proxy": "http://5.144.179.107:80",
-        "chat_completion_source": "makersuite",
+        "chat_completion_source": "custom",
         "max_context_unlocked": true,
         "api_url_scale": "",
         "show_external_models": false,
