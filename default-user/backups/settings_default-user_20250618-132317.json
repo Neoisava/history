@@ -24,11 +24,12 @@
         "AlertWI_《万法盗天录》.png": "true",
         "AlertWI_世界调制模式·重制版.png": "true",
         "AlertWI_主持人！.png": "true",
-        "AlertRegex_主持人！.png": "true"
+        "AlertRegex_主持人！.png": "true",
+        "WelcomePage_RecentChatsHidden": "true"
     },
     "currentVersion": "1.13.0",
     "username": "林辰",
-    "active_character": null,
+    "active_character": "破碎摇篮-重制版-3.5-Sonnet.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2513,7 +2514,7 @@
                     "api": "google",
                     "preset": "【Dreammini】1.2-ultra-0613",
                     "api-url": "https://api.skyi.cc/v1",
-                    "model": "gemini-2.5-pro-preview-06-05",
+                    "model": "gemini-2.5-pro",
                     "stop-strings": "[]",
                     "start-reply-with": "",
                     "reasoning-template": "[Migrated] Custom",
@@ -4692,7 +4693,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 239,
+                "lastProcessedLength": 234,
                 "userConfigured": true
             }
         },
@@ -4775,7 +4776,6 @@
                 "claude": [],
                 "openai": [],
                 "google": [
-                    "gemini-2.5-pro-preview-06-05",
                     "gemini-2.5-pro"
                 ]
             },
@@ -4976,7 +4976,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": false,
+        "stream_openai": true,
         "openai_max_context": 1000000,
         "openai_max_tokens": 65500,
         "wrap_in_quotes": false,
@@ -8001,7 +8001,7 @@
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
         "pollinations_model": "openai",
-        "custom_model": "[ch]gemini-2.5-pro-preview-06-05",
+        "custom_model": "[vc]gemini-2.5-pro",
         "custom_url": "https://new.api-kk.shop/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
@@ -8015,7 +8015,7 @@
         "openrouter_allow_fallbacks": true,
         "openrouter_middleout": "on",
         "reverse_proxy": "http://5.144.179.107:80",
-        "chat_completion_source": "custom",
+        "chat_completion_source": "makersuite",
         "max_context_unlocked": true,
         "api_url_scale": "",
         "show_external_models": false,
