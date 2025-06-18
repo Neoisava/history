@@ -2513,7 +2513,7 @@
                     "api": "google",
                     "preset": "【Dreammini】1.2-ultra-0613",
                     "api-url": "https://api.skyi.cc/v1",
-                    "model": "gemini-2.5-pro-preview-06-05",
+                    "model": "gemini-2.5-pro",
                     "stop-strings": "[]",
                     "start-reply-with": "",
                     "reasoning-template": "[Migrated] Custom",
@@ -4692,7 +4692,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 242,
+                "lastProcessedLength": 205,
                 "userConfigured": true
             }
         },
@@ -8015,7 +8015,7 @@
         "openrouter_allow_fallbacks": true,
         "openrouter_middleout": "on",
         "reverse_proxy": "http://5.144.179.107:80",
-        "chat_completion_source": "custom",
+        "chat_completion_source": "makersuite",
         "max_context_unlocked": true,
         "api_url_scale": "",
         "show_external_models": false,
