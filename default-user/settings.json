@@ -31,7 +31,7 @@
     },
     "currentVersion": "1.13.0",
     "username": "林东",
-    "active_character": "天渺大陆.png",
+    "active_character": null,
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -49,7 +49,6 @@
                 "-【基本】XP兼特征兼行为兼规则兼世界观世界书·第二册",
                 "-提示词大全",
                 "[Dreammini]预设世界书DLC1.6",
-                "极乐迪斯科",
                 "献媚文风加强版 (1)",
                 "部位特写"
             ],
@@ -4697,7 +4696,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 1,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
@@ -7503,7 +7502,7 @@
                     },
                     {
                         "identifier": "a71691f0-ba69-4754-8a45-bac0eaf112ef",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "01a619c3-b95c-40df-bdde-67bc4e033b52",
@@ -7559,7 +7558,7 @@
                     },
                     {
                         "identifier": "78070f8c-1f7a-428c-9e88-fdba6aeaa021",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "fc9ca00a-f765-4be7-b22f-da5536e2fa04",
@@ -7575,7 +7574,7 @@
                     },
                     {
                         "identifier": "988320eb-1c76-4d9a-bd3e-8ce96e12e43b",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "7a29c1f5-4f53-40cf-b3e5-35aa01122935",
