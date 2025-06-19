@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "true",
-        "NavOpened": "true",
+        "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -31,7 +31,7 @@
     },
     "currentVersion": "1.13.0",
     "username": "林东",
-    "active_character": null,
+    "active_character": "天渺大陆.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -7522,7 +7522,7 @@
                     },
                     {
                         "identifier": "7775a027-c11c-44e6-915d-aea1897dfd1f",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "d35213bd-4eae-4052-9397-e335510fe6f3",
@@ -7530,11 +7530,11 @@
                     },
                     {
                         "identifier": "a7c40be7-317f-45ee-afc9-f2736dbc3c7c",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "33c33301-973f-47a3-982f-9b891f411c1f",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "18fa1b2c-70ec-41f3-bdcd-f40a7dc6bab8",
@@ -7846,7 +7846,7 @@
                     },
                     {
                         "identifier": "b9e73056-cbe2-4b8b-8082-f6bce544af6a",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "a96c52e7-0b85-4323-af18-eb766b5ee5d3",
