@@ -2,8 +2,8 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
-        "NavOpened": "true",
+        "LNavOpened": "false",
+        "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -22,10 +22,11 @@
         "AlertRegex_破碎摇篮-重制版-3.5-Sonnet.png": "true",
         "Proxy_SkipConfirm_3014900888422102": "true",
         "AlertWI_《万法盗天录》.png": "true",
-        "AlertWI_世界调制模式·重制版.png": "true",
         "AlertWI_主持人！.png": "true",
         "AlertRegex_主持人！.png": "true",
-        "WelcomePage_RecentChatsHidden": "true"
+        "WelcomePage_RecentChatsHidden": "true",
+        "AlertWI_人生复本.png": "true",
+        "AlertRegex_人生复本.png": "true"
     },
     "currentVersion": "1.13.0",
     "username": "林辰",
@@ -2941,7 +2942,8 @@
             "修仙之路2.0.png",
             "地球异闻录.png",
             "破碎摇篮-重制版-3.5-Sonnet.png",
-            "主持人！.png"
+            "主持人！.png",
+            "人生复本.png"
         ],
         "tts": {
             "voiceMap": "",
@@ -4497,7 +4499,7 @@
                         "content": "function extract_tags_from(name){return[...name.matchAll(/【(.*?)】/g)].map((match=>match[1].toLowerCase()))}function extract_control_tags(){return function sortUnique(array){return _.sortedUniq(_.sortBy(array))}([...extract_tags_from($(\"#settings_preset_openai\").find(\":selected\").text()),...$(\"#world_info\").find(\":selected\").toArray().map((node=>$(node).text())).flatMap(extract_tags_from),...extract_tags_from($(\"#connection_profiles\").find(\":checked\").text())])}function check_should_enable(title,tags){return[...title.matchAll(/【(.*?)】/g)].map((match=>match[1])).some((tag_list=>tag_list.split(\"&\").map((tag=>tag.toLowerCase())).every((expected=>tags.includes(expected)))))}const toggle_tags_throttled=_.throttle((async function toggle_tags(){const tags=extract_control_tags();!async function toggle_tagged_preset_prompts(tags){const prompt_identifiers_to_be_toggled=$(\"#completion_prompt_manager\").find(\"a[title]\").filter((function(){return null!==$(this).text().match(/【.*?】/)})).toArray().map((prompt_anchor=>{const $anchor=$(prompt_anchor),$li=$anchor.closest(\"li\");return{identifier:$li.attr(\"data-pm-identifier\"),should_toggle:check_should_enable($anchor.attr(\"title\"),tags)!==$li.find(\".prompt-manager-toggle-action\").hasClass(\"fa-toggle-on\")}})).filter((({should_toggle:should_toggle})=>should_toggle)).map((({identifier:identifier})=>`identifier=${identifier}`));0!==prompt_identifiers_to_be_toggled.length&&await triggerSlash(`/setpromptentry ${prompt_identifiers_to_be_toggled.join(\" \")}`)}(tags),async function toggle_tagged_regexes(tags){const regexes=getTavernRegexes({scope:\"all\"}),new_regexes=structuredClone(regexes);new_regexes.filter((regex=>null!==regex.script_name.match(/【.*?】/))).forEach((regex=>{regex.enabled=check_should_enable(regex.script_name,tags)})),_.isEqual(regexes,new_regexes)||await replaceTavernRegexes(new_regexes,{scope:\"all\"})}(tags),async function toggle_tagged_scripts(tags){const scripts_to_be_toggled=$(\"#script-settings-content\").find(\".script-item\").filter((function(){return null!==$(this).find(\".script-item-name\").text().match(/【.*?】/)})).toArray().map((script=>{const $div=$(script),should_enabled=check_should_enable($div.find(\".script-item-name\").text(),tags),is_enabled=$div.find(\".toggle-script\").prop(\"checked\");return{button:$div.find(\".script-toggle-\"+(is_enabled?\"on\":\"off\")),should_toggle:should_enabled!==is_enabled}})).filter((({should_toggle:should_toggle})=>should_toggle)).map((({button:button})=>button));for(const script of scripts_to_be_toggled)script.trigger(\"click\")}(tags)}),1e3,{trailing:!1});$((()=>{toggle_tags_throttled(),eventMakeFirst(tavern_events.SETTINGS_UPDATED,toggle_tags_throttled)}));\n",
                         "info": "# 标签化: 根据预设自动开关正则、根据模型自动切换破限\n\n**作者:** 青空莉想做舞台少女的狗\n**版本:** 2025/04/22\n**原帖:** [点此跳转](https://discord.com/channels/1291925535324110879/1344362686900605043)\n**源文件:** [点此跳转](https://gitgud.io/StageDog/tavern_resource/-/tree/main/酒馆助手/标签化/源文件?ref_type=heads)\n**说明:** 将酒馆标签化, 允许你根据预设自动开关正则、根据模型自动切换破限等\n\n## 演示视频\n\n- [标签化正则演示](https://gitgud.io/StageDog/tavern_resource/-/raw/main/酒馆助手/标签化/正则.mp4)\n- [标签化预设提示词演示](https://gitgud.io/StageDog/tavern_resource/-/raw/main/酒馆助手/标签化/预设提示词.mp4)\n\n## 使用说明\n\n- 在\"正则\"/\"预设提示词\"/\"酒馆助手脚本\"名称中添加它所属于的一个或多个`【标签】`\n- 在\"预设\"/\"世界书\"/\"API连接配置\"名称中添加对于它你想要启用的一个或多个`【标签】`\n\n这样一来，在使用\"预设\"/\"世界书\"/\"API连接配置\"时，脚本将会\n\n- 自动开启其对应的`【标签】`\"正则\"/\"预设提示词\"/\"酒馆助手脚本\"\n- 自动关闭没有被对应上的`【标签】`\"正则\"/\"预设提示词\"/\"酒馆助手脚本\"\n- 其他没有`【标签】`的\"正则\"/\"预设提示词\"/\"酒馆助手脚本\"不受任何影响\n\n### 当正则、预设提示词、酒馆助手脚本有多个标签\n\n- `【标签1】【标签2】` 表示\"或者\"，只要\"预设\"/\"世界书\"/\"API连接配置\"名称中有`【标签1】`或`【标签2】`就会启用\n- `【标签1&标签2】`表示\"并且\"，只有\"预设\"/\"世界书\"/\"API连接配置\"名称中同时有`【标签1】`和`【标签2】`才会启用\n",
                         "buttons": [],
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "id": "自动开启角色卡局部正则",
@@ -4529,7 +4531,7 @@
                         "content": "$(() => {\n  // 在收到消息后触发标签修复功能\n  eventOn(tavern_events.MESSAGE_RECEIVED, () => {\n    // 获取最新的一条消息\n    const lastMessage = SillyTavern.chat[SillyTavern.chat.length - 1];\n    \n    // 检查消息是否存在\n    if (lastMessage && lastMessage.mes) {\n      // 修复消息中的标签\n      lastMessage.mes = fixMissingTags(lastMessage.mes);\n    }\n  });\n  \n  /**\n   * 简单修复HTML中缺失的闭合标签\n   * @param {string} html - 包含可能缺失闭合标签的HTML字符串\n   * @return {string} - 修复后的HTML字符串\n   */\n  function fixMissingTags(html) {\n    if (!html || typeof html !== 'string') {\n      return html;\n    }\n    \n    // 使用正则表达式找出所有的开标签和闭标签\n    const tagRegex = /<\\/?([^\\s>/]+)[^>]*>/g;\n    const tags = [];\n    let match;\n    \n    // 收集所有标签信息\n    while ((match = tagRegex.exec(html)) !== null) {\n      const fullTag = match[0];\n      const tagName = match[1];\n      const isClosingTag = fullTag.startsWith('</');\n      const position = match.index;\n      const endPosition = position + fullTag.length;\n      \n      tags.push({\n        fullTag,\n        tagName,\n        isClosingTag,\n        position,\n        endPosition\n      });\n    }\n    \n    // 计算每种标签的开闭标签数量\n    const tagCounts = {};\n    tags.forEach(tag => {\n      if (!tagCounts[tag.tagName]) {\n        tagCounts[tag.tagName] = { open: 0, close: 0 };\n      }\n      \n      if (tag.isClosingTag) {\n        tagCounts[tag.tagName].close++;\n      } else {\n        tagCounts[tag.tagName].open++;\n      }\n    });\n    \n    // 找出缺少闭合标签的标签\n    const unclosedTags = {};\n    for (const [tagName, count] of Object.entries(tagCounts)) {\n      if (count.open > count.close) {\n        unclosedTags[tagName] = count.open - count.close;\n      }\n    }\n    \n    // 如果没有未闭合的标签，直接返回原始HTML\n    if (Object.keys(unclosedTags).length === 0) {\n      return html;\n    }\n    \n    // 为每个未闭合的标签找到合适的插入位置\n    const insertions = [];\n    \n    // 按照标签出现顺序处理\n    for (let i = 0; i < tags.length; i++) {\n      const tag = tags[i];\n      \n      // 只处理开标签\n      if (tag.isClosingTag) continue;\n      \n      // 检查这个标签是否缺少闭合标签\n      if (unclosedTags[tag.tagName] && unclosedTags[tag.tagName] > 0) {\n        // 默认在下一个标签之前插入\n        let insertPos = html.length;\n        let foundNextTag = false;\n        \n        // 查找下一个标签\n        for (let j = i + 1; j < tags.length; j++) {\n          if (tags[j].position > tag.endPosition) {\n            insertPos = tags[j].position;\n            foundNextTag = true;\n            break;\n          }\n        }\n        \n        // 尝试找到上一行末尾\n        if (foundNextTag) {\n          const textBetween = html.substring(tag.endPosition, insertPos);\n          const lastNewlinePos = textBetween.lastIndexOf('\\n');\n          \n          if (lastNewlinePos !== -1) {\n            insertPos = tag.endPosition + lastNewlinePos;\n          }\n        }\n        \n        // 记录插入位置\n        insertions.push({\n          position: insertPos,\n          tag: `</${tag.tagName}>`\n        });\n        \n        // 减少需要闭合的标签数量\n        unclosedTags[tag.tagName]--;\n        \n        // 如果这个标签已经全部修复，从未闭合标签列表中移除\n        if (unclosedTags[tag.tagName] <= 0) {\n          delete unclosedTags[tag.tagName];\n        }\n      }\n    }\n    \n    // 按位置从后往前排序，避免位置变化\n    insertions.sort((a, b) => b.position - a.position);\n    \n    // 执行插入\n    let result = html;\n    insertions.forEach(insertion => {\n      result = result.substring(0, insertion.position) + \n               insertion.tag + \n               result.substring(insertion.position);\n    });\n    \n    return result;\n  }\n});\n",
                         "info": "自动HTML标签闭合修复工具\n\n版本: 1.0.0\n日期: 2025年4月27日\n\n作者:\n司马咩咩 (原理构思与实现)\n十四行诗 (代码优化与调试)\n\n描述:\n这个脚本可以自动检测并修复HTML中缺失的闭合标签。它会智能地在适当位置\n添加缺失的闭合标签，使HTML结构完整。特别适用于角色扮演或模板化内容中\n的标签自动补全。",
                         "buttons": [],
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "id": "5389510e-a9cc-4392-8ba2-f70293335649",
@@ -4693,7 +4695,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 20,
-                "lastProcessedLength": 260,
+                "lastProcessedLength": 286,
                 "userConfigured": true
             }
         },
@@ -4897,11 +4899,12 @@
         "《完美世界》.png": [],
         "地球异闻录.png": [],
         "破碎摇篮-重制版-3.5-Sonnet.png": [],
-        "天渺大陆.png": [],
         "主持人！.png": [],
         "《万法盗天录》.png": [],
-        "世界调制模式·重制版.png": [],
-        "云无心最终版v2.png": []
+        "云无心最终版v2.png": [],
+        "天渺大陆.png": [],
+        "人生复本.png": [],
+        "世界调制模式·重制版.png": []
     },
     "nai_settings": {
         "temperature": 1.37,
@@ -7554,7 +7557,7 @@
                     },
                     {
                         "identifier": "78070f8c-1f7a-428c-9e88-fdba6aeaa021",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "fc9ca00a-f765-4be7-b22f-da5536e2fa04",
