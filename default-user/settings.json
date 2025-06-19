@@ -31,7 +31,7 @@
     },
     "currentVersion": "1.13.0",
     "username": "林东",
-    "active_character": "天渺大陆.png",
+    "active_character": null,
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -44,11 +44,11 @@
             "globalSelect": [
                 "__性爱世界书",
                 "--油猴世界书nai4改(6)",
-                "-【基本】XP兼特征兼行为兼规则兼世界观世界书·第一册",
-                "-【基本】XP兼特征兼行为兼规则兼世界观世界书·第三册",
-                "-【基本】XP兼特征兼行为兼规则兼世界观世界书·第二册",
                 "-提示词大全",
                 "[Dreammini]预设世界书DLC1.6",
+                "【姿势】宝典（SSVGG知识库）",
+                "【神话】SSVGG4.0（世界书本体）",
+                "极乐迪斯科",
                 "献媚文风加强版 (1)",
                 "部位特写"
             ],
@@ -4696,7 +4696,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 23,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
