@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -4697,7 +4697,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 294,
+                "lastProcessedLength": 295,
                 "userConfigured": true
             }
         },
@@ -7382,10 +7382,6 @@
                 "character_id": 100001,
                 "order": [
                     {
-                        "identifier": "2b6cd747-6f7a-4c2e-ab36-b69d4d918a0c",
-                        "enabled": false
-                    },
-                    {
                         "identifier": "3145c895-2367-4e47-b669-92eed3a0333a",
                         "enabled": true
                     },
@@ -7399,6 +7395,10 @@
                     },
                     {
                         "identifier": "0fa44cb3-b628-4064-9a60-39f20bd8e471",
+                        "enabled": false
+                    },
+                    {
+                        "identifier": "2b6cd747-6f7a-4c2e-ab36-b69d4d918a0c",
                         "enabled": false
                     },
                     {
