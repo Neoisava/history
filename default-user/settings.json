@@ -4523,7 +4523,7 @@
                         "content": "function lock_inputs(enable) {\n    $('#range_block_openai :input').prop('disabled', enable);\n    $('#openai_settings > div:first-child :input').prop('disabled', enable);\n    $('#stream_toggle').prop('disabled', false);\n    $('#openai_show_thoughts').prop('disabled', false);\n}\n$(() => {\n    lock_inputs(true);\n});\n$(window).on('unload', () => lock_inputs(false));\nexport {};\n",
                         "info": "# 预设防误触\n\n**作者:** 青空莉想做舞台少女的狗\n**版本:** 2025/04/29\n**源文件:** [点此跳转](https://gitgud.io/StageDog/tavern_resource/-/tree/main/酒馆助手/预设防误触/源文件?ref_type=heads)\n**说明:** 启用后将锁定预设除了 '流式传输'、'请求思维链' 和 '具体条目' 以外的选项, 不能通过界面来修改\n",
                         "buttons": [],
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "id": "f745e1db-3bbc-47b7-8778-e0353f7f0016",
@@ -4703,7 +4703,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 68,
+                "lastProcessedLength": 70,
                 "userConfigured": true
             }
         },
@@ -4979,7 +4979,7 @@
     },
     "oai_settings": {
         "preset_settings_openai": "【Dreammini】1.2-ultra-0613",
-        "temp_openai": 1.2,
+        "temp_openai": 0.8,
         "freq_pen_openai": 0,
         "pres_pen_openai": 0,
         "top_p_openai": 0.98,
