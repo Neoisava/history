@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "false",
-        "NavOpened": "false",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -31,7 +31,7 @@
     },
     "currentVersion": "1.13.0",
     "username": "林辰",
-    "active_character": "世界调制模式·重制版.png",
+    "active_character": null,
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -48,6 +48,7 @@
                 "[Dreammini]预设世界书DLC1.6",
                 "【姿势】宝典（SSVGG知识库）",
                 "【神话】SSVGG4.0（世界书本体）",
+                "世界调制模式·重制版",
                 "极乐迪斯科",
                 "献媚文风加强版 (1)",
                 "部位特写"
