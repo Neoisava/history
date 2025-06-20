@@ -2,8 +2,8 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
-        "NavOpened": "true",
+        "LNavOpened": "false",
+        "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -13,7 +13,7 @@
         "Assets_SkipConfirm_2502775700152061": "true",
         "LNavLockOn": "false",
         "WINavLockOn": "false",
-        "WI_PerPage": "100",
+        "WI_PerPage": "500",
         "AlertRegex_修仙之路2.0.png": "true",
         "AlertWI_修仙之路2.0.png": "true",
         "AlertWI_地球异闻录.png": "true",
@@ -26,7 +26,8 @@
         "AlertRegex_主持人！.png": "true",
         "WelcomePage_RecentChatsHidden": "true",
         "AlertWI_人生复本.png": "true",
-        "AlertRegex_人生复本.png": "true"
+        "AlertRegex_人生复本.png": "true",
+        "AlertWI_天渺大陆.png": "true"
     },
     "currentVersion": "1.13.0",
     "username": "林辰",
@@ -43,13 +44,10 @@
             "globalSelect": [
                 "__性爱世界书",
                 "--油猴世界书nai4改(6)",
-                "-【基本】XP兼特征兼行为兼规则兼世界观世界书·第一册",
-                "-【基本】XP兼特征兼行为兼规则兼世界观世界书·第三册",
-                "-【基本】XP兼特征兼行为兼规则兼世界观世界书·第二册",
-                "-【基本】限制及要求世界书",
                 "-提示词大全",
                 "[Dreammini]预设世界书DLC1.6",
-                "极乐迪斯科",
+                "【姿势】宝典（SSVGG知识库）",
+                "【神话】SSVGG4.0（世界书本体）",
                 "献媚文风加强版 (1)",
                 "部位特写"
             ],
@@ -299,11 +297,11 @@
         "streaming_fps": 30,
         "smooth_streaming": false,
         "smooth_streaming_speed": 100,
-        "fast_ui_mode": false,
-        "avatar_style": 2,
+        "fast_ui_mode": true,
+        "avatar_style": 1,
         "chat_display": 0,
         "toastr_position": "toast-top-center",
-        "chat_width": 50,
+        "chat_width": 55,
         "never_resize_avatars": true,
         "show_card_avatar_urls": false,
         "play_message_sound": true,
@@ -314,25 +312,25 @@
         "sort_order": "asc",
         "sort_rule": null,
         "font_scale": 1,
-        "blur_strength": 8,
+        "blur_strength": 10,
         "shadow_width": 1,
-        "main_text_color": "rgba(44, 38, 38, 1)",
-        "italics_text_color": "rgba(112, 100, 154, 1)",
-        "underline_text_color": "rgba(82, 142, 168, 1)",
-        "quote_text_color": "rgba(232, 122, 144, 1)",
-        "blur_tint_color": "rgba(245, 232, 232, 0.53)",
-        "chat_tint_color": "rgba(248, 221, 255, 0.56)",
-        "user_mes_blur_tint_color": "rgba(245, 205, 229, 0.25)",
-        "bot_mes_blur_tint_color": "rgba(200, 248, 255, 0.2)",
-        "shadow_color": "rgba(255, 255, 255, 1)",
-        "border_color": "rgba(255, 255, 255, 0.27)",
-        "custom_css": "/*调色*/\n* {\n    --black30a: rgba(195, 235, 255,0.4);\n    --black50a: rgba(255,255,255,0.7);\n    --black70a: rgba(245,150,170,0.5);\n    --white30a: rgba(165,222,228, 0.6);\n    --grey30a: rgba(180,255,255, 0.5); \n}\n\n/* 字体导入 */\n@font-face {\n  font-family: 'ZiTi';\n  src: url('http://sharkpan.xyz/f/OAwXHy/huiwenmingchaoti.otf') format('woff2');\n}\n\n/* ==========* 字体字色 *============ */\n/* 全局样式 */\n*{\n  font-family: 'ZiTi';\n}\n\n/* 主文本高度 */\nbody, html {\n  font-size: 18px;  /* 字号 */\n  letter-spacing: 0.05em;\n  word-spacing: 0.05em;\n}\n\n/* 常规文本样式 */\np, span, li {\n  font-family: 'ZiTi';\n  font-size: 18px;  /* 字号 */\n  line-height: 1.5em;\n  letter-spacing: 0.05em;\n  word-spacing: 0.05em;\n}\n\n/*其他*/\nselect, .text_pole, .inline-drawer-header, .neo-range-input,  [class*=\"mdHotkeys\"], #send_textarea  {\n  font-family: 'ZiTi';\n}\n\n/* 加粗文本 */\nstrong {\n  color: #e16b8c !important; /* 紅梅 */\n}\n\n/* 斜加粗文本 */\nstrong em {\n  color: #d75455 !important; /* 鉛丹 */\n}\n\n/* 删除文本 */\ndel, s {\n  color:  #51a8dd ; /* 群青 */\n}\n\n/* 高亮文本 */\nmark {\n  background-color: #2ea9df !important; /* 颜色: 露草 */\n  color: #fffffb !important; /* 颜色: 胡粉 */\n}\n\n\n/* ==========* 代码块样式 *============ */\n/* 代码块内的代码文本大小 - 独立设置 */\npre, pre code, code {\n  font-family: 'ZiTi' !important;\n  line-height: 1.2;\n}\n\n/* 外框 - 代码块 */\npre {\n    background: linear-gradient(135deg, rgba(255, 240, 245, 0.8), rgba(224, 245, 255, 0.8)); \n    border: 2px solid #fcd6d9;    \n    border-radius: 6px;  \n    padding: 10px 12px;\n    box-shadow: 0 4px 12px rgba(255, 192, 203, 0.4), 0 0 6px rgba(173, 216, 230, 0.3);\n    transition: box-shadow 0.3s ease, transform 0.3s ease;\n}\n\n\n/* 锁死 code 字色 */\ncode,\n[class=\"hljs-attribute\"],\n[class=\"hljs-comment\"],\n[class=\"hljs-section\"] {\n    color: #1c1c1c !important;\n}\n\n/* 代码块内代码样式（行内） */\np code, li code, td code, span code, div code {\n    font-family: 'ZiTi';\n    padding: 2px 5px;\n    background: linear-gradient(135deg, rgba(255, 200, 220, 0.3), rgba(200, 180, 255, 0.3)) !important; \n    margin: 1px 2px;\n    vertical-align: middle;\n    white-space: pre-wrap;\n    word-break: break-word;\n}\n\n/* ===========* 表单和输入框 *=========== */\n\n/* 左右侧边栏 */\n#left-nav-panel {\n  background: linear-gradient(to bottom,\n    rgba(255, 250, 252, 0.6),   \n    rgba(245, 190, 205, 0.5)   \n  ) !important;\n}\n\n#right-nav-panel {\n  background: linear-gradient(to bottom,\n    rgba(250, 255, 255, 0.6),   /* 上：冰感白雾 */\n    rgba(190, 225, 235, 0.5)    /* 下：水雾灰蓝 */\n  ) !important;\n}\n\n\n/* 输入框、下拉、文本域 */\n/* 选中状态下的复选框背景色 */\ninput[type=\"checkbox\"]:checked {\n  background-color:#6699a1 !important;  /* 錆浅葱 */\n}\n\n/* 下拉框字色 */\n.text_pole option,\n#world_editor_select option,\n#themes option {\n  color:#1c1c1c !important;\n}\n\n/* 预设字体加描边 */\n[class=\"prompt-manager-inspect-action\"] {\n  text-shadow:\n    0 0 1px rgba(173, 216, 230, 1),   \n    0 0 1px rgba(221, 160, 221, 1),  \n    0 0 1px rgba(255, 240, 245, 1);  \n}\n\n/* ===========* 头像边框 *=========== */\n.avatar {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    width: 50px;\n    height: 50px;\n    box-sizing: border-box;\n    border: 3px solid transparent; /* 定义边框宽度 */\n    border-image: linear-gradient(45deg, #ffb6c1, #add8e6) 1 stretch;\n    border-radius: 1px;\n    overflow: hidden;\n}\n\n.avatar img {\n    max-width: 100%;\n    max-height: 100%;\n    object-fit: cover; /* 图片填充满容器 */\n}\n\n\n/* ===========* 世界书 *=========== */\n/* 世界书按钮 */\n.select2-selection__choice__display {\n   font-family: 'ZiTi';\n}\n\n/* 世界书下拉框样式 */\n.select2-results__option--selectable::before {\n  background-color: #81c7d4 !important;  /* 水 */\n  content: \"❖\";           /* 使用日式传统菱形符号 */\n  display: flex;          /* 启用弹性布局 */\n  align-items: center;    /* 垂直居中 */\n  color: #fffffb !important;  /* 金叶色 */\n  border: 1px solid #cbb994; /* 边框颜色: 白橡 */\n  font-size: 0.8em;        /* 符号尺寸 */\n  margin-right: 8px;       /* 与文字间距 */\n  vertical-align: 2px;     /* 垂直对齐微调 */\n}\n\n\n/* ===========* 聊天框 *=========== */\n/*斜纹背景*/\n#chat {\n  background: \n    /* 上下渐变底色 */\n    linear-gradient(\n      to bottom,\n      rgba(254,223,225, 0.4),  /* 顶部 */\n      rgba(165,222,228, 0.3)   /* 底部 */\n    ),\n    /* 叠加斜纹 */\n    repeating-linear-gradient(\n      45deg,\n      rgba(211, 211, 211, 0.1) 0px,  \n      rgba(211, 211, 211, 0.1) 2px,  \n      transparent 1px,\n      transparent 4px  \n    ),\n    /* 叠加十字纹（水平 + 垂直） */\n    repeating-linear-gradient(\n      to right,\n      rgba(211, 211, 211, 0.1) 0px, \n      rgba(211, 211, 211, 0.1) 2px,  \n      transparent 1px,\n      transparent 4px  \n    ),\n    repeating-linear-gradient(\n      to bottom,\n      rgba(211, 211, 211, 0.1) 0px,  \n      rgba(211, 211, 211, 0.1) 2px, \n      transparent 1px,\n      transparent 4px  \n    );\n}\n\n/*气泡*/\n/* 用户消息 */\nbody.bubblechat .mes[is_user=\"true\"] {\n  background: linear-gradient(90deg, rgba(255, 210, 225, 0.3), rgba(255, 255, 255, 0.4)); \n}\n\n/* 系统消息和机器人消息*/\nbody.bubblechat .mes[is_system=\"true\"] , \nbody.bubblechat .mes[is_user=\"false\"]  {\n  background: linear-gradient(90deg, rgba(200, 225, 255, 0.3), rgba(255, 255, 255, 0.4)); \n}\n\n\n/* ===========* 滚动条优化 *=========== */\n\n/* 滚动条整体样式 */\n#chat::-webkit-scrollbar,\n[class=\"scrollableInner\"]::-webkit-scrollbar,\n#world_editor_select::-webkit-scrollbar {\n  width: 8px;  /* 垂直滚动条宽度 */\n  height: 8px; /* 水平滚动条高度 */\n}\n\n/* 滚动条滑块样式 */\n#chat::-webkit-scrollbar-thumb,\n[class=\"scrollableInner\"]::-webkit-scrollbar-thumb {\n  background: linear-gradient(\n    45deg,\n    rgba(165, 222, 228, 0.3),\n    rgba(255, 240, 245, 0.5)\n  );\n  border-radius: 4px;\n  border: 1px solid rgba(203, 178, 121, 0.3); /* 胡桃边框 */\n  box-shadow: inset 0 0 4px rgba(255, 200, 220, 0.4);\n  transition: all 0.3s ease;\n}\n\n#world_editor_select::-webkit-scrollbar-thumb {\n  background-color: #e87a90; /* 樱色滑块 */\n  border-radius: 10px;\n  border: 3px solid transparent;\n  background-clip: content-box;\n  transition: all 0.3s ease;\n}\n\n/* 滚动条滑块悬停效果 */\n#chat::-webkit-scrollbar-thumb:hover,\n[class=\"scrollableInner\"]::-webkit-scrollbar-thumb:hover {\n  background: linear-gradient(\n    135deg,\n    rgba(165, 222, 228, 0.5),\n    rgba(255, 240, 245, 0.8)\n  );\n  border: 1px solid rgba(255, 220, 200, 0.5);\n  transform: scale(1.1);\n  box-shadow: 0 0 6px rgba(255, 200, 220, 0.6);\n}\n\n#world_editor_select::-webkit-scrollbar-thumb:hover {\n  background-color: #f59ca9; /* 更亮的樱色 */\n  transform: scale(1.1);\n  box-shadow: 0 0 6px rgba(232, 122, 144, 0.5);\n}\n\n/* 滚动条轨道样式 */\n#world_editor_select::-webkit-scrollbar-track {\n  background: #f1f1f1;\n  border-radius: 10px;\n}\n\n\n/* ===========* 快捷栏 *=========== */\n/* 初始隐藏的快捷栏样式 */\n#qr--bar {\n    height: 0; \n}\n\n/* 鼠标悬停时展开快捷栏 */\n#send_form:hover #qr--bar {\n    height: 45px; /*高度可调，一层45px，auto为自动适应内容高度 */\n}\n\n/* ==========* 发送框*============ */\n/* 发送框 */\n\n#send_form {\n  background: rgba(165,222,228, 0.3);\n}\n\n/* 替换FontAwesome按钮 */\n.fa-circle-stop::before {\n  content: \"💮 \" !important;\n  font-size: 0.8em !important; /* 调整字体大小，确保符号清晰 */\n  vertical-align: middle !important; /* 确保图标垂直居中 */\n  display: inline-flex; /* 使用 inline-flex 来确保动画与对齐 */\n  justify-content: center; /* 水平居中 */\n  align-items: center; /* 垂直居中 */\n  animation: sway 3s ease-in-out infinite; /* 保持动画效果 */\n  max-width: 1em;\n  transform-origin: center;\n  transform: scale(1) rotate(0deg); /* 移除潜在的旋转，防止歪斜 */\n  line-height: 1; /* 防止文字行高导致的偏差 */\n}\n\n/* 飘动动画 */\n@keyframes sway {\n  0%, 100% { transform: rotate(-10deg); }\n  50% { transform: rotate(10deg); }\n}\n\n/* 悬停特效 */\n.fa-circle-stop:hover::before {\n  filter: \n    drop-shadow(0 0 3px #ff9eb5) \n    brightness(1.2);\n  transform: scale(1.3);\n}\n\n/* ===========*下拉菜单*=========== */\n/* 悬停状态 */\nselect:hover {\n  box-shadow: 0 0 8px rgba(51,166,184, 1) !important; /* 添加光晕 */\n}\n\n/* 焦点状态 */\nselect:focus {\n  border-color: #7db9de !important; \n}\n\n/* ===========* 聊天记录 *=========== */\n#shadow_select_chat_popup {\n    background:     linear-gradient(\n      to bottom,\n      rgba(254,223,225, 0.4),  /* 顶部 */\n      rgba(165,222,228, 0.3)   /* 底部 */\n    );\n}\n#select_chat_popup {\n    background:     linear-gradient(\n      to bottom,\n      rgba(254,223,225, 0.4),  /* 顶部 */\n      rgba(165,222,228, 0.3)   /* 底部 */\n    );\n}\n\n.select_chat_block {\n    transition: background-color 0.3s ease; \n}\n\n.select_chat_block:focus {\n    background-color: rgba(173, 216, 230, 0.3); \n}\n\n\n/* 移除 top-bar 的所有阴影 */\n#top-bar,\n.top-bar {\n  box-shadow: none !important;\n}\n\n/* 全局响应式基础设置 */\n* {\n  box-sizing: border-box; /* 确保padding和border不会增加元素宽度 */\n  word-wrap: break-word; /* 允许长单词换行 */\n  overflow-wrap: break-word; /* 现代浏览器中更好的换行控制 */\n}\n",
+        "main_text_color": "rgba(41, 29, 33, 1)",
+        "italics_text_color": "rgba(131, 102, 39, 0.53)",
+        "underline_text_color": "rgba(130, 121, 49, 1)",
+        "quote_text_color": "rgba(85, 70, 57, 1)",
+        "blur_tint_color": "rgba(188, 186, 146, 0.9)",
+        "chat_tint_color": "rgba(255, 255, 255, 0.3)",
+        "user_mes_blur_tint_color": "rgba(254, 250, 239, 1)",
+        "bot_mes_blur_tint_color": "rgba(254, 250, 239, 1)",
+        "shadow_color": "rgba(225, 209, 184, 1)",
+        "border_color": "rgba(92, 69, 10, 0.93)",
+        "custom_css": "/* === 定义主题颜色 === */\n:root {\n    --main-words: var(--SmartThemeBodyColor); \n/* 对应主要文本 */\n--yellow-words: var(--SmartThemeEmColor);        \n/* 对应斜体文本-->按键的黄色+user边框 */\n--darkyellow: #CF9F68; \n/*按钮被选中的颜色，没有多的颜色了*/\n    --red-words: var(--SmartThemeUnderlineColor);    \n/* 对应下划线文本-->char的红色边框+按钮文字*/\n    --green-words: var(--SmartThemeQuoteColor); \n/* 对应引用文本+幽灵颜色+标题框框 */\n    --ui-background-main: var(--SmartThemeUserMesBlurTintColor); \n/* 对应用户消息模糊色调*/\n--ui-border-color: var(--SmartThemeBorderColor); \n/*对应UI边框颜色 */\n--ui-hover-color:var(--SmartThemeShadowColor); /*对应阴影颜色*/    --crimson70a: #A70C0C;\n--white100: #FFFFFF;\n    \n--topBarIconSize: calc(var(--mainFontSize) * 1.5);\n--bottomFormIconSize: calc(var(--mainFontSize) * 1.5);\n--bottomFormBlockPadding: calc(var(--mainFontSize) / 2);\n}\n\n/* ===== 菜单栏样式修改 ===== */\n/*去除菜单栏下的阴影 */\n#top-bar {\n  box-shadow: none !important; /* 移除顶部菜单栏的阴影 */\n  border-radius: 6px 6px 0 0; /* 顶部圆角，美化外观 */\n}\n\n/*修改菜单栏点击后出现的折叠框的颜色*/\n.drawer-content {\n  background-color: var(--ui-background-main) !important; /* 设置折叠框的背景色为指定的浅米色 */\n  border: 1px solid var(--ui-border-color) !important; /* 添加边框以增强视觉效果 */\n  border-top: none !important; /* 去掉顶部边框，与菜单栏连接处无边框 */\n  border-radius: 0 0 6px 6px; /* 底部圆角，匹配整体风格 */\n  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important; /* 轻微阴影，提升立体感 */\n}\n\n/* ===== 标题样式修改 ===== */\n/*标题添加虚线边框*/\n.standoutHeader:not(h4),\n#rm_PinAndTabs,\n#top-settings-holder .drawer:not(:first-child):not(:last-child) .drawer-content .alignItemsBaseline.wide100p,\n#rm_api_block .flex-container.alignItemsBaseline,\n#title_api,\n#AdvancedFormatting .flex-container.alignItemsBaseline:not(h3),\n#WorldInfo .alignitemscenter:not(#world_popup *),\n#user-settings-block div[name=\"userSettingsRowOne\"],\n#rm_extensions_block .alignitemscenter.flex-container.wide100p:not(.justifyCenter) {\n  background-image: none;\n  border-radius: 4px; \n  border: 4px dashed var(--green-words);\n  margin-bottom: calc(var(--mainFontSize) * 0.4);\n  padding: calc(var(--mainFontSize) * 0.2); /* 调整内边距，使文字与边框有间距 */\n}\n\n/* 当角色名h2为空时，移除其父容器的边框和间距 */\n#rm_PinAndTabs:has(#rm_button_selected_ch h2:empty) {\n    border: none;\n    margin-bottom: 0;\n    padding: 0;\n}\n\n/* ===== 抽屉样式修改 ===== */\n/* ---抽屉标题栏--- */\n.inline-drawer-header:not(#WorldInfo .inline-drawer-header), /*排除世界书模块*/\n#extensions_settings .inline-drawer-toggle.inline-drawer-header,\n#extensions_settings2 .inline-drawer-toggle.inline-drawer-header,\n#top-settings-holder h4:not(#ai-config-button *):not(#rightNavHolder *) {\n  position: relative;\n  border: none !important;\n  border-radius: 0;\n  background-image: none !important;\n  padding-left: 16px;\n}\n\n/* 左侧小三角形（排除世界书板块） */\n.inline-drawer-header:not(#WorldInfo .inline-drawer-header)::before,\n#extensions_settings .inline-drawer-toggle.inline-drawer-header::before,\n#extensions_settings2 .inline-drawer-toggle.inline-drawer-header::before,\n#top-settings-holder h4:not(#ai-config-button *):not(#rightNavHolder *)::before {\n  content: \"\";\n  position: absolute;\n  left: 0;\n  top: 50%;\n  transform: translateY(-50%);\n  width: 0;\n  height: 0;\n  border-top: 5px solid transparent;\n  border-bottom: 5px solid transparent;\n  border-left: 8px solid var(--green-words);\n}\n\n/* 箭头图标颜色同步 */\n.inline-drawer-icon {\n  font-size: var(--icon-size);\n  color: var(--green-words);\n}\n\n/* 缩小特定元素的三角形 */\n.userSettingsInnerExpandable.inline-drawer-header::before,\n.wide100p.flexFlowColumn.inline-drawer-header::before,\n.inline-drawer[name=\"AutoCompleteToggle\"] .inline-drawer-header::before {\n  border-top: 3px solid transparent !important;   /* 高度缩小 */\n  border-bottom: 3px solid transparent !important; /* 高度缩小 */\n  border-left: 6px solid var(--green-words) !important; /* 宽度缩小 */\n}\n/* ===输入框=== */\n/* 基础输入框【文本，数字，开关，未指定类型的输入框（默认文本输入），非搜索类型的文本域（textarea）】样式 */\ninput[type=\"text\"],\ninput[type=\"number\"],\ninput[type=\"switch\"],\ninput:not([type]),\ntextarea:not([type=\"search\"]) {\n  background-color: rgba(254, 250, 239, 0.2) !important;\n  border: 1px solid var(--ui-border-color) !important; \n}\n\n/*点击样式（没有变化）*/\ninput[type=\"text\"]:focus,\ninput[type=\"number\"]:focus,\ninput[type=\"switch\"]:focus,\ninput:not([type]):focus,\ntextarea:not([type=\"search\"]):focus {\n  border: 1px solid var(--ui-border-color) !important;\n}\n\n/* 搜索框特殊处理 */\ntextarea[type=\"search\"] {\n  background-color: var(--ui-background-mainr) !important;\n  border: none !important;\n}\n\n/* 范围滑块容器 */\n.range-block {\n  margin: calc(var(--mainFontSize) * 0.6) 0;\n}\n\n/* 范围滑块计数器 */\n.range-block-counter {\n  margin-left: 20px;\n}\n\n/* 特殊文本输入框 */\n.text_pole:not(.objective-task) {\n  background-color: rgba(254, 250, 239, 0.5)); \n  border: 1px solid var(--ui-border-color);\n}\n\n/* ===按键基础样式=== */\n.menu_button:not(.mes_edit_buttons *) {\n  background-color: var(--yellow-words); \n  color: var(--red-words); \n  border: none;\n  border-radius: 4px;\n  cursor: pointer;\n  transition: all 0.3s ease;       /* 平滑过渡动画 */\n}\n\n/* ---悬停状态--- */\n.menu_button:not(.mes_edit_buttons *):hover {\n  background-color: var(--darkyellow);      /* 悬停时背景色加深 */\n  transform: translateY(-1px);    /* 轻微上浮效果 */\n  box-shadow: 0 2px 8px rgba(0,0,0,0.1);\n}\n\n/* ---选中/激活状态--- */\n.menu_button:not(.mes_edit_buttons *):active,\n.menu_button:not(.mes_edit_buttons *).is-active {\n  background-color: var(--darkyellow) !important;  /* 选中状态颜色深黄 */\n  color: white !important;\n  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2); /* 内阴影表示按下状态 */\n}\n\n/* ---高风险按钮（保持原样）--- */\n#delete_button,\n#dialogue_del_mes_ok,\n#dialogue_popup_ok,\n#bulk_tag_popup_reset,\n#bulk_tag_popup_remove_mutual,\n.mes_edit_cancel.menu_button,\n.menu_button.popup-button-ok,\n.redWarningBG {\n  background-color: var(--crimson70a) !important;\n  color: var(--white100) !important;\n}\n\n/* ===代码块样式=== */ \n/* 基本<code>元素样式（适用于行内代码） */\ncode {\n  margin: 0;                       /* 清除所有外边距 */\n  border: 1px dashed var(--ui-border-color); \n  border-radius: 4px;             \n  background-color: var(--ui-hover-color);      \n  padding: 0em 0.4em;           /* 上下内边距0.2em，左右内边距0.4em */\n  color:var(--green-words);         \n}\n\n/* 高亮代码块样式（适用于通过highlight.js等库高亮的代码块） */\nbody[data-stscript-style] .hljs.language-stscript, \n.hljs {                              \n  background: #E9E4D5;             \n  border: 3px dashed var(--ui-border-color);      \n  border-radius: 6px;              \n  padding: 0.8em;                   \n  color: var(--main-words);          \n}\n\n/* Mermaid图表容器样式 */\n.custom-mermaid {\n  background-color: var(--ui-hover-color);        \n  border: 1px dashed var(--ui-border-color); \n  border-radius: 6px;             \n  padding: 1em;                   \n  color:var(--darkgreen);           \n}\n\n/* 覆盖语法高亮插件的默认颜色设置 */\n.hljs * {                          /* 选择所有高亮代码块内的子元素 */\n  color: inherit !important;       /* 强制继承父元素的文字颜色 */\n}\n/* ==== 下拉框 ==== */\n/*通用格式*/\nselect {\n  background-color: var(--ui-background-main) !important;\n  color: var(--main-words);\n  border: 1px solid var(--ui-border-color) !important;\n  margin: calc(var(--mainFontSize) * 0.3) 0 !important;\n}\n/*未选中选项的字体颜色*/​​\nselect option:not(:checked) {\n  color: var(--main-words);\n}\n/*​选中选项​​*/\nselect option:checked {\n  color: var(--main-words);\n  background-color: var(--ui-hover-color) !important;\n}\n/*所有选项的背景颜色*/\nselect option {\n  background-color: var(--ui-background-main) !important;\n}\n\n/*===世界书模块===*/\n/* 输入框整体样式 */\n.select2-container .select2-selection--multiple, \n.select2-container .select2-selection--single {\n    background-color: rgba(254, 250, 239, 0.2);   /* 比底色较亮的颜色 */\n    border: 1px solid var(--ui-border-color);   \n    border-radius: 4px;      \n}\n\n/* 输入框右侧的叉叉样式 */\n.select2-container .select2-selection .select2-selection__clear {\n    transition: transform 0.3s ease;\n    color: var(--red-words); \n}\n\n/* 设置悬停时放大效果 */\n.select2-container .select2-selection .select2-selection__clear:hover {\n    transform: scale(1.1);           \n}\n/* 书名标签整体样式 */\n.select2-container .select2-selection--multiple .select2-selection__choice, \n.select2-container .select2-selection--single .select2-selection__choice {\n    border-radius: 4px;          \n    border: none;              \n    box-sizing: none;           \n    color: var(--red-words);            \n    background-color:var(--yellow-words);  \n}\n\n/* 书名标签右侧书名样式 */\n.select2_choice_clickable_buttonstyle+span.select2-container .select2-selection__choice__display {\n    background-color: transparent !important; \n    color: var(--red-words) !important; \n}\n/*处理移动端左右滑动问题*/\n@supports (-webkit-touch-callout: none) {\n  #world_popup {\n    margin-top: 0;\n    width: 100%;\n  }\n}\n\n/* === 聊天界面 === */\n/*气泡基础样式*/\n.mes {\n    position: relative;\n    margin: 5px 0; /* 两条消息的间距 */\n    border-radius: 4px; /* 圆角 */\n}\n\n/* 用户消息特殊样式（边框做颜色区分）*/\ndiv[is_user=\"true\"] {\n  border: 1px solid var(--yellow-words) !important; \n  border-left: 3px solid var(--yellow-words) !important; \n}\n\n/* 角色消息特殊样式 */\ndiv[is_user=\"false\"] {\n  border: 1px solid var(--red-words) !important; /* 四条边统一边框 */\n  border-left: 3px solid var(--red-words) !important; /* 左侧边框加粗 */\n}\n\n/* 头像位置 - 增强稳定性 */ \n.mes .avatar {\n    position: absolute !important; \n    top: 20px !important; \n    left: 20px !important; \n    z-index: 10 !important;\n    width: 60px !important; /* 固定头像宽度 */\n    height: 90px !important; /* 固定头像高度 */\n}\n\n/* 确保头像图片不会影响布局 */\n.mes .avatar img {\n    width: 100% !important;\n    height: 100% !important;\n    object-fit: cover !important;\n}\n\n/* 名字位置 - 增强定位稳定性 */\n.mes .name_text {\n    position: absolute !important;\n    top: 15px !important;\n    left: 90px !important;\n    font-family: Microsoft Yahei !important;\n    font-size: 1.2em !important;\n    margin: 0 !important;\n    padding: 0 !important;\n    line-height: 1.2 !important;\n    width: calc(100% - 110px) !important; /* 防止文字溢出 */\n    z-index: 5 !important;\n}\n\n/* Token计数位置 - 确保不与其他元素重叠 */\n.tokenCounterDisplay {\n    position: absolute !important;\n    left: 100px !important;\n    top: 50px !important;\n    opacity: 1 !important;\n    margin: 0 !important;\n    padding: 0 !important;\n    display: block !important;\n    z-index: 5 !important;\n    font-size: 0.9em !important;\n}\n\n/* 时间计数位置 - 调整以避免重叠 */\n.mes_timer {\n    position: absolute !important;\n    left: 145px !important; /* 增加左边距避免与token重叠 */\n    top: 50px !important;\n    opacity: 1 !important;\n    padding: 0 !important;\n    margin: 0 !important;\n    display: block !important;\n    z-index: 5 !important;\n    font-size: 0.9em !important;\n}\n\n/* 聊天时间样式 - 确保位置稳定 */\n.mes .timestamp {\n    position: absolute !important;\n    left: 90px !important;\n    top: 60px !important;\n    color: var(--main-words) !important;\n    opacity: 1 !important;\n    font-size: 0.8em !important;\n    margin: 0 !important;\n    padding: 0 !important;\n    display: block !important;\n    z-index: 5 !important;\n}\n\n/* 楼层计数样式 - 防止位置漂移 */\n.mesIDDisplay {\n    position: absolute !important;\n    top: 90px !important;\n    left: 100px !important;\n    opacity: 1 !important;\n    margin: 0 !important;\n    padding: 0 !important;\n    display: block !important;\n    z-index: 5 !important;\n    font-size: 0.9em !important;\n}\n\n/* 聊天内容空间调整 - 确保为头部信息留出足够空间 */\n.mes_block {\n    padding-top: 80px !important; /* 增加顶部空间 */\n    padding-bottom: 10px !important;\n    padding-left: 20px !important;\n    padding-right: 20px !important;\n    position: relative !important;\n    z-index: 1 !important;\n}\n\n/* 聊天内容文本区域 */\n.mes_text {   \n    padding-right: 3px !important;\n    position: relative !important;\n    z-index: 1 !important;\n    margin: 0 !important;\n}\n\n/* 聊天内容编辑图标 */\n.mes .mes_button,\n.mes .mes .extraMesButtons>div {\n    filter: none !important;\n    opacity: 1 !important;\n    font-size: 0.8em !important;\n    color: var(--main-words) !important;\n}\n\n/* 悬停小图标颜色变暗 */\n.mes_button:hover, .extraMesButtons>div:hover {\n    filter: brightness(0.9) !important;\n}\n\n/* 防止元素重叠的额外保护 */\n.mes::before {\n    content: \"\";\n    display: block;\n    height: 105px; /* 为头部信息预留空间 */\n    width: 100%;\n    position: absolute;\n    top: 0;\n    left: 0;\n    z-index: 0;\n    pointer-events: none;\n}\n\n/* 幽灵图标样式 - 定位到又、右上角 */\n.mes_ghost {\n    position: absolute;\n    top: 5px;\n    right: 5px;\n    font-size: 1.2em; \n    color: var(--main-words); /* 设置图标颜色*/\n    z-index: 15; /* 确保图标在其他内容之上 */\n}\n\n/*===== char界面 =====*/\n/*整体外观*/\n/* 收藏夹滑动条*/\n#HotSwapWrapper {\n  overflow: visible; /* 容器不裁剪内容 */\n}\n\n#HotSwapWrapper > div {\n  overflow-y: auto;  /* 改为竖直滚动 */\n  overflow-x: hidden;  /* 禁止水平滚动 */\n  flex-wrap: wrap;  /* 允许换行（竖直布局需要） */\n  height: calc(var(--avatar-base-height) + var(--scroll-width) + 10px);\n  max-height: calc(var(--avatar-base-height) * 2);\n  \n  /* 确保滚动条始终可见 */\n  scrollbar-width: thin;\n  scrollbar-color: var(--ui-hover-color) transparent;\n}\n/* 所有角色头像统一样式​​ */\n#rm_print_characters_block .bogus_folder_select.entity_block .avatar img,\n#rm_print_characters_block .character_select.entity_block .avatar img,\n#rm_print_characters_block .group_select.entity_block .avatar img,\n.hotswap .avatar img {\n    border: none;\n}\n\n/*角色/群组/文件夹的块状框主体样式*/\n#rm_print_characters_block .bogus_folder_select.entity_block,\n#rm_print_characters_block .character_select.entity_block,\n#rm_print_characters_block .group_select.entity_block {\n    /* === 布局与尺寸 === */\n    width: 100%; /* 改为100%父容器宽度 */\n    min-width: 280px; /* 新增最小宽度防止挤压 */\n    margin: 0 0 12px 0; /* 仅保留底部外边距 */\n    box-sizing: border-box; /* 确保padding不额外增加宽度 */\n\n    /* === 背景与边框 === */\n    background-color: var(--ui-hover-color) !important; \nborder: 2px dashed var(--green-words); \n    border-radius: 8px; /* 稍大的圆角 */\n    box-shadow: \n        0 2px 6px rgba(98, 108, 58, 0.2), /* 柔和的下阴影 */\n        inset 0 0 10px rgba(85, 25, 21, 0.05); /* 内敛的深色内阴影 */\n\n    /* === 文字样式 === */\n    color: var(--main-words) !important; \n    font-size: 15px;\n    letter-spacing: 0.5px;\n    line-height: 1.4;\n    padding: 14px 18px; /* 增大内边距 */\n    position: relative;\n\n    /* === 过渡动画 === */\n    transition: \n        transform 0.2s ease,\n        box-shadow 0.3s ease;\n}\n\n/* 悬停状态增强 */\n#rm_print_characters_block .bogus_folder_select.entity_block:hover,\n#rm_print_characters_block .character_select.entity_block:hover,\n#rm_print_characters_block .group_select.entity_block:hover {\n    transform: translateY(-2px);\n    box-shadow: \n        0 4px 10px rgba(98, 108, 58, 0.3),\n        inset 0 0 12px rgba(85, 25, 21, 0.08);\n}\n\n/* 选中状态 */\n#rm_print_characters_block .entity_block.character_selected {\n    background-color: var(--ui-hover-color) !important;\n    border-left: 4px solid #551915; /* 左侧加深色标识条 */\n}\n\n/* 移动端适配 */\n@media (max-width: 768px) {\n    #rm_print_characters_block .entity_block {\n        min-width: 100%; /* 移动端全宽 */\n        border-radius: 6px;\n        padding: 12px 15px;\n    }\n}\n\n/* --- 收藏样式 --- */\n#rm_print_characters_block .character_select.is_fav .avatar,\n#rm_print_characters_block .group_select.is_fav .avatar,\n#rm_print_characters_block .group_member.is_fav .avatar,\n#rm_print_characters_block .avatar.is_fav {\n    outline: 1px solid var(--green-words) !important;\n    outline: 8px;\n}\n\n/* 角色名颜色 */\n#rm_print_characters_block .character_select.is_fav .ch_name,\n#rm_print_characters_block .group_select.is_fav .ch_name,\n#rm_print_characters_block .group_member.is_fav .ch_name {\n    color: var(--green-words);\n    padding-left: 22px;\n    position: relative;\n}\n/* 圆圈图标表明已收藏 */\n#rm_print_characters_block .character_select.is_fav .ch_name::before,\n#rm_print_characters_block .group_select.is_fav .ch_name::before,\n#rm_print_characters_block .group_member.is_fav .ch_name::before {\n    content: \"◉\" ;\n    position: absolute ;\n    left: 2px ;\n    top: 50% ;\n    transform: translateY(-50%);\n    color: var(--green-words);\n    font-size: 14px;\n}\n/* 角色界面头像 */\n#avatar_load_preview {\n    transition: 0.2s ease;\n}\n#avatar_load_preview:hover {\n    transform: scale(1.1);\n}\n#avatar_load_preview:focus-visible {\n    outline: 0;\n}\n.add_avatar:hover {\n    filter: initial;\n}\n\n/* === 主页最新消息 === */\n/*主体卡片样式*/\n.recentChat {\n    background-color: var(--ui-hover-color) !important;\n    border: 2px dashed var(--green-words) !important;\n    border-radius: 8px;\n    box-shadow: \n        0 2px 6px rgba(98, 108, 58, 0.2), \n        inset 0 0 10px rgba(85, 25, 21, 0.05);\n    color: #551915 !important;\n    font-size: 15px;\n    padding: 12px 16px;\n    margin-bottom: 10px;\n    display: flex;\n    gap: 14px;\n    align-items: flex-start;\n    transition: background 0.3s ease, transform 0.2s ease;\n    position: relative;\n}\n\n.recentChat:hover {\n    transform: translateY(-2px);\n    box-shadow: \n        0 4px 10px rgba(98, 108, 58, 0.3),\n        inset 0 0 12px rgba(85, 25, 21, 0.08);\n    transform: scale(1.01);\n}\n\n\n\n/* 隐藏聊天预览文字（chatMessage 区域） */\n.recentChat .chatMessage {\n    display: none !important; \n/* 完全隐藏消息内容，只保留名字/时间/统计 */\n}\n\n/* 设置聊天信息区域的垂直布局（名字 -> 时间 -> 统计） */\n.recentChat .chatNameContainer {\n    display: flex !important;\n    flex-direction: column !important;   \n    align-items: flex-start !important;  \n    justify-content: flex-end !important;\n    height: 100%; /* 允许元素填满高度 */\n    padding-top: 4px;\n    padding-bottom: 4px;\n                           \n    box-sizing: border-box;\n}\n\n/*名字样式 */\n.recentChat .chatName {\n    font-size: 16px !important;          \n    font-weight: bold;\ncolor: var(--main-words) !important;\n    line-height: 1.2;\n}\n\n/* 时间样式 */\n.recentChat .chatDate {\n    position: static !important;         \n/* 确保参与垂直排列 */\n    font-size: 14px !important;          \n/* ← 和消息预览一致 */\n    color: var(--main-words) !important;\n    margin: 0 !important;\n    padding: 0 !important;\n}\n\n/* 消息统计贴底*/\n.recentChat .chatStats {\n    font-size: 14px !important;\n    color: var(--yellow-words);\n    margin-top: 20px!important; \n}\n\n/*====预设界面===*/\n/*总字符数+token颜色变化*/\n.completion_prompt_manager_header {\n  color: var(--main-words) !important;\n}\n/*不知道哪里来的恶心白字*/\n.text_muted {\n  color: var(--green-words)!important;\n\n/*提示词的阴影*/\n#some-parent-id #completion_prompt_manager .completion_prompt_manager_header_advanced span {\n    filter: none !important;\n}",
         "waifuMode": false,
         "movingUI": false,
         "movingUIState": {},
         "movingUIPreset": "Default",
-        "noShadows": false,
-        "theme": "日间樱-大字版",
+        "noShadows": true,
+        "theme": "红绿灯",
         "gestures": true,
         "auto_swipe": false,
         "auto_swipe_minimum_length": 0,
@@ -488,8 +486,8 @@
                 "lastConnection": 1748106956082
             }
         ],
-        "bogus_folders": false,
-        "zoomed_avatar_magnification": "",
+        "bogus_folders": true,
+        "zoomed_avatar_magnification": true,
         "show_tag_filters": false,
         "aux_field": "character_version",
         "stscript": {
@@ -513,7 +511,7 @@
             }
         },
         "restore_user_input": true,
-        "reduced_motion": false,
+        "reduced_motion": true,
         "compact_input_area": true,
         "show_swipe_num_all_messages": false,
         "auto_connect": true,
@@ -2993,8 +2991,8 @@
             "dimension_min": 64,
             "dimension_max": 2048,
             "dimension_step": 64,
-            "width": 768,
-            "height": 512,
+            "width": 1152,
+            "height": 896,
             "prompt_prefix": "best quality, absurdres, aesthetic,",
             "negative_prompt": "lowres, bad anatomy, bad hands, text, error, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
             "sampler": "k_euler",
@@ -3057,7 +3055,7 @@
             "clip_skip_max": 12,
             "clip_skip_step": 1,
             "clip_skip": 1,
-            "novel_anlas_guard": false,
+            "novel_anlas_guard": true,
             "novel_sm": false,
             "novel_sm_dyn": false,
             "novel_decrisper": false,
@@ -4697,7 +4695,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 291,
+                "lastProcessedLength": 20,
                 "userConfigured": true
             }
         },
@@ -6307,7 +6305,7 @@
                 "marker": false,
                 "name": "🫸未知角色修改(可改)🫸",
                 "role": "system",
-                "content": "\n{{setvar::character::优先已知角色}}\n{{//注解:事件角色设定}}{{//可以改成\"只有已知角色\"、\"减少已知角色\"}}\n\n{{setvar::Unknown_character::未知角色需关联故事/角色线或作引}}\n{{//注解:可以改成\"禁止未知角色\"、\"产生大量未知角色\"}}\n\n\n",
+                "content": "\n{{setvar::character::减少已知角色}}\n{{//注解:事件角色设定}}{{//可以改成\"只有已知角色\"、\"减少已知角色\"}}\n\n{{setvar::Unknown_character::未知角色需关联故事/角色线或作引}}\n{{//注解:可以改成\"禁止未知角色\"、\"产生大量未知角色\"}}\n\n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false,
@@ -6632,7 +6630,7 @@
                 "marker": false,
                 "name": "🌏世界场景(必改)🌏",
                 "role": "system",
-                "content": "{{setvar::place::(中国末日废土)}}\n\n{{//地点背景设定，要恐怖，魔幻，异世界，废土，战场，地下城，古代，未来，日本，中国，特定同人小说，仙侠，武林都能改}}\n{{//影响角色带你去的地方和故事背景}}\n\n\n\n\n\n\n\n{{setvar::placew::- 在梦境正文中描写<user>能看到的与剧情相关的地点周围环境}}\n{{setvar::placecot::(加入与剧情相关的环境描写)}}\n\n\n",
+                "content": "{{setvar::place::(中国废土}}\n\n{{//地点背景设定，要恐怖，魔幻，异世界，废土，战场，地下城，古代，未来，日本，中国，特定同人小说，仙侠，武林都能改}}\n{{//影响角色带你去的地方和故事背景}}\n\n\n\n\n\n\n\n{{setvar::placew::- 在梦境正文中描写<user>能看到的与剧情相关的地点周围环境}}\n{{setvar::placecot::(加入与剧情相关的环境描写)}}\n\n\n",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false,
@@ -7382,10 +7380,6 @@
                 "character_id": 100001,
                 "order": [
                     {
-                        "identifier": "2b6cd747-6f7a-4c2e-ab36-b69d4d918a0c",
-                        "enabled": false
-                    },
-                    {
                         "identifier": "3145c895-2367-4e47-b669-92eed3a0333a",
                         "enabled": true
                     },
@@ -7402,8 +7396,16 @@
                         "enabled": false
                     },
                     {
+                        "identifier": "2b6cd747-6f7a-4c2e-ab36-b69d4d918a0c",
+                        "enabled": false
+                    },
+                    {
                         "identifier": "1d789341-ce56-4dee-bbf0-ff7fda7dbc7a",
                         "enabled": false
+                    },
+                    {
+                        "identifier": "eb92b407-3b8e-4e9a-9e89-83ca82acf618",
+                        "enabled": true
                     },
                     {
                         "identifier": "jailbreak",
@@ -7414,16 +7416,12 @@
                         "enabled": true
                     },
                     {
-                        "identifier": "eb92b407-3b8e-4e9a-9e89-83ca82acf618",
-                        "enabled": true
-                    },
-                    {
                         "identifier": "fb01b7b3-1697-4b17-b72f-7dbec1f7c4c5",
                         "enabled": true
                     },
                     {
                         "identifier": "26f3c45d-2702-4f8a-a344-15fa00ccea21",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "d2370f29-111e-44ef-a3ca-d1af90011720",
@@ -7511,7 +7509,7 @@
                     },
                     {
                         "identifier": "273341aa-f4f5-4733-801e-323598c52171",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "9008558b-1b04-4f4a-9f7f-d9ac2b464f44",
@@ -7531,11 +7529,11 @@
                     },
                     {
                         "identifier": "a7c40be7-317f-45ee-afc9-f2736dbc3c7c",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "33c33301-973f-47a3-982f-9b891f411c1f",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "18fa1b2c-70ec-41f3-bdcd-f40a7dc6bab8",
@@ -7559,7 +7557,7 @@
                     },
                     {
                         "identifier": "78070f8c-1f7a-428c-9e88-fdba6aeaa021",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "fc9ca00a-f765-4be7-b22f-da5536e2fa04",
@@ -7575,7 +7573,7 @@
                     },
                     {
                         "identifier": "988320eb-1c76-4d9a-bd3e-8ce96e12e43b",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "7a29c1f5-4f53-40cf-b3e5-35aa01122935",
@@ -7647,11 +7645,11 @@
                     },
                     {
                         "identifier": "22cc7bf3-b68d-4248-9dcc-69b783b9613e",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "26aae499-6e9c-4a77-9a29-e5a43ce94d33",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "ce1950d5-54a4-4dc5-af32-7f4fbecb97e9",
@@ -7847,7 +7845,7 @@
                     },
                     {
                         "identifier": "b9e73056-cbe2-4b8b-8082-f6bce544af6a",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "a96c52e7-0b85-4323-af18-eb766b5ee5d3",
