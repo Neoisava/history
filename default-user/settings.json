@@ -3056,7 +3056,7 @@
             "clip_skip_max": 12,
             "clip_skip_step": 1,
             "clip_skip": 1,
-            "novel_anlas_guard": false,
+            "novel_anlas_guard": true,
             "novel_sm": false,
             "novel_sm_dyn": false,
             "novel_decrisper": false,
@@ -4696,7 +4696,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 50,
-                "lastProcessedLength": 6,
+                "lastProcessedLength": 8,
                 "userConfigured": true
             }
         },
