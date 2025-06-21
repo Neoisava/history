@@ -2407,6 +2407,19 @@
             "injection_depth": 4,
             "injection_order": 100,
             "forbid_overrides": false
+        },
+        {
+            "identifier": "4f057062-5b52-4010-99d8-52601f781e2c",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "废土",
+            "role": "system",
+            "content": ".set(\"废土抗争\", \"系统将描绘一个文明毁灭后，被遗弃或变异的荒凉世界，强调资源的极度贫瘠与生存的艰辛。着重展现颓败的都市遗迹、恶劣的自然环境、异化的生物以及残存人类社群的挣扎与变异。故事将围绕在废土中的探索、资源的争夺、残酷的生存法则以及人性的拷问与坚守。\")\n<Dream.examples>\n\"‘北斗の拳’\",\n\"‘风の谷のナウシカ\",\n\"‘BLAME!’\"\n</Dream.examples>\n{{setvar::story25::废土抗争/}}\n",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "forbid_overrides": false
         }
     ],
     "prompt_order": [
@@ -2651,6 +2664,10 @@
                     "enabled": false
                 },
                 {
+                    "identifier": "4f057062-5b52-4010-99d8-52601f781e2c",
+                    "enabled": true
+                },
+                {
                     "identifier": "7a29c1f5-4f53-40cf-b3e5-35aa01122935",
                     "enabled": true
                 },
@@ -2740,7 +2757,7 @@
                 },
                 {
                     "identifier": "e5d85924-82e1-4f26-bf1c-8f7dce07a687",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "0692226e-7eb3-4e76-bbdc-5bfa49879630",
@@ -2752,7 +2769,7 @@
                 },
                 {
                     "identifier": "b3ead074-20a8-42a2-bbe9-ada7cec9a8c3",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "1c209371-7841-4553-a1aa-5e986ec41cb3",
@@ -2768,15 +2785,15 @@
                 },
                 {
                     "identifier": "86440db5-1bd2-486d-9b59-7d6e4a11b142",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "6658c06d-fc40-45ea-9181-44fe3082c7cd",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "16de6456-a626-45df-92ff-c6b07fb7e136",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "d016da2e-e0af-47bf-b7c3-36bb41bac419",
@@ -2784,15 +2801,15 @@
                 },
                 {
                     "identifier": "7ad4c8b2-3a08-48da-90bb-bbea73515502",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "218095d1-b8b3-49dd-8e25-d0ec1adbeca0",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "0d1341f1-06f8-4609-8d70-168a16c02ad1",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "62f3c1e9-0b60-40b5-87ac-9b286a94ebdd",
@@ -2816,7 +2833,7 @@
                 },
                 {
                     "identifier": "4c258266-39bd-4920-bf26-4e1a90b38cf2",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "c9701159-a3fd-49df-9b5b-c6ee8ba9e7d4",
@@ -2848,7 +2865,7 @@
                 },
                 {
                     "identifier": "0a8db465-0891-4e30-b254-8a12d765954d",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "86bd7761-d6a7-443e-b6f0-9ad2d8941e9d",
@@ -2872,27 +2889,27 @@
                 },
                 {
                     "identifier": "e32afdbf-f78d-45e1-93c5-113aabc8f591",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "ceca85eb-0137-4dba-8f3f-20d7f5f1c03a",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "0f9a32f3-8516-4300-b1c2-74f2070022bf",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "b30e6b7e-13ff-4467-8ae2-ba243ced739c",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "fa248233-63f8-4867-b3dc-f2d2d1c26ec6",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "36e7b1b9-8119-4571-97f0-cc83b67fd148",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "8d63f52c-f895-4547-b7c0-38edfcd298db",
@@ -2916,11 +2933,11 @@
                 },
                 {
                     "identifier": "b9e73056-cbe2-4b8b-8082-f6bce544af6a",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "a96c52e7-0b85-4323-af18-eb766b5ee5d3",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "264a35a6-f2a9-4052-9195-1f91af769c92",
@@ -2932,7 +2949,7 @@
                 },
                 {
                     "identifier": "622e2456-43a9-45e4-8bb6-d37709b442fd",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "c9d12e15-9585-4378-b89a-f183581685a9",
@@ -2948,7 +2965,7 @@
                 },
                 {
                     "identifier": "710ae515-7cfe-4cdf-9d5b-4db57c5bf82c",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "cd70a552-8b07-48d4-8bfe-2a96cb7e5d0d",
@@ -2968,7 +2985,7 @@
                 },
                 {
                     "identifier": "c7d0194e-5335-4d3a-9b05-5e6a1cdd59e3",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "8f6f6f06-2cf7-46cd-bb0a-89a8af15b5ef",
