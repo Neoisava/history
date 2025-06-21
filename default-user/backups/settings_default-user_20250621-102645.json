@@ -4697,7 +4697,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 145,
+                "lastProcessedLength": 146,
                 "userConfigured": true
             }
         },
@@ -4973,7 +4973,7 @@
     },
     "oai_settings": {
         "preset_settings_openai": "【Dreammini】1.2-ultra-0613",
-        "temp_openai": 1,
+        "temp_openai": 1.2,
         "freq_pen_openai": 0,
         "pres_pen_openai": 0,
         "top_p_openai": 0.98,

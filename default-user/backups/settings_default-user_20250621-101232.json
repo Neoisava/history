@@ -4697,7 +4697,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 145,
+                "lastProcessedLength": 144,
                 "userConfigured": true
             }
         },
@@ -4973,7 +4973,7 @@
     },
     "oai_settings": {
         "preset_settings_openai": "【Dreammini】1.2-ultra-0613",
-        "temp_openai": 1,
+        "temp_openai": 1.2,
         "freq_pen_openai": 0,
         "pres_pen_openai": 0,
         "top_p_openai": 0.98,
@@ -7994,7 +7994,7 @@
         "personality_format": "{{personality}}",
         "openai_model": "gpt-4-turbo",
         "claude_model": "claude-3-5-sonnet-20240620",
-        "google_model": "",
+        "google_model": "gemini-2.5-pro",
         "vertexai_model": "gemini-2.0-flash-001",
         "ai21_model": "jamba-1.5-large",
         "mistralai_model": "mistral-large-latest",
