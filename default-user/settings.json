@@ -336,7 +336,7 @@
         "auto_swipe_minimum_length": 0,
         "auto_swipe_blacklist": [],
         "auto_swipe_blacklist_threshold": 2,
-        "auto_scroll_chat_to_bottom": false,
+        "auto_scroll_chat_to_bottom": true,
         "auto_fix_generated_markdown": false,
         "send_on_enter": 0,
         "console_log_prompts": false,
@@ -4711,7 +4711,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 125,
+                "lastProcessedLength": 127,
                 "userConfigured": true
             }
         },
