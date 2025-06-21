@@ -2890,7 +2890,7 @@
             {
                 "id": "9d4d3212-0456-4cd2-88b9-06931c0d3d1d",
                 "scriptName": "隐藏关系图1【GP】",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<Graph>[\\s\\S]*?<\\/Graph>/gs",
                 "replaceString": "",
@@ -2907,7 +2907,7 @@
             {
                 "id": "fb48d6f7-14e9-4faf-a90d-277ee79e0337",
                 "scriptName": "隐藏关系图2【GP】",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<Graph>[\\s\\S]*?<\\/Graph>/gs",
                 "replaceString": "",
@@ -4696,7 +4696,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 140,
+                "lastProcessedLength": 141,
                 "userConfigured": true
             }
         },
