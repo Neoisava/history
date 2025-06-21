@@ -52,6 +52,7 @@
                 "【神话】SSVGG4.0（世界书本体）",
                 "信息栏 aplon",
                 "普罗米修斯的回响",
+                "极乐迪斯科",
                 "模拟关系图【GP】",
                 "献媚文风加强版 (1)",
                 "部位特写"
@@ -4479,7 +4480,7 @@
                 "tampermonkey_compatibility": false,
                 "render_depth": 0,
                 "render_optimize": true,
-                "render_hide_style": false
+                "render_hide_style": true
             },
             "script": {
                 "global_script_enabled": true,
@@ -4702,7 +4703,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 3,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
