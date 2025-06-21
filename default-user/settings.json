@@ -43,11 +43,13 @@
         "world_info": {
             "globalSelect": [
                 "__性爱世界书",
+                "--大调查app",
                 "--油猴世界书nai4改(6)",
                 "-提示词大全",
                 "[Dreammini]预设世界书DLC1.6",
                 "【姿势】宝典（SSVGG知识库）",
                 "【神话】SSVGG4.0（世界书本体）",
+                "模拟关系图【GP】",
                 "献媚文风加强版 (1)",
                 "部位特写"
             ],
@@ -2886,28 +2888,11 @@
                 "promptOnly": true
             },
             {
-                "id": "947b831f-faad-40fb-942c-00c5220b6c9e",
-                "scriptName": "替换-戏谑(可选)",
-                "disabled": true,
-                "runOnEdit": false,
-                "findRegex": "/(戏谑)/g",
-                "replaceString": "{{random:玩味}}",
-                "trimStrings": [],
-                "placement": [
-                    2
-                ],
-                "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": 30,
-                "markdownOnly": true,
-                "promptOnly": true
-            },
-            {
-                "id": "021e005c-a493-4c7c-9a3a-cbf429bf68bf",
-                "scriptName": "删除-投石系",
-                "disabled": true,
-                "runOnEdit": false,
-                "findRegex": "/(?:[,，]\\s*)?(?:(?:如同|仿佛|犹如|像)\\s+)?[^.。！？>:：”\\n]*?(?:掉落|掉入|掉进|抛入|抛进|抛落|落入|投进|投入|丢进|丢入|放入|投下)[^,，.。！？>:：”\\n]*?(?:(?:风|铁块|种子|铜块|金块|冰块|石头|石子|大石|巨石|炸弹|鹅卵石|清油|糖果|滴水|海绵|浓墨|闪电|催化剂|冷水|钥匙|水滴|冰水|冰山)[^,，.。！？>:：”\\n]*?[,，.。！？>:：”\\n][^,，.。！？>:：”\\n]*?涟漪[)）]?|(?:风|铁块|种子|铜块|金块|冰块|石头|石子|大石|巨石|炸弹|鹅卵石|清油|糖果|滴水|海绵|浓墨|闪电|催化剂|冷水|钥匙|水滴|冰水|冰山)[)）]?|[,，.。！？>:：”\\n][^,，.。！？>:：”\\n]*?涟漪[)）]?|[,，.。！？>:：”\\n])/g",
+                "id": "9d4d3212-0456-4cd2-88b9-06931c0d3d1d",
+                "scriptName": "隐藏关系图1【GP】",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<Graph>[\\s\\S]*?<\\/Graph>/gs",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
@@ -2915,24 +2900,24 @@
                 ],
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": 30,
+                "maxDepth": null,
                 "markdownOnly": true,
-                "promptOnly": true
+                "promptOnly": false
             },
             {
-                "id": "20e02fa0-7b63-4dc3-9e61-e5557c20b8fe",
-                "scriptName": "消除-指尖发白系（可选）",
-                "disabled": true,
-                "runOnEdit": false,
-                "findRegex": "/[，,](?:[^。.!?！？]*?(?:手指|指尖|指节)[^。.!?！？]*?(?:泛白|发白)[^。.!?！？]*?)(?=[。.!?！？，,])/g",
+                "id": "fb48d6f7-14e9-4faf-a90d-277ee79e0337",
+                "scriptName": "隐藏关系图2【GP】",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<Graph>[\\s\\S]*?<\\/Graph>/gs",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
                 "substituteRegex": 0,
-                "minDepth": null,
-                "maxDepth": 30,
+                "minDepth": 1,
+                "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
             }
@@ -4711,7 +4696,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 139,
+                "lastProcessedLength": 140,
                 "userConfigured": true
             }
         },
