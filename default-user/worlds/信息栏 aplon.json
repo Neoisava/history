@@ -84,7 +84,7 @@
             "key": [],
             "keysecondary": [],
             "comment": "[DO NOT EDIT] Infobar Memory Assist Context",
-            "content": "【最优先指令：你的回复必须包含<aiThinkProcess>和<infobar_data>标签。这是绝对规则。】\n--- (当前无实时数据，请根据剧情生成) ---",
+            "content": "【最优先指令：你的回复必须包含<aiThinkProcess>和<infobar_data>标签。这是绝对规则。】\n--- 以下为当前世界实时数据 ---\ninteraction: npc0.isPresent=\"否\"\ninventory: inventoryItems=\"一把锋利的水果刀, 电池供电的收音机\", resources=\"一包苏打饼干 (剩余90%)\", weightLimit=\"30kg\", consumables=\"苏打饼干\"\ntasks: mainQuest=\"[{\"name\":\"活下去\",\"description\":\"在这崩坏的世界里,不惜一切代价活下去。\",\"status\":\"已激活\",\"progress\":\"1%\",\"reward\":\"明天的太阳\"}]\", sideQuests=\"[{\"name\":\"不速之客\",\"description\":\"有什么东西正在猛烈地撞击你的公寓门。在它闯进来之前,查明它的身份并决定如何处理。\",\"status\":\"进行中\",\"progress\":\"25%\",\"reward\":\"暂时的安全\"}]\"\nabilities: learnedSkills=\"轻度社交退缩, 较强的共情能力, 行为自律\", experiencePoints=\"0\"\ninternet: newsHeadlines=\"[{\"platform\":\"紧急广播频道\",\"title\":\"...全市通讯...严重拥堵...\",\"content\":\"...所有救援力量...已达极限...请市民...自行避难...寻找坚固掩体...重复,请自行避...滋滋...\"}]\"\napocalypse: health=\"100/100\", hunger=\"80/100\", thirst=\"88/100\", stamina=\"95/100\", sanity=\"22/100\", statusEffects=\"肾上腺素激增\", radiationLevel=\"0.5 mSv/h (背景辐射)\", shelterStatus=\"濒临攻破\", shelterDefense=\"15/100 (仅防盗门)\", mutationLevel=\"0/100\", infectionStatus=\"未感染\", morale=\"低落\", fatigue=\"28/100\", carryingCapacity=\"0/30kg\", foodSupplies=\"少量 (1天)\", waterSupplies=\"极少 (0.5天)\", environmentThreats=\"恸哭者, 病毒\", timeSinceLastRest=\"26小时\", hopeLevel=\"15/100\", daysSurvived=\"2\", communicationDevice=\"电池供电收音机\"",
             "constant": true,
             "vectorized": false,
             "selective": true,
