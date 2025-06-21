@@ -2415,7 +2415,8 @@
         "notifyUpdates": false,
         "disabledExtensions": [
             "third-party/st-image-auto-generation",
-            "third-party/lorebook_update_listener"
+            "third-party/lorebook_update_listener",
+            "third-party/Extension-CustomSliders"
         ],
         "expressionOverrides": [],
         "memory": {
@@ -4697,7 +4698,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 145,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
@@ -4784,6 +4785,16 @@
                 ]
             },
             "google_model": "gemini-2.5-pro"
+        },
+        "customSliders": {
+            "collections": [
+                {
+                    "active": true,
+                    "name": "Default",
+                    "sliders": [],
+                    "presets": []
+                }
+            ]
         }
     },
     "tags": [
