@@ -26,7 +26,7 @@
     "custom_prompt_post_processing": "merge",
     "google_model": "gemini-2.5-pro",
     "vertexai_model": "gemini-2.0-flash-001",
-    "temperature": 1.2,
+    "temperature": 0.16,
     "frequency_penalty": 0,
     "presence_penalty": 0,
     "top_p": 0.98,
@@ -785,7 +785,7 @@
             "marker": false,
             "name": "1️⃣背德(事件风格)",
             "role": "system",
-            "content": ".set(\"背德\", \"事件聚焦梦境中NTR、近亲相恋、三角关系等禁忌之恋，展现角色于道德边缘的挣扎。\")\n\n<Dream.examples>\n\"スクールデイズ\",\n\"クズの本懐\",\n\"ヨスガノソラ\",\n‘ホワイトアルバム2\",\n\"小说 恶の华\"\n</Dream.examples>\n\n{{setvar::story11::背德/}}",
+            "content": ".set(\"背德\", \"事件聚焦梦境中NTR、近亲相奸、三角关系等禁忌之恋，展现角色于道德边缘的挣扎。\")\n\n<Dream.examples>\n\"スクールデイズ\",\n\"クズの本懐\",\n\"ヨスガノソラ\",\n‘ホワイトアルバム2\",\n\"小说 恶の华\"\n</Dream.examples>\n\n{{setvar::story11::背德/}}",
             "injection_position": 0,
             "injection_depth": 4,
             "forbid_overrides": false,
@@ -2613,7 +2613,7 @@
                 },
                 {
                     "identifier": "7775a027-c11c-44e6-915d-aea1897dfd1f",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "d35213bd-4eae-4052-9397-e335510fe6f3",
@@ -2829,7 +2829,7 @@
                 },
                 {
                     "identifier": "510bbf32-b49d-4a89-a04f-b8eb1c271dd9",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "4c258266-39bd-4920-bf26-4e1a90b38cf2",
@@ -2837,11 +2837,11 @@
                 },
                 {
                     "identifier": "c9701159-a3fd-49df-9b5b-c6ee8ba9e7d4",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "0bbbe6c7-bc2b-4ae5-834e-849b3bec7543",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "1c2736b4-0370-42aa-990b-b5b33100ae6a",
@@ -2873,7 +2873,7 @@
                 },
                 {
                     "identifier": "d81c2780-201d-4315-a116-f0e197f060a8",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "30aa6d6d-e782-4951-8de6-a8ee68aebf1d",
@@ -2901,15 +2901,15 @@
                 },
                 {
                     "identifier": "b30e6b7e-13ff-4467-8ae2-ba243ced739c",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "fa248233-63f8-4867-b3dc-f2d2d1c26ec6",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "36e7b1b9-8119-4571-97f0-cc83b67fd148",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "8d63f52c-f895-4547-b7c0-38edfcd298db",
@@ -2925,7 +2925,7 @@
                 },
                 {
                     "identifier": "331d8458-3423-48b5-b6d5-b8a2e05251a5",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "64740e0a-fd2b-4a46-84ac-d4c4f2c40e29",
@@ -2941,15 +2941,15 @@
                 },
                 {
                     "identifier": "264a35a6-f2a9-4052-9195-1f91af769c92",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "7e42635a-8f91-4010-9a3e-1cb22c72e5dc",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "622e2456-43a9-45e4-8bb6-d37709b442fd",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "c9d12e15-9585-4378-b89a-f183581685a9",
@@ -2957,7 +2957,7 @@
                 },
                 {
                     "identifier": "710077af-46ea-4a6b-b421-cda982a27c00",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "3a0db162-fa32-4adf-93bd-47f753011129",
@@ -2985,7 +2985,7 @@
                 },
                 {
                     "identifier": "c7d0194e-5335-4d3a-9b05-5e6a1cdd59e3",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "8f6f6f06-2cf7-46cd-bb0a-89a8af15b5ef",
