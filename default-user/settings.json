@@ -4633,7 +4633,8 @@
                 "custom_5": true,
                 "custom_3": true,
                 "custom_1": true,
-                "custom_0": true
+                "custom_0": true,
+                "custom_2": true
             },
             "shortcuts": {
                 "asterisk": "",
@@ -4656,7 +4657,8 @@
                 "custom_5": "",
                 "custom_3": "",
                 "custom_1": "",
-                "custom_0": ""
+                "custom_0": "",
+                "custom_2": ""
             },
             "buttonOrder": [
                 "bookQuotes1",
@@ -4670,7 +4672,8 @@
                 "newline",
                 "custom_1",
                 "custom_0",
-                "custom_3"
+                "custom_3",
+                "custom_2"
             ],
             "customSymbols": [
                 {
@@ -4683,6 +4686,12 @@
                     "name": "(显示资讯、能力和背包面板)",
                     "symbol": "(显示资讯、能力和背包面板)",
                     "display": "面板",
+                    "cursorPos": "end"
+                },
+                {
+                    "name": "许小诺",
+                    "symbol": "许小诺",
+                    "display": "许小诺",
                     "cursorPos": "end"
                 }
             ]
