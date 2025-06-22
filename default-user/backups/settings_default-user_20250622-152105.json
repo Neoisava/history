@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -28,7 +28,8 @@
         "AlertWI_人生复本.png": "true",
         "AlertRegex_人生复本.png": "true",
         "AlertWI_天渺大陆.png": "true",
-        "AlertWI_《普罗米修斯的回响》.png": "true"
+        "AlertWI_《普罗米修斯的回响》.png": "true",
+        "extension_update_nag": "Sun Jun 22 2025"
     },
     "currentVersion": "1.13.0",
     "username": "林辰",
@@ -2413,7 +2414,7 @@
         "apiUrl": "https://api.huaapi.asia/v1",
         "apiKey": "sk-qSRYdQUdlXFBdhnQzic3PocYZrFZJeEsWPYitnjUz8GourHp",
         "autoConnect": false,
-        "notifyUpdates": false,
+        "notifyUpdates": true,
         "disabledExtensions": [
             "third-party/st-image-auto-generation",
             "third-party/lorebook_update_listener",
@@ -4477,19 +4478,11 @@
                 "tampermonkey_compatibility": false,
                 "render_depth": 0,
                 "render_optimize": true,
-                "render_hide_style": true
+                "render_hide_style": false
             },
             "script": {
                 "global_script_enabled": true,
                 "scriptsRepository": [
-                    {
-                        "id": "标签化",
-                        "name": "标签化: 随世界书、预设或链接配置自动开关正则、提示词条目",
-                        "content": "function extract_tags_from(name){return[...name.matchAll(/【(.*?)】/g)].map((match=>match[1].toLowerCase()))}function extract_control_tags(){return function sortUnique(array){return _.sortedUniq(_.sortBy(array))}([...extract_tags_from($(\"#settings_preset_openai\").find(\":selected\").text()),...$(\"#world_info\").find(\":selected\").toArray().map((node=>$(node).text())).flatMap(extract_tags_from),...extract_tags_from($(\"#connection_profiles\").find(\":checked\").text())])}function check_should_enable(title,tags){return[...title.matchAll(/【(.*?)】/g)].map((match=>match[1])).some((tag_list=>tag_list.split(\"&\").map((tag=>tag.toLowerCase())).every((expected=>tags.includes(expected)))))}const toggle_tags_throttled=_.throttle((async function toggle_tags(){const tags=extract_control_tags();!async function toggle_tagged_preset_prompts(tags){const prompt_identifiers_to_be_toggled=$(\"#completion_prompt_manager\").find(\"a[title]\").filter((function(){return null!==$(this).text().match(/【.*?】/)})).toArray().map((prompt_anchor=>{const $anchor=$(prompt_anchor),$li=$anchor.closest(\"li\");return{identifier:$li.attr(\"data-pm-identifier\"),should_toggle:check_should_enable($anchor.attr(\"title\"),tags)!==$li.find(\".prompt-manager-toggle-action\").hasClass(\"fa-toggle-on\")}})).filter((({should_toggle:should_toggle})=>should_toggle)).map((({identifier:identifier})=>`identifier=${identifier}`));0!==prompt_identifiers_to_be_toggled.length&&await triggerSlash(`/setpromptentry ${prompt_identifiers_to_be_toggled.join(\" \")}`)}(tags),async function toggle_tagged_regexes(tags){const regexes=getTavernRegexes({scope:\"all\"}),new_regexes=structuredClone(regexes);new_regexes.filter((regex=>null!==regex.script_name.match(/【.*?】/))).forEach((regex=>{regex.enabled=check_should_enable(regex.script_name,tags)})),_.isEqual(regexes,new_regexes)||await replaceTavernRegexes(new_regexes,{scope:\"all\"})}(tags),async function toggle_tagged_scripts(tags){const scripts_to_be_toggled=$(\"#script-settings-content\").find(\".script-item\").filter((function(){return null!==$(this).find(\".script-item-name\").text().match(/【.*?】/)})).toArray().map((script=>{const $div=$(script),should_enabled=check_should_enable($div.find(\".script-item-name\").text(),tags),is_enabled=$div.find(\".toggle-script\").prop(\"checked\");return{button:$div.find(\".script-toggle-\"+(is_enabled?\"on\":\"off\")),should_toggle:should_enabled!==is_enabled}})).filter((({should_toggle:should_toggle})=>should_toggle)).map((({button:button})=>button));for(const script of scripts_to_be_toggled)script.trigger(\"click\")}(tags)}),1e3,{trailing:!1});$((()=>{toggle_tags_throttled(),eventMakeFirst(tavern_events.SETTINGS_UPDATED,toggle_tags_throttled)}));\n",
-                        "info": "# 标签化: 根据预设自动开关正则、根据模型自动切换破限\n\n**作者:** 青空莉想做舞台少女的狗\n**版本:** 2025/04/22\n**原帖:** [点此跳转](https://discord.com/channels/1291925535324110879/1344362686900605043)\n**源文件:** [点此跳转](https://gitgud.io/StageDog/tavern_resource/-/tree/main/酒馆助手/标签化/源文件?ref_type=heads)\n**说明:** 将酒馆标签化, 允许你根据预设自动开关正则、根据模型自动切换破限等\n\n## 演示视频\n\n- [标签化正则演示](https://gitgud.io/StageDog/tavern_resource/-/raw/main/酒馆助手/标签化/正则.mp4)\n- [标签化预设提示词演示](https://gitgud.io/StageDog/tavern_resource/-/raw/main/酒馆助手/标签化/预设提示词.mp4)\n\n## 使用说明\n\n- 在\"正则\"/\"预设提示词\"/\"酒馆助手脚本\"名称中添加它所属于的一个或多个`【标签】`\n- 在\"预设\"/\"世界书\"/\"API连接配置\"名称中添加对于它你想要启用的一个或多个`【标签】`\n\n这样一来，在使用\"预设\"/\"世界书\"/\"API连接配置\"时，脚本将会\n\n- 自动开启其对应的`【标签】`\"正则\"/\"预设提示词\"/\"酒馆助手脚本\"\n- 自动关闭没有被对应上的`【标签】`\"正则\"/\"预设提示词\"/\"酒馆助手脚本\"\n- 其他没有`【标签】`的\"正则\"/\"预设提示词\"/\"酒馆助手脚本\"不受任何影响\n\n### 当正则、预设提示词、酒馆助手脚本有多个标签\n\n- `【标签1】【标签2】` 表示\"或者\"，只要\"预设\"/\"世界书\"/\"API连接配置\"名称中有`【标签1】`或`【标签2】`就会启用\n- `【标签1&标签2】`表示\"并且\"，只有\"预设\"/\"世界书\"/\"API连接配置\"名称中同时有`【标签1】`和`【标签2】`才会启用\n",
-                        "buttons": [],
-                        "enabled": false
-                    },
                     {
                         "id": "自动开启角色卡局部正则",
                         "name": "自动开启角色卡局部正则",
@@ -4631,9 +4624,10 @@
                 "custom_11": true,
                 "custom_4": true,
                 "custom_5": true,
-                "custom_3": true,
                 "custom_1": true,
-                "custom_0": true
+                "custom_0": true,
+                "custom_2": true,
+                "custom_3": true
             },
             "shortcuts": {
                 "asterisk": "",
@@ -4654,9 +4648,10 @@
                 "custom_11": "",
                 "custom_4": "",
                 "custom_5": "",
-                "custom_3": "",
                 "custom_1": "",
-                "custom_0": ""
+                "custom_0": "",
+                "custom_2": "",
+                "custom_3": ""
             },
             "buttonOrder": [
                 "bookQuotes1",
@@ -4670,6 +4665,7 @@
                 "newline",
                 "custom_1",
                 "custom_0",
+                "custom_2",
                 "custom_3"
             ],
             "customSymbols": [
@@ -4683,6 +4679,18 @@
                     "name": "(显示资讯、能力和背包面板)",
                     "symbol": "(显示资讯、能力和背包面板)",
                     "display": "面板",
+                    "cursorPos": "end"
+                },
+                {
+                    "name": "许小诺",
+                    "symbol": "许小诺",
+                    "display": "许小诺",
+                    "cursorPos": "end"
+                },
+                {
+                    "name": "白婧",
+                    "symbol": "白婧",
+                    "display": "白婧",
                     "cursorPos": "end"
                 }
             ]
@@ -4700,7 +4708,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 3,
+                "lastProcessedLength": 67,
                 "userConfigured": true
             }
         },
@@ -5731,7 +5739,7 @@
                 "marker": false,
                 "name": "1️⃣背德(事件风格)",
                 "role": "system",
-                "content": ".set(\"背德\", \"事件聚焦梦境中NTR、近亲相恋、三角关系等禁忌之恋，展现角色于道德边缘的挣扎。\")\n\n<Dream.examples>\n\"スクールデイズ\",\n\"クズの本懐\",\n\"ヨスガノソラ\",\n‘ホワイトアルバム2\",\n\"小说 恶の华\"\n</Dream.examples>\n\n{{setvar::story11::背德/}}",
+                "content": ".set(\"背德\", \"事件聚焦梦境中NTR、近亲相奸、三角关系等禁忌之恋，展现角色于道德边缘的挣扎。\")\n\n<Dream.examples>\n\"スクールデイズ\",\n\"クズの本懐\",\n\"ヨスガノソラ\",\n‘ホワイトアルバム2\",\n\"小说 恶の华\"\n</Dream.examples>\n\n{{setvar::story11::背德/}}",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false,
@@ -7559,7 +7567,7 @@
                     },
                     {
                         "identifier": "7775a027-c11c-44e6-915d-aea1897dfd1f",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "d35213bd-4eae-4052-9397-e335510fe6f3",
@@ -8080,8 +8088,8 @@
         "bind_preset_to_connection": true
     },
     "background": {
-        "name": "24ff7a7f7e26bc37.png",
-        "url": "url(\"backgrounds/24ff7a7f7e26bc37.png\")",
+        "name": "_black.jpg",
+        "url": "url(\"backgrounds/_black.jpg\")",
         "fitting": "cover"
     },
     "proxies": [
