@@ -4634,7 +4634,8 @@
                 "custom_5": true,
                 "custom_1": true,
                 "custom_0": true,
-                "custom_2": true
+                "custom_2": true,
+                "custom_3": true
             },
             "shortcuts": {
                 "asterisk": "",
@@ -4657,7 +4658,8 @@
                 "custom_5": "",
                 "custom_1": "",
                 "custom_0": "",
-                "custom_2": ""
+                "custom_2": "",
+                "custom_3": ""
             },
             "buttonOrder": [
                 "bookQuotes1",
@@ -4671,7 +4673,8 @@
                 "newline",
                 "custom_1",
                 "custom_0",
-                "custom_2"
+                "custom_2",
+                "custom_3"
             ],
             "customSymbols": [
                 {
@@ -4691,6 +4694,12 @@
                     "symbol": "许小诺",
                     "display": "许小诺",
                     "cursorPos": "end"
+                },
+                {
+                    "name": "白婧",
+                    "symbol": "白婧",
+                    "display": "白婧",
+                    "cursorPos": "end"
                 }
             ]
         },
@@ -4707,7 +4716,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 45,
+                "lastProcessedLength": 46,
                 "userConfigured": true
             }
         },
