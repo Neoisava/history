@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -5747,7 +5747,7 @@
                 "marker": false,
                 "name": "1️⃣背德(事件风格)",
                 "role": "system",
-                "content": ".set(\"背德\", \"事件聚焦梦境中NTR、近亲相恋、三角关系等禁忌之恋，展现角色于道德边缘的挣扎。\")\n\n<Dream.examples>\n\"スクールデイズ\",\n\"クズの本懐\",\n\"ヨスガノソラ\",\n‘ホワイトアルバム2\",\n\"小说 恶の华\"\n</Dream.examples>\n\n{{setvar::story11::背德/}}",
+                "content": ".set(\"背德\", \"事件聚焦梦境中NTR、近亲相奸、三角关系等禁忌之恋，展现角色于道德边缘的挣扎。\")\n\n<Dream.examples>\n\"スクールデイズ\",\n\"クズの本懐\",\n\"ヨスガノソラ\",\n‘ホワイトアルバム2\",\n\"小说 恶の华\"\n</Dream.examples>\n\n{{setvar::story11::背德/}}",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false,
