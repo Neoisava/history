@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "true",
-        "NavOpened": "false",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -29,7 +29,7 @@
         "AlertRegex_人生复本.png": "true",
         "AlertWI_天渺大陆.png": "true",
         "AlertWI_《普罗米修斯的回响》.png": "true",
-        "extension_update_nag": "Sun Jun 22 2025"
+        "extension_update_nag": "Mon Jun 23 2025"
     },
     "currentVersion": "1.13.0",
     "username": "林辰",
@@ -4484,14 +4484,6 @@
                 "global_script_enabled": true,
                 "scriptsRepository": [
                     {
-                        "id": "标签化",
-                        "name": "标签化: 随世界书、预设或链接配置自动开关正则、提示词条目",
-                        "content": "function extract_tags_from(name){return[...name.matchAll(/【(.*?)】/g)].map((match=>match[1].toLowerCase()))}function extract_control_tags(){return function sortUnique(array){return _.sortedUniq(_.sortBy(array))}([...extract_tags_from($(\"#settings_preset_openai\").find(\":selected\").text()),...$(\"#world_info\").find(\":selected\").toArray().map((node=>$(node).text())).flatMap(extract_tags_from),...extract_tags_from($(\"#connection_profiles\").find(\":checked\").text())])}function check_should_enable(title,tags){return[...title.matchAll(/【(.*?)】/g)].map((match=>match[1])).some((tag_list=>tag_list.split(\"&\").map((tag=>tag.toLowerCase())).every((expected=>tags.includes(expected)))))}const toggle_tags_throttled=_.throttle((async function toggle_tags(){const tags=extract_control_tags();!async function toggle_tagged_preset_prompts(tags){const prompt_identifiers_to_be_toggled=$(\"#completion_prompt_manager\").find(\"a[title]\").filter((function(){return null!==$(this).text().match(/【.*?】/)})).toArray().map((prompt_anchor=>{const $anchor=$(prompt_anchor),$li=$anchor.closest(\"li\");return{identifier:$li.attr(\"data-pm-identifier\"),should_toggle:check_should_enable($anchor.attr(\"title\"),tags)!==$li.find(\".prompt-manager-toggle-action\").hasClass(\"fa-toggle-on\")}})).filter((({should_toggle:should_toggle})=>should_toggle)).map((({identifier:identifier})=>`identifier=${identifier}`));0!==prompt_identifiers_to_be_toggled.length&&await triggerSlash(`/setpromptentry ${prompt_identifiers_to_be_toggled.join(\" \")}`)}(tags),async function toggle_tagged_regexes(tags){const regexes=getTavernRegexes({scope:\"all\"}),new_regexes=structuredClone(regexes);new_regexes.filter((regex=>null!==regex.script_name.match(/【.*?】/))).forEach((regex=>{regex.enabled=check_should_enable(regex.script_name,tags)})),_.isEqual(regexes,new_regexes)||await replaceTavernRegexes(new_regexes,{scope:\"all\"})}(tags),async function toggle_tagged_scripts(tags){const scripts_to_be_toggled=$(\"#script-settings-content\").find(\".script-item\").filter((function(){return null!==$(this).find(\".script-item-name\").text().match(/【.*?】/)})).toArray().map((script=>{const $div=$(script),should_enabled=check_should_enable($div.find(\".script-item-name\").text(),tags),is_enabled=$div.find(\".toggle-script\").prop(\"checked\");return{button:$div.find(\".script-toggle-\"+(is_enabled?\"on\":\"off\")),should_toggle:should_enabled!==is_enabled}})).filter((({should_toggle:should_toggle})=>should_toggle)).map((({button:button})=>button));for(const script of scripts_to_be_toggled)script.trigger(\"click\")}(tags)}),1e3,{trailing:!1});$((()=>{toggle_tags_throttled(),eventMakeFirst(tavern_events.SETTINGS_UPDATED,toggle_tags_throttled)}));\n",
-                        "info": "# 标签化: 根据预设自动开关正则、根据模型自动切换破限\n\n**作者:** 青空莉想做舞台少女的狗\n**版本:** 2025/04/22\n**原帖:** [点此跳转](https://discord.com/channels/1291925535324110879/1344362686900605043)\n**源文件:** [点此跳转](https://gitgud.io/StageDog/tavern_resource/-/tree/main/酒馆助手/标签化/源文件?ref_type=heads)\n**说明:** 将酒馆标签化, 允许你根据预设自动开关正则、根据模型自动切换破限等\n\n## 演示视频\n\n- [标签化正则演示](https://gitgud.io/StageDog/tavern_resource/-/raw/main/酒馆助手/标签化/正则.mp4)\n- [标签化预设提示词演示](https://gitgud.io/StageDog/tavern_resource/-/raw/main/酒馆助手/标签化/预设提示词.mp4)\n\n## 使用说明\n\n- 在\"正则\"/\"预设提示词\"/\"酒馆助手脚本\"名称中添加它所属于的一个或多个`【标签】`\n- 在\"预设\"/\"世界书\"/\"API连接配置\"名称中添加对于它你想要启用的一个或多个`【标签】`\n\n这样一来，在使用\"预设\"/\"世界书\"/\"API连接配置\"时，脚本将会\n\n- 自动开启其对应的`【标签】`\"正则\"/\"预设提示词\"/\"酒馆助手脚本\"\n- 自动关闭没有被对应上的`【标签】`\"正则\"/\"预设提示词\"/\"酒馆助手脚本\"\n- 其他没有`【标签】`的\"正则\"/\"预设提示词\"/\"酒馆助手脚本\"不受任何影响\n\n### 当正则、预设提示词、酒馆助手脚本有多个标签\n\n- `【标签1】【标签2】` 表示\"或者\"，只要\"预设\"/\"世界书\"/\"API连接配置\"名称中有`【标签1】`或`【标签2】`就会启用\n- `【标签1&标签2】`表示\"并且\"，只有\"预设\"/\"世界书\"/\"API连接配置\"名称中同时有`【标签1】`和`【标签2】`才会启用\n",
-                        "buttons": [],
-                        "enabled": false
-                    },
-                    {
                         "id": "自动开启角色卡局部正则",
                         "name": "自动开启角色卡局部正则",
                         "content": "$((()=>{eventOn(tavern_events.CHAT_CHANGED,(async()=>{const characters=SillyTavern.characters,characterId=SillyTavern.characterId;if(void 0===characterId)return;const avatar=characters[characterId].avatar,extension_settings=SillyTavern.extensionSettings.character_allowed_regex;extension_settings.includes(avatar)||(extension_settings.push(avatar),await TavernHelper.builtin.saveSettings(),await SillyTavern.saveChat(),await SillyTavern.reloadCurrentChat())}))}));",
@@ -4586,7 +4578,8 @@
                     }
                 ],
                 "characters_with_scripts": [
-                    "地球异闻录.png"
+                    "地球异闻录.png",
+                    "破碎摇篮-重制版-3.5-Sonnet.png"
                 ]
             },
             "audio": {
@@ -4632,10 +4625,10 @@
                 "custom_11": true,
                 "custom_4": true,
                 "custom_5": true,
-                "custom_3": true,
                 "custom_1": true,
                 "custom_0": true,
-                "custom_2": true
+                "custom_2": true,
+                "custom_3": true
             },
             "shortcuts": {
                 "asterisk": "",
@@ -4656,10 +4649,10 @@
                 "custom_11": "",
                 "custom_4": "",
                 "custom_5": "",
-                "custom_3": "",
                 "custom_1": "",
                 "custom_0": "",
-                "custom_2": ""
+                "custom_2": "",
+                "custom_3": ""
             },
             "buttonOrder": [
                 "bookQuotes1",
@@ -4673,8 +4666,8 @@
                 "newline",
                 "custom_1",
                 "custom_0",
-                "custom_3",
-                "custom_2"
+                "custom_2",
+                "custom_3"
             ],
             "customSymbols": [
                 {
@@ -4694,6 +4687,12 @@
                     "symbol": "许小诺",
                     "display": "许小诺",
                     "cursorPos": "end"
+                },
+                {
+                    "name": "白婧",
+                    "symbol": "白婧",
+                    "display": "白婧",
+                    "cursorPos": "end"
                 }
             ]
         },
@@ -4710,7 +4709,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 40,
+                "lastProcessedLength": 106,
                 "userConfigured": true
             }
         },
@@ -4997,7 +4996,7 @@
     },
     "oai_settings": {
         "preset_settings_openai": "【Dreammini】1.301-ultra-0618 (1)",
-        "temp_openai": 1.2,
+        "temp_openai": 0.16,
         "freq_pen_openai": 0,
         "pres_pen_openai": 0,
         "top_p_openai": 0.98,
@@ -5741,7 +5740,7 @@
                 "marker": false,
                 "name": "1️⃣背德(事件风格)",
                 "role": "system",
-                "content": ".set(\"背德\", \"事件聚焦梦境中NTR、近亲相恋、三角关系等禁忌之恋，展现角色于道德边缘的挣扎。\")\n\n<Dream.examples>\n\"スクールデイズ\",\n\"クズの本懐\",\n\"ヨスガノソラ\",\n‘ホワイトアルバム2\",\n\"小说 恶の华\"\n</Dream.examples>\n\n{{setvar::story11::背德/}}",
+                "content": ".set(\"背德\", \"事件聚焦梦境中NTR、近亲相奸、三角关系等禁忌之恋，展现角色于道德边缘的挣扎。\")\n\n<Dream.examples>\n\"スクールデイズ\",\n\"クズの本懐\",\n\"ヨスガノソラ\",\n‘ホワイトアルバム2\",\n\"小说 恶の华\"\n</Dream.examples>\n\n{{setvar::story11::背德/}}",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false,
@@ -7569,7 +7568,7 @@
                     },
                     {
                         "identifier": "7775a027-c11c-44e6-915d-aea1897dfd1f",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "d35213bd-4eae-4052-9397-e335510fe6f3",
@@ -7793,11 +7792,11 @@
                     },
                     {
                         "identifier": "c9701159-a3fd-49df-9b5b-c6ee8ba9e7d4",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "0bbbe6c7-bc2b-4ae5-834e-849b3bec7543",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "1c2736b4-0370-42aa-990b-b5b33100ae6a",
@@ -7857,15 +7856,15 @@
                     },
                     {
                         "identifier": "b30e6b7e-13ff-4467-8ae2-ba243ced739c",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "fa248233-63f8-4867-b3dc-f2d2d1c26ec6",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "36e7b1b9-8119-4571-97f0-cc83b67fd148",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "8d63f52c-f895-4547-b7c0-38edfcd298db",
@@ -7881,7 +7880,7 @@
                     },
                     {
                         "identifier": "331d8458-3423-48b5-b6d5-b8a2e05251a5",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "64740e0a-fd2b-4a46-84ac-d4c4f2c40e29",
@@ -7897,15 +7896,15 @@
                     },
                     {
                         "identifier": "264a35a6-f2a9-4052-9195-1f91af769c92",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "7e42635a-8f91-4010-9a3e-1cb22c72e5dc",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "622e2456-43a9-45e4-8bb6-d37709b442fd",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "c9d12e15-9585-4378-b89a-f183581685a9",
@@ -7913,7 +7912,7 @@
                     },
                     {
                         "identifier": "710077af-46ea-4a6b-b421-cda982a27c00",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "3a0db162-fa32-4adf-93bd-47f753011129",
@@ -7941,7 +7940,7 @@
                     },
                     {
                         "identifier": "c7d0194e-5335-4d3a-9b05-5e6a1cdd59e3",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "8f6f6f06-2cf7-46cd-bb0a-89a8af15b5ef",
@@ -8090,8 +8089,8 @@
         "bind_preset_to_connection": true
     },
     "background": {
-        "name": "24ff7a7f7e26bc37.png",
-        "url": "url(\"backgrounds/24ff7a7f7e26bc37.png\")",
+        "name": "__transparent.png",
+        "url": "url(\"backgrounds/__transparent.png\")",
         "fitting": "cover"
     },
     "proxies": [
