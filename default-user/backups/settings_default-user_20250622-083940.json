@@ -32,7 +32,7 @@
     },
     "currentVersion": "1.13.0",
     "username": "林辰",
-    "active_character": "《普罗米修斯的回响》.png",
+    "active_character": "破碎摇篮-重制版-3.5-Sonnet.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -44,7 +44,6 @@
         "world_info": {
             "globalSelect": [
                 "__性爱世界书",
-                "--大调查app",
                 "--油猴世界书nai4改(6)",
                 "-提示词大全",
                 "[Dreammini]预设世界书DLC1.6",
@@ -491,7 +490,7 @@
             }
         ],
         "bogus_folders": true,
-        "zoomed_avatar_magnification": false,
+        "zoomed_avatar_magnification": true,
         "show_tag_filters": false,
         "aux_field": "character_version",
         "stscript": {
@@ -2414,7 +2413,7 @@
         "apiUrl": "https://api.huaapi.asia/v1",
         "apiKey": "sk-qSRYdQUdlXFBdhnQzic3PocYZrFZJeEsWPYitnjUz8GourHp",
         "autoConnect": false,
-        "notifyUpdates": false,
+        "notifyUpdates": true,
         "disabledExtensions": [
             "third-party/st-image-auto-generation",
             "third-party/lorebook_update_listener",
@@ -2932,7 +2931,8 @@
             "地球异闻录.png",
             "破碎摇篮-重制版-3.5-Sonnet.png",
             "主持人！.png",
-            "人生复本.png"
+            "人生复本.png",
+            "《普罗米修斯的回响》.png"
         ],
         "tts": {
             "voiceMap": "",
@@ -4633,7 +4633,8 @@
                 "custom_5": true,
                 "custom_3": true,
                 "custom_1": true,
-                "custom_0": true
+                "custom_0": true,
+                "custom_2": true
             },
             "shortcuts": {
                 "asterisk": "",
@@ -4656,7 +4657,8 @@
                 "custom_5": "",
                 "custom_3": "",
                 "custom_1": "",
-                "custom_0": ""
+                "custom_0": "",
+                "custom_2": ""
             },
             "buttonOrder": [
                 "bookQuotes1",
@@ -4670,7 +4672,8 @@
                 "newline",
                 "custom_1",
                 "custom_0",
-                "custom_3"
+                "custom_3",
+                "custom_2"
             ],
             "customSymbols": [
                 {
@@ -4683,6 +4686,12 @@
                     "name": "(显示资讯、能力和背包面板)",
                     "symbol": "(显示资讯、能力和背包面板)",
                     "display": "面板",
+                    "cursorPos": "end"
+                },
+                {
+                    "name": "许小诺",
+                    "symbol": "许小诺",
+                    "display": "许小诺",
                     "cursorPos": "end"
                 }
             ]
@@ -4700,7 +4709,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 33,
                 "userConfigured": true
             }
         },
@@ -7775,7 +7784,7 @@
                     },
                     {
                         "identifier": "510bbf32-b49d-4a89-a04f-b8eb1c271dd9",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "4c258266-39bd-4920-bf26-4e1a90b38cf2",
@@ -7819,7 +7828,7 @@
                     },
                     {
                         "identifier": "d81c2780-201d-4315-a116-f0e197f060a8",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "30aa6d6d-e782-4951-8de6-a8ee68aebf1d",
