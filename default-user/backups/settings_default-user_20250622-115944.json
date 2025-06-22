@@ -28,7 +28,8 @@
         "AlertWI_人生复本.png": "true",
         "AlertRegex_人生复本.png": "true",
         "AlertWI_天渺大陆.png": "true",
-        "AlertWI_《普罗米修斯的回响》.png": "true"
+        "AlertWI_《普罗米修斯的回响》.png": "true",
+        "extension_update_nag": "Sun Jun 22 2025"
     },
     "currentVersion": "1.13.0",
     "username": "林辰",
@@ -50,7 +51,6 @@
                 "【姿势】宝典（SSVGG知识库）",
                 "【神话】SSVGG4.0（世界书本体）",
                 "信息栏 aplon",
-                "极乐迪斯科",
                 "模拟关系图【GP】",
                 "献媚文风加强版 (1)",
                 "部位特写"
@@ -491,7 +491,7 @@
             }
         ],
         "bogus_folders": true,
-        "zoomed_avatar_magnification": false,
+        "zoomed_avatar_magnification": true,
         "show_tag_filters": false,
         "aux_field": "character_version",
         "stscript": {
@@ -2414,7 +2414,7 @@
         "apiUrl": "https://api.huaapi.asia/v1",
         "apiKey": "sk-qSRYdQUdlXFBdhnQzic3PocYZrFZJeEsWPYitnjUz8GourHp",
         "autoConnect": false,
-        "notifyUpdates": false,
+        "notifyUpdates": true,
         "disabledExtensions": [
             "third-party/st-image-auto-generation",
             "third-party/lorebook_update_listener",
@@ -4478,7 +4478,7 @@
                 "tampermonkey_compatibility": false,
                 "render_depth": 0,
                 "render_optimize": true,
-                "render_hide_style": true
+                "render_hide_style": false
             },
             "script": {
                 "global_script_enabled": true,
@@ -4634,7 +4634,8 @@
                 "custom_5": true,
                 "custom_3": true,
                 "custom_1": true,
-                "custom_0": true
+                "custom_0": true,
+                "custom_2": true
             },
             "shortcuts": {
                 "asterisk": "",
@@ -4657,7 +4658,8 @@
                 "custom_5": "",
                 "custom_3": "",
                 "custom_1": "",
-                "custom_0": ""
+                "custom_0": "",
+                "custom_2": ""
             },
             "buttonOrder": [
                 "bookQuotes1",
@@ -4671,7 +4673,8 @@
                 "newline",
                 "custom_1",
                 "custom_0",
-                "custom_3"
+                "custom_3",
+                "custom_2"
             ],
             "customSymbols": [
                 {
@@ -4684,6 +4687,18 @@
                     "name": "(显示资讯、能力和背包面板)",
                     "symbol": "(显示资讯、能力和背包面板)",
                     "display": "面板",
+                    "cursorPos": "end"
+                },
+                {
+                    "name": "许小诺",
+                    "symbol": "许小诺",
+                    "display": "许小诺",
+                    "cursorPos": "end"
+                },
+                {
+                    "name": "沈佳瑶",
+                    "symbol": "沈佳瑶",
+                    "display": "沈佳瑶",
                     "cursorPos": "end"
                 }
             ]
@@ -4701,7 +4716,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 4,
+                "lastProcessedLength": 42,
                 "userConfigured": true
             }
         },
@@ -7776,7 +7791,7 @@
                     },
                     {
                         "identifier": "510bbf32-b49d-4a89-a04f-b8eb1c271dd9",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "4c258266-39bd-4920-bf26-4e1a90b38cf2",
