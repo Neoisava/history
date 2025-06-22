@@ -4477,7 +4477,7 @@
                 "tampermonkey_compatibility": false,
                 "render_depth": 0,
                 "render_optimize": true,
-                "render_hide_style": true
+                "render_hide_style": false
             },
             "script": {
                 "global_script_enabled": true,
@@ -4700,7 +4700,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 13,
+                "lastProcessedLength": 15,
                 "userConfigured": true
             }
         },
