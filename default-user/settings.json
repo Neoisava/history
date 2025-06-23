@@ -4715,7 +4715,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 123,
+                "lastProcessedLength": 116,
                 "userConfigured": true
             }
         },
@@ -8053,7 +8053,7 @@
         "deepseek_model": "deepseek-chat",
         "xai_model": "grok-3-beta",
         "pollinations_model": "openai",
-        "custom_model": "[vc]gemini-2.5-pro",
+        "custom_model": "[ch]gemini-2.5-pro",
         "custom_url": "https://new.api-kk.shop/v1",
         "custom_include_body": "",
         "custom_exclude_body": "",
@@ -8067,7 +8067,7 @@
         "openrouter_allow_fallbacks": true,
         "openrouter_middleout": "on",
         "reverse_proxy": "http://5.144.179.107:80",
-        "chat_completion_source": "makersuite",
+        "chat_completion_source": "custom",
         "max_context_unlocked": true,
         "api_url_scale": "",
         "show_external_models": false,
