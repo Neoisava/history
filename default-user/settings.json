@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "true",
-        "NavOpened": "false",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -26,7 +26,7 @@
         "AlertRegex_人生复本.png": "true",
         "AlertWI_天渺大陆.png": "true",
         "AlertWI_《普罗米修斯的回响》.png": "true",
-        "extension_update_nag": "Tue Jun 24 2025",
+        "extension_update_nag": "Mon Jun 23 2025",
         "AlertWI_《暗蚀纪元：蜂巢崩溃之后》.png": "true",
         "AlertWI_《奥法窃神者》.png": "true",
         "AlertWI_《万法盗天录》.png": "true",
@@ -5007,7 +5007,7 @@
     },
     "oai_settings": {
         "preset_settings_openai": "【Dreammini】1.301-ultra-0618 (1)",
-        "temp_openai": 1,
+        "temp_openai": 0.75,
         "freq_pen_openai": 0,
         "pres_pen_openai": 0,
         "top_p_openai": 0.98,
@@ -7895,7 +7895,7 @@
                     },
                     {
                         "identifier": "64740e0a-fd2b-4a46-84ac-d4c4f2c40e29",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "b9e73056-cbe2-4b8b-8082-f6bce544af6a",
@@ -7943,7 +7943,7 @@
                     },
                     {
                         "identifier": "cc228202-a296-4618-afc4-d9aff3bf4021",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "c6fd3183-02ef-4ffd-8bf3-fb6167ccc866",
@@ -8091,7 +8091,7 @@
         "inline_image_quality": "low",
         "video_inlining": false,
         "bypass_status_check": false,
-        "continue_prefill": true,
+        "continue_prefill": false,
         "function_calling": false,
         "names_behavior": 0,
         "continue_postfix": " ",
