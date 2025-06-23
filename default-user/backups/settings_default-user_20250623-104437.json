@@ -31,7 +31,7 @@
         "AlertWI_《普罗米修斯的回响》.png": "true",
         "extension_update_nag": "Mon Jun 23 2025"
     },
-    "currentVersion": "1.13.0",
+    "currentVersion": "1.13.1",
     "username": "林辰",
     "active_character": "破碎摇篮-重制版-3.5-Sonnet.png",
     "active_group": null,
@@ -51,7 +51,6 @@
                 "【姿势】宝典（SSVGG知识库）",
                 "【神话】SSVGG4.0（世界书本体）",
                 "信息栏 aplon",
-                "模拟关系图【GP】",
                 "献媚文风加强版 (1)",
                 "部位特写"
             ],
@@ -511,7 +510,8 @@
                     "left": 1,
                     "right": 1
                 },
-                "select": 3
+                "select": 3,
+                "state": 2
             }
         },
         "restore_user_input": true,
@@ -2495,7 +2495,8 @@
             "api": 1,
             "llmPrompt": "Ignore previous instructions. Classify the emotion of the last message. Output just one word, e.g. \"joy\" or \"anger\". Choose only one of the following labels: {{labels}}",
             "custom": [],
-            "allowMultiple": true
+            "allowMultiple": true,
+            "promptType": "raw"
         },
         "connectionManager": {
             "selectedProfile": "4d09e37d-018b-4b60-9da2-0628a75f3aef",
@@ -2986,7 +2987,7 @@
             "prompt_prefix": "best quality, absurdres, aesthetic,",
             "negative_prompt": "lowres, bad anatomy, bad hands, text, error, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
             "sampler": "k_euler",
-            "model": "nai-diffusion-4-full",
+            "model": "nai-diffusion-4-5-full",
             "restore_faces": false,
             "enable_hr": false,
             "horde": true,
@@ -3075,7 +3076,9 @@
             "bfl_upsampling": false,
             "character_negative_prompts": {
                 "修仙之路2.0": "Extreme close-up"
-            }
+            },
+            "google_api": "makersuite",
+            "google_enhance": true
         },
         "chromadb": {},
         "translate": {
@@ -4667,7 +4670,8 @@
                 "custom_1",
                 "custom_0",
                 "custom_2",
-                "custom_3"
+                "custom_3",
+                "custom_4"
             ],
             "customSymbols": [
                 {
@@ -4693,6 +4697,12 @@
                     "symbol": "白婧",
                     "display": "白婧",
                     "cursorPos": "end"
+                },
+                {
+                    "name": "李月",
+                    "symbol": "李月",
+                    "display": "李月",
+                    "cursorPos": "end"
                 }
             ]
         },
@@ -4709,7 +4719,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 87,
+                "lastProcessedLength": 120,
                 "userConfigured": true
             }
         },
@@ -4996,11 +5006,11 @@
     },
     "oai_settings": {
         "preset_settings_openai": "【Dreammini】1.301-ultra-0618 (1)",
-        "temp_openai": 1.2,
+        "temp_openai": 0.75,
         "freq_pen_openai": 0,
         "pres_pen_openai": 0,
         "top_p_openai": 0.98,
-        "top_k_openai": 40,
+        "top_k_openai": 0,
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
@@ -7792,11 +7802,11 @@
                     },
                     {
                         "identifier": "c9701159-a3fd-49df-9b5b-c6ee8ba9e7d4",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "0bbbe6c7-bc2b-4ae5-834e-849b3bec7543",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "1c2736b4-0370-42aa-990b-b5b33100ae6a",
@@ -7856,15 +7866,15 @@
                     },
                     {
                         "identifier": "b30e6b7e-13ff-4467-8ae2-ba243ced739c",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "fa248233-63f8-4867-b3dc-f2d2d1c26ec6",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "36e7b1b9-8119-4571-97f0-cc83b67fd148",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "8d63f52c-f895-4547-b7c0-38edfcd298db",
@@ -7880,7 +7890,7 @@
                     },
                     {
                         "identifier": "331d8458-3423-48b5-b6d5-b8a2e05251a5",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "64740e0a-fd2b-4a46-84ac-d4c4f2c40e29",
@@ -7896,15 +7906,15 @@
                     },
                     {
                         "identifier": "264a35a6-f2a9-4052-9195-1f91af769c92",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "7e42635a-8f91-4010-9a3e-1cb22c72e5dc",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "622e2456-43a9-45e4-8bb6-d37709b442fd",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "c9d12e15-9585-4378-b89a-f183581685a9",
@@ -7912,7 +7922,7 @@
                     },
                     {
                         "identifier": "710077af-46ea-4a6b-b421-cda982a27c00",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "3a0db162-fa32-4adf-93bd-47f753011129",
@@ -7940,7 +7950,7 @@
                     },
                     {
                         "identifier": "c7d0194e-5335-4d3a-9b05-5e6a1cdd59e3",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "8f6f6f06-2cf7-46cd-bb0a-89a8af15b5ef",
@@ -8045,6 +8055,7 @@
         "nanogpt_model": "gpt-4o-mini",
         "zerooneai_model": "yi-large",
         "deepseek_model": "deepseek-chat",
+        "aimlapi_model": "gpt-4o-mini-2024-07-18",
         "xai_model": "grok-3-beta",
         "pollinations_model": "openai",
         "custom_model": "[vc]gemini-2.5-pro",
@@ -8070,10 +8081,14 @@
         "assistant_impersonation": "",
         "claude_use_sysprompt": false,
         "use_makersuite_sysprompt": false,
+        "vertexai_auth_mode": "express",
+        "vertexai_region": "us-central1",
+        "vertexai_express_project_id": "",
         "use_alt_scale": false,
         "squash_system_messages": false,
         "image_inlining": false,
         "inline_image_quality": "low",
+        "video_inlining": false,
         "bypass_status_check": false,
         "continue_prefill": false,
         "function_calling": false,
@@ -8089,9 +8104,10 @@
         "bind_preset_to_connection": true
     },
     "background": {
-        "name": "__transparent.png",
-        "url": "url(\"backgrounds/__transparent.png\")",
-        "fitting": "cover"
+        "name": "24ff7a7f7e26bc37.png",
+        "url": "url(\"backgrounds/24ff7a7f7e26bc37.png\")",
+        "fitting": "cover",
+        "animation": false
     },
     "proxies": [
         {
