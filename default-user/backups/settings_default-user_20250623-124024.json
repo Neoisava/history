@@ -21,20 +21,20 @@
         "AlertWI_破碎摇篮-重制版-3.5-Sonnet.png": "true",
         "AlertRegex_破碎摇篮-重制版-3.5-Sonnet.png": "true",
         "Proxy_SkipConfirm_3014900888422102": "true",
+        "AlertWI_《万法盗天录》.png": "true",
+        "AlertWI_主持人！.png": "true",
+        "AlertRegex_主持人！.png": "true",
         "WelcomePage_RecentChatsHidden": "true",
         "AlertWI_人生复本.png": "true",
         "AlertRegex_人生复本.png": "true",
         "AlertWI_天渺大陆.png": "true",
         "AlertWI_《普罗米修斯的回响》.png": "true",
         "extension_update_nag": "Mon Jun 23 2025",
-        "AlertWI_《暗蚀纪元：蜂巢崩溃之后》.png": "true",
-        "AlertWI_《奥法窃神者》.png": "true",
-        "AlertWI_《万法盗天录》.png": "true",
-        "AlertRegex_《万法盗天录》.png": "true"
+        "AlertWI_《暗蚀纪元：蜂巢崩溃之后》.png": "true"
     },
     "currentVersion": "1.13.1",
     "username": "林辰",
-    "active_character": "破碎摇篮-重制版-3.5-Sonnet.png",
+    "active_character": "《暗蚀纪元：蜂巢崩溃之后》.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2932,9 +2932,9 @@
             "修仙之路2.0.png",
             "地球异闻录.png",
             "破碎摇篮-重制版-3.5-Sonnet.png",
+            "主持人！.png",
             "人生复本.png",
-            "《普罗米修斯的回响》.png",
-            "《万法盗天录》.png"
+            "《普罗米修斯的回响》.png"
         ],
         "tts": {
             "voiceMap": "",
@@ -4719,7 +4719,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 3,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
@@ -4933,14 +4933,14 @@
         "《完美世界》.png": [],
         "地球异闻录.png": [],
         "破碎摇篮-重制版-3.5-Sonnet.png": [],
+        "主持人！.png": [],
+        "《万法盗天录》.png": [],
         "云无心最终版v2.png": [],
         "天渺大陆.png": [],
         "人生复本.png": [],
         "世界调制模式·重制版.png": [],
         "《普罗米修斯的回响》.png": [],
-        "《暗蚀纪元：蜂巢崩溃之后》.png": [],
-        "《奥法窃神者》.png": [],
-        "《万法盗天录》.png": []
+        "《暗蚀纪元：蜂巢崩溃之后》.png": []
     },
     "nai_settings": {
         "temperature": 1.37,
