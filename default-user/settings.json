@@ -34,7 +34,7 @@
     },
     "currentVersion": "1.13.1",
     "username": "林辰",
-    "active_character": null,
+    "active_character": "破碎摇篮-重制版-3.5-Sonnet.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -2657,7 +2657,7 @@
             {
                 "id": "adcfb751-2ac5-4228-be5f-a78dafd121ff",
                 "scriptName": "【Dreammini】1.删除主线",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": false,
                 "findRegex": "/(?<=<dream>[\\s\\S]*?)((?:[\\(（].{1,2}[\\)）])触发(?:[1-5])?|((?:\\(.{0,2}\\)|（.{0,2}）)?触发[1-5]))(?=[\\s\\S]*?</dream>)/gm",
                 "replaceString": "",
@@ -2674,7 +2674,7 @@
             {
                 "id": "a9eef03a-b5d2-41ba-a3ff-984bd8b55367",
                 "scriptName": "【Dreammini】2.Kemini去除所有用户消息",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "^([\\s\\S]*)$",
                 "replaceString": "",
@@ -2691,7 +2691,7 @@
             {
                 "id": "6d9fbba5-cad1-433b-b029-2bede24458d3",
                 "scriptName": "【Dreammini】3.Kemini添加user输入tag",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "^([\\s\\S]*)$",
                 "replaceString": "<user_input>\n$1\n</user_input>",
@@ -2708,7 +2708,7 @@
             {
                 "id": "2688e9e7-81f0-40b9-8dd6-719ccead6391",
                 "scriptName": "【Dreammini】4.Kemini通用去除多余内容",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<guifan>.*?</guifan>)|```start|<dream>|</dream>|```end|<done>|`<done>`|(<!--\\s*consider\\s*:\\s*(.*?)\\s*-->)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
                 "replaceString": "",
@@ -2725,7 +2725,7 @@
             {
                 "id": "18567ca7-b0c6-463a-b02b-183566b4ffd2",
                 "scriptName": "【Dreammini】5.DIE[推进(缩起)]",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
                 "replaceString": "<details>\n<summary>剧情</summary>\n$1\n</details>\n\n",
@@ -2742,7 +2742,7 @@
             {
                 "id": "21ed7ae3-8926-483e-ac46-3bd55a1d6530",
                 "scriptName": "【Dreammini】6.DIE[推进(移除)]",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<plot>([\\s\\S]*?)</plot>/g",
                 "replaceString": "",
@@ -2759,7 +2759,7 @@
             {
                 "id": "77052179-920e-4b83-87f5-3dc4cef4a0c6",
                 "scriptName": "【Dreammini】7.DIE小总结(格式)",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/(?<!<details>\\s*)<summary>(((?!<summary>)[\\s\\S])*?)<\\/summary>/g",
                 "replaceString": "<details>\n<summary>摘要</summary>\n$1\n</details>\n\n",
@@ -2776,7 +2776,7 @@
             {
                 "id": "18956466-025a-4e61-b88d-74e5d4088051",
                 "scriptName": "【Dreammini】8.DIE小总结(移除正文)",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/[\\s\\S]*?(?<!<details>\\s*)<summary>([\\s\\S]*)<\\/summary>[\\s\\S]*/g",
                 "replaceString": "<summary>\n$1\n</summary>",
@@ -2793,7 +2793,7 @@
             {
                 "id": "c28179a9-f094-4df5-a8a9-29c6f46fdd8a",
                 "scriptName": "【Dreammini】9.舊选项移除",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "<options[^>]*>[\\s\\S]*?</options>",
                 "replaceString": "",
@@ -2810,7 +2810,7 @@
             {
                 "id": "4c4f6a63-0ee7-404a-b31e-1e61232f0c7b",
                 "scriptName": "【Dreammini】10.选项格式",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "<options>\\s*(1\\.[^\\n]*)\\s*(2\\.[^\\n]*)\\s*(3\\.[^\\n]*)\\s*(4\\.[^\\n]*)\\s*(5\\.[^\\n]*)\\s*(6\\.[^\\n]*)\\s*(7\\.[^\\n]*)\\s*(8\\.[^\\n]*)\\s*(9\\.[^\\n]*)\\s*<\\/options>",
                 "replaceString": "<options><details><summary style=\"background-color: #000000; color: #ffffff; padding: 5px; font-weight: bold; border-radius: 5px;\">故事选项</summary><div style=\"background-color: #000000; color: #ffffff; padding: 15px; border-radius: 0 0 5px 5px;\"><p style=\"margin: 5px 0;\">以下为当前场景下的可选行动，选择数字1-9（可複选），或使用10自行输入：</p><ul style=\"list-style-type: none; padding-left: 0;\"><li>\"$1\" <br> </li><li>\"$2\"<br> </li><li>\"$3\"<br></li><li>\"$4\"<br></li><li>\"$5\"<br></li><li>\"$6\"<br> </li><li>\"$7\"<br></li><li>\"$8\"<br></li><li>\"$9\" </li></ul></div></details></options>",
@@ -2827,7 +2827,7 @@
             {
                 "id": "dd994ad4-8957-4a56-9cc9-e4afa85acb2e",
                 "scriptName": "【Dreammini】 11.DIE移除最近总结",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/(?<!<details>\\s*)<summary>(((?!<summary>)[\\s\\S])*?)<\\/summary>/g",
                 "replaceString": "",
@@ -2895,7 +2895,7 @@
             {
                 "id": "9d4d3212-0456-4cd2-88b9-06931c0d3d1d",
                 "scriptName": "隐藏关系图1【GP】",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<Graph>[\\s\\S]*?<\\/Graph>/gs",
                 "replaceString": "",
@@ -2912,7 +2912,7 @@
             {
                 "id": "fb48d6f7-14e9-4faf-a90d-277ee79e0337",
                 "scriptName": "隐藏关系图2【GP】",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<Graph>[\\s\\S]*?<\\/Graph>/gs",
                 "replaceString": "",
@@ -2925,6 +2925,125 @@
                 "maxDepth": null,
                 "markdownOnly": false,
                 "promptOnly": true
+            },
+            {
+                "id": "72fad55d-3851-4169-b58b-42fc9d14060b",
+                "scriptName": "🍎-用户内容包裹",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "^([\\s\\S]*)$",
+                "replaceString": "<user_input>\n$1\n</user_input>",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": 1,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "3415edba-8059-4038-bbbe-d1b89265842b",
+                "scriptName": "🍎-移除思维链（新版-必须更新）",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "<thinking>([\\s\\S]*?)<\\/thinking>",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "9d2a2ee3-2703-45b5-873a-ddb186b7487f",
+                "scriptName": "🍎-五楼后仅保留摘要（新版必须更新）",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "([\\s\\S]*)(?=\\s*<details>\\s*<summary>🍎摘要<\\/summary>)",
+                "replaceString": "“仅保留摘要”",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 5,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "c5558553-570c-43dd-bcf0-0b2a57ecc943",
+                "scriptName": "🍎- 去除所有用户消息（可选-建议用）",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "^([\\s\\S]*)$",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "substituteRegex": 0,
+                "minDepth": 1,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "65862d65-6d6a-49c2-9b04-1dc60750083b",
+                "scriptName": "🍎-仅保留最近一次剧情分支（新增 可选 省一点token）",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "<branches>([\\s\\S]*?)</branches>",
+                "replaceString": "$1",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 2,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "5d3a2477-7eb4-4a80-bcf5-229c22ddceb4",
+                "scriptName": "🍎-不发送小剧场（新版-必须更新）",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "<xiaojuchang>[\\s\\S]*?</xiaojuchang>",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "fffc3587-a387-404d-b09a-b96b38edf053",
+                "scriptName": "🍎-移除免责声明（开防截断用）",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<disclaimer>[\\s\\S]*?</disclaimer>/gm",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
             }
         ],
         "character_allowed_regex": [
@@ -4719,7 +4838,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 28,
                 "userConfigured": true
             }
         },
@@ -5015,7 +5134,7 @@
         "min_p_openai": 0,
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
-        "stream_openai": false,
+        "stream_openai": true,
         "openai_max_context": 184072,
         "openai_max_tokens": 30000,
         "wrap_in_quotes": false,
@@ -5665,7 +5784,7 @@
                 "marker": false,
                 "name": "🔝🍎色孽之果（可选-开了更容易瑟）",
                 "role": "system",
-                "content": "- 色孽之果，乃神明至爱。极乐之果，饱含纵欲、淫乱和无度。",
+                "content": "- 色孽之果，乃神明至爱。极乐之果，饱含纵欲、淫乱、背德和无度。",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false,
@@ -6955,7 +7074,7 @@
                     },
                     {
                         "identifier": "afb7f64a-4998-4b06-a6e5-69cca822cc2d",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "e90e1ae1-b13f-421e-8a76-ef59556d0c58",
@@ -7291,7 +7410,7 @@
                     },
                     {
                         "identifier": "84704f6a-ef5e-4d2c-9d03-97ec3d9457d3",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "baa83523-1ed9-4303-881f-8d1d670f28cb",
@@ -7311,7 +7430,7 @@
                     },
                     {
                         "identifier": "31b029db-6fa1-4c43-bd81-f62ee510dcfa",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "cac8a5a5-b8f9-4e30-8701-abda947a917d",
@@ -7327,11 +7446,11 @@
                     },
                     {
                         "identifier": "2fb071d9-a583-41c7-9eda-dcfdf1bc3a73",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "34f61e34-3080-4a8a-8760-576a6a1ec92f",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "0b6b1245-f29a-41c4-8696-ea3a6d1daf3a",
@@ -7359,7 +7478,7 @@
                     },
                     {
                         "identifier": "1a51716c-48b6-4944-b8c8-e8c50b2bb66a",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "5c7ce1bc-3fbb-4132-8abc-492a069db4b4",
@@ -7367,7 +7486,7 @@
                     },
                     {
                         "identifier": "390d6887-9a69-43dc-8c88-c6ea73288ed6",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "fed78d89-a0ba-4e9f-a226-63ba30cd600d",
@@ -7462,7 +7581,7 @@
         "personality_format": "{{personality}}",
         "openai_model": "gpt-4-turbo",
         "claude_model": "claude-3-5-sonnet-20240620",
-        "google_model": "gemini-2.5-pro-preview-05-06",
+        "google_model": "gemini-2.5-pro",
         "vertexai_model": "gemini-2.0-flash-001",
         "ai21_model": "jamba-1.5-large",
         "mistralai_model": "mistral-large-latest",
