@@ -34,7 +34,7 @@
     },
     "currentVersion": "1.13.1",
     "username": "林辰",
-    "active_character": null,
+    "active_character": "破碎摇篮-重制版-3.5-Sonnet.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -4719,7 +4719,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 29,
                 "userConfigured": true
             }
         },
@@ -7451,11 +7451,11 @@
                     },
                     {
                         "identifier": "f13388f6-345d-4891-8518-3ce94eed665e",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "76fcd970-8ea4-40b0-8336-9504054b10bc",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "jailbreak",
@@ -7991,7 +7991,7 @@
                     },
                     {
                         "identifier": "2d0b09ba-6120-4769-a49a-e27f4c99cb0e",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "83be0196-53ef-4b5c-897c-c4cf1d2ae433",
