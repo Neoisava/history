@@ -4666,7 +4666,8 @@
                 "custom_1",
                 "custom_0",
                 "custom_2",
-                "custom_3"
+                "custom_3",
+                "custom_4"
             ],
             "customSymbols": [
                 {
@@ -4692,6 +4693,12 @@
                     "symbol": "白婧",
                     "display": "白婧",
                     "cursorPos": "end"
+                },
+                {
+                    "name": "李月",
+                    "symbol": "李月",
+                    "display": "李月",
+                    "cursorPos": "end"
                 }
             ]
         },
@@ -4708,7 +4715,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 120,
+                "lastProcessedLength": 121,
                 "userConfigured": true
             }
         },
