@@ -2,8 +2,8 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
-        "NavOpened": "false",
+        "LNavOpened": "true",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -30,11 +30,13 @@
         "AlertWI_《暗蚀纪元：蜂巢崩溃之后》.png": "true",
         "AlertWI_《奥法窃神者》.png": "true",
         "AlertWI_《万法盗天录》.png": "true",
-        "AlertRegex_《万法盗天录》.png": "true"
+        "AlertRegex_《万法盗天录》.png": "true",
+        "AlertWI_归零区.png": "true",
+        "AlertRegex_归零区.png": "true"
     },
     "currentVersion": "1.13.1",
     "username": "林辰",
-    "active_character": "破碎摇篮-重制版-3.5-Sonnet.png",
+    "active_character": "归零区.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -3075,7 +3077,8 @@
             "破碎摇篮-重制版-3.5-Sonnet.png",
             "人生复本.png",
             "《普罗米修斯的回响》.png",
-            "《万法盗天录》.png"
+            "《万法盗天录》.png",
+            "归零区.png"
         ],
         "tts": {
             "voiceMap": "",
@@ -3301,8 +3304,8 @@
                 "content": "\\(不要重复前文，继续输出新剧情！)",
                 "LAST_RECEIVE_TOKENS": 5507,
                 "LAST_RECEIVE_CHARS": 7784,
-                "LAST_SEND_TOKENS": 106293,
-                "LAST_SEND_CHARS": 235539,
+                "LAST_SEND_TOKENS": 101518,
+                "LAST_SEND_CHARS": 229089,
                 "infobar_named_configs_global_v2_8_9": {
                     "1": {
                         "general": {
@@ -4840,7 +4843,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 5,
                 "userConfigured": true
             }
         },
@@ -5061,7 +5064,8 @@
         "《普罗米修斯的回响》.png": [],
         "《暗蚀纪元：蜂巢崩溃之后》.png": [],
         "《奥法窃神者》.png": [],
-        "《万法盗天录》.png": []
+        "《万法盗天录》.png": [],
+        "归零区.png": []
     },
     "nai_settings": {
         "temperature": 1.37,
