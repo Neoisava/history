@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "true",
-        "NavOpened": "true",
+        "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -26,7 +26,7 @@
         "AlertRegex_人生复本.png": "true",
         "AlertWI_天渺大陆.png": "true",
         "AlertWI_《普罗米修斯的回响》.png": "true",
-        "extension_update_nag": "Mon Jun 23 2025",
+        "extension_update_nag": "Tue Jun 24 2025",
         "AlertWI_《暗蚀纪元：蜂巢崩溃之后》.png": "true",
         "AlertWI_《奥法窃神者》.png": "true",
         "AlertWI_《万法盗天录》.png": "true",
@@ -47,10 +47,14 @@
             "globalSelect": [
                 "__性爱世界书",
                 "--油猴世界书nai4改(6)",
+                "-【基本】XP兼特征兼行为兼规则兼世界观世界书·第一册",
+                "-【基本】XP兼特征兼行为兼规则兼世界观世界书·第三册",
+                "-【基本】XP兼特征兼行为兼规则兼世界观世界书·第二册",
                 "-提示词大全",
                 "[Dreammini]预设世界书DLC1.6",
                 "【姿势】宝典（SSVGG知识库）",
                 "【神话】SSVGG4.0（世界书本体）",
+                "❄️小回的小剧场1.0-【🍎果实预设专供版】",
                 "模拟关系图【GP】",
                 "献媚文风加强版 (1)",
                 "部位特写"
@@ -301,11 +305,11 @@
         "streaming_fps": 30,
         "smooth_streaming": false,
         "smooth_streaming_speed": 100,
-        "fast_ui_mode": true,
-        "avatar_style": 2,
-        "chat_display": 1,
+        "fast_ui_mode": false,
+        "avatar_style": 1,
+        "chat_display": 0,
         "toastr_position": "toast-top-center",
-        "chat_width": 50,
+        "chat_width": 55,
         "never_resize_avatars": true,
         "show_card_avatar_urls": false,
         "play_message_sound": true,
@@ -315,26 +319,26 @@
         "sort_field": "name",
         "sort_order": "asc",
         "sort_rule": null,
-        "font_scale": 1,
-        "blur_strength": 10,
-        "shadow_width": 2,
-        "main_text_color": "rgba(192, 180, 161, 1)",
-        "italics_text_color": "rgba(145, 145, 145, 1)",
-        "underline_text_color": "rgba(161, 143, 98, 1)",
-        "quote_text_color": "rgba(209, 203, 194, 1)",
-        "blur_tint_color": "rgba(22, 22, 24, 1)",
-        "chat_tint_color": "rgba(28, 28, 30, 1)",
-        "user_mes_blur_tint_color": "rgba(28, 28, 30, 0.95)",
-        "bot_mes_blur_tint_color": "rgba(22, 22, 24, 0.95)",
-        "shadow_color": "rgba(0, 0, 0, 1)",
-        "border_color": "rgba(28, 28, 30, 1)",
-        "custom_css": "/* ==========================================================\n   样式作者：@Junezz\n   版本：v1.54\n   发布于：类脑 Discord 社区\n\n   本样式仅供个人使用与参考，禁止任何形式的商用。\n   可二改不可二传。请保留本注释和原作者署名。\n   ========================================================== */\n\n/* 字体 */\n@import url(\"https://fontsapi.zeoseven.com/515/main/result.css\");\n\nbody {\n    font-family: \"LXGW Neo XiHei Plus\";\n    font-weight: normal;\n}\n\n  :root {\n    --mainFontSize: calc(var(--fontScale)* 16px);\n    --standardIconSize: calc(var(--mainFontSize)* 1);\n    --bottomFormIconSize: calc(var(--mainFontSize)* 1.3);\n    --genericRadius: 8px; /* 通用圆角 */\n    --avatar-base-width: 48px;\n    --avatar-base-height: 48px;\n    --scrollBarWidth: 5px;\n    --pagePadding: calc(var(--scrollBarWidth) + 3px);\n    --black30a: #ffffff10 !important;\n    --warning: #ce3636;\n    --crimson70a: #0252ff66;\n    --crimson-hover: #2a60d5ba;\n    --boxShadowSubtle: 0px 8px 22px -6px rgba(24, 39, 75, 0.12);\n    --menuBackgroundColor: #181819;\n    --mesHeadlineColor: #ffffff0b;\n    --buttonFill: #ececee10;\n  }\n  \n  /* 聊天框背景 */\n  #chat {\n    padding: var( --pagePadding) 3px var( --pagePadding) var( --pagePadding);\n    overflow-y: scroll;\n    border-radius: 0px 0px var(--genericRadius) var(--genericRadius);\n  }\n\n  /* 顶栏 */\n  #top-bar {\n    background-color: transparent !important;\n    height: var(--topBarBlockSize);\n  }\n\n  #top-settings-holder {\n    box-shadow: var(--boxShadowSubtle);\n  }\n\n/* Apply unified background color to nav & menu buttons */\n  #rightNavHolder,\n  #persona-management-button,\n  #extensions-settings-button,\n  #logo_block,\n  #user-settings-button,\n  #WI-SP-button,\n  #advanced-formatting-button,\n  #sys-settings-button,\n  #ai-config-button {\n  background-color: var(--menuBackgroundColor);\n  }\n\n  #extensions_settings .inline-drawer-toggle.inline-drawer-header,\n  #extensions_settings2 .inline-drawer-toggle.inline-drawer-header,\n  #user-settings-block h4,\n  .standoutHeader,\n  .userSettingsInnerExpandable, .bg_example {\n    border: transparent !important;\n  }\n\n  #left-nav-panel,\n  #rm_api_block,\n  #AdvancedFormatting,\n  #WorldInfo,\n  #user-settings-block,\n  #Backgrounds,\n  #rm_extensions_block,\n  .drawer-content.openDrawer,\n  #right-nav-panel {\n    background-color: var(--menuBackgroundColor) !important;\n    border-radius: 0px 0px var(--genericRadius) var(--genericRadius);\n    padding: 8px;\n  }\n\n  .drawer-content {\n    border-top-right-radius: 0px;\n    border-top-left-radius: 0px;\n    box-shadow: 0 1px 0 0 #3b352d;\n    padding-top: 8px;\n  }\n  \n  /* Icon Sizes & Colors */\n  #completion_prompt_manager #completion_prompt_manager_list li.completion_prompt_manager_prompt span span span,\n  #completion_prompt_manager #completion_prompt_manager_list .completion_prompt_manager_prompt .completion_prompt_manager_prompt_name .fa-solid,\n  #rm_button_characters, #rm_button_panel_pin_div, #lm_button_panel_pin_div, #WI_button_panel_pin_div,\n  #completion_prompt_manager .completion_prompt_manager_footer a,\n  .fa, .fa-brands, .fa-classic, .fa-regular, .fa-sharp, .fa-solid, .fab, .far, .fas {\n    font-size: var(--standardIconSize);\n  }\n\n  /* 底栏icon */\n  #rightSendForm>div:not(.mes_stop), #leftSendForm>div, .fa-solid.fa-circle-stop {\n    font-size: var(--bottomFormIconSize);\n  }\n\n   /* 底栏icon 对齐 */\n   #leftSendForm, #rightSendForm {\n    align-items: center;\n  }\n  \n  /* 标题样式 */\n  \n  /* 清除设置页相关模块标题的背景图，并精简上下 padding */\n#extensions_settings .inline-drawer-toggle.inline-drawer-header,\n#extensions_settings2 .inline-drawer-toggle.inline-drawer-header,\n#user-settings-block h4, .standoutHeader{\n  background-image: none !important;\n  padding: 2px 0 !important;\n}\n\n /* 原始元素样式 */\n.standoutHeader:not(h4),\n#rm_PinAndTabs,\n#title_api,\n#rm_api_block .flex-container.alignItemsBaseline,\n#AdvancedFormatting .flex-container.alignItemsBaseline:not(h3),\n#WorldInfo .alignitemscenter:not(#world_popup *),\n#user-settings-block div[name=\"userSettingsRowOne\"],\n#rm_extensions_block .alignitemscenter.flex-container.wide100p:not(.justifyCenter),\n#top-settings-holder .drawer:not(:first-child):not(:last-child) .drawer-content .alignItemsBaseline.wide100p {\n  position: relative; /* 必须要有 */\n  padding-left: 12px;\n  margin-top: calc(var(--mainFontSize) * 0.2) !important;\n  margin-bottom: calc(var(--mainFontSize) * 0.2) !important;\n}\n\n/* 小竖线 */\n#rm_PinAndTabs::before,\n#title_api::before,\n#rm_api_block .flex-container.alignItemsBaseline::before,\n#AdvancedFormatting .flex-container.alignItemsBaseline:not(h3)::before,\n#WorldInfo .alignitemscenter:not(#world_popup *)::before,\n#user-settings-block div[name=\"userSettingsRowOne\"]::before,\n#rm_extensions_block .alignitemscenter.flex-container.wide100p:not(.justifyCenter)::before,\n#top-settings-holder .drawer:not(:first-child):not(:last-child) .drawer-content .alignItemsBaseline.wide100p::before {\n  content: '';\n  position: absolute;\n  left: 0;\n  top: 6px;\n  bottom: 6px;\n  width: 3px;\n  background-color: var(--SmartThemeUnderlineColor);\n  border-radius: 1px;\n}\n\n  /* === 统一标题文字的行高（使阅读更舒适）=== */\n  .standoutHeader strong,\n  #right-nav-panel h2,\n  .drawer-content > h3,\n  .drawer-content .flex-container h3:first-of-type:not(#Backgrounds .textAlignCenter),\n  .drawer-content .flex-container .flex-container h3:first-of-type,\n  .popup h3:not(dialog *) {\n    line-height: 1.6;\n  }\n\n  .flex-container {\n    gap: 8px;\n  }\n\n\n  .redOverlayGlow {\n    color: #9c2c2c;\n  }\n  \n  /* AI聊天气泡样式 */\n  body.bubblechat .mes[is_user=\"false\"]{\n    margin-top: 8px;\n    margin-bottom: 16px;\n  }\n\n  /* menu颜色 */\n  #options, #extensionsMenu, .popup .popper-modal, .select2-dropdown {\n    background-color: var(--menuBackgroundColor);\n  }\n\n  /* 聊天气泡 */\n  body.bubblechat .mes {\n    border-radius: var(--genericRadius);\n    padding: 16px;\n    display: flex;\n    flex-direction: column;\n  }\n\n  /* 头像 */\n  .mesAvatarWrapper {\n    display: flex;\n    flex-direction: row; /* 从竖排改成横排 */\n    align-items: center; /* 垂直居中 */\n    gap: 8px; /* 头像和气泡之间的间距 */\n    background-color: var(--mesHeadlineColor);\n    padding: 8px; /* 间距 */\n    padding-right: 12px; /* 右侧间距 */\n    border-top-left-radius: var(--genericRadius);\n    border-top-right-radius: var(--genericRadius);\n    overflow: hidden;\n    width: 100%;\n  }\n\n    /* 头像处理 */\n  .mes .avatar img{\n   padding: 0px;\n  }\n\n  body.square-avatars .avatar, body.square-avatars .avatar img{\n    border-radius: var(--genericRadius) !important;\n  }\n\n  .avatar img {\n    border: none;\n    box-shadow: none !important;\n  }\n\n  body.big-avatars .avatar {\n    align-items: self-start !important;\n  }\n\n    /* 名字 */\n  .mes_block .ch_name {\n    background-color: var(--mesHeadlineColor);\n    border-bottom-left-radius: var(--genericRadius);\n    border-bottom-right-radius: var(--genericRadius);\n    padding: 8px; /* 间距 */\n    margin-bottom: 12px;\n  }\n\n    /* 正文 */\n  .mes_text {\n    padding: 0px 4px !important;\n  }\n    \n  .last_mes .mesAvatarWrapper {\n    padding-bottom: 8px !important;\n}\n  .mes_block {\n    padding-left: 0px !important;\n  }\n\n  /* 快捷回复 */\n  .menu_button  {\n    filter: none !important;\n    background-color: var(--buttonFill);\n    border-radius: 4px !important;\n    border:transparent !important;\n  }\n\n  /* 发送bar */\n  body.no-blur #send_form {\n    border-top: #3b352d solid 1px;\n    border-radius: var(--genericRadius);\n    padding: 6px 8px;\n    box-shadow: 0 -1px 0px 0 var(--SmartThemeChatTintColor);\n  }\n\n  /* 按键选项等颜色 */\n  select, .range-block-counter input, .text_pole, textarea, .neo-range-input {\n    filter: none !important;\n    background-color: var(--buttonFill) !important;\n    border: transparent !important;\n    margin: 4px 0px !important;\n  }\n\n  /* 发送input */\n  #send_textarea {\n    background-color: transparent !important;\n    border: none !important;\n    margin: 0px !important;\n  }\n\n  .menu_button.menu_button_default {\n    box-shadow: none !important;\n  }\n\n   /* 世界书设置 */\n   .wi-card-entry {\n    margin-top: 12px;\n    padding: 8px;\n    background-color: var(--mesHeadlineColor);\n  }\n\n  /* 滑轮 */\n  input[type=\"range\"] {\n    box-shadow: none;\n    background-color: var(--black30a) !important;\n    height: 5px;\n  }\n\n  /* Checkbox */\n  input[type='checkbox'] {\n    background-color: #ffffff2b;\n    border: none;\n    box-shadow: none;\n    border-radius: 2px;\n  }\n  input[type=\"checkbox\"]::before {\n    box-shadow: inset 1em 1em var(--SmartThemeEmColor);\n  }\n\n  /* 预设 */\n  #completion_prompt_manager_list {\n    background-color: var(--menuBackgroundColor) !important;\n    padding: 0px 8px;\n  }\n  \n  #completion_prompt_manager .caution {\n    color: var(--warning);\n  }\n\n  #completion_prompt_manager #completion_prompt_manager_list li.completion_prompt_manager_prompt {\n    background-color: #1c1c1e;\n    border: none;\n    border-radius: 2px;\n    padding: 8px;\n    margin-bottom: 8px;\n  }\n  #completion_prompt_manager #completion_prompt_manager_list .completion_prompt_manager_prompt.completion_prompt_manager_prompt_disabled {\n    background-color: var(--menuBackgroundColor);\n    border: none;\n    border-radius: 2px;\n    padding: 8px;\n    margin-bottom: 8px;\n  }\n\n  #completion_prompt_manager #completion_prompt_manager_list \n.completion_prompt_manager_prompt .completion_prompt_manager_prompt_name .fa-solid {\n  color: inherit;\n  }\n\n  /* Spacing Adjustment */\n  .range-block-title {\n    margin: 8px 0px;\n    text-align: left;\n  }\n\n  hr {\n    background-image: none;\n    background-color: var(--SmartThemeUnderlineColor);\n    margin: 12px 0px;\n  }\n\n  .range-block {\n    margin-bottom: 8px;\n  }\n  .checkbox_label {\n    margin: 2px 0px;\n  }\n\n  #result_info_text {\n    color: var(--SmartThemeBodyColor);\n  }\n\n  .editable-slider-notification {\n    top:10px;\n  }\n  \n  /* 圆形滑动条 */\n  input[type=\"range\"]::-webkit-slider-thumb {\n    box-shadow: none;\n    background-color: var(--SmartThemeEmColor);\n    width: 12px;\n    height: 12px;\n  }\n\n  #userSettingsRowOne {\n    margin: 8px 0px;\n  }\n\n  .mes_reasoning_header_title {\n    padding-right: 16px;\n  }\n\n  #rm_print_characters_block {\n    margin-top: 8px;\n  }\n\n  #ui_language_select {\n    width: 6em !important;\n }\n\n  /* 角色 */\n  #rm_print_characters_pagination {\n    background-color: var(--menuBackgroundColor);\n    border-radius: var(--genericRadius);\n    padding: 8px;\n    margin: 8px;\n  }\n  .avatar-container.selected {\n    border: 1px solid var(--SmartThemeUnderlineColor);\n    border-radius: 4px;\n  }\n  \n  .avatar-container:hover {\n    background-color: var(--white20a);\n  }\n\n  .character_select.is_fav .ch_name, .group_select.is_fav .ch_name, .group_member.is_fav .ch_name {\n    color: var(--SmartThemeUnderlineColor);\n  }\n\n  .character_select.is_fav .avatar {\n    outline: 1px solid var(--SmartThemeUnderlineColor);\n  }\n\n  /* 思维链 */\n  .mes_reasoning_header {\n    background-color: #ffffff18;\n    justify-content: center;\n    padding: 8px;\n    letter-spacing: 0.5px;\n    margin-bottom: 12px;\n    transition: all 0.25s ease;\n    border-left: 3px solid var(--SmartThemeUnderlineColor);\n    cursor: pointer;\n  }\n\n  .mes_reasoning_header:hover {\n    background-color: #ffffff24;\n  }\n\n  .mes_reasoning_details .mes_reasoning_arrow {\n    height: var(--mainFontSize)*0.9;\n    width: var(--mainFontSize)*0.9;\n  }\n\n  .mes_reasoning {\n    border-left: var(--SmartThemeUnderlineColor) solid 2px;\n    color: var(--SmartThemeBodyColor)\n  }\n\n  /* scrollbar */\n  ::-webkit-scrollbar {\n    width: var(--scrollBarWidth);\n    height: var(--scrollBarWidth);\n  }\n\n   ::-webkit-scrollbar-track {\n    background: transparent;\n  }\n\n  ::-webkit-scrollbar-thumb:vertical,\n  ::-webkit-scrollbar-thumb:horizontal {\n  background-color: var(--white20a);\n  border:none;\n  box-shadow: none;\n  }\n  \n  /* 其他 */\n  .drawer-content .alignItemsBaseline {\n    align-items: center !important;\n  }\n\n  .flex1.flex-container.alignItemsBaseline {\n    min-width: 214px;\n  }\n\n  .fa-solid.fa-circle-question.note-link-span {\n    padding-top: 5px;\n    padding-bottom: 5px;\n  }\n\n  .doubleRangeContainer > .doubleRangeInputContainer::after {\n    background-color: var(--SmartThemeEmColor);\n    box-shadow: none !important;\n  } \n\n  /* pagination */\n  div[is_user=\"false\"].last_mes .mes_block {\n    padding-bottom: 48px;\n  }\n\n  /* 对话样式 */\n  .mes_text q {\n    color: var(--SmartThemeQuoteColor);\n    background-color: #faffdf14;\n    margin: 0px 3px;\n    padding: 2px 4px;\n    padding-left: 8px;\n    border-radius: 2px;\n    border-left: #faffdf61 1.5px solid;\n    border-right: #faffdf61 1.5px solid;\n    font-size: calc(0.97* var(--mainFontSize));\n  }\n  \n  /* 角色收藏滚动条 */\n  #HotSwapWrapper > div {\n    overflow: auto hidden;\n    flex-wrap: nowrap;\n    justify-content: flex-start;\n    gap: 8px;\n    min-height: calc(var(--avatar-base-height)* 1.5);\n  }\n  \n  #HotSwapWrapper > div::-webkit-scrollbar-thumb {\n  background-color: var(--white20a);\n  }\n\n  #HotSwapWrapper {\n    overflow: hidden;\n  }\n \n /* 表格样式 */\n .mes_text table {\n  width: 100%;\n  border-collapse: collapse;\n  margin: 8px 0;\n  color: var(--SmartThemeQuoteColor);\n  background-color: rgba(255, 255, 255, 0.04);\n  border-radius: var(--genericRadius);\n  overflow: hidden;\n }\n\n .mes_text th,\n .mes_text td {\n  border: none;\n  border-right: 1px solid rgba(255, 255, 255, 0.05);\n  padding: 10px 14px;\n  text-align: left;\n  border-bottom: 1px solid rgb(243 227 192 / 12%);\n }\n\n .mes_text th {\n  color: var(--SmartThemeQuoteColor);\n  font-weight: 700;\n }\n\n .mes_text tr:last-child td {\n  border-bottom: none;\n }\n\n .mes_text tr:nth-child(even) {\n  background-color: rgba(255, 255, 255, 0.025);\n }\n\n .mes_text td:last-child,\n .mes_text th:last-child {\n  border-right: none;\n }\n \n/* 基础代码块 */\n.mes_text pre {\n  background-color: rgba(255, 255, 255, 0.04);\n  padding: 12px 14px;\n  border-radius: var(--genericRadius);\n  font-family: inherit;    \n  font-size: calc(var(--mainFontSize)* 0.95);\n  letter-spacing: 0.3px;\n  overflow-x: auto;\n  white-space: pre-wrap;\n  word-break: break-word;\n  border-left: 3px solid var(--SmartThemeUnderlineColor);\n  margin: 10px 0;\n  position: relative; \n}\n\n .mes_text pre code{\n  line-height: 1.4;\n}\n   .hljs-variable {\n  color: #ff6074;\n}\n\n\n/* 保留字体继承，不破坏复制按钮结构 */\n.mes_text pre code {\n  font-family: inherit;\n  color: inherit;\n  background: none;\n  border: none\n}\n\n/* 记忆插件表格 */\n\n.tableToolbar {\n    background: var(--grey10) !important;\n    border: 1px solid var(--grey30) !important;\n}\n\n/* 手机适配 */\n@media (max-width: 600px) {\n  #rm_extensions_block {\n    padding-right: 24px;\n  }\n  #bg_menu_content {\n    width: 100%;\n  }\n}\n\n/* Safari 适配 */\n@supports (-webkit-touch-callout: none) {\n  #chat {\n    padding-right: var(--pagePadding); /* 手动留出滚动条空间 */\n  }\n  .drawer-content:not(#left-nav-panel):not(#right-nav-panel) {\n    max-width: 100dvw;\n  }\n  #world_popup {\n    width: 100%;\n  }\n}\n\n/* iPad safari */\n@supports (-webkit-touch-callout: none) {\n  @media screen and (min-width: 768px) {\n    #sheld {\n      width: var(--sheldWidth);\n      margin-left: auto;\n      margin-right: auto;\n    }\n    #top-bar, #top-settings-holder .drawer .drawer-content {\n      width: var(--sheldWidth);\n    }\n    #left-nav-panel,\n    #right-nav-panel,\n    #character_popup,\n    #world_popup,\n    .drawer-content {\n      top: var(--topBarBlockSize);\n    }\n    #character_popup,\n    #world_popup,\n    .drawer-content {\n      margin-top: 0px;\n      top: var(--topBarBlockSize);\n    }\n  }\n}\n\n\n/* 插件适配 */\n\n/* 文生图 */\n#settings-panel input, #settings-panel select, #settings-panel textarea,\n#settings-panel2 input, #settings-panel2 select {\n  background-color: var(--buttonFill) !important;\n}\n\n/* qr隐藏插件 */\n#quick-reply-rocket-button i {\n  font-size: var(--bottomFormIconSize) !important;\n  color: var(--SmartThemeBodyColor) !important;\n}\n\n/* 输入助手 */\n.form-group label {\n  color: var(--SmartThemeBodyColor) !important;\n}\n\n.form-group input, .form-group select {\n  border: none !important;\n  background-color: var(--buttonFill) !important;\n  color: var(--SmartThemeBodyColor) !important;\n}\n\n",
+        "font_scale": 0.98,
+        "blur_strength": 0,
+        "shadow_width": 0,
+        "main_text_color": "rgba(0, 0, 0, 1)",
+        "italics_text_color": "rgba(185, 32, 11, 0.84)",
+        "underline_text_color": "rgba(180, 166, 34, 0.68)",
+        "quote_text_color": "rgba(199, 57, 12, 0.81)",
+        "blur_tint_color": "rgba(234, 234, 233, 0.92)",
+        "chat_tint_color": "rgba(255, 253, 254, 0.35)",
+        "user_mes_blur_tint_color": "rgba(230, 230, 230, 1)",
+        "bot_mes_blur_tint_color": "rgba(245, 245, 245, 1)",
+        "shadow_color": "rgba(0, 0, 0, 0.43)",
+        "border_color": "rgba(200, 200, 200, 0.69)",
+        "custom_css": "/* 底栏QR按键隐藏 */\n#send_form:hover #qr--bar {    \n    height: 40px;    \n    transition: all 0.5s ease;\n}\n\n#qr--bar {    \n    height: 0.1px;\n}\n\ncode span.comment {\n    color: #999;\n    font-style: italic;\n}\n\nbody {\n    font-family: 'ZhuqueFangsong', serif;\n    line-height: 1.5;\n    font-weight: 300; \n}\n\n@font-face {\n    font-family: 'ZhuqueFangsong';\n    src: url(\"http://sharkpan.xyz/f/24j6iQ/%E4%B8%AD%E6%96%87%20-%20Huiwen.otf\") format('truetype'); /* 修改为新的字体链接 */\n    font-weight: 200; /* 设置字体粗细为400 */\n    font-style: normal;\n}\n\n/* 高亮样式 */\ncode span.keyword {\n    color: #007BFF; /* 关键字颜色 */\n    font-weight: bold;\n}\n\ncode span.string {\n    color: #d14;\n}\n\n* {\n    --black30a: rgb(255 255 255 / 30%);\n    --black50a: rgb(255 255 255 / 50%);\n    --black70a: rgb(255 255 255 / %);\n    --white20a: rgb(255 255 255 / 20%);\n    --white30a: rgb(255 255 255 / 30%);\n    --white50a: rgb(255 255 255 / 50%);\n    --white70a: rgba(20 20 34/ 90%);\n    --grey30: rgb(255 255 255);\n    --grey30a: rgb(255 255 255 / 30%);\n    --grey7070a: rgb(255 255 255 / 70%);\n}\n\n/* 添加占位符的样式 */\ntextarea::placeholder, input[type=\"text\"]::placeholder {\n    font-family: 'ZhuqueFangsong', serif;\n    color: #999; /* 灰色占位符 */\n    font-weight: 300; /* 更细的占位符字体 */\n    font-size: 14px; /* 占位符稍小 */\n}\n\n/* 聚焦时样式 */\ntextarea:focus, input[type=\"text\"]:focus {\n    border-color: #000; /* 聚焦时边框保持黑色 */\n    background-color: #f7f7f7; /* 微微变浅的灰白色背景 */\n    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* 更深的阴影效果 */\n}\n\ntextarea, input[type=\"text\"] {\n    font-family: 'ZhuqueFangsong', serif; /* 嵌入字体 */\n    font-size: 16px; /* 字体大小 */\n    font-weight: 300; /* 字体粗细 */\n    line-height: 1.6; /* 行高 */\n    color: #000; /* 黑色字体 */\n    background-color: #fff; /* 白色背景 */\n    border: 1px solid #000; /* 黑色边框 */\n    border-radius: 5px; /* 圆角 */\n    padding: 10px; /* 内边距 */\n    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* 黑色微弱阴影 */\n    outline: none; /* 去掉默认聚焦时的外边框 */\n    transition: all 0.3s ease; /* 动态效果 */\n}\n\npre {\n    background-color: #f8f9fa; /* 浅灰色背景 */\n    color: #333; /* 深灰色字体 */\n    border: 1px solid #e0e0e0; /* 浅灰色边框 */\n    border-radius: 4px; /* 圆角 */\n    padding: 8px; /* 内边距 */\n    font-family: 'Courier New', monospace; /* 等宽字体 */\n    font-size: 14px; /* 字体大小 */\n    overflow: auto; /* 长内容滚动 */\n}\n\ncode {\n    background-color: #E6E6E6; /* 灰色背景 */\n    color: #000000; /* 黑色文字 */\n    font-family: inherit; /* 使用全局字体 */\n    border: 1px solid #000000; /* 浅蓝色边框 */\n}\n\n/* 父容器 */\n.parent-container {\n    background-color: transparent !important; /* 父级背景透明 */\n}\n\n/* 代码块样式 */\npre {\n    position: relative; /* 确保可以定位子元素 */\n    background-color: #E6E6E6 !important; /* 浅蓝色背景 */\n    color: #000000 !important; /* 黑色文字 */\n    border: none !important; /* 去掉边框 */\n    box-shadow: none !important; /* 去掉阴影 */\n    padding: 12px; /* 内边距 */\n    margin: 10px 0; /* 上下间距 */\n    overflow: hidden; /* 防止内容溢出 */\n}\n\n\n\n/* 子代码块 */\npre code {\n    background-color: inherit !important; /* 继承父级背景色 */\n    color: inherit !important; /* 继承文字颜色 */\n    font-family: inherit; /* 全局字体 */\n}\n\n\n/* 聊天框字体加粗 */\n.chat-message, .mes_text, .chat-container {\n    font-weight: 300 !important;\n}\n\n@media screen and (max-width: 720px) {\n    .mesAvatarWrapper {\n        width: 0px;\n        display: none;\n    }\n    .last_mes .mes_text {\n        padding-right: 0px;\n    }\n    .mes_text {\n        padding-bottom: 45px;\n    }\n}\n\n/* 聊天消息容器整体居中布局 */\n.mes {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin: 10px 0 20px 0; /* 控制每条消息整体上下间距 */\n}\n\n/* 聊天气泡容器，控制宽度和居中对齐 */\n.mes_block {\n  max-width: 90%;\n  width: 100%;\n  margin: 0 auto;\n  text-align: left;\n}\n\n/* 头像容器：整体下移（关键） */\n.mesAvatarWrapper {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  margin-top: 100px;   /* 调整这个数值控制下移程度 */\n  margin-bottom: 10px;\n}\n\n/* 美化头像：圆形、阴影、大小控制 */\n.mesAvatarWrapper .avatar img {\n  border-radius: 50%;\n  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);\n  width: 56px;\n  height: 56px;\n  object-fit: cover;\n  border: 2px solid rgba(255, 255, 255, 0.6);\n}\n\n/* 信息类（楼层、计时、token）设置为 inline，颜色继承 */\n.mesIDDisplay,\n.mes_timer,\n.tokenCounterDisplay {\n  display: inline-block;\n  color: var(--text-color-sec);\n  font-size: 12px;\n  opacity: 0.75;\n  margin: 2px 4px;\n  font-family: 'ZhuqueFangsong', serif;\n}\n\n/* 信息条（放在头像上或下都行） */\n.mes_info_bar {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 8px;\n  font-size: 12px;\n  color: var(--text-color-sec);\n  font-family: 'ZhuqueFangsong', serif;\n  opacity: 0.75;\n  margin-bottom: 6px;\n}\n\n/* 移动端保持一致布局 */\n@media screen and (max-width: 768px) {\n  .mesAvatarWrapper {\n    margin-top: 0px; /* 移动端也一起下移 */\n    margin-bottom: 8px;\n    width: auto;\n  }\n  .mes_block {\n    max-width: 95%;\n  }\n}\n\n\n:root {\n  --text-token-layout: contents;\n}\n\n.mesIDDisplay,\n.mes_timer,\n.tokenCounterDisplay {\n  display: var(--text-token-layout);\n  color: var(--text-color-sec);\n}\n\n/* 消息整体间距压缩 */\n.mes {\n  margin-bottom: 6px;\n}\n\n/* 消息文本紧凑 */\n.mes_text {\n  margin: 0;\n  padding: 0;\n  line-height: 1.5;\n}\n\n.drawer-icon {\n  width: 28px;\n  height: 28px;\n  font-size: 24px;\n  line-height: 28px;\n  color: #000000;\n  background: none !important;\n  text-shadow: none !important;\n  -webkit-background-clip: unset;\n  -webkit-text-fill-color: unset;\n  display: inline-flex;\n  justify-content: center;\n  align-items: center;\n  padding: 0;\n  margin: 6px 6px 3px 3px; /* ← 重点：顶部 6px，底部 2px，下移整体位置 */\n  border-radius: 6px;\n  user-select: none;\n  flex-shrink: 0;\n  transition: background-color 0.2s ease;\n}\n\n/* 悬停效果 */\n.drawer-icon:hover {\n  background-color: #f2f2f2;\n  cursor: pointer;\n}\n\n/* 水平对齐控制 */\n.drawer-icon.left {\n  margin-left: 0;\n  margin-right: auto;\n}\n\n.drawer-icon.right {\n  margin-left: auto;\n  margin-right: 0;\n}\n\n/* 垂直对齐控制 */\n.drawer-icon.top {\n  align-self: flex-start;\n}\n\n.drawer-icon.bottom {\n  align-self: flex-end;\n}\n\n#options_button,\n#extensionsMenuButton,\n#send_but {\n  font-size: 18px; /* 缩小内部图标大小（用于SVG字体图标） */\n  background-size: 60% 60%; /* 缩小背景图图标 */\n  background-position: center;\n  background-repeat: no-repeat;\n}\n\n/* 滚动条整体宽度（细） */\n::-webkit-scrollbar {\n  width: 6px;\n  height: 6px;\n}\n\n/* 滚动条滑块（深灰） */\n::-webkit-scrollbar-thumb {\n  background: #2a2a2a; /* 更深的灰色 */\n  border-radius: 10px;\n  border: 1px solid #1a1a1a; /* 更暗边框，增强对比 */\n}\n\npre {\n  background-color: #f0f0f0;               /* 柔和浅灰背景 */\n  color: #2c2c2c;                          /* 深灰文本，清晰可读 */\n  border: 1px solid #d0d0d0;              /* 稍显边界感 */\n  border-radius: 10px;\n  padding: 14px 18px;\n  margin: 16px 0;\n  font-family: 'ZhuqueFangsong', serif;\n  font-size: 13px;\n  line-height: 1.65;\n  position: relative;\n  overflow-x: auto;\n  box-shadow:\n    inset 0 0 6px rgba(180, 180, 180, 0.2),\n    0 0 8px rgba(200, 200, 200, 0.15);\n  transition: box-shadow 0.4s ease, transform 0.3s ease;\n}\n\npre:hover {\n  box-shadow:\n    inset 0 0 8px rgba(160, 160, 160, 0.3),\n    0 0 12px rgba(180, 180, 180, 0.2);\n  transform: translateY(-1px);\n}\n\npre code {\n  background-color: transparent !important;\n  color: #3a3a3a !important;              /* 更淡的文字灰，适合浅灰背景 */\n  font-family: 'Courier New', monospace;\n  font-size: 13px;\n  line-height: 1.65;\n  display: block;\n  white-space: pre-wrap;\n  word-break: break-word;\n  padding-left: 14px;\n  border-left: 2px solid #c4c4c4;        /* 灰白分隔线 */\n  position: relative;\n  animation: codeFadeIn 0.4s ease;\n}\n\npre::before {\n  content: \"❇️\";\n  position: absolute;\n  top: 8px;\n  left: 12px;\n  font-size: 14px;\n  color: rgba(100, 100, 100, 0.2);       /* 低饱和提示符 */\n}\n\n@keyframes codeFadeIn {\n  0% { opacity: 0; transform: translateY(4px); }\n  100% { opacity: 1; transform: translateY(0); }\n}\n\npre code {\n  font-family: 'ZhuqueFangsong', serif;\n  background-color: #e6e6e6;             /* 轻浅灰，突出代码块本身 */\n}\n\n/* ===== 固定间距系统 ===== */\n/* 消息整体容器 */\n.mes {\n  margin-bottom: 10px !important; /* 固定消息间距 */\n}\n\n/* 头部容器 */\n.mesAvatarWrapper {\n  padding: 12px 15px !important; /* 固定内间距 */\n  margin-bottom: 0 !important;\n}\n\n/* 消息内容区块 */\n.mes_block {\n  margin-top: -1px !important; /* 消除间隙 */\n  padding: 12px 15px !important; /* 匹配头部间距 */\n}",
         "waifuMode": false,
         "movingUI": false,
         "movingUIState": {},
         "movingUIPreset": "Default",
-        "noShadows": true,
-        "theme": "深色简约卡片",
+        "noShadows": false,
+        "theme": "嘎嘎灰美化5.0",
         "gestures": true,
         "auto_swipe": false,
         "auto_swipe_minimum_length": 0,
@@ -350,7 +354,7 @@
         "allow_name2_display": false,
         "hotswap_enabled": true,
         "timer_enabled": true,
-        "timestamps_enabled": true,
+        "timestamps_enabled": false,
         "timestamp_model_icon": false,
         "mesIDDisplay_enabled": true,
         "hideChatAvatars_enabled": false,
@@ -491,7 +495,7 @@
             }
         ],
         "bogus_folders": true,
-        "zoomed_avatar_magnification": false,
+        "zoomed_avatar_magnification": "",
         "show_tag_filters": false,
         "aux_field": "character_version",
         "stscript": {
@@ -518,7 +522,7 @@
         "restore_user_input": true,
         "reduced_motion": true,
         "compact_input_area": true,
-        "show_swipe_num_all_messages": false,
+        "show_swipe_num_all_messages": true,
         "auto_connect": true,
         "auto_load_chat": false,
         "forbid_external_media": false,
@@ -2947,19 +2951,19 @@
             {
                 "id": "3415edba-8059-4038-bbbe-d1b89265842b",
                 "scriptName": "🍎-移除思维链（新版-必须更新）",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "<thinking>([\\s\\S]*?)<\\/thinking>",
+                "findRegex": "<thinking>.*<\\/thinking>",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
+                "maxDepth": null
             },
             {
                 "id": "9d2a2ee3-2703-45b5-873a-ddb186b7487f",
@@ -3045,6 +3049,23 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": false
+            },
+            {
+                "id": "21f8ad50-b731-46f8-af1c-684d433d3157",
+                "scriptName": "🍎-摘要美化-粉紫色（0622新增）",
+                "findRegex": "<序号>([\\s\\S]*?)<\\/序号>[\\s\\S]*?<时间>([\\s\\S]*?)<\\/时间>[\\s\\S]*?<剧情总结>([\\s\\S]*?)<\\/剧情总结>[\\s\\S]*?<伏笔笔记>([\\s\\S]*?)<\\/伏笔笔记>",
+                "replaceString": "<div style=\"font-family: 'Geist', 'Inter', -apple-system, sans-serif; max-width: 800px; margin: 2rem auto; color: #f0f0f0; background: linear-gradient(135deg, rgba(30, 20, 40, 0.9), rgba(20, 25, 50, 0.8)); backdrop-filter: blur(12px); border-radius: 20px; overflow: hidden; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(255, 255, 255, 0.1); position: relative; transition: all 0.4s ease; border: 1px solid rgba(255, 85, 85, 0.3);\">\n  \n  <!-- 动态霓虹光晕 -->\n  <div style=\"position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 70% 30%, rgba(255, 85, 170, 0.2), transparent 60%); opacity: 0.8; pointer-events: none; z-index: -1; animation: pulse 8s infinite alternate;\"></div>\n  \n  <!-- 头部 -->\n  <div style=\"padding: 24px; border-bottom: 1px solid rgba(255, 255, 255, 0.08); display: flex; justify-content: space-between; align-items: center; background: linear-gradient(to right, rgba(255, 85, 85, 0.1), transparent);\">\n    <div style=\"display: flex; align-items: center; gap: 12px;\">\n      <span style=\"display: inline-block; width: 10px; height: 10px; background: #ff55aa; border-radius: 50%; box-shadow: 0 0 15px #ff55aa; animation: blink 2s infinite;\"></span>\n      <span style=\"font-size: 16px; font-weight: 700; color: #ff55aa; letter-spacing: 1px; text-shadow: 0 0 10px rgba(255, 85, 170, 0.7);\">梦境档案 ✧ #$1</span>\n    </div>\n    <span style=\"font-size: 14px; color: rgba(255, 255, 255, 0.7); font-weight: 300; display: flex; align-items: center; gap: 6px;\">\n      <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" style=\"opacity: 0.8;\">\n        <circle cx=\"12\" cy=\"12\" r=\"10\"></circle><polyline points=\"12 6 12 12 16 14\"></polyline>\n      </svg>\n      $2\n    </span>\n  </div>\n  \n  <!-- 内容区 -->\n  <div style=\"padding: 24px;\">\n    <!-- 剧情总结 -->\n    <div style=\"margin-bottom: 28px; position: relative;\">\n      <div style=\"font-size: 13px; color: #ff55aa; margin-bottom: 14px; letter-spacing: 2px; font-weight: 700; display: flex; align-items: center; gap: 10px; text-shadow: 0 0 8px rgba(255, 85, 170, 0.4);\">\n        <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ff55aa\" stroke-width=\"2\">\n          <path d=\"M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z\"></path>\n        </svg>\n        <span>剧情脉络</span>\n      </div>\n      <div style=\"font-size: 16px; line-height: 1.8; color: rgba(255, 255, 255, 0.95); padding-left: 28px; border-left: 2px solid rgba(255, 85, 170, 0.4); position: relative;\">\n        <div style=\"position: absolute; left: -2px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #ff55aa, transparent);\"></div>\n        $3\n      </div>\n    </div>\n    \n    <!-- 伏笔笔记 - 梦幻折叠 -->\n    <details style=\"margin-top: 32px;\">\n      <summary style=\"list-style: none; cursor: pointer; padding: 16px; background: linear-gradient(to right, rgba(255, 85, 170, 0.15), transparent); border-radius: 12px; border: 1px solid rgba(255, 85, 170, 0.3); display: flex; align-items: center; justify-content: space-between; transition: all 0.4s ease; position: relative; overflow: hidden;\">\n        <div style=\"position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: linear-gradient(to bottom, #ff55aa, #ff85c8);\"></div>\n        <div style=\"display: flex; align-items: center; gap: 12px; padding-left: 12px;\">\n          <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ff55aa\" stroke-width=\"2\" style=\"filter: drop-shadow(0 0 4px rgba(255, 85, 170, 0.6));\">\n            <path d=\"M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z\"></path>\n          </svg>\n          <span style=\"font-size: 15px; font-weight: 700; color: #ff85c8; text-shadow: 0 0 6px rgba(255, 133, 200, 0.5);\">隐秘线索</span>\n        </div>\n        <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ff55aa\" stroke-width=\"2\" style=\"transition: transform 0.4s ease; margin-left: auto; filter: drop-shadow(0 0 2px rgba(255, 85, 170, 0.5));\">\n          <polyline points=\"6 9 12 15 18 9\"></polyline>\n        </svg>\n      </summary>\n      <div style=\"padding: 20px; margin-top: 8px; background: rgba(40, 30, 60, 0.6); border-radius: 0 0 12px 12px; border: 1px solid rgba(255, 85, 170, 0.2); border-top: none; backdrop-filter: blur(8px); white-space: pre-line; font-size: 15px; line-height: 1.8; color: rgba(255, 255, 255, 0.9); position: relative;\">\n        <div style=\"position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(to bottom, #ff55aa, transparent);\"></div>\n        $4\n      </div>\n    </details>\n  </div>\n  \n  <!-- 页脚 -->\n  <div style=\"padding: 18px 24px; border-top: 1px solid rgba(255, 255, 255, 0.08); display: flex; justify-content: space-between; align-items: center; background: linear-gradient(to right, rgba(30, 20, 40, 0.7), rgba(50, 25, 60, 0.5));\">\n    <div style=\"font-size: 12px; letter-spacing: 1.5px; color: rgba(255, 255, 255, 0.4); font-weight: 300;\">禁果乐园 ✧ 第 $1 号记录</div>\n    <div style=\"font-size: 22px; color: #ff55aa; font-weight: 700; text-shadow: 0 0 15px rgba(255, 85, 170, 0.7); animation: float 3s ease-in-out infinite;\">🍎</div>\n  </div>\n</div>\n\n<style>\n@keyframes pulse {\n  0% { opacity: 0.6; transform: scale(1); }\n  50% { opacity: 0.9; transform: scale(1.05); }\n  100% { opacity: 0.6; transform: scale(1); }\n}\n@keyframes blink {\n  0% { opacity: 0.8; }\n  50% { opacity: 1; }\n  100% { opacity: 0.8; }\n}\n@keyframes float {\n  0% { transform: translateY(0px); }\n  50% { transform: translateY(-5px); }\n  100% { transform: translateY(0px); }\n}\n</style>\n\n<script>\n// 为details添加箭头动画\ndocument.querySelectorAll('details').forEach(details => {\n  details.addEventListener('toggle', function() {\n    const arrow = this.querySelector('summary svg:last-child');\n    arrow.style.transform = this.open ? 'rotate(180deg)' : 'rotate(0deg)';\n  });\n});\n</script>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": true,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -3278,10 +3299,10 @@
         "variables": {
             "global": {
                 "content": "\\(不要重复前文，继续输出新剧情！)",
-                "LAST_RECEIVE_TOKENS": 2211,
-                "LAST_RECEIVE_CHARS": 2948,
-                "LAST_SEND_TOKENS": 101015,
-                "LAST_SEND_CHARS": 203912,
+                "LAST_RECEIVE_TOKENS": 5507,
+                "LAST_RECEIVE_CHARS": 7784,
+                "LAST_SEND_TOKENS": 107752,
+                "LAST_SEND_CHARS": 242354,
                 "infobar_named_configs_global_v2_8_9": {
                     "1": {
                         "general": {
@@ -4259,12 +4280,7 @@
             "isPopout": false,
             "showPopoutButton": true,
             "config": {
-                "setList": [
-                    {
-                        "set": "AutoContinue",
-                        "isVisible": true
-                    }
-                ]
+                "setList": []
             }
         },
         "muyoo_dataTable": {
@@ -4738,7 +4754,7 @@
                 "bookQuotes2": false,
                 "bookQuotes3": false,
                 "newline": false,
-                "user": true,
+                "user": false,
                 "char": false,
                 "custom_6": true,
                 "custom_7": true,
@@ -4748,10 +4764,9 @@
                 "custom_11": true,
                 "custom_4": true,
                 "custom_5": true,
-                "custom_1": true,
+                "custom_1": false,
                 "custom_0": true,
-                "custom_2": true,
-                "custom_3": true
+                "custom_2": true
             },
             "shortcuts": {
                 "asterisk": "",
@@ -4774,8 +4789,7 @@
                 "custom_5": "",
                 "custom_1": "",
                 "custom_0": "",
-                "custom_2": "",
-                "custom_3": ""
+                "custom_2": ""
             },
             "buttonOrder": [
                 "bookQuotes1",
@@ -4789,9 +4803,8 @@
                 "newline",
                 "custom_1",
                 "custom_0",
-                "custom_2",
-                "custom_3",
-                "custom_4"
+                "custom_4",
+                "custom_2"
             ],
             "customSymbols": [
                 {
@@ -4807,21 +4820,9 @@
                     "cursorPos": "end"
                 },
                 {
-                    "name": "许小诺",
-                    "symbol": "许小诺",
-                    "display": "许小诺",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "白婧",
-                    "symbol": "白婧",
-                    "display": "白婧",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "李月",
-                    "symbol": "李月",
-                    "display": "李月",
+                    "name": "安娜",
+                    "symbol": "安娜",
+                    "display": "安娜",
                     "cursorPos": "end"
                 }
             ]
@@ -4839,24 +4840,24 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 38,
+                "lastProcessedLength": 108,
                 "userConfigured": true
             }
         },
         "EjsTemplate": {
-            "enabled": false,
+            "enabled": true,
             "generate_enabled": true,
-            "generate_loader_enabled": true,
-            "render_enabled": true,
+            "generate_loader_enabled": false,
+            "render_enabled": false,
             "render_loader_enabled": true,
             "strict_enabled": false,
             "debug_enabled": false,
             "autosave_enabled": false,
-            "preload_worldinfo_enabled": true,
-            "code_blocks_enabled": true,
+            "preload_worldinfo_enabled": false,
+            "code_blocks_enabled": false,
             "world_active_enabled": false,
             "raw_message_evaluation_enabled": false,
-            "filter_message_enabled": true,
+            "filter_message_enabled": false,
             "cache_enabled": false,
             "with_context_disabled": false
         },
@@ -5384,7 +5385,7 @@
                 "marker": false,
                 "name": "🍎+💞摘要- by YUKI神！",
                 "role": "system",
-                "content": "# 必须在正文和状态栏完全结束后，生成如下格式的“<apple>”：\n\n<apple>\n  <details>    \n    <summary>🍎摘要</summary>    \nformat mapping:\nformat: |-\n - 序号: 从000开始的自然数，从上一轮序号+1，例如“001”,“189”等\n - 时间: 具体到年月日+大概时间，例如2025年6月1日早；2025年8月22日夜；\n  - 剧情总结:(100字内总结本次正文剧情,保留关键信息,确保简洁无歧义,避免评价和升华性总结)\n - 角色:\n| 名字 | 身份 | 性格核心 | 心理状态 | 性经验 | 重要道具 |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 角色1 | 舰长 | 沉稳、正义 | 愉快 | 有限 | 指挥权限 |\n| 角色2 | 科学官 | 严谨、胆小 | 沮丧 | 经验丰富 | 传感器阵列 |\n\n<!--伏笔笔记\n- 综合前文提取信息安排,保持简洁明了\n- 伏笔是耕种者对后续剧情的安排,避免不确定的语气\n- 不影响剧情走向的设定不应书写\n- 前文中未回收且未失效的伏笔,也应记录到本次回复中\n- 以<!-- -->包裹笔记内容-->\n\n  </details>\n</apple>",
+                "content": "# 必须在正文和状态栏完全结束后，生成如下格式的“<apple>”：\n\n<apple>\n  <details>    \n    <summary>🍎摘要</summary>    \n    <序号>{{从000开始的自然数，从上一轮序号+1，例如“001”,“189”等}}</序号>\n    <时间>{{具体到年月日+大概时间，例如2025年6月1日早；2025年8月22日夜}} </时间>\n    <剧情总结>{{100字内总结本次正文剧情,保留关键信息,确保简洁无歧义,避免评价和升华性总结}}</剧情总结>\n    <伏笔笔记>\n       - 综合前文提取信息安排,保持简洁明了<br>\n      - 伏笔是耕种者对后续剧情的安排,避免不确定的语气<br>\n      - 不影响剧情走向的设定不应书写<br>\n      - 前文中未回收且未失效的伏笔,也应记录到本次回复中<br>\n      -每一句话后面必须自带一个换行标签<br>\n    </伏笔笔记>\n    \n    <角色表>\n    | 名字 | 身份 | 性格核心 | 心理状态 | 性经验 | 重要道具 |\n    | :--- | :--- | :--- | :--- | :--- | :--- |\n    | 示例角色 | 示例身份 | 示例性格 | 示例心理 | 无 | 无 |\n    </角色表>\n  </details>\n</apple>",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false,
@@ -7319,7 +7320,7 @@
                     },
                     {
                         "identifier": "1351c615-4241-4da9-b676-d99038ac3fb4",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "d69c6ff3-19d3-451d-8ca2-d8cc89091022",
@@ -7387,7 +7388,7 @@
                     },
                     {
                         "identifier": "017627d9-332d-4827-b1b0-b2e5ef120ca3",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "1790a858-e195-4847-8151-d280ee1e95b5",
@@ -7582,7 +7583,7 @@
         "personality_format": "{{personality}}",
         "openai_model": "gpt-4-turbo",
         "claude_model": "claude-3-5-sonnet-20240620",
-        "google_model": "gemini-2.5-pro",
+        "google_model": "gemini-2.5-pro-preview-05-06",
         "vertexai_model": "gemini-2.0-flash-001",
         "ai21_model": "jamba-1.5-large",
         "mistralai_model": "mistral-large-latest",
@@ -7641,8 +7642,8 @@
         "bind_preset_to_connection": true
     },
     "background": {
-        "name": "_black.jpg",
-        "url": "url(\"backgrounds/_black.jpg\")",
+        "name": "24ff7a7f7e26bc37.png",
+        "url": "url(\"backgrounds/24ff7a7f7e26bc37.png\")",
         "fitting": "cover",
         "animation": false
     },

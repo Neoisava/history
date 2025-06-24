@@ -3301,8 +3301,8 @@
                 "content": "\\(不要重复前文，继续输出新剧情！)",
                 "LAST_RECEIVE_TOKENS": 5507,
                 "LAST_RECEIVE_CHARS": 7784,
-                "LAST_SEND_TOKENS": 107752,
-                "LAST_SEND_CHARS": 242354,
+                "LAST_SEND_TOKENS": 106065,
+                "LAST_SEND_CHARS": 234715,
                 "infobar_named_configs_global_v2_8_9": {
                     "1": {
                         "general": {
@@ -4840,7 +4840,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 107,
+                "lastProcessedLength": 109,
                 "userConfigured": true
             }
         },
