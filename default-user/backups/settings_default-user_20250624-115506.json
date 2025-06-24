@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "true",
-        "NavOpened": "false",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -30,11 +30,13 @@
         "AlertWI_《暗蚀纪元：蜂巢崩溃之后》.png": "true",
         "AlertWI_《奥法窃神者》.png": "true",
         "AlertWI_《万法盗天录》.png": "true",
-        "AlertRegex_《万法盗天录》.png": "true"
+        "AlertRegex_《万法盗天录》.png": "true",
+        "AlertWI_归零区.png": "true",
+        "AlertRegex_归零区.png": "true"
     },
     "currentVersion": "1.13.1",
     "username": "林辰",
-    "active_character": "破碎摇篮-重制版-3.5-Sonnet.png",
+    "active_character": "归零区.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -47,6 +49,9 @@
             "globalSelect": [
                 "__性爱世界书",
                 "--油猴世界书nai4改(6)",
+                "-【基本】XP兼特征兼行为兼规则兼世界观世界书·第一册",
+                "-【基本】XP兼特征兼行为兼规则兼世界观世界书·第三册",
+                "-【基本】XP兼特征兼行为兼规则兼世界观世界书·第二册",
                 "-提示词大全",
                 "[Dreammini]预设世界书DLC1.6",
                 "【姿势】宝典（SSVGG知识库）",
@@ -2948,19 +2953,19 @@
             {
                 "id": "3415edba-8059-4038-bbbe-d1b89265842b",
                 "scriptName": "🍎-移除思维链（新版-必须更新）",
-                "disabled": false,
-                "runOnEdit": true,
-                "findRegex": "<thinking>([\\s\\S]*?)<\\/thinking>",
+                "findRegex": "<thinking>.*<\\/thinking>",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
+                "maxDepth": null
             },
             {
                 "id": "9d2a2ee3-2703-45b5-873a-ddb186b7487f",
@@ -3046,6 +3051,23 @@
                 "maxDepth": null,
                 "markdownOnly": true,
                 "promptOnly": false
+            },
+            {
+                "id": "21f8ad50-b731-46f8-af1c-684d433d3157",
+                "scriptName": "🍎-摘要美化-粉紫色（0622新增）",
+                "findRegex": "<序号>([\\s\\S]*?)<\\/序号>[\\s\\S]*?<时间>([\\s\\S]*?)<\\/时间>[\\s\\S]*?<剧情总结>([\\s\\S]*?)<\\/剧情总结>[\\s\\S]*?<伏笔笔记>([\\s\\S]*?)<\\/伏笔笔记>",
+                "replaceString": "<div style=\"font-family: 'Geist', 'Inter', -apple-system, sans-serif; max-width: 800px; margin: 2rem auto; color: #f0f0f0; background: linear-gradient(135deg, rgba(30, 20, 40, 0.9), rgba(20, 25, 50, 0.8)); backdrop-filter: blur(12px); border-radius: 20px; overflow: hidden; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(255, 255, 255, 0.1); position: relative; transition: all 0.4s ease; border: 1px solid rgba(255, 85, 85, 0.3);\">\n  \n  <!-- 动态霓虹光晕 -->\n  <div style=\"position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 70% 30%, rgba(255, 85, 170, 0.2), transparent 60%); opacity: 0.8; pointer-events: none; z-index: -1; animation: pulse 8s infinite alternate;\"></div>\n  \n  <!-- 头部 -->\n  <div style=\"padding: 24px; border-bottom: 1px solid rgba(255, 255, 255, 0.08); display: flex; justify-content: space-between; align-items: center; background: linear-gradient(to right, rgba(255, 85, 85, 0.1), transparent);\">\n    <div style=\"display: flex; align-items: center; gap: 12px;\">\n      <span style=\"display: inline-block; width: 10px; height: 10px; background: #ff55aa; border-radius: 50%; box-shadow: 0 0 15px #ff55aa; animation: blink 2s infinite;\"></span>\n      <span style=\"font-size: 16px; font-weight: 700; color: #ff55aa; letter-spacing: 1px; text-shadow: 0 0 10px rgba(255, 85, 170, 0.7);\">梦境档案 ✧ #$1</span>\n    </div>\n    <span style=\"font-size: 14px; color: rgba(255, 255, 255, 0.7); font-weight: 300; display: flex; align-items: center; gap: 6px;\">\n      <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" style=\"opacity: 0.8;\">\n        <circle cx=\"12\" cy=\"12\" r=\"10\"></circle><polyline points=\"12 6 12 12 16 14\"></polyline>\n      </svg>\n      $2\n    </span>\n  </div>\n  \n  <!-- 内容区 -->\n  <div style=\"padding: 24px;\">\n    <!-- 剧情总结 -->\n    <div style=\"margin-bottom: 28px; position: relative;\">\n      <div style=\"font-size: 13px; color: #ff55aa; margin-bottom: 14px; letter-spacing: 2px; font-weight: 700; display: flex; align-items: center; gap: 10px; text-shadow: 0 0 8px rgba(255, 85, 170, 0.4);\">\n        <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ff55aa\" stroke-width=\"2\">\n          <path d=\"M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z\"></path>\n        </svg>\n        <span>剧情脉络</span>\n      </div>\n      <div style=\"font-size: 16px; line-height: 1.8; color: rgba(255, 255, 255, 0.95); padding-left: 28px; border-left: 2px solid rgba(255, 85, 170, 0.4); position: relative;\">\n        <div style=\"position: absolute; left: -2px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #ff55aa, transparent);\"></div>\n        $3\n      </div>\n    </div>\n    \n    <!-- 伏笔笔记 - 梦幻折叠 -->\n    <details style=\"margin-top: 32px;\">\n      <summary style=\"list-style: none; cursor: pointer; padding: 16px; background: linear-gradient(to right, rgba(255, 85, 170, 0.15), transparent); border-radius: 12px; border: 1px solid rgba(255, 85, 170, 0.3); display: flex; align-items: center; justify-content: space-between; transition: all 0.4s ease; position: relative; overflow: hidden;\">\n        <div style=\"position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: linear-gradient(to bottom, #ff55aa, #ff85c8);\"></div>\n        <div style=\"display: flex; align-items: center; gap: 12px; padding-left: 12px;\">\n          <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ff55aa\" stroke-width=\"2\" style=\"filter: drop-shadow(0 0 4px rgba(255, 85, 170, 0.6));\">\n            <path d=\"M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z\"></path>\n          </svg>\n          <span style=\"font-size: 15px; font-weight: 700; color: #ff85c8; text-shadow: 0 0 6px rgba(255, 133, 200, 0.5);\">隐秘线索</span>\n        </div>\n        <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ff55aa\" stroke-width=\"2\" style=\"transition: transform 0.4s ease; margin-left: auto; filter: drop-shadow(0 0 2px rgba(255, 85, 170, 0.5));\">\n          <polyline points=\"6 9 12 15 18 9\"></polyline>\n        </svg>\n      </summary>\n      <div style=\"padding: 20px; margin-top: 8px; background: rgba(40, 30, 60, 0.6); border-radius: 0 0 12px 12px; border: 1px solid rgba(255, 85, 170, 0.2); border-top: none; backdrop-filter: blur(8px); white-space: pre-line; font-size: 15px; line-height: 1.8; color: rgba(255, 255, 255, 0.9); position: relative;\">\n        <div style=\"position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(to bottom, #ff55aa, transparent);\"></div>\n        $4\n      </div>\n    </details>\n  </div>\n  \n  <!-- 页脚 -->\n  <div style=\"padding: 18px 24px; border-top: 1px solid rgba(255, 255, 255, 0.08); display: flex; justify-content: space-between; align-items: center; background: linear-gradient(to right, rgba(30, 20, 40, 0.7), rgba(50, 25, 60, 0.5));\">\n    <div style=\"font-size: 12px; letter-spacing: 1.5px; color: rgba(255, 255, 255, 0.4); font-weight: 300;\">禁果乐园 ✧ 第 $1 号记录</div>\n    <div style=\"font-size: 22px; color: #ff55aa; font-weight: 700; text-shadow: 0 0 15px rgba(255, 85, 170, 0.7); animation: float 3s ease-in-out infinite;\">🍎</div>\n  </div>\n</div>\n\n<style>\n@keyframes pulse {\n  0% { opacity: 0.6; transform: scale(1); }\n  50% { opacity: 0.9; transform: scale(1.05); }\n  100% { opacity: 0.6; transform: scale(1); }\n}\n@keyframes blink {\n  0% { opacity: 0.8; }\n  50% { opacity: 1; }\n  100% { opacity: 0.8; }\n}\n@keyframes float {\n  0% { transform: translateY(0px); }\n  50% { transform: translateY(-5px); }\n  100% { transform: translateY(0px); }\n}\n</style>\n\n<script>\n// 为details添加箭头动画\ndocument.querySelectorAll('details').forEach(details => {\n  details.addEventListener('toggle', function() {\n    const arrow = this.querySelector('summary svg:last-child');\n    arrow.style.transform = this.open ? 'rotate(180deg)' : 'rotate(0deg)';\n  });\n});\n</script>",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": true,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -3055,7 +3077,8 @@
             "破碎摇篮-重制版-3.5-Sonnet.png",
             "人生复本.png",
             "《普罗米修斯的回响》.png",
-            "《万法盗天录》.png"
+            "《万法盗天录》.png",
+            "归零区.png"
         ],
         "tts": {
             "voiceMap": "",
@@ -3279,10 +3302,10 @@
         "variables": {
             "global": {
                 "content": "\\(不要重复前文，继续输出新剧情！)",
-                "LAST_RECEIVE_TOKENS": 2211,
-                "LAST_RECEIVE_CHARS": 2948,
-                "LAST_SEND_TOKENS": 101015,
-                "LAST_SEND_CHARS": 203912,
+                "LAST_RECEIVE_TOKENS": 5507,
+                "LAST_RECEIVE_CHARS": 7784,
+                "LAST_SEND_TOKENS": 101518,
+                "LAST_SEND_CHARS": 229089,
                 "infobar_named_configs_global_v2_8_9": {
                     "1": {
                         "general": {
@@ -4260,12 +4283,7 @@
             "isPopout": false,
             "showPopoutButton": true,
             "config": {
-                "setList": [
-                    {
-                        "set": "AutoContinue",
-                        "isVisible": true
-                    }
-                ]
+                "setList": []
             }
         },
         "muyoo_dataTable": {
@@ -4739,7 +4757,7 @@
                 "bookQuotes2": false,
                 "bookQuotes3": false,
                 "newline": false,
-                "user": true,
+                "user": false,
                 "char": false,
                 "custom_6": true,
                 "custom_7": true,
@@ -4749,10 +4767,9 @@
                 "custom_11": true,
                 "custom_4": true,
                 "custom_5": true,
-                "custom_1": true,
+                "custom_1": false,
                 "custom_0": true,
-                "custom_2": true,
-                "custom_3": true
+                "custom_2": true
             },
             "shortcuts": {
                 "asterisk": "",
@@ -4775,8 +4792,7 @@
                 "custom_5": "",
                 "custom_1": "",
                 "custom_0": "",
-                "custom_2": "",
-                "custom_3": ""
+                "custom_2": ""
             },
             "buttonOrder": [
                 "bookQuotes1",
@@ -4790,9 +4806,8 @@
                 "newline",
                 "custom_1",
                 "custom_0",
-                "custom_2",
-                "custom_3",
-                "custom_4"
+                "custom_4",
+                "custom_2"
             ],
             "customSymbols": [
                 {
@@ -4808,21 +4823,9 @@
                     "cursorPos": "end"
                 },
                 {
-                    "name": "许小诺",
-                    "symbol": "许小诺",
-                    "display": "许小诺",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "白婧",
-                    "symbol": "白婧",
-                    "display": "白婧",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "李月",
-                    "symbol": "李月",
-                    "display": "李月",
+                    "name": "安娜",
+                    "symbol": "安娜",
+                    "display": "安娜",
                     "cursorPos": "end"
                 }
             ]
@@ -4840,24 +4843,24 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 54,
+                "lastProcessedLength": 6,
                 "userConfigured": true
             }
         },
         "EjsTemplate": {
-            "enabled": false,
+            "enabled": true,
             "generate_enabled": true,
-            "generate_loader_enabled": true,
-            "render_enabled": true,
+            "generate_loader_enabled": false,
+            "render_enabled": false,
             "render_loader_enabled": true,
             "strict_enabled": false,
             "debug_enabled": false,
             "autosave_enabled": false,
-            "preload_worldinfo_enabled": true,
-            "code_blocks_enabled": true,
+            "preload_worldinfo_enabled": false,
+            "code_blocks_enabled": false,
             "world_active_enabled": false,
             "raw_message_evaluation_enabled": false,
-            "filter_message_enabled": true,
+            "filter_message_enabled": false,
             "cache_enabled": false,
             "with_context_disabled": false
         },
@@ -5061,7 +5064,8 @@
         "《普罗米修斯的回响》.png": [],
         "《暗蚀纪元：蜂巢崩溃之后》.png": [],
         "《奥法窃神者》.png": [],
-        "《万法盗天录》.png": []
+        "《万法盗天录》.png": [],
+        "归零区.png": []
     },
     "nai_settings": {
         "temperature": 1.37,
@@ -5385,7 +5389,7 @@
                 "marker": false,
                 "name": "🍎+💞摘要- by YUKI神！",
                 "role": "system",
-                "content": "# 必须在正文和状态栏完全结束后，生成如下格式的“<apple>”：\n\n<apple>\n  <details>    \n    <summary>🍎摘要</summary>    \nformat mapping:\nformat: |-\n - 序号: 从000开始的自然数，从上一轮序号+1，例如“001”,“189”等\n - 时间: 具体到年月日+大概时间，例如2025年6月1日早；2025年8月22日夜；\n  - 剧情总结:(100字内总结本次正文剧情,保留关键信息,确保简洁无歧义,避免评价和升华性总结)\n - 角色:\n| 名字 | 身份 | 性格核心 | 心理状态 | 性经验 | 重要道具 |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 角色1 | 舰长 | 沉稳、正义 | 愉快 | 有限 | 指挥权限 |\n| 角色2 | 科学官 | 严谨、胆小 | 沮丧 | 经验丰富 | 传感器阵列 |\n\n<!--伏笔笔记\n- 综合前文提取信息安排,保持简洁明了\n- 伏笔是耕种者对后续剧情的安排,避免不确定的语气\n- 不影响剧情走向的设定不应书写\n- 前文中未回收且未失效的伏笔,也应记录到本次回复中\n- 以<!-- -->包裹笔记内容-->\n\n  </details>\n</apple>",
+                "content": "# 必须在正文和状态栏完全结束后，生成如下格式的“<apple>”：\n\n<apple>\n  <details>    \n    <summary>🍎摘要</summary>    \n    <序号>{{从000开始的自然数，从上一轮序号+1，例如“001”,“189”等}}</序号>\n    <时间>{{具体到年月日+大概时间，例如2025年6月1日早；2025年8月22日夜}} </时间>\n    <剧情总结>{{100字内总结本次正文剧情,保留关键信息,确保简洁无歧义,避免评价和升华性总结}}</剧情总结>\n    <伏笔笔记>\n       - 综合前文提取信息安排,保持简洁明了<br>\n      - 伏笔是耕种者对后续剧情的安排,避免不确定的语气<br>\n      - 不影响剧情走向的设定不应书写<br>\n      - 前文中未回收且未失效的伏笔,也应记录到本次回复中<br>\n      -每一句话后面必须自带一个换行标签<br>\n    </伏笔笔记>\n    \n    <角色表>\n    | 名字 | 身份 | 性格核心 | 心理状态 | 性经验 | 重要道具 |\n    | :--- | :--- | :--- | :--- | :--- | :--- |\n    | 示例角色 | 示例身份 | 示例性格 | 示例心理 | 无 | 无 |\n    </角色表>\n  </details>\n</apple>",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false,
@@ -7320,7 +7324,7 @@
                     },
                     {
                         "identifier": "1351c615-4241-4da9-b676-d99038ac3fb4",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "d69c6ff3-19d3-451d-8ca2-d8cc89091022",
@@ -7388,7 +7392,7 @@
                     },
                     {
                         "identifier": "017627d9-332d-4827-b1b0-b2e5ef120ca3",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "1790a858-e195-4847-8151-d280ee1e95b5",
@@ -7583,7 +7587,7 @@
         "personality_format": "{{personality}}",
         "openai_model": "gpt-4-turbo",
         "claude_model": "claude-3-5-sonnet-20240620",
-        "google_model": "gemini-2.5-pro-preview-05-06",
+        "google_model": "gemini-2.5-pro",
         "vertexai_model": "gemini-2.0-flash-001",
         "ai21_model": "jamba-1.5-large",
         "mistralai_model": "mistral-large-latest",
