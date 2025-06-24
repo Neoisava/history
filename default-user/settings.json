@@ -2953,19 +2953,19 @@
             {
                 "id": "3415edba-8059-4038-bbbe-d1b89265842b",
                 "scriptName": "🍎-移除思维链（新版-必须更新）",
+                "disabled": false,
+                "runOnEdit": true,
                 "findRegex": "<thinking>.*<\\/thinking>",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": false,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
             },
             {
                 "id": "9d2a2ee3-2703-45b5-873a-ddb186b7487f",
@@ -3055,19 +3055,104 @@
             {
                 "id": "21f8ad50-b731-46f8-af1c-684d433d3157",
                 "scriptName": "🍎-摘要美化-粉紫色（0622新增）",
+                "disabled": true,
+                "runOnEdit": true,
                 "findRegex": "<序号>([\\s\\S]*?)<\\/序号>[\\s\\S]*?<时间>([\\s\\S]*?)<\\/时间>[\\s\\S]*?<剧情总结>([\\s\\S]*?)<\\/剧情总结>[\\s\\S]*?<伏笔笔记>([\\s\\S]*?)<\\/伏笔笔记>",
                 "replaceString": "<div style=\"font-family: 'Geist', 'Inter', -apple-system, sans-serif; max-width: 800px; margin: 2rem auto; color: #f0f0f0; background: linear-gradient(135deg, rgba(30, 20, 40, 0.9), rgba(20, 25, 50, 0.8)); backdrop-filter: blur(12px); border-radius: 20px; overflow: hidden; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(255, 255, 255, 0.1); position: relative; transition: all 0.4s ease; border: 1px solid rgba(255, 85, 85, 0.3);\">\n  \n  <!-- 动态霓虹光晕 -->\n  <div style=\"position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 70% 30%, rgba(255, 85, 170, 0.2), transparent 60%); opacity: 0.8; pointer-events: none; z-index: -1; animation: pulse 8s infinite alternate;\"></div>\n  \n  <!-- 头部 -->\n  <div style=\"padding: 24px; border-bottom: 1px solid rgba(255, 255, 255, 0.08); display: flex; justify-content: space-between; align-items: center; background: linear-gradient(to right, rgba(255, 85, 85, 0.1), transparent);\">\n    <div style=\"display: flex; align-items: center; gap: 12px;\">\n      <span style=\"display: inline-block; width: 10px; height: 10px; background: #ff55aa; border-radius: 50%; box-shadow: 0 0 15px #ff55aa; animation: blink 2s infinite;\"></span>\n      <span style=\"font-size: 16px; font-weight: 700; color: #ff55aa; letter-spacing: 1px; text-shadow: 0 0 10px rgba(255, 85, 170, 0.7);\">梦境档案 ✧ #$1</span>\n    </div>\n    <span style=\"font-size: 14px; color: rgba(255, 255, 255, 0.7); font-weight: 300; display: flex; align-items: center; gap: 6px;\">\n      <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" style=\"opacity: 0.8;\">\n        <circle cx=\"12\" cy=\"12\" r=\"10\"></circle><polyline points=\"12 6 12 12 16 14\"></polyline>\n      </svg>\n      $2\n    </span>\n  </div>\n  \n  <!-- 内容区 -->\n  <div style=\"padding: 24px;\">\n    <!-- 剧情总结 -->\n    <div style=\"margin-bottom: 28px; position: relative;\">\n      <div style=\"font-size: 13px; color: #ff55aa; margin-bottom: 14px; letter-spacing: 2px; font-weight: 700; display: flex; align-items: center; gap: 10px; text-shadow: 0 0 8px rgba(255, 85, 170, 0.4);\">\n        <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ff55aa\" stroke-width=\"2\">\n          <path d=\"M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z\"></path>\n        </svg>\n        <span>剧情脉络</span>\n      </div>\n      <div style=\"font-size: 16px; line-height: 1.8; color: rgba(255, 255, 255, 0.95); padding-left: 28px; border-left: 2px solid rgba(255, 85, 170, 0.4); position: relative;\">\n        <div style=\"position: absolute; left: -2px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #ff55aa, transparent);\"></div>\n        $3\n      </div>\n    </div>\n    \n    <!-- 伏笔笔记 - 梦幻折叠 -->\n    <details style=\"margin-top: 32px;\">\n      <summary style=\"list-style: none; cursor: pointer; padding: 16px; background: linear-gradient(to right, rgba(255, 85, 170, 0.15), transparent); border-radius: 12px; border: 1px solid rgba(255, 85, 170, 0.3); display: flex; align-items: center; justify-content: space-between; transition: all 0.4s ease; position: relative; overflow: hidden;\">\n        <div style=\"position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: linear-gradient(to bottom, #ff55aa, #ff85c8);\"></div>\n        <div style=\"display: flex; align-items: center; gap: 12px; padding-left: 12px;\">\n          <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ff55aa\" stroke-width=\"2\" style=\"filter: drop-shadow(0 0 4px rgba(255, 85, 170, 0.6));\">\n            <path d=\"M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z\"></path>\n          </svg>\n          <span style=\"font-size: 15px; font-weight: 700; color: #ff85c8; text-shadow: 0 0 6px rgba(255, 133, 200, 0.5);\">隐秘线索</span>\n        </div>\n        <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ff55aa\" stroke-width=\"2\" style=\"transition: transform 0.4s ease; margin-left: auto; filter: drop-shadow(0 0 2px rgba(255, 85, 170, 0.5));\">\n          <polyline points=\"6 9 12 15 18 9\"></polyline>\n        </svg>\n      </summary>\n      <div style=\"padding: 20px; margin-top: 8px; background: rgba(40, 30, 60, 0.6); border-radius: 0 0 12px 12px; border: 1px solid rgba(255, 85, 170, 0.2); border-top: none; backdrop-filter: blur(8px); white-space: pre-line; font-size: 15px; line-height: 1.8; color: rgba(255, 255, 255, 0.9); position: relative;\">\n        <div style=\"position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(to bottom, #ff55aa, transparent);\"></div>\n        $4\n      </div>\n    </details>\n  </div>\n  \n  <!-- 页脚 -->\n  <div style=\"padding: 18px 24px; border-top: 1px solid rgba(255, 255, 255, 0.08); display: flex; justify-content: space-between; align-items: center; background: linear-gradient(to right, rgba(30, 20, 40, 0.7), rgba(50, 25, 60, 0.5));\">\n    <div style=\"font-size: 12px; letter-spacing: 1.5px; color: rgba(255, 255, 255, 0.4); font-weight: 300;\">禁果乐园 ✧ 第 $1 号记录</div>\n    <div style=\"font-size: 22px; color: #ff55aa; font-weight: 700; text-shadow: 0 0 15px rgba(255, 85, 170, 0.7); animation: float 3s ease-in-out infinite;\">🍎</div>\n  </div>\n</div>\n\n<style>\n@keyframes pulse {\n  0% { opacity: 0.6; transform: scale(1); }\n  50% { opacity: 0.9; transform: scale(1.05); }\n  100% { opacity: 0.6; transform: scale(1); }\n}\n@keyframes blink {\n  0% { opacity: 0.8; }\n  50% { opacity: 1; }\n  100% { opacity: 0.8; }\n}\n@keyframes float {\n  0% { transform: translateY(0px); }\n  50% { transform: translateY(-5px); }\n  100% { transform: translateY(0px); }\n}\n</style>\n\n<script>\n// 为details添加箭头动画\ndocument.querySelectorAll('details').forEach(details => {\n  details.addEventListener('toggle', function() {\n    const arrow = this.querySelector('summary svg:last-child');\n    arrow.style.transform = this.open ? 'rotate(180deg)' : 'rotate(0deg)';\n  });\n});\n</script>",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
-                "disabled": true,
-                "markdownOnly": true,
-                "promptOnly": false,
-                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": false
+            },
+            {
+                "id": "b713fbff-47ae-4616-8d7a-655c4ba407e2",
+                "scriptName": "【云瑾】八股抹除",
+                "disabled": true,
+                "runOnEdit": true,
+                "findRegex": "/一(丝+)|不易察觉(的?)|不易觉察(的?)|(微|几)不可(察|闻)(的?)|(，?)指(关?)节(.*?)(泛白|发白)/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "51b3f4a5-ee72-4980-abda-8d8fb67479be",
+                "scriptName": "【云瑾】包裹最新指示",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "^([\\s\\S]*)$",
+                "replaceString": "<user_input>\n$1\n</user_input>",
+                "trimStrings": [],
+                "placement": [
+                    1
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": 1,
+                "markdownOnly": true,
+                "promptOnly": true
+            },
+            {
+                "id": "30c53ab4-0c58-4df8-8d3c-e1ba24abcb92",
+                "scriptName": "【云瑾】切除10楼以内小总结",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/<scene>(.*?)<\\/details>/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": 9,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "4c56b336-bfb1-4766-a053-6f072bfd57c9",
+                "scriptName": "【云瑾】切除10楼以上正文&仅保留小总结",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/(.*?)(?=<scene>)|(?<=<\\/details>)(.*?)(?=<scene>|<\\/details>|$)/gs",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": 10,
+                "maxDepth": null,
+                "markdownOnly": false,
+                "promptOnly": true
+            },
+            {
+                "id": "d0939a86-4170-44d8-8968-b6148a5c2ed6",
+                "scriptName": "【云瑾】移除cot和结束标签",
+                "disabled": false,
+                "runOnEdit": true,
+                "findRegex": "/^[\\s\\S]*### 正文/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null,
+                "markdownOnly": true,
+                "promptOnly": true
             }
         ],
         "character_allowed_regex": [
@@ -4843,7 +4928,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 10,
+                "lastProcessedLength": 1,
                 "userConfigured": true
             }
         },
