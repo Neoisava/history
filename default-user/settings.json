@@ -4843,7 +4843,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 18,
+                "lastProcessedLength": 19,
                 "userConfigured": true
             }
         },
@@ -7328,11 +7328,11 @@
                     },
                     {
                         "identifier": "d69c6ff3-19d3-451d-8ca2-d8cc89091022",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "29150ea9-4b9d-4600-afc4-a98e3b33c2e7",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "7b8c5602-ec9a-4469-9fbc-9df4eb0668f8",
@@ -7646,8 +7646,8 @@
         "bind_preset_to_connection": true
     },
     "background": {
-        "name": "landscape beach night.jpg",
-        "url": "url(\"backgrounds/landscape%20beach%20night.jpg\")",
+        "name": "__transparent.png",
+        "url": "url(\"backgrounds/__transparent.png\")",
         "fitting": "cover",
         "animation": false
     },
