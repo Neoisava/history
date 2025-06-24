@@ -3304,8 +3304,8 @@
                 "content": "\\(不要重复前文，继续输出新剧情！)",
                 "LAST_RECEIVE_TOKENS": 5507,
                 "LAST_RECEIVE_CHARS": 7784,
-                "LAST_SEND_TOKENS": 101518,
-                "LAST_SEND_CHARS": 229089,
+                "LAST_SEND_TOKENS": 100282,
+                "LAST_SEND_CHARS": 229671,
                 "infobar_named_configs_global_v2_8_9": {
                     "1": {
                         "general": {
@@ -4843,7 +4843,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 5,
+                "lastProcessedLength": 8,
                 "userConfigured": true
             }
         },
@@ -7646,8 +7646,8 @@
         "bind_preset_to_connection": true
     },
     "background": {
-        "name": "24ff7a7f7e26bc37.png",
-        "url": "url(\"backgrounds/24ff7a7f7e26bc37.png\")",
+        "name": "landscape beach night.jpg",
+        "url": "url(\"backgrounds/landscape%20beach%20night.jpg\")",
         "fitting": "cover",
         "animation": false
     },
