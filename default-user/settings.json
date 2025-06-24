@@ -2948,7 +2948,7 @@
             {
                 "id": "3415edba-8059-4038-bbbe-d1b89265842b",
                 "scriptName": "🍎-移除思维链（新版-必须更新）",
-                "findRegex": "<thinking>([\\s\\S]*?)<\\/thinking>",
+                "findRegex": "<thinking>.*<\\/thinking>",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
