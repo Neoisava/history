@@ -3089,7 +3089,7 @@
             {
                 "id": "51b3f4a5-ee72-4980-abda-8d8fb67479be",
                 "scriptName": "【云瑾】包裹最新指示",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "^([\\s\\S]*)$",
                 "replaceString": "<user_input>\n$1\n</user_input>",
@@ -3106,7 +3106,7 @@
             {
                 "id": "30c53ab4-0c58-4df8-8d3c-e1ba24abcb92",
                 "scriptName": "【云瑾】切除10楼以内小总结",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<scene>(.*?)<\\/details>/gs",
                 "replaceString": "",
@@ -3123,7 +3123,7 @@
             {
                 "id": "4c56b336-bfb1-4766-a053-6f072bfd57c9",
                 "scriptName": "【云瑾】切除10楼以上正文&仅保留小总结",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/(.*?)(?=<scene>)|(?<=<\\/details>)(.*?)(?=<scene>|<\\/details>|$)/gs",
                 "replaceString": "",
@@ -3140,7 +3140,7 @@
             {
                 "id": "d0939a86-4170-44d8-8968-b6148a5c2ed6",
                 "scriptName": "【云瑾】移除cot和结束标签",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/^[\\s\\S]*### 正文/g",
                 "replaceString": "",
@@ -3389,8 +3389,8 @@
                 "content": "\\(不要重复前文，继续输出新剧情！)",
                 "LAST_RECEIVE_TOKENS": 5507,
                 "LAST_RECEIVE_CHARS": 7784,
-                "LAST_SEND_TOKENS": 99772,
-                "LAST_SEND_CHARS": 223540,
+                "LAST_SEND_TOKENS": 98310,
+                "LAST_SEND_CHARS": 225504,
                 "infobar_named_configs_global_v2_8_9": {
                     "1": {
                         "general": {
@@ -4928,7 +4928,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 1,
+                "lastProcessedLength": 11,
                 "userConfigured": true
             }
         },
