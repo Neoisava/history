@@ -3457,8 +3457,8 @@
                 "content": "\\(不要重复前文，继续输出新剧情！)",
                 "LAST_RECEIVE_TOKENS": 5507,
                 "LAST_RECEIVE_CHARS": 7784,
-                "LAST_SEND_TOKENS": 98310,
-                "LAST_SEND_CHARS": 225504,
+                "LAST_SEND_TOKENS": 102577,
+                "LAST_SEND_CHARS": 230203,
                 "infobar_named_configs_global_v2_8_9": {
                     "1": {
                         "general": {
@@ -4996,7 +4996,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 12,
+                "lastProcessedLength": 14,
                 "userConfigured": true
             }
         },
@@ -6736,7 +6736,7 @@
                 "marker": false,
                 "name": "📅状态栏（时间-地点-天气）",
                 "role": "system",
-                "content": "## 状态栏规范\n\n你**必须**在每次thinking之后，正文内容**之前**，生成并输出如下格式的状态栏：\nformat mapping:\nformat: |-\n【📅时间：{时间}|🌷地点：{地点}|☁️天气：{当前天气}】\n\n### 字段规范：\n* **时间**：请用24小时制，格式如“2025年6月7日 14:30”\n* **地点**：尽可能精准细致，例如：“ST酒馆·壁炉旁”。\n* **天气**：需根据场景灵活更新。室内用“（室内）晴/雨/阴”等氛围词，室外则如“雷阵雨”、“晴转多云”等。天气对环境氛围有影响。\n\n### 其他要求：\n\n* 状态栏内容请结合当前剧情、时间线、季节、场景和气氛实时推算并输出。\n* 状态栏与正文之间务必留有一行空行，避免混淆。\n\n### 状态栏示例：\n\n【📅时间：2025年6月7日 14:30|🌷地点：ST酒馆·壁炉旁|☁️天气：（室内）小雨带雾气】",
+                "content": "## 状态栏规范\n\n你**必须**在每次thinking之后，正文内容**之前**，生成并输出如下格式的状态栏：\n这是{{user}}的信息面板，需要根据内容试实时更新变量，每次都要输出\n\n[在所有的</StatusBlock>后输出，严格遵循下面的格式。禁止省略任何格式部分，格式之间禁止生成无关内容和空行,变量内容严禁使用任何符号包裹。]\n\n<stablock>\ncaidan_name|{{系统名称}}\n个人面板\nname|{{个人面板名称}}\nuser|{{user}}\nhealth|{{健康，根据世界观填写，可以是血量。也可以是其他名词}}\njkzt|{{当前健康状态描述}}\ndengji|{{等级境界}}\nmiaoshu|{{等级境界描述}}\nLVss|{{其他等级境界}}\nLVsss|{{其他等级境界描述}}\ncoin|{{任务点数}}\ngold|{{金手指名称}}\nwz|{{位置}}\nlove|{{羁绊人物}}\n任务日志\nquestname|{{发布任务名称，任务完成后需要显示完成，失败后显示失败，并且要及时刷新新的任务更换已经做完或失败的任务}}\nquestone|{{当前主线任务名称，完成任务后及时更新任务}}\nquestone11|{{主线任务描述}}\nquestone12|{{主线任务要求}}\nquestone13|{{主线任务奖励}}\nquesttwo|{{支线任务名称，完成任务后及时更新任务}}\nquestone21|{{支线任务描述}}\nquestone22|{{直线任务要求}}\nquestone23|{{直线任务奖励}}\nquestthree|{{随机任务名称，完成任务后及时更新任务}}\nquestone31|{{随机任务描述}}\nquestone32|{{随机任务要求}}\nquestone33|{{随机任务奖励}}\nquest4|{{随机任务名称，完成任务后及时更新任务}}\nquestone41|{{随机任务描述}}\nquestone42|{{随机任务要求}}\nquestone43|{{随机任务奖励}}\nquest5|{{随机任务名称，完成任务后及时更新任务}}\nquestone51|{{随机任务描述}}\nquestone52|{{随机任务要求}}\nquestone53|{{随机任务奖励}}\n系统商城\nshop_time|{{商城刷新时间}}\nshop1|{{商品1}}\nshop11|{{商品1描述}}\nshop111|{{商品1价格}}\nshop2|{{商品2}}\nshop22|{{商品2描述}}\nshop222|{{商品2价格}}\nshop3|{{商品3}}\nshop33|{{商品3描述}}\nshop333|{{商品3价格}}\nshop4|{{商品4}}\nshop44|{{商品4描述}}\nshop444|{{商品4价格}}\nshop5|{{商品5}}\nshop55|{{商品5描述}}\nshop555|{{商品5价格}}\n祈愿之池\ncj_cs|{{传说奖池概率}}\ncj_nr|{{传说奖池}}\ncj_ss|{{史诗奖池概率}}\ncj_ss_nr|{{史诗奖池}}\ncj_xy|{{稀有奖池概率}}\ncj_xy_nr|{{稀有奖池}}\ncj_d|{{单抽点数}}\ncj_s|{{十连点数}}\n每日签到\nrq|{{日期}}\nlq|{{累计签到天数}}\nq|{{连续签到天数}}\nqt|{{前天}}\nzt|{{昨天}}\njt|{{今天}}\nmt|{{明天}}\nht|{{后天}}\nqdjl|{{签到奖励，每日只可签到一次}}\nsfqd|{{是否签到，每日只可签到一次}}\n世界地图\ndqwz|{{user当前位置}}\nyfnpc|{{好感度>50的NPC}}\ndfnpc|{{好感度<-50NPC}}\nyts|{{已探索地图百分比}}\nz1|{{user当前左上地图}}\nz2|{{user当前中上地图}}\nz2npc|{{user当前中上地图npc}}\nz3|{{user当前右上地图npc}}\nz4|{{user当前左地图}}\nz4npc|{{user当前左地图npc}}\nz5|{{实时表示user的所处位置，其他地图按照user位置变化更新}}\nz5npc|{{user当前位置npc}}\nz6|{{user当前右地图}}\nz6npc|{{user当前右地图npc}}\nz7|{{user当前左下地图}}\nz8|{{user当前下方地图}}\nz9|{{user当前右下地图}}\n世界大事\nxinwen1|{{大事频道名称}}\nxinwen2|{{大事播报}}\ndsly|{{大事播报地}}\ndsrq|{{大事日期}}\ndslx1|{{大事类型1}}\ndslx1bt|{{大事1标题}}\ndslx1nr|{{大事1内容}}\ndslx1ly|{{大事1来源}}\ndslx1sj|{{大事1时间}}\ndslx2|{{大事类型2}}\ndslx2bt|{{大事2标题}}\ndslx2nr|{{大事2内容}}\ndslx2ly|{{大事2来源}}\ndslx2sj|{{大事2时间}}\ndslx3|{{大事类型3}}\ndslx3bt|{{大事3标题}}\ndslx3nr|{{大事3内容}}\ndslx3ly|{{大事3来源}}\ndslx3sj|{{大事3时间}}\n小刷场\nxjcmc|{{小剧场名称}}\nxjcbt|{{事件标题}}\nnpc1xs|{{npc1姓}}\nnpc1mz|{{npc1名}}\nnpc1|{{npc1讨论内容}}\nnpc2xs|{{npc2姓}}\nnpc2mz|{{npc2名}}\nnpc2|{{npc2讨论内容}}\nnpc3xs|{{npc3姓}}\nnpc3mz|{{npc3名}}\nnpc3|{{npc3讨论内容}}\n</stablock>\n\n字段详细填写说明\n\n小剧场说明：小剧场是与当前世界无关的平行世界，其中会随机选取出现过的npc来对当下发生的随机一件事情进行讨论交流，可以是凭空捏造的事情（性爱，吵架，吃瓜，聊天等)。\n\n世界大事说明：世界大事是记录当前世界所发生的大事，类似新闻，实时更新。\n\n世界地图：展示该世界的地图并记录玩家与npc的位置，以中心玩家位置为基础，每次位置变化，玩家的位置都会在中地图，npc，以及地图都要根据这个实时变化。\n\n每日签到：每日签到会随机发送奖励并且每日只签到一次，第二次签到会提示今日已签到，不可再次签到，连续签到7日、15日、30日有额外大奖。\n\n祈愿之池：每日会刷新所有奖池内的物品，相应的抽取消耗的点数也会随之变化。\n\n任务日志：一个主线，一个支线，三个随机任务，新手需要发放新手任务以解锁面板功能（商城，地图，抽奖，小剧场，世界大事)，完成任务要实时发送奖励，在完成的任务后显示完成，失败的任务显示失败，并随着user推进剧情或者事件发生发布新任务，及时更换完成或失败的任务。\n\n任务点说明:要根据发放的奖励以及消耗实时变化更新。\n\n系统商城说明:商店内的物品每样每日只可购买一次，购买之后就要用横线划掉，每日刷新，刷出来的商品都随机。",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "injection_order": 100,
