@@ -4739,7 +4739,7 @@
                 "bookQuotes2": false,
                 "bookQuotes3": false,
                 "newline": false,
-                "user": true,
+                "user": false,
                 "char": false,
                 "custom_6": true,
                 "custom_7": true,
@@ -4749,10 +4749,9 @@
                 "custom_11": true,
                 "custom_4": true,
                 "custom_5": true,
-                "custom_1": true,
+                "custom_1": false,
                 "custom_0": true,
-                "custom_2": true,
-                "custom_3": true
+                "custom_2": true
             },
             "shortcuts": {
                 "asterisk": "",
@@ -4775,8 +4774,7 @@
                 "custom_5": "",
                 "custom_1": "",
                 "custom_0": "",
-                "custom_2": "",
-                "custom_3": ""
+                "custom_2": ""
             },
             "buttonOrder": [
                 "bookQuotes1",
@@ -4790,9 +4788,8 @@
                 "newline",
                 "custom_1",
                 "custom_0",
-                "custom_2",
-                "custom_3",
-                "custom_4"
+                "custom_4",
+                "custom_2"
             ],
             "customSymbols": [
                 {
@@ -4808,21 +4805,9 @@
                     "cursorPos": "end"
                 },
                 {
-                    "name": "许小诺",
-                    "symbol": "许小诺",
-                    "display": "许小诺",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "白婧",
-                    "symbol": "白婧",
-                    "display": "白婧",
-                    "cursorPos": "end"
-                },
-                {
-                    "name": "李月",
-                    "symbol": "李月",
-                    "display": "李月",
+                    "name": "安娜",
+                    "symbol": "安娜",
+                    "display": "安娜",
                     "cursorPos": "end"
                 }
             ]
@@ -4840,7 +4825,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 75,
+                "lastProcessedLength": 76,
                 "userConfigured": true
             }
         },
