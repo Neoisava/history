@@ -2,7 +2,7 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "true",
+        "LNavOpened": "false",
         "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
@@ -3301,8 +3301,8 @@
                 "content": "\\(不要重复前文，继续输出新剧情！)",
                 "LAST_RECEIVE_TOKENS": 5507,
                 "LAST_RECEIVE_CHARS": 7784,
-                "LAST_SEND_TOKENS": 109538,
-                "LAST_SEND_CHARS": 244758,
+                "LAST_SEND_TOKENS": 108130,
+                "LAST_SEND_CHARS": 237473,
                 "infobar_named_configs_global_v2_8_9": {
                     "1": {
                         "general": {
@@ -4840,7 +4840,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 118,
+                "lastProcessedLength": 116,
                 "userConfigured": true
             }
         },
