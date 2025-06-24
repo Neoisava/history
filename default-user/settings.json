@@ -3319,10 +3319,10 @@
         "variables": {
             "global": {
                 "content": "\\(不要重复前文，继续输出新剧情！)",
-                "LAST_RECEIVE_TOKENS": 61,
-                "LAST_RECEIVE_CHARS": 91,
-                "LAST_SEND_TOKENS": 106621,
-                "LAST_SEND_CHARS": 238165,
+                "LAST_RECEIVE_TOKENS": 32,
+                "LAST_RECEIVE_CHARS": 48,
+                "LAST_SEND_TOKENS": 106173,
+                "LAST_SEND_CHARS": 236083,
                 "infobar_named_configs_global_v2_8_9": {
                     "1": {
                         "general": {
@@ -4865,7 +4865,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 100,
+                "lastProcessedLength": 102,
                 "userConfigured": true
             }
         },
