@@ -57,6 +57,7 @@
                 "❄️小回的小剧场1.0-【🍎果实预设专供版】",
                 "模拟关系图【GP】",
                 "献媚文风加强版 (1)",
+                "芭絲特系統v1.2.0",
                 "部位特写"
             ],
             "charLore": [
@@ -3299,8 +3300,8 @@
         "variables": {
             "global": {
                 "content": "\\(不要重复前文，继续输出新剧情！)",
-                "LAST_RECEIVE_TOKENS": 2211,
-                "LAST_RECEIVE_CHARS": 2948,
+                "LAST_RECEIVE_TOKENS": 6304,
+                "LAST_RECEIVE_CHARS": 9091,
                 "LAST_SEND_TOKENS": 101015,
                 "LAST_SEND_CHARS": 203912,
                 "infobar_named_configs_global_v2_8_9": {
@@ -4845,7 +4846,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 98,
+                "lastProcessedLength": 99,
                 "userConfigured": true
             }
         },
