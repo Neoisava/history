@@ -3067,6 +3067,25 @@
                 "substituteRegex": 0,
                 "minDepth": null,
                 "maxDepth": null
+            },
+            {
+                "id": "a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "scriptName": "​a8ff1bc7-15f2-4122-b43b-ded692560538",
+                "findRegex": "/<%(?![%])([\\s\\S]*?)(?<!%)%>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    1,
+                    2,
+                    6
+                ],
+                "disabled": false,
+                "markdownOnly": false,
+                "promptOnly": true,
+                "runOnEdit": false,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
             }
         ],
         "character_allowed_regex": [
@@ -3300,10 +3319,10 @@
         "variables": {
             "global": {
                 "content": "\\(不要重复前文，继续输出新剧情！)",
-                "LAST_RECEIVE_TOKENS": 6304,
-                "LAST_RECEIVE_CHARS": 9091,
-                "LAST_SEND_TOKENS": 101015,
-                "LAST_SEND_CHARS": 203912,
+                "LAST_RECEIVE_TOKENS": 61,
+                "LAST_RECEIVE_CHARS": 91,
+                "LAST_SEND_TOKENS": 106621,
+                "LAST_SEND_CHARS": 238165,
                 "infobar_named_configs_global_v2_8_9": {
                     "1": {
                         "general": {
@@ -4846,7 +4865,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 99,
+                "lastProcessedLength": 100,
                 "userConfigured": true
             }
         },
