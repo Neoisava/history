@@ -4845,12 +4845,12 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 97,
+                "lastProcessedLength": 98,
                 "userConfigured": true
             }
         },
         "EjsTemplate": {
-            "enabled": false,
+            "enabled": true,
             "generate_enabled": true,
             "generate_loader_enabled": true,
             "render_enabled": true,
