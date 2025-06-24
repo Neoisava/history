@@ -47,6 +47,9 @@
             "globalSelect": [
                 "__性爱世界书",
                 "--油猴世界书nai4改(6)",
+                "-【基本】XP兼特征兼行为兼规则兼世界观世界书·第一册",
+                "-【基本】XP兼特征兼行为兼规则兼世界观世界书·第三册",
+                "-【基本】XP兼特征兼行为兼规则兼世界观世界书·第二册",
                 "-提示词大全",
                 "[Dreammini]预设世界书DLC1.6",
                 "【姿势】宝典（SSVGG知识库）",
@@ -342,7 +345,7 @@
         "auto_swipe_blacklist": [],
         "auto_swipe_blacklist_threshold": 2,
         "auto_scroll_chat_to_bottom": true,
-        "auto_fix_generated_markdown": true,
+        "auto_fix_generated_markdown": false,
         "send_on_enter": 0,
         "console_log_prompts": false,
         "request_token_probabilities": false,
@@ -4842,7 +4845,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 88,
+                "lastProcessedLength": 91,
                 "userConfigured": true
             }
         },
