@@ -2948,19 +2948,19 @@
             {
                 "id": "3415edba-8059-4038-bbbe-d1b89265842b",
                 "scriptName": "🍎-移除思维链（新版-必须更新）",
-                "disabled": false,
-                "runOnEdit": true,
                 "findRegex": "<thinking>([\\s\\S]*?)<\\/thinking>",
                 "replaceString": "",
                 "trimStrings": [],
                 "placement": [
                     2
                 ],
+                "disabled": false,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
                 "substituteRegex": 0,
                 "minDepth": null,
-                "maxDepth": null,
-                "markdownOnly": true,
-                "promptOnly": false
+                "maxDepth": null
             },
             {
                 "id": "9d2a2ee3-2703-45b5-873a-ddb186b7487f",
@@ -4840,7 +4840,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 40,
-                "lastProcessedLength": 72,
+                "lastProcessedLength": 73,
                 "userConfigured": true
             }
         },
