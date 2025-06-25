@@ -2901,7 +2901,7 @@
             {
                 "id": "9d4d3212-0456-4cd2-88b9-06931c0d3d1d",
                 "scriptName": "隐藏关系图1【GP】",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<Graph>[\\s\\S]*?<\\/Graph>/gs",
                 "replaceString": "",
@@ -2918,7 +2918,7 @@
             {
                 "id": "fb48d6f7-14e9-4faf-a90d-277ee79e0337",
                 "scriptName": "隐藏关系图2【GP】",
-                "disabled": true,
+                "disabled": false,
                 "runOnEdit": true,
                 "findRegex": "/<Graph>[\\s\\S]*?<\\/Graph>/gs",
                 "replaceString": "",
@@ -3456,8 +3456,8 @@
                 "content": "\\(不要重复前文，继续输出新剧情！)",
                 "LAST_RECEIVE_TOKENS": 5507,
                 "LAST_RECEIVE_CHARS": 7784,
-                "LAST_SEND_TOKENS": 272442,
-                "LAST_SEND_CHARS": 504598,
+                "LAST_SEND_TOKENS": 272840,
+                "LAST_SEND_CHARS": 502272,
                 "infobar_named_configs_global_v2_8_9": {
                     "1": {
                         "general": {
@@ -5036,7 +5036,7 @@
                 },
                 "character-归零区.png": {
                     "hideLastN": 100,
-                    "lastProcessedLength": 64,
+                    "lastProcessedLength": 65,
                     "userConfigured": true
                 }
             },
