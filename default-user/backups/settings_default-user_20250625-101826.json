@@ -2901,7 +2901,7 @@
             {
                 "id": "9d4d3212-0456-4cd2-88b9-06931c0d3d1d",
                 "scriptName": "隐藏关系图1【GP】",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<Graph>[\\s\\S]*?<\\/Graph>/gs",
                 "replaceString": "",
@@ -2918,7 +2918,7 @@
             {
                 "id": "fb48d6f7-14e9-4faf-a90d-277ee79e0337",
                 "scriptName": "隐藏关系图2【GP】",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "/<Graph>[\\s\\S]*?<\\/Graph>/gs",
                 "replaceString": "",
@@ -3456,8 +3456,8 @@
                 "content": "\\(不要重复前文，继续输出新剧情！)",
                 "LAST_RECEIVE_TOKENS": 5507,
                 "LAST_RECEIVE_CHARS": 7784,
-                "LAST_SEND_TOKENS": 277991,
-                "LAST_SEND_CHARS": 513822,
+                "LAST_SEND_TOKENS": 272840,
+                "LAST_SEND_CHARS": 502272,
                 "infobar_named_configs_global_v2_8_9": {
                     "1": {
                         "general": {
@@ -5036,7 +5036,7 @@
                 },
                 "character-归零区.png": {
                     "hideLastN": 100,
-                    "lastProcessedLength": 66,
+                    "lastProcessedLength": 65,
                     "userConfigured": true
                 }
             },
@@ -7788,7 +7788,7 @@
         "personality_format": "{{personality}}",
         "openai_model": "gpt-4-turbo",
         "claude_model": "claude-3-5-sonnet-20240620",
-        "google_model": "gemini-2.5-pro",
+        "google_model": "gemini-2.5-pro-preview-05-06",
         "vertexai_model": "gemini-2.0-flash-001",
         "ai21_model": "jamba-1.5-large",
         "mistralai_model": "mistral-large-latest",
