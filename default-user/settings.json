@@ -3454,8 +3454,8 @@
                 "content": "\\(不要重复前文，继续输出新剧情！)",
                 "LAST_RECEIVE_TOKENS": 5507,
                 "LAST_RECEIVE_CHARS": 7784,
-                "LAST_SEND_TOKENS": 116448,
-                "LAST_SEND_CHARS": 250900,
+                "LAST_SEND_TOKENS": 116837,
+                "LAST_SEND_CHARS": 253190,
                 "infobar_named_configs_global_v2_8_9": {
                     "1": {
                         "general": {
@@ -4993,7 +4993,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 180,
-                "lastProcessedLength": 29,
+                "lastProcessedLength": 28,
                 "userConfigured": true
             }
         },
@@ -7737,7 +7737,7 @@
         "personality_format": "{{personality}}",
         "openai_model": "gpt-4-turbo",
         "claude_model": "claude-3-5-sonnet-20240620",
-        "google_model": "gemini-2.5-pro-preview-05-06",
+        "google_model": "gemini-2.5-pro",
         "vertexai_model": "gemini-2.0-flash-001",
         "ai21_model": "jamba-1.5-large",
         "mistralai_model": "mistral-large-latest",
