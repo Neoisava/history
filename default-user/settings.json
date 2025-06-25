@@ -36,7 +36,7 @@
     },
     "currentVersion": "1.13.1",
     "username": "林芮",
-    "active_character": null,
+    "active_character": "归零区.png",
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -3473,8 +3473,8 @@
                 "content": "\\(不要重复前文，继续输出新剧情！)",
                 "LAST_RECEIVE_TOKENS": 5507,
                 "LAST_RECEIVE_CHARS": 7784,
-                "LAST_SEND_TOKENS": 100916,
-                "LAST_SEND_CHARS": 229630,
+                "LAST_SEND_TOKENS": 100820,
+                "LAST_SEND_CHARS": 227494,
                 "infobar_named_configs_global_v2_8_9": {
                     "1": {
                         "general": {
@@ -5061,7 +5061,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 100,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 11,
                 "userConfigured": true
             }
         },
@@ -7510,7 +7510,7 @@
                     },
                     {
                         "identifier": "5f175205-9a09-4d19-9c92-3fa1f9aff069",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "2136a81c-ccaa-4fa7-be7b-1d87266e24c0",
@@ -7538,11 +7538,11 @@
                     },
                     {
                         "identifier": "87c8a41d-e219-4d35-acc2-dc6b5972cc6f",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "1351c615-4241-4da9-b676-d99038ac3fb4",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "d69c6ff3-19d3-451d-8ca2-d8cc89091022",
@@ -7702,7 +7702,7 @@
                     },
                     {
                         "identifier": "1a51716c-48b6-4944-b8c8-e8c50b2bb66a",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "5c7ce1bc-3fbb-4132-8abc-492a069db4b4",
