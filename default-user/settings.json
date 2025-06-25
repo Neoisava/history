@@ -3,7 +3,7 @@
     "accountStorage": {
         "__migrated": "1",
         "LNavOpened": "true",
-        "NavOpened": "true",
+        "NavOpened": "false",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -49,6 +49,9 @@
             "globalSelect": [
                 "__性爱世界书",
                 "--油猴世界书nai4改(6)",
+                "-【基本】XP兼特征兼行为兼规则兼世界观世界书·第一册",
+                "-【基本】XP兼特征兼行为兼规则兼世界观世界书·第三册",
+                "-【基本】XP兼特征兼行为兼规则兼世界观世界书·第二册",
                 "-提示词大全",
                 "[Dreammini]预设世界书DLC1.6",
                 "【姿势】宝典（SSVGG知识库）",
@@ -3275,10 +3278,10 @@
             "dimension_min": 64,
             "dimension_max": 2048,
             "dimension_step": 64,
-            "width": 1152,
-            "height": 896,
-            "prompt_prefix": "best quality, absurdres, aesthetic,",
-            "negative_prompt": "lowres, bad anatomy, bad hands, text, error, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
+            "width": 960,
+            "height": 512,
+            "prompt_prefix": "nsfw,full,artist:kazutake_hazano, artist:danimaru,[artist:ask_(askzy)], artist:wanke, artist:wlop, artist:fujiyama, artisit:yuyu_(yuyuworks)，artist:hiten_(hitenkei),atrisit:dishwasher1910,",
+            "negative_prompt": "owres, {bad}, error, fewer, extra, missing, worst quality, jpeg artifacts, bad quality, watermark, unfinished, displeasing, chromatic aberration, signature, extra digits, artistic error, username, scan, [abstract], low quality,",
             "sampler": "k_euler",
             "model": "nai-diffusion-4-5-full",
             "restore_faces": false,
@@ -3453,8 +3456,8 @@
                 "content": "\\(不要重复前文，继续输出新剧情！)",
                 "LAST_RECEIVE_TOKENS": 5507,
                 "LAST_RECEIVE_CHARS": 7784,
-                "LAST_SEND_TOKENS": 117077,
-                "LAST_SEND_CHARS": 252269,
+                "LAST_SEND_TOKENS": 99996,
+                "LAST_SEND_CHARS": 224461,
                 "infobar_named_configs_global_v2_8_9": {
                     "1": {
                         "general": {
@@ -4992,7 +4995,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 180,
-                "lastProcessedLength": 20,
+                "lastProcessedLength": 21,
                 "userConfigured": true
             }
         },
@@ -7736,7 +7739,7 @@
         "personality_format": "{{personality}}",
         "openai_model": "gpt-4-turbo",
         "claude_model": "claude-3-5-sonnet-20240620",
-        "google_model": "gemini-2.5-pro",
+        "google_model": "gemini-2.5-pro-preview-05-06",
         "vertexai_model": "gemini-2.0-flash-001",
         "ai21_model": "jamba-1.5-large",
         "mistralai_model": "mistral-large-latest",
