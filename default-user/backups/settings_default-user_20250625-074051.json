@@ -3456,8 +3456,8 @@
                 "content": "\\(不要重复前文，继续输出新剧情！)",
                 "LAST_RECEIVE_TOKENS": 5507,
                 "LAST_RECEIVE_CHARS": 7784,
-                "LAST_SEND_TOKENS": 105329,
-                "LAST_SEND_CHARS": 232952,
+                "LAST_SEND_TOKENS": 105075,
+                "LAST_SEND_CHARS": 238111,
                 "infobar_named_configs_global_v2_8_9": {
                     "1": {
                         "general": {
@@ -5033,15 +5033,10 @@
                     "hideLastN": 50,
                     "lastProcessedLength": 290,
                     "userConfigured": true
-                },
-                "character-归零区.png": {
-                    "hideLastN": 180,
-                    "lastProcessedLength": 38,
-                    "userConfigured": true
                 }
             },
             "migration_v1_complete": true,
-            "useGlobalSettings": false,
+            "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 180,
                 "lastProcessedLength": 38,
@@ -5342,7 +5337,7 @@
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
         "stream_openai": true,
-        "openai_max_context": "2000000",
+        "openai_max_context": 184072,
         "openai_max_tokens": 65500,
         "wrap_in_quotes": false,
         "prompts": [
