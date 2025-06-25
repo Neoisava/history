@@ -3173,7 +3173,7 @@
             {
                 "id": "1c382860-7e6c-427a-bbf1-2bbbd581b657",
                 "scriptName": "通用菜单省token",
-                "disabled": false,
+                "disabled": true,
                 "runOnEdit": true,
                 "findRegex": "<stablock>[\\s\\S]*?caidan_name\\|([^]+)[\\s\\S]*?个人面板[\\s\\S]*?name\\|([^]+)[\\s\\S]*?user\\|([^]+)[\\s\\S]*?health\\|([^]+)[\\s\\S]*?jkzt\\|([^]+)[\\s\\S]*?dengji\\|([^]+)[\\s\\S]*?miaoshu\\|([^]+)[\\s\\S]*?LVss\\|([^]+)[\\s\\S]*?LVsss\\|([^]+)[\\s\\S]*?coin\\|([^]+)[\\s\\S]*?gold\\|([^]+)[\\s\\S]*?wz\\|([^]+)[\\s\\S]*?love\\|([^]+)[\\s\\S]*?任务日志[\\s\\S]*?questname\\|([^]+)[\\s\\S]*?questone\\|([^]+)[\\s\\S]*?questone11\\|([^]+)[\\s\\S]*?questone12\\|([^]+)[\\s\\S]*?questone13\\|([^]+)[\\s\\S]*?questtwo\\|([^]+)[\\s\\S]*?questone21\\|([^]+)[\\s\\S]*?questone22\\|([^]+)[\\s\\S]*?questone23\\|([^]+)[\\s\\S]*?questthree\\|([^]+)[\\s\\S]*?questone31\\|([^]+)[\\s\\S]*?questone32\\|([^]+)[\\s\\S]*?questone33\\|([^]+)[\\s\\S]*?quest4\\|([^]+)[\\s\\S]*?questone41\\|([^]+)[\\s\\S]*?questone42\\|([^]+)[\\s\\S]*?questone43\\|([^]+)[\\s\\S]*?quest5\\|([^]+)[\\s\\S]*?questone51\\|([^]+)[\\s\\S]*?questone52\\|([^]+)[\\s\\S]*?questone53\\|([^]+)[\\s\\S]*?系统商城[\\s\\S]*?shop_time\\|([^]+)[\\s\\S]*?shop1\\|([^]+)[\\s\\S]*?shop11\\|([^]+)[\\s\\S]*?shop111\\|([^]+)[\\s\\S]*?shop2\\|([^]+)[\\s\\S]*?shop22\\|([^]+)[\\s\\S]*?shop222\\|([^]+)[\\s\\S]*?shop3\\|([^]+)[\\s\\S]*?shop33\\|([^]+)[\\s\\S]*?shop333\\|([^]+)[\\s\\S]*?shop4\\|([^]+)[\\s\\S]*?shop44\\|([^]+)[\\s\\S]*?shop444\\|([^]+)[\\s\\S]*?shop5\\|([^]+)[\\s\\S]*?shop55\\|([^]+)[\\s\\S]*?shop555\\|([^]+)[\\s\\S]*?祈愿之池[\\s\\S]*?cj_cs\\|([^]+)[\\s\\S]*?cj_nr\\|([^]+)[\\s\\S]*?cj_ss\\|([^]+)[\\s\\S]*?cj_ss_nr\\|([^]+)[\\s\\S]*?cj_xy\\|([^]+)[\\s\\S]*?cj_xy_nr\\|([^]+)[\\s\\S]*?cj_d\\|([^]+)[\\s\\S]*?cj_s\\|([^]+)[\\s\\S]*?每日签到[\\s\\S]*?rq\\|([^]+)[\\s\\S]*?lq\\|([^]+)[\\s\\S]*?q\\|([^]+)[\\s\\S]*?qt\\|([^]+)[\\s\\S]*?zt\\|([^]+)[\\s\\S]*?jt\\|([^]+)[\\s\\S]*?mt\\|([^]+)[\\s\\S]*?ht\\|([^]+)[\\s\\S]*?qdjl\\|([^]+)[\\s\\S]*?sfqd\\|([^]+)[\\s\\S]*?世界地图[\\s\\S]*?dqwz\\|([^]+)[\\s\\S]*?yfnpc\\|([^]+)[\\s\\S]*?dfnpc\\|([^]+)[\\s\\S]*?yts\\|([^]+)[\\s\\S]*?z1\\|([^]+)[\\s\\S]*?z2\\|([^]+)[\\s\\S]*?z2npc\\|([^]+)[\\s\\S]*?z3\\|([^]+)[\\s\\S]*?z4\\|([^]+)[\\s\\S]*?z4npc\\|([^]+)[\\s\\S]*?z5\\|([^]+)[\\s\\S]*?z5npc\\|([^]+)[\\s\\S]*?z6\\|([^]+)[\\s\\S]*?z6npc\\|([^]+)[\\s\\S]*?z7\\|([^]+)[\\s\\S]*?z8\\|([^]+)[\\s\\S]*?z9\\|([^]+)[\\s\\S]*?世界大事[\\s\\S]*?xinwen1\\|([^]+)[\\s\\S]*?xinwen2\\|([^]+)[\\s\\S]*?dsly\\|([^]+)[\\s\\S]*?dsrq\\|([^]+)[\\s\\S]*?dslx1\\|([^]+)[\\s\\S]*?dslx1bt\\|([^]+)[\\s\\S]*?dslx1nr\\|([^]+)[\\s\\S]*?dslx1ly\\|([^]+)[\\s\\S]*?dslx1sj\\|([^]+)[\\s\\S]*?dslx2\\|([^]+)[\\s\\S]*?dslx2bt\\|([^]+)[\\s\\S]*?dslx2nr\\|([^]+)[\\s\\S]*?dslx2ly\\|([^]+)[\\s\\S]*?dslx2sj\\|([^]+)[\\s\\S]*?dslx3\\|([^]+)[\\s\\S]*?dslx3bt\\|([^]+)[\\s\\S]*?dslx3nr\\|([^]+)[\\s\\S]*?dslx3ly\\|([^]+)[\\s\\S]*?dslx3sj\\|([^]+)[\\s\\S]*?小刷场[\\s\\S]*?xjcmc\\|([^]+)[\\s\\S]*?xjcbt\\|([^]+)[\\s\\S]*?npc1xs\\|([^]+)[\\s\\S]*?npc1mz\\|([^]+)[\\s\\S]*?npc1\\|([^]+)[\\s\\S]*?npc2xs\\|([^]+)[\\s\\S]*?npc2mz\\|([^]+)[\\s\\S]*?npc2\\|([^]+)[\\s\\S]*?npc3xs\\|([^]+)[\\s\\S]*?npc3mz\\|([^]+)[\\s\\S]*?npc3\\|([^]+)[\\s\\S]*?<\\/stablock>",
                 "replaceString": "",
@@ -3230,7 +3230,7 @@
                 "placement": [
                     2
                 ],
-                "disabled": false,
+                "disabled": true,
                 "markdownOnly": true,
                 "promptOnly": false,
                 "runOnEdit": true,
@@ -5061,7 +5061,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 100,
-                "lastProcessedLength": 55,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
