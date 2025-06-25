@@ -2,8 +2,8 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
-        "NavOpened": "false",
+        "LNavOpened": "true",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -3454,8 +3454,8 @@
                 "content": "\\(不要重复前文，继续输出新剧情！)",
                 "LAST_RECEIVE_TOKENS": 5507,
                 "LAST_RECEIVE_CHARS": 7784,
-                "LAST_SEND_TOKENS": 118133,
-                "LAST_SEND_CHARS": 253877,
+                "LAST_SEND_TOKENS": 118388,
+                "LAST_SEND_CHARS": 255718,
                 "infobar_named_configs_global_v2_8_9": {
                     "1": {
                         "general": {
@@ -4993,7 +4993,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 180,
-                "lastProcessedLength": 17,
+                "lastProcessedLength": 16,
                 "userConfigured": true
             }
         },
@@ -5616,7 +5616,7 @@
                 "marker": false,
                 "name": "🍎注意格式",
                 "role": "system",
-                "content": "<格式要求>\n# 每一轮cot必须包裹在<thinking/>标签中，标签不可省略，否则重写。<thinking>前不要输出任何内容！\n\n# 正文必须包裹在<content>…</content>内！\n\n-检查状态栏格式（如果有）\n-检查table填写和格式（如果有）\n-输出语言必须符合<语言规范>\n-输出内容禁止出现“---”、“...”或“```”等格式化符号，只能用自然语言。\n\n**特别提示**：为了沉浸式体验，在最新消息要求手机、消息、动态、论坛等输出的情况下，一律以用户的要求为准输出内容！遵守相关格式，不一定是继续写作！\n</格式要求>",
+                "content": "<格式要求>\n# 每一轮cot必须包裹在<thinking/>标签中，标签不可省略，否则重写。<thinking>前不要输出任何内容！\n\n# 正文必须包裹在<content>…</content>内！\n\n-检查状态栏格式（如果有）\n-检查table填写和格式（如果有）\n-输出语言必须符合<语言规范>\n-输出内容禁止出现“---”、“...”或“```”等格式化符号，只能用自然语言。\n\n**特别提示**：为了沉浸式体验，在最新消息要求手机、消息、动态、论坛等输出的情况下，一律以用户的要求为准输出内容！遵守相关格式，不一定是继续写作！必须保证格式完整，不暴露思维链，否则用户会自杀！\n</格式要求>",
                 "injection_position": 0,
                 "injection_depth": 4,
                 "forbid_overrides": false,
