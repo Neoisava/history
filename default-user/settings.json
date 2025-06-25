@@ -36,7 +36,7 @@
     },
     "currentVersion": "1.13.1",
     "username": "林芮",
-    "active_character": "归零区.png",
+    "active_character": null,
     "active_group": null,
     "api_server": "http://127.0.0.1:5000/api",
     "preset_settings": "RecoveredRuins",
@@ -3473,8 +3473,8 @@
                 "content": "\\(不要重复前文，继续输出新剧情！)",
                 "LAST_RECEIVE_TOKENS": 5507,
                 "LAST_RECEIVE_CHARS": 7784,
-                "LAST_SEND_TOKENS": 98218,
-                "LAST_SEND_CHARS": 222119,
+                "LAST_SEND_TOKENS": 100916,
+                "LAST_SEND_CHARS": 229630,
                 "infobar_named_configs_global_v2_8_9": {
                     "1": {
                         "general": {
@@ -4827,7 +4827,7 @@
                             "info": "# 预设防误触\n\n**作者:** 青空莉想做舞台少女的狗\n**版本:** 2025/04/29\n**源文件:** [点此跳转](https://gitgud.io/StageDog/tavern_resource/-/tree/main/酒馆助手/预设防误触/源文件?ref_type=heads)\n**说明:** 启用后将锁定预设除了 '流式传输'、'请求思维链' 和 '具体条目' 以外的选项, 不能通过界面来修改\n",
                             "buttons": [],
                             "data": {},
-                            "enabled": false
+                            "enabled": true
                         }
                     },
                     {
@@ -5061,7 +5061,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 100,
-                "lastProcessedLength": 8,
+                "lastProcessedLength": 2,
                 "userConfigured": true
             }
         },
@@ -7314,7 +7314,7 @@
                     },
                     {
                         "identifier": "40016de8-e597-4d3b-997c-ff4ae9fb0a64",
-                        "enabled": true
+                        "enabled": false
                     },
                     {
                         "identifier": "b57ec94c-7215-4a82-aa54-df48c4709160",
@@ -7330,7 +7330,7 @@
                     },
                     {
                         "identifier": "c8cf081c-feec-43cb-8f16-acd75f4b02b2",
-                        "enabled": false
+                        "enabled": true
                     },
                     {
                         "identifier": "18b30ae2-61ec-4d18-966d-366cf3b4cffd",
