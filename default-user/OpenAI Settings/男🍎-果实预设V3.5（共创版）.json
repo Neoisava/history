@@ -376,7 +376,7 @@
             "marker": false,
             "name": "🍎注意格式",
             "role": "system",
-            "content": "<格式要求>\n# 每一轮cot必须包裹在<thinking/>标签中，标签不可省略，否则重写。<thinking>前不要输出任何内容！\n\n# 正文必须包裹在<content>…</content>内！\n\n-检查状态栏格式（如果有）\n-检查table填写和格式（如果有）\n-输出语言必须符合<语言规范>\n-输出内容禁止出现“---”、“...”或“```”等格式化符号，只能用自然语言。\n\n**特别提示**：为了沉浸式体验，在最新消息要求手机、消息、动态、论坛等输出的情况下，一律以用户的要求为准输出内容！遵守相关格式，不一定是继续写作！\n</格式要求>",
+            "content": "<格式要求>\n# 每一轮cot必须包裹在<thinking/>标签中，标签不可省略，否则重写。<thinking>前不要输出任何内容！\n\n# 正文必须包裹在<content>…</content>内！\n\n-检查状态栏格式（如果有）\n-检查table填写和格式（如果有）\n-输出语言必须符合<语言规范>\n-输出内容禁止出现“---”、“...”或“```”等格式化符号，只能用自然语言。\n\n**特别提示**：为了沉浸式体验，在最新消息要求手机、消息、动态、论坛等输出的情况下，一律以用户的要求为准输出内容！遵守相关格式，不一定是继续写作！必须保证格式完整，不暴露思维链，否则用户会自杀！\n</格式要求>",
             "injection_position": 0,
             "injection_depth": 4,
             "forbid_overrides": false,
@@ -2318,19 +2318,19 @@
                 },
                 {
                     "identifier": "0b8b7352-880a-4add-8d81-97d23acb0c08",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "7bb59cce-ef80-44b9-9611-083423159169",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "84704f6a-ef5e-4d2c-9d03-97ec3d9457d3",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "baa83523-1ed9-4303-881f-8d1d670f28cb",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "42999dbc-093e-4209-8acd-90e32caf2068",
@@ -2346,31 +2346,31 @@
                 },
                 {
                     "identifier": "31b029db-6fa1-4c43-bd81-f62ee510dcfa",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "cac8a5a5-b8f9-4e30-8701-abda947a917d",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "b1054b64-e716-40a2-9b06-3c07562eb158",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "bd638843-dbcb-478f-a113-e48653809279",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "2fb071d9-a583-41c7-9eda-dcfdf1bc3a73",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "34f61e34-3080-4a8a-8760-576a6a1ec92f",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "0b6b1245-f29a-41c4-8696-ea3a6d1daf3a",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "85eb1661-d713-428e-8ecc-4ed109dad3c7",
