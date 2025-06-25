@@ -3297,8 +3297,8 @@
             "dimension_step": 64,
             "width": 960,
             "height": 512,
-            "prompt_prefix": "best quality, absurdres, aesthetic,",
-            "negative_prompt": "lowres, bad anatomy, bad hands, text, error, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
+            "prompt_prefix": "nsfw,full,artist:kazutake_hazano, artist:danimaru,[artist:ask_(askzy)], artist:wanke, artist:wlop, artist:fujiyama, artisit:yuyu_(yuyuworks)，artist:hiten_(hitenkei),atrisit:dishwasher1910,",
+            "negative_prompt": "owres, {bad}, error, fewer, extra, missing, worst quality, jpeg artifacts, bad quality, watermark, unfinished, displeasing, chromatic aberration, signature, extra digits, artistic error, username, scan, [abstract], low quality,",
             "sampler": "k_euler",
             "model": "nai-diffusion-4-5-full",
             "restore_faces": false,
@@ -3473,8 +3473,8 @@
                 "content": "\\(不要重复前文，继续输出新剧情！)",
                 "LAST_RECEIVE_TOKENS": 5507,
                 "LAST_RECEIVE_CHARS": 7784,
-                "LAST_SEND_TOKENS": 96663,
-                "LAST_SEND_CHARS": 215219,
+                "LAST_SEND_TOKENS": 100478,
+                "LAST_SEND_CHARS": 228152,
                 "infobar_named_configs_global_v2_8_9": {
                     "1": {
                         "general": {
@@ -5056,7 +5056,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 180,
-                "lastProcessedLength": 21,
+                "lastProcessedLength": 20,
                 "userConfigured": true
             }
         },
