@@ -2,8 +2,8 @@
     "firstRun": false,
     "accountStorage": {
         "__migrated": "1",
-        "LNavOpened": "false",
-        "NavOpened": "false",
+        "LNavOpened": "true",
+        "NavOpened": "true",
         "StoryStringValidationCache": "{\"hashCache\":{\"7241261575272609\":{\"fieldsWarned\":{}},\"1202861666163336\":{\"fieldsWarned\":{}},\"2864886063162270\":{\"fieldsWarned\":{}}}}",
         "WINavOpened": "true",
         "SelectedNavTab": "rm_button_characters",
@@ -26,7 +26,7 @@
         "AlertRegex_人生复本.png": "true",
         "AlertWI_天渺大陆.png": "true",
         "AlertWI_《普罗米修斯的回响》.png": "true",
-        "extension_update_nag": "Wed Jun 25 2025",
+        "extension_update_nag": "Thu Jun 26 2025",
         "AlertWI_《暗蚀纪元：蜂巢崩溃之后》.png": "true",
         "AlertWI_《奥法窃神者》.png": "true",
         "AlertWI_《万法盗天录》.png": "true",
@@ -3473,8 +3473,8 @@
                 "content": "\\(不要重复前文，继续输出新剧情！)",
                 "LAST_RECEIVE_TOKENS": 5507,
                 "LAST_RECEIVE_CHARS": 7784,
-                "LAST_SEND_TOKENS": 102497,
-                "LAST_SEND_CHARS": 227415,
+                "LAST_SEND_TOKENS": 105181,
+                "LAST_SEND_CHARS": 234384,
                 "infobar_named_configs_global_v2_8_9": {
                     "1": {
                         "general": {
@@ -5061,7 +5061,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 100,
-                "lastProcessedLength": 48,
+                "lastProcessedLength": 49,
                 "userConfigured": true
             }
         },
@@ -7805,7 +7805,7 @@
         "personality_format": "{{personality}}",
         "openai_model": "gpt-4-turbo",
         "claude_model": "claude-3-5-sonnet-20240620",
-        "google_model": "gemini-2.5-pro-preview-05-06",
+        "google_model": "gemini-2.5-pro",
         "vertexai_model": "gemini-2.0-flash-001",
         "ai21_model": "jamba-1.5-large",
         "mistralai_model": "mistral-large-latest",
