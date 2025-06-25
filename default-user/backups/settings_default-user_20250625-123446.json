@@ -5359,7 +5359,7 @@
         "top_a_openai": 0,
         "repetition_penalty_openai": 1,
         "stream_openai": true,
-        "openai_max_context": 300000,
+        "openai_max_context": 500000,
         "openai_max_tokens": 65500,
         "wrap_in_quotes": false,
         "prompts": [
