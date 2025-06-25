@@ -2644,6 +2644,23 @@
                 "promptOnly": true
             },
             {
+                "id": "11e68a87-ee75-459f-9daa-63a126690d9a",
+                "scriptName": "自动生图",
+                "findRegex": "/<pic[^>]*\\sprompt=\\\"([^\\\"]*)\\\"[^>]*?>/g",
+                "replaceString": "",
+                "trimStrings": [],
+                "placement": [
+                    2
+                ],
+                "disabled": true,
+                "markdownOnly": true,
+                "promptOnly": false,
+                "runOnEdit": true,
+                "substituteRegex": 0,
+                "minDepth": null,
+                "maxDepth": null
+            },
+            {
                 "id": "699330b6-61fa-488b-96e7-c9e00a0eb553",
                 "scriptName": "[低饱和莫兰迪风格]脚本-导航模块",
                 "disabled": true,
@@ -5039,7 +5056,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 180,
-                "lastProcessedLength": 22,
+                "lastProcessedLength": 20,
                 "userConfigured": true
             }
         },
@@ -5063,7 +5080,7 @@
         "st-image-auto-generation": {
             "insertType": "replace",
             "promptInjection": {
-                "enabled": false,
+                "enabled": true,
                 "prompt": "<image_generation>You must insert at most three <pic prompt=\"example prompt\"> in the reply. Prompts are used for stable diffusion image generation, based on the plot and character to output appropriate prompts to generate captivating images.</image_generation>",
                 "regex": "/<pic[^>]*\\sprompt=\\\"([^\\\"]*)\\\"[^>]*?>/g",
                 "position": "deep_system",
