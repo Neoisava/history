@@ -26,7 +26,7 @@
         "AlertRegex_人生复本.png": "true",
         "AlertWI_天渺大陆.png": "true",
         "AlertWI_《普罗米修斯的回响》.png": "true",
-        "extension_update_nag": "Mon Jun 30 2025",
+        "extension_update_nag": "Thu Jun 26 2025",
         "AlertWI_《暗蚀纪元：蜂巢崩溃之后》.png": "true",
         "AlertWI_《奥法窃神者》.png": "true",
         "AlertWI_《万法盗天录》.png": "true",
@@ -525,7 +525,7 @@
         "reduced_motion": true,
         "compact_input_area": true,
         "show_swipe_num_all_messages": false,
-        "auto_connect": true,
+        "auto_connect": false,
         "auto_load_chat": false,
         "forbid_external_media": false,
         "external_media_allowed_overrides": [],
@@ -5061,7 +5061,7 @@
             "useGlobalSettings": true,
             "globalHideSettings": {
                 "hideLastN": 100,
-                "lastProcessedLength": 2,
+                "lastProcessedLength": 58,
                 "userConfigured": true
             }
         },
@@ -7832,7 +7832,7 @@
         "openrouter_allow_fallbacks": true,
         "openrouter_middleout": "on",
         "reverse_proxy": "http://5.144.179.107:80",
-        "chat_completion_source": "custom",
+        "chat_completion_source": "makersuite",
         "max_context_unlocked": true,
         "api_url_scale": "",
         "show_external_models": false,
