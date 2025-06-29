@@ -1,5 +1,5 @@
 {
-    "chat_completion_source": "makersuite",
+    "chat_completion_source": "custom",
     "openai_model": "gpt-4-turbo",
     "claude_model": "claude-3-5-sonnet-20240620",
     "windowai_model": "",
@@ -25,7 +25,7 @@
     "custom_exclude_body": "",
     "custom_include_headers": "",
     "custom_prompt_post_processing": "merge",
-    "google_model": "gemini-2.5-pro-preview-05-06",
+    "google_model": "gemini-2.5-pro",
     "vertexai_model": "gemini-2.0-flash-001",
     "temperature": 1.05,
     "frequency_penalty": 0,
@@ -35,7 +35,7 @@
     "top_a": 0,
     "min_p": 0,
     "repetition_penalty": 1,
-    "openai_max_context": 184072,
+    "openai_max_context": "154904",
     "openai_max_tokens": 65500,
     "wrap_in_quotes": false,
     "names_behavior": 0,
@@ -53,7 +53,7 @@
     "scenario_format": "{{scenario}}",
     "personality_format": "{{personality}}",
     "group_nudge_prompt": "[Write the next reply only as {{char}}.]",
-    "stream_openai": false,
+    "stream_openai": true,
     "prompts": [
         {
             "name": "🔝乐园-无限制创作",
@@ -2006,7 +2006,7 @@
                 },
                 {
                     "identifier": "40016de8-e597-4d3b-997c-ff4ae9fb0a64",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "b57ec94c-7215-4a82-aa54-df48c4709160",
@@ -2022,7 +2022,7 @@
                 },
                 {
                     "identifier": "c8cf081c-feec-43cb-8f16-acd75f4b02b2",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "18b30ae2-61ec-4d18-966d-366cf3b4cffd",
@@ -2202,7 +2202,7 @@
                 },
                 {
                     "identifier": "5f175205-9a09-4d19-9c92-3fa1f9aff069",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "2136a81c-ccaa-4fa7-be7b-1d87266e24c0",
@@ -2234,7 +2234,7 @@
                 },
                 {
                     "identifier": "1351c615-4241-4da9-b676-d99038ac3fb4",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "d69c6ff3-19d3-451d-8ca2-d8cc89091022",
@@ -2298,7 +2298,7 @@
                 },
                 {
                     "identifier": "67dbe0dc-f188-444d-a812-379088c1a7ee",
-                    "enabled": true
+                    "enabled": false
                 },
                 {
                     "identifier": "017627d9-332d-4827-b1b0-b2e5ef120ca3",
@@ -2394,7 +2394,7 @@
                 },
                 {
                     "identifier": "1a51716c-48b6-4944-b8c8-e8c50b2bb66a",
-                    "enabled": false
+                    "enabled": true
                 },
                 {
                     "identifier": "5c7ce1bc-3fbb-4132-8abc-492a069db4b4",
